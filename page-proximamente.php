@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 	
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/upcase/style.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/css/styleProx.css">
 </head>
 
 <body style="background-color: #F8FAFC; font-family: 'Montserrat', sans-serif;">
