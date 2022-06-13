@@ -1,6 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
  body {
   /* display: flex; */
+  font-family: 'Montserrat', sans-serif;
 }
 main {
   padding: 0;
@@ -12,6 +16,7 @@ main {
   main {
 
   }
+}
 
 @media screen and (min-width: 1450px) {
   main {
