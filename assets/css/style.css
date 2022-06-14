@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
- body {
-  /* display: flex; */
-  font-family: 'Montserrat', sans-serif;
+@layer base {
+  body {
+   /* display: flex; */
+   font-family: 'Montserrat', sans-serif !important;
+ }
 }
 main {
   padding: 0;

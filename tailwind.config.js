@@ -5,6 +5,9 @@ module.exports = {
     './*.php',
   ],
   theme: {
+    letterSpacing: {
+      tight: '-0.02em',
+    },
     colors: {
       transparent: "transparent",
       white: {
