@@ -82,6 +82,8 @@
 
 
 		<div id="content" class="site-content" tabindex="-1">
+			
+			<?php wd_slider(1); ?>
 			<div class="col-full">
 
 				<?php

@@ -4,12 +4,12 @@
 
 @layer base {
   body {
-   /* display: flex; */
-   /* font-family: 'Montserrat', sans-serif !important; */
-   @apply font-montserrat;
    @apply bg-white !important;
- }
-
+  }
+  body, h1, h2, h3, h4, h5, p, a {
+    font-family: 'Montserrat', sans-serif !important;
+    @apply p-0 m-0;
+  } 
  header {
   @apply bg-white-true;
  }
