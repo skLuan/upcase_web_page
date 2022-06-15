@@ -5,7 +5,13 @@
 @layer base {
   body {
    /* display: flex; */
-   font-family: 'Montserrat', sans-serif !important;
+   /* font-family: 'Montserrat', sans-serif !important; */
+   @apply font-montserrat;
+   @apply bg-white !important;
+ }
+
+ header {
+  @apply bg-white-true;
  }
 }
 main {

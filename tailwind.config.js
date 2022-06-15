@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './assets/js/**/*.js',
     './*.php',
+    './woocommerce/**/*.php',
   ],
   theme: {
     letterSpacing: {
