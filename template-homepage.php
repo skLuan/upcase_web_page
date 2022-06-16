@@ -15,7 +15,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+			<?php wd_slider(1); ?>
+
+		<main id="main" class="site-main col-full" role="main">
 
 			<section id="descripcion">
 				<!------------------------- Titles -->
@@ -46,7 +48,7 @@ get_header(); ?>
 					</picture>
 				</div>
 				<!------------------------- container stikers -->
-				<div class="relative pl-6 fundas-container col-full mt-28">
+				<div class="relative pl-6 fundas-container col-full">
 					<div class="pr-12 pl-40 ml-16 bg-white-true rounded-r-3xl rounded-l-[100px] drop-shadow-md py-7">
 						<h2 class="mb-4 text-2xl font-bold tracking-tight text-center">Stikers</h2>
 						<!-- ------------- 4cm -->
@@ -77,6 +79,7 @@ get_header(); ?>
 				
 			</section>
 			<?php
+			add_action('uc_recentProducts', 'storefront_recent_products',20);
 			// the_content();
 			/**		
 			 * Functions hooked in to homepage action
@@ -89,7 +92,7 @@ get_header(); ?>
 			 * @hooked storefront_on_sale_products      - 60
 			 * @hooked storefront_best_selling_products - 70
 			 */
-			// do_action( 'homepage' );
+			do_action( 'uc_recentProducts' );
 			?>
 
 		</main><!-- #main -->

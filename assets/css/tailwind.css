@@ -633,10 +633,6 @@ header {
   left: 0px;
 }
 
-.bottom-\[20\%\] {
-  bottom: 20%;
-}
-
 .bottom-\[17\%\] {
   bottom: 17%;
 }
@@ -706,40 +702,28 @@ header {
   margin-top: 3.5rem;
 }
 
-.ml-28 {
-  margin-left: 7rem;
-}
-
-.ml-20 {
-  margin-left: 5rem;
-}
-
-.ml-auto {
-  margin-left: auto;
+.ml-16 {
+  margin-left: 4rem;
 }
 
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
-.ml-16 {
-  margin-left: 4rem;
+.ml-auto {
+  margin-left: auto;
 }
 
 .inline-block {
   display: inline-block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .hidden {
@@ -756,14 +740,6 @@ header {
 
 .w-40 {
   width: 10rem;
-}
-
-.w-3\/4 {
-  width: 75%;
-}
-
-.w-4\/5 {
-  width: 80%;
 }
 
 .transform {
@@ -875,24 +851,19 @@ header {
   padding-right: 1.25rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
 
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pt-14 {
@@ -923,44 +894,24 @@ header {
   padding-left: 1.5rem;
 }
 
-.pr-16 {
-  padding-right: 4rem;
-}
-
-.pl-20 {
-  padding-left: 5rem;
-}
-
-.pl-32 {
-  padding-left: 8rem;
-}
-
-.pl-9 {
-  padding-left: 2.25rem;
-}
-
-.pr-20 {
-  padding-right: 5rem;
-}
-
-.pr-2 {
-  padding-right: 0.5rem;
-}
-
-.pr-28 {
-  padding-right: 7rem;
+.pr-12 {
+  padding-right: 3rem;
 }
 
 .pl-40 {
   padding-left: 10rem;
 }
 
-.pr-12 {
-  padding-right: 3rem;
+.pl-9 {
+  padding-left: 2.25rem;
 }
 
 .text-center {
   text-align: center;
+}
+
+.font-montserrat {
+  font-family: Montserrat, sans-serif;
 }
 
 .text-xl {
@@ -1051,6 +1002,14 @@ header {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 main {
   padding: 0;
   margin: 0;
@@ -1092,5 +1051,10 @@ main {
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
