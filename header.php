@@ -57,11 +57,11 @@
 			// wp_nav_menu(array('theme-location' => 'header-menu'))
 			?>
 			<ul class="relative hidden list-none lg:flex-row lg:flex lg:justify-center lg:items-center">
-				<li class="px-4"><a class="text-lg font-medium" href="">Fundas</a></li>
-				<li class="px-4"><a class="text-lg font-medium" href="">Colección</a></li>
+				<li class="px-4"><a class="text-lg font-medium" href="<?php echo home_url() . '/tienda/fundas/' ?>">Fundas</a></li>
+				<li class="px-4"><a class="text-lg font-medium" href="<?php echo home_url() . '/tienda/colecciones/' ?>">Colección</a></li>
 				<li class="px-4"><a class="" href="<?php echo home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/upcase/Logosm.svg" alt="Logo Upcase"></a></li>
-				<li class="px-4"><a class="text-lg font-medium" href="">Personaliza</a></li>
-				<li class="px-4"><a class="text-lg font-medium" href="">Stikers</a></li>
+				<li class="px-4"><a class="text-lg font-medium" href="<?php echo home_url() . '/tienda/funda/funda-personalizada/' ?>">Personaliza</a></li>
+				<li class="px-4"><a class="text-lg font-medium" href="<?php echo home_url() . '/tienda/stikers/' ?>">Stikers</a></li>
 				<li class="absolute right-0 pl-4">
 					<?php 
 					do_action('upcase_product_search');

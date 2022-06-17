@@ -714,6 +714,14 @@ header {
   margin-left: auto;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -730,6 +738,10 @@ header {
   display: none;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -740,6 +752,18 @@ header {
 
 .w-40 {
   width: 10rem;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .transform {
@@ -864,6 +888,11 @@ header {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-28 {
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 
 .pt-14 {
