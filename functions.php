@@ -111,7 +111,7 @@ function woocommerce_template_loop_product_link_open()
 }
 
 function upcaseButton() {
-    echo '<a href="" class="inline-block px-5 py-3 mx-auto mt-24 mb-16 bg-yellow drop-shadow-md">Ver colecciones</a>';
+    echo '<a href="" class="inline-block px-5 py-3 mx-auto mt-24 mb-16 text-base font-semibold rounded-lg text-blackTxt bg-yellow drop-shadow-md">Ver colecciones</a>';
 }
 add_action('storefront_homepage_after_recent_products', 'upcaseButton');
 /**
@@ -155,15 +155,15 @@ function storefront_recent_products($args)
 
         do_action('storefront_homepage_before_recent_products');
 
-        echo '<h2 class="flex flex-col mb-12 tracking-tight text-center">
+        echo '<h2 class="flex flex-col mb-12 tracking-tight text-center mt-80">
             <span class="text-2xl font-normal text-center">Ultimas</span>
 				<span class="text-4xl font-bold">Tendencias</span>
 				<span class="text-base font-normal">Desde $37.000</span>
             </h2>';
 
         do_action('storefront_homepage_after_recent_products_title');
-
-        echo '<div class="flex flex-col bg-white-true drop drop-shadow-md px-28">';
+        echo '<div class="relative flex flex-col bg-white-true drop drop-shadow-md lg:px-28">';
+        echo '<img class="relative lg:static -top-[57px] -left-[10%] ml-[15%] py-8" src="' .get_stylesheet_directory_uri() . '/assets/images/upcase/newIcon.svg" width="100px" >';
         echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         do_action( 'storefront_homepage_after_recent_products' );
         echo '</div>';

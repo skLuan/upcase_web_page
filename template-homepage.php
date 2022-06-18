@@ -20,26 +20,27 @@ get_header(); ?>
 
 	<main id="main" class="site-main" role="main">
 
-		<section id="descripcion" class="col-full">
+		<section id="descripcion" class="mx-0 lg:max-w-5xl lg:mx-auto">
 			<!------------------------- Titles -->
 			<div class="mt-24">
 				<h4 class="pb-0 mb-0 text-2xl font-normal tracking-tight text-center">Personalizalos</h4>
 				<h3 class="text-4xl font-bold tracking-tight text-center">Como quieras</h3>
 			</div>
 			<!------------------------- container fundas -->
-			<div class="relative pr-6 fundas-container col-full mt-28">
-				<div class="px-8 mr-28 bg-white-true rounded-l-3xl rounded-r-[100px] drop-shadow-md py-7">
+			<div class="relative !mx-0 lg:pr-6 fundas-container col-full mt-28">
+				<div class="px-5 lg:px-8 lg:mr-28 bg-white-true rounded-l-3xl rounded-r-[100px] drop-shadow-md py-7">
 					<h2 class="text-2xl font-bold tracking-tight">Fundas</h2>
-					<p class="mb-10 w-[55%] text-base font-normal">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-					<a class="text-base mx-[25%] font-bold underline text-purple-default" href="">Ver colecciones</a>
+					<p class="mb-10 w-3/4 lg:w-[55%] text-base font-normal">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+					<a class="text-base mx-[25%] font-bold underline text-purple-default" href="<?php echo get_home_url() . '/tienda/categoria/fundas' ?>">Ver fundas</a>
 				</div>
-				<picture class="absolute right-0 -top-[40%] m-auto">
+				<picture class="absolute -right-[60%] lg:right-0 -top-[43%] lg:-top-[40%] m-auto">
+					<source media="(max-width:620px)" srcset="<?php echo get_stylesheet_directory_uri() ?>/assets/images/upcase/home/fundasm.png">
 					<img src=" <?php echo get_stylesheet_directory_uri() . '/assets/images/upcase/home/funda.png' ?>" alt="">
 				</picture>
 			</div>
 			<!------------------------- button -->
 			<div class="flex mt-14">
-				<a class="px-5 py-3 mx-auto text-lg font-semibold rounded-lg drop-shadow-md bg-yellow text-blackTxt" href="">Personalizar funda</a>
+				<a class="px-5 py-3 mx-auto mt-12 text-lg font-semibold rounded-lg lg:mt-0 drop-shadow-md bg-yellow text-blackTxt" href="">Personalizar funda</a>
 			</div>
 			<!------------------------- Trabajo con marcas -->
 			<div class="flex flex-col justify-center py-32">
@@ -49,27 +50,28 @@ get_header(); ?>
 				</picture>
 			</div>
 			<!------------------------- container stikers -->
-			<div class="relative pl-6 fundas-container col-full">
-				<div class="pr-12 pl-40 ml-16 bg-white-true rounded-r-3xl rounded-l-[100px] drop-shadow-md py-7">
-					<h2 class="mb-4 text-2xl font-bold tracking-tight text-center">Stikers</h2>
+			<div class="relative pl-6 fundas-container !mx-0 col-full">
+				<div class="w-[100vw] lg:w-[unset] lg:pr-12 lg:pl-40 lg:ml-16 bg-white-true lg:rounded-r-3xl lg:rounded-l-[100px] drop-shadow-md py-7">
+					<h2 class="mb-16 text-2xl font-bold tracking-tight text-center lg:mb-4">Stikers</h2>
 					<!-- ------------- 4cm -->
-					<div class="flex flex-row items-center ml-auto">
+					<div class="flex flex-col items-end pr-12 ml-auto lg:pr-0 lg:items-center lg:flex-row">
 						<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/upcase/home/stiker4cm.png' ?>" alt="">
-						<span class="pl-9">
-							<a class="mb-4 text-lg font-bold text-purple-default" href="">Para fundas</a>
+						<span class="mt-8 w-[80%] flex flex-col lg:block lg:pl-9">
+							<a class="inline-block mx-auto mb-4 text-lg font-bold text-purple-default" href="">Para fundas</a>
 							<p class="mb-0 text-base font-normal">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
 						</span>
 					</div>
 					<!-- ------------- 6cm -->
-					<div class="flex flex-row items-center my-16 ml-auto">
+					<div class="flex flex-col items-end pr-12 my-16 ml-auto lg:pr-0 lg:items-center lg:flex-row">
 						<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/upcase/home/stiker6cm.png' ?>" alt="">
-						<span class="pl-9">
-							<a class="mb-4 text-lg font-bold text-purple-default" href="">Exteriores</a>
+						<span class="mt-8 flex w-[80%] flex-col lg:pl-9 lg:block">
+							<a class="inline-block mx-auto mb-4 text-lg font-bold text-purple-default" href="">Exteriores</a>
 							<p class="mb-0 text-base font-normal">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
 						</span>
 					</div>
 				</div>
-				<picture class="absolute left-0 bottom-[17%] m-auto">
+				<picture class="absolute -left-[55%] lg:left-0 bottom-[58%] lg:bottom-[17%] m-auto">
+					<source media="(max-width:620px)" srcset="<?php echo get_stylesheet_directory_uri() . '/assets/images/upcase/home/funda-stikerssm.png' ?>">
 					<img src=" <?php echo get_stylesheet_directory_uri() . '/assets/images/upcase/home/funda-stikers.png' ?>" alt="">
 				</picture>
 			</div>
