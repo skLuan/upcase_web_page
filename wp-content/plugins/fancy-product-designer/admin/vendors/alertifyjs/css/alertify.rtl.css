@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 /**
  * alertifyjs 1.12.0 http://alertifyjs.com
  * AlertifyJS is a javascript framework for developing pretty browser dialogs and notifications.
  * Copyright 2019 Mohammad Younes <Mohammad@alertifyjs.com> (http://alertifyjs.com) 
  * Licensed under GPL 3 <https://opensource.org/licenses/gpl-3.0>*/
-=======
-/**
- * alertifyjs 1.12.0 http://alertifyjs.com
- * AlertifyJS is a javascript framework for developing pretty browser dialogs and notifications.
- * Copyright 2019 Mohammad Younes <Mohammad@alertifyjs.com> (http://alertifyjs.com) 
- * Licensed under GPL 3 <https://opensource.org/licenses/gpl-3.0>*/
->>>>>>> main
 .alertify .ajs-dimmer {
   position: fixed;
   z-index: 1981;

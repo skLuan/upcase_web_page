@@ -79,10 +79,7 @@
   padding-right: 0;
   text-indent: 0;
   margin-left: 0;
-<<<<<<< HEAD
-=======
   background: none;
->>>>>>> main
 }
 .wp-block-social-links .wp-social-link a,
 .wp-block-social-links .wp-social-link a:hover {
@@ -97,14 +94,11 @@
   width: 1em;
   height: 1em;
 }
-<<<<<<< HEAD
-=======
 .wp-block-social-links .wp-social-link span:not(.screen-reader-text) {
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 0.65em;
 }
->>>>>>> main
 .wp-block-social-links.has-small-icon-size {
   font-size: 16px;
 }
@@ -138,12 +132,8 @@
   }
 }
 .wp-block-social-link a {
-<<<<<<< HEAD
-  display: block;
-=======
   align-items: center;
   display: flex;
->>>>>>> main
   line-height: 0;
   transition: transform 0.1s ease;
 }

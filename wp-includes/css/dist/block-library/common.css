@@ -220,8 +220,6 @@
 }
 
 /**
-<<<<<<< HEAD
-=======
  * The following provide a simple means of applying a default border style when
  * a user first makes a selection in the border block support panel.
  * This prevents issues such as where the user could set a border width
@@ -241,7 +239,6 @@ html :where([style*="border-width"]) {
 }
 
 /**
->>>>>>> main
  * Provide baseline responsiveness for images.
  */
 html :where(img[class*="wp-image-"]) {

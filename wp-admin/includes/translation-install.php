@@ -14,11 +14,7 @@
  *
  * @param string       $type Type of translations. Accepts 'plugins', 'themes', 'core'.
  * @param array|object $args Translation API arguments. Optional.
-<<<<<<< HEAD
- * @return object|WP_Error On success an object of translations, WP_Error on failure.
-=======
  * @return array|WP_Error On success an associative array of translations, WP_Error on failure.
->>>>>>> main
  */
 function translations_api( $type, $args = null ) {
 	// Include an unmodified $wp_version.
@@ -33,15 +29,9 @@ function translations_api( $type, $args = null ) {
 	 *
 	 * @since 4.0.0
 	 *
-<<<<<<< HEAD
-	 * @param false|object $result The result object. Default false.
-	 * @param string       $type   The type of translations being requested.
-	 * @param object       $args   Translation API arguments.
-=======
 	 * @param false|array $result The result array. Default false.
 	 * @param string      $type   The type of translations being requested.
 	 * @param object      $args   Translation API arguments.
->>>>>>> main
 	 */
 	$res = apply_filters( 'translations_api', false, $type, $args );
 
@@ -112,15 +102,9 @@ function translations_api( $type, $args = null ) {
 	 *
 	 * @since 4.0.0
 	 *
-<<<<<<< HEAD
-	 * @param object|WP_Error $res  Response object or WP_Error.
-	 * @param string          $type The type of translations being requested.
-	 * @param object          $args Translation API arguments.
-=======
 	 * @param array|WP_Error $res  Response as an associative array or WP_Error.
 	 * @param string         $type The type of translations being requested.
 	 * @param object         $args Translation API arguments.
->>>>>>> main
 	 */
 	return apply_filters( 'translations_api_result', $res, $type, $args );
 }

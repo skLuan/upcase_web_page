@@ -100,13 +100,6 @@
   font-style: normal;
 }
 
-<<<<<<< HEAD
-p {
-  overflow-wrap: break-word;
-}
-
-=======
->>>>>>> main
 p.has-drop-cap.has-background {
   overflow: hidden;
 }

@@ -673,9 +673,6 @@ div#wp-responsive-toggle a:before {
 
 /* Welcome Panel */
 .welcome-panel {
-<<<<<<< HEAD
-  background-color: #9ebaa0;
-=======
   background-color: #f3f7f4;
 }
 
@@ -685,7 +682,6 @@ div#wp-responsive-toggle a:before {
 
 .welcome-panel-header-image .about-zero {
   fill: #738e96;
->>>>>>> main
 }
 
 [class*=welcome-panel-icon] {

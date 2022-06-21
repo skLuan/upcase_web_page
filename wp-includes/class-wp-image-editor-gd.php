@@ -89,11 +89,7 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 		}
 
 		if ( ! is_file( $this->file ) && ! preg_match( '|^https?://|', $this->file ) ) {
-<<<<<<< HEAD
-			return new WP_Error( 'error_loading_image', __( 'File doesn&#8217;t exist?' ), $this->file );
-=======
 			return new WP_Error( 'error_loading_image', __( 'File does not exist?' ), $this->file );
->>>>>>> main
 		}
 
 		// Set artificially high because GD uses uncompressed images in memory.
@@ -102,11 +98,7 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 		$file_contents = @file_get_contents( $this->file );
 
 		if ( ! $file_contents ) {
-<<<<<<< HEAD
-			return new WP_Error( 'error_loading_image', __( 'File doesn&#8217;t exist?' ), $this->file );
-=======
 			return new WP_Error( 'error_loading_image', __( 'File does not exist?' ), $this->file );
->>>>>>> main
 		}
 
 		// WebP may not work with imagecreatefromstring().
@@ -241,11 +233,7 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 	 *     If one of the two is set to null, the resize will
 	 *     maintain aspect ratio according to the source image.
 	 *
-<<<<<<< HEAD
-	 *     @type array $size {
-=======
 	 *     @type array ...$0 {
->>>>>>> main
 	 *         Array of height, width values, and whether to crop.
 	 *
 	 *         @type int  $width  Image width. Optional if `$height` is specified.
@@ -509,10 +497,7 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 			'width'     => $this->size['width'],
 			'height'    => $this->size['height'],
 			'mime-type' => $mime_type,
-<<<<<<< HEAD
-=======
 			'filesize'  => wp_filesize( $filename ),
->>>>>>> main
 		);
 	}
 
@@ -552,27 +537,15 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 	 * @since 3.5.0
 	 *
 	 * @param string   $filename
-<<<<<<< HEAD
-	 * @param callable $function
-	 * @param array    $arguments
-	 * @return bool
-	 */
-	protected function make_image( $filename, $function, $arguments ) {
-=======
 	 * @param callable $callback
 	 * @param array    $arguments
 	 * @return bool
 	 */
 	protected function make_image( $filename, $callback, $arguments ) {
->>>>>>> main
 		if ( wp_is_stream( $filename ) ) {
 			$arguments[1] = null;
 		}
 
-<<<<<<< HEAD
-		return parent::make_image( $filename, $function, $arguments );
-=======
 		return parent::make_image( $filename, $callback, $arguments );
->>>>>>> main
 	}
 }

@@ -114,11 +114,7 @@ function get_user_locale( $user_id = 0 ) {
  *
  * @since 5.0.0
  *
-<<<<<<< HEAD
- * @global string $pagenow
-=======
  * @global string $pagenow The filename of the current screen.
->>>>>>> main
  *
  * @return string The determined locale.
  */
@@ -1774,8 +1770,6 @@ function translate_settings_using_i18n_schema( $i18n_schema, $settings, $textdom
 	}
 	return $settings;
 }
-<<<<<<< HEAD
-=======
 
 /**
  * Retrieves the list item separator based on the locale.
@@ -1791,4 +1785,3 @@ function wp_get_list_item_separator() {
 
 	return $wp_locale->get_list_item_separator();
 }
->>>>>>> main

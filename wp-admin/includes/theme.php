@@ -7,11 +7,7 @@
  */
 
 /**
-<<<<<<< HEAD
- * Remove a theme
-=======
  * Removes a theme.
->>>>>>> main
  *
  * @since 2.8.0
  *
@@ -179,11 +175,7 @@ function theme_update_available( $theme ) {
 }
 
 /**
-<<<<<<< HEAD
- * Retrieve the update link if there is a theme update available.
-=======
  * Retrieves the update link if there is a theme update available.
->>>>>>> main
  *
  * Will return a link if there is an update available.
  *
@@ -279,11 +271,7 @@ function get_theme_update_available( $theme ) {
 }
 
 /**
-<<<<<<< HEAD
- * Retrieve list of WordPress theme features (aka theme tags).
-=======
  * Retrieves list of WordPress theme features (aka theme tags).
->>>>>>> main
  *
  * @since 3.1.0
  * @since 3.2.0 Added 'Gray' color and 'Featured Image Header', 'Featured Images',
@@ -643,11 +631,7 @@ function themes_api( $action, $args = array() ) {
 }
 
 /**
-<<<<<<< HEAD
- * Prepare themes for JavaScript.
-=======
  * Prepares themes for JavaScript.
->>>>>>> main
  *
  * @since 3.8.0
  *
@@ -669,11 +653,7 @@ function wp_prepare_themes_for_js( $themes = null ) {
 	 *
 	 * @param array           $prepared_themes An associative array of theme data. Default empty array.
 	 * @param WP_Theme[]|null $themes          An array of theme objects to prepare, if any.
-<<<<<<< HEAD
-	 * @param string          $current_theme   The current theme slug.
-=======
 	 * @param string          $current_theme   The active theme slug.
->>>>>>> main
 	 */
 	$prepared_themes = (array) apply_filters( 'pre_prepare_themes_for_js', array(), $themes, $current_theme );
 
@@ -681,11 +661,7 @@ function wp_prepare_themes_for_js( $themes = null ) {
 		return $prepared_themes;
 	}
 
-<<<<<<< HEAD
-	// Make sure the current theme is listed first.
-=======
 	// Make sure the active theme is listed first.
->>>>>>> main
 	$prepared_themes[ $current_theme ] = array();
 
 	if ( null === $themes ) {
@@ -830,11 +806,7 @@ function wp_prepare_themes_for_js( $themes = null ) {
 }
 
 /**
-<<<<<<< HEAD
- * Print JS templates for the theme-browsing UI in the Customizer.
-=======
  * Prints JS templates for the theme-browsing UI in the Customizer.
->>>>>>> main
  *
  * @since 4.2.0
  */
@@ -851,11 +823,7 @@ function customize_themes_print_templates() {
 			<div class="theme-about wp-clearfix">
 				<div class="theme-screenshots">
 				<# if ( data.screenshot && data.screenshot[0] ) { #>
-<<<<<<< HEAD
-					<div class="screenshot"><img src="{{ data.screenshot[0] }}" alt="" /></div>
-=======
 					<div class="screenshot"><img src="{{ data.screenshot[0] }}?ver={{ data.version }}" alt="" /></div>
->>>>>>> main
 				<# } else { #>
 					<div class="screenshot blank"></div>
 				<# } #>
@@ -863,11 +831,7 @@ function customize_themes_print_templates() {
 
 				<div class="theme-info">
 					<# if ( data.active ) { #>
-<<<<<<< HEAD
-						<span class="current-label"><?php _e( 'Current Theme' ); ?></span>
-=======
 						<span class="current-label"><?php _e( 'Active Theme' ); ?></span>
->>>>>>> main
 					<# } #>
 					<h2 class="theme-name">{{{ data.name }}}<span class="theme-version">
 						<?php
@@ -913,11 +877,7 @@ function customize_themes_print_templates() {
 										<?php
 										printf(
 											/* translators: %s: Theme name. */
-<<<<<<< HEAD
-											__( 'There is a new version of %s available, but it doesn&#8217;t work with your versions of WordPress and PHP.' ),
-=======
 											__( 'There is a new version of %s available, but it does not work with your versions of WordPress and PHP.' ),
->>>>>>> main
 											'{{{ data.name }}}'
 										);
 										if ( current_user_can( 'update_core' ) && current_user_can( 'update_php' ) ) {
@@ -947,11 +907,7 @@ function customize_themes_print_templates() {
 										<?php
 										printf(
 											/* translators: %s: Theme name. */
-<<<<<<< HEAD
-											__( 'There is a new version of %s available, but it doesn&#8217;t work with your version of WordPress.' ),
-=======
 											__( 'There is a new version of %s available, but it does not work with your version of WordPress.' ),
->>>>>>> main
 											'{{{ data.name }}}'
 										);
 										if ( current_user_can( 'update_core' ) ) {
@@ -966,11 +922,7 @@ function customize_themes_print_templates() {
 										<?php
 										printf(
 											/* translators: %s: Theme name. */
-<<<<<<< HEAD
-											__( 'There is a new version of %s available, but it doesn&#8217;t work with your version of PHP.' ),
-=======
 											__( 'There is a new version of %s available, but it does not work with your version of PHP.' ),
->>>>>>> main
 											'{{{ data.name }}}'
 										);
 										if ( current_user_can( 'update_php' ) ) {
@@ -1004,11 +956,7 @@ function customize_themes_print_templates() {
 						<div class="notice notice-error notice-alt notice-large"><p>
 							<# if ( ! data.compatibleWP && ! data.compatiblePHP ) { #>
 								<?php
-<<<<<<< HEAD
-								_e( 'This theme doesn&#8217;t work with your versions of WordPress and PHP.' );
-=======
 								_e( 'This theme does not work with your versions of WordPress and PHP.' );
->>>>>>> main
 								if ( current_user_can( 'update_core' ) && current_user_can( 'update_php' ) ) {
 									printf(
 										/* translators: 1: URL to WordPress Updates screen, 2: URL to Update PHP page. */
@@ -1034,11 +982,7 @@ function customize_themes_print_templates() {
 								?>
 							<# } else if ( ! data.compatibleWP ) { #>
 								<?php
-<<<<<<< HEAD
-								_e( 'This theme doesn&#8217;t work with your version of WordPress.' );
-=======
 								_e( 'This theme does not work with your version of WordPress.' );
->>>>>>> main
 								if ( current_user_can( 'update_core' ) ) {
 									printf(
 										/* translators: %s: URL to WordPress Updates screen. */
@@ -1049,11 +993,7 @@ function customize_themes_print_templates() {
 								?>
 							<# } else if ( ! data.compatiblePHP ) { #>
 								<?php
-<<<<<<< HEAD
-								_e( 'This theme doesn&#8217;t work with your version of PHP.' );
-=======
 								_e( 'This theme does not work with your version of PHP.' );
->>>>>>> main
 								if ( current_user_can( 'update_php' ) ) {
 									printf(
 										/* translators: %s: URL to Update PHP page. */
@@ -1245,11 +1185,7 @@ function resume_theme( $theme, $redirect = '' ) {
  *
  * @since 5.2.0
  *
-<<<<<<< HEAD
- * @global string $pagenow
-=======
  * @global string $pagenow The filename of the current screen.
->>>>>>> main
  */
 function paused_themes_notice() {
 	if ( 'themes.php' === $GLOBALS['pagenow'] ) {

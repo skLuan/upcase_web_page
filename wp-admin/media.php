@@ -65,15 +65,6 @@ switch ( $action ) {
 		$att = get_post( $att_id );
 
 		if ( empty( $att->ID ) ) {
-<<<<<<< HEAD
-			wp_die( __( 'You attempted to edit an attachment that doesn&#8217;t exist. Perhaps it was deleted?' ) );
-		}
-		if ( 'attachment' !== $att->post_type ) {
-			wp_die( __( 'You attempted to edit an item that isn&#8217;t an attachment. Please go back and try again.' ) );
-		}
-		if ( 'trash' === $att->post_status ) {
-			wp_die( __( 'You can&#8217;t edit this attachment because it is in the Trash. Please move it out of the Trash and try again.' ) );
-=======
 			wp_die( __( 'You attempted to edit an attachment that does not exist. Perhaps it was deleted?' ) );
 		}
 		if ( 'attachment' !== $att->post_type ) {
@@ -81,7 +72,6 @@ switch ( $action ) {
 		}
 		if ( 'trash' === $att->post_status ) {
 			wp_die( __( 'You cannot edit this attachment because it is in the Trash. Please move it out of the Trash and try again.' ) );
->>>>>>> main
 		}
 
 		add_filter( 'attachment_fields_to_edit', 'media_single_attachment_fields_to_edit', 10, 2 );

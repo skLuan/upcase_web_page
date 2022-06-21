@@ -97,10 +97,7 @@ class WP_Sitemaps_Taxonomies extends WP_Sitemaps_Provider {
 		$offset = ( $page_num - 1 ) * wp_sitemaps_get_max_urls( $this->object_type );
 
 		$args           = $this->get_taxonomies_query_args( $taxonomy );
-<<<<<<< HEAD
-=======
 		$args['fields'] = 'all';
->>>>>>> main
 		$args['offset'] = $offset;
 
 		$taxonomy_terms = new WP_Term_Query( $args );
@@ -121,14 +118,6 @@ class WP_Sitemaps_Taxonomies extends WP_Sitemaps_Provider {
 				 * Filters the sitemap entry for an individual term.
 				 *
 				 * @since 5.5.0
-<<<<<<< HEAD
-				 *
-				 * @param array   $sitemap_entry Sitemap entry for the term.
-				 * @param WP_Term $term          Term object.
-				 * @param string  $taxonomy      Taxonomy name.
-				 */
-				$sitemap_entry = apply_filters( 'wp_sitemaps_taxonomies_entry', $sitemap_entry, $term, $taxonomy );
-=======
 				 * @since 6.0.0 Added `$term` argument containing the term object.
 				 *
 				 * @param array   $sitemap_entry Sitemap entry for the term.
@@ -137,7 +126,6 @@ class WP_Sitemaps_Taxonomies extends WP_Sitemaps_Provider {
 				 * @param WP_Term $term          Term object.
 				 */
 				$sitemap_entry = apply_filters( 'wp_sitemaps_taxonomies_entry', $sitemap_entry, $term->term_id, $taxonomy, $term );
->>>>>>> main
 				$url_list[]    = $sitemap_entry;
 			}
 		}
@@ -209,10 +197,6 @@ class WP_Sitemaps_Taxonomies extends WP_Sitemaps_Provider {
 		$args = apply_filters(
 			'wp_sitemaps_taxonomies_query_args',
 			array(
-<<<<<<< HEAD
-				'fields'                 => 'ids',
-=======
->>>>>>> main
 				'taxonomy'               => $taxonomy,
 				'orderby'                => 'term_order',
 				'number'                 => wp_sitemaps_get_max_urls( $this->object_type ),

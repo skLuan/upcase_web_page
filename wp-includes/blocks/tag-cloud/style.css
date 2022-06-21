@@ -89,8 +89,6 @@
   display: inline-block;
   margin-left: 5px;
   text-decoration: none;
-<<<<<<< HEAD
-=======
 }
 .wp-block-tag-cloud.is-style-outline {
   display: flex;
@@ -103,5 +101,4 @@
   margin-right: 0;
   padding: 1ch 2ch;
   text-decoration: none !important;
->>>>>>> main
 }

@@ -783,19 +783,6 @@ div#wp-responsive-toggle a:before {
 }
 
 /* Welcome Panel */
-<<<<<<< HEAD
-
-.welcome-panel {
-	background-color: $highlight-color;
-}
-
-[class*="welcome-panel-icon"] {
-	@if ( $scheme-name == "light" ) {
-		background-color: $icon-color;
-	} @else {
-		background-color: $base-color;
-	}
-=======
 .welcome-panel {
 	background-color: mix($dashboard-accent-1, white, 12%);
 }
@@ -810,5 +797,4 @@ div#wp-responsive-toggle a:before {
 
 [class*="welcome-panel-icon"] {
 	background-color: $dashboard-icon-background;
->>>>>>> main
 }

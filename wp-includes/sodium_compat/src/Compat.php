@@ -3533,11 +3533,6 @@ class ParagonIE_Sodium_Compat
                 );
             }
         }
-<<<<<<< HEAD
-        if (self::use_fallback('randombytes_buf')) {
-            return (string) call_user_func('\\Sodium\\randombytes_buf', $numBytes);
-        }
-=======
         /** @var positive-int $numBytes */
         if (self::use_fallback('randombytes_buf')) {
             return (string) call_user_func('\\Sodium\\randombytes_buf', $numBytes);
@@ -3545,7 +3540,6 @@ class ParagonIE_Sodium_Compat
         if ($numBytes < 0) {
             throw new SodiumException("Number of bytes must be a positive integer");
         }
->>>>>>> main
         return random_bytes($numBytes);
     }
 

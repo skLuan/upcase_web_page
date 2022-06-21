@@ -34,10 +34,7 @@
 		__ = wp.i18n.__,
 		_x = wp.i18n._x,
 		_n = wp.i18n._n,
-<<<<<<< HEAD
-=======
 		_nx = wp.i18n._nx,
->>>>>>> main
 		sprintf = wp.i18n.sprintf;
 
 	wp = wp || {};
@@ -974,11 +971,8 @@
 			var $form            = $( '#bulk-action-form' ),
 				$views           = $( '.subsubsub' ),
 				$pluginRow       = $( this ),
-<<<<<<< HEAD
-=======
 				$currentView     = $views.find( '[aria-current="page"]' ),
 				$itemsCount      = $( '.displaying-num' ),
->>>>>>> main
 				columnCount      = $form.find( 'thead th:not(.hidden), thead td' ).length,
 				pluginDeletedRow = wp.template( 'item-deleted-row' ),
 				/**
@@ -986,12 +980,8 @@
 				 *
 				 * @type {Object}
 				 */
-<<<<<<< HEAD
-				plugins          = settings.plugins;
-=======
 				plugins          = settings.plugins,
 				remainingCount;
->>>>>>> main
 
 			// Add a success message after deleting a plugin.
 			if ( ! $pluginRow.hasClass( 'plugin-update-tr' ) ) {
@@ -1071,8 +1061,6 @@
 					$form.find( '#the-list' ).append( '<tr class="no-items"><td class="colspanchange" colspan="' + columnCount + '">' + __( 'No plugins are currently available.' ) + '</td></tr>' );
 				}
 			}
-<<<<<<< HEAD
-=======
 
 			if ( $itemsCount.length && $currentView.length ) {
 				remainingCount = plugins[ $currentView.parent( 'li' ).attr('class') ].length;
@@ -1084,7 +1072,6 @@
 					)
 				);
 			}
->>>>>>> main
 		} );
 
 		wp.a11y.speak( _x( 'Deleted!', 'plugin' ) );

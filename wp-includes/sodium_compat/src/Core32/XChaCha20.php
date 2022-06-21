@@ -61,8 +61,6 @@ class ParagonIE_Sodium_Core32_XChaCha20 extends ParagonIE_Sodium_Core32_HChaCha2
             $message
         );
     }
-<<<<<<< HEAD
-=======
 
     /**
      * @internal You should not use this directly from another application
@@ -86,5 +84,4 @@ class ParagonIE_Sodium_Core32_XChaCha20 extends ParagonIE_Sodium_Core32_HChaCha2
             $message
         );
     }
->>>>>>> main
 }

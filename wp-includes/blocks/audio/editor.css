@@ -77,8 +77,6 @@
 .wp-block-audio {
   margin-left: 0;
   margin-right: 0;
-<<<<<<< HEAD
-=======
   position: relative;
 }
 .wp-block-audio.is-transient audio {
@@ -90,5 +88,4 @@
   left: 50%;
   margin-top: -9px;
   margin-left: -9px;
->>>>>>> main
 }

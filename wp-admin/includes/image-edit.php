@@ -43,9 +43,6 @@ function wp_image_editor( $post_id, $msg = false ) {
 			$note = "<div class='notice notice-success' tabindex='-1' role='alert'><p>$msg->msg</p></div>";
 		}
 	}
-<<<<<<< HEAD
-
-=======
 	$edit_custom_sizes = false;
 	/**
 	 * Filters whether custom sizes are available options for image editing.
@@ -55,7 +52,6 @@ function wp_image_editor( $post_id, $msg = false ) {
 	 * @param bool|string[] $edit_custom_sizes True if custom sizes can be edited or array of custom size names.
 	 */
 	$edit_custom_sizes = apply_filters( 'edit_custom_thumbnail_sizes', $edit_custom_sizes );
->>>>>>> main
 	?>
 	<div class="imgedit-wrap wp-clearfix">
 	<div id="imgedit-panel-<?php echo $post_id; ?>">
@@ -251,8 +247,6 @@ function wp_image_editor( $post_id, $msg = false ) {
 			<input type="radio" id="imgedit-target-nothumb" name="imgedit-target-<?php echo $post_id; ?>" value="nothumb" />
 			<label for="imgedit-target-nothumb"><?php _e( 'All sizes except thumbnail' ); ?></label>
 		</span>
-<<<<<<< HEAD
-=======
 		<?php
 		if ( $edit_custom_sizes ) {
 			if ( ! is_array( $edit_custom_sizes ) ) {
@@ -273,7 +267,6 @@ function wp_image_editor( $post_id, $msg = false ) {
 			}
 		}
 		?>
->>>>>>> main
 	</fieldset>
 	</div>
 	</div>
@@ -940,12 +933,6 @@ function wp_save_image( $post_id ) {
 		$meta['width']  = $size['width'];
 		$meta['height'] = $size['height'];
 
-<<<<<<< HEAD
-		if ( $success && ( 'nothumb' === $target || 'all' === $target ) ) {
-			$sizes = get_intermediate_image_sizes();
-			if ( 'nothumb' === $target ) {
-				$sizes = array_diff( $sizes, array( 'thumbnail' ) );
-=======
 		if ( $success ) {
 			$sizes = get_intermediate_image_sizes();
 			if ( 'nothumb' === $target || 'all' === $target ) {
@@ -954,7 +941,6 @@ function wp_save_image( $post_id ) {
 				}
 			} elseif ( 'thumbnail' !== $target ) {
 				$sizes = array_diff( $sizes, array( $target ) );
->>>>>>> main
 			}
 		}
 
@@ -965,14 +951,11 @@ function wp_save_image( $post_id ) {
 		$success = true;
 		$delete  = true;
 		$nocrop  = true;
-<<<<<<< HEAD
-=======
 	} else {
 		$sizes   = array( $target );
 		$success = true;
 		$delete  = true;
 		$nocrop  = $_wp_additional_image_sizes[ $size ]['crop'];
->>>>>>> main
 	}
 
 	/*

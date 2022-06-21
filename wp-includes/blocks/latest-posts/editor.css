@@ -87,8 +87,6 @@
 
 .edit-post-visual-editor .wp-block-latest-posts.is-grid li {
   margin-bottom: 20px;
-<<<<<<< HEAD
-=======
 }
 
 .editor-latest-posts-image-alignment-control .components-base-control__label {
@@ -96,5 +94,4 @@
 }
 .editor-latest-posts-image-alignment-control .components-toolbar {
   border-radius: 2px;
->>>>>>> main
 }

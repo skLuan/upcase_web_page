@@ -79,12 +79,6 @@
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
 }
-<<<<<<< HEAD
-.wp-block-separator.is-style-wide {
-  border-bottom-width: 1px;
-}
-=======
->>>>>>> main
 .wp-block-separator.is-style-dots {
   background: none !important;
   border: none;

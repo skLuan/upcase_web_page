@@ -206,21 +206,12 @@ class WP_Http_Streams {
 		stream_set_timeout( $handle, $timeout, $utimeout );
 
 		if ( $proxy->is_enabled() && $proxy->send_through_proxy( $url ) ) { // Some proxies require full URL in this field.
-<<<<<<< HEAD
-			$requestPath = $url;
-		} else {
-			$requestPath = $parsed_url['path'] . ( isset( $parsed_url['query'] ) ? '?' . $parsed_url['query'] : '' );
-		}
-
-		$strHeaders = strtoupper( $parsed_args['method'] ) . ' ' . $requestPath . ' HTTP/' . $parsed_args['httpversion'] . "\r\n";
-=======
 			$request_path = $url;
 		} else {
 			$request_path = $parsed_url['path'] . ( isset( $parsed_url['query'] ) ? '?' . $parsed_url['query'] : '' );
 		}
 
 		$headers = strtoupper( $parsed_args['method'] ) . ' ' . $request_path . ' HTTP/' . $parsed_args['httpversion'] . "\r\n";
->>>>>>> main
 
 		$include_port_in_host_header = (
 			( $proxy->is_enabled() && $proxy->send_through_proxy( $url ) )
@@ -229,36 +220,6 @@ class WP_Http_Streams {
 		);
 
 		if ( $include_port_in_host_header ) {
-<<<<<<< HEAD
-			$strHeaders .= 'Host: ' . $parsed_url['host'] . ':' . $parsed_url['port'] . "\r\n";
-		} else {
-			$strHeaders .= 'Host: ' . $parsed_url['host'] . "\r\n";
-		}
-
-		if ( isset( $parsed_args['user-agent'] ) ) {
-			$strHeaders .= 'User-agent: ' . $parsed_args['user-agent'] . "\r\n";
-		}
-
-		if ( is_array( $parsed_args['headers'] ) ) {
-			foreach ( (array) $parsed_args['headers'] as $header => $headerValue ) {
-				$strHeaders .= $header . ': ' . $headerValue . "\r\n";
-			}
-		} else {
-			$strHeaders .= $parsed_args['headers'];
-		}
-
-		if ( $proxy->use_authentication() ) {
-			$strHeaders .= $proxy->authentication_header() . "\r\n";
-		}
-
-		$strHeaders .= "\r\n";
-
-		if ( ! is_null( $parsed_args['body'] ) ) {
-			$strHeaders .= $parsed_args['body'];
-		}
-
-		fwrite( $handle, $strHeaders );
-=======
 			$headers .= 'Host: ' . $parsed_url['host'] . ':' . $parsed_url['port'] . "\r\n";
 		} else {
 			$headers .= 'Host: ' . $parsed_url['host'] . "\r\n";
@@ -287,7 +248,6 @@ class WP_Http_Streams {
 		}
 
 		fwrite( $handle, $headers );
->>>>>>> main
 
 		if ( ! $parsed_args['blocking'] ) {
 			stream_set_blocking( $handle, 0 );
@@ -303,13 +263,8 @@ class WP_Http_Streams {
 			);
 		}
 
-<<<<<<< HEAD
-		$strResponse  = '';
-		$bodyStarted  = false;
-=======
 		$response     = '';
 		$body_started = false;
->>>>>>> main
 		$keep_reading = true;
 		$block_size   = 4096;
 
@@ -341,15 +296,6 @@ class WP_Http_Streams {
 
 			while ( ! feof( $handle ) && $keep_reading ) {
 				$block = fread( $handle, $block_size );
-<<<<<<< HEAD
-				if ( ! $bodyStarted ) {
-					$strResponse .= $block;
-					if ( strpos( $strResponse, "\r\n\r\n" ) ) {
-						$processed_response = WP_Http::processResponse( $strResponse );
-						$bodyStarted        = true;
-						$block              = $processed_response['body'];
-						unset( $strResponse );
-=======
 				if ( ! $body_started ) {
 					$response .= $block;
 					if ( strpos( $response, "\r\n\r\n" ) ) {
@@ -357,7 +303,6 @@ class WP_Http_Streams {
 						$body_started       = true;
 						$block              = $processed_response['body'];
 						unset( $response );
->>>>>>> main
 						$processed_response['body'] = '';
 					}
 				}
@@ -393,25 +338,6 @@ class WP_Http_Streams {
 			$header_length = 0;
 
 			while ( ! feof( $handle ) && $keep_reading ) {
-<<<<<<< HEAD
-				$block        = fread( $handle, $block_size );
-				$strResponse .= $block;
-
-				if ( ! $bodyStarted && strpos( $strResponse, "\r\n\r\n" ) ) {
-					$header_length = strpos( $strResponse, "\r\n\r\n" ) + 4;
-					$bodyStarted   = true;
-				}
-
-				$keep_reading = (
-					! $bodyStarted
-					|| ! isset( $parsed_args['limit_response_size'] )
-					|| strlen( $strResponse ) < ( $header_length + $parsed_args['limit_response_size'] )
-				);
-			}
-
-			$processed_response = WP_Http::processResponse( $strResponse );
-			unset( $strResponse );
-=======
 				$block     = fread( $handle, $block_size );
 				$response .= $block;
 
@@ -429,7 +355,6 @@ class WP_Http_Streams {
 
 			$processed_response = WP_Http::processResponse( $response );
 			unset( $response );
->>>>>>> main
 
 		}
 
@@ -491,11 +416,7 @@ class WP_Http_Streams {
 	 *
 	 * @param resource $stream The PHP Stream which the SSL request is being made over
 	 * @param string   $host   The hostname being requested
-<<<<<<< HEAD
-	 * @return bool If the cerficiate presented in $stream is valid for $host
-=======
 	 * @return bool If the certificate presented in $stream is valid for $host
->>>>>>> main
 	 */
 	public static function verify_ssl_certificate( $stream, $host ) {
 		$context_options = stream_context_get_options( $stream );

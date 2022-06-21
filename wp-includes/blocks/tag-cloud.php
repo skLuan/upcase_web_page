@@ -13,13 +13,6 @@
  * @return string Returns the tag cloud for selected taxonomy.
  */
 function render_block_core_tag_cloud( $attributes ) {
-<<<<<<< HEAD
-	$args      = array(
-		'echo'       => false,
-		'taxonomy'   => $attributes['taxonomy'],
-		'show_count' => $attributes['showTagCounts'],
-		'number'     => $attributes['numberOfTags'],
-=======
 	$smallest_font_size = $attributes['smallestFontSize'];
 	$unit               = ( preg_match( '/^[0-9.]+(?P<unit>[a-z%]+)$/i', $smallest_font_size, $m ) ? $m['unit'] : 'pt' );
 
@@ -31,7 +24,6 @@ function render_block_core_tag_cloud( $attributes ) {
 		'number'     => $attributes['numberOfTags'],
 		'smallest'   => floatVal( $attributes['smallestFontSize'] ),
 		'largest'    => floatVal( $attributes['largestFontSize'] ),
->>>>>>> main
 	);
 	$tag_cloud = wp_tag_cloud( $args );
 

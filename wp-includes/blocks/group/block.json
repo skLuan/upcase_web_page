@@ -1,17 +1,10 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/group",
 	"title": "Group",
 	"category": "design",
-<<<<<<< HEAD
-	"description": "Combine blocks into a group.",
-=======
 	"description": "Gather blocks in a layout container.",
->>>>>>> main
 	"keywords": [ "container", "wrapper", "row", "section" ],
 	"textdomain": "default",
 	"attributes": {
@@ -30,11 +23,6 @@
 		"html": false,
 		"color": {
 			"gradients": true,
-<<<<<<< HEAD
-			"link": true
-		},
-		"spacing": {
-=======
 			"link": true,
 			"__experimentalDefaultControls": {
 				"background": true,
@@ -43,7 +31,6 @@
 		},
 		"spacing": {
 			"margin": [ "top", "bottom" ],
->>>>>>> main
 			"padding": true,
 			"blockGap": true,
 			"__experimentalDefaultControls": {
@@ -55,9 +42,6 @@
 			"color": true,
 			"radius": true,
 			"style": true,
-<<<<<<< HEAD
-			"width": true
-=======
 			"width": true,
 			"__experimentalDefaultControls": {
 				"color": true,
@@ -76,7 +60,6 @@
 			"__experimentalDefaultControls": {
 				"fontSize": true
 			}
->>>>>>> main
 		},
 		"__experimentalLayout": true
 	},

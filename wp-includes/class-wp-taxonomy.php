@@ -43,8 +43,6 @@ final class WP_Taxonomy {
 	public $labels;
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Default labels.
 	 *
 	 * @since 6.0.0
@@ -53,7 +51,6 @@ final class WP_Taxonomy {
 	protected static $default_labels = array();
 
 	/**
->>>>>>> main
 	 * A short descriptive summary of what the taxonomy is for.
 	 *
 	 * @since 4.7.0
@@ -155,11 +152,7 @@ final class WP_Taxonomy {
 	 * An array of object types this taxonomy is registered for.
 	 *
 	 * @since 4.7.0
-<<<<<<< HEAD
-	 * @var array
-=======
 	 * @var string[]
->>>>>>> main
 	 */
 	public $object_type = null;
 
@@ -304,13 +297,8 @@ final class WP_Taxonomy {
 	 *
 	 * @since 4.7.0
 	 *
-<<<<<<< HEAD
-	 * @param array|string $object_type Name of the object type for the taxonomy object.
-	 * @param array|string $args        Array or query string of arguments for registering a taxonomy.
-=======
 	 * @param string|string[] $object_type Name or array of names of the object types for the taxonomy.
 	 * @param array|string    $args        Array or query string of arguments for registering a taxonomy.
->>>>>>> main
 	 */
 	public function set_props( $object_type, $args ) {
 		$args = wp_parse_args( $args );
@@ -327,8 +315,6 @@ final class WP_Taxonomy {
 		 */
 		$args = apply_filters( 'register_taxonomy_args', $args, $this->name, (array) $object_type );
 
-<<<<<<< HEAD
-=======
 		$taxonomy = $this->name;
 
 		/**
@@ -350,7 +336,6 @@ final class WP_Taxonomy {
 		 */
 		$args = apply_filters( "register_{$taxonomy}_taxonomy_args", $args, $this->name, (array) $object_type );
 
->>>>>>> main
 		$defaults = array(
 			'labels'                => array(),
 			'description'           => '',
@@ -606,8 +591,6 @@ final class WP_Taxonomy {
 
 		return $this->rest_controller;
 	}
-<<<<<<< HEAD
-=======
 
 	/**
 	 * Returns the default labels for taxonomies.
@@ -675,5 +658,4 @@ final class WP_Taxonomy {
 	public static function reset_default_labels() {
 		self::$default_labels = array();
 	}
->>>>>>> main
 }

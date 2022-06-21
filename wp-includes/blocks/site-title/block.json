@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/site-title",
 	"title": "Site Title",
@@ -34,16 +31,12 @@
 		"html": false,
 		"color": {
 			"gradients": true,
-<<<<<<< HEAD
-			"link": true
-=======
 			"link": true,
 			"__experimentalDefaultControls": {
 				"background": true,
 				"text": true,
 				"link": true
 			}
->>>>>>> main
 		},
 		"spacing": {
 			"padding": true,

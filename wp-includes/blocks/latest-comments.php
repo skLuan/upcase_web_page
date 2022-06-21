@@ -30,11 +30,7 @@ function wp_latest_comments_draft_or_post_title( $post = 0 ) {
 	if ( empty( $title ) ) {
 		$title = __( '(no title)' );
 	}
-<<<<<<< HEAD
-	return esc_html( $title );
-=======
 	return $title;
->>>>>>> main
 }
 
 /**

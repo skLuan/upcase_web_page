@@ -139,14 +139,11 @@ class WP_Site_Query {
 	 *                                                   - 'path_length'
 	 *                                                   - 'site__in'
 	 *                                                   - 'network__in'
-<<<<<<< HEAD
-=======
 	 *                                                   - 'deleted'
 	 *                                                   - 'mature'
 	 *                                                   - 'spam'
 	 *                                                   - 'archived'
 	 *                                                   - 'public'
->>>>>>> main
 	 *                                                   - false, an empty array, or 'none' to disable `ORDER BY` clause.
 	 *                                                   Default 'id'.
 	 *     @type string          $order                  How to order retrieved sites. Accepts 'ASC', 'DESC'. Default 'ASC'.
@@ -353,13 +350,8 @@ class WP_Site_Query {
 		// $args can include anything. Only use the args defined in the query_var_defaults to compute the key.
 		$_args = wp_array_slice_assoc( $this->query_vars, array_keys( $this->query_var_defaults ) );
 
-<<<<<<< HEAD
-		// Ignore the $fields argument as the queried result will be the same regardless.
-		unset( $_args['fields'] );
-=======
 		// Ignore the $fields, $update_site_cache, $update_site_meta_cache argument as the queried result will be the same regardless.
 		unset( $_args['fields'], $_args['update_site_cache'], $_args['update_site_meta_cache'] );
->>>>>>> main
 
 		$key          = md5( serialize( $_args ) );
 		$last_changed = wp_cache_get_last_changed( 'sites' );
@@ -654,28 +646,17 @@ class WP_Site_Query {
 
 		$where = implode( ' AND ', $this->sql_clauses['where'] );
 
-<<<<<<< HEAD
-		$pieces = array( 'fields', 'join', 'where', 'orderby', 'limits', 'groupby' );
-=======
 		$clauses = array( 'fields', 'join', 'where', 'orderby', 'limits', 'groupby' );
->>>>>>> main
 
 		/**
 		 * Filters the site query clauses.
 		 *
 		 * @since 4.6.0
 		 *
-<<<<<<< HEAD
-		 * @param string[]      $pieces An associative array of site query clauses.
-		 * @param WP_Site_Query $query  Current instance of WP_Site_Query (passed by reference).
-		 */
-		$clauses = apply_filters_ref_array( 'sites_clauses', array( compact( $pieces ), &$this ) );
-=======
 		 * @param string[]      $clauses An associative array of site query clauses.
 		 * @param WP_Site_Query $query   Current instance of WP_Site_Query (passed by reference).
 		 */
 		$clauses = apply_filters_ref_array( 'sites_clauses', array( compact( $clauses ), &$this ) );
->>>>>>> main
 
 		$fields  = isset( $clauses['fields'] ) ? $clauses['fields'] : '';
 		$join    = isset( $clauses['join'] ) ? $clauses['join'] : '';
@@ -707,9 +688,6 @@ class WP_Site_Query {
 		$this->sql_clauses['orderby'] = $orderby;
 		$this->sql_clauses['limits']  = $limits;
 
-<<<<<<< HEAD
-		$this->request = "{$this->sql_clauses['select']} {$this->sql_clauses['from']} {$where} {$this->sql_clauses['groupby']} {$this->sql_clauses['orderby']} {$this->sql_clauses['limits']}";
-=======
 		$this->request = "
 			{$this->sql_clauses['select']}
 			{$this->sql_clauses['from']}
@@ -718,7 +696,6 @@ class WP_Site_Query {
 			{$this->sql_clauses['orderby']}
 			{$this->sql_clauses['limits']}
 		";
->>>>>>> main
 
 		if ( $this->query_vars['count'] ) {
 			return (int) $wpdb->get_var( $this->request );
@@ -762,19 +739,6 @@ class WP_Site_Query {
 	 *
 	 * @global wpdb $wpdb WordPress database abstraction object.
 	 *
-<<<<<<< HEAD
-	 * @param string   $string  Search string.
-	 * @param string[] $columns Array of columns to search.
-	 * @return string Search SQL.
-	 */
-	protected function get_search_sql( $string, $columns ) {
-		global $wpdb;
-
-		if ( false !== strpos( $string, '*' ) ) {
-			$like = '%' . implode( '%', array_map( array( $wpdb, 'esc_like' ), explode( '*', $string ) ) ) . '%';
-		} else {
-			$like = '%' . $wpdb->esc_like( $string ) . '%';
-=======
 	 * @param string   $search  Search string.
 	 * @param string[] $columns Array of columns to search.
 	 * @return string Search SQL.
@@ -786,7 +750,6 @@ class WP_Site_Query {
 			$like = '%' . implode( '%', array_map( array( $wpdb, 'esc_like' ), explode( '*', $search ) ) ) . '%';
 		} else {
 			$like = '%' . $wpdb->esc_like( $search ) . '%';
->>>>>>> main
 		}
 
 		$searches = array();
@@ -825,14 +788,11 @@ class WP_Site_Query {
 			case 'last_updated':
 			case 'path':
 			case 'registered':
-<<<<<<< HEAD
-=======
 			case 'deleted':
 			case 'spam':
 			case 'mature':
 			case 'archived':
 			case 'public':
->>>>>>> main
 				$parsed = $orderby;
 				break;
 			case 'network_id':

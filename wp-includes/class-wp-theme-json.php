@@ -74,33 +74,6 @@ class WP_Theme_JSON {
 	 *
 	 * This contains the necessary metadata to process them:
 	 *
-<<<<<<< HEAD
-	 * - path              => where to find the preset within the settings section
-	 * - override          => whether a theme preset with the same slug as a default preset
-	 *                        can override it
-	 * - use_default_names => whether to use the default names
-	 * - value_key         => the key that represents the value
-	 * - value_func        => optionally, instead of value_key, a function to generate
-	 *                        the value that takes a preset as an argument
-	 *                        (either value_key or value_func should be present)
-	 * - css_vars          => template string to use in generating the CSS Custom Property.
-	 *                        Example output: "--wp--preset--duotone--blue: <value>" will generate
-	 *                        as many CSS Custom Properties as presets defined
-	 *                        substituting the $slug for the slug's value for each preset value.
-	 * - classes           => array containing a structure with the classes to
-	 *                        generate for the presets, where for each array item
-	 *                        the key is the class name and the value the property name.
-	 *                        The "$slug" substring will be replaced by the slug of each preset.
-	 *                        For example:
-	 *                        'classes' => array(
-	 *                           '.has-$slug-color'            => 'color',
-	 *                           '.has-$slug-background-color' => 'background-color',
-	 *                           '.has-$slug-border-color'     => 'border-color',
-	 *                        )
-	 * - properties        => array of CSS properties to be used by kses to
-	 *                        validate the content of each preset
-	 *                        by means of the remove_insecure_properties method.
-=======
 	 * - path             => Where to find the preset within the settings section.
 	 * - prevent_override => Disables override of default presets by theme presets.
 	 *                       The relationship between whether to override the defaults
@@ -132,26 +105,18 @@ class WP_Theme_JSON {
 	 * - properties       => array of CSS properties to be used by kses to
 	 *                       validate the content of each preset
 	 *                       by means of the remove_insecure_properties method.
->>>>>>> main
 	 *
 	 * @since 5.8.0
 	 * @since 5.9.0 Added the `color.duotone` and `typography.fontFamilies` presets,
 	 *              `use_default_names` preset key, and simplified the metadata structure.
-<<<<<<< HEAD
-=======
 	 * @since 6.0.0 Replaced `override` with `prevent_override` and updated the
 	 *              `prevent_overried` value for `color.duotone` to use `color.defaultDuotone`.
->>>>>>> main
 	 * @var array
 	 */
 	const PRESETS_METADATA = array(
 		array(
 			'path'              => array( 'color', 'palette' ),
-<<<<<<< HEAD
-			'override'          => array( 'color', 'defaultPalette' ),
-=======
 			'prevent_override'  => array( 'color', 'defaultPalette' ),
->>>>>>> main
 			'use_default_names' => false,
 			'value_key'         => 'color',
 			'css_vars'          => '--wp--preset--color--$slug',
@@ -164,11 +129,7 @@ class WP_Theme_JSON {
 		),
 		array(
 			'path'              => array( 'color', 'gradients' ),
-<<<<<<< HEAD
-			'override'          => array( 'color', 'defaultGradients' ),
-=======
 			'prevent_override'  => array( 'color', 'defaultGradients' ),
->>>>>>> main
 			'use_default_names' => false,
 			'value_key'         => 'gradient',
 			'css_vars'          => '--wp--preset--gradient--$slug',
@@ -177,11 +138,7 @@ class WP_Theme_JSON {
 		),
 		array(
 			'path'              => array( 'color', 'duotone' ),
-<<<<<<< HEAD
-			'override'          => true,
-=======
 			'prevent_override'  => array( 'color', 'defaultDuotone' ),
->>>>>>> main
 			'use_default_names' => false,
 			'value_func'        => 'wp_get_duotone_filter_property',
 			'css_vars'          => '--wp--preset--duotone--$slug',
@@ -190,11 +147,7 @@ class WP_Theme_JSON {
 		),
 		array(
 			'path'              => array( 'typography', 'fontSizes' ),
-<<<<<<< HEAD
-			'override'          => true,
-=======
 			'prevent_override'  => false,
->>>>>>> main
 			'use_default_names' => true,
 			'value_key'         => 'size',
 			'css_vars'          => '--wp--preset--font-size--$slug',
@@ -203,11 +156,7 @@ class WP_Theme_JSON {
 		),
 		array(
 			'path'              => array( 'typography', 'fontFamilies' ),
-<<<<<<< HEAD
-			'override'          => true,
-=======
 			'prevent_override'  => false,
->>>>>>> main
 			'use_default_names' => false,
 			'value_key'         => 'fontFamily',
 			'css_vars'          => '--wp--preset--font-family--$slug',
@@ -288,18 +237,12 @@ class WP_Theme_JSON {
 	 */
 	const VALID_TOP_LEVEL_KEYS = array(
 		'customTemplates',
-<<<<<<< HEAD
-=======
 		'patterns',
->>>>>>> main
 		'settings',
 		'styles',
 		'templateParts',
 		'version',
-<<<<<<< HEAD
-=======
 		'title',
->>>>>>> main
 	);
 
 	/**
@@ -309,10 +252,7 @@ class WP_Theme_JSON {
 	 * @since 5.9.0 Renamed from `ALLOWED_SETTINGS` to `VALID_SETTINGS`,
 	 *              added new properties for `border`, `color`, `spacing`,
 	 *              and `typography`, and renamed others according to the new schema.
-<<<<<<< HEAD
-=======
 	 * @since 6.0.0 Added `color.defaultDuotone`.
->>>>>>> main
 	 * @var array
 	 */
 	const VALID_SETTINGS = array(
@@ -328,10 +268,7 @@ class WP_Theme_JSON {
 			'custom'           => null,
 			'customDuotone'    => null,
 			'customGradient'   => null,
-<<<<<<< HEAD
-=======
 			'defaultDuotone'   => null,
->>>>>>> main
 			'defaultGradients' => null,
 			'defaultPalette'   => null,
 			'duotone'          => null,
@@ -423,8 +360,6 @@ class WP_Theme_JSON {
 	);
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Options that settings.appearanceTools enables.
 	 *
 	 * @since 6.0.0
@@ -443,7 +378,6 @@ class WP_Theme_JSON {
 	);
 
 	/**
->>>>>>> main
 	 * The latest version of the schema in use.
 	 *
 	 * @since 5.8.0
@@ -525,23 +459,7 @@ class WP_Theme_JSON {
 	 * @param array $context The context to which the settings belong.
 	 */
 	protected static function do_opt_in_into_settings( &$context ) {
-<<<<<<< HEAD
-		$to_opt_in = array(
-			array( 'border', 'color' ),
-			array( 'border', 'radius' ),
-			array( 'border', 'style' ),
-			array( 'border', 'width' ),
-			array( 'color', 'link' ),
-			array( 'spacing', 'blockGap' ),
-			array( 'spacing', 'margin' ),
-			array( 'spacing', 'padding' ),
-			array( 'typography', 'lineHeight' ),
-		);
-
-		foreach ( $to_opt_in as $path ) {
-=======
 		foreach ( static::APPEARANCE_TOOLS_OPT_INS as $path ) {
->>>>>>> main
 			// Use "unset prop" as a marker instead of "null" because
 			// "null" can be a valid value for some props (e.g. blockGap).
 			if ( 'unset prop' === _wp_array_get( $context, $path, 'unset prop' ) ) {
@@ -812,11 +730,7 @@ class WP_Theme_JSON {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Returns the page templates of the current theme.
-=======
 	 * Returns the page templates of the active theme.
->>>>>>> main
 	 *
 	 * @since 5.9.0
 	 *
@@ -840,11 +754,7 @@ class WP_Theme_JSON {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Returns the template part data of current theme.
-=======
 	 * Returns the template part data of active theme.
->>>>>>> main
 	 *
 	 * @since 5.9.0
 	 *
@@ -938,13 +848,8 @@ class WP_Theme_JSON {
 
 				$has_block_gap_support = _wp_array_get( $this->theme_json, array( 'settings', 'spacing', 'blockGap' ) ) !== null;
 				if ( $has_block_gap_support ) {
-<<<<<<< HEAD
-					$block_rules .= '.wp-site-blocks > * { margin-top: 0; margin-bottom: 0; }';
-					$block_rules .= '.wp-site-blocks > * + * { margin-top: var( --wp--style--block-gap ); }';
-=======
 					$block_rules .= '.wp-site-blocks > * { margin-block-start: 0; margin-block-end: 0; }';
 					$block_rules .= '.wp-site-blocks > * + * { margin-block-start: var( --wp--style--block-gap ); }';
->>>>>>> main
 				}
 			}
 		}
@@ -1615,8 +1520,6 @@ class WP_Theme_JSON {
 	}
 
 	/**
-<<<<<<< HEAD
-=======
 	 * For metadata values that can either be booleans or paths to booleans, gets the value.
 	 *
 	 * ```php
@@ -1657,7 +1560,6 @@ class WP_Theme_JSON {
 	}
 
 	/**
->>>>>>> main
 	 * Merge new incoming data.
 	 *
 	 * @since 5.8.0
@@ -1688,11 +1590,7 @@ class WP_Theme_JSON {
 		 * Additionally, for some preset types, we also want to make sure the
 		 * values they introduce don't conflict with default values. We do so
 		 * by checking the incoming slugs for theme presets and compare them
-<<<<<<< HEAD
-		 * with the equivalent dfefault presets: if a slug is present as a default
-=======
 		 * with the equivalent default presets: if a slug is present as a default
->>>>>>> main
 		 * we remove it from the theme presets.
 		 */
 		$nodes        = static::get_setting_nodes( $incoming_data );
@@ -1710,11 +1608,7 @@ class WP_Theme_JSON {
 
 			// Replace the presets.
 			foreach ( static::PRESETS_METADATA as $preset ) {
-<<<<<<< HEAD
-				$override_preset = static::should_override_preset( $this->theme_json, $node['path'], $preset['override'] );
-=======
 				$override_preset = ! static::get_metadata_boolean( $this->theme_json['settings'], $preset['prevent_override'], true );
->>>>>>> main
 
 				foreach ( static::VALID_ORIGINS as $origin ) {
 					$base_path = array_merge( $node['path'], $preset['path'] );
@@ -1788,15 +1682,6 @@ class WP_Theme_JSON {
 	 * Returns whether a presets should be overridden or not.
 	 *
 	 * @since 5.9.0
-<<<<<<< HEAD
-	 *
-	 * @param array      $theme_json The theme.json like structure to inspect.
-	 * @param array      $path Path to inspect.
-	 * @param bool|array $override Data to compute whether to override the preset.
-	 * @return boolean
-	 */
-	protected static function should_override_preset( $theme_json, $path, $override ) {
-=======
 	 * @deprecated 6.0.0 Use {@see 'get_metadata_boolean'} instead.
 	 *
 	 * @param array      $theme_json The theme.json like structure to inspect.
@@ -1807,7 +1692,6 @@ class WP_Theme_JSON {
 	protected static function should_override_preset( $theme_json, $path, $override ) {
 		_deprecated_function( __METHOD__, '6.0.0', 'get_metadata_boolean' );
 
->>>>>>> main
 		if ( is_bool( $override ) ) {
 			return $override;
 		}
@@ -2190,8 +2074,6 @@ class WP_Theme_JSON {
 		return $theme_settings;
 	}
 
-<<<<<<< HEAD
-=======
 	/**
 	 * Returns the current theme's wanted patterns(slugs) to be
 	 * registered from Pattern Directory.
@@ -2339,5 +2221,4 @@ class WP_Theme_JSON {
 		return $output;
 	}
 
->>>>>>> main
 }

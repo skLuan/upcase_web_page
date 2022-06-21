@@ -1,17 +1,10 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/post-author",
 	"title": "Post Author",
 	"category": "theme",
-<<<<<<< HEAD
-	"description": "Add the author of this post.",
-=======
 	"description": "Display post author details such as name, avatar, and bio.",
->>>>>>> main
 	"textdomain": "default",
 	"attributes": {
 		"textAlign": {
@@ -53,15 +46,11 @@
 		"color": {
 			"gradients": true,
 			"link": true,
-<<<<<<< HEAD
-			"__experimentalDuotone": ".wp-block-post-author__avatar img"
-=======
 			"__experimentalDuotone": ".wp-block-post-author__avatar img",
 			"__experimentalDefaultControls": {
 				"background": true,
 				"text": true
 			}
->>>>>>> main
 		}
 	},
 	"editorStyle": "wp-block-post-author-editor",

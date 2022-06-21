@@ -79,11 +79,7 @@
   margin-left: 0;
 }
 .wp-block-post-featured-image a {
-<<<<<<< HEAD
-  display: inline-block;
-=======
   display: block;
->>>>>>> main
 }
 .wp-block-post-featured-image img {
   max-width: 100%;

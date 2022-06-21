@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/code",
 	"title": "Code",
@@ -18,10 +15,6 @@
 	},
 	"supports": {
 		"anchor": true,
-<<<<<<< HEAD
-		"__experimentalSelector": ".wp-block-code > code",
-=======
->>>>>>> main
 		"typography": {
 			"fontSize": true,
 			"lineHeight": true,
@@ -41,28 +34,20 @@
 			"radius": true,
 			"color": true,
 			"width": true,
-<<<<<<< HEAD
-			"style": true
-=======
 			"style": true,
 			"__experimentalDefaultControls": {
 				"width": true,
 				"color": true
 			}
->>>>>>> main
 		},
 		"color": {
 			"text": true,
 			"background": true,
-<<<<<<< HEAD
-			"gradients": true
-=======
 			"gradients": true,
 			"__experimentalDefaultControls": {
 				"background": true,
 				"text": true
 			}
->>>>>>> main
 		}
 	},
 	"style": "wp-block-code"

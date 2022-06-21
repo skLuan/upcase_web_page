@@ -18,11 +18,7 @@ window.wpAjax = jQuery.extend( {
 		return r;
 	},
 	parseAjaxResponse: function( x, r, e ) { // 1 = good, 0 = strange (bad data?), -1 = you lack permission.
-<<<<<<< HEAD
-		var parsed = {}, re = jQuery('#' + r).empty(), err = '', successmsg = '';
-=======
 		var parsed = {}, re = jQuery('#' + r).empty(), err = '', noticeMessage = '';
->>>>>>> main
 
 		if ( x && typeof x === 'object' && x.getElementsByTagName('wp_ajax') ) {
 			parsed.responses = [];
@@ -31,13 +27,6 @@ window.wpAjax = jQuery.extend( {
 				var th = jQuery(this), child = jQuery(this.firstChild), response;
 				response = { action: th.attr('action'), what: child.get(0).nodeName, id: child.attr('id'), oldId: child.attr('old_id'), position: child.attr('position') };
 				response.data = jQuery( 'response_data', child ).text();
-<<<<<<< HEAD
-				if ( jQuery( 'body' ).hasClass( 'edit-tags-php' ) ) {
-					successmsg += response.data;
-				}
-				response.supplemental = {};
-				if ( !jQuery( 'supplemental', child ).children().each( function() {
-=======
 				response.supplemental = {};
 				if ( !jQuery( 'supplemental', child ).children().each( function() {
 
@@ -46,7 +35,6 @@ window.wpAjax = jQuery.extend( {
 						return;
 					}
 
->>>>>>> main
 					response.supplemental[this.nodeName] = jQuery(this).text();
 				} ).length ) { response.supplemental = false; }
 				response.errors = [];
@@ -67,17 +55,10 @@ window.wpAjax = jQuery.extend( {
 			if ( err.length ) {
 				re.html( '<div class="error">' + err + '</div>' );
 				wp.a11y.speak( err );
-<<<<<<< HEAD
-			} else if ( successmsg.length ) {
-				re.html( '<div class="updated notice is-dismissible"><p>' + successmsg + '</p></div>');
-				jQuery(document).trigger( 'wp-updates-notice-added' );
-				wp.a11y.speak( successmsg );
-=======
 			} else if ( noticeMessage.length ) {
 				re.html( '<div class="updated notice is-dismissible"><p>' + noticeMessage + '</p></div>');
 				jQuery(document).trigger( 'wp-updates-notice-added' );
 				wp.a11y.speak( noticeMessage );
->>>>>>> main
 			}
 			return parsed;
 		}

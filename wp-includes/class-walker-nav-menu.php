@@ -30,11 +30,7 @@ class Walker_Nav_Menu extends Walker {
 	 *
 	 * @since 3.0.0
 	 * @todo Decouple this.
-<<<<<<< HEAD
-	 * @var array
-=======
 	 * @var string[]
->>>>>>> main
 	 *
 	 * @see Walker::$db_fields
 	 */

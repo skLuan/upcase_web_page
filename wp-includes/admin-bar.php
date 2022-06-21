@@ -611,16 +611,6 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 		)
 	);
 
-<<<<<<< HEAD
-	foreach ( (array) $wp_admin_bar->user->blogs as $blog ) {
-		switch_to_blog( $blog->userblog_id );
-
-		if ( has_site_icon() ) {
-			$blavatar = sprintf(
-				'<img class="blavatar" src="%s" srcset="%s 2x" alt="" width="16" height="16" />',
-				esc_url( get_site_icon_url( 16 ) ),
-				esc_url( get_site_icon_url( 32 ) )
-=======
 	/**
 	 * Filters whether to show the site icons in toolbar.
 	 *
@@ -642,7 +632,6 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 				esc_url( get_site_icon_url( 16 ) ),
 				esc_url( get_site_icon_url( 32 ) ),
 				( wp_lazy_loading_enabled( 'img', 'site_icon_in_toolbar' ) ? ' loading="lazy"' : '' )
->>>>>>> main
 			);
 		} else {
 			$blavatar = '<div class="blavatar"></div>';
@@ -1257,11 +1246,7 @@ function show_admin_bar( $show ) {
  * @since 3.1.0
  *
  * @global bool   $show_admin_bar
-<<<<<<< HEAD
- * @global string $pagenow
-=======
  * @global string $pagenow        The filename of the current screen.
->>>>>>> main
  *
  * @return bool Whether the admin bar should be showing.
  */

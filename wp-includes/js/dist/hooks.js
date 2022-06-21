@@ -1,98 +1,3 @@
-<<<<<<< HEAD
-this["wp"] = this["wp"] || {}; this["wp"]["hooks"] =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "gEOj");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "gEOj":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-=======
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
@@ -129,35 +34,10 @@ this["wp"] = this["wp"] || {}; this["wp"]["hooks"] =
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
->>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-<<<<<<< HEAD
-__webpack_require__.d(__webpack_exports__, "defaultHooks", function() { return /* binding */ defaultHooks; });
-__webpack_require__.d(__webpack_exports__, "createHooks", function() { return /* reexport */ build_module_createHooks; });
-__webpack_require__.d(__webpack_exports__, "addAction", function() { return /* binding */ addAction; });
-__webpack_require__.d(__webpack_exports__, "addFilter", function() { return /* binding */ addFilter; });
-__webpack_require__.d(__webpack_exports__, "removeAction", function() { return /* binding */ removeAction; });
-__webpack_require__.d(__webpack_exports__, "removeFilter", function() { return /* binding */ removeFilter; });
-__webpack_require__.d(__webpack_exports__, "hasAction", function() { return /* binding */ hasAction; });
-__webpack_require__.d(__webpack_exports__, "hasFilter", function() { return /* binding */ hasFilter; });
-__webpack_require__.d(__webpack_exports__, "removeAllActions", function() { return /* binding */ removeAllActions; });
-__webpack_require__.d(__webpack_exports__, "removeAllFilters", function() { return /* binding */ removeAllFilters; });
-__webpack_require__.d(__webpack_exports__, "doAction", function() { return /* binding */ doAction; });
-__webpack_require__.d(__webpack_exports__, "applyFilters", function() { return /* binding */ applyFilters; });
-__webpack_require__.d(__webpack_exports__, "currentAction", function() { return /* binding */ currentAction; });
-__webpack_require__.d(__webpack_exports__, "currentFilter", function() { return /* binding */ currentFilter; });
-__webpack_require__.d(__webpack_exports__, "doingAction", function() { return /* binding */ doingAction; });
-__webpack_require__.d(__webpack_exports__, "doingFilter", function() { return /* binding */ doingFilter; });
-__webpack_require__.d(__webpack_exports__, "didAction", function() { return /* binding */ didAction; });
-__webpack_require__.d(__webpack_exports__, "didFilter", function() { return /* binding */ didFilter; });
-__webpack_require__.d(__webpack_exports__, "actions", function() { return /* binding */ actions; });
-__webpack_require__.d(__webpack_exports__, "filters", function() { return /* binding */ filters; });
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/validateNamespace.js
-=======
 __webpack_require__.d(__webpack_exports__, {
   "actions": function() { return /* binding */ actions; },
   "addAction": function() { return /* binding */ addAction; },
@@ -182,7 +62,6 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/validateNamespace.js
->>>>>>> main
 /**
  * Validate a namespace string.
  *
@@ -209,11 +88,7 @@ function validateNamespace(namespace) {
 
 /* harmony default export */ var build_module_validateNamespace = (validateNamespace);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/validateHookName.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/validateHookName.js
->>>>>>> main
 /**
  * Validate a hookName string.
  *
@@ -247,11 +122,7 @@ function validateHookName(hookName) {
 
 /* harmony default export */ var build_module_validateHookName = (validateHookName);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createAddHook.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createAddHook.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -355,11 +226,7 @@ function createAddHook(hooks, storeKey) {
 
 /* harmony default export */ var build_module_createAddHook = (createAddHook);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createRemoveHook.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createRemoveHook.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -401,11 +268,7 @@ function createRemoveHook(hooks, storeKey) {
 
     if (!removeAll && !build_module_validateNamespace(namespace)) {
       return;
-<<<<<<< HEAD
-    } // Bail if no hooks exist by this name
-=======
     } // Bail if no hooks exist by this name.
->>>>>>> main
 
 
     if (!hooksStore[hookName]) {
@@ -452,11 +315,7 @@ function createRemoveHook(hooks, storeKey) {
 
 /* harmony default export */ var build_module_createRemoveHook = (createRemoveHook);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createHasHook.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createHasHook.js
->>>>>>> main
 /**
  * @callback HasHook
  *
@@ -493,11 +352,7 @@ function createHasHook(hooks, storeKey) {
 
 /* harmony default export */ var build_module_createHasHook = (createHasHook);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createRunHook.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createRunHook.js
->>>>>>> main
 /**
  * Returns a function which, when invoked, will execute all callbacks
  * registered to a hook of the specified type, optionally returning the final
@@ -563,11 +418,7 @@ function createRunHook(hooks, storeKey) {
 
 /* harmony default export */ var build_module_createRunHook = (createRunHook);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createCurrentHook.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createCurrentHook.js
->>>>>>> main
 /**
  * Returns a function which, when invoked, will return the name of the
  * currently running hook, or `null` if no hook of the given type is currently
@@ -589,11 +440,7 @@ function createCurrentHook(hooks, storeKey) {
 
 /* harmony default export */ var build_module_createCurrentHook = (createCurrentHook);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createDoingHook.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createDoingHook.js
->>>>>>> main
 /**
  * @callback DoingHook
  * Returns whether a hook is currently being executed.
@@ -629,11 +476,7 @@ function createDoingHook(hooks, storeKey) {
 
 /* harmony default export */ var build_module_createDoingHook = (createDoingHook);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createDidHook.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createDidHook.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -672,11 +515,7 @@ function createDidHook(hooks, storeKey) {
 
 /* harmony default export */ var build_module_createDidHook = (createDidHook);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createHooks.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createHooks.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -695,11 +534,7 @@ function createDidHook(hooks, storeKey) {
  * @private
  */
 
-<<<<<<< HEAD
-class createHooks_Hooks {
-=======
 class _Hooks {
->>>>>>> main
   constructor() {
     /** @type {import('.').Store} actions */
     this.actions = Object.create(null);
@@ -736,20 +571,12 @@ class _Hooks {
  */
 
 function createHooks() {
-<<<<<<< HEAD
-  return new createHooks_Hooks();
-=======
   return new _Hooks();
->>>>>>> main
 }
 
 /* harmony default export */ var build_module_createHooks = (createHooks);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/index.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/index.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -810,13 +637,6 @@ const {
 } = defaultHooks;
 
 
-<<<<<<< HEAD
-
-/***/ })
-
-/******/ });
-=======
 (window.wp = window.wp || {}).hooks = __webpack_exports__;
 /******/ })()
 ;
->>>>>>> main

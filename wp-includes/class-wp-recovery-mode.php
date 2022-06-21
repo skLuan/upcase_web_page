@@ -159,11 +159,7 @@ class WP_Recovery_Mode {
 	 *
 	 * @since 5.2.0
 	 *
-<<<<<<< HEAD
-	 * @param array $error Error details from {@see error_get_last()}
-=======
 	 * @param array $error Error details from `error_get_last()`.
->>>>>>> main
 	 * @return true|WP_Error True if the error was handled and headers have already been sent.
 	 *                       Or the request will exit to try and catch multiple errors at once.
 	 *                       WP_Error if an error occurred preventing it from being handled.
@@ -343,11 +339,7 @@ class WP_Recovery_Mode {
 	 *
 	 * @global array $wp_theme_directories
 	 *
-<<<<<<< HEAD
-	 * @param array $error Error that was triggered.
-=======
 	 * @param array $error Error details from `error_get_last()`.
->>>>>>> main
 	 * @return array|false {
 	 *     Extension details.
 	 *
@@ -433,11 +425,7 @@ class WP_Recovery_Mode {
 	 *
 	 * @since 5.2.0
 	 *
-<<<<<<< HEAD
-	 * @param array $error Error that was triggered.
-=======
 	 * @param array $error Error details from `error_get_last()`.
->>>>>>> main
 	 * @return bool True if the error was stored successfully, false otherwise.
 	 */
 	protected function store_error( $error ) {

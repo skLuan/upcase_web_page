@@ -34,11 +34,7 @@ class WP_List_Util {
 	 * Temporary arguments for sorting.
 	 *
 	 * @since 4.7.0
-<<<<<<< HEAD
-	 * @var array
-=======
 	 * @var string[]
->>>>>>> main
 	 */
 	private $orderby = array();
 

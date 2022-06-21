@@ -1,18 +1,11 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/social-link",
 	"title": "Social Icon",
 	"category": "widgets",
 	"parent": [ "core/social-links" ],
-<<<<<<< HEAD
-	"description": "Display an icon linking to a social media profile or website.",
-=======
 	"description": "Display an icon linking to a social media profile or site.",
->>>>>>> main
 	"textdomain": "default",
 	"attributes": {
 		"url": {
@@ -27,10 +20,7 @@
 	},
 	"usesContext": [
 		"openInNewTab",
-<<<<<<< HEAD
-=======
 		"showLabels",
->>>>>>> main
 		"iconColorValue",
 		"iconBackgroundColorValue"
 	],

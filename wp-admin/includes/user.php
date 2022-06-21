@@ -174,11 +174,7 @@ function edit_user( $user_id = 0 ) {
 
 	// Checking the password has been typed twice the same.
 	if ( ( $update || ! empty( $pass1 ) ) && $pass1 != $pass2 ) {
-<<<<<<< HEAD
-		$errors->add( 'pass', __( '<strong>Error</strong>: Passwords don&#8217;t match. Please enter the same password in both password fields.' ), array( 'form-field' => 'pass1' ) );
-=======
 		$errors->add( 'pass', __( '<strong>Error</strong>: Passwords do not match. Please enter the same password in both password fields.' ), array( 'form-field' => 'pass1' ) );
->>>>>>> main
 	}
 
 	if ( ! empty( $pass1 ) ) {
@@ -204,11 +200,7 @@ function edit_user( $user_id = 0 ) {
 	if ( empty( $user->user_email ) ) {
 		$errors->add( 'empty_email', __( '<strong>Error</strong>: Please enter an email address.' ), array( 'form-field' => 'email' ) );
 	} elseif ( ! is_email( $user->user_email ) ) {
-<<<<<<< HEAD
-		$errors->add( 'invalid_email', __( '<strong>Error</strong>: The email address isn&#8217;t correct.' ), array( 'form-field' => 'email' ) );
-=======
 		$errors->add( 'invalid_email', __( '<strong>Error</strong>: The email address is not correct.' ), array( 'form-field' => 'email' ) );
->>>>>>> main
 	} else {
 		$owner_id = email_exists( $user->user_email );
 		if ( $owner_id && ( ! $update || ( $owner_id != $user->ID ) ) ) {
@@ -518,18 +510,11 @@ function default_password_nag_edit_user( $user_ID, $old_data ) {
 /**
  * @since 2.8.0
  *
-<<<<<<< HEAD
- * @global string $pagenow
- */
-function default_password_nag() {
-	global $pagenow;
-=======
  * @global string $pagenow The filename of the current screen.
  */
 function default_password_nag() {
 	global $pagenow;
 
->>>>>>> main
 	// Short-circuit it.
 	if ( 'profile.php' === $pagenow || ! get_user_option( 'default_password_nag' ) ) {
 		return;
@@ -593,15 +578,12 @@ function admin_created_user_email( $text ) {
 	$roles = get_editable_roles();
 	$role  = $roles[ $_REQUEST['role'] ];
 
-<<<<<<< HEAD
-=======
 	if ( '' !== get_bloginfo( 'name' ) ) {
 		$site_title = wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES );
 	} else {
 		$site_title = parse_url( home_url(), PHP_URL_HOST );
 	}
 
->>>>>>> main
 	return sprintf(
 		/* translators: 1: Site title, 2: Site URL, 3: User role. */
 		__(
@@ -614,11 +596,7 @@ this email. This invitation will expire in a few days.
 Please click the following link to activate your user account:
 %%s'
 		),
-<<<<<<< HEAD
-		wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ),
-=======
 		$site_title,
->>>>>>> main
 		home_url(),
 		wp_specialchars_decode( translate_user_role( $role['name'] ) )
 	);

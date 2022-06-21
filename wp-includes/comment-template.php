@@ -22,18 +22,11 @@
  * @return string The comment author
  */
 function get_comment_author( $comment_ID = 0 ) {
-<<<<<<< HEAD
-	$comment = get_comment( $comment_ID );
-
-	if ( empty( $comment->comment_author ) ) {
-		$user = $comment->user_id ? get_userdata( $comment->user_id ) : false;
-=======
 	$comment    = get_comment( $comment_ID );
 	$comment_ID = ! empty( $comment->comment_ID ) ? $comment->comment_ID : $comment_ID;
 
 	if ( empty( $comment->comment_author ) ) {
 		$user = ! empty( $comment->user_id ) ? get_userdata( $comment->user_id ) : false;
->>>>>>> main
 		if ( $user ) {
 			$author = $user->display_name;
 		} else {
@@ -53,11 +46,7 @@ function get_comment_author( $comment_ID = 0 ) {
 	 * @param string     $comment_ID The comment ID as a numeric string.
 	 * @param WP_Comment $comment    The comment object.
 	 */
-<<<<<<< HEAD
-	return apply_filters( 'get_comment_author', $author, $comment->comment_ID, $comment );
-=======
 	return apply_filters( 'get_comment_author', $author, $comment_ID, $comment );
->>>>>>> main
 }
 
 /**
@@ -267,11 +256,7 @@ function comment_author_link( $comment_ID = 0 ) {
 }
 
 /**
-<<<<<<< HEAD
- * Retrieve the IP address of the author of the current comment.
-=======
  * Retrieves the IP address of the author of the current comment.
->>>>>>> main
  *
  * @since 1.5.0
  * @since 4.4.0 Added the ability for `$comment_ID` to also accept a WP_Comment object.
@@ -438,24 +423,6 @@ function comment_author_url_link( $linktext = '', $before = '', $after = '', $co
  * @since 2.7.0
  * @since 4.4.0 Added the ability for `$comment` to also accept a WP_Comment object.
  *
-<<<<<<< HEAD
- * @param string|string[] $class    Optional. One or more classes to add to the class list.
- *                                  Default empty.
- * @param int|WP_Comment  $comment  Comment ID or WP_Comment object. Default current comment.
- * @param int|WP_Post     $post_id  Post ID or WP_Post object. Default current post.
- * @param bool            $echo     Optional. Whether to echo or return the output.
- *                                  Default true.
- * @return void|string Void if `$echo` argument is true, comment classes if `$echo` is false.
- */
-function comment_class( $class = '', $comment = null, $post_id = null, $echo = true ) {
-	// Separates classes with a single space, collates classes for comment DIV.
-	$class = 'class="' . implode( ' ', get_comment_class( $class, $comment, $post_id ) ) . '"';
-
-	if ( $echo ) {
-		echo $class;
-	} else {
-		return $class;
-=======
  * @param string|string[] $css_class Optional. One or more classes to add to the class list.
  *                                   Default empty.
  * @param int|WP_Comment  $comment   Comment ID or WP_Comment object. Default current comment.
@@ -472,7 +439,6 @@ function comment_class( $css_class = '', $comment = null, $post_id = null, $disp
 		echo $css_class;
 	} else {
 		return $css_class;
->>>>>>> main
 	}
 }
 
@@ -486,20 +452,12 @@ function comment_class( $css_class = '', $comment = null, $post_id = null, $disp
  * @global int $comment_depth
  * @global int $comment_thread_alt
  *
-<<<<<<< HEAD
- * @param string|string[] $class      Optional. One or more classes to add to the class list. Default empty.
-=======
  * @param string|string[] $css_class  Optional. One or more classes to add to the class list. Default empty.
->>>>>>> main
  * @param int|WP_Comment  $comment_id Comment ID or WP_Comment object. Default current comment.
  * @param int|WP_Post     $post_id    Post ID or WP_Post object. Default current post.
  * @return string[] An array of classes.
  */
-<<<<<<< HEAD
-function get_comment_class( $class = '', $comment_id = null, $post_id = null ) {
-=======
 function get_comment_class( $css_class = '', $comment_id = null, $post_id = null ) {
->>>>>>> main
 	global $comment_alt, $comment_depth, $comment_thread_alt;
 
 	$classes = array();
@@ -558,19 +516,11 @@ function get_comment_class( $css_class = '', $comment_id = null, $post_id = null
 
 	$classes[] = "depth-$comment_depth";
 
-<<<<<<< HEAD
-	if ( ! empty( $class ) ) {
-		if ( ! is_array( $class ) ) {
-			$class = preg_split( '#\s+#', $class );
-		}
-		$classes = array_merge( $classes, $class );
-=======
 	if ( ! empty( $css_class ) ) {
 		if ( ! is_array( $css_class ) ) {
 			$css_class = preg_split( '#\s+#', $css_class );
 		}
 		$classes = array_merge( $classes, $css_class );
->>>>>>> main
 	}
 
 	$classes = array_map( 'esc_attr', $classes );
@@ -581,20 +531,12 @@ function get_comment_class( $css_class = '', $comment_id = null, $post_id = null
 	 * @since 2.7.0
 	 *
 	 * @param string[]    $classes    An array of comment classes.
-<<<<<<< HEAD
-	 * @param string[]    $class      An array of additional classes added to the list.
-=======
 	 * @param string[]    $css_class  An array of additional classes added to the list.
->>>>>>> main
 	 * @param string      $comment_id The comment ID as a numeric string.
 	 * @param WP_Comment  $comment    The comment object.
 	 * @param int|WP_Post $post_id    The post ID or WP_Post object.
 	 */
-<<<<<<< HEAD
-	return apply_filters( 'comment_class', $classes, $class, $comment->comment_ID, $comment, $post_id );
-=======
 	return apply_filters( 'comment_class', $classes, $css_class, $comment->comment_ID, $comment, $post_id );
->>>>>>> main
 }
 
 /**
@@ -722,12 +664,8 @@ function comment_excerpt( $comment_ID = 0 ) {
  * @return string The comment ID as a numeric string.
  */
 function get_comment_ID() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid
-<<<<<<< HEAD
-	$comment = get_comment();
-=======
 	$comment    = get_comment();
 	$comment_ID = ! empty( $comment->comment_ID ) ? $comment->comment_ID : '0';
->>>>>>> main
 
 	/**
 	 * Filters the returned comment ID.
@@ -738,11 +676,7 @@ function get_comment_ID() { // phpcs:ignore WordPress.NamingConventions.ValidFun
 	 * @param string     $comment_ID The current comment ID as a numeric string.
 	 * @param WP_Comment $comment    The comment object.
 	 */
-<<<<<<< HEAD
-	return apply_filters( 'get_comment_ID', $comment->comment_ID, $comment );  // phpcs:ignore WordPress.NamingConventions.ValidHookName.NotLowercase
-=======
 	return apply_filters( 'get_comment_ID', $comment_ID, $comment );  // phpcs:ignore WordPress.NamingConventions.ValidHookName.NotLowercase
->>>>>>> main
 }
 
 /**

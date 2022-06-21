@@ -441,19 +441,11 @@ function number_format_i18n( $number, $decimals = 0 ) {
 }
 
 /**
-<<<<<<< HEAD
- * Convert number of bytes largest unit bytes will fit into.
- *
- * It is easier to read 1 KB than 1024 bytes and 1 MB than 1048576 bytes. Converts
- * number of bytes to human readable number by taking the number of that unit
- * that the bytes will go into it. Supports TB value.
-=======
  * Converts a number of bytes to the largest unit the bytes will fit into.
  *
  * It is easier to read 1 KB than 1024 bytes and 1 MB than 1048576 bytes. Converts
  * number of bytes to human readable number by taking the number of that unit
  * that the bytes will go into it. Supports YB value.
->>>>>>> main
  *
  * Please note that integers in PHP are limited to 32 bits, unless they are on
  * 64 bit architecture, then they have 64 bit size. If you need to place the
@@ -463,10 +455,7 @@ function number_format_i18n( $number, $decimals = 0 ) {
  * Technically the correct unit names for powers of 1024 are KiB, MiB etc.
  *
  * @since 2.3.0
-<<<<<<< HEAD
-=======
  * @since 6.0.0 Support for PB, EB, ZB, and YB was added.
->>>>>>> main
  *
  * @param int|string $bytes    Number of bytes. Note max integer size for integers.
  * @param int        $decimals Optional. Precision of number of decimal places. Default 0.
@@ -474,8 +463,6 @@ function number_format_i18n( $number, $decimals = 0 ) {
  */
 function size_format( $bytes, $decimals = 0 ) {
 	$quant = array(
-<<<<<<< HEAD
-=======
 		/* translators: Unit symbol for yottabyte. */
 		_x( 'YB', 'unit symbol' ) => YB_IN_BYTES,
 		/* translators: Unit symbol for zettabyte. */
@@ -484,7 +471,6 @@ function size_format( $bytes, $decimals = 0 ) {
 		_x( 'EB', 'unit symbol' ) => EB_IN_BYTES,
 		/* translators: Unit symbol for petabyte. */
 		_x( 'PB', 'unit symbol' ) => PB_IN_BYTES,
->>>>>>> main
 		/* translators: Unit symbol for terabyte. */
 		_x( 'TB', 'unit symbol' ) => TB_IN_BYTES,
 		/* translators: Unit symbol for gigabyte. */
@@ -834,10 +820,7 @@ function xmlrpc_removepostdata( $content ) {
  * Use RegEx to extract URLs from arbitrary content.
  *
  * @since 3.7.0
-<<<<<<< HEAD
-=======
  * @since 6.0.0 Fixes support for HTML entities (Trac 30580).
->>>>>>> main
  *
  * @param string $content Content to extract URLs from.
  * @return string[] Array of URLs found in passed string.
@@ -851,11 +834,7 @@ function wp_extract_urls( $content ) {
 			. '(?:'
 				. '\([\w\d]+\)|'
 				. '(?:'
-<<<<<<< HEAD
-					. "[^`!()\[\]{};:'\".,<>«»“”‘’\s]|"
-=======
 					. "[^`!()\[\]{}:'\".,<>«»“”‘’\s]|"
->>>>>>> main
 					. '(?:[:]\d+)?/?'
 				. ')+'
 			. ')'
@@ -864,9 +843,6 @@ function wp_extract_urls( $content ) {
 		$post_links
 	);
 
-<<<<<<< HEAD
-	$post_links = array_unique( array_map( 'html_entity_decode', $post_links[2] ) );
-=======
 	$post_links = array_unique(
 		array_map(
 			static function( $link ) {
@@ -878,7 +854,6 @@ function wp_extract_urls( $content ) {
 			$post_links[2]
 		)
 	);
->>>>>>> main
 
 	return array_values( $post_links );
 }
@@ -1625,11 +1600,7 @@ function do_feed() {
 	}
 
 	if ( ! has_action( "do_feed_{$feed}" ) ) {
-<<<<<<< HEAD
-		wp_die( __( 'Error: This is not a valid feed template.' ), '', array( 'response' => 404 ) );
-=======
 		wp_die( __( '<strong>Error</strong>: This is not a valid feed template.' ), '', array( 'response' => 404 ) );
->>>>>>> main
 	}
 
 	/**
@@ -2189,11 +2160,7 @@ function wp_normalize_path( $path ) {
 		$wrapper .= '://';
 	}
 
-<<<<<<< HEAD
-	// Standardise all paths to use '/'.
-=======
 	// Standardize all paths to use '/'.
->>>>>>> main
 	$path = str_replace( '\\', '/', $path );
 
 	// Replace multiple slashes down to a singular, allowing for network shares having two slashes.
@@ -3290,11 +3257,7 @@ function wp_check_filetype_and_ext( $file, $filename, $mimes = null ) {
 function wp_get_image_mime( $file ) {
 	/*
 	 * Use exif_imagetype() to check the mimetype if available or fall back to
-<<<<<<< HEAD
-	 * getimagesize() if exif isn't avaialbe. If either function throws an Exception
-=======
 	 * getimagesize() if exif isn't available. If either function throws an Exception
->>>>>>> main
 	 * we assume the file could not be validated.
 	 */
 	try {
@@ -3322,17 +3285,8 @@ function wp_get_image_mime( $file ) {
 			return $mime;
 		}
 
-<<<<<<< HEAD
-		$handle = fopen( $file, 'rb' );
-		if ( false === $handle ) {
-			return false;
-		}
-
-		$magic = fread( $handle, 12 );
-=======
 		$magic = file_get_contents( $file, false, null, 0, 12 );
 
->>>>>>> main
 		if ( false === $magic ) {
 			return false;
 		}
@@ -3351,11 +3305,6 @@ function wp_get_image_mime( $file ) {
 		) {
 			$mime = 'image/webp';
 		}
-<<<<<<< HEAD
-
-		fclose( $handle );
-=======
->>>>>>> main
 	} catch ( Exception $e ) {
 		$mime = false;
 	}
@@ -3530,8 +3479,6 @@ function wp_get_ext_types() {
 }
 
 /**
-<<<<<<< HEAD
-=======
  * Wrapper for PHP filesize with filters and casting the result as an integer.
  *
  * @since 6.0.0
@@ -3570,7 +3517,6 @@ function wp_filesize( $path ) {
 }
 
 /**
->>>>>>> main
  * Retrieve list of allowed mime types and file extensions.
  *
  * @since 2.8.6
@@ -3710,60 +3656,36 @@ function wp_die( $message = '', $title = '', $args = array() ) {
 		 *
 		 * @since 3.4.0
 		 *
-<<<<<<< HEAD
-		 * @param callable $function Callback function name.
-		 */
-		$function = apply_filters( 'wp_die_ajax_handler', '_ajax_wp_die_handler' );
-=======
 		 * @param callable $callback Callback function name.
 		 */
 		$callback = apply_filters( 'wp_die_ajax_handler', '_ajax_wp_die_handler' );
->>>>>>> main
 	} elseif ( wp_is_json_request() ) {
 		/**
 		 * Filters the callback for killing WordPress execution for JSON requests.
 		 *
 		 * @since 5.1.0
 		 *
-<<<<<<< HEAD
-		 * @param callable $function Callback function name.
-		 */
-		$function = apply_filters( 'wp_die_json_handler', '_json_wp_die_handler' );
-=======
 		 * @param callable $callback Callback function name.
 		 */
 		$callback = apply_filters( 'wp_die_json_handler', '_json_wp_die_handler' );
->>>>>>> main
 	} elseif ( defined( 'REST_REQUEST' ) && REST_REQUEST && wp_is_jsonp_request() ) {
 		/**
 		 * Filters the callback for killing WordPress execution for JSONP REST requests.
 		 *
 		 * @since 5.2.0
 		 *
-<<<<<<< HEAD
-		 * @param callable $function Callback function name.
-		 */
-		$function = apply_filters( 'wp_die_jsonp_handler', '_jsonp_wp_die_handler' );
-=======
 		 * @param callable $callback Callback function name.
 		 */
 		$callback = apply_filters( 'wp_die_jsonp_handler', '_jsonp_wp_die_handler' );
->>>>>>> main
 	} elseif ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
 		/**
 		 * Filters the callback for killing WordPress execution for XML-RPC requests.
 		 *
 		 * @since 3.4.0
 		 *
-<<<<<<< HEAD
-		 * @param callable $function Callback function name.
-		 */
-		$function = apply_filters( 'wp_die_xmlrpc_handler', '_xmlrpc_wp_die_handler' );
-=======
 		 * @param callable $callback Callback function name.
 		 */
 		$callback = apply_filters( 'wp_die_xmlrpc_handler', '_xmlrpc_wp_die_handler' );
->>>>>>> main
 	} elseif ( wp_is_xml_request()
 		|| isset( $wp_query ) &&
 			( function_exists( 'is_feed' ) && is_feed()
@@ -3774,36 +3696,21 @@ function wp_die( $message = '', $title = '', $args = array() ) {
 		 *
 		 * @since 5.2.0
 		 *
-<<<<<<< HEAD
-		 * @param callable $function Callback function name.
-		 */
-		$function = apply_filters( 'wp_die_xml_handler', '_xml_wp_die_handler' );
-=======
 		 * @param callable $callback Callback function name.
 		 */
 		$callback = apply_filters( 'wp_die_xml_handler', '_xml_wp_die_handler' );
->>>>>>> main
 	} else {
 		/**
 		 * Filters the callback for killing WordPress execution for all non-Ajax, non-JSON, non-XML requests.
 		 *
 		 * @since 3.0.0
 		 *
-<<<<<<< HEAD
-		 * @param callable $function Callback function name.
-		 */
-		$function = apply_filters( 'wp_die_handler', '_default_wp_die_handler' );
-	}
-
-	call_user_func( $function, $message, $title, $args );
-=======
 		 * @param callable $callback Callback function name.
 		 */
 		$callback = apply_filters( 'wp_die_handler', '_default_wp_die_handler' );
 	}
 
 	call_user_func( $callback, $message, $title, $args );
->>>>>>> main
 }
 
 /**
@@ -4608,13 +4515,8 @@ function wp_check_jsonp_callback( $callback ) {
  * @param array  $options  {
  *     Optional. Options to be used with `json_decode()`.
  *
-<<<<<<< HEAD
- *     @type bool associative Optional. When `true`, JSON objects will be returned as associative arrays.
- *                            When `false`, JSON objects will be returned as objects.
-=======
  *     @type bool $associative Optional. When `true`, JSON objects will be returned as associative arrays.
  *                             When `false`, JSON objects will be returned as objects.
->>>>>>> main
  * }
  *
  * @return mixed Returns the value encoded in JSON in appropriate PHP type.
@@ -4687,11 +4589,7 @@ function _config_wp_home( $url = '' ) {
  * @see WP_SITEURL
  *
  * @param string $url URL to set the WordPress site location.
-<<<<<<< HEAD
- * @return string The WordPress Site URL.
-=======
  * @return string The WordPress site URL.
->>>>>>> main
  */
 function _config_wp_siteurl( $url = '' ) {
 	if ( defined( 'WP_SITEURL' ) ) {
@@ -5278,13 +5176,10 @@ function wp_list_filter( $list, $args = array(), $operator = 'AND' ) {
  *               `$list` will be preserved in the results.
  */
 function wp_list_pluck( $list, $field, $index_key = null ) {
-<<<<<<< HEAD
-=======
 	if ( ! is_array( $list ) ) {
 		return array();
 	}
 
->>>>>>> main
 	$util = new WP_List_Util( $list );
 
 	return $util->pluck( $field, $index_key );
@@ -5476,11 +5371,7 @@ function _deprecated_function( $function, $version, $replacement = '' ) {
 				trigger_error(
 					sprintf(
 						/* translators: 1: PHP function name, 2: Version number, 3: Alternative function name. */
-<<<<<<< HEAD
-						__( '%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.' ),
-=======
 						__( 'Function %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.' ),
->>>>>>> main
 						$function,
 						$version,
 						$replacement
@@ -5491,11 +5382,7 @@ function _deprecated_function( $function, $version, $replacement = '' ) {
 				trigger_error(
 					sprintf(
 						/* translators: 1: PHP function name, 2: Version number. */
-<<<<<<< HEAD
-						__( '%1$s is <strong>deprecated</strong> since version %2$s with no alternative available.' ),
-=======
 						__( 'Function %1$s is <strong>deprecated</strong> since version %2$s with no alternative available.' ),
->>>>>>> main
 						$function,
 						$version
 					),
@@ -5506,11 +5393,7 @@ function _deprecated_function( $function, $version, $replacement = '' ) {
 			if ( $replacement ) {
 				trigger_error(
 					sprintf(
-<<<<<<< HEAD
-						'%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.',
-=======
 						'Function %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.',
->>>>>>> main
 						$function,
 						$version,
 						$replacement
@@ -5520,11 +5403,7 @@ function _deprecated_function( $function, $version, $replacement = '' ) {
 			} else {
 				trigger_error(
 					sprintf(
-<<<<<<< HEAD
-						'%1$s is <strong>deprecated</strong> since version %2$s with no alternative available.',
-=======
 						'Function %1$s is <strong>deprecated</strong> since version %2$s with no alternative available.',
->>>>>>> main
 						$function,
 						$version
 					),
@@ -5584,11 +5463,7 @@ function _deprecated_constructor( $class, $version, $parent_class = '' ) {
 				trigger_error(
 					sprintf(
 						/* translators: 1: PHP class name, 2: PHP parent class name, 3: Version number, 4: __construct() method. */
-<<<<<<< HEAD
-						__( 'The called constructor method for %1$s in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead.' ),
-=======
 						__( 'The called constructor method for %1$s class in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead.' ),
->>>>>>> main
 						$class,
 						$parent_class,
 						$version,
@@ -5600,11 +5475,7 @@ function _deprecated_constructor( $class, $version, $parent_class = '' ) {
 				trigger_error(
 					sprintf(
 						/* translators: 1: PHP class name, 2: Version number, 3: __construct() method. */
-<<<<<<< HEAD
-						__( 'The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.' ),
-=======
 						__( 'The called constructor method for %1$s class is <strong>deprecated</strong> since version %2$s! Use %3$s instead.' ),
->>>>>>> main
 						$class,
 						$version,
 						'<code>__construct()</code>'
@@ -5616,11 +5487,7 @@ function _deprecated_constructor( $class, $version, $parent_class = '' ) {
 			if ( $parent_class ) {
 				trigger_error(
 					sprintf(
-<<<<<<< HEAD
-						'The called constructor method for %1$s in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead.',
-=======
 						'The called constructor method for %1$s class in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead.',
->>>>>>> main
 						$class,
 						$parent_class,
 						$version,
@@ -5631,11 +5498,7 @@ function _deprecated_constructor( $class, $version, $parent_class = '' ) {
 			} else {
 				trigger_error(
 					sprintf(
-<<<<<<< HEAD
-						'The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.',
-=======
 						'The called constructor method for %1$s class is <strong>deprecated</strong> since version %2$s! Use %3$s instead.',
->>>>>>> main
 						$class,
 						$version,
 						'<code>__construct()</code>'
@@ -5698,11 +5561,7 @@ function _deprecated_file( $file, $version, $replacement = '', $message = '' ) {
 				trigger_error(
 					sprintf(
 						/* translators: 1: PHP file name, 2: Version number, 3: Alternative file name. */
-<<<<<<< HEAD
-						__( '%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.' ),
-=======
 						__( 'File %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.' ),
->>>>>>> main
 						$file,
 						$version,
 						$replacement
@@ -5713,11 +5572,7 @@ function _deprecated_file( $file, $version, $replacement = '', $message = '' ) {
 				trigger_error(
 					sprintf(
 						/* translators: 1: PHP file name, 2: Version number. */
-<<<<<<< HEAD
-						__( '%1$s is <strong>deprecated</strong> since version %2$s with no alternative available.' ),
-=======
 						__( 'File %1$s is <strong>deprecated</strong> since version %2$s with no alternative available.' ),
->>>>>>> main
 						$file,
 						$version
 					) . $message,
@@ -5728,11 +5583,7 @@ function _deprecated_file( $file, $version, $replacement = '', $message = '' ) {
 			if ( $replacement ) {
 				trigger_error(
 					sprintf(
-<<<<<<< HEAD
-						'%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.',
-=======
 						'File %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.',
->>>>>>> main
 						$file,
 						$version,
 						$replacement
@@ -5742,11 +5593,7 @@ function _deprecated_file( $file, $version, $replacement = '', $message = '' ) {
 			} else {
 				trigger_error(
 					sprintf(
-<<<<<<< HEAD
-						'%1$s is <strong>deprecated</strong> since version %2$s with no alternative available.',
-=======
 						'File %1$s is <strong>deprecated</strong> since version %2$s with no alternative available.',
->>>>>>> main
 						$file,
 						$version
 					) . $message,
@@ -5808,11 +5655,7 @@ function _deprecated_argument( $function, $version, $message = '' ) {
 				trigger_error(
 					sprintf(
 						/* translators: 1: PHP function name, 2: Version number, 3: Optional message regarding the change. */
-<<<<<<< HEAD
-						__( '%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s' ),
-=======
 						__( 'Function %1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s' ),
->>>>>>> main
 						$function,
 						$version,
 						$message
@@ -5823,11 +5666,7 @@ function _deprecated_argument( $function, $version, $message = '' ) {
 				trigger_error(
 					sprintf(
 						/* translators: 1: PHP function name, 2: Version number. */
-<<<<<<< HEAD
-						__( '%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available.' ),
-=======
 						__( 'Function %1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available.' ),
->>>>>>> main
 						$function,
 						$version
 					),
@@ -5838,11 +5677,7 @@ function _deprecated_argument( $function, $version, $message = '' ) {
 			if ( $message ) {
 				trigger_error(
 					sprintf(
-<<<<<<< HEAD
-						'%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s',
-=======
 						'Function %1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s',
->>>>>>> main
 						$function,
 						$version,
 						$message
@@ -5852,11 +5687,7 @@ function _deprecated_argument( $function, $version, $message = '' ) {
 			} else {
 				trigger_error(
 					sprintf(
-<<<<<<< HEAD
-						'%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available.',
-=======
 						'Function %1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available.',
->>>>>>> main
 						$function,
 						$version
 					),
@@ -5915,11 +5746,7 @@ function _deprecated_hook( $hook, $version, $replacement = '', $message = '' ) {
 			trigger_error(
 				sprintf(
 					/* translators: 1: WordPress hook name, 2: Version number, 3: Alternative hook name. */
-<<<<<<< HEAD
-					__( '%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.' ),
-=======
 					__( 'Hook %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.' ),
->>>>>>> main
 					$hook,
 					$version,
 					$replacement
@@ -5930,11 +5757,7 @@ function _deprecated_hook( $hook, $version, $replacement = '', $message = '' ) {
 			trigger_error(
 				sprintf(
 					/* translators: 1: WordPress hook name, 2: Version number. */
-<<<<<<< HEAD
-					__( '%1$s is <strong>deprecated</strong> since version %2$s with no alternative available.' ),
-=======
 					__( 'Hook %1$s is <strong>deprecated</strong> since version %2$s with no alternative available.' ),
->>>>>>> main
 					$hook,
 					$version
 				) . $message,
@@ -6000,11 +5823,7 @@ function _doing_it_wrong( $function, $message, $version ) {
 			trigger_error(
 				sprintf(
 					/* translators: Developer debugging message. 1: PHP function name, 2: Explanatory message, 3: WordPress version number. */
-<<<<<<< HEAD
-					__( '%1$s was called <strong>incorrectly</strong>. %2$s %3$s' ),
-=======
 					__( 'Function %1$s was called <strong>incorrectly</strong>. %2$s %3$s' ),
->>>>>>> main
 					$function,
 					$message,
 					$version
@@ -6023,11 +5842,7 @@ function _doing_it_wrong( $function, $message, $version ) {
 
 			trigger_error(
 				sprintf(
-<<<<<<< HEAD
-					'%1$s was called <strong>incorrectly</strong>. %2$s %3$s',
-=======
 					'Function %1$s was called <strong>incorrectly</strong>. %2$s %3$s',
->>>>>>> main
 					$function,
 					$message,
 					$version
@@ -6814,23 +6629,10 @@ function wp_scheduled_delete() {
  * @return string[] Array of file header values keyed by header name.
  */
 function get_file_data( $file, $default_headers, $context = '' ) {
-<<<<<<< HEAD
-	// We don't need to write to the file, so just open for reading.
-	$fp = fopen( $file, 'r' );
-
-	if ( $fp ) {
-		// Pull only the first 8 KB of the file in.
-		$file_data = fread( $fp, 8 * KB_IN_BYTES );
-
-		// PHP will close file handle, but we are good citizens.
-		fclose( $fp );
-	} else {
-=======
 	// Pull only the first 8 KB of the file in.
 	$file_data = file_get_contents( $file, false, null, 0, 8 * KB_IN_BYTES );
 
 	if ( false === $file_data ) {
->>>>>>> main
 		$file_data = '';
 	}
 
@@ -7070,11 +6872,7 @@ function wp_find_hierarchy_loop_tortoise_hare( $callback, $start, $override = ar
  *
  * @since 3.1.3
  *
-<<<<<<< HEAD
- * @see https://developer.mozilla.org/en/the_x-frame-options_response_header
-=======
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
->>>>>>> main
  */
 function send_frame_options_header() {
 	header( 'X-Frame-Options: SAMEORIGIN' );
@@ -7120,11 +6918,7 @@ function wp_allowed_protocols() {
 }
 
 /**
-<<<<<<< HEAD
- * Return a comma-separated string of functions that have been called to get
-=======
  * Returns a comma-separated string or array of functions that have been called to get
->>>>>>> main
  * to the current point in code.
  *
  * @since 3.4.0
@@ -7135,13 +6929,8 @@ function wp_allowed_protocols() {
  *                             when you want to just give info about the callee. Default null.
  * @param int    $skip_frames  Optional. A number of stack frames to skip - useful for unwinding
  *                             back to the source of the issue. Default 0.
-<<<<<<< HEAD
- * @param bool   $pretty       Optional. Whether or not you want a comma separated string or raw
- *                             array returned. Default true.
-=======
  * @param bool   $pretty       Optional. Whether you want a comma separated string instead of
  *                             the raw array returned. Default true.
->>>>>>> main
  * @return string|array Either a string containing a reversed comma separated trace or an array
  *                      of individual calls.
  */
@@ -8610,11 +8399,7 @@ function clean_dirsize_cache( $path ) {
  *
  * @since 5.2.0
  *
-<<<<<<< HEAD
- * @global string $wp_version WordPress version.
-=======
  * @global string $wp_version The WordPress version string.
->>>>>>> main
  *
  * @param string $required Minimum required WordPress version.
  * @return bool True if required version is compatible or empty, false if not.
@@ -8641,11 +8426,7 @@ function is_php_version_compatible( $required ) {
 }
 
 /**
-<<<<<<< HEAD
- * Check if two numbers are nearly the same.
-=======
  * Checks if two numbers are nearly the same.
->>>>>>> main
  *
  * This is similar to using `round()` but the precision is more fine-grained.
  *
@@ -8654,17 +8435,11 @@ function is_php_version_compatible( $required ) {
  * @param int|float $expected  The expected value.
  * @param int|float $actual    The actual number.
  * @param int|float $precision The allowed variation.
-<<<<<<< HEAD
- * @return bool Whether the numbers match whithin the specified precision.
-=======
  * @return bool Whether the numbers match within the specified precision.
->>>>>>> main
  */
 function wp_fuzzy_number_match( $expected, $actual, $precision = 1 ) {
 	return abs( (float) $expected - (float) $actual ) <= $precision;
 }
-<<<<<<< HEAD
-=======
 
 /**
  * Sorts the keys of an array alphabetically.
@@ -8683,4 +8458,3 @@ function wp_recursive_ksort( &$array ) {
 	}
 	ksort( $array );
 }
->>>>>>> main

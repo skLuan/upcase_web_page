@@ -42,8 +42,6 @@ abstract class WP_Widget_Media extends WP_Widget {
 	protected $registered = false;
 
 	/**
-<<<<<<< HEAD
-=======
 	 * The default widget description.
 	 *
 	 * @since 6.0.0
@@ -60,7 +58,6 @@ abstract class WP_Widget_Media extends WP_Widget {
 	protected static $l10n_defaults = array();
 
 	/**
->>>>>>> main
 	 * Constructor.
 	 *
 	 * @since 4.8.0
@@ -76,11 +73,7 @@ abstract class WP_Widget_Media extends WP_Widget {
 		$widget_opts = wp_parse_args(
 			$widget_options,
 			array(
-<<<<<<< HEAD
-				'description'                 => __( 'A media item.' ),
-=======
 				'description'                 => self::get_default_description(),
->>>>>>> main
 				'customize_selective_refresh' => true,
 				'show_instance_in_rest'       => true,
 				'mime_type'                   => '',
@@ -89,27 +82,7 @@ abstract class WP_Widget_Media extends WP_Widget {
 
 		$control_opts = wp_parse_args( $control_options, array() );
 
-<<<<<<< HEAD
-		$l10n_defaults = array(
-			'no_media_selected'          => __( 'No media selected' ),
-			'add_media'                  => _x( 'Add Media', 'label for button in the media widget' ),
-			'replace_media'              => _x( 'Replace Media', 'label for button in the media widget; should preferably not be longer than ~13 characters long' ),
-			'edit_media'                 => _x( 'Edit Media', 'label for button in the media widget; should preferably not be longer than ~13 characters long' ),
-			'add_to_widget'              => __( 'Add to Widget' ),
-			'missing_attachment'         => sprintf(
-				/* translators: %s: URL to media library. */
-				__( 'We can&#8217;t find that file. Check your <a href="%s">media library</a> and make sure it wasn&#8217;t deleted.' ),
-				esc_url( admin_url( 'upload.php' ) )
-			),
-			/* translators: %d: Widget count. */
-			'media_library_state_multi'  => _n_noop( 'Media Widget (%d)', 'Media Widget (%d)' ),
-			'media_library_state_single' => __( 'Media Widget' ),
-			'unsupported_file_type'      => __( 'Looks like this isn&#8217;t the correct kind of file. Please link to an appropriate file instead.' ),
-		);
-		$this->l10n    = array_merge( $l10n_defaults, array_filter( $this->l10n ) );
-=======
 		$this->l10n = array_merge( self::get_l10n_defaults(), array_filter( $this->l10n ) );
->>>>>>> main
 
 		parent::__construct(
 			$id_base,
@@ -468,8 +441,6 @@ abstract class WP_Widget_Media extends WP_Widget {
 	}
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Resets the cache for the default labels.
 	 *
 	 * @since 6.0.0
@@ -480,7 +451,6 @@ abstract class WP_Widget_Media extends WP_Widget {
 	}
 
 	/**
->>>>>>> main
 	 * Whether the widget has content to show.
 	 *
 	 * @since 4.8.0
@@ -491,8 +461,6 @@ abstract class WP_Widget_Media extends WP_Widget {
 	protected function has_content( $instance ) {
 		return ( $instance['attachment_id'] && 'attachment' === get_post_type( $instance['attachment_id'] ) ) || $instance['url'];
 	}
-<<<<<<< HEAD
-=======
 
 	/**
 	 * Returns the default description of the widget.
@@ -541,5 +509,4 @@ abstract class WP_Widget_Media extends WP_Widget {
 
 		return self::$l10n_defaults;
 	}
->>>>>>> main
 }

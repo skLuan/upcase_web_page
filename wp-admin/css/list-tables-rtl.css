@@ -385,8 +385,6 @@ table.media .column-title .filename {
 	margin-bottom: 0.2em;
 }
 
-<<<<<<< HEAD
-=======
 /* Media Copy to clipboard row action */
 .media .row-actions .copy-to-clipboard-container {
 	display: inline;
@@ -404,7 +402,6 @@ table.media .column-title .filename {
 	padding: 2px 5px;
 }
 
->>>>>>> main
 /* @todo: pick a consistent list table selector */
 .wp-list-table a {
 	transition: none;
@@ -862,18 +859,6 @@ tr:hover .row-actions,
 /*	Layout */
 
 #wpbody-content .inline-edit-row fieldset {
-<<<<<<< HEAD
-	font-size: 12px;
-	float: right;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-tr.inline-edit-row td,
-#wpbody-content .inline-edit-row fieldset .inline-edit-col {
-	padding: 0 0.5em;
-=======
 	float: right;
 	margin: 0;
 	padding: 0 0 0 12px;
@@ -903,7 +888,6 @@ tr.inline-edit-row td {
 	box-shadow: 0 0 0 1px #2271b1;
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
->>>>>>> main
 }
 
 #wpbody-content .quick-edit-row-post .inline-edit-col-left {
@@ -924,11 +908,7 @@ tr.inline-edit-row td {
 
 #wpbody-content .quick-edit-row-page .inline-edit-col-right,
 #wpbody-content .bulk-edit-row-post .inline-edit-col-right {
-<<<<<<< HEAD
-	width: 49%;
-=======
 	width: 50%;
->>>>>>> main
 }
 
 #wpbody-content .bulk-edit-row .inline-edit-col-left {
@@ -954,14 +934,6 @@ tr.inline-edit-row td {
 }
 
 .inline-edit-row .submit {
-<<<<<<< HEAD
-	clear: both;
-	padding: 0.5em;
-	margin: 0.5em 0 0;
-}
-
-.inline-edit-row .notice-error {
-=======
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -982,7 +954,6 @@ tr.inline-edit-row td {
 .inline-edit-row .notice-error {
 	box-sizing: border-box;
 	min-width: 100%;
->>>>>>> main
 	margin-top: 1em;
 }
 
@@ -996,22 +967,11 @@ tr.inline-edit-row td {
 /* Needs higher specificity for the padding */
 #the-list .inline-edit-row .inline-edit-legend {
 	margin: 0;
-<<<<<<< HEAD
-	padding: 0.2em 0.5em 0;
-=======
 	padding: 0.2em 0;
->>>>>>> main
 	line-height: 2.5;
 	font-weight: 600;
 }
 
-<<<<<<< HEAD
-#the-list #bulk-edit.inline-edit-row .inline-edit-legend {
-	padding: 0.2em 0.5em;
-}
-
-=======
->>>>>>> main
 .inline-edit-row fieldset span.title,
 .inline-edit-row fieldset span.checkbox-title {
 	margin: 0;
@@ -1118,45 +1078,17 @@ tr.inline-edit-row td {
 	width: 8em;
 }
 
-<<<<<<< HEAD
-ul.cat-checklist {
-	height: 12em;
-	border: solid 1px #dcdcde;
-	overflow-y: scroll;
-	padding: 0 5px;
-	margin: 0;
-	background-color: #fff;
-}
-
-#bulk-titles {
-	display: block;
-	height: 12em;
-	border: 1px solid #dcdcde;
-	overflow-y: scroll;
-	padding: 0 5px;
-	margin: 0 0 5px;
-}
-
-=======
 #bulk-titles-list,
 #bulk-titles-list li,
->>>>>>> main
 .inline-edit-row fieldset ul.cat-checklist li,
 .inline-edit-row fieldset ul.cat-checklist input {
 	margin: 0;
 	position: relative; /* RTL fix, #WP27629 */
 }
 
-<<<<<<< HEAD
-.inline-edit-row fieldset ul.cat-checklist label,
-.inline-edit-row #bulk-titles div {
-	font-style: normal;
-	font-size: 11px;
-=======
 .inline-edit-row fieldset ul.cat-checklist input {
 	margin-top: -1px;
 	margin-right: 3px;
->>>>>>> main
 }
 
 .inline-edit-row fieldset label input.inline-edit-menu-order-input {
@@ -1176,29 +1108,6 @@ ul.cat-checklist {
 	float: right;
 }
 
-<<<<<<< HEAD
-#bulk-titles {
-	line-height: 140%;
-}
-#bulk-titles div {
-	margin: 0.2em 0.3em;
-}
-
-#bulk-titles div a {
-	cursor: pointer;
-	display: block;
-	float: right;
-	height: 18px;
-	margin: 0 -2px 0 3px;
-	overflow: hidden;
-	position: relative;
-	width: 20px;
-}
-
-#bulk-titles div a:before {
-	position: relative;
-	top: -3px;
-=======
 #bulk-titles,
 ul.cat-checklist {
 	height: 14em;
@@ -1241,7 +1150,6 @@ ul.cat-checklist {
 	outline: 2px solid transparent;
 	/* Reset inherited offset from Gutenberg */
 	outline-offset: 0;
->>>>>>> main
 }
 
 /*------------------------------------------------------------------------------
@@ -2057,8 +1965,6 @@ div.action-links,
 	#wpbody-content .bulk-edit-row .inline-edit-col-bottom {
 		float: none;
 		width: 100%;
-<<<<<<< HEAD
-=======
 		padding: 0;
 	}
 
@@ -2073,7 +1979,6 @@ div.action-links,
 
 	#wpbody-content .inline-edit-row-page .inline-edit-col-right {
 		margin-top: 0;
->>>>>>> main
 	}
 
 	#wpbody-content .quick-edit-row fieldset .inline-edit-col label,
@@ -2101,11 +2006,6 @@ div.action-links,
 		padding: 3px 4px;
 	}
 
-<<<<<<< HEAD
-	.inline-edit-row fieldset ul.cat-checklist label,
-	.inline-edit-row #bulk-titles div {
-		font-size: 16px;
-=======
 	#bulk-titles .ntdelbutton,
 	#bulk-titles .ntdeltitle,
 	.inline-edit-row fieldset ul.cat-checklist label {
@@ -2128,7 +2028,6 @@ div.action-links,
 	#bulk-titles .ntdelbutton:before {
 		font-size: 20px;
 		line-height: 28px;
->>>>>>> main
 	}
 
 	.inline-edit-row fieldset label span.title,
@@ -2136,13 +2035,6 @@ div.action-links,
 		float: none;
 	}
 
-<<<<<<< HEAD
-	.inline-edit-row fieldset label.inline-edit-tags {
-		padding: 0 0.5em;
-	}
-
-=======
->>>>>>> main
 	.inline-edit-row fieldset .inline-edit-col label.inline-edit-tags {
 		padding: 0;
 	}
@@ -2172,17 +2064,6 @@ div.action-links,
 		display: block;
 	}
 
-<<<<<<< HEAD
-	#bulk-titles div {
-		margin: 0.8em 0.3em;
-	}
-
-	#bulk-titles div a {
-		height: 22px;
-	}
-
-=======
->>>>>>> main
 	/* Updates */
 	#wpbody-content .updates-table .plugin-title {
 		width: auto;

@@ -1,95 +1,3 @@
-<<<<<<< HEAD
-this["wp"] = this["wp"] || {}; this["wp"]["i18n"] =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "Vhyj");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "4Z/T":
-=======
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -262,7 +170,6 @@ module.exports = memize;
 /***/ }),
 
 /***/ 124:
->>>>>>> main
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/* global window, exports, define */
@@ -478,13 +385,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/* global window, exports, define */
      */
     /* eslint-disable quote-props */
     if (true) {
-<<<<<<< HEAD
-        exports['sprintf'] = sprintf
-        exports['vsprintf'] = vsprintf
-=======
         exports.sprintf = sprintf
         exports.vsprintf = vsprintf
->>>>>>> main
     }
     if (typeof window !== 'undefined') {
         window['sprintf'] = sprintf
@@ -497,192 +399,13 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/* global window, exports, define */
                     'vsprintf': vsprintf
                 }
             }).call(exports, __webpack_require__, exports, module),
-<<<<<<< HEAD
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-=======
 		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
->>>>>>> main
         }
     }
     /* eslint-enable quote-props */
 }(); // eslint-disable-line
 
 
-<<<<<<< HEAD
-/***/ }),
-
-/***/ "4eJC":
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Memize options object.
- *
- * @typedef MemizeOptions
- *
- * @property {number} [maxSize] Maximum size of the cache.
- */
-
-/**
- * Internal cache entry.
- *
- * @typedef MemizeCacheNode
- *
- * @property {?MemizeCacheNode|undefined} [prev] Previous node.
- * @property {?MemizeCacheNode|undefined} [next] Next node.
- * @property {Array<*>}                   args   Function arguments for cache
- *                                               entry.
- * @property {*}                          val    Function result.
- */
-
-/**
- * Properties of the enhanced function for controlling cache.
- *
- * @typedef MemizeMemoizedFunction
- *
- * @property {()=>void} clear Clear the cache.
- */
-
-/**
- * Accepts a function to be memoized, and returns a new memoized function, with
- * optional options.
- *
- * @template {Function} F
- *
- * @param {F}             fn        Function to memoize.
- * @param {MemizeOptions} [options] Options object.
- *
- * @return {F & MemizeMemoizedFunction} Memoized function.
- */
-function memize( fn, options ) {
-	var size = 0;
-
-	/** @type {?MemizeCacheNode|undefined} */
-	var head;
-
-	/** @type {?MemizeCacheNode|undefined} */
-	var tail;
-
-	options = options || {};
-
-	function memoized( /* ...args */ ) {
-		var node = head,
-			len = arguments.length,
-			args, i;
-
-		searchCache: while ( node ) {
-			// Perform a shallow equality test to confirm that whether the node
-			// under test is a candidate for the arguments passed. Two arrays
-			// are shallowly equal if their length matches and each entry is
-			// strictly equal between the two sets. Avoid abstracting to a
-			// function which could incur an arguments leaking deoptimization.
-
-			// Check whether node arguments match arguments length
-			if ( node.args.length !== arguments.length ) {
-				node = node.next;
-				continue;
-			}
-
-			// Check whether node arguments match arguments values
-			for ( i = 0; i < len; i++ ) {
-				if ( node.args[ i ] !== arguments[ i ] ) {
-					node = node.next;
-					continue searchCache;
-				}
-			}
-
-			// At this point we can assume we've found a match
-
-			// Surface matched node to head if not already
-			if ( node !== head ) {
-				// As tail, shift to previous. Must only shift if not also
-				// head, since if both head and tail, there is no previous.
-				if ( node === tail ) {
-					tail = node.prev;
-				}
-
-				// Adjust siblings to point to each other. If node was tail,
-				// this also handles new tail's empty `next` assignment.
-				/** @type {MemizeCacheNode} */ ( node.prev ).next = node.next;
-				if ( node.next ) {
-					node.next.prev = node.prev;
-				}
-
-				node.next = head;
-				node.prev = null;
-				/** @type {MemizeCacheNode} */ ( head ).prev = node;
-				head = node;
-			}
-
-			// Return immediately
-			return node.val;
-		}
-
-		// No cached value found. Continue to insertion phase:
-
-		// Create a copy of arguments (avoid leaking deoptimization)
-		args = new Array( len );
-		for ( i = 0; i < len; i++ ) {
-			args[ i ] = arguments[ i ];
-		}
-
-		node = {
-			args: args,
-
-			// Generate the result from original function
-			val: fn.apply( null, args ),
-		};
-
-		// Don't need to check whether node is already head, since it would
-		// have been returned above already if it was
-
-		// Shift existing head down list
-		if ( head ) {
-			head.prev = node;
-			node.next = head;
-		} else {
-			// If no head, follows that there's no tail (at initial or reset)
-			tail = node;
-		}
-
-		// Trim tail if we're reached max size and are pending cache insertion
-		if ( size === /** @type {MemizeOptions} */ ( options ).maxSize ) {
-			tail = /** @type {MemizeCacheNode} */ ( tail ).prev;
-			/** @type {MemizeCacheNode} */ ( tail ).next = null;
-		} else {
-			size++;
-		}
-
-		head = node;
-
-		return node.val;
-	}
-
-	memoized.clear = function() {
-		head = null;
-		tail = null;
-		size = 0;
-	};
-
-	if ( false ) {}
-
-	// Ignore reason: There's not a clear solution to create an intersection of
-	// the function with additional properties, where the goal is to retain the
-	// function signature of the incoming argument and add control properties
-	// on the return value.
-
-	// @ts-ignore
-	return memoized;
-}
-
-module.exports = memize;
-
-
-/***/ }),
-
-/***/ "Vhyj":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-=======
 /***/ })
 
 /******/ 	});
@@ -756,37 +479,11 @@ module.exports = memize;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 !function() {
->>>>>>> main
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-<<<<<<< HEAD
-__webpack_require__.d(__webpack_exports__, "sprintf", function() { return /* reexport */ sprintf_sprintf; });
-__webpack_require__.d(__webpack_exports__, "createI18n", function() { return /* reexport */ createI18n; });
-__webpack_require__.d(__webpack_exports__, "defaultI18n", function() { return /* reexport */ default_i18n; });
-__webpack_require__.d(__webpack_exports__, "setLocaleData", function() { return /* reexport */ default_i18n_setLocaleData; });
-__webpack_require__.d(__webpack_exports__, "resetLocaleData", function() { return /* reexport */ default_i18n_resetLocaleData; });
-__webpack_require__.d(__webpack_exports__, "getLocaleData", function() { return /* reexport */ default_i18n_getLocaleData; });
-__webpack_require__.d(__webpack_exports__, "subscribe", function() { return /* reexport */ default_i18n_subscribe; });
-__webpack_require__.d(__webpack_exports__, "__", function() { return /* reexport */ default_i18n_; });
-__webpack_require__.d(__webpack_exports__, "_x", function() { return /* reexport */ default_i18n_x; });
-__webpack_require__.d(__webpack_exports__, "_n", function() { return /* reexport */ default_i18n_n; });
-__webpack_require__.d(__webpack_exports__, "_nx", function() { return /* reexport */ default_i18n_nx; });
-__webpack_require__.d(__webpack_exports__, "isRTL", function() { return /* reexport */ default_i18n_isRTL; });
-__webpack_require__.d(__webpack_exports__, "hasTranslation", function() { return /* reexport */ default_i18n_hasTranslation; });
-
-// EXTERNAL MODULE: ./node_modules/memize/index.js
-var memize = __webpack_require__("4eJC");
-var memize_default = /*#__PURE__*/__webpack_require__.n(memize);
-
-// EXTERNAL MODULE: ./node_modules/sprintf-js/src/sprintf.js
-var sprintf = __webpack_require__("4Z/T");
-var sprintf_default = /*#__PURE__*/__webpack_require__.n(sprintf);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/i18n/build-module/sprintf.js
-=======
 __webpack_require__.d(__webpack_exports__, {
   "__": function() { return /* reexport */ __; },
   "_n": function() { return /* reexport */ _n; },
@@ -810,7 +507,6 @@ var memize_default = /*#__PURE__*/__webpack_require__.n(memize);
 var sprintf = __webpack_require__(124);
 var sprintf_default = /*#__PURE__*/__webpack_require__.n(sprintf);
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/i18n/build-module/sprintf.js
->>>>>>> main
 /**
  * External dependencies
  */
@@ -844,11 +540,7 @@ function sprintf_sprintf(format) {
       args[_key - 1] = arguments[_key];
     }
 
-<<<<<<< HEAD
-    return sprintf_default.a.sprintf(format, ...args);
-=======
     return sprintf_default().sprintf(format, ...args);
->>>>>>> main
   } catch (error) {
     if (error instanceof Error) {
       logErrorOnce('sprintf error: \n\n' + error.toString());
@@ -858,11 +550,7 @@ function sprintf_sprintf(format) {
   }
 }
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@tannin/postfix/index.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@tannin/postfix/index.js
->>>>>>> main
 var PRECEDENCE, OPENERS, TERMINATORS, PATTERN;
 
 /**
@@ -988,11 +676,7 @@ function postfix( expression ) {
 	return terms.concat( stack.reverse() );
 }
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@tannin/evaluate/index.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@tannin/evaluate/index.js
->>>>>>> main
 /**
  * Operator callback functions.
  *
@@ -1071,11 +755,7 @@ var OPERATORS = {
  *
  * @return {*} Result of evaluation.
  */
-<<<<<<< HEAD
-function evaluate_evaluate( postfix, variables ) {
-=======
 function evaluate( postfix, variables ) {
->>>>>>> main
 	var stack = [],
 		i, j, args, getOperatorResult, term, value;
 
@@ -1108,11 +788,7 @@ function evaluate( postfix, variables ) {
 	return stack[ 0 ];
 }
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@tannin/compile/index.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@tannin/compile/index.js
->>>>>>> main
 
 
 
@@ -1139,19 +815,11 @@ function compile( expression ) {
 	var terms = postfix( expression );
 
 	return function( variables ) {
-<<<<<<< HEAD
-		return evaluate_evaluate( terms, variables );
-	};
-}
-
-// CONCATENATED MODULE: ./node_modules/@tannin/plural-forms/index.js
-=======
 		return evaluate( terms, variables );
 	};
 }
 
 ;// CONCATENATED MODULE: ./node_modules/@tannin/plural-forms/index.js
->>>>>>> main
 
 
 /**
@@ -1171,11 +839,7 @@ function pluralForms( expression ) {
 	};
 }
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/tannin/index.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/tannin/index.js
->>>>>>> main
 
 
 /**
@@ -1390,11 +1054,7 @@ Tannin.prototype.dcnpgettext = function( domain, context, singular, plural, n ) 
 	return index === 0 ? singular : plural;
 };
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/i18n/build-module/create-i18n.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/i18n/build-module/create-i18n.js
->>>>>>> main
 /**
  * External dependencies
  */
@@ -1437,9 +1097,6 @@ const I18N_HOOK_REGEXP = /^i18n\.(n?gettext|has_translation)(_|$)/;
 /**
  * @typedef {(data?: LocaleData, domain?: string) => void} SetLocaleData
  *
-<<<<<<< HEAD
- * Merges locale data into the Tannin instance by domain. Accepts data in a
-=======
  * Merges locale data into the Tannin instance by domain. Note that this
  * function will overwrite the domain configuration. Accepts data in a
  * Jed-formatted JSON object shape.
@@ -1452,7 +1109,6 @@ const I18N_HOOK_REGEXP = /^i18n\.(n?gettext|has_translation)(_|$)/;
  *
  * Merges locale data into the Tannin instance by domain. Note that this
  * function will also merge the domain configuration. Accepts data in a
->>>>>>> main
  * Jed-formatted JSON object shape.
  *
  * @see http://messageformat.github.io/Jed/
@@ -1540,15 +1196,11 @@ const I18N_HOOK_REGEXP = /^i18n\.(n?gettext|has_translation)(_|$)/;
  *
  * @typedef I18n
  * @property {GetLocaleData}   getLocaleData   Returns locale data by domain in a Jed-formatted JSON object shape.
-<<<<<<< HEAD
- * @property {SetLocaleData}   setLocaleData   Merges locale data into the Tannin instance by domain. Accepts data in a
-=======
  * @property {SetLocaleData}   setLocaleData   Merges locale data into the Tannin instance by domain. Note that this
  *                                             function will overwrite the domain configuration. Accepts data in a
  *                                             Jed-formatted JSON object shape.
  * @property {AddLocaleData}   addLocaleData   Merges locale data into the Tannin instance by domain. Note that this
  *                                             function will also merge the domain configuration. Accepts data in a
->>>>>>> main
  *                                             Jed-formatted JSON object shape.
  * @property {ResetLocaleData} resetLocaleData Resets all current Tannin instance locale data and sets the specified
  *                                             locale data for the domain. Accepts data in a Jed-formatted JSON object shape.
@@ -1611,30 +1263,19 @@ const createI18n = (initialData, initialDomain, hooks) => {
 
 
   const doSetLocaleData = function (data) {
-<<<<<<< HEAD
-    let domain = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'default';
-    tannin.data[domain] = { ...DEFAULT_LOCALE_DATA,
-      ...tannin.data[domain],
-=======
     var _tannin$data$domain;
 
     let domain = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'default';
     tannin.data[domain] = { ...tannin.data[domain],
->>>>>>> main
       ...data
     }; // Populate default domain configuration (supported locale date which omits
     // a plural forms expression).
 
     tannin.data[domain][''] = { ...DEFAULT_LOCALE_DATA[''],
-<<<<<<< HEAD
-      ...tannin.data[domain]['']
-    };
-=======
       ...((_tannin$data$domain = tannin.data[domain]) === null || _tannin$data$domain === void 0 ? void 0 : _tannin$data$domain[''])
     }; // Clean up cached plural forms functions cache as it might be updated.
 
     delete tannin.pluralForms[domain];
->>>>>>> main
   };
   /** @type {SetLocaleData} */
 
@@ -1643,8 +1284,6 @@ const createI18n = (initialData, initialDomain, hooks) => {
     doSetLocaleData(data, domain);
     notifyListeners();
   };
-<<<<<<< HEAD
-=======
   /** @type {AddLocaleData} */
 
 
@@ -1665,7 +1304,6 @@ const createI18n = (initialData, initialDomain, hooks) => {
     delete tannin.pluralForms[domain];
     notifyListeners();
   };
->>>>>>> main
   /** @type {ResetLocaleData} */
 
 
@@ -1701,11 +1339,7 @@ const createI18n = (initialData, initialDomain, hooks) => {
     let number = arguments.length > 4 ? arguments[4] : undefined;
 
     if (!tannin.data[domain]) {
-<<<<<<< HEAD
-      // use `doSetLocaleData` to set silently, without notifying listeners
-=======
       // Use `doSetLocaleData` to set silently, without notifying listeners.
->>>>>>> main
       doSetLocaleData(undefined, domain);
     }
 
@@ -1904,10 +1538,7 @@ const createI18n = (initialData, initialDomain, hooks) => {
   return {
     getLocaleData,
     setLocaleData,
-<<<<<<< HEAD
-=======
     addLocaleData,
->>>>>>> main
     resetLocaleData,
     subscribe,
     __,
@@ -1919,16 +1550,9 @@ const createI18n = (initialData, initialDomain, hooks) => {
   };
 };
 
-<<<<<<< HEAD
-// EXTERNAL MODULE: external ["wp","hooks"]
-var external_wp_hooks_ = __webpack_require__("g56x");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/i18n/build-module/default-i18n.js
-=======
 ;// CONCATENATED MODULE: external ["wp","hooks"]
 var external_wp_hooks_namespaceObject = window["wp"]["hooks"];
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/i18n/build-module/default-i18n.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1938,11 +1562,7 @@ var external_wp_hooks_namespaceObject = window["wp"]["hooks"];
  */
 
 
-<<<<<<< HEAD
-const i18n = createI18n(undefined, undefined, external_wp_hooks_["defaultHooks"]);
-=======
 const i18n = createI18n(undefined, undefined, external_wp_hooks_namespaceObject.defaultHooks);
->>>>>>> main
 /**
  * Default, singleton instance of `I18n`.
  */
@@ -1968,11 +1588,7 @@ const i18n = createI18n(undefined, undefined, external_wp_hooks_namespaceObject.
  * @return {LocaleData} Locale data.
  */
 
-<<<<<<< HEAD
-const default_i18n_getLocaleData = i18n.getLocaleData.bind(i18n);
-=======
 const getLocaleData = i18n.getLocaleData.bind(i18n);
->>>>>>> main
 /**
  * Merges locale data into the Tannin instance by domain. Accepts data in a
  * Jed-formatted JSON object shape.
@@ -1983,11 +1599,7 @@ const getLocaleData = i18n.getLocaleData.bind(i18n);
  * @param {string}     [domain] Domain for which configuration applies.
  */
 
-<<<<<<< HEAD
-const default_i18n_setLocaleData = i18n.setLocaleData.bind(i18n);
-=======
 const setLocaleData = i18n.setLocaleData.bind(i18n);
->>>>>>> main
 /**
  * Resets all current Tannin instance locale data and sets the specified
  * locale data for the domain. Accepts data in a Jed-formatted JSON object shape.
@@ -1998,11 +1610,7 @@ const setLocaleData = i18n.setLocaleData.bind(i18n);
  * @param {string}     [domain] Domain for which configuration applies.
  */
 
-<<<<<<< HEAD
-const default_i18n_resetLocaleData = i18n.resetLocaleData.bind(i18n);
-=======
 const resetLocaleData = i18n.resetLocaleData.bind(i18n);
->>>>>>> main
 /**
  * Subscribes to changes of locale data
  *
@@ -2010,11 +1618,7 @@ const resetLocaleData = i18n.resetLocaleData.bind(i18n);
  * @return {UnsubscribeCallback} Unsubscribe callback
  */
 
-<<<<<<< HEAD
-const default_i18n_subscribe = i18n.subscribe.bind(i18n);
-=======
 const subscribe = i18n.subscribe.bind(i18n);
->>>>>>> main
 /**
  * Retrieve the translation of text.
  *
@@ -2026,11 +1630,7 @@ const subscribe = i18n.subscribe.bind(i18n);
  * @return {string} Translated text.
  */
 
-<<<<<<< HEAD
-const default_i18n_ = i18n.__.bind(i18n);
-=======
 const __ = i18n.__.bind(i18n);
->>>>>>> main
 /**
  * Retrieve translated string with gettext context.
  *
@@ -2043,11 +1643,7 @@ const __ = i18n.__.bind(i18n);
  * @return {string} Translated context string without pipe.
  */
 
-<<<<<<< HEAD
-const default_i18n_x = i18n._x.bind(i18n);
-=======
 const _x = i18n._x.bind(i18n);
->>>>>>> main
 /**
  * Translates and retrieves the singular or plural form based on the supplied
  * number.
@@ -2063,11 +1659,7 @@ const _x = i18n._x.bind(i18n);
  * @return {string} The translated singular or plural form.
  */
 
-<<<<<<< HEAD
-const default_i18n_n = i18n._n.bind(i18n);
-=======
 const _n = i18n._n.bind(i18n);
->>>>>>> main
 /**
  * Translates and retrieves the singular or plural form based on the supplied
  * number, with gettext context.
@@ -2084,11 +1676,7 @@ const _n = i18n._n.bind(i18n);
  * @return {string} The translated singular or plural form.
  */
 
-<<<<<<< HEAD
-const default_i18n_nx = i18n._nx.bind(i18n);
-=======
 const _nx = i18n._nx.bind(i18n);
->>>>>>> main
 /**
  * Check if current locale is RTL.
  *
@@ -2100,11 +1688,7 @@ const _nx = i18n._nx.bind(i18n);
  * @return {boolean} Whether locale is RTL.
  */
 
-<<<<<<< HEAD
-const default_i18n_isRTL = i18n.isRTL.bind(i18n);
-=======
 const isRTL = i18n.isRTL.bind(i18n);
->>>>>>> main
 /**
  * Check if there is a translation for a given string (in singular form).
  *
@@ -2114,34 +1698,14 @@ const isRTL = i18n.isRTL.bind(i18n);
  * @return {boolean} Whether the translation exists or not.
  */
 
-<<<<<<< HEAD
-const default_i18n_hasTranslation = i18n.hasTranslation.bind(i18n);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/i18n/build-module/index.js
-=======
 const hasTranslation = i18n.hasTranslation.bind(i18n);
 
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/i18n/build-module/index.js
->>>>>>> main
 
 
 
 
-<<<<<<< HEAD
-
-/***/ }),
-
-/***/ "g56x":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["wp"]["hooks"]; }());
-
-/***/ })
-
-/******/ });
-=======
 }();
 (window.wp = window.wp || {}).i18n = __webpack_exports__;
 /******/ })()
 ;
->>>>>>> main

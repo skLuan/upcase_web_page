@@ -217,18 +217,11 @@ function wpmu_delete_user( $id ) {
  *
  * @since MU (3.0.0)
  *
-<<<<<<< HEAD
- * @param bool $echo Optional. If $echo is set and the quota is exceeded, a warning message is echoed. Default is true.
- * @return bool True if user is over upload space quota, otherwise false.
- */
-function upload_is_user_over_quota( $echo = true ) {
-=======
  * @param bool $display_message Optional. If set to true and the quota is exceeded,
  *                              a warning message is displayed. Default true.
  * @return bool True if user is over upload space quota, otherwise false.
  */
 function upload_is_user_over_quota( $display_message = true ) {
->>>>>>> main
 	if ( get_site_option( 'upload_space_check_disabled' ) ) {
 		return false;
 	}
@@ -240,11 +233,7 @@ function upload_is_user_over_quota( $display_message = true ) {
 	$space_used = get_space_used();
 
 	if ( ( $space_allowed - $space_used ) < 0 ) {
-<<<<<<< HEAD
-		if ( $echo ) {
-=======
 		if ( $display_message ) {
->>>>>>> main
 			printf(
 				/* translators: %s: Allowed space allocation. */
 				__( 'Sorry, you have used your space allocation of %s. Please delete some files to upload more files.' ),
@@ -704,11 +693,7 @@ function mu_dropdown_languages( $lang_files = array(), $current = '' ) {
  * @since 3.0.0
  *
  * @global int    $wp_db_version WordPress database version.
-<<<<<<< HEAD
- * @global string $pagenow
-=======
  * @global string $pagenow       The filename of the current screen.
->>>>>>> main
  *
  * @return void|false Void on success. False if the current user is not a super admin.
  */
@@ -1045,11 +1030,7 @@ jQuery( function($) {
  *
  * @since 4.6.0
  *
-<<<<<<< HEAD
- * @global string $pagenow
-=======
  * @global string $pagenow The filename of the current screen.
->>>>>>> main
  *
  * @param array $args {
  *     Optional. Array or string of Query parameters. Default empty array.

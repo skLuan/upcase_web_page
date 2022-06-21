@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/text-columns",
 	"title": "Text Columns (deprecated)",

@@ -795,9 +795,6 @@ html:lang(he-il) .rtl #wpadminbar * {
 	}
 
 	#wpadminbar .ab-label {
-<<<<<<< HEAD
-		display: none;
-=======
 		border: 0;
 		clip: rect(1px, 1px, 1px, 1px);
 		-webkit-clip-path: inset(50%);
@@ -809,7 +806,6 @@ html:lang(he-il) .rtl #wpadminbar * {
 		position: absolute;
 		width: 1px;
 		word-wrap: normal !important;
->>>>>>> main
 	}
 
 	#wpadminbar .menupop li:hover > .ab-sub-wrapper,

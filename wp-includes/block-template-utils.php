@@ -119,19 +119,11 @@ function get_default_block_template_types() {
 		),
 		'home'           => array(
 			'title'       => _x( 'Home', 'Template name' ),
-<<<<<<< HEAD
-			'description' => __( 'Displays as the site\'s home page, or as the Posts page when a static home page isn\'t set.' ),
-		),
-		'front-page'     => array(
-			'title'       => _x( 'Front Page', 'Template name' ),
-			'description' => __( 'Displays as the site\'s home page.' ),
-=======
 			'description' => __( 'Displays posts on the homepage, or on the Posts page if a static homepage is set.' ),
 		),
 		'front-page'     => array(
 			'title'       => _x( 'Front Page', 'Template name' ),
 			'description' => __( 'Displays the homepage.' ),
->>>>>>> main
 		),
 		'singular'       => array(
 			'title'       => _x( 'Singular', 'Template name' ),
@@ -167,11 +159,7 @@ function get_default_block_template_types() {
 		),
 		'tag'            => array(
 			'title'       => _x( 'Tag', 'Template name' ),
-<<<<<<< HEAD
-			'description' => __( 'Displays latest posts with single post tag.' ),
-=======
 			'description' => __( 'Displays latest posts with a single post tag.' ),
->>>>>>> main
 		),
 		'attachment'     => array(
 			'title'       => __( 'Media' ),
@@ -179,11 +167,7 @@ function get_default_block_template_types() {
 		),
 		'search'         => array(
 			'title'       => _x( 'Search', 'Template name' ),
-<<<<<<< HEAD
-			'description' => __( 'Template used to display search results.' ),
-=======
 			'description' => __( 'Displays search results.' ),
->>>>>>> main
 		),
 		'privacy-policy' => array(
 			'title'       => __( 'Privacy Policy' ),
@@ -438,11 +422,7 @@ function _flatten_blocks( &$blocks ) {
 }
 
 /**
-<<<<<<< HEAD
- * Parses wp_template content and injects the current theme's
-=======
  * Parses wp_template content and injects the active theme's
->>>>>>> main
  * stylesheet as a theme attribute into each wp_template_part
  *
  * @since 5.9.0
@@ -777,13 +757,8 @@ function get_block_template( $id, $template_type = 'wp_template' ) {
 	 *
 	 * @param WP_Block_Template|null $block_template Return block template object to short-circuit the default query,
 	 *                                               or null to allow WP to run its normal queries.
-<<<<<<< HEAD
-	 * @param string                 $id             Template unique identifier (example: theme_slug//template_slug).
-	 * @param string                 $template_type  Template type: `'wp_template'` or '`wp_template_part'`.
-=======
 	 * @param string $id                             Template unique identifier (example: theme_slug//template_slug).
 	 * @param string $template_type                  Template type: `'wp_template'` or '`wp_template_part'`.
->>>>>>> main
 	 */
 	$block_template = apply_filters( 'pre_get_block_template', null, $id, $template_type );
 	if ( ! is_null( $block_template ) ) {
@@ -829,11 +804,7 @@ function get_block_template( $id, $template_type = 'wp_template' ) {
 	 *
 	 * @param WP_Block_Template|null $block_template The found block template, or null if there isn't one.
 	 * @param string                 $id             Template unique identifier (example: theme_slug//template_slug).
-<<<<<<< HEAD
-	 * @param string                 $template_type  Template type: `'wp_template'` or '`wp_template_part'`.
-=======
 	 * @param array                  $template_type  Template type: `'wp_template'` or '`wp_template_part'`.
->>>>>>> main
 	 */
 	return apply_filters( 'get_block_template', $block_template, $id, $template_type );
 }
@@ -932,8 +903,6 @@ function block_footer_area() {
 }
 
 /**
-<<<<<<< HEAD
-=======
  * Filters theme directories that should be ignored during export.
  *
  * @since 6.0.0
@@ -953,16 +922,12 @@ function wp_is_theme_directory_ignored( $path ) {
 }
 
 /**
->>>>>>> main
  * Creates an export of the current templates and
  * template parts from the site editor at the
  * specified path in a ZIP file.
  *
  * @since 5.9.0
-<<<<<<< HEAD
-=======
  * @since 6.0.0 Adds the whole theme to the export archive.
->>>>>>> main
  *
  * @return WP_Error|string Path of the ZIP file or error on failure.
  */
@@ -971,19 +936,6 @@ function wp_generate_block_templates_export_file() {
 		return new WP_Error( 'missing_zip_package', __( 'Zip Export not supported.' ) );
 	}
 
-<<<<<<< HEAD
-	$obscura  = wp_generate_password( 12, false, false );
-	$filename = get_temp_dir() . 'edit-site-export-' . $obscura . '.zip';
-
-	$zip = new ZipArchive();
-	if ( true !== $zip->open( $filename, ZipArchive::CREATE ) ) {
-		return new WP_Error( 'unable_to_create_zip', __( 'Unable to open export file (archive) for writing.' ) );
-	}
-
-	$zip->addEmptyDir( 'theme' );
-	$zip->addEmptyDir( 'theme/templates' );
-	$zip->addEmptyDir( 'theme/parts' );
-=======
 	$obscura    = wp_generate_password( 12, false, false );
 	$theme_name = basename( get_stylesheet() );
 	$filename   = get_temp_dir() . $theme_name . $obscura . '.zip';
@@ -1018,7 +970,6 @@ function wp_generate_block_templates_export_file() {
 			}
 		}
 	}
->>>>>>> main
 
 	// Load templates into the zip file.
 	$templates = get_block_templates();
@@ -1026,11 +977,7 @@ function wp_generate_block_templates_export_file() {
 		$template->content = _remove_theme_attribute_in_block_template_content( $template->content );
 
 		$zip->addFromString(
-<<<<<<< HEAD
-			'theme/templates/' . $template->slug . '.html',
-=======
 			'templates/' . $template->slug . '.html',
->>>>>>> main
 			$template->content
 		);
 	}
@@ -1039,17 +986,11 @@ function wp_generate_block_templates_export_file() {
 	$template_parts = get_block_templates( array(), 'wp_template_part' );
 	foreach ( $template_parts as $template_part ) {
 		$zip->addFromString(
-<<<<<<< HEAD
-			'theme/parts/' . $template_part->slug . '.html',
-=======
 			'parts/' . $template_part->slug . '.html',
->>>>>>> main
 			$template_part->content
 		);
 	}
 
-<<<<<<< HEAD
-=======
 	// Load theme.json into the zip file.
 	$tree = WP_Theme_JSON_Resolver::get_theme_data( array(), array( 'with_supports' => false ) );
 	// Merge with user data.
@@ -1076,7 +1017,6 @@ function wp_generate_block_templates_export_file() {
 		$theme_json_tabbed
 	);
 
->>>>>>> main
 	// Save changes to the zip file.
 	$zip->close();
 

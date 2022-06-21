@@ -1,112 +1,3 @@
-<<<<<<< HEAD
-this["wp"] = this["wp"] || {}; this["wp"]["apiFetch"] =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "jqrR");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "Mmq9":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["wp"]["url"]; }());
-
-/***/ }),
-
-/***/ "jqrR":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: external ["wp","i18n"]
-var external_wp_i18n_ = __webpack_require__("l3Sj");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/nonce.js
-=======
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
@@ -141,7 +32,6 @@ __webpack_require__.d(__webpack_exports__, {
 ;// CONCATENATED MODULE: external ["wp","i18n"]
 var external_wp_i18n_namespaceObject = window["wp"]["i18n"];
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/nonce.js
->>>>>>> main
 /**
  * @param {string} nonce
  * @return {import('../types').APIFetchMiddleware & { nonce: string }} A middleware to enhance a request with a nonce.
@@ -175,11 +65,7 @@ function createNonceMiddleware(nonce) {
 
 /* harmony default export */ var nonce = (createNonceMiddleware);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/namespace-endpoint.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/namespace-endpoint.js
->>>>>>> main
 /**
  * @type {import('../types').APIFetchMiddleware}
  */
@@ -207,11 +93,7 @@ const namespaceAndEndpointMiddleware = (options, next) => {
 
 /* harmony default export */ var namespace_endpoint = (namespaceAndEndpointMiddleware);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/root-url.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/root-url.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -252,16 +134,9 @@ const createRootURLMiddleware = rootURL => (options, next) => {
 
 /* harmony default export */ var root_url = (createRootURLMiddleware);
 
-<<<<<<< HEAD
-// EXTERNAL MODULE: external ["wp","url"]
-var external_wp_url_ = __webpack_require__("Mmq9");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/preloading.js
-=======
 ;// CONCATENATED MODULE: external ["wp","url"]
 var external_wp_url_namespaceObject = window["wp"]["url"];
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/preloading.js
->>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -272,19 +147,10 @@ var external_wp_url_namespaceObject = window["wp"]["url"];
  */
 
 function createPreloadingMiddleware(preloadedData) {
-<<<<<<< HEAD
-  const cache = Object.keys(preloadedData).reduce((result, path) => {
-    result[Object(external_wp_url_["normalizePath"])(path)] = preloadedData[path];
-    return result;
-  },
-  /** @type {Record<string, any>} */
-  {});
-=======
   const cache = Object.fromEntries(Object.entries(preloadedData).map(_ref => {
     let [path, data] = _ref;
     return [(0,external_wp_url_namespaceObject.normalizePath)(path), data];
   }));
->>>>>>> main
   return (options, next) => {
     const {
       parse = true
@@ -294,34 +160,6 @@ function createPreloadingMiddleware(preloadedData) {
     let rawPath = options.path;
 
     if (!rawPath && options.url) {
-<<<<<<< HEAD
-      const pathFromQuery = Object(external_wp_url_["getQueryArg"])(options.url, 'rest_route');
-
-      if (typeof pathFromQuery === 'string') {
-        rawPath = pathFromQuery;
-      }
-    }
-
-    if (typeof rawPath === 'string') {
-      const method = options.method || 'GET';
-      const path = Object(external_wp_url_["normalizePath"])(rawPath);
-
-      if ('GET' === method && cache[path]) {
-        const cacheData = cache[path]; // Unsetting the cache key ensures that the data is only used a single time
-
-        delete cache[path];
-        return Promise.resolve(parse ? cacheData.body : new window.Response(JSON.stringify(cacheData.body), {
-          status: 200,
-          statusText: 'OK',
-          headers: cacheData.headers
-        }));
-      } else if ('OPTIONS' === method && cache[method] && cache[method][path]) {
-        const cacheData = cache[method][path]; // Unsetting the cache key ensures that the data is only used a single time
-
-        delete cache[method][path];
-        return Promise.resolve(parse ? cacheData.body : cacheData);
-      }
-=======
       const {
         rest_route: pathFromQuery,
         ...queryArgs
@@ -349,18 +187,11 @@ function createPreloadingMiddleware(preloadedData) {
 
       delete cache[method][path];
       return prepareResponse(cacheData, !!parse);
->>>>>>> main
     }
 
     return next(options);
   };
 }
-<<<<<<< HEAD
-
-/* harmony default export */ var preloading = (createPreloadingMiddleware);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/fetch-all-middleware.js
-=======
 /**
  * This is a helper function that sends a success response.
  *
@@ -381,7 +212,6 @@ function prepareResponse(responseData, parse) {
 /* harmony default export */ var preloading = (createPreloadingMiddleware);
 
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/fetch-all-middleware.js
->>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -406,13 +236,8 @@ const modifyQuery = (_ref, queryArgs) => {
     ...options
   } = _ref;
   return { ...options,
-<<<<<<< HEAD
-    url: url && Object(external_wp_url_["addQueryArgs"])(url, queryArgs),
-    path: path && Object(external_wp_url_["addQueryArgs"])(path, queryArgs)
-=======
     url: url && (0,external_wp_url_namespaceObject.addQueryArgs)(url, queryArgs),
     path: path && (0,external_wp_url_namespaceObject.addQueryArgs)(path, queryArgs)
->>>>>>> main
   };
 };
 /**
@@ -527,11 +352,7 @@ const fetchAllMiddleware = async (options, next) => {
 
 /* harmony default export */ var fetch_all_middleware = (fetchAllMiddleware);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/http-v1.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/http-v1.js
->>>>>>> main
 /**
  * Set of HTTP methods which are eligible to be overridden.
  *
@@ -577,11 +398,7 @@ const httpV1Middleware = (options, next) => {
 
 /* harmony default export */ var http_v1 = (httpV1Middleware);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/user-locale.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/user-locale.js
->>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -591,24 +408,14 @@ const httpV1Middleware = (options, next) => {
  */
 
 const userLocaleMiddleware = (options, next) => {
-<<<<<<< HEAD
-  if (typeof options.url === 'string' && !Object(external_wp_url_["hasQueryArg"])(options.url, '_locale')) {
-    options.url = Object(external_wp_url_["addQueryArgs"])(options.url, {
-=======
   if (typeof options.url === 'string' && !(0,external_wp_url_namespaceObject.hasQueryArg)(options.url, '_locale')) {
     options.url = (0,external_wp_url_namespaceObject.addQueryArgs)(options.url, {
->>>>>>> main
       _locale: 'user'
     });
   }
 
-<<<<<<< HEAD
-  if (typeof options.path === 'string' && !Object(external_wp_url_["hasQueryArg"])(options.path, '_locale')) {
-    options.path = Object(external_wp_url_["addQueryArgs"])(options.path, {
-=======
   if (typeof options.path === 'string' && !(0,external_wp_url_namespaceObject.hasQueryArg)(options.path, '_locale')) {
     options.path = (0,external_wp_url_namespaceObject.addQueryArgs)(options.path, {
->>>>>>> main
       _locale: 'user'
     });
   }
@@ -618,11 +425,7 @@ const userLocaleMiddleware = (options, next) => {
 
 /* harmony default export */ var user_locale = (userLocaleMiddleware);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/utils/response.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/utils/response.js
->>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -661,11 +464,7 @@ const response_parseResponse = function (response) {
 const parseJsonAndNormalizeError = response => {
   const invalidJsonError = {
     code: 'invalid_json',
-<<<<<<< HEAD
-    message: Object(external_wp_i18n_["__"])('The response is not a valid JSON response.')
-=======
     message: (0,external_wp_i18n_namespaceObject.__)('The response is not a valid JSON response.')
->>>>>>> main
   };
 
   if (!response || !response.json) {
@@ -708,21 +507,13 @@ function parseAndThrowError(response) {
   return parseJsonAndNormalizeError(response).then(error => {
     const unknownError = {
       code: 'unknown_error',
-<<<<<<< HEAD
-      message: Object(external_wp_i18n_["__"])('An unknown error occurred.')
-=======
       message: (0,external_wp_i18n_namespaceObject.__)('An unknown error occurred.')
->>>>>>> main
     };
     throw error || unknownError;
   });
 }
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/media-upload.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/media-upload.js
->>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -793,11 +584,7 @@ const mediaUploadMiddleware = (options, next) => {
         if (options.parse !== false) {
           return Promise.reject({
             code: 'post_process',
-<<<<<<< HEAD
-            message: Object(external_wp_i18n_["__"])('Media upload failed. If this is a photo or a large image, please scale it down and try again.')
-=======
             message: (0,external_wp_i18n_namespaceObject.__)('Media upload failed. If this is a photo or a large image, please scale it down and try again.')
->>>>>>> main
           });
         }
 
@@ -811,11 +598,7 @@ const mediaUploadMiddleware = (options, next) => {
 
 /* harmony default export */ var media_upload = (mediaUploadMiddleware);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/index.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/index.js
->>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -920,11 +703,7 @@ const defaultFetchHandler = nextOptions => {
     headers['Content-Type'] = 'application/json';
   }
 
-<<<<<<< HEAD
-  const responsePromise = window.fetch( // fall back to explicitly passing `window.location` which is the behavior if `undefined` is passed
-=======
   const responsePromise = window.fetch( // Fall back to explicitly passing `window.location` which is the behavior if `undefined` is passed.
->>>>>>> main
   url || path || window.location.href, { ...DEFAULT_OPTIONS,
     ...remainingOptions,
     body,
@@ -940,11 +719,7 @@ const defaultFetchHandler = nextOptions => {
 
     throw {
       code: 'fetch_error',
-<<<<<<< HEAD
-      message: Object(external_wp_i18n_["__"])('You are probably offline.')
-=======
       message: (0,external_wp_i18n_namespaceObject.__)('You are probably offline.')
->>>>>>> main
     };
   });
 };
@@ -1002,24 +777,8 @@ apiFetch.createPreloadingMiddleware = preloading;
 apiFetch.createRootURLMiddleware = root_url;
 apiFetch.fetchAllMiddleware = fetch_all_middleware;
 apiFetch.mediaUploadMiddleware = media_upload;
-<<<<<<< HEAD
-/* harmony default export */ var build_module = __webpack_exports__["default"] = (apiFetch);
-
-
-/***/ }),
-
-/***/ "l3Sj":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["wp"]["i18n"]; }());
-
-/***/ })
-
-/******/ })["default"];
-=======
 /* harmony default export */ var build_module = (apiFetch);
 
 (window.wp = window.wp || {}).apiFetch = __webpack_exports__["default"];
 /******/ })()
 ;
->>>>>>> main

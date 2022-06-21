@@ -18,11 +18,6 @@ function render_block_core_query_pagination( $attributes, $content ) {
 		return '';
 	}
 
-<<<<<<< HEAD
-	return sprintf(
-		'<div %1$s>%2$s</div>',
-		get_block_wrapper_attributes(),
-=======
 	$wrapper_attributes = get_block_wrapper_attributes(
 		array(
 			'role'       => 'navigation',
@@ -33,7 +28,6 @@ function render_block_core_query_pagination( $attributes, $content ) {
 	return sprintf(
 		'<nav %1$s>%2$s</nav>',
 		$wrapper_attributes,
->>>>>>> main
 		$content
 	);
 }

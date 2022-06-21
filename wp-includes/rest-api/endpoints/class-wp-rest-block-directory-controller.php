@@ -106,11 +106,7 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Parse block metadata for a block, and prepare it for an API repsonse.
-=======
 	 * Parse block metadata for a block, and prepare it for an API response.
->>>>>>> main
 	 *
 	 * @since 5.5.0
 	 * @since 5.9.0 Renamed `$plugin` to `$item` to match parent class for PHP 8 named parameter support.
@@ -243,11 +239,7 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 				),
 				'rating'              => array(
 					'description' => __( 'The star rating of the block.' ),
-<<<<<<< HEAD
-					'type'        => 'integer',
-=======
 					'type'        => 'number',
->>>>>>> main
 					'context'     => array( 'view' ),
 				),
 				'rating_count'        => array(
@@ -257,20 +249,12 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 				),
 				'active_installs'     => array(
 					'description' => __( 'The number sites that have activated this block.' ),
-<<<<<<< HEAD
-					'type'        => 'string',
-=======
 					'type'        => 'integer',
->>>>>>> main
 					'context'     => array( 'view' ),
 				),
 				'author_block_rating' => array(
 					'description' => __( 'The average rating of blocks published by the same author.' ),
-<<<<<<< HEAD
-					'type'        => 'integer',
-=======
 					'type'        => 'number',
->>>>>>> main
 					'context'     => array( 'view' ),
 				),
 				'author_block_count'  => array(

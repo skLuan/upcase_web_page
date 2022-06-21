@@ -738,11 +738,7 @@ class WP_REST_Users_Controller extends WP_REST_Controller {
 		if ( ! empty( $request['username'] ) && $request['username'] !== $user->user_login ) {
 			return new WP_Error(
 				'rest_user_invalid_argument',
-<<<<<<< HEAD
-				__( "Username isn't editable." ),
-=======
 				__( 'Username is not editable.' ),
->>>>>>> main
 				array( 'status' => 400 )
 			);
 		}

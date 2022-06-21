@@ -255,11 +255,7 @@ if ( 'update' === $action ) { // We are saving settings sent from a settings pag
 		if ( is_multisite() && ! current_user_can( 'manage_network_options' ) ) {
 			wp_die( __( 'Sorry, you are not allowed to modify unregistered settings for this site.' ) );
 		}
-<<<<<<< HEAD
-		$options = explode( ',', wp_unslash( $_POST['page_options'] ) );
-=======
 		$options = isset( $_POST['page_options'] ) ? explode( ',', wp_unslash( $_POST['page_options'] ) ) : null;
->>>>>>> main
 	} else {
 		$options = $allowed_options[ $option_page ];
 	}
@@ -336,11 +332,8 @@ if ( 'update' === $action ) { // We are saving settings sent from a settings pag
 		if ( $user_language_old !== $user_language_new ) {
 			load_default_textdomain( $user_language_new );
 		}
-<<<<<<< HEAD
-=======
 	} else {
 		add_settings_error( 'general', 'settings_updated', __( 'Settings save failed.' ), 'error' );
->>>>>>> main
 	}
 
 	/*

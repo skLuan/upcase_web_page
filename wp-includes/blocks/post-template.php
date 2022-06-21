@@ -6,8 +6,6 @@
  */
 
 /**
-<<<<<<< HEAD
-=======
  * Determines whether a block list contains a block that uses the featured image.
  *
  * @param WP_Block_List $inner_blocks Inner block instance.
@@ -34,7 +32,6 @@ function block_core_post_template_uses_featured_image( $inner_blocks ) {
 }
 
 /**
->>>>>>> main
  * Renders the `core/post-template` block on the server.
  *
  * @param array    $attributes Block attributes.
@@ -69,13 +66,10 @@ function render_block_core_post_template( $attributes, $content, $block ) {
 		return '';
 	}
 
-<<<<<<< HEAD
-=======
 	if ( block_core_post_template_uses_featured_image( $block->inner_blocks ) ) {
 		update_post_thumbnail_cache( $query );
 	}
 
->>>>>>> main
 	$classnames = '';
 	if ( isset( $block->context['displayLayout'] ) && isset( $block->context['query'] ) ) {
 		if ( isset( $block->context['displayLayout']['type'] ) && 'flex' === $block->context['displayLayout']['type'] ) {
@@ -97,13 +91,8 @@ function render_block_core_post_template( $attributes, $content, $block ) {
 				)
 			)
 		)->render( array( 'dynamic' => false ) );
-<<<<<<< HEAD
-		$post_classes  = esc_attr( implode( ' ', get_post_class( 'wp-block-post' ) ) );
-		$content      .= '<li class="' . $post_classes . '">' . $block_content . '</li>';
-=======
 		$post_classes  = implode( ' ', get_post_class( 'wp-block-post' ) );
 		$content      .= '<li class="' . esc_attr( $post_classes ) . '">' . $block_content . '</li>';
->>>>>>> main
 	}
 
 	wp_reset_postdata();

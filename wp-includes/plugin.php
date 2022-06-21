@@ -151,11 +151,8 @@ function add_filter( $hook_name, $callback, $priority = 10, $accepted_args = 1 )
  *     $value = apply_filters( 'example_filter', 'filter me', $arg1, $arg2 );
  *
  * @since 0.71
-<<<<<<< HEAD
-=======
  * @since 6.0.0 Formalized the existing and already documented `...$args` parameter
  *              by adding it to the function signature.
->>>>>>> main
  *
  * @global WP_Hook[] $wp_filter         Stores all of the filters and actions.
  * @global string[]  $wp_current_filter Stores the list of current filters with the current one last.
@@ -165,17 +162,6 @@ function add_filter( $hook_name, $callback, $priority = 10, $accepted_args = 1 )
  * @param mixed  ...$args   Additional parameters to pass to the callback functions.
  * @return mixed The filtered value after all hooked functions are applied to it.
  */
-<<<<<<< HEAD
-function apply_filters( $hook_name, $value ) {
-	global $wp_filter, $wp_current_filter;
-
-	$args = func_get_args();
-
-	// Do 'all' actions first.
-	if ( isset( $wp_filter['all'] ) ) {
-		$wp_current_filter[] = $hook_name;
-		_wp_call_all_hook( $args );
-=======
 function apply_filters( $hook_name, $value, ...$args ) {
 	global $wp_filter, $wp_current_filter;
 
@@ -185,7 +171,6 @@ function apply_filters( $hook_name, $value, ...$args ) {
 
 		$all_args = func_get_args(); // phpcs:ignore PHPCompatibility.FunctionUse.ArgumentFunctionsReportCurrentValue.NeedsInspection
 		_wp_call_all_hook( $all_args );
->>>>>>> main
 	}
 
 	if ( ! isset( $wp_filter[ $hook_name ] ) ) {
@@ -200,13 +185,8 @@ function apply_filters( $hook_name, $value, ...$args ) {
 		$wp_current_filter[] = $hook_name;
 	}
 
-<<<<<<< HEAD
-	// Don't pass the tag name to WP_Hook.
-	array_shift( $args );
-=======
 	// Pass the value to WP_Hook.
 	array_unshift( $args, $value );
->>>>>>> main
 
 	$filtered = $wp_filter[ $hook_name ]->apply_filters( $value, $args );
 

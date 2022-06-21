@@ -51,11 +51,7 @@ class WP_Widget_Search extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 
-<<<<<<< HEAD
-		// Use current theme search form if it exists.
-=======
 		// Use active theme search form if it exists.
->>>>>>> main
 		get_search_form();
 
 		echo $args['after_widget'];

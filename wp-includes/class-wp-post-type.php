@@ -45,8 +45,6 @@ final class WP_Post_Type {
 	public $labels;
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Default labels.
 	 *
 	 * @since 6.0.0
@@ -55,7 +53,6 @@ final class WP_Post_Type {
 	protected static $default_labels = array();
 
 	/**
->>>>>>> main
 	 * A short descriptive summary of what the post type is.
 	 *
 	 * Default empty.
@@ -103,10 +100,7 @@ final class WP_Post_Type {
 	 * Whether queries can be performed on the front end for the post type as part of `parse_request()`.
 	 *
 	 * Endpoints would include:
-<<<<<<< HEAD
-=======
 	 *
->>>>>>> main
 	 * - `?post_type={post_type_key}`
 	 * - `?{post_type_key}={single_post_slug}`
 	 * - `?{post_type_query_var}={single_post_slug}`
@@ -446,8 +440,6 @@ final class WP_Post_Type {
 		 */
 		$args = apply_filters( 'register_post_type_args', $args, $this->name );
 
-<<<<<<< HEAD
-=======
 		$post_type = $this->name;
 
 		/**
@@ -468,7 +460,6 @@ final class WP_Post_Type {
 		 */
 		$args = apply_filters( "register_{$post_type}_post_type_args", $args, $this->name );
 
->>>>>>> main
 		$has_edit_link = ! empty( $args['_edit_link'] );
 
 		// Args prefixed with an underscore are reserved for internal use.
@@ -822,8 +813,6 @@ final class WP_Post_Type {
 
 		return $this->rest_controller;
 	}
-<<<<<<< HEAD
-=======
 
 	/**
 	 * Returns the default labels for post types.
@@ -889,5 +878,4 @@ final class WP_Post_Type {
 	public static function reset_default_labels() {
 		self::$default_labels = array();
 	}
->>>>>>> main
 }

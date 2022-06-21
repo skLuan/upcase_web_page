@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-//     Backbone.js 1.4.0
-
-//     (c) 2010-2019 Jeremy Ashkenas and DocumentCloud
-=======
 //     Backbone.js 1.4.1
 
 //     (c) 2010-2022 Jeremy Ashkenas and DocumentCloud
->>>>>>> main
 //     Backbone may be freely distributed under the MIT license.
 //     For all details and documentation:
 //     http://backbonejs.org
@@ -50,11 +44,7 @@
   var slice = Array.prototype.slice;
 
   // Current version of the library. Keep in sync with `package.json`.
-<<<<<<< HEAD
-  Backbone.VERSION = '1.4.0';
-=======
   Backbone.VERSION = '1.4.1';
->>>>>>> main
 
   // For Backbone's purposes, jQuery, Zepto, Ender, or My Library (kidding) owns
   // the `$` variable.
@@ -526,15 +516,11 @@
       }
 
       // Update the `id`.
-<<<<<<< HEAD
-      if (this.idAttribute in attrs) this.id = this.get(this.idAttribute);
-=======
       if (this.idAttribute in attrs) {
         var prevId = this.id;
         this.id = this.get(this.idAttribute);
         this.trigger('changeId', this, prevId, options);
       }
->>>>>>> main
 
       // Trigger all relevant attribute changes.
       if (!silent) {
@@ -1012,11 +998,7 @@
     get: function(obj) {
       if (obj == null) return void 0;
       return this._byId[obj] ||
-<<<<<<< HEAD
-        this._byId[this.modelId(this._isModel(obj) ? obj.attributes : obj)] ||
-=======
         this._byId[this.modelId(this._isModel(obj) ? obj.attributes : obj, obj.idAttribute)] ||
->>>>>>> main
         obj.cid && this._byId[obj.cid];
     },
 
@@ -1120,13 +1102,8 @@
     },
 
     // Define how to uniquely identify models in the collection.
-<<<<<<< HEAD
-    modelId: function(attrs) {
-      return attrs[this.model.prototype.idAttribute || 'id'];
-=======
     modelId: function(attrs, idAttribute) {
       return attrs[idAttribute || this.model.prototype.idAttribute || 'id'];
->>>>>>> main
     },
 
     // Get an iterator of all models in this collection.
@@ -1161,9 +1138,6 @@
       }
       options = options ? _.clone(options) : {};
       options.collection = this;
-<<<<<<< HEAD
-      var model = new this.model(attrs, options);
-=======
 
       var model;
       if (this.model.prototype) {
@@ -1173,7 +1147,6 @@
         model = this.model(attrs, options);
       }
 
->>>>>>> main
       if (!model.validationError) return model;
       this.trigger('invalid', this, model.validationError, options);
       return false;
@@ -1193,11 +1166,7 @@
         // Remove references before triggering 'remove' event to prevent an
         // infinite loop. #3693
         delete this._byId[model.cid];
-<<<<<<< HEAD
-        var id = this.modelId(model.attributes);
-=======
         var id = this.modelId(model.attributes, model.idAttribute);
->>>>>>> main
         if (id != null) delete this._byId[id];
 
         if (!options.silent) {
@@ -1220,11 +1189,7 @@
     // Internal method to create a model's ties to a collection.
     _addReference: function(model, options) {
       this._byId[model.cid] = model;
-<<<<<<< HEAD
-      var id = this.modelId(model.attributes);
-=======
       var id = this.modelId(model.attributes, model.idAttribute);
->>>>>>> main
       if (id != null) this._byId[id] = model;
       model.on('all', this._onModelEvent, this);
     },
@@ -1232,11 +1197,7 @@
     // Internal method to sever a model's ties to a collection.
     _removeReference: function(model, options) {
       delete this._byId[model.cid];
-<<<<<<< HEAD
-      var id = this.modelId(model.attributes);
-=======
       var id = this.modelId(model.attributes, model.idAttribute);
->>>>>>> main
       if (id != null) delete this._byId[id];
       if (this === model.collection) delete model.collection;
       model.off('all', this._onModelEvent, this);
@@ -1250,21 +1211,11 @@
       if (model) {
         if ((event === 'add' || event === 'remove') && collection !== this) return;
         if (event === 'destroy') this.remove(model, options);
-<<<<<<< HEAD
-        if (event === 'change') {
-          var prevId = this.modelId(model.previousAttributes());
-          var id = this.modelId(model.attributes);
-          if (prevId !== id) {
-            if (prevId != null) delete this._byId[prevId];
-            if (id != null) this._byId[id] = model;
-          }
-=======
         if (event === 'changeId') {
           var prevId = this.modelId(model.previousAttributes(), model.idAttribute);
           var id = this.modelId(model.attributes, model.idAttribute);
           if (prevId != null) delete this._byId[prevId];
           if (id != null) this._byId[id] = model;
->>>>>>> main
         }
       }
       this.trigger.apply(this, arguments);
@@ -1320,11 +1271,7 @@
         if (this._kind === ITERATOR_VALUES) {
           value = model;
         } else {
-<<<<<<< HEAD
-          var id = this._collection.modelId(model.attributes);
-=======
           var id = this._collection.modelId(model.attributes, model.idAttribute);
->>>>>>> main
           if (this._kind === ITERATOR_KEYS) {
             value = id;
           } else { // ITERATOR_KEYSVALUES
@@ -1678,19 +1625,11 @@
 
   // Map from CRUD to HTTP for our default `Backbone.sync` implementation.
   var methodMap = {
-<<<<<<< HEAD
-    create: 'POST',
-    update: 'PUT',
-    patch: 'PATCH',
-    delete: 'DELETE',
-    read: 'GET'
-=======
     'create': 'POST',
     'update': 'PUT',
     'patch': 'PATCH',
     'delete': 'DELETE',
     'read': 'GET'
->>>>>>> main
   };
 
   // Set the default implementation of `Backbone.ajax` to proxy through to `$`.
@@ -1783,19 +1722,11 @@
     // against the current location hash.
     _routeToRegExp: function(route) {
       route = route.replace(escapeRegExp, '\\$&')
-<<<<<<< HEAD
-        .replace(optionalParam, '(?:$1)?')
-        .replace(namedParam, function(match, optional) {
-          return optional ? match : '([^/?]+)';
-        })
-        .replace(splatParam, '([^?]*?)');
-=======
       .replace(optionalParam, '(?:$1)?')
       .replace(namedParam, function(match, optional) {
         return optional ? match : '([^/?]+)';
       })
       .replace(splatParam, '([^?]*?)');
->>>>>>> main
       return new RegExp('^' + route + '(?:\\?([\\s\\S]*))?$');
     },
 

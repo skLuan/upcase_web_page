@@ -388,14 +388,6 @@ class WP_Debug_Data {
 				$site_count += get_blog_count( $network_id );
 			}
 
-<<<<<<< HEAD
-			$info['wp-core']['fields']['user_count'] = array(
-				'label' => __( 'User count' ),
-				'value' => get_user_count(),
-			);
-
-=======
->>>>>>> main
 			$info['wp-core']['fields']['site_count'] = array(
 				'label' => __( 'Site count' ),
 				'value' => $site_count,
@@ -405,17 +397,6 @@ class WP_Debug_Data {
 				'label' => __( 'Network count' ),
 				'value' => $network_query->found_networks,
 			);
-<<<<<<< HEAD
-		} else {
-			$user_count = count_users();
-
-			$info['wp-core']['fields']['user_count'] = array(
-				'label' => __( 'User count' ),
-				'value' => $user_count['total_users'],
-			);
-		}
-
-=======
 		}
 
 		$info['wp-core']['fields']['user_count'] = array(
@@ -423,7 +404,6 @@ class WP_Debug_Data {
 			'value' => get_user_count(),
 		);
 
->>>>>>> main
 		// WordPress features requiring processing.
 		$wp_dotorg = wp_remote_get( 'https://wordpress.org', array( 'timeout' => 10 ) );
 
@@ -1484,26 +1464,12 @@ class WP_Debug_Data {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Returns the value of a MySQL variable.
-=======
 	 * Returns the value of a MySQL system variable.
->>>>>>> main
 	 *
 	 * @since 5.9.0
 	 *
 	 * @global wpdb $wpdb WordPress database abstraction object.
 	 *
-<<<<<<< HEAD
-	 * @param string $var Name of the MySQL variable.
-	 * @return string|null The variable value on success. Null if the variable does not exist.
-	 */
-	public static function get_mysql_var( $var ) {
-		global $wpdb;
-
-		$result = $wpdb->get_row(
-			$wpdb->prepare( 'SHOW VARIABLES LIKE %s', $var ),
-=======
 	 * @param string $mysql_var Name of the MySQL system variable.
 	 * @return string|null The variable value on success. Null if the variable does not exist.
 	 */
@@ -1512,7 +1478,6 @@ class WP_Debug_Data {
 
 		$result = $wpdb->get_row(
 			$wpdb->prepare( 'SHOW VARIABLES LIKE %s', $mysql_var ),
->>>>>>> main
 			ARRAY_A
 		);
 
@@ -1528,19 +1493,11 @@ class WP_Debug_Data {
 	 *
 	 * @since 5.2.0
 	 *
-<<<<<<< HEAD
-	 * @param array  $info_array Information gathered from the `WP_Debug_Data::debug_data` function.
-	 * @param string $type       The data type to return, either 'info' or 'debug'.
-	 * @return string The formatted data.
-	 */
-	public static function format( $info_array, $type ) {
-=======
 	 * @param array  $info_array Information gathered from the `WP_Debug_Data::debug_data()` function.
 	 * @param string $data_type  The data type to return, either 'info' or 'debug'.
 	 * @return string The formatted data.
 	 */
 	public static function format( $info_array, $data_type ) {
->>>>>>> main
 		$return = "`\n";
 
 		foreach ( $info_array as $section => $details ) {
@@ -1549,11 +1506,7 @@ class WP_Debug_Data {
 				continue;
 			}
 
-<<<<<<< HEAD
-			$section_label = 'debug' === $type ? $section : $details['label'];
-=======
 			$section_label = 'debug' === $data_type ? $section : $details['label'];
->>>>>>> main
 
 			$return .= sprintf(
 				"### %s%s ###\n\n",
@@ -1566,11 +1519,7 @@ class WP_Debug_Data {
 					continue;
 				}
 
-<<<<<<< HEAD
-				if ( 'debug' === $type && isset( $field['debug'] ) ) {
-=======
 				if ( 'debug' === $data_type && isset( $field['debug'] ) ) {
->>>>>>> main
 					$debug_data = $field['debug'];
 				} else {
 					$debug_data = $field['value'];
@@ -1591,11 +1540,7 @@ class WP_Debug_Data {
 					$value = $debug_data;
 				}
 
-<<<<<<< HEAD
-				if ( 'debug' === $type ) {
-=======
 				if ( 'debug' === $data_type ) {
->>>>>>> main
 					$label = $field_name;
 				} else {
 					$label = $field['label'];

@@ -1,126 +1,3 @@
-<<<<<<< HEAD
-this["wp"] = this["wp"] || {}; this["wp"]["element"] =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "o/Ny");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "Vx3V":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["wp"]["escapeHtml"]; }());
-
-/***/ }),
-
-/***/ "YLtl":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["lodash"]; }());
-
-/***/ }),
-
-/***/ "cDcd":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["React"]; }());
-
-/***/ }),
-
-/***/ "faye":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["ReactDOM"]; }());
-
-/***/ }),
-
-/***/ "o/Ny":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-=======
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
@@ -157,52 +34,10 @@ this["wp"] = this["wp"] || {}; this["wp"]["element"] =
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
->>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-<<<<<<< HEAD
-__webpack_require__.d(__webpack_exports__, "createInterpolateElement", function() { return /* reexport */ create_interpolate_element; });
-__webpack_require__.d(__webpack_exports__, "Children", function() { return /* reexport */ external_React_["Children"]; });
-__webpack_require__.d(__webpack_exports__, "cloneElement", function() { return /* reexport */ external_React_["cloneElement"]; });
-__webpack_require__.d(__webpack_exports__, "Component", function() { return /* reexport */ external_React_["Component"]; });
-__webpack_require__.d(__webpack_exports__, "createContext", function() { return /* reexport */ external_React_["createContext"]; });
-__webpack_require__.d(__webpack_exports__, "createElement", function() { return /* reexport */ external_React_["createElement"]; });
-__webpack_require__.d(__webpack_exports__, "createRef", function() { return /* reexport */ external_React_["createRef"]; });
-__webpack_require__.d(__webpack_exports__, "forwardRef", function() { return /* reexport */ external_React_["forwardRef"]; });
-__webpack_require__.d(__webpack_exports__, "Fragment", function() { return /* reexport */ external_React_["Fragment"]; });
-__webpack_require__.d(__webpack_exports__, "isValidElement", function() { return /* reexport */ external_React_["isValidElement"]; });
-__webpack_require__.d(__webpack_exports__, "memo", function() { return /* reexport */ external_React_["memo"]; });
-__webpack_require__.d(__webpack_exports__, "StrictMode", function() { return /* reexport */ external_React_["StrictMode"]; });
-__webpack_require__.d(__webpack_exports__, "useCallback", function() { return /* reexport */ external_React_["useCallback"]; });
-__webpack_require__.d(__webpack_exports__, "useContext", function() { return /* reexport */ external_React_["useContext"]; });
-__webpack_require__.d(__webpack_exports__, "useDebugValue", function() { return /* reexport */ external_React_["useDebugValue"]; });
-__webpack_require__.d(__webpack_exports__, "useEffect", function() { return /* reexport */ external_React_["useEffect"]; });
-__webpack_require__.d(__webpack_exports__, "useImperativeHandle", function() { return /* reexport */ external_React_["useImperativeHandle"]; });
-__webpack_require__.d(__webpack_exports__, "useLayoutEffect", function() { return /* reexport */ external_React_["useLayoutEffect"]; });
-__webpack_require__.d(__webpack_exports__, "useMemo", function() { return /* reexport */ external_React_["useMemo"]; });
-__webpack_require__.d(__webpack_exports__, "useReducer", function() { return /* reexport */ external_React_["useReducer"]; });
-__webpack_require__.d(__webpack_exports__, "useRef", function() { return /* reexport */ external_React_["useRef"]; });
-__webpack_require__.d(__webpack_exports__, "useState", function() { return /* reexport */ external_React_["useState"]; });
-__webpack_require__.d(__webpack_exports__, "lazy", function() { return /* reexport */ external_React_["lazy"]; });
-__webpack_require__.d(__webpack_exports__, "Suspense", function() { return /* reexport */ external_React_["Suspense"]; });
-__webpack_require__.d(__webpack_exports__, "concatChildren", function() { return /* reexport */ concatChildren; });
-__webpack_require__.d(__webpack_exports__, "switchChildrenNodeName", function() { return /* reexport */ switchChildrenNodeName; });
-__webpack_require__.d(__webpack_exports__, "createPortal", function() { return /* reexport */ external_ReactDOM_["createPortal"]; });
-__webpack_require__.d(__webpack_exports__, "findDOMNode", function() { return /* reexport */ external_ReactDOM_["findDOMNode"]; });
-__webpack_require__.d(__webpack_exports__, "render", function() { return /* reexport */ external_ReactDOM_["render"]; });
-__webpack_require__.d(__webpack_exports__, "unmountComponentAtNode", function() { return /* reexport */ external_ReactDOM_["unmountComponentAtNode"]; });
-__webpack_require__.d(__webpack_exports__, "isEmptyElement", function() { return /* reexport */ isEmptyElement; });
-__webpack_require__.d(__webpack_exports__, "Platform", function() { return /* reexport */ platform; });
-__webpack_require__.d(__webpack_exports__, "renderToString", function() { return /* reexport */ serialize; });
-__webpack_require__.d(__webpack_exports__, "RawHTML", function() { return /* reexport */ RawHTML; });
-
-// EXTERNAL MODULE: external "React"
-var external_React_ = __webpack_require__("cDcd");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/create-interpolate-element.js
-=======
 __webpack_require__.d(__webpack_exports__, {
   "Children": function() { return /* reexport */ external_React_namespaceObject.Children; },
   "Component": function() { return /* reexport */ external_React_namespaceObject.Component; },
@@ -243,7 +78,6 @@ __webpack_require__.d(__webpack_exports__, {
 ;// CONCATENATED MODULE: external "React"
 var external_React_namespaceObject = window["React"];
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/create-interpolate-element.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -361,11 +195,7 @@ const createInterpolateElement = (interpolatedString, conversionMap) => {
   do {// twiddle our thumbs
   } while (proceed(conversionMap));
 
-<<<<<<< HEAD
-  return Object(external_React_["createElement"])(external_React_["Fragment"], null, ...output);
-=======
   return (0,external_React_namespaceObject.createElement)(external_React_namespaceObject.Fragment, null, ...output);
->>>>>>> main
 };
 /**
  * Validate conversion map.
@@ -384,11 +214,7 @@ const createInterpolateElement = (interpolatedString, conversionMap) => {
 const isValidConversionMap = conversionMap => {
   const isObject = typeof conversionMap === 'object';
   const values = isObject && Object.values(conversionMap);
-<<<<<<< HEAD
-  return isObject && values.length && values.every(element => Object(external_React_["isValidElement"])(element));
-=======
   return isObject && values.length && values.every(element => (0,external_React_namespaceObject.isValidElement)(element));
->>>>>>> main
 };
 /**
  * This is the iterator over the matches in the string.
@@ -434,11 +260,7 @@ function proceed(conversionMap) {
         output.push(conversionMap[name]);
         offset = startOffset + tokenLength;
         return true;
-<<<<<<< HEAD
-      } // otherwise we found an inner element
-=======
       } // Otherwise we found an inner element.
->>>>>>> main
 
 
       addChild(createFrame(conversionMap[name], startOffset, tokenLength));
@@ -451,22 +273,13 @@ function proceed(conversionMap) {
       return true;
 
     case 'closer':
-<<<<<<< HEAD
-      // if we're not nesting then this is easy - close the block
-=======
       // If we're not nesting then this is easy - close the block.
->>>>>>> main
       if (1 === stackDepth) {
         closeOuterElement(startOffset);
         offset = startOffset + tokenLength;
         return true;
-<<<<<<< HEAD
-      } // otherwise we're nested and we have to close out the current
-      // block and add it as a innerBlock to the parent
-=======
       } // Otherwise we're nested and we have to close out the current
       // block and add it as a innerBlock to the parent.
->>>>>>> main
 
 
       const stackTop = stack.pop();
@@ -494,11 +307,7 @@ function proceed(conversionMap) {
 
 
 function nextToken() {
-<<<<<<< HEAD
-  const matches = tokenizer.exec(indoc); // we have no more tokens
-=======
   const matches = tokenizer.exec(indoc); // We have no more tokens.
->>>>>>> main
 
   if (null === matches) {
     return ['no-more-tokens'];
@@ -562,11 +371,7 @@ function addChild(frame) {
     parent.children.push(text);
   }
 
-<<<<<<< HEAD
-  parent.children.push(Object(external_React_["cloneElement"])(element, null, ...children));
-=======
   parent.children.push((0,external_React_namespaceObject.cloneElement)(element, null, ...children));
->>>>>>> main
   parent.prevOffset = prevOffset ? prevOffset : tokenStart + tokenLength;
 }
 /**
@@ -601,25 +406,11 @@ function closeOuterElement(endOffset) {
     output.push(indoc.substr(leadingTextStart, tokenStart - leadingTextStart));
   }
 
-<<<<<<< HEAD
-  output.push(Object(external_React_["cloneElement"])(element, null, ...children));
-=======
   output.push((0,external_React_namespaceObject.cloneElement)(element, null, ...children));
->>>>>>> main
 }
 
 /* harmony default export */ var create_interpolate_element = (createInterpolateElement);
 
-<<<<<<< HEAD
-// EXTERNAL MODULE: external "lodash"
-var external_lodash_ = __webpack_require__("YLtl");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/react.js
-/**
- * External dependencies
- */
-// eslint-disable-next-line no-restricted-imports
-=======
 ;// CONCATENATED MODULE: external "lodash"
 var external_lodash_namespaceObject = window["lodash"];
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/react.js
@@ -627,7 +418,6 @@ var external_lodash_namespaceObject = window["lodash"];
  * External dependencies
  */
 // eslint-disable-next-line @typescript-eslint/no-restricted-imports
->>>>>>> main
 
 
 /**
@@ -811,15 +601,9 @@ function concatChildren() {
   }
 
   return childrenArguments.reduce((accumulator, children, i) => {
-<<<<<<< HEAD
-    external_React_["Children"].forEach(children, (child, j) => {
-      if (child && 'string' !== typeof child) {
-        child = Object(external_React_["cloneElement"])(child, {
-=======
     external_React_namespaceObject.Children.forEach(children, (child, j) => {
       if (child && 'string' !== typeof child) {
         child = (0,external_React_namespaceObject.cloneElement)(child, {
->>>>>>> main
           key: [i, j].join()
         });
       }
@@ -839,15 +623,9 @@ function concatChildren() {
  */
 
 function switchChildrenNodeName(children, nodeName) {
-<<<<<<< HEAD
-  return children && external_React_["Children"].map(children, (elt, index) => {
-    if (Object(external_lodash_["isString"])(elt)) {
-      return Object(external_React_["createElement"])(nodeName, {
-=======
   return children && external_React_namespaceObject.Children.map(children, (elt, index) => {
     if ((0,external_lodash_namespaceObject.isString)(elt)) {
       return (0,external_React_namespaceObject.createElement)(nodeName, {
->>>>>>> main
         key: index
       }, elt);
     }
@@ -856,27 +634,16 @@ function switchChildrenNodeName(children, nodeName) {
       children: childrenProp,
       ...props
     } = elt.props;
-<<<<<<< HEAD
-    return Object(external_React_["createElement"])(nodeName, {
-=======
     return (0,external_React_namespaceObject.createElement)(nodeName, {
->>>>>>> main
       key: index,
       ...props
     }, childrenProp);
   });
 }
 
-<<<<<<< HEAD
-// EXTERNAL MODULE: external "ReactDOM"
-var external_ReactDOM_ = __webpack_require__("faye");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/react-platform.js
-=======
 ;// CONCATENATED MODULE: external "ReactDOM"
 var external_ReactDOM_namespaceObject = window["ReactDOM"];
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/react-platform.js
->>>>>>> main
 /**
  * External dependencies
  */
@@ -915,11 +682,7 @@ var external_ReactDOM_namespaceObject = window["ReactDOM"];
 
 
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/utils.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/utils.js
->>>>>>> main
 /**
  * External dependencies
  */
@@ -932,30 +695,18 @@ var external_ReactDOM_namespaceObject = window["ReactDOM"];
  */
 
 const isEmptyElement = element => {
-<<<<<<< HEAD
-  if (Object(external_lodash_["isNumber"])(element)) {
-    return false;
-  }
-
-  if (Object(external_lodash_["isString"])(element) || Object(external_lodash_["isArray"])(element)) {
-=======
   if ((0,external_lodash_namespaceObject.isNumber)(element)) {
     return false;
   }
 
   if ((0,external_lodash_namespaceObject.isString)(element) || (0,external_lodash_namespaceObject.isArray)(element)) {
->>>>>>> main
     return !element.length;
   }
 
   return !element;
 };
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/platform.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/platform.js
->>>>>>> main
 /**
  * Parts of this source were derived and modified from react-native-web,
  * released under the MIT license.
@@ -991,16 +742,9 @@ const Platform = {
 
 /* harmony default export */ var platform = (Platform);
 
-<<<<<<< HEAD
-// EXTERNAL MODULE: external ["wp","escapeHtml"]
-var external_wp_escapeHtml_ = __webpack_require__("Vx3V");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/raw-html.js
-=======
 ;// CONCATENATED MODULE: external ["wp","escapeHtml"]
 var external_wp_escapeHtml_namespaceObject = window["wp"]["escapeHtml"];
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/raw-html.js
->>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1028,22 +772,14 @@ function RawHTML(_ref) {
   } = _ref;
   let rawHtml = ''; // Cast children as an array, and concatenate each element if it is a string.
 
-<<<<<<< HEAD
-  external_React_["Children"].toArray(children).forEach(child => {
-=======
   external_React_namespaceObject.Children.toArray(children).forEach(child => {
->>>>>>> main
     if (typeof child === 'string' && child.trim() !== '') {
       rawHtml += child;
     }
   }); // The `div` wrapper will be stripped by the `renderElement` serializer in
   // `./serialize.js` unless there are non-children props present.
 
-<<<<<<< HEAD
-  return Object(external_React_["createElement"])('div', {
-=======
   return (0,external_React_namespaceObject.createElement)('div', {
->>>>>>> main
     dangerouslySetInnerHTML: {
       __html: rawHtml
     },
@@ -1051,11 +787,7 @@ function RawHTML(_ref) {
   });
 }
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/serialize.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/serialize.js
->>>>>>> main
 /**
  * Parts of this source were derived and modified from fast-react-render,
  * released under the MIT license.
@@ -1103,13 +835,8 @@ function RawHTML(_ref) {
 const {
   Provider,
   Consumer
-<<<<<<< HEAD
-} = Object(external_React_["createContext"])(undefined);
-const ForwardRef = Object(external_React_["forwardRef"])(() => {
-=======
 } = (0,external_React_namespaceObject.createContext)(undefined);
 const ForwardRef = (0,external_React_namespaceObject.forwardRef)(() => {
->>>>>>> main
   return null;
 });
 /**
@@ -1229,8 +956,6 @@ function getNormalAttributeValue(attribute, value) {
   return value;
 }
 /**
-<<<<<<< HEAD
-=======
  * This is a map of all SVG attributes that have dashes. Map(lower case prop => dashed lower case attribute).
  * We need this to render e.g strokeWidth as stroke-width.
  *
@@ -1265,7 +990,6 @@ const SVG_ATTRIBUTES_WITH_COLONS = ['xlink:actuate', 'xlink:arcrole', 'xlink:hre
   return map;
 }, {});
 /**
->>>>>>> main
  * Returns the normal form of the element's attribute name for HTML.
  *
  * @param {string} attribute Non-normalized attribute name.
@@ -1273,10 +997,6 @@ const SVG_ATTRIBUTES_WITH_COLONS = ['xlink:actuate', 'xlink:arcrole', 'xlink:hre
  * @return {string} Normalized attribute name.
  */
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 function getNormalAttributeName(attribute) {
   switch (attribute) {
     case 'htmlFor':
@@ -1286,9 +1006,6 @@ function getNormalAttributeName(attribute) {
       return 'class';
   }
 
-<<<<<<< HEAD
-  return attribute.toLowerCase();
-=======
   const attributeLowerCase = attribute.toLowerCase();
 
   if (CASE_SENSITIVE_SVG_ATTRIBUTES[attributeLowerCase]) {
@@ -1300,7 +1017,6 @@ function getNormalAttributeName(attribute) {
   }
 
   return attributeLowerCase;
->>>>>>> main
 }
 /**
  * Returns the normal form of the style property name for HTML.
@@ -1316,26 +1032,15 @@ function getNormalAttributeName(attribute) {
 
 
 function getNormalStylePropertyName(property) {
-<<<<<<< HEAD
-  if (Object(external_lodash_["startsWith"])(property, '--')) {
-=======
   if ((0,external_lodash_namespaceObject.startsWith)(property, '--')) {
->>>>>>> main
     return property;
   }
 
   if (hasPrefix(property, ['ms', 'O', 'Moz', 'Webkit'])) {
-<<<<<<< HEAD
-    return '-' + Object(external_lodash_["kebabCase"])(property);
-  }
-
-  return Object(external_lodash_["kebabCase"])(property);
-=======
     return '-' + (0,external_lodash_namespaceObject.kebabCase)(property);
   }
 
   return (0,external_lodash_namespaceObject.kebabCase)(property);
->>>>>>> main
 }
 /**
  * Returns the normal form of the style property value for HTML. Appends a
@@ -1379,11 +1084,7 @@ function renderElement(element, context) {
 
   switch (typeof element) {
     case 'string':
-<<<<<<< HEAD
-      return Object(external_wp_escapeHtml_["escapeHTML"])(element);
-=======
       return (0,external_wp_escapeHtml_namespaceObject.escapeHTML)(element);
->>>>>>> main
 
     case 'number':
       return element.toString();
@@ -1397,13 +1098,8 @@ function renderElement(element, context) {
   element;
 
   switch (type) {
-<<<<<<< HEAD
-    case external_React_["StrictMode"]:
-    case external_React_["Fragment"]:
-=======
     case external_React_namespaceObject.StrictMode:
     case external_React_namespaceObject.Fragment:
->>>>>>> main
       return renderChildren(props.children, context, legacyContext);
 
     case RawHTML:
@@ -1411,11 +1107,7 @@ function renderElement(element, context) {
         children,
         ...wrapperProps
       } = props;
-<<<<<<< HEAD
-      return renderNativeComponent(Object(external_lodash_["isEmpty"])(wrapperProps) ? null : 'div', { ...wrapperProps,
-=======
       return renderNativeComponent((0,external_lodash_namespaceObject.isEmpty)(wrapperProps) ? null : 'div', { ...wrapperProps,
->>>>>>> main
         dangerouslySetInnerHTML: {
           __html: children
         }
@@ -1468,11 +1160,7 @@ function renderNativeComponent(type, props, context) {
     // place of children. Ensure to omit so it is not assigned as attribute
     // as well.
     content = renderChildren(props.value, context, legacyContext);
-<<<<<<< HEAD
-    props = Object(external_lodash_["omit"])(props, 'value');
-=======
     props = (0,external_lodash_namespaceObject.omit)(props, 'value');
->>>>>>> main
   } else if (props.dangerouslySetInnerHTML && typeof props.dangerouslySetInnerHTML.__html === 'string') {
     // Dangerous content is left unescaped.
     content = props.dangerouslySetInnerHTML.__html;
@@ -1537,11 +1225,7 @@ function renderComponent(Component, props, context) {
 function renderChildren(children, context) {
   let legacyContext = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   let result = '';
-<<<<<<< HEAD
-  children = Object(external_lodash_["castArray"])(children);
-=======
   children = (0,external_lodash_namespaceObject.castArray)(children);
->>>>>>> main
 
   for (let i = 0; i < children.length; i++) {
     const child = children[i];
@@ -1565,11 +1249,7 @@ function renderAttributes(props) {
   for (const key in props) {
     const attribute = getNormalAttributeName(key);
 
-<<<<<<< HEAD
-    if (!Object(external_wp_escapeHtml_["isValidAttributeName"])(attribute)) {
-=======
     if (!(0,external_wp_escapeHtml_namespaceObject.isValidAttributeName)(attribute)) {
->>>>>>> main
       continue;
     }
 
@@ -1604,11 +1284,7 @@ function renderAttributes(props) {
     }
 
     if (typeof value === 'string') {
-<<<<<<< HEAD
-      value = Object(external_wp_escapeHtml_["escapeAttribute"])(value);
-=======
       value = (0,external_wp_escapeHtml_namespaceObject.escapeAttribute)(value);
->>>>>>> main
     }
 
     result += '="' + value + '"';
@@ -1626,11 +1302,7 @@ function renderAttributes(props) {
 
 function renderStyle(style) {
   // Only generate from object, e.g. tolerate string value.
-<<<<<<< HEAD
-  if (!Object(external_lodash_["isPlainObject"])(style)) {
-=======
   if (!(0,external_lodash_namespaceObject.isPlainObject)(style)) {
->>>>>>> main
     return style;
   }
 
@@ -1658,11 +1330,7 @@ function renderStyle(style) {
 }
 /* harmony default export */ var serialize = (renderElement);
 
-<<<<<<< HEAD
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/index.js
-=======
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/index.js
->>>>>>> main
 
 
 
@@ -1671,13 +1339,6 @@ function renderStyle(style) {
 
 
 
-<<<<<<< HEAD
-
-/***/ })
-
-/******/ });
-=======
 (window.wp = window.wp || {}).element = __webpack_exports__;
 /******/ })()
 ;
->>>>>>> main

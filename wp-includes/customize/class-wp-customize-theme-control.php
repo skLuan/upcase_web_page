@@ -74,11 +74,7 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 
 			<# if ( data.theme.screenshot && data.theme.screenshot[0] ) { #>
 				<div class="theme-screenshot">
-<<<<<<< HEAD
-					<img data-src="{{ data.theme.screenshot[0] }}" alt="" />
-=======
 					<img data-src="{{ data.theme.screenshot[0] }}?ver={{ data.theme.version }}" alt="" />
->>>>>>> main
 				</div>
 			<# } else { #>
 				<div class="theme-screenshot blank"></div>
@@ -117,11 +113,7 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 								<?php
 								printf(
 									/* translators: %s: Theme name. */
-<<<<<<< HEAD
-									__( 'There is a new version of %s available, but it doesn&#8217;t work with your versions of WordPress and PHP.' ),
-=======
 									__( 'There is a new version of %s available, but it does not work with your versions of WordPress and PHP.' ),
->>>>>>> main
 									'{{{ data.theme.name }}}'
 								);
 								if ( current_user_can( 'update_core' ) && current_user_can( 'update_php' ) ) {
@@ -151,11 +143,7 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 								<?php
 								printf(
 									/* translators: %s: Theme name. */
-<<<<<<< HEAD
-									__( 'There is a new version of %s available, but it doesn&#8217;t work with your version of WordPress.' ),
-=======
 									__( 'There is a new version of %s available, but it does not work with your version of WordPress.' ),
->>>>>>> main
 									'{{{ data.theme.name }}}'
 								);
 								if ( current_user_can( 'update_core' ) ) {
@@ -170,11 +158,7 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 								<?php
 								printf(
 									/* translators: %s: Theme name. */
-<<<<<<< HEAD
-									__( 'There is a new version of %s available, but it doesn&#8217;t work with your version of PHP.' ),
-=======
 									__( 'There is a new version of %s available, but it does not work with your version of PHP.' ),
->>>>>>> main
 									'{{{ data.theme.name }}}'
 								);
 								if ( current_user_can( 'update_php' ) ) {
@@ -196,11 +180,7 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 				<div class="notice notice-error notice-alt"><p>
 					<# if ( ! data.theme.compatibleWP && ! data.theme.compatiblePHP ) { #>
 						<?php
-<<<<<<< HEAD
-						_e( 'This theme doesn&#8217;t work with your versions of WordPress and PHP.' );
-=======
 						_e( 'This theme does not work with your versions of WordPress and PHP.' );
->>>>>>> main
 						if ( current_user_can( 'update_core' ) && current_user_can( 'update_php' ) ) {
 							printf(
 								/* translators: 1: URL to WordPress Updates screen, 2: URL to Update PHP page. */
@@ -226,11 +206,7 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 						?>
 					<# } else if ( ! data.theme.compatibleWP ) { #>
 						<?php
-<<<<<<< HEAD
-						_e( 'This theme doesn&#8217;t work with your version of WordPress.' );
-=======
 						_e( 'This theme does not work with your version of WordPress.' );
->>>>>>> main
 						if ( current_user_can( 'update_core' ) ) {
 							printf(
 								/* translators: %s: URL to WordPress Updates screen. */
@@ -241,11 +217,7 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 						?>
 					<# } else if ( ! data.theme.compatiblePHP ) { #>
 						<?php
-<<<<<<< HEAD
-						_e( 'This theme doesn&#8217;t work with your version of PHP.' );
-=======
 						_e( 'This theme does not work with your version of PHP.' );
->>>>>>> main
 						if ( current_user_can( 'update_php' ) ) {
 							printf(
 								/* translators: %s: URL to Update PHP page. */

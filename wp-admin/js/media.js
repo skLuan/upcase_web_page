@@ -10,11 +10,7 @@
  * @requires jQuery
  */
 
-<<<<<<< HEAD
-/* global ajaxurl, _wpMediaGridSettings, showNotice, findPosts */
-=======
 /* global ajaxurl, _wpMediaGridSettings, showNotice, findPosts, ClipboardJS */
->>>>>>> main
 
 ( function( $ ){
 	window.findPosts = {
@@ -145,14 +141,10 @@
 	 * @return {void}
 	 */
 	$( function() {
-<<<<<<< HEAD
-		var settings, $mediaGridWrap = $( '#wp-media-grid' );
-=======
 		var settings,
 			$mediaGridWrap             = $( '#wp-media-grid' ),
 			copyAttachmentURLClipboard = new ClipboardJS( '.copy-attachment-url.media-library' ),
 			copyAttachmentURLSuccessTimeout;
->>>>>>> main
 
 		// Opens a manage media frame into the grid.
 		if ( $mediaGridWrap.length && window.wp && window.wp.media ) {
@@ -216,8 +208,6 @@
 		$( '.find-box-inside' ).on( 'click', 'tr', function() {
 			$( this ).find( '.found-radio input' ).prop( 'checked', true );
 		});
-<<<<<<< HEAD
-=======
 
 		/**
 		 * Handles media list copy media URL button.
@@ -248,6 +238,5 @@
 			// Handle success audible feedback.
 			wp.a11y.speak( wp.i18n.__( 'The file URL has been copied to your clipboard' ) );
 		} );
->>>>>>> main
 	});
 })( jQuery );

@@ -127,11 +127,7 @@ if ( ! function_exists( 'cache_users' ) ) :
 	 *
 	 * @global wpdb $wpdb WordPress database abstraction object.
 	 *
-<<<<<<< HEAD
-	 * @param array $user_ids User ID numbers list
-=======
 	 * @param int[] $user_ids User ID numbers list
->>>>>>> main
 	 */
 	function cache_users( $user_ids ) {
 		global $wpdb;
@@ -382,14 +378,6 @@ if ( ! function_exists( 'wp_mail' ) ) :
 		 */
 		if ( ! isset( $from_email ) ) {
 			// Get the site domain and get rid of www.
-<<<<<<< HEAD
-			$sitename = wp_parse_url( network_home_url(), PHP_URL_HOST );
-			if ( 'www.' === substr( $sitename, 0, 4 ) ) {
-				$sitename = substr( $sitename, 4 );
-			}
-
-			$from_email = 'wordpress@' . $sitename;
-=======
 			$sitename   = wp_parse_url( network_home_url(), PHP_URL_HOST );
 			$from_email = 'wordpress@';
 
@@ -400,7 +388,6 @@ if ( ! function_exists( 'wp_mail' ) ) :
 
 				$from_email .= $sitename;
 			}
->>>>>>> main
 		}
 
 		/**
@@ -561,23 +548,14 @@ if ( ! function_exists( 'wp_mail' ) ) :
 			$send = $phpmailer->send();
 
 			/**
-<<<<<<< HEAD
-			 * Fires after PHPMailer has successfully sent a mail.
-			 *
-			 * The firing of this action does not necessarily mean that the recipient received the
-=======
 			 * Fires after PHPMailer has successfully sent an email.
 			 *
 			 * The firing of this action does not necessarily mean that the recipient(s) received the
->>>>>>> main
 			 * email successfully. It only means that the `send` method above was able to
 			 * process the request without any errors.
 			 *
 			 * @since 5.9.0
 			 *
-<<<<<<< HEAD
-			 * @param array $mail_data An array containing the mail recipient, subject, message, headers, and attachments.
-=======
 			 * @param array $mail_data {
 			 *     An array containing the email recipient(s), subject, message, headers, and attachments.
 			 *
@@ -587,7 +565,6 @@ if ( ! function_exists( 'wp_mail' ) ) :
 			 *     @type string[] $headers     Additional headers.
 			 *     @type string[] $attachments Paths to files to attach.
 			 * }
->>>>>>> main
 			 */
 			do_action( 'wp_mail_succeeded', $mail_data );
 
@@ -748,9 +725,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 			 *
 			 * @since 2.7.0
 			 *
-<<<<<<< HEAD
-			 * @param string[] $cookie_elements An array of data for the authentication cookie.
-=======
 			 * @param string[] $cookie_elements {
 			 *     Authentication cookie components. None of the components should be assumed
 			 *     to be valid as they come directly from a client-provided cookie value.
@@ -761,7 +735,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 			 *     @type string $hmac       The security hash for the cookie.
 			 *     @type string $scheme     The cookie scheme to use.
 			 * }
->>>>>>> main
 			 */
 			do_action( 'auth_cookie_expired', $cookie_elements );
 			return false;
@@ -774,9 +747,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 			 *
 			 * @since 2.7.0
 			 *
-<<<<<<< HEAD
-			 * @param string[] $cookie_elements An array of data for the authentication cookie.
-=======
 			 * @param string[] $cookie_elements {
 			 *     Authentication cookie components. None of the components should be assumed
 			 *     to be valid as they come directly from a client-provided cookie value.
@@ -787,7 +757,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 			 *     @type string $hmac       The security hash for the cookie.
 			 *     @type string $scheme     The cookie scheme to use.
 			 * }
->>>>>>> main
 			 */
 			do_action( 'auth_cookie_bad_username', $cookie_elements );
 			return false;
@@ -807,9 +776,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 			 *
 			 * @since 2.7.0
 			 *
-<<<<<<< HEAD
-			 * @param string[] $cookie_elements An array of data for the authentication cookie.
-=======
 			 * @param string[] $cookie_elements {
 			 *     Authentication cookie components. None of the components should be assumed
 			 *     to be valid as they come directly from a client-provided cookie value.
@@ -820,7 +786,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 			 *     @type string $hmac       The security hash for the cookie.
 			 *     @type string $scheme     The cookie scheme to use.
 			 * }
->>>>>>> main
 			 */
 			do_action( 'auth_cookie_bad_hash', $cookie_elements );
 			return false;
@@ -833,9 +798,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 			 *
 			 * @since 4.0.0
 			 *
-<<<<<<< HEAD
-			 * @param string[] $cookie_elements An array of data for the authentication cookie.
-=======
 			 * @param string[] $cookie_elements {
 			 *     Authentication cookie components. None of the components should be assumed
 			 *     to be valid as they come directly from a client-provided cookie value.
@@ -846,7 +808,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 			 *     @type string $hmac       The security hash for the cookie.
 			 *     @type string $scheme     The cookie scheme to use.
 			 * }
->>>>>>> main
 			 */
 			do_action( 'auth_cookie_bad_session_token', $cookie_elements );
 			return false;
@@ -862,9 +823,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 		 *
 		 * @since 2.7.0
 		 *
-<<<<<<< HEAD
-		 * @param string[] $cookie_elements An array of data for the authentication cookie.
-=======
 		 * @param string[] $cookie_elements {
 		 *     Authentication cookie components.
 		 *
@@ -874,7 +832,6 @@ if ( ! function_exists( 'wp_validate_auth_cookie' ) ) :
 		 *     @type string $hmac       The security hash for the cookie.
 		 *     @type string $scheme     The cookie scheme to use.
 		 * }
->>>>>>> main
 		 * @param WP_User  $user            User object.
 		 */
 		do_action( 'auth_cookie_valid', $cookie_elements, $user );
@@ -942,9 +899,6 @@ if ( ! function_exists( 'wp_parse_auth_cookie' ) ) :
 	 *
 	 * @param string $cookie Authentication cookie.
 	 * @param string $scheme Optional. The cookie scheme to use: 'auth', 'secure_auth', or 'logged_in'.
-<<<<<<< HEAD
-	 * @return string[]|false Authentication cookie components.
-=======
 	 * @return string[]|false {
 	 *     Authentication cookie components. None of the components should be assumed
 	 *     to be valid as they come directly from a client-provided cookie value. If
@@ -956,7 +910,6 @@ if ( ! function_exists( 'wp_parse_auth_cookie' ) ) :
 	 *     @type string $hmac       The security hash for the cookie.
 	 *     @type string $scheme     The cookie scheme to use.
 	 * }
->>>>>>> main
 	 */
 	function wp_parse_auth_cookie( $cookie = '', $scheme = '' ) {
 		if ( empty( $cookie ) ) {

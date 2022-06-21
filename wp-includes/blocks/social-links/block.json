@@ -1,17 +1,10 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/social-links",
 	"title": "Social Icons",
 	"category": "widgets",
-<<<<<<< HEAD
-	"description": "Display icons linking to your social media profiles or websites.",
-=======
 	"description": "Display icons linking to your social media profiles or sites.",
->>>>>>> main
 	"keywords": [ "links" ],
 	"textdomain": "default",
 	"attributes": {
@@ -37,23 +30,17 @@
 			"type": "boolean",
 			"default": false
 		},
-<<<<<<< HEAD
-=======
 		"showLabels": {
 			"type": "boolean",
 			"default": false
 		},
->>>>>>> main
 		"size": {
 			"type": "string"
 		}
 	},
 	"providesContext": {
 		"openInNewTab": "openInNewTab",
-<<<<<<< HEAD
-=======
 		"showLabels": "showLabels",
->>>>>>> main
 		"iconColorValue": "iconColorValue",
 		"iconBackgroundColorValue": "iconBackgroundColorValue"
 	},
@@ -64,30 +51,15 @@
 		"__experimentalLayout": {
 			"allowSwitching": false,
 			"allowInheriting": false,
-<<<<<<< HEAD
-=======
 			"allowVerticalAlignment": false,
->>>>>>> main
 			"default": {
 				"type": "flex"
 			}
 		},
 		"spacing": {
-<<<<<<< HEAD
-			"blockGap": true,
-			"margin": [ "top", "bottom" ],
-			"units": [
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			],
-=======
 			"blockGap": [ "horizontal", "vertical" ],
 			"margin": [ "top", "bottom" ],
 			"units": [ "px", "em", "rem", "vh", "vw" ],
->>>>>>> main
 			"__experimentalDefaultControls": {
 				"blockGap": true
 			}

@@ -1269,8 +1269,6 @@ audio, video {
 	.copy-to-clipboard-container .success {
 		font-size: 14px;
 	}
-<<<<<<< HEAD
-=======
 
 	/* Restructure image editor on narrow viewports. */
 	.imgedit-crop-wrap img{
@@ -1290,7 +1288,6 @@ audio, video {
 	.imgedit-settings .imgedit-scale-button-wrapper {
 		display: inline-block;
 	}
->>>>>>> main
 }
 
 @media only screen and (max-width: 600px) {

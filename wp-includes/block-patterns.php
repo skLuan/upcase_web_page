@@ -12,11 +12,7 @@ add_theme_support( 'core-block-patterns' );
  * Registers the core block patterns and categories.
  *
  * @since 5.5.0
-<<<<<<< HEAD
- * @private
-=======
  * @access private
->>>>>>> main
  */
 function _register_core_block_patterns_and_categories() {
 	$should_register_core_patterns = get_theme_support( 'core-block-patterns' );
@@ -42,10 +38,7 @@ function _register_core_block_patterns_and_categories() {
 
 	register_block_pattern_category( 'buttons', array( 'label' => _x( 'Buttons', 'Block pattern category' ) ) );
 	register_block_pattern_category( 'columns', array( 'label' => _x( 'Columns', 'Block pattern category' ) ) );
-<<<<<<< HEAD
-=======
 	register_block_pattern_category( 'featured', array( 'label' => _x( 'Featured', 'Block pattern category' ) ) );
->>>>>>> main
 	register_block_pattern_category( 'gallery', array( 'label' => _x( 'Gallery', 'Block pattern category' ) ) );
 	register_block_pattern_category( 'header', array( 'label' => _x( 'Headers', 'Block pattern category' ) ) );
 	register_block_pattern_category( 'text', array( 'label' => _x( 'Text', 'Block pattern category' ) ) );
@@ -112,13 +105,6 @@ function _load_remote_featured_patterns() {
 		return;
 	}
 
-<<<<<<< HEAD
-	if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( 'featured' ) ) {
-		register_block_pattern_category( 'featured', array( 'label' => __( 'Featured' ) ) );
-	}
-
-=======
->>>>>>> main
 	$request         = new WP_REST_Request( 'GET', '/wp/v2/pattern-directory/patterns' );
 	$featured_cat_id = 26; // This is the `Featured` category id from pattern directory.
 	$request->set_param( 'category', $featured_cat_id );
@@ -131,19 +117,13 @@ function _load_remote_featured_patterns() {
 	foreach ( $patterns as $pattern ) {
 		$pattern_name = sanitize_title( $pattern['title'] );
 		$registry     = WP_Block_Patterns_Registry::get_instance();
-<<<<<<< HEAD
-		// Some patterns might be already registerd as `core patterns with the `core` prefix.
-=======
 		// Some patterns might be already registered as core patterns with the `core` prefix.
->>>>>>> main
 		$is_registered = $registry->is_registered( $pattern_name ) || $registry->is_registered( "core/$pattern_name" );
 		if ( ! $is_registered ) {
 			register_block_pattern( $pattern_name, (array) $pattern );
 		}
 	}
 }
-<<<<<<< HEAD
-=======
 
 /**
  * Registers patterns from Pattern Directory provided by a theme's
@@ -356,4 +336,3 @@ function _register_theme_block_patterns() {
 	}
 }
 add_action( 'init', '_register_theme_block_patterns' );
->>>>>>> main

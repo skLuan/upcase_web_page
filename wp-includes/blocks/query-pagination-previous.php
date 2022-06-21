@@ -20,11 +20,7 @@ function render_block_core_query_pagination_previous( $attributes, $content, $bl
 
 	$wrapper_attributes = get_block_wrapper_attributes();
 	$default_label      = __( 'Previous Page' );
-<<<<<<< HEAD
-	$label              = isset( $attributes['label'] ) && ! empty( $attributes['label'] ) ? $attributes['label'] : $default_label;
-=======
 	$label              = isset( $attributes['label'] ) && ! empty( $attributes['label'] ) ? esc_html( $attributes['label'] ) : $default_label;
->>>>>>> main
 	$pagination_arrow   = get_query_pagination_arrow( $block, false );
 	if ( $pagination_arrow ) {
 		$label = $pagination_arrow . $label;
@@ -36,10 +32,7 @@ function render_block_core_query_pagination_previous( $attributes, $content, $bl
 		$filter_link_attributes = function() use ( $wrapper_attributes ) {
 			return $wrapper_attributes;
 		};
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 		add_filter( 'previous_posts_link_attributes', $filter_link_attributes );
 		$content = get_previous_posts_link( $label );
 		remove_filter( 'previous_posts_link_attributes', $filter_link_attributes );

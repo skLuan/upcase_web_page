@@ -130,8 +130,6 @@ class WP_Object_Cache {
 	}
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Serves as a utility function to determine whether a key exists in the cache.
 	 *
 	 * @since 3.4.0
@@ -145,7 +143,6 @@ class WP_Object_Cache {
 	}
 
 	/**
->>>>>>> main
 	 * Adds data to the cache if it doesn't already exist.
 	 *
 	 * @since 2.0.0
@@ -157,12 +154,8 @@ class WP_Object_Cache {
 	 * @param int|string $key    What to call the contents in the cache.
 	 * @param mixed      $data   The contents to store in the cache.
 	 * @param string     $group  Optional. Where to group the cache contents. Default 'default'.
-<<<<<<< HEAD
-	 * @param int        $expire Optional. When to expire the cache contents. Default 0 (no expiration).
-=======
 	 * @param int        $expire Optional. When to expire the cache contents, in seconds.
 	 *                           Default 0 (no expiration).
->>>>>>> main
 	 * @return bool True on success, false if cache key and group already exist.
 	 */
 	public function add( $key, $data, $group = 'default', $expire = 0 ) {
@@ -187,32 +180,6 @@ class WP_Object_Cache {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Sets the list of global cache groups.
-	 *
-	 * @since 3.0.0
-	 *
-	 * @param string|string[] $groups List of groups that are global.
-	 */
-	public function add_global_groups( $groups ) {
-		$groups = (array) $groups;
-
-		$groups              = array_fill_keys( $groups, true );
-		$this->global_groups = array_merge( $this->global_groups, $groups );
-	}
-
-	/**
-	 * Decrements numeric cache item's value.
-	 *
-	 * @since 3.3.0
-	 *
-	 * @param int|string $key    The cache key to decrement.
-	 * @param int        $offset Optional. The amount by which to decrement the item's value. Default 1.
-	 * @param string     $group  Optional. The group the key is in. Default 'default'.
-	 * @return int|false The item's new value on success, false on failure.
-	 */
-	public function decr( $key, $offset = 1, $group = 'default' ) {
-=======
 	 * Adds multiple values to the cache in one call.
 	 *
 	 * @since 6.0.0
@@ -249,75 +216,10 @@ class WP_Object_Cache {
 	 * @return bool True if contents were replaced, false if original value does not exist.
 	 */
 	public function replace( $key, $data, $group = 'default', $expire = 0 ) {
->>>>>>> main
 		if ( empty( $group ) ) {
 			$group = 'default';
 		}
 
-<<<<<<< HEAD
-		if ( $this->multisite && ! isset( $this->global_groups[ $group ] ) ) {
-			$key = $this->blog_prefix . $key;
-		}
-
-		if ( ! $this->_exists( $key, $group ) ) {
-			return false;
-		}
-
-		if ( ! is_numeric( $this->cache[ $group ][ $key ] ) ) {
-			$this->cache[ $group ][ $key ] = 0;
-		}
-
-		$offset = (int) $offset;
-
-		$this->cache[ $group ][ $key ] -= $offset;
-
-		if ( $this->cache[ $group ][ $key ] < 0 ) {
-			$this->cache[ $group ][ $key ] = 0;
-		}
-
-		return $this->cache[ $group ][ $key ];
-	}
-
-	/**
-	 * Removes the contents of the cache key in the group.
-	 *
-	 * If the cache key does not exist in the group, then nothing will happen.
-	 *
-	 * @since 2.0.0
-	 *
-	 * @param int|string $key        What the contents in the cache are called.
-	 * @param string     $group      Optional. Where the cache contents are grouped. Default 'default'.
-	 * @param bool       $deprecated Optional. Unused. Default false.
-	 * @return bool False if the contents weren't deleted and true on success.
-	 */
-	public function delete( $key, $group = 'default', $deprecated = false ) {
-		if ( empty( $group ) ) {
-			$group = 'default';
-		}
-
-		if ( $this->multisite && ! isset( $this->global_groups[ $group ] ) ) {
-			$key = $this->blog_prefix . $key;
-		}
-
-		if ( ! $this->_exists( $key, $group ) ) {
-			return false;
-		}
-
-		unset( $this->cache[ $group ][ $key ] );
-		return true;
-	}
-
-	/**
-	 * Clears the object cache of all data.
-	 *
-	 * @since 2.0.0
-	 *
-	 * @return true Always returns true.
-	 */
-	public function flush() {
-		$this->cache = array();
-
-=======
 		$id = $key;
 		if ( $this->multisite && ! isset( $this->global_groups[ $group ] ) ) {
 			$id = $this->blog_prefix . $key;
@@ -364,13 +266,10 @@ class WP_Object_Cache {
 		}
 
 		$this->cache[ $group ][ $key ] = $data;
->>>>>>> main
 		return true;
 	}
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Sets multiple values to the cache in one call.
 	 *
 	 * @since 6.0.0
@@ -392,7 +291,6 @@ class WP_Object_Cache {
 	}
 
 	/**
->>>>>>> main
 	 * Retrieves the cache contents, if it exists.
 	 *
 	 * The contents will be first attempted to be retrieved by searching by the
@@ -444,12 +342,8 @@ class WP_Object_Cache {
 	 * @param string $group Optional. Where the cache contents are grouped. Default 'default'.
 	 * @param bool   $force Optional. Whether to force an update of the local cache
 	 *                      from the persistent cache. Default false.
-<<<<<<< HEAD
-	 * @return array Array of values organized into groups.
-=======
 	 * @return array Array of return values, grouped by key. Each value is either
 	 *               the cache contents on success, or false on failure.
->>>>>>> main
 	 */
 	public function get_multiple( $keys, $group = 'default', $force = false ) {
 		$values = array();
@@ -462,8 +356,6 @@ class WP_Object_Cache {
 	}
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Removes the contents of the cache key in the group.
 	 *
 	 * If the cache key does not exist in the group, then nothing will happen.
@@ -513,19 +405,13 @@ class WP_Object_Cache {
 	}
 
 	/**
->>>>>>> main
 	 * Increments numeric cache item's value.
 	 *
 	 * @since 3.3.0
 	 *
-<<<<<<< HEAD
-	 * @param int|string $key    The cache key to increment
-	 * @param int        $offset Optional. The amount by which to increment the item's value. Default 1.
-=======
 	 * @param int|string $key    The cache key to increment.
 	 * @param int        $offset Optional. The amount by which to increment the item's value.
 	 *                           Default 1.
->>>>>>> main
 	 * @param string     $group  Optional. The group the key is in. Default 'default'.
 	 * @return int|false The item's new value on success, false on failure.
 	 */
@@ -558,77 +444,6 @@ class WP_Object_Cache {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Replaces the contents in the cache, if contents already exist.
-	 *
-	 * @since 2.0.0
-	 *
-	 * @see WP_Object_Cache::set()
-	 *
-	 * @param int|string $key    What to call the contents in the cache.
-	 * @param mixed      $data   The contents to store in the cache.
-	 * @param string     $group  Optional. Where to group the cache contents. Default 'default'.
-	 * @param int        $expire Optional. When to expire the cache contents. Default 0 (no expiration).
-	 * @return bool False if not exists, true if contents were replaced.
-	 */
-	public function replace( $key, $data, $group = 'default', $expire = 0 ) {
-		if ( empty( $group ) ) {
-			$group = 'default';
-		}
-
-		$id = $key;
-		if ( $this->multisite && ! isset( $this->global_groups[ $group ] ) ) {
-			$id = $this->blog_prefix . $key;
-		}
-
-		if ( ! $this->_exists( $id, $group ) ) {
-			return false;
-		}
-
-		return $this->set( $key, $data, $group, (int) $expire );
-	}
-
-	/**
-	 * Resets cache keys.
-	 *
-	 * @since 3.0.0
-	 *
-	 * @deprecated 3.5.0 Use switch_to_blog()
-	 * @see switch_to_blog()
-	 */
-	public function reset() {
-		_deprecated_function( __FUNCTION__, '3.5.0', 'switch_to_blog()' );
-
-		// Clear out non-global caches since the blog ID has changed.
-		foreach ( array_keys( $this->cache ) as $group ) {
-			if ( ! isset( $this->global_groups[ $group ] ) ) {
-				unset( $this->cache[ $group ] );
-			}
-		}
-	}
-
-	/**
-	 * Sets the data contents into the cache.
-	 *
-	 * The cache contents are grouped by the $group parameter followed by the
-	 * $key. This allows for duplicate IDs in unique groups. Therefore, naming of
-	 * the group should be used with care and should follow normal function
-	 * naming guidelines outside of core WordPress usage.
-	 *
-	 * The $expire parameter is not used, because the cache will automatically
-	 * expire for each time a page is accessed and PHP finishes. The method is
-	 * more for cache plugins which use files.
-	 *
-	 * @since 2.0.0
-	 *
-	 * @param int|string $key    What to call the contents in the cache.
-	 * @param mixed      $data   The contents to store in the cache.
-	 * @param string     $group  Optional. Where to group the cache contents. Default 'default'.
-	 * @param int        $expire Not Used.
-	 * @return true Always returns true.
-	 */
-	public function set( $key, $data, $group = 'default', $expire = 0 ) {
-=======
 	 * Decrements numeric cache item's value.
 	 *
 	 * @since 3.3.0
@@ -640,7 +455,6 @@ class WP_Object_Cache {
 	 * @return int|false The item's new value on success, false on failure.
 	 */
 	public function decr( $key, $offset = 1, $group = 'default' ) {
->>>>>>> main
 		if ( empty( $group ) ) {
 			$group = 'default';
 		}
@@ -649,13 +463,6 @@ class WP_Object_Cache {
 			$key = $this->blog_prefix . $key;
 		}
 
-<<<<<<< HEAD
-		if ( is_object( $data ) ) {
-			$data = clone $data;
-		}
-
-		$this->cache[ $group ][ $key ] = $data;
-=======
 		if ( ! $this->_exists( $key, $group ) ) {
 			return false;
 		}
@@ -685,13 +492,10 @@ class WP_Object_Cache {
 	public function flush() {
 		$this->cache = array();
 
->>>>>>> main
 		return true;
 	}
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Sets the list of global cache groups.
 	 *
 	 * @since 3.0.0
@@ -739,7 +543,6 @@ class WP_Object_Cache {
 	}
 
 	/**
->>>>>>> main
 	 * Echoes the stats of the caching.
 	 *
 	 * Gives the cache hits, and cache misses. Also prints every cached group,
@@ -758,34 +561,4 @@ class WP_Object_Cache {
 		}
 		echo '</ul>';
 	}
-<<<<<<< HEAD
-
-	/**
-	 * Switches the internal blog ID.
-	 *
-	 * This changes the blog ID used to create keys in blog specific groups.
-	 *
-	 * @since 3.5.0
-	 *
-	 * @param int $blog_id Blog ID.
-	 */
-	public function switch_to_blog( $blog_id ) {
-		$blog_id           = (int) $blog_id;
-		$this->blog_prefix = $this->multisite ? $blog_id . ':' : '';
-	}
-
-	/**
-	 * Serves as a utility function to determine whether a key exists in the cache.
-	 *
-	 * @since 3.4.0
-	 *
-	 * @param int|string $key   Cache key to check for existence.
-	 * @param string     $group Cache group for the key existence check.
-	 * @return bool Whether the key exists in the cache for the given group.
-	 */
-	protected function _exists( $key, $group ) {
-		return isset( $this->cache[ $group ] ) && ( isset( $this->cache[ $group ][ $key ] ) || array_key_exists( $key, $this->cache[ $group ] ) );
-	}
-=======
->>>>>>> main
 }

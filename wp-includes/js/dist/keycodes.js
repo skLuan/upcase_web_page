@@ -1,112 +1,3 @@
-<<<<<<< HEAD
-this["wp"] = this["wp"] || {}; this["wp"]["keycodes"] =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "z7pY");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "YLtl":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["lodash"]; }());
-
-/***/ }),
-
-/***/ "l3Sj":
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["wp"]["i18n"]; }());
-
-/***/ }),
-
-/***/ "z7pY":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-=======
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
@@ -143,47 +34,10 @@ this["wp"] = this["wp"] || {}; this["wp"]["keycodes"] =
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
->>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-<<<<<<< HEAD
-__webpack_require__.d(__webpack_exports__, "BACKSPACE", function() { return /* binding */ BACKSPACE; });
-__webpack_require__.d(__webpack_exports__, "TAB", function() { return /* binding */ TAB; });
-__webpack_require__.d(__webpack_exports__, "ENTER", function() { return /* binding */ ENTER; });
-__webpack_require__.d(__webpack_exports__, "ESCAPE", function() { return /* binding */ ESCAPE; });
-__webpack_require__.d(__webpack_exports__, "SPACE", function() { return /* binding */ SPACE; });
-__webpack_require__.d(__webpack_exports__, "PAGEUP", function() { return /* binding */ PAGEUP; });
-__webpack_require__.d(__webpack_exports__, "PAGEDOWN", function() { return /* binding */ PAGEDOWN; });
-__webpack_require__.d(__webpack_exports__, "END", function() { return /* binding */ END; });
-__webpack_require__.d(__webpack_exports__, "HOME", function() { return /* binding */ HOME; });
-__webpack_require__.d(__webpack_exports__, "LEFT", function() { return /* binding */ LEFT; });
-__webpack_require__.d(__webpack_exports__, "UP", function() { return /* binding */ UP; });
-__webpack_require__.d(__webpack_exports__, "RIGHT", function() { return /* binding */ RIGHT; });
-__webpack_require__.d(__webpack_exports__, "DOWN", function() { return /* binding */ DOWN; });
-__webpack_require__.d(__webpack_exports__, "DELETE", function() { return /* binding */ DELETE; });
-__webpack_require__.d(__webpack_exports__, "F10", function() { return /* binding */ F10; });
-__webpack_require__.d(__webpack_exports__, "ALT", function() { return /* binding */ ALT; });
-__webpack_require__.d(__webpack_exports__, "CTRL", function() { return /* binding */ CTRL; });
-__webpack_require__.d(__webpack_exports__, "COMMAND", function() { return /* binding */ COMMAND; });
-__webpack_require__.d(__webpack_exports__, "SHIFT", function() { return /* binding */ SHIFT; });
-__webpack_require__.d(__webpack_exports__, "ZERO", function() { return /* binding */ ZERO; });
-__webpack_require__.d(__webpack_exports__, "modifiers", function() { return /* binding */ modifiers; });
-__webpack_require__.d(__webpack_exports__, "rawShortcut", function() { return /* binding */ rawShortcut; });
-__webpack_require__.d(__webpack_exports__, "displayShortcutList", function() { return /* binding */ displayShortcutList; });
-__webpack_require__.d(__webpack_exports__, "displayShortcut", function() { return /* binding */ displayShortcut; });
-__webpack_require__.d(__webpack_exports__, "shortcutAriaLabel", function() { return /* binding */ shortcutAriaLabel; });
-__webpack_require__.d(__webpack_exports__, "isKeyboardEvent", function() { return /* binding */ isKeyboardEvent; });
-
-// EXTERNAL MODULE: external "lodash"
-var external_lodash_ = __webpack_require__("YLtl");
-
-// EXTERNAL MODULE: external ["wp","i18n"]
-var external_wp_i18n_ = __webpack_require__("l3Sj");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/keycodes/build-module/platform.js
-=======
 __webpack_require__.d(__webpack_exports__, {
   "ALT": function() { return /* binding */ ALT; },
   "BACKSPACE": function() { return /* binding */ BACKSPACE; },
@@ -218,7 +72,6 @@ var external_lodash_namespaceObject = window["lodash"];
 ;// CONCATENATED MODULE: external ["wp","i18n"]
 var external_wp_i18n_namespaceObject = window["wp"]["i18n"];
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/keycodes/build-module/platform.js
->>>>>>> main
 /**
  * External dependencies
  */
@@ -245,17 +98,10 @@ function isAppleOS() {
   const {
     platform
   } = _window.navigator;
-<<<<<<< HEAD
-  return platform.indexOf('Mac') !== -1 || Object(external_lodash_["includes"])(['iPad', 'iPhone'], platform);
-}
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/keycodes/build-module/index.js
-=======
   return platform.indexOf('Mac') !== -1 || (0,external_lodash_namespaceObject.includes)(['iPad', 'iPhone'], platform);
 }
 
 ;// CONCATENATED MODULE: ./node_modules/@wordpress/keycodes/build-module/index.js
->>>>>>> main
 /**
  * Note: The order of the modifier keys in many of the [foo]Shortcut()
  * functions in this file are intentional and should not be changed. They're
@@ -438,11 +284,7 @@ const modifiers = {
  *                                                 shortcuts.
  */
 
-<<<<<<< HEAD
-const rawShortcut = Object(external_lodash_["mapValues"])(modifiers, modifier => {
-=======
 const rawShortcut = (0,external_lodash_namespaceObject.mapValues)(modifiers, modifier => {
->>>>>>> main
   return (
     /** @type {WPKeyHandler<string>} */
     function (character) {
@@ -466,11 +308,7 @@ const rawShortcut = (0,external_lodash_namespaceObject.mapValues)(modifiers, mod
  *                                                   shortcut sequences.
  */
 
-<<<<<<< HEAD
-const displayShortcutList = Object(external_lodash_["mapValues"])(modifiers, modifier => {
-=======
 const displayShortcutList = (0,external_lodash_namespaceObject.mapValues)(modifiers, modifier => {
->>>>>>> main
   return (
     /** @type {WPKeyHandler<string[]>} */
     function (character) {
@@ -486,11 +324,7 @@ const displayShortcutList = (0,external_lodash_namespaceObject.mapValues)(modifi
         [SHIFT]: isApple ? '⇧' : 'Shift'
       };
       const modifierKeys = modifier(_isApple).reduce((accumulator, key) => {
-<<<<<<< HEAD
-        const replacementKey = Object(external_lodash_["get"])(replacementKeyMap, key, key); // If on the Mac, adhere to platform convention and don't show plus between keys.
-=======
         const replacementKey = (0,external_lodash_namespaceObject.get)(replacementKeyMap, key, key); // If on the Mac, adhere to platform convention and don't show plus between keys.
->>>>>>> main
 
         if (isApple) {
           return [...accumulator, replacementKey];
@@ -500,11 +334,7 @@ const displayShortcutList = (0,external_lodash_namespaceObject.mapValues)(modifi
       },
       /** @type {string[]} */
       []);
-<<<<<<< HEAD
-      const capitalizedCharacter = Object(external_lodash_["capitalize"])(character);
-=======
       const capitalizedCharacter = (0,external_lodash_namespaceObject.capitalize)(character);
->>>>>>> main
       return [...modifierKeys, capitalizedCharacter];
     }
   );
@@ -523,11 +353,7 @@ const displayShortcutList = (0,external_lodash_namespaceObject.mapValues)(modifi
  *                                                 display shortcuts.
  */
 
-<<<<<<< HEAD
-const displayShortcut = Object(external_lodash_["mapValues"])(displayShortcutList, shortcutList => {
-=======
 const displayShortcut = (0,external_lodash_namespaceObject.mapValues)(displayShortcutList, shortcutList => {
->>>>>>> main
   return (
     /** @type {WPKeyHandler<string>} */
     function (character) {
@@ -552,11 +378,7 @@ const displayShortcut = (0,external_lodash_namespaceObject.mapValues)(displaySho
  *                                                 shortcut ARIA labels.
  */
 
-<<<<<<< HEAD
-const shortcutAriaLabel = Object(external_lodash_["mapValues"])(modifiers, modifier => {
-=======
 const shortcutAriaLabel = (0,external_lodash_namespaceObject.mapValues)(modifiers, modifier => {
->>>>>>> main
   return (
     /** @type {WPKeyHandler<string>} */
     function (character) {
@@ -571,17 +393,6 @@ const shortcutAriaLabel = (0,external_lodash_namespaceObject.mapValues)(modifier
         [ALT]: isApple ? 'Option' : 'Alt',
 
         /* translators: comma as in the character ',' */
-<<<<<<< HEAD
-        ',': Object(external_wp_i18n_["__"])('Comma'),
-
-        /* translators: period as in the character '.' */
-        '.': Object(external_wp_i18n_["__"])('Period'),
-
-        /* translators: backtick as in the character '`' */
-        '`': Object(external_wp_i18n_["__"])('Backtick')
-      };
-      return [...modifier(_isApple), character].map(key => Object(external_lodash_["capitalize"])(Object(external_lodash_["get"])(replacementKeyMap, key, key))).join(isApple ? ' ' : ' + ');
-=======
         ',': (0,external_wp_i18n_namespaceObject.__)('Comma'),
 
         /* translators: period as in the character '.' */
@@ -591,7 +402,6 @@ const shortcutAriaLabel = (0,external_lodash_namespaceObject.mapValues)(modifier
         '`': (0,external_wp_i18n_namespaceObject.__)('Backtick')
       };
       return [...modifier(_isApple), character].map(key => (0,external_lodash_namespaceObject.capitalize)((0,external_lodash_namespaceObject.get)(replacementKeyMap, key, key))).join(isApple ? ' ' : ' + ');
->>>>>>> main
     }
   );
 });
@@ -628,11 +438,7 @@ function getEventModifiers(event) {
  */
 
 
-<<<<<<< HEAD
-const isKeyboardEvent = Object(external_lodash_["mapValues"])(modifiers, getModifiers => {
-=======
 const isKeyboardEvent = (0,external_lodash_namespaceObject.mapValues)(modifiers, getModifiers => {
->>>>>>> main
   return (
     /** @type {WPEventKeyHandler} */
     function (event, character) {
@@ -641,22 +447,14 @@ const isKeyboardEvent = (0,external_lodash_namespaceObject.mapValues)(modifiers,
       const mods = getModifiers(_isApple);
       const eventMods = getEventModifiers(event);
 
-<<<<<<< HEAD
-      if (Object(external_lodash_["xor"])(mods, eventMods).length) {
-=======
       if ((0,external_lodash_namespaceObject.xor)(mods, eventMods).length) {
->>>>>>> main
         return false;
       }
 
       let key = event.key.toLowerCase();
 
       if (!character) {
-<<<<<<< HEAD
-        return Object(external_lodash_["includes"])(mods, key);
-=======
         return (0,external_lodash_namespaceObject.includes)(mods, key);
->>>>>>> main
       }
 
       if (event.altKey && character.length === 1) {
@@ -673,13 +471,6 @@ const isKeyboardEvent = (0,external_lodash_namespaceObject.mapValues)(modifiers,
   );
 });
 
-<<<<<<< HEAD
-
-/***/ })
-
-/******/ });
-=======
 (window.wp = window.wp || {}).keycodes = __webpack_exports__;
 /******/ })()
 ;
->>>>>>> main

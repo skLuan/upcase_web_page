@@ -50,11 +50,7 @@ function wp_robots() {
 }
 
 /**
-<<<<<<< HEAD
- * Adds noindex to the robots meta tag if required by the site configuration.
-=======
  * Adds `noindex` to the robots meta tag if required by the site configuration.
->>>>>>> main
  *
  * If a blog is marked as not being public then noindex will be output to
  * tell web robots not to index the page content. Add this to the
@@ -80,11 +76,7 @@ function wp_robots_noindex( array $robots ) {
 }
 
 /**
-<<<<<<< HEAD
- * Adds noindex to the robots meta tag for embeds.
-=======
  * Adds `noindex` to the robots meta tag for embeds.
->>>>>>> main
  *
  * Typical usage is as a {@see 'wp_robots'} callback:
  *
@@ -106,11 +98,7 @@ function wp_robots_noindex_embeds( array $robots ) {
 }
 
 /**
-<<<<<<< HEAD
- * Adds noindex to the robots meta tag if a search is being performed.
-=======
  * Adds `noindex` to the robots meta tag if a search is being performed.
->>>>>>> main
  *
  * If a search is being performed then noindex will be output to
  * tell web robots not to index the page content. Add this to the
@@ -136,11 +124,7 @@ function wp_robots_noindex_search( array $robots ) {
 }
 
 /**
-<<<<<<< HEAD
- * Adds noindex to the robots meta tag.
-=======
  * Adds `noindex` to the robots meta tag.
->>>>>>> main
  *
  * This directive tells web robots not to index the page content.
  *
@@ -166,11 +150,7 @@ function wp_robots_no_robots( array $robots ) {
 }
 
 /**
-<<<<<<< HEAD
- * Adds noindex and noarchive to the robots meta tag.
-=======
  * Adds `noindex` and `noarchive` to the robots meta tag.
->>>>>>> main
  *
  * This directive tells web robots not to index or archive the page content and
  * is recommended to be used for sensitive pages.
@@ -191,11 +171,7 @@ function wp_robots_sensitive_page( array $robots ) {
 }
 
 /**
-<<<<<<< HEAD
- * Adds 'max-image-preview:large' to the robots meta tag.
-=======
  * Adds `max-image-preview:large` to the robots meta tag.
->>>>>>> main
  *
  * This directive tells web robots that large image previews are allowed to be
  * displayed, e.g. in search engines, unless the blog is marked as not being public.

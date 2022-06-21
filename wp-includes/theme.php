@@ -45,11 +45,7 @@ function wp_get_themes( $args = array() ) {
 	$theme_directories = search_theme_directories();
 
 	if ( is_array( $wp_theme_directories ) && count( $wp_theme_directories ) > 1 ) {
-<<<<<<< HEAD
-		// Make sure the current theme wins out, in case search_theme_directories() picks the wrong
-=======
 		// Make sure the active theme wins out, in case search_theme_directories() picks the wrong
->>>>>>> main
 		// one in the case of a conflict. (Normally, last registered theme root wins.)
 		$current_theme = get_stylesheet();
 		if ( isset( $theme_directories[ $current_theme ] ) ) {
@@ -109,17 +105,10 @@ function wp_get_themes( $args = array() ) {
  *
  * @global array $wp_theme_directories
  *
-<<<<<<< HEAD
- * @param string $stylesheet Optional. Directory name for the theme. Defaults to current theme.
- * @param string $theme_root Optional. Absolute path of the theme root to look in.
- *                           If not specified, get_raw_theme_root() is used to calculate
- *                           the theme root for the $stylesheet provided (or current theme).
-=======
  * @param string $stylesheet Optional. Directory name for the theme. Defaults to active theme.
  * @param string $theme_root Optional. Absolute path of the theme root to look in.
  *                           If not specified, get_raw_theme_root() is used to calculate
  *                           the theme root for the $stylesheet provided (or active theme).
->>>>>>> main
  * @return WP_Theme Theme object. Be sure to check the object's exists() method
  *                  if you need to confirm the theme's existence.
  */
@@ -193,19 +182,11 @@ function get_stylesheet() {
 }
 
 /**
-<<<<<<< HEAD
- * Retrieves stylesheet directory path for current theme.
- *
- * @since 1.5.0
- *
- * @return string Path to current theme's stylesheet directory.
-=======
  * Retrieves stylesheet directory path for the active theme.
  *
  * @since 1.5.0
  *
  * @return string Path to active theme's stylesheet directory.
->>>>>>> main
  */
 function get_stylesheet_directory() {
 	$stylesheet     = get_stylesheet();
@@ -213,40 +194,23 @@ function get_stylesheet_directory() {
 	$stylesheet_dir = "$theme_root/$stylesheet";
 
 	/**
-<<<<<<< HEAD
-	 * Filters the stylesheet directory path for current theme.
-	 *
-	 * @since 1.5.0
-	 *
-	 * @param string $stylesheet_dir Absolute path to the current theme.
-	 * @param string $stylesheet     Directory name of the current theme.
-=======
 	 * Filters the stylesheet directory path for the active theme.
 	 *
 	 * @since 1.5.0
 	 *
 	 * @param string $stylesheet_dir Absolute path to the active theme.
 	 * @param string $stylesheet     Directory name of the active theme.
->>>>>>> main
 	 * @param string $theme_root     Absolute path to themes directory.
 	 */
 	return apply_filters( 'stylesheet_directory', $stylesheet_dir, $stylesheet, $theme_root );
 }
 
 /**
-<<<<<<< HEAD
- * Retrieves stylesheet directory URI for current theme.
- *
- * @since 1.5.0
- *
- * @return string URI to current theme's stylesheet directory.
-=======
  * Retrieves stylesheet directory URI for the active theme.
  *
  * @since 1.5.0
  *
  * @return string URI to active theme's stylesheet directory.
->>>>>>> main
  */
 function get_stylesheet_directory_uri() {
 	$stylesheet         = str_replace( '%2F', '/', rawurlencode( get_stylesheet() ) );
@@ -266,42 +230,25 @@ function get_stylesheet_directory_uri() {
 }
 
 /**
-<<<<<<< HEAD
- * Retrieves stylesheet URI for current theme.
-=======
  * Retrieves stylesheet URI for the active theme.
->>>>>>> main
  *
  * The stylesheet file name is 'style.css' which is appended to the stylesheet directory URI path.
  * See get_stylesheet_directory_uri().
  *
  * @since 1.5.0
  *
-<<<<<<< HEAD
- * @return string URI to current theme's stylesheet.
-=======
  * @return string URI to active theme's stylesheet.
->>>>>>> main
  */
 function get_stylesheet_uri() {
 	$stylesheet_dir_uri = get_stylesheet_directory_uri();
 	$stylesheet_uri     = $stylesheet_dir_uri . '/style.css';
 	/**
-<<<<<<< HEAD
-	 * Filters the URI of the current theme stylesheet.
-	 *
-	 * @since 1.5.0
-	 *
-	 * @param string $stylesheet_uri     Stylesheet URI for the current theme/child theme.
-	 * @param string $stylesheet_dir_uri Stylesheet directory URI for the current theme/child theme.
-=======
 	 * Filters the URI of the active theme stylesheet.
 	 *
 	 * @since 1.5.0
 	 *
 	 * @param string $stylesheet_uri     Stylesheet URI for the active theme/child theme.
 	 * @param string $stylesheet_dir_uri Stylesheet directory URI for the active theme/child theme.
->>>>>>> main
 	 */
 	return apply_filters( 'stylesheet_uri', $stylesheet_uri, $stylesheet_dir_uri );
 }
@@ -325,11 +272,7 @@ function get_stylesheet_uri() {
  *
  * @global WP_Locale $wp_locale WordPress date and time locale object.
  *
-<<<<<<< HEAD
- * @return string URI to current theme's localized stylesheet.
-=======
  * @return string URI to active theme's localized stylesheet.
->>>>>>> main
  */
 function get_locale_stylesheet_uri() {
 	global $wp_locale;
@@ -355,11 +298,7 @@ function get_locale_stylesheet_uri() {
 }
 
 /**
-<<<<<<< HEAD
- * Retrieves name of the current theme.
-=======
  * Retrieves name of the active theme.
->>>>>>> main
  *
  * @since 1.5.0
  *
@@ -367,37 +306,21 @@ function get_locale_stylesheet_uri() {
  */
 function get_template() {
 	/**
-<<<<<<< HEAD
-	 * Filters the name of the current theme.
-	 *
-	 * @since 1.5.0
-	 *
-	 * @param string $template Current theme's directory name.
-=======
 	 * Filters the name of the active theme.
 	 *
 	 * @since 1.5.0
 	 *
 	 * @param string $template active theme's directory name.
->>>>>>> main
 	 */
 	return apply_filters( 'template', get_option( 'template' ) );
 }
 
 /**
-<<<<<<< HEAD
- * Retrieves template directory path for current theme.
- *
- * @since 1.5.0
- *
- * @return string Path to current theme's template directory.
-=======
  * Retrieves template directory path for the active theme.
  *
  * @since 1.5.0
  *
  * @return string Path to active theme's template directory.
->>>>>>> main
  */
 function get_template_directory() {
 	$template     = get_template();
@@ -405,40 +328,23 @@ function get_template_directory() {
 	$template_dir = "$theme_root/$template";
 
 	/**
-<<<<<<< HEAD
-	 * Filters the current theme directory path.
-	 *
-	 * @since 1.5.0
-	 *
-	 * @param string $template_dir The path of the current theme directory.
-	 * @param string $template     Directory name of the current theme.
-=======
 	 * Filters the active theme directory path.
 	 *
 	 * @since 1.5.0
 	 *
 	 * @param string $template_dir The path of the active theme directory.
 	 * @param string $template     Directory name of the active theme.
->>>>>>> main
 	 * @param string $theme_root   Absolute path to the themes directory.
 	 */
 	return apply_filters( 'template_directory', $template_dir, $template, $theme_root );
 }
 
 /**
-<<<<<<< HEAD
- * Retrieves template directory URI for current theme.
- *
- * @since 1.5.0
- *
- * @return string URI to current theme's template directory.
-=======
  * Retrieves template directory URI for the active theme.
  *
  * @since 1.5.0
  *
  * @return string URI to active theme's template directory.
->>>>>>> main
  */
 function get_template_directory_uri() {
 	$template         = str_replace( '%2F', '/', rawurlencode( get_template() ) );
@@ -446,21 +352,12 @@ function get_template_directory_uri() {
 	$template_dir_uri = "$theme_root_uri/$template";
 
 	/**
-<<<<<<< HEAD
-	 * Filters the current theme directory URI.
-	 *
-	 * @since 1.5.0
-	 *
-	 * @param string $template_dir_uri The URI of the current theme directory.
-	 * @param string $template         Directory name of the current theme.
-=======
 	 * Filters the active theme directory URI.
 	 *
 	 * @since 1.5.0
 	 *
 	 * @param string $template_dir_uri The URI of the active theme directory.
 	 * @param string $template         Directory name of the active theme.
->>>>>>> main
 	 * @param string $theme_root_uri   The themes root URI.
 	 */
 	return apply_filters( 'template_directory_uri', $template_dir_uri, $template, $theme_root_uri );
@@ -602,11 +499,7 @@ function search_theme_directories( $force = false ) {
 	/* Loop the registered theme directories and extract all themes */
 	foreach ( $wp_theme_directories as $theme_root ) {
 
-<<<<<<< HEAD
-		// Start with directories in the root of the current theme directory.
-=======
 		// Start with directories in the root of the active theme directory.
->>>>>>> main
 		$dirs = @ scandir( $theme_root );
 		if ( ! $dirs ) {
 			trigger_error( "$theme_root is not readable", E_USER_NOTICE );
@@ -790,11 +683,7 @@ function get_raw_theme_root( $stylesheet_or_template, $skip_cache = false ) {
 
 	$theme_root = false;
 
-<<<<<<< HEAD
-	// If requesting the root for the current theme, consult options to avoid calling get_theme_roots().
-=======
 	// If requesting the root for the active theme, consult options to avoid calling get_theme_roots().
->>>>>>> main
 	if ( ! $skip_cache ) {
 		if ( get_option( 'stylesheet' ) == $stylesheet_or_template ) {
 			$theme_root = get_option( 'stylesheet_root' );
@@ -941,13 +830,6 @@ function switch_theme( $stylesheet ) {
 }
 
 /**
-<<<<<<< HEAD
- * Checks that the current theme has 'index.php' and 'style.css' files.
- *
- * Does not initially check the default theme, which is the fallback and should always exist.
- * But if it doesn't exist, it'll fall back to the latest core default theme that does exist.
- * Will switch theme to the fallback theme if current theme does not validate.
-=======
  * Checks that the active theme has the required files.
  *
  * Standalone themes need to have a `templates/index.html` or `index.php` template file.
@@ -956,16 +838,12 @@ function switch_theme( $stylesheet ) {
  * Does not initially check the default theme, which is the fallback and should always exist.
  * But if it doesn't exist, it'll fall back to the latest core default theme that does exist.
  * Will switch theme to the fallback theme if active theme does not validate.
->>>>>>> main
  *
  * You can use the {@see 'validate_current_theme'} filter to return false to disable
  * this functionality.
  *
  * @since 1.5.0
-<<<<<<< HEAD
-=======
  * @since 6.0.0 Removed the requirement for block themes to have an `index.php` template.
->>>>>>> main
  *
  * @see WP_DEFAULT_THEME
  *
@@ -973,33 +851,21 @@ function switch_theme( $stylesheet ) {
  */
 function validate_current_theme() {
 	/**
-<<<<<<< HEAD
-	 * Filters whether to validate the current theme.
-	 *
-	 * @since 2.7.0
-	 *
-	 * @param bool $validate Whether to validate the current theme. Default true.
-=======
 	 * Filters whether to validate the active theme.
 	 *
 	 * @since 2.7.0
 	 *
 	 * @param bool $validate Whether to validate the active theme. Default true.
->>>>>>> main
 	 */
 	if ( wp_installing() || ! apply_filters( 'validate_current_theme', true ) ) {
 		return true;
 	}
 
-<<<<<<< HEAD
-	if ( ! file_exists( get_template_directory() . '/index.php' ) ) {
-=======
 	if (
 		! file_exists( get_template_directory() . '/templates/index.html' )
 		&& ! file_exists( get_template_directory() . '/block-templates/index.html' ) // Deprecated path support since 5.9.0.
 		&& ! file_exists( get_template_directory() . '/index.php' )
 	) {
->>>>>>> main
 		// Invalid.
 	} elseif ( ! file_exists( get_template_directory() . '/style.css' ) ) {
 		// Invalid.
@@ -1123,11 +989,7 @@ function get_theme_mods() {
 }
 
 /**
-<<<<<<< HEAD
- * Retrieves theme modification value for the current theme.
-=======
  * Retrieves theme modification value for the active theme.
->>>>>>> main
  *
  * If the modification name does not exist and `$default` is a string, then the
  * default will be passed through the {@link https://www.php.net/sprintf sprintf()}
@@ -1153,11 +1015,7 @@ function get_theme_mod( $name, $default = false ) {
 		 *
 		 * @since 2.2.0
 		 *
-<<<<<<< HEAD
-		 * @param mixed $current_mod The value of the current theme modification.
-=======
 		 * @param mixed $current_mod The value of the active theme modification.
->>>>>>> main
 		 */
 		return apply_filters( "theme_mod_{$name}", $mods[ $name ] );
 	}
@@ -1176,11 +1034,7 @@ function get_theme_mod( $name, $default = false ) {
 }
 
 /**
-<<<<<<< HEAD
- * Updates theme modification value for the current theme.
-=======
  * Updates theme modification value for the active theme.
->>>>>>> main
  *
  * @since 2.1.0
  * @since 5.6.0 A return value was added.
@@ -1213,11 +1067,7 @@ function set_theme_mod( $name, $value ) {
 }
 
 /**
-<<<<<<< HEAD
- * Removes theme modification name from current theme list.
-=======
  * Removes theme modification name from active theme list.
->>>>>>> main
  *
  * If removing the name also removes all elements, then the entire option
  * will be removed.
@@ -1246,11 +1096,7 @@ function remove_theme_mod( $name ) {
 }
 
 /**
-<<<<<<< HEAD
- * Removes theme modifications option for current theme.
-=======
  * Removes theme modifications option for the active theme.
->>>>>>> main
  *
  * @since 2.1.0
  */
@@ -1557,11 +1403,7 @@ function header_image() {
 }
 
 /**
-<<<<<<< HEAD
- * Gets the header images uploaded for the current theme.
-=======
  * Gets the header images uploaded for the active theme.
->>>>>>> main
  *
  * @since 3.2.0
  *
@@ -2041,11 +1883,7 @@ function wp_custom_css_cb() {
  *
  * @since 4.7.0
  *
-<<<<<<< HEAD
- * @param string $stylesheet Optional. A theme object stylesheet name. Defaults to the current theme.
-=======
  * @param string $stylesheet Optional. A theme object stylesheet name. Defaults to the active theme.
->>>>>>> main
  * @return WP_Post|null The custom_css post or null if none exists.
  */
 function wp_get_custom_css_post( $stylesheet = '' ) {
@@ -2096,11 +1934,7 @@ function wp_get_custom_css_post( $stylesheet = '' ) {
  *
  * @since 4.7.0
  *
-<<<<<<< HEAD
- * @param string $stylesheet Optional. A theme object stylesheet name. Defaults to the current theme.
-=======
  * @param string $stylesheet Optional. A theme object stylesheet name. Defaults to the active theme.
->>>>>>> main
  * @return string The Custom CSS Post content.
  */
 function wp_get_custom_css( $stylesheet = '' ) {
@@ -2116,11 +1950,7 @@ function wp_get_custom_css( $stylesheet = '' ) {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Filters the Custom CSS Output into the <head>.
-=======
 	 * Filters the custom CSS output into the head element.
->>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -2146,11 +1976,7 @@ function wp_get_custom_css( $stylesheet = '' ) {
  *     @type string $preprocessed Optional. Pre-processed CSS, stored in `post_content_filtered`.
  *                                Normally empty string.
  *     @type string $stylesheet   Optional. Stylesheet (child theme) to update.
-<<<<<<< HEAD
- *                                Defaults to current theme/stylesheet.
-=======
  *                                Defaults to active theme/stylesheet.
->>>>>>> main
  * }
  * @return WP_Post|WP_Error Post on success, error on failure.
  */
@@ -2309,11 +2135,7 @@ function remove_editor_styles() {
  */
 function get_editor_stylesheets() {
 	$stylesheets = array();
-<<<<<<< HEAD
-	// Load editor_style.css if the current theme supports it.
-=======
 	// Load editor_style.css if the active theme supports it.
->>>>>>> main
 	if ( ! empty( $GLOBALS['editor_styles'] ) && is_array( $GLOBALS['editor_styles'] ) ) {
 		$editor_styles = $GLOBALS['editor_styles'];
 
@@ -2793,22 +2615,12 @@ function add_theme_support( $feature, ...$args ) {
 
 		case 'html5':
 			// You can't just pass 'html5', you need to pass an array of types.
-<<<<<<< HEAD
-			if ( empty( $args[0] ) ) {
-				// Build an array of types for back-compat.
-				$args = array( 0 => array( 'comment-list', 'comment-form', 'search-form' ) );
-			} elseif ( ! isset( $args[0] ) || ! is_array( $args[0] ) ) {
-=======
 			if ( empty( $args[0] ) || ! is_array( $args[0] ) ) {
->>>>>>> main
 				_doing_it_wrong(
 					"add_theme_support( 'html5' )",
 					__( 'You need to pass an array of types.' ),
 					'3.6.1'
 				);
-<<<<<<< HEAD
-				return false;
-=======
 
 				if ( ! empty( $args[0] ) && ! is_array( $args[0] ) ) {
 					return false;
@@ -2816,7 +2628,6 @@ function add_theme_support( $feature, ...$args ) {
 
 				// Build an array of types for back-compat.
 				$args = array( 0 => array( 'comment-list', 'comment-form', 'search-form' ) );
->>>>>>> main
 			}
 
 			// Calling 'html5' again merges, rather than overwrites.
@@ -3224,11 +3035,7 @@ function _remove_theme_support( $feature ) {
  * @param string $feature The feature being checked. See add_theme_support() for the list
  *                        of possible values.
  * @param mixed  ...$args Optional extra arguments to be checked against certain features.
-<<<<<<< HEAD
- * @return bool True if the current theme supports the feature, false otherwise.
-=======
  * @return bool True if the active theme supports the feature, false otherwise.
->>>>>>> main
  */
 function current_theme_supports( $feature, ...$args ) {
 	global $_wp_theme_features;
@@ -3241,16 +3048,10 @@ function current_theme_supports( $feature, ...$args ) {
 		return false;
 	}
 
-<<<<<<< HEAD
-	// If no args passed then no extra checks need be performed.
-	if ( ! $args ) {
-		return true;
-=======
 	// If no args passed then no extra checks need to be performed.
 	if ( ! $args ) {
 		/** This filter is documented in wp-includes/theme.php */
 		return apply_filters( "current_theme_supports-{$feature}", true, $args, $_wp_theme_features[ $feature ] ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
->>>>>>> main
 	}
 
 	switch ( $feature ) {
@@ -3285,22 +3086,14 @@ function current_theme_supports( $feature, ...$args ) {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Filters whether the current theme supports a specific feature.
-=======
 	 * Filters whether the active theme supports a specific feature.
->>>>>>> main
 	 *
 	 * The dynamic portion of the hook name, `$feature`, refers to the specific
 	 * theme feature. See add_theme_support() for the list of possible values.
 	 *
 	 * @since 3.4.0
 	 *
-<<<<<<< HEAD
-	 * @param bool   $supports Whether the current theme supports the given feature. Default true.
-=======
 	 * @param bool   $supports Whether the active theme supports the given feature. Default true.
->>>>>>> main
 	 * @param array  $args     Array of arguments for the feature.
 	 * @param string $feature  The theme feature.
 	 */
@@ -3315,11 +3108,7 @@ function current_theme_supports( $feature, ...$args ) {
  * @param string $feature The feature being checked. See add_theme_support() for the list
  *                        of possible values.
  * @param string $include Path to the file.
-<<<<<<< HEAD
- * @return bool True if the current theme supports the supplied feature, false otherwise.
-=======
  * @return bool True if the active theme supports the supplied feature, false otherwise.
->>>>>>> main
  */
 function require_if_theme_supports( $feature, $include ) {
 	if ( current_theme_supports( $feature ) ) {
@@ -3332,11 +3121,7 @@ function require_if_theme_supports( $feature, $include ) {
 /**
  * Registers a theme feature for use in add_theme_support().
  *
-<<<<<<< HEAD
- * This does not indicate that the current theme supports the feature, it only describes
-=======
  * This does not indicate that the active theme supports the feature, it only describes
->>>>>>> main
  * the feature's supported options.
  *
  * @since 5.5.0
@@ -3849,11 +3634,7 @@ function _wp_customize_loader_settings() {
  *
  * @since 3.4.0
  *
-<<<<<<< HEAD
- * @param string $stylesheet Optional. Theme to customize. Defaults to current theme.
-=======
  * @param string $stylesheet Optional. Theme to customize. Defaults to active theme.
->>>>>>> main
  *                           The theme's stylesheet will be urlencoded if necessary.
  * @return string
  */
@@ -4386,19 +4167,11 @@ function create_initial_theme_features() {
 }
 
 /**
-<<<<<<< HEAD
- * Returns whether the current theme is a block-based theme or not.
- *
- * @since 5.9.0
- *
- * @return boolean Whether the current theme is a block-based theme or not.
-=======
  * Returns whether the active theme is a block-based theme or not.
  *
  * @since 5.9.0
  *
  * @return boolean Whether the active theme is a block-based theme or not.
->>>>>>> main
  */
 function wp_is_block_theme() {
 	return wp_get_theme()->is_block_theme();

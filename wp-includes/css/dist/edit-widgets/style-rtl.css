@@ -447,8 +447,6 @@ body.is-fullscreen-mode .interface-interface-skeleton {
   max-height: 24px;
 }
 
-<<<<<<< HEAD
-=======
 @media (min-width: 600px) {
   .interface-preferences-modal {
     width: calc(100% - 32px);
@@ -538,7 +536,6 @@ body.is-fullscreen-mode .interface-interface-skeleton {
   color: #757575;
 }
 
->>>>>>> main
 .wp-block[data-type="core/widget-area"] {
   max-width: 700px;
   margin-right: auto;
@@ -558,10 +555,7 @@ body.is-fullscreen-mode .interface-interface-skeleton {
 }
 .wp-block[data-type="core/widget-area"] .block-list-appender.wp-block {
   width: initial;
-<<<<<<< HEAD
-=======
   position: relative;
->>>>>>> main
 }
 .wp-block[data-type="core/widget-area"] .editor-styles-wrapper .wp-block.wp-block.wp-block.wp-block.wp-block {
   max-width: 100%;
@@ -739,42 +733,6 @@ body.is-dragging-components-draggable .wp-block[data-type="core/widget-area"] .c
   margin: 0 0.2rem 0 0;
 }
 
-<<<<<<< HEAD
-.edit-widgets-more-menu {
-  margin-right: -4px;
-}
-.edit-widgets-more-menu .components-button {
-  width: auto;
-  padding: 0 2px;
-}
-@media (min-width: 600px) {
-  .edit-widgets-more-menu {
-    margin-right: 0;
-  }
-  .edit-widgets-more-menu .components-button {
-    padding: 0 4px;
-  }
-}
-
-.edit-widgets-more-menu__content .components-popover__content {
-  min-width: 280px;
-}
-@media (min-width: 480px) {
-  .edit-widgets-more-menu__content .components-popover__content {
-    width: auto;
-    max-width: 480px;
-  }
-}
-.edit-widgets-more-menu__content .components-popover__content .components-dropdown-menu__menu {
-  padding: 0;
-}
-
-.components-popover.edit-widgets-more-menu__content {
-  z-index: 99998;
-}
-
-=======
->>>>>>> main
 .components-panel__header.edit-widgets-sidebar__panel-tabs {
   justify-content: flex-start;
   padding-right: 0;
@@ -923,14 +881,6 @@ body.is-fullscreen-mode .edit-widgets-notices__snackbar {
   display: flex;
   justify-content: flex-end;
 }
-<<<<<<< HEAD
-@media (min-width: 782px) {
-  .edit-widgets-layout__inserter-panel-header {
-    display: none;
-  }
-}
-=======
->>>>>>> main
 
 .edit-widgets-layout__inserter-panel-content {
   height: calc(100% - 36px - 8px);

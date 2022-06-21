@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/page-list",
 	"title": "Page List",
@@ -11,12 +8,9 @@
 	"keywords": [ "menu", "navigation" ],
 	"textdomain": "default",
 	"attributes": {
-<<<<<<< HEAD
-=======
 		"__unstableMaxPages": {
 			"type": "number"
 		}
->>>>>>> main
 	},
 	"usesContext": [
 		"textColor",

@@ -262,37 +262,22 @@ function wp_nav_menu_taxonomy_meta_boxes() {
  * Check whether to disable the Menu Locations meta box submit button and inputs.
  *
  * @since 3.6.0
-<<<<<<< HEAD
- * @since 5.3.1 The `$echo` parameter was added.
-=======
  * @since 5.3.1 The `$display` parameter was added.
->>>>>>> main
  *
  * @global bool $one_theme_location_no_menus to determine if no menus exist
  *
  * @param int|string $nav_menu_selected_id ID, name, or slug of the currently selected menu.
-<<<<<<< HEAD
- * @param bool       $echo                 Whether to echo or just return the string.
- * @return string|false Disabled attribute if at least one menu exists, false if not.
- */
-function wp_nav_menu_disabled_check( $nav_menu_selected_id, $echo = true ) {
-=======
  * @param bool       $display              Whether to display or just return the string.
  * @return string|false Disabled attribute if at least one menu exists, false if not.
  */
 function wp_nav_menu_disabled_check( $nav_menu_selected_id, $display = true ) {
->>>>>>> main
 	global $one_theme_location_no_menus;
 
 	if ( $one_theme_location_no_menus ) {
 		return false;
 	}
 
-<<<<<<< HEAD
-	return disabled( $nav_menu_selected_id, 0, $echo );
-=======
 	return disabled( $nav_menu_selected_id, 0, $display );
->>>>>>> main
 }
 
 /**
@@ -340,11 +325,7 @@ function wp_nav_menu_item_link_meta_box() {
  * @global int        $_nav_menu_placeholder
  * @global int|string $nav_menu_selected_id
  *
-<<<<<<< HEAD
- * @param string $object Not used.
-=======
  * @param string $data_object Not used.
->>>>>>> main
  * @param array  $box {
  *     Post type menu item meta box arguments.
  *
@@ -354,11 +335,7 @@ function wp_nav_menu_item_link_meta_box() {
  *     @type WP_Post_Type $args     Extra meta box arguments (the post type object for this meta box).
  * }
  */
-<<<<<<< HEAD
-function wp_nav_menu_item_post_type_meta_box( $object, $box ) {
-=======
 function wp_nav_menu_item_post_type_meta_box( $data_object, $box ) {
->>>>>>> main
 	global $_nav_menu_placeholder, $nav_menu_selected_id;
 
 	$post_type_name = $box['args']->name;
@@ -712,11 +689,7 @@ function wp_nav_menu_item_post_type_meta_box( $data_object, $box ) {
  *
  * @global int|string $nav_menu_selected_id
  *
-<<<<<<< HEAD
- * @param string $object Not used.
-=======
  * @param string $data_object Not used.
->>>>>>> main
  * @param array  $box {
  *     Taxonomy menu item meta box arguments.
  *
@@ -726,11 +699,7 @@ function wp_nav_menu_item_post_type_meta_box( $data_object, $box ) {
  *     @type object   $args     Extra meta box arguments (the taxonomy object for this meta box).
  * }
  */
-<<<<<<< HEAD
-function wp_nav_menu_item_taxonomy_meta_box( $object, $box ) {
-=======
 function wp_nav_menu_item_taxonomy_meta_box( $data_object, $box ) {
->>>>>>> main
 	global $nav_menu_selected_id;
 
 	$taxonomy_name = $box['args']->name;
@@ -1020,16 +989,6 @@ function wp_save_nav_menu_items( $menu_id = 0, $menu_data = array() ) {
  *
  * @access private
  *
-<<<<<<< HEAD
- * @param object $object The post type or taxonomy meta-object.
- * @return object The post type or taxonomy object.
- */
-function _wp_nav_menu_meta_box_object( $object = null ) {
-	if ( isset( $object->name ) ) {
-
-		if ( 'page' === $object->name ) {
-			$object->_default_query = array(
-=======
  * @param object $data_object The post type or taxonomy meta-object.
  * @return object The post type or taxonomy object.
  */
@@ -1038,51 +997,32 @@ function _wp_nav_menu_meta_box_object( $data_object = null ) {
 
 		if ( 'page' === $data_object->name ) {
 			$data_object->_default_query = array(
->>>>>>> main
 				'orderby'     => 'menu_order title',
 				'post_status' => 'publish',
 			);
 
 			// Posts should show only published items.
-<<<<<<< HEAD
-		} elseif ( 'post' === $object->name ) {
-			$object->_default_query = array(
-=======
 		} elseif ( 'post' === $data_object->name ) {
 			$data_object->_default_query = array(
->>>>>>> main
 				'post_status' => 'publish',
 			);
 
 			// Categories should be in reverse chronological order.
-<<<<<<< HEAD
-		} elseif ( 'category' === $object->name ) {
-			$object->_default_query = array(
-=======
 		} elseif ( 'category' === $data_object->name ) {
 			$data_object->_default_query = array(
->>>>>>> main
 				'orderby' => 'id',
 				'order'   => 'DESC',
 			);
 
 			// Custom post types should show only published items.
 		} else {
-<<<<<<< HEAD
-			$object->_default_query = array(
-=======
 			$data_object->_default_query = array(
->>>>>>> main
 				'post_status' => 'publish',
 			);
 		}
 	}
 
-<<<<<<< HEAD
-	return $object;
-=======
 	return $data_object;
->>>>>>> main
 }
 
 /**

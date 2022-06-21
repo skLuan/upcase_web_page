@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/button",
 	"title": "Button",
@@ -63,15 +60,11 @@
 		"alignWide": false,
 		"color": {
 			"__experimentalSkipSerialization": true,
-<<<<<<< HEAD
-			"gradients": true
-=======
 			"gradients": true,
 			"__experimentalDefaultControls": {
 				"background": true,
 				"text": true
 			}
->>>>>>> main
 		},
 		"typography": {
 			"fontSize": true,
@@ -90,14 +83,10 @@
 		},
 		"__experimentalBorder": {
 			"radius": true,
-<<<<<<< HEAD
-			"__experimentalSkipSerialization": true
-=======
 			"__experimentalSkipSerialization": true,
 			"__experimentalDefaultControls": {
 				"radius": true
 			}
->>>>>>> main
 		},
 		"__experimentalSelector": ".wp-block-button__link"
 	},

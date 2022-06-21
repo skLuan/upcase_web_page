@@ -2,18 +2,12 @@
 /**
  * Object Cache API functions missing from 3rd party object caches.
  *
-<<<<<<< HEAD
- * @link https://codex.wordpress.org/Class_Reference/WP_Object_Cache
-=======
  * @link https://developer.wordpress.org/reference/classes/wp_object_cache/
->>>>>>> main
  *
  * @package WordPress
  * @subpackage Cache
  */
 
-<<<<<<< HEAD
-=======
 if ( ! function_exists( 'wp_cache_add_multiple' ) ) :
 	/**
 	 * Adds multiple values to the cache in one call, if the cache keys don't already exist.
@@ -74,7 +68,6 @@ if ( ! function_exists( 'wp_cache_set_multiple' ) ) :
 	}
 endif;
 
->>>>>>> main
 if ( ! function_exists( 'wp_cache_get_multiple' ) ) :
 	/**
 	 * Retrieves multiple values from the cache in one call.
@@ -90,12 +83,8 @@ if ( ! function_exists( 'wp_cache_get_multiple' ) ) :
 	 * @param string $group Optional. Where the cache contents are grouped. Default empty.
 	 * @param bool   $force Optional. Whether to force an update of the local cache
 	 *                      from the persistent cache. Default false.
-<<<<<<< HEAD
-	 * @return array Array of values organized into groups.
-=======
 	 * @return array Array of return values, grouped by key. Each value is either
 	 *               the cache contents on success, or false on failure.
->>>>>>> main
 	 */
 	function wp_cache_get_multiple( $keys, $group = '', $force = false ) {
 		$values = array();
@@ -107,8 +96,6 @@ if ( ! function_exists( 'wp_cache_get_multiple' ) ) :
 		return $values;
 	}
 endif;
-<<<<<<< HEAD
-=======
 
 if ( ! function_exists( 'wp_cache_delete_multiple' ) ) :
 	/**
@@ -154,4 +141,3 @@ if ( ! function_exists( 'wp_cache_flush_runtime' ) ) :
 		return wp_using_ext_object_cache() ? false : wp_cache_flush();
 	}
 endif;
->>>>>>> main

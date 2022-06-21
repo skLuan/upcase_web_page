@@ -40,11 +40,7 @@ final class WP_Recovery_Mode_Email_Service {
 	 * @since 5.2.0
 	 *
 	 * @param int   $rate_limit Number of seconds before another email can be sent.
-<<<<<<< HEAD
-	 * @param array $error      Error details from {@see error_get_last()}
-=======
 	 * @param array $error      Error details from `error_get_last()`.
->>>>>>> main
 	 * @param array $extension {
 	 *     The extension that caused the error.
 	 *
@@ -105,10 +101,6 @@ final class WP_Recovery_Mode_Email_Service {
 	 * @since 5.2.0
 	 *
 	 * @param int   $rate_limit Number of seconds before another email can be sent.
-<<<<<<< HEAD
-	 * @param array $error      Error details from {@see error_get_last()}
-	 * @param array $extension  Extension that caused the error.
-=======
 	 * @param array $error      Error details from `error_get_last()`.
 	 * @param array $extension {
 	 *     The extension that caused the error.
@@ -116,7 +108,6 @@ final class WP_Recovery_Mode_Email_Service {
 	 *     @type string $slug The extension slug. The directory of the plugin or theme.
 	 *     @type string $type The extension type. Either 'plugin' or 'theme'.
 	 * }
->>>>>>> main
 	 * @return bool Whether the email was sent successfully.
 	 */
 	private function send_recovery_mode_email( $rate_limit, $error, $extension ) {
@@ -270,16 +261,12 @@ When seeking help with this issue, you may be asked for some of the following in
 	 *
 	 * @since 5.2.0
 	 *
-<<<<<<< HEAD
-	 * @param array $extension The extension that caused the error.
-=======
 	 * @param array $extension {
 	 *     The extension that caused the error.
 	 *
 	 *     @type string $slug The extension slug. The directory of the plugin or theme.
 	 *     @type string $type The extension type. Either 'plugin' or 'theme'.
 	 * }
->>>>>>> main
 	 * @return string Message about which extension caused the error.
 	 */
 	private function get_cause( $extension ) {
@@ -311,16 +298,12 @@ When seeking help with this issue, you may be asked for some of the following in
 	 *
 	 * @since 5.3.0
 	 *
-<<<<<<< HEAD
-	 * @param array $extension The extension that caused the error.
-=======
 	 * @param array $extension {
 	 *     The extension that caused the error.
 	 *
 	 *     @type string $slug The extension slug. The directory of the plugin or theme.
 	 *     @type string $type The extension type. Either 'plugin' or 'theme'.
 	 * }
->>>>>>> main
 	 * @return array|false A plugin array {@see get_plugins()} or `false` if no plugin was found.
 	 */
 	private function get_plugin( $extension ) {
@@ -349,16 +332,12 @@ When seeking help with this issue, you may be asked for some of the following in
 	 *
 	 * @since 5.3.0
 	 *
-<<<<<<< HEAD
-	 * @param array $extension The extension that caused the error.
-=======
 	 * @param array $extension {
 	 *     The extension that caused the error.
 	 *
 	 *     @type string $slug The extension slug. The directory of the plugin or theme.
 	 *     @type string $type The extension type. Either 'plugin' or 'theme'.
 	 * }
->>>>>>> main
 	 * @return array An associative array of debug information.
 	 */
 	private function get_debug( $extension ) {
@@ -379,11 +358,7 @@ When seeking help with this issue, you may be asked for some of the following in
 			),
 			'theme' => sprintf(
 				/* translators: 1: Current active theme name. 2: Current active theme version. */
-<<<<<<< HEAD
-				__( 'Current theme: %1$s (version %2$s)' ),
-=======
 				__( 'Active theme: %1$s (version %2$s)' ),
->>>>>>> main
 				$theme->get( 'Name' ),
 				$theme->get( 'Version' )
 			),

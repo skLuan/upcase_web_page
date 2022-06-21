@@ -84,11 +84,6 @@ add_action( 'transition_post_status', '_update_posts_count_on_transition_post_st
 // Counts.
 add_action( 'admin_init', 'wp_schedule_update_network_counts' );
 add_action( 'update_network_counts', 'wp_update_network_counts', 10, 0 );
-<<<<<<< HEAD
-foreach ( array( 'user_register', 'deleted_user', 'wpmu_new_user', 'make_spam_user', 'make_ham_user' ) as $action ) {
-	add_action( $action, 'wp_maybe_update_network_user_counts', 10, 0 );
-}
-=======
 foreach ( array( 'wpmu_new_user', 'make_spam_user', 'make_ham_user' ) as $action ) {
 	add_action( $action, 'wp_maybe_update_network_user_counts', 10, 0 );
 }
@@ -97,7 +92,6 @@ foreach ( array( 'wpmu_new_user', 'make_spam_user', 'make_ham_user' ) as $action
 remove_action( 'admin_init', 'wp_schedule_update_user_counts' );
 remove_action( 'wp_update_user_counts', 'wp_schedule_update_user_counts' );
 
->>>>>>> main
 foreach ( array( 'make_spam_blog', 'make_ham_blog', 'archive_blog', 'unarchive_blog', 'make_delete_blog', 'make_undelete_blog' ) as $action ) {
 	add_action( $action, 'wp_maybe_update_network_site_counts', 10, 0 );
 }

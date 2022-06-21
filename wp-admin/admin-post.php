@@ -29,16 +29,12 @@ nocache_headers();
 /** This action is documented in wp-admin/admin.php */
 do_action( 'admin_init' );
 
-<<<<<<< HEAD
-$action = empty( $_REQUEST['action'] ) ? '' : $_REQUEST['action'];
-=======
 $action = ! empty( $_REQUEST['action'] ) ? $_REQUEST['action'] : '';
 
 // Reject invalid parameters.
 if ( ! is_scalar( $action ) ) {
 	wp_die( '', 400 );
 }
->>>>>>> main
 
 if ( ! is_user_logged_in() ) {
 	if ( empty( $action ) ) {
@@ -49,14 +45,11 @@ if ( ! is_user_logged_in() ) {
 		 */
 		do_action( 'admin_post_nopriv' );
 	} else {
-<<<<<<< HEAD
-=======
 		// If no action is registered, return a Bad Request response.
 		if ( ! has_action( "admin_post_nopriv_{$action}" ) ) {
 			wp_die( '', 400 );
 		}
 
->>>>>>> main
 		/**
 		 * Fires on a non-authenticated admin post request for the given action.
 		 *
@@ -76,14 +69,11 @@ if ( ! is_user_logged_in() ) {
 		 */
 		do_action( 'admin_post' );
 	} else {
-<<<<<<< HEAD
-=======
 		// If no action is registered, return a Bad Request response.
 		if ( ! has_action( "admin_post_{$action}" ) ) {
 			wp_die( '', 400 );
 		}
 
->>>>>>> main
 		/**
 		 * Fires on an authenticated admin post request for the given action.
 		 *

@@ -1019,12 +1019,8 @@ window.commentReply = {
 		}
 
 		setTimeout(function() {
-<<<<<<< HEAD
-			var rtop, rbottom, scrollTop, vp, scrollBottom;
-=======
 			var rtop, rbottom, scrollTop, vp, scrollBottom,
 				isComposing = false;
->>>>>>> main
 
 			rtop = $('#replyrow').offset().top;
 			rbottom = rtop + $('#replyrow').height();
@@ -1037,12 +1033,6 @@ window.commentReply = {
 			else if ( rtop - 20 < scrollTop )
 				window.scroll(0, rtop - 35);
 
-<<<<<<< HEAD
-			$('#replycontent').trigger( 'focus' ).on( 'keyup', function(e){
-				if ( e.which == 27 )
-					commentReply.revert(); // Close on Escape.
-			});
-=======
 			$( '#replycontent' )
 				.trigger( 'focus' )
 				.on( 'keyup', function( e ) {
@@ -1054,7 +1044,6 @@ window.commentReply = {
 				.on( 'compositionstart', function() {
 					isComposing = true;
 				} );
->>>>>>> main
 		}, 600);
 
 		return false;

@@ -271,10 +271,7 @@ a:active {
 
 a:focus,
 a:focus .media-icon img,
-<<<<<<< HEAD
-=======
 a:focus .plugin-icon,
->>>>>>> main
 .wp-person a:focus .gravatar {
 	color: #043959;
 	box-shadow:
@@ -793,11 +790,7 @@ img.emoji {
 /* @todo can we combine these into a class or use an existing dashicon one? */
 .welcome-panel .welcome-panel-close:before,
 .tagchecklist .ntdelbutton .remove-tag-icon:before,
-<<<<<<< HEAD
-#bulk-titles div a:before,
-=======
 #bulk-titles .ntdelbutton:before,
->>>>>>> main
 .notice-dismiss:before {
 	background: none;
 	color: #787c82;
@@ -816,13 +809,6 @@ img.emoji {
 	margin: 0;
 }
 
-<<<<<<< HEAD
-#bulk-titles div a:before {
-	margin: 1px 0;
-}
-
-=======
->>>>>>> main
 .tagchecklist .ntdelbutton .remove-tag-icon:before {
 	margin-right: 2px;
 	border-radius: 50%;
@@ -837,13 +823,8 @@ img.emoji {
 
 .tagchecklist .ntdelbutton:hover .remove-tag-icon:before,
 .tagchecklist .ntdelbutton:focus .remove-tag-icon:before,
-<<<<<<< HEAD
-#bulk-titles div a:hover:before,
-#bulk-titles div a:focus:before {
-=======
 #bulk-titles .ntdelbutton:hover:before,
 #bulk-titles .ntdelbutton:focus:before {
->>>>>>> main
 	color: #d63638;
 }
 
@@ -1854,10 +1835,7 @@ p.auto-update-status {
 
 .metabox-prefs .screen-options .screen-per-page {
 	margin-left: 15px;
-<<<<<<< HEAD
-=======
 	padding-left: 0;
->>>>>>> main
 }
 
 .metabox-prefs .screen-options label {
@@ -3173,10 +3151,6 @@ img {
 	font-family: Consolas, Monaco, monospace;
 	font-size: 13px;
 	background: #f6f7f7;
-<<<<<<< HEAD
-	-moz-tab-size: 4;
-=======
->>>>>>> main
 	-o-tab-size: 4;
 	tab-size: 4;
 }

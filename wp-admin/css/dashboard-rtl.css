@@ -121,42 +121,17 @@
 	position: relative;
 	overflow: auto;
 	margin: 16px 0;
-<<<<<<< HEAD
-	background: #2271b1 url(../images/about-texture.png) center repeat;
-	background-size: 500px 500px;
-	background-blend-mode: overlay;
-=======
 	background-color: #e7ebfd;
->>>>>>> main
 	font-size: 14px;
 	line-height: 1.3;
 	clear: both;
 }
 
-<<<<<<< HEAD
-.welcome-panel::before {
-	content: "";
-	position: absolute;
-	top: -16px;
-	left: 96px;
-	z-index: 0;
-	width: 300px;
-	height: 382px;
-	background: url(../images/about-header-about.svg) no-repeat center;
-	background-size: contain;
-}
-
-=======
->>>>>>> main
 .welcome-panel h2 {
 	margin: 0;
 	font-size: 48px;
 	font-weight: 600;
 	line-height: 1.25;
-<<<<<<< HEAD
-	color: #fff;
-=======
->>>>>>> main
 }
 
 .welcome-panel h3 {
@@ -172,13 +147,6 @@
 }
 
 .welcome-panel-header {
-<<<<<<< HEAD
-	color: #fff;
-}
-
-.welcome-panel-header a {
-	color: #fff;
-=======
 	--about-header-image-width: 521px;
 	--about-header-bg-width: calc(var(--about-header-image-width) * 0.55);
 	--about-header-bg-offset-inline: 2rem;
@@ -202,16 +170,11 @@
 
 .welcome-panel-header a {
 	color: inherit;
->>>>>>> main
 }
 
 .welcome-panel-header a:focus,
 .welcome-panel-header a:hover {
-<<<<<<< HEAD
-	color: #f5e6ab;
-=======
 	color: inherit;
->>>>>>> main
 	text-decoration: none;
 }
 
@@ -236,10 +199,7 @@
 	font-size: 13px;
 	line-height: 1.23076923; /* Chrome rounding, needs to be 16px equivalent */
 	text-decoration: none;
-<<<<<<< HEAD
-=======
 	z-index: 1; /* Raise above the version image. */
->>>>>>> main
 }
 
 .welcome-panel .welcome-panel-close:before {
@@ -249,30 +209,18 @@
 	transition: all .1s ease-in-out;
 	content: '\f335';
 	font-size: 24px;
-<<<<<<< HEAD
-	color: #fff;
-}
-
-.welcome-panel .welcome-panel-close {
-	color: #fff;
-=======
 	color: #1d2327;
 }
 
 .welcome-panel .welcome-panel-close {
 	color: #1d2327;
->>>>>>> main
 }
 
 .welcome-panel .welcome-panel-close:hover,
 .welcome-panel .welcome-panel-close:focus,
 .welcome-panel .welcome-panel-close:hover::before,
 .welcome-panel .welcome-panel-close:focus::before {
-<<<<<<< HEAD
-	color: #f5e6ab;
-=======
 	color: #2271b1;
->>>>>>> main
 }
 
 /* @deprecated 5.9.0 -- Button removed from panel. */
@@ -297,13 +245,8 @@
 	margin-left: auto;
 	max-width: 1500px;
 	width: 100%;
-<<<<<<< HEAD
-	/* 408px = 300px (balloon width) + 96px (offset from edge) + 16px (spacing). */
-	padding: 48px 48px 48px 408px;
-=======
 	padding: 48px 48px 80px 0;
 	padding-left: calc(var(--about-header-bg-width) + (var(--about-header-bg-offset-inline) * 2));
->>>>>>> main
 }
 
 .welcome-panel .welcome-panel-column-container {
@@ -312,10 +255,6 @@
 	clear: both;
 	display: grid;
 	z-index: 1;
-<<<<<<< HEAD
-	margin-top: 32px;
-=======
->>>>>>> main
 	padding: 48px;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 32px;
@@ -1418,17 +1357,6 @@ a.rsswidget {
 }
 
 @media screen and (max-width: 782px) {
-<<<<<<< HEAD
-	.welcome-panel::before {
-		width: 240px;
-		height: 305px;
-		left: 32px;
-	}
-
-	.welcome-panel-header {
-		/* 288px = 240px (balloon width) + 32px (offset from edge) + 16px (spacing). */
-		padding: 32px 32px 32px 288px;
-=======
 	.welcome-panel-header {
 		--about-header-bg-width: calc(var(--about-header-image-width) * 0.4);
 		--about-header-bg-offset-inline: 1rem;
@@ -1436,7 +1364,6 @@ a.rsswidget {
 
 	.welcome-panel-header-image {
 		top: 2rem;
->>>>>>> main
 	}
 
 	.welcome-panel .welcome-panel-column-container {
@@ -1509,21 +1436,12 @@ a.rsswidget {
 
 /* Smartphone */
 @media screen and (max-width: 600px) {
-<<<<<<< HEAD
-	.welcome-panel::before {
-		display: none;
-	}
-
-	.welcome-panel-header {
-		padding: 32px;
-=======
 	.welcome-panel-header {
 		padding: 32px 32px 64px;
 	}
 
 	.welcome-panel-header-image {
 		display: none;
->>>>>>> main
 	}
 }
 

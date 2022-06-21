@@ -93,11 +93,7 @@ class WP_Comment_Query {
 	 * List of comments located by the query.
 	 *
 	 * @since 4.0.0
-<<<<<<< HEAD
-	 * @var array
-=======
 	 * @var int[]|WP_Comment[]
->>>>>>> main
 	 */
 	public $comments;
 
@@ -378,11 +374,7 @@ class WP_Comment_Query {
 	 *
 	 * @global wpdb $wpdb WordPress database abstraction object.
 	 *
-<<<<<<< HEAD
-	 * @return int|array List of comments or number of found comments if `$count` argument is true.
-=======
 	 * @return int|int[]|WP_Comment[] List of comments or number of found comments if `$count` argument is true.
->>>>>>> main
 	 */
 	public function get_comments() {
 		global $wpdb;
@@ -452,17 +444,10 @@ class WP_Comment_Query {
 
 		/*
 		 * Only use the args defined in the query_var_defaults to compute the key,
-<<<<<<< HEAD
-		 * but ignore 'fields', which does not affect query results.
-		 */
-		$_args = wp_array_slice_assoc( $this->query_vars, array_keys( $this->query_var_defaults ) );
-		unset( $_args['fields'] );
-=======
 		 * but ignore 'fields', 'update_comment_meta_cache', 'update_comment_post_cache' which does not affect query results.
 		 */
 		$_args = wp_array_slice_assoc( $this->query_vars, array_keys( $this->query_var_defaults ) );
 		unset( $_args['fields'], $_args['update_comment_meta_cache'], $_args['update_comment_post_cache'] );
->>>>>>> main
 
 		$key          = md5( serialize( $_args ) );
 		$last_changed = wp_cache_get_last_changed( 'comment' );
@@ -610,11 +595,7 @@ class WP_Comment_Query {
 					// Otherwise we match against email addresses.
 					if ( ! empty( $_GET['unapproved'] ) && ! empty( $_GET['moderation-hash'] ) ) {
 						// Only include requested comment.
-<<<<<<< HEAD
-						$approved_clauses[] = $wpdb->prepare( "( comment_author_email = %s AND comment_approved = '0' AND comment_ID = %d )", $unapproved_identifier, (int) $_GET['unapproved'] );
-=======
 						$approved_clauses[] = $wpdb->prepare( "( comment_author_email = %s AND comment_approved = '0' AND {$wpdb->comments}.comment_ID = %d )", $unapproved_identifier, (int) $_GET['unapproved'] );
->>>>>>> main
 					} else {
 						// Include all of the author's unapproved comments.
 						$approved_clauses[] = $wpdb->prepare( "( comment_author_email = %s AND comment_approved = '0' )", $unapproved_identifier );
@@ -936,28 +917,17 @@ class WP_Comment_Query {
 
 		$where = implode( ' AND ', $this->sql_clauses['where'] );
 
-<<<<<<< HEAD
-		$pieces = array( 'fields', 'join', 'where', 'orderby', 'limits', 'groupby' );
-=======
 		$clauses = array( 'fields', 'join', 'where', 'orderby', 'limits', 'groupby' );
 
->>>>>>> main
 		/**
 		 * Filters the comment query clauses.
 		 *
 		 * @since 3.1.0
 		 *
-<<<<<<< HEAD
-		 * @param string[]         $pieces An associative array of comment query clauses.
-		 * @param WP_Comment_Query $query  Current instance of WP_Comment_Query (passed by reference).
-		 */
-		$clauses = apply_filters_ref_array( 'comments_clauses', array( compact( $pieces ), &$this ) );
-=======
 		 * @param string[]         $clauses An associative array of comment query clauses.
 		 * @param WP_Comment_Query $query   Current instance of WP_Comment_Query (passed by reference).
 		 */
 		$clauses = apply_filters_ref_array( 'comments_clauses', array( compact( $clauses ), &$this ) );
->>>>>>> main
 
 		$fields  = isset( $clauses['fields'] ) ? $clauses['fields'] : '';
 		$join    = isset( $clauses['join'] ) ? $clauses['join'] : '';
@@ -991,9 +961,6 @@ class WP_Comment_Query {
 		$this->sql_clauses['orderby'] = $orderby;
 		$this->sql_clauses['limits']  = $limits;
 
-<<<<<<< HEAD
-		$this->request = "{$this->sql_clauses['select']} {$this->sql_clauses['from']} {$where} {$this->sql_clauses['groupby']} {$this->sql_clauses['orderby']} {$this->sql_clauses['limits']}";
-=======
 		$this->request = "
 			{$this->sql_clauses['select']}
 			{$this->sql_clauses['from']}
@@ -1002,7 +969,6 @@ class WP_Comment_Query {
 			{$this->sql_clauses['orderby']}
 			{$this->sql_clauses['limits']}
 		";
->>>>>>> main
 
 		if ( $this->query_vars['count'] ) {
 			return (int) $wpdb->get_var( $this->request );
@@ -1100,19 +1066,12 @@ class WP_Comment_Query {
 					$child_ids[]                                    = $level_comment->comment_ID;
 				}
 
-<<<<<<< HEAD
-				foreach ( $parent_map as $parent_id => $children ) {
-					$cache_key = "get_comment_child_ids:$parent_id:$key:$last_changed";
-					wp_cache_set( $cache_key, $children, 'comment' );
-				}
-=======
 				$data = array();
 				foreach ( $parent_map as $parent_id => $children ) {
 					$cache_key          = "get_comment_child_ids:$parent_id:$key:$last_changed";
 					$data[ $cache_key ] = $children;
 				}
 				wp_cache_set_multiple( $data, 'comment' );
->>>>>>> main
 			}
 
 			$level++;
@@ -1167,30 +1126,12 @@ class WP_Comment_Query {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Used internally to generate an SQL string for searching across multiple columns
-=======
 	 * Used internally to generate an SQL string for searching across multiple columns.
->>>>>>> main
 	 *
 	 * @since 3.1.0
 	 *
 	 * @global wpdb $wpdb WordPress database abstraction object.
 	 *
-<<<<<<< HEAD
-	 * @param string $string
-	 * @param array  $cols
-	 * @return string
-	 */
-	protected function get_search_sql( $string, $cols ) {
-		global $wpdb;
-
-		$like = '%' . $wpdb->esc_like( $string ) . '%';
-
-		$searches = array();
-		foreach ( $cols as $col ) {
-			$searches[] = $wpdb->prepare( "$col LIKE %s", $like );
-=======
 	 * @param string   $search  Search string.
 	 * @param string[] $columns Array of columns to search.
 	 * @return string Search SQL.
@@ -1203,7 +1144,6 @@ class WP_Comment_Query {
 		$searches = array();
 		foreach ( $columns as $column ) {
 			$searches[] = $wpdb->prepare( "$column LIKE %s", $like );
->>>>>>> main
 		}
 
 		return ' AND (' . implode( ' OR ', $searches ) . ')';

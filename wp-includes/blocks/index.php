@@ -7,13 +7,6 @@
 
 // Include files required for core blocks registration.
 require ABSPATH . WPINC . '/blocks/archives.php';
-<<<<<<< HEAD
-require ABSPATH . WPINC . '/blocks/block.php';
-require ABSPATH . WPINC . '/blocks/calendar.php';
-require ABSPATH . WPINC . '/blocks/categories.php';
-require ABSPATH . WPINC . '/blocks/file.php';
-require ABSPATH . WPINC . '/blocks/gallery.php';
-=======
 require ABSPATH . WPINC . '/blocks/avatar.php';
 require ABSPATH . WPINC . '/blocks/block.php';
 require ABSPATH . WPINC . '/blocks/calendar.php';
@@ -33,7 +26,6 @@ require ABSPATH . WPINC . '/blocks/cover.php';
 require ABSPATH . WPINC . '/blocks/file.php';
 require ABSPATH . WPINC . '/blocks/gallery.php';
 require ABSPATH . WPINC . '/blocks/home-link.php';
->>>>>>> main
 require ABSPATH . WPINC . '/blocks/image.php';
 require ABSPATH . WPINC . '/blocks/latest-comments.php';
 require ABSPATH . WPINC . '/blocks/latest-posts.php';
@@ -44,15 +36,10 @@ require ABSPATH . WPINC . '/blocks/navigation-submenu.php';
 require ABSPATH . WPINC . '/blocks/navigation.php';
 require ABSPATH . WPINC . '/blocks/page-list.php';
 require ABSPATH . WPINC . '/blocks/pattern.php';
-<<<<<<< HEAD
-require ABSPATH . WPINC . '/blocks/post-author.php';
-require ABSPATH . WPINC . '/blocks/post-comments.php';
-=======
 require ABSPATH . WPINC . '/blocks/post-author-biography.php';
 require ABSPATH . WPINC . '/blocks/post-author.php';
 require ABSPATH . WPINC . '/blocks/post-comments.php';
 require ABSPATH . WPINC . '/blocks/post-comments-form.php';
->>>>>>> main
 require ABSPATH . WPINC . '/blocks/post-content.php';
 require ABSPATH . WPINC . '/blocks/post-date.php';
 require ABSPATH . WPINC . '/blocks/post-excerpt.php';
@@ -61,20 +48,14 @@ require ABSPATH . WPINC . '/blocks/post-navigation-link.php';
 require ABSPATH . WPINC . '/blocks/post-template.php';
 require ABSPATH . WPINC . '/blocks/post-terms.php';
 require ABSPATH . WPINC . '/blocks/post-title.php';
-<<<<<<< HEAD
-=======
 require ABSPATH . WPINC . '/blocks/query-no-results.php';
->>>>>>> main
 require ABSPATH . WPINC . '/blocks/query-pagination-next.php';
 require ABSPATH . WPINC . '/blocks/query-pagination-numbers.php';
 require ABSPATH . WPINC . '/blocks/query-pagination-previous.php';
 require ABSPATH . WPINC . '/blocks/query-pagination.php';
 require ABSPATH . WPINC . '/blocks/query-title.php';
 require ABSPATH . WPINC . '/blocks/query.php';
-<<<<<<< HEAD
-=======
 require ABSPATH . WPINC . '/blocks/read-more.php';
->>>>>>> main
 require ABSPATH . WPINC . '/blocks/rss.php';
 require ABSPATH . WPINC . '/blocks/search.php';
 require ABSPATH . WPINC . '/blocks/shortcode.php';
@@ -101,10 +82,6 @@ function register_core_block_types_from_metadata() {
 		'code',
 		'column',
 		'columns',
-<<<<<<< HEAD
-		'cover',
-=======
->>>>>>> main
 		'embed',
 		'freeform',
 		'group',

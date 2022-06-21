@@ -242,13 +242,8 @@ class WP_Network_Query {
 		// $args can include anything. Only use the args defined in the query_var_defaults to compute the key.
 		$_args = wp_array_slice_assoc( $this->query_vars, array_keys( $this->query_var_defaults ) );
 
-<<<<<<< HEAD
-		// Ignore the $fields argument as the queried result will be the same regardless.
-		unset( $_args['fields'] );
-=======
 		// Ignore the $fields, $update_network_cache arguments as the queried result will be the same regardless.
 		unset( $_args['fields'], $_args['update_network_cache'] );
->>>>>>> main
 
 		$key          = md5( serialize( $_args ) );
 		$last_changed = wp_cache_get_last_changed( 'networks' );
@@ -443,28 +438,17 @@ class WP_Network_Query {
 
 		$groupby = '';
 
-<<<<<<< HEAD
-		$pieces = array( 'fields', 'join', 'where', 'orderby', 'limits', 'groupby' );
-=======
 		$clauses = array( 'fields', 'join', 'where', 'orderby', 'limits', 'groupby' );
->>>>>>> main
 
 		/**
 		 * Filters the network query clauses.
 		 *
 		 * @since 4.6.0
 		 *
-<<<<<<< HEAD
-		 * @param string[]         $pieces An associative array of network query clauses.
-		 * @param WP_Network_Query $query  Current instance of WP_Network_Query (passed by reference).
-		 */
-		$clauses = apply_filters_ref_array( 'networks_clauses', array( compact( $pieces ), &$this ) );
-=======
 		 * @param string[]         $clauses An associative array of network query clauses.
 		 * @param WP_Network_Query $query   Current instance of WP_Network_Query (passed by reference).
 		 */
 		$clauses = apply_filters_ref_array( 'networks_clauses', array( compact( $clauses ), &$this ) );
->>>>>>> main
 
 		$fields  = isset( $clauses['fields'] ) ? $clauses['fields'] : '';
 		$join    = isset( $clauses['join'] ) ? $clauses['join'] : '';
@@ -496,9 +480,6 @@ class WP_Network_Query {
 		$this->sql_clauses['orderby'] = $orderby;
 		$this->sql_clauses['limits']  = $limits;
 
-<<<<<<< HEAD
-		$this->request = "{$this->sql_clauses['select']} {$this->sql_clauses['from']} {$where} {$this->sql_clauses['groupby']} {$this->sql_clauses['orderby']} {$this->sql_clauses['limits']}";
-=======
 		$this->request = "
 			{$this->sql_clauses['select']}
 			{$this->sql_clauses['from']}
@@ -507,7 +488,6 @@ class WP_Network_Query {
 			{$this->sql_clauses['orderby']}
 			{$this->sql_clauses['limits']}
 		";
->>>>>>> main
 
 		if ( $this->query_vars['count'] ) {
 			return (int) $wpdb->get_var( $this->request );
@@ -551,16 +531,6 @@ class WP_Network_Query {
 	 *
 	 * @global wpdb $wpdb WordPress database abstraction object.
 	 *
-<<<<<<< HEAD
-	 * @param string   $string  Search string.
-	 * @param string[] $columns Array of columns to search.
-	 * @return string Search SQL.
-	 */
-	protected function get_search_sql( $string, $columns ) {
-		global $wpdb;
-
-		$like = '%' . $wpdb->esc_like( $string ) . '%';
-=======
 	 * @param string   $search  Search string.
 	 * @param string[] $columns Array of columns to search.
 	 * @return string Search SQL.
@@ -569,7 +539,6 @@ class WP_Network_Query {
 		global $wpdb;
 
 		$like = '%' . $wpdb->esc_like( $search ) . '%';
->>>>>>> main
 
 		$searches = array();
 		foreach ( $columns as $column ) {

@@ -50,11 +50,7 @@ function wp_get_nav_menu_object( $menu ) {
 }
 
 /**
-<<<<<<< HEAD
- * Check if the given ID is a navigation menu.
-=======
  * Determines whether the given ID is a navigation menu.
->>>>>>> main
  *
  * Returns true if it is; false otherwise.
  *
@@ -259,11 +255,7 @@ function wp_create_nav_menu( $menu_name ) {
 }
 
 /**
-<<<<<<< HEAD
- * Delete a Navigation Menu.
-=======
  * Deletes a navigation menu.
->>>>>>> main
  *
  * @since 3.0.0
  *
@@ -310,11 +302,7 @@ function wp_delete_nav_menu( $menu ) {
 }
 
 /**
-<<<<<<< HEAD
- * Save the properties of a menu or create a new menu with those properties.
-=======
  * Saves the properties of a menu or create a new menu with those properties.
->>>>>>> main
  *
  * Note that `$menu_data` is expected to be pre-slashed.
  *
@@ -416,11 +404,7 @@ function wp_update_nav_menu_object( $menu_id = 0, $menu_data = array() ) {
 }
 
 /**
-<<<<<<< HEAD
- * Save the properties of a menu item or create a new one.
-=======
  * Saves the properties of a menu item or create a new one.
->>>>>>> main
  *
  * The menu-item-title, menu-item-description and menu-item-attr-title are expected
  * to be pre-slashed since they are passed directly to APIs that expect slashed data.
@@ -657,11 +641,7 @@ function wp_get_nav_menus( $args = array() ) {
 }
 
 /**
-<<<<<<< HEAD
- * Return if a menu item is valid.
-=======
  * Determines whether a menu item is valid.
->>>>>>> main
  *
  * @link https://core.trac.wordpress.org/ticket/13958
  *
@@ -713,20 +693,11 @@ function wp_get_nav_menu_items( $menu, $args = array() ) {
 
 	static $fetched = array();
 
-<<<<<<< HEAD
-	$items = get_objects_in_term( $menu->term_id, 'nav_menu' );
-	if ( is_wp_error( $items ) ) {
-		return false;
-	}
-
-	$defaults        = array(
-=======
 	if ( ! taxonomy_exists( 'nav_menu' ) ) {
 		return false;
 	}
 
 	$defaults = array(
->>>>>>> main
 		'order'       => 'ASC',
 		'orderby'     => 'menu_order',
 		'post_type'   => 'nav_menu_item',
@@ -734,13 +705,6 @@ function wp_get_nav_menu_items( $menu, $args = array() ) {
 		'output'      => ARRAY_A,
 		'output_key'  => 'menu_order',
 		'nopaging'    => true,
-<<<<<<< HEAD
-	);
-	$args            = wp_parse_args( $args, $defaults );
-	$args['include'] = $items;
-
-	if ( ! empty( $items ) ) {
-=======
 		'tax_query'   => array(
 			array(
 				'taxonomy' => 'nav_menu',
@@ -751,57 +715,11 @@ function wp_get_nav_menu_items( $menu, $args = array() ) {
 	);
 	$args     = wp_parse_args( $args, $defaults );
 	if ( $menu->count > 0 ) {
->>>>>>> main
 		$items = get_posts( $args );
 	} else {
 		$items = array();
 	}
 
-<<<<<<< HEAD
-	// Get all posts and terms at once to prime the caches.
-	if ( empty( $fetched[ $menu->term_id ] ) && ! wp_using_ext_object_cache() ) {
-		$fetched[ $menu->term_id ] = true;
-		$posts                     = array();
-		$terms                     = array();
-		foreach ( $items as $item ) {
-			$object_id = get_post_meta( $item->ID, '_menu_item_object_id', true );
-			$object    = get_post_meta( $item->ID, '_menu_item_object', true );
-			$type      = get_post_meta( $item->ID, '_menu_item_type', true );
-
-			if ( 'post_type' === $type ) {
-				$posts[ $object ][] = $object_id;
-			} elseif ( 'taxonomy' === $type ) {
-				$terms[ $object ][] = $object_id;
-			}
-		}
-
-		if ( ! empty( $posts ) ) {
-			foreach ( array_keys( $posts ) as $post_type ) {
-				get_posts(
-					array(
-						'post__in'               => $posts[ $post_type ],
-						'post_type'              => $post_type,
-						'nopaging'               => true,
-						'update_post_term_cache' => false,
-					)
-				);
-			}
-		}
-		unset( $posts );
-
-		if ( ! empty( $terms ) ) {
-			foreach ( array_keys( $terms ) as $taxonomy ) {
-				get_terms(
-					array(
-						'taxonomy'     => $taxonomy,
-						'include'      => $terms[ $taxonomy ],
-						'hierarchical' => false,
-					)
-				);
-			}
-		}
-		unset( $terms );
-=======
 	// Prime posts and terms caches.
 	if ( empty( $fetched[ $menu->term_id ] ) ) {
 		$fetched[ $menu->term_id ] = true;
@@ -827,7 +745,6 @@ function wp_get_nav_menu_items( $menu, $args = array() ) {
 			_prime_term_caches( $term_ids );
 		}
 		unset( $term_ids );
->>>>>>> main
 	}
 
 	$items = array_map( 'wp_setup_nav_menu_item', $items );
@@ -1071,11 +988,7 @@ function wp_setup_nav_menu_item( $menu_item ) {
 }
 
 /**
-<<<<<<< HEAD
- * Get the menu items associated with a particular object.
-=======
  * Returns the menu items associated with a particular object.
->>>>>>> main
  *
  * @since 3.0.0
  *
@@ -1207,11 +1120,7 @@ function _wp_auto_add_pages_to_menu( $new_status, $old_status, $post ) {
 }
 
 /**
-<<<<<<< HEAD
- * Delete auto-draft posts associated with the supplied changeset.
-=======
  * Deletes auto-draft posts associated with the supplied changeset.
->>>>>>> main
  *
  * @since 4.8.0
  * @access private
@@ -1245,11 +1154,7 @@ function _wp_delete_customize_changeset_dependent_auto_drafts( $post_id ) {
 }
 
 /**
-<<<<<<< HEAD
- * Handle menu config after theme change.
-=======
  * Handles menu config after theme change.
->>>>>>> main
  *
  * @access private
  * @since 4.9.0

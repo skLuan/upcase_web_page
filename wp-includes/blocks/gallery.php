@@ -33,11 +33,6 @@ function block_core_gallery_data_id_backcompatibility( $parsed_block ) {
 add_filter( 'render_block_data', 'block_core_gallery_data_id_backcompatibility' );
 
 /**
-<<<<<<< HEAD
- * Registers the `core/gallery` block on server.
- * This render callback needs to be here
- * so that the gallery styles are loaded in block-based themes.
-=======
  * Adds a style tag for the --wp--style--unstable-gallery-gap var.
  *
  * The Gallery block needs to recalculate Image block width based on
@@ -97,19 +92,12 @@ function block_core_gallery_render( $attributes, $content ) {
 }
 /**
  * Registers the `core/gallery` block on server.
->>>>>>> main
  */
 function register_block_core_gallery() {
 	register_block_type_from_metadata(
 		__DIR__ . '/gallery',
 		array(
-<<<<<<< HEAD
-			'render_callback' => function ( $attributes, $content ) {
-				return $content;
-			},
-=======
 			'render_callback' => 'block_core_gallery_render',
->>>>>>> main
 		)
 	);
 }

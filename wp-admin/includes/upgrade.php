@@ -31,11 +31,7 @@ if ( ! function_exists( 'wp_install' ) ) :
 	 * @param string $blog_title    Site title.
 	 * @param string $user_name     User's username.
 	 * @param string $user_email    User's email.
-<<<<<<< HEAD
-	 * @param bool   $public        Whether site is public.
-=======
 	 * @param bool   $is_public     Whether the site is public.
->>>>>>> main
 	 * @param string $deprecated    Optional. Not used.
 	 * @param string $user_password Optional. User's chosen password. Default empty (random password).
 	 * @param string $language      Optional. Language chosen. Default empty.
@@ -48,11 +44,7 @@ if ( ! function_exists( 'wp_install' ) ) :
 	 *     @type string $password_message The explanatory message regarding the password.
 	 * }
 	 */
-<<<<<<< HEAD
-	function wp_install( $blog_title, $user_name, $user_email, $public, $deprecated = '', $user_password = '', $language = '' ) {
-=======
 	function wp_install( $blog_title, $user_name, $user_email, $is_public, $deprecated = '', $user_password = '', $language = '' ) {
->>>>>>> main
 		if ( ! empty( $deprecated ) ) {
 			_deprecated_argument( __FUNCTION__, '2.6.0' );
 		}
@@ -65,11 +57,7 @@ if ( ! function_exists( 'wp_install' ) ) :
 
 		update_option( 'blogname', $blog_title );
 		update_option( 'admin_email', $user_email );
-<<<<<<< HEAD
-		update_option( 'blog_public', $public );
-=======
 		update_option( 'blog_public', $is_public );
->>>>>>> main
 
 		// Freshness of site - in the future, this could get more specific about actions taken, perhaps.
 		update_option( 'fresh_site', 1 );
@@ -83,11 +71,7 @@ if ( ! function_exists( 'wp_install' ) ) :
 		update_option( 'siteurl', $guessurl );
 
 		// If not a public site, don't ping.
-<<<<<<< HEAD
-		if ( ! $public ) {
-=======
 		if ( ! $is_public ) {
->>>>>>> main
 			update_option( 'default_pingback_flag', 0 );
 		}
 
@@ -288,13 +272,6 @@ if ( ! function_exists( 'wp_install_defaults' ) ) :
 
 		$first_comment_author = ! empty( $first_comment_author ) ? $first_comment_author : __( 'A WordPress Commenter' );
 		$first_comment_email  = ! empty( $first_comment_email ) ? $first_comment_email : 'wapuu@wordpress.example';
-<<<<<<< HEAD
-		$first_comment_url    = ! empty( $first_comment_url ) ? $first_comment_url : 'https://wordpress.org/';
-		$first_comment        = ! empty( $first_comment ) ? $first_comment : __(
-			'Hi, this is a comment.
-To get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.
-Commenter avatars come from <a href="https://gravatar.com">Gravatar</a>.'
-=======
 		$first_comment_url    = ! empty( $first_comment_url ) ? $first_comment_url : esc_url( __( 'https://wordpress.org/' ) );
 		$first_comment        = ! empty( $first_comment ) ? $first_comment : sprintf(
 			/* translators: %s: Gravatar URL. */
@@ -304,7 +281,6 @@ To get started with moderating, editing, and deleting comments, please visit the
 Commenter avatars come from <a href="%s">Gravatar</a>.'
 			),
 			esc_url( __( 'https://en.gravatar.com/' ) )
->>>>>>> main
 		);
 		$wpdb->insert(
 			$wpdb->comments,
@@ -869,13 +845,10 @@ function upgrade_all() {
 		upgrade_590();
 	}
 
-<<<<<<< HEAD
-=======
 	if ( $wp_current_db_version < 53011 ) {
 		upgrade_600();
 	}
 
->>>>>>> main
 	maybe_disable_link_manager();
 
 	maybe_disable_automattic_widgets();
@@ -2314,8 +2287,6 @@ function upgrade_590() {
 }
 
 /**
-<<<<<<< HEAD
-=======
  * Executes changes made in WordPress 6.0.0.
  *
  * @ignore
@@ -2332,7 +2303,6 @@ function upgrade_600() {
 }
 
 /**
->>>>>>> main
  * Executes network-level upgrade routines.
  *
  * @since 3.0.0

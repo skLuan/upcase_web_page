@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-=======
 	"$schema": "https://schemas.wp.org/trunk/block.json",
->>>>>>> main
 	"apiVersion": 2,
 	"name": "core/tag-cloud",
 	"title": "Tag Cloud",
@@ -23,10 +20,6 @@
 		"showTagCounts": {
 			"type": "boolean",
 			"default": false
-<<<<<<< HEAD
-		}
-	},
-=======
 		},
 		"smallestFontSize": {
 			"type": "string",
@@ -41,7 +34,6 @@
 		{ "name": "default", "label": "Default", "isDefault": true },
 		{ "name": "outline", "label": "Outline" }
 	],
->>>>>>> main
 	"supports": {
 		"html": false,
 		"align": true

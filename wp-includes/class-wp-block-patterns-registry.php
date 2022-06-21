@@ -17,17 +17,11 @@ final class WP_Block_Patterns_Registry {
 	 * Registered block patterns array.
 	 *
 	 * @since 5.5.0
-<<<<<<< HEAD
-	 * @var array
-=======
 	 * @var array[]
->>>>>>> main
 	 */
 	private $registered_patterns = array();
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Patterns registered outside the `init` action.
 	 *
 	 * @since 6.0.0
@@ -36,7 +30,6 @@ final class WP_Block_Patterns_Registry {
 	private $registered_patterns_outside_init = array();
 
 	/**
->>>>>>> main
 	 * Container for the main instance of the class.
 	 *
 	 * @since 5.5.0
@@ -48,10 +41,7 @@ final class WP_Block_Patterns_Registry {
 	 * Registers a block pattern.
 	 *
 	 * @since 5.5.0
-<<<<<<< HEAD
-=======
 	 * @since 5.8.0 Added support for the `blockTypes` property.
->>>>>>> main
 	 *
 	 * @param string $pattern_name       Block pattern name including namespace.
 	 * @param array  $pattern_properties {
@@ -70,8 +60,6 @@ final class WP_Block_Patterns_Registry {
 	 *                                 patterns. Block patterns can be shown on multiple categories.
 	 *                                 A category must be registered separately in order to be used
 	 *                                 here.
-<<<<<<< HEAD
-=======
 	 *     @type array  $blockTypes    Optional. A list of block names including namespace that could use
 	 *                                 the block pattern in certain contexts (placeholder, transforms).
 	 *                                 The block pattern is available in the block editor inserter
@@ -79,7 +67,6 @@ final class WP_Block_Patterns_Registry {
 	 *                                 Certain blocks support further specificity besides the block name
 	 *                                 (e.g. for `core/template-part` you can specify areas
 	 *                                 like `core/template-part/header` or `core/template-part/footer`).
->>>>>>> main
 	 *     @type array  $keywords      Optional. A list of aliases or keywords that help users discover the
 	 *                                 pattern while searching.
 	 * }
@@ -113,12 +100,6 @@ final class WP_Block_Patterns_Registry {
 			return false;
 		}
 
-<<<<<<< HEAD
-		$this->registered_patterns[ $pattern_name ] = array_merge(
-			$pattern_properties,
-			array( 'name' => $pattern_name )
-		);
-=======
 		$pattern = array_merge(
 			$pattern_properties,
 			array( 'name' => $pattern_name )
@@ -131,7 +112,6 @@ final class WP_Block_Patterns_Registry {
 		if ( current_action() && 'init' !== current_action() ) {
 			$this->registered_patterns_outside_init[ $pattern_name ] = $pattern;
 		}
->>>>>>> main
 
 		return true;
 	}
@@ -156,10 +136,7 @@ final class WP_Block_Patterns_Registry {
 		}
 
 		unset( $this->registered_patterns[ $pattern_name ] );
-<<<<<<< HEAD
-=======
 		unset( $this->registered_patterns_outside_init[ $pattern_name ] );
->>>>>>> main
 
 		return true;
 	}
@@ -185,13 +162,6 @@ final class WP_Block_Patterns_Registry {
 	 *
 	 * @since 5.5.0
 	 *
-<<<<<<< HEAD
-	 * @return array Array of arrays containing the registered block patterns properties,
-	 *               and per style.
-	 */
-	public function get_all_registered() {
-		return array_values( $this->registered_patterns );
-=======
 	 * @param bool $outside_init_only Return only patterns registered outside the `init` action.
 	 * @return array[] Array of arrays containing the registered block patterns properties,
 	 *                 and per style.
@@ -202,7 +172,6 @@ final class WP_Block_Patterns_Registry {
 				? $this->registered_patterns_outside_init
 				: $this->registered_patterns
 		);
->>>>>>> main
 	}
 
 	/**

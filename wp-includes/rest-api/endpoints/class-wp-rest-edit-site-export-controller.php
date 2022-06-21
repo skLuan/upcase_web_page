@@ -53,17 +53,6 @@ class WP_REST_Edit_Site_Export_Controller extends WP_REST_Controller {
 	 * @return WP_Error|true True if the request has access, or WP_Error object.
 	 */
 	public function permissions_check() {
-<<<<<<< HEAD
-		if ( ! current_user_can( 'edit_theme_options' ) ) {
-			return new WP_Error(
-				'rest_cannot_export_templates',
-				__( 'Sorry, you are not allowed to export templates and template parts.' ),
-				array( 'status' => rest_authorization_required_code() )
-			);
-		}
-
-		return true;
-=======
 		if ( current_user_can( 'edit_theme_options' ) ) {
 			return true;
 		}
@@ -73,7 +62,6 @@ class WP_REST_Edit_Site_Export_Controller extends WP_REST_Controller {
 			__( 'Sorry, you are not allowed to export templates and template parts.' ),
 			array( 'status' => rest_authorization_required_code() )
 		);
->>>>>>> main
 	}
 
 	/**
@@ -94,14 +82,9 @@ class WP_REST_Edit_Site_Export_Controller extends WP_REST_Controller {
 			return $filename;
 		}
 
-<<<<<<< HEAD
-		header( 'Content-Type: application/zip' );
-		header( 'Content-Disposition: attachment; filename=edit-site-export.zip' );
-=======
 		$theme_name = basename( get_stylesheet() );
 		header( 'Content-Type: application/zip' );
 		header( 'Content-Disposition: attachment; filename=' . $theme_name . '.zip' );
->>>>>>> main
 		header( 'Content-Length: ' . filesize( $filename ) );
 		flush();
 		readfile( $filename );

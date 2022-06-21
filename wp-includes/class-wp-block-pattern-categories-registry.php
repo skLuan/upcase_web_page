@@ -15,17 +15,11 @@ final class WP_Block_Pattern_Categories_Registry {
 	 * Registered block pattern categories array.
 	 *
 	 * @since 5.5.0
-<<<<<<< HEAD
-	 * @var array
-=======
 	 * @var array[]
->>>>>>> main
 	 */
 	private $registered_categories = array();
 
 	/**
-<<<<<<< HEAD
-=======
 	 * Pattern categories registered outside the `init` action.
 	 *
 	 * @since 6.0.0
@@ -34,7 +28,6 @@ final class WP_Block_Pattern_Categories_Registry {
 	private $registered_categories_outside_init = array();
 
 	/**
->>>>>>> main
 	 * Container for the main instance of the class.
 	 *
 	 * @since 5.5.0
@@ -65,17 +58,11 @@ final class WP_Block_Pattern_Categories_Registry {
 			return false;
 		}
 
-<<<<<<< HEAD
-		$this->registered_categories[ $category_name ] = array_merge(
-=======
 		$category = array_merge(
->>>>>>> main
 			array( 'name' => $category_name ),
 			$category_properties
 		);
 
-<<<<<<< HEAD
-=======
 		$this->registered_categories[ $category_name ] = $category;
 
 		// If the category is registered inside an action other than `init`, store it
@@ -85,7 +72,6 @@ final class WP_Block_Pattern_Categories_Registry {
 			$this->registered_categories_outside_init[ $category_name ] = $category;
 		}
 
->>>>>>> main
 		return true;
 	}
 
@@ -109,10 +95,7 @@ final class WP_Block_Pattern_Categories_Registry {
 		}
 
 		unset( $this->registered_categories[ $category_name ] );
-<<<<<<< HEAD
-=======
 		unset( $this->registered_categories_outside_init[ $category_name ] );
->>>>>>> main
 
 		return true;
 	}
@@ -138,12 +121,6 @@ final class WP_Block_Pattern_Categories_Registry {
 	 *
 	 * @since 5.5.0
 	 *
-<<<<<<< HEAD
-	 * @return array Array of arrays containing the registered pattern categories properties.
-	 */
-	public function get_all_registered() {
-		return array_values( $this->registered_categories );
-=======
 	 * @param bool $outside_init_only Return only categories registered outside the `init` action.
 	 * @return array[] Array of arrays containing the registered pattern categories properties.
 	 */
@@ -153,7 +130,6 @@ final class WP_Block_Pattern_Categories_Registry {
 				? $this->registered_categories_outside_init
 				: $this->registered_categories
 		);
->>>>>>> main
 	}
 
 	/**

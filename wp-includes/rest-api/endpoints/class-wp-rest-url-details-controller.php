@@ -124,11 +124,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Retrieves the contents of the `<title>` tag from the HTML response.
-=======
 	 * Retrieves the contents of the title tag from the HTML response.
->>>>>>> main
 	 *
 	 * @since 5.9.0
 	 *
@@ -192,11 +188,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Checks whether a given request has permission to read remote urls.
-=======
 	 * Checks whether a given request has permission to read remote URLs.
->>>>>>> main
 	 *
 	 * @since 5.9.0
 	 *
@@ -215,11 +207,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 
 		return new WP_Error(
 			'rest_cannot_view_url_details',
-<<<<<<< HEAD
-			__( 'Sorry, you are not allowed to process remote urls.' ),
-=======
 			__( 'Sorry, you are not allowed to process remote URLs.' ),
->>>>>>> main
 			array( 'status' => rest_authorization_required_code() )
 		);
 	}
@@ -254,11 +242,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 		/**
 		 * Filters the HTTP request args for URL data retrieval.
 		 *
-<<<<<<< HEAD
-		 * Can be used to adjust response size limit and other WP_Http::request args.
-=======
 		 * Can be used to adjust response size limit and other WP_Http::request() args.
->>>>>>> main
 		 *
 		 * @since 5.9.0
 		 *
@@ -292,11 +276,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Parses the `<title>` contents from the provided HTML.
-=======
 	 * Parses the title tag contents from the provided HTML.
->>>>>>> main
 	 *
 	 * @since 5.9.0
 	 *
@@ -369,15 +349,9 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	 * @param array $meta_elements {
 	 *     A multi-dimensional indexed array on success, else empty array.
 	 *
-<<<<<<< HEAD
-	 *     @type string[] 0 Meta elements with a content attribute.
-	 *     @type string[] 1 Content attribute's opening quotation mark.
-	 *     @type string[] 2 Content attribute's value for each meta element.
-=======
 	 *     @type string[] $0 Meta elements with a content attribute.
 	 *     @type string[] $1 Content attribute's opening quotation mark.
 	 *     @type string[] $2 Content attribute's value for each meta element.
->>>>>>> main
 	 * }
 	 * @return string The meta description contents on success. Empty string if not found.
 	 */
@@ -411,15 +385,9 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	 * @param array  $meta_elements {
 	 *     A multi-dimensional indexed array on success, else empty array.
 	 *
-<<<<<<< HEAD
-	 *     @type string[] 0 Meta elements with a content attribute.
-	 *     @type string[] 1 Content attribute's opening quotation mark.
-	 *     @type string[] 2 Content attribute's value for each meta element.
-=======
 	 *     @type string[] $0 Meta elements with a content attribute.
 	 *     @type string[] $1 Content attribute's opening quotation mark.
 	 *     @type string[] $2 Content attribute's value for each meta element.
->>>>>>> main
 	 * }
 	 * @param string $url The target website URL.
 	 * @return string The OG image on success. Empty string if not found.
@@ -514,11 +482,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Retrieves the `<head>` section.
-=======
 	 * Retrieves the head element section.
->>>>>>> main
 	 *
 	 * @since 5.9.0
 	 *
@@ -555,11 +519,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Gets all the `<meta>` elements that have a `content` attribute.
-=======
 	 * Gets all the meta tag elements that have a 'content' attribute.
->>>>>>> main
 	 *
 	 * @since 5.9.0
 	 *
@@ -567,15 +527,9 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	 * @return array {
 	 *     A multi-dimensional indexed array on success, else empty array.
 	 *
-<<<<<<< HEAD
-	 *     @type string[] 0 Meta elements with a content attribute.
-	 *     @type string[] 1 Content attribute's opening quotation mark.
-	 *     @type string[] 2 Content attribute's value for each meta element.
-=======
 	 *     @type string[] $0 Meta elements with a content attribute.
 	 *     @type string[] $1 Content attribute's opening quotation mark.
 	 *     @type string[] $2 Content attribute's value for each meta element.
->>>>>>> main
 	 * }
 	 */
 	private function get_meta_with_content_elements( $html ) {
@@ -603,11 +557,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 		$pattern = '#<meta\s' .
 
 				/*
-<<<<<<< HEAD
-				 * Alows for additional attributes before the content attribute.
-=======
 				 * Allows for additional attributes before the content attribute.
->>>>>>> main
 				 * Searches for anything other than > symbol.
 				 */
 				'[^>]*' .
@@ -657,15 +607,9 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 	 * @param array  $meta_elements {
 	 *     A multi-dimensional indexed array on success, else empty array.
 	 *
-<<<<<<< HEAD
-	 *     @type string[] 0 Meta elements with a content attribute.
-	 *     @type string[] 1 Content attribute's opening quotation mark.
-	 *     @type string[] 2 Content attribute's value for each meta element.
-=======
 	 *     @type string[] $0 Meta elements with a content attribute.
 	 *     @type string[] $1 Content attribute's opening quotation mark.
 	 *     @type string[] $2 Content attribute's value for each meta element.
->>>>>>> main
 	 * }
 	 * @param string $attr       Attribute that identifies the element with the target metadata.
 	 * @param string $attr_value The attribute's value that identifies the element with the target metadata.
@@ -699,11 +643,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 				 */
 				'#isU';
 
-<<<<<<< HEAD
-		// Find the metdata element.
-=======
 		// Find the metadata element.
->>>>>>> main
 		foreach ( $meta_elements[0] as $index => $element ) {
 			preg_match( $pattern, $element, $match );
 

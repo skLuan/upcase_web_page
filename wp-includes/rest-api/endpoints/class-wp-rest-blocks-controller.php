@@ -41,11 +41,7 @@ class WP_REST_Blocks_Controller extends WP_REST_Posts_Controller {
 	 *
 	 * @since 5.0.0
 	 *
-<<<<<<< HEAD
-	 * @param array  $data    Response data to fiter.
-=======
 	 * @param array  $data    Response data to filter.
->>>>>>> main
 	 * @param string $context Context defined in the schema.
 	 * @return array Filtered response.
 	 */

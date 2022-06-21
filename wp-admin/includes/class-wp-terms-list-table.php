@@ -262,17 +262,10 @@ class WP_Terms_List_Table extends WP_List_Table {
 	 * @param int    $start
 	 * @param int    $per_page
 	 * @param int    $count
-<<<<<<< HEAD
-	 * @param int    $parent
-	 * @param int    $level
-	 */
-	private function _rows( $taxonomy, $terms, &$children, $start, $per_page, &$count, $parent = 0, $level = 0 ) {
-=======
 	 * @param int    $parent_term
 	 * @param int    $level
 	 */
 	private function _rows( $taxonomy, $terms, &$children, $start, $per_page, &$count, $parent_term = 0, $level = 0 ) {
->>>>>>> main
 
 		$end = $start + $per_page;
 
@@ -282,11 +275,7 @@ class WP_Terms_List_Table extends WP_List_Table {
 				break;
 			}
 
-<<<<<<< HEAD
-			if ( $term->parent !== $parent && empty( $_REQUEST['s'] ) ) {
-=======
 			if ( $term->parent !== $parent_term && empty( $_REQUEST['s'] ) ) {
->>>>>>> main
 				continue;
 			}
 
@@ -667,10 +656,7 @@ class WP_Terms_List_Table extends WP_List_Table {
 
 			<tr id="inline-edit" class="inline-edit-row" style="display: none">
 			<td colspan="<?php echo $this->get_column_count(); ?>" class="colspanchange">
-<<<<<<< HEAD
-=======
 			<div class="inline-edit-wrapper">
->>>>>>> main
 
 			<fieldset>
 				<legend class="inline-edit-legend"><?php _e( 'Quick Edit' ); ?></legend>
@@ -711,31 +697,19 @@ class WP_Terms_List_Table extends WP_List_Table {
 			?>
 
 			<div class="inline-edit-save submit">
-<<<<<<< HEAD
-				<button type="button" class="cancel button alignleft"><?php _e( 'Cancel' ); ?></button>
-				<button type="button" class="save button button-primary alignright"><?php echo $tax->labels->update_item; ?></button>
-=======
 				<button type="button" class="save button button-primary"><?php echo $tax->labels->update_item; ?></button>
 				<button type="button" class="cancel button"><?php _e( 'Cancel' ); ?></button>
->>>>>>> main
 				<span class="spinner"></span>
 
 				<?php wp_nonce_field( 'taxinlineeditnonce', '_inline_edit', false ); ?>
 				<input type="hidden" name="taxonomy" value="<?php echo esc_attr( $this->screen->taxonomy ); ?>" />
 				<input type="hidden" name="post_type" value="<?php echo esc_attr( $this->screen->post_type ); ?>" />
-<<<<<<< HEAD
-				<br class="clear" />
-=======
->>>>>>> main
 
 				<div class="notice notice-error notice-alt inline hidden">
 					<p class="error"></p>
 				</div>
 			</div>
-<<<<<<< HEAD
-=======
 			</div>
->>>>>>> main
 
 			</td></tr>
 

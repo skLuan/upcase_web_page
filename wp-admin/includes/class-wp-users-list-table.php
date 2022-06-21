@@ -177,30 +177,6 @@ class WP_Users_List_Table extends WP_List_Table {
 
 		$wp_roles = wp_roles();
 
-<<<<<<< HEAD
-		if ( $this->is_site_users ) {
-			$url = 'site-users.php?id=' . $this->site_id;
-			switch_to_blog( $this->site_id );
-			$users_of_blog = count_users( 'time', $this->site_id );
-			restore_current_blog();
-		} else {
-			$url           = 'users.php';
-			$users_of_blog = count_users();
-		}
-
-		$total_users = $users_of_blog['total_users'];
-		$avail_roles =& $users_of_blog['avail_roles'];
-		unset( $users_of_blog );
-
-		$current_link_attributes = empty( $role ) ? ' class="current" aria-current="page"' : '';
-
-		$role_links        = array();
-		$role_links['all'] = sprintf(
-			'<a href="%s"%s>%s</a>',
-			$url,
-			$current_link_attributes,
-			sprintf(
-=======
 		$count_users = ! wp_is_large_user_count();
 
 		if ( $this->is_site_users ) {
@@ -228,7 +204,6 @@ class WP_Users_List_Table extends WP_List_Table {
 			unset( $users_of_blog );
 
 			$all_text = sprintf(
->>>>>>> main
 				/* translators: %s: Number of users. */
 				_nx(
 					'All <span class="count">(%s)</span>',
@@ -237,13 +212,6 @@ class WP_Users_List_Table extends WP_List_Table {
 					'users'
 				),
 				number_format_i18n( $total_users )
-<<<<<<< HEAD
-			)
-		);
-
-		foreach ( $wp_roles->get_names() as $this_role => $name ) {
-			if ( ! isset( $avail_roles[ $this_role ] ) ) {
-=======
 			);
 		}
 
@@ -251,7 +219,6 @@ class WP_Users_List_Table extends WP_List_Table {
 
 		foreach ( $wp_roles->get_names() as $this_role => $name ) {
 			if ( $count_users && ! isset( $avail_roles[ $this_role ] ) ) {
->>>>>>> main
 				continue;
 			}
 
@@ -262,14 +229,6 @@ class WP_Users_List_Table extends WP_List_Table {
 			}
 
 			$name = translate_user_role( $name );
-<<<<<<< HEAD
-			$name = sprintf(
-				/* translators: 1: User role name, 2: Number of users. */
-				__( '%1$s <span class="count">(%2$s)</span>' ),
-				$name,
-				number_format_i18n( $avail_roles[ $this_role ] )
-			);
-=======
 			if ( $count_users ) {
 				$name = sprintf(
 					/* translators: 1: User role name, 2: Number of users. */
@@ -278,7 +237,6 @@ class WP_Users_List_Table extends WP_List_Table {
 					number_format_i18n( $avail_roles[ $this_role ] )
 				);
 			}
->>>>>>> main
 
 			$role_links[ $this_role ] = "<a href='" . esc_url( add_query_arg( 'role', $this_role, $url ) ) . "'$current_link_attributes>$name</a>";
 		}
@@ -498,9 +456,6 @@ class WP_Users_List_Table extends WP_List_Table {
 		// Check if the user for this row is editable.
 		if ( current_user_can( 'list_users' ) ) {
 			// Set up the user editing link.
-<<<<<<< HEAD
-			$edit_link = esc_url( add_query_arg( 'wp_http_referer', urlencode( wp_unslash( $_SERVER['REQUEST_URI'] ) ), get_edit_user_link( $user_object->ID ) ) );
-=======
 			$edit_link = esc_url(
 				add_query_arg(
 					'wp_http_referer',
@@ -508,7 +463,6 @@ class WP_Users_List_Table extends WP_List_Table {
 					get_edit_user_link( $user_object->ID )
 				)
 			);
->>>>>>> main
 
 			if ( current_user_can( 'edit_user', $user_object->ID ) ) {
 				$edit            = "<strong><a href=\"{$edit_link}\">{$user_object->user_login}</a>{$super_admin}</strong><br />";
@@ -517,12 +471,6 @@ class WP_Users_List_Table extends WP_List_Table {
 				$edit = "<strong>{$user_object->user_login}{$super_admin}</strong><br />";
 			}
 
-<<<<<<< HEAD
-			if ( ! is_multisite() && get_current_user_id() != $user_object->ID && current_user_can( 'delete_user', $user_object->ID ) ) {
-				$actions['delete'] = "<a class='submitdelete' href='" . wp_nonce_url( "users.php?action=delete&amp;user=$user_object->ID", 'bulk-users' ) . "'>" . __( 'Delete' ) . '</a>';
-			}
-			if ( is_multisite() && current_user_can( 'remove_user', $user_object->ID ) ) {
-=======
 			if ( ! is_multisite()
 				&& get_current_user_id() !== $user_object->ID
 				&& current_user_can( 'delete_user', $user_object->ID )
@@ -533,7 +481,6 @@ class WP_Users_List_Table extends WP_List_Table {
 			if ( is_multisite()
 				&& current_user_can( 'remove_user', $user_object->ID )
 			) {
->>>>>>> main
 				$actions['remove'] = "<a class='submitdelete' href='" . wp_nonce_url( $url . "action=remove&amp;user=$user_object->ID", 'bulk-users' ) . "'>" . __( 'Remove' ) . '</a>';
 			}
 
@@ -550,13 +497,9 @@ class WP_Users_List_Table extends WP_List_Table {
 			}
 
 			// Add a link to send the user a reset password link by email.
-<<<<<<< HEAD
-			if ( get_current_user_id() !== $user_object->ID && current_user_can( 'edit_user', $user_object->ID ) ) {
-=======
 			if ( get_current_user_id() !== $user_object->ID
 				&& current_user_can( 'edit_user', $user_object->ID )
 			) {
->>>>>>> main
 				$actions['resetpassword'] = "<a class='resetpassword' href='" . wp_nonce_url( "users.php?action=resetpassword&amp;users=$user_object->ID", 'bulk-users' ) . "'>" . __( 'Send password reset' ) . '</a>';
 			}
 

@@ -163,10 +163,6 @@ function get_link_to_edit( $link ) {
  *     @type string $link_visible     Optional. 'Y' means visible, anything else means not.
  *     @type int    $link_owner       Optional. A user ID.
  *     @type int    $link_rating      Optional. A rating for the link.
-<<<<<<< HEAD
- *     @type string $link_updated     Optional. When the link was last updated.
-=======
->>>>>>> main
  *     @type string $link_rel         Optional. A relationship of the link to you.
  *     @type string $link_notes       Optional. An extended description of or notes on the link.
  *     @type string $link_rss         Optional. A URL of an associated RSS feed.
@@ -331,11 +327,7 @@ function wp_update_link( $linkdata ) {
  * @since 3.5.0
  * @access private
  *
-<<<<<<< HEAD
- * @global string $pagenow
-=======
  * @global string $pagenow The filename of the current screen.
->>>>>>> main
  */
 function wp_link_manager_disabled_message() {
 	global $pagenow;

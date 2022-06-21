@@ -123,11 +123,7 @@ class WP_Theme_JSON_Resolver {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Return core's origin config.
-=======
 	 * Returns core's origin config.
->>>>>>> main
 	 *
 	 * @since 5.8.0
 	 *
@@ -151,20 +147,6 @@ class WP_Theme_JSON_Resolver {
 	 * Data from theme.json will be backfilled from existing
 	 * theme supports, if any. Note that if the same data
 	 * is present in theme.json and in theme supports,
-<<<<<<< HEAD
-	 * the theme.json takes precendence.
-	 *
-	 * @since 5.8.0
-	 * @since 5.9.0 Theme supports have been inlined and the `$theme_support_data` argument removed.
-	 *
-	 * @param array $deprecated Deprecated. Not used.
-	 * @return WP_Theme_JSON Entity that holds theme data.
-	 */
-	public static function get_theme_data( $deprecated = array() ) {
-		if ( ! empty( $deprecated ) ) {
-			_deprecated_argument( __METHOD__, '5.9.0' );
-		}
-=======
 	 * the theme.json takes precedence.
 	 *
 	 * @since 5.8.0
@@ -186,7 +168,6 @@ class WP_Theme_JSON_Resolver {
 
 		$options = wp_parse_args( $options, array( 'with_supports' => true ) );
 
->>>>>>> main
 		if ( null === static::$theme ) {
 			$theme_json_data = static::read_json_file( static::get_file_path_from_theme( 'theme.json' ) );
 			$theme_json_data = static::translate( $theme_json_data, wp_get_theme()->get( 'TextDomain' ) );
@@ -205,13 +186,10 @@ class WP_Theme_JSON_Resolver {
 			}
 		}
 
-<<<<<<< HEAD
-=======
 		if ( ! $options['with_supports'] ) {
 			return static::$theme;
 		}
 
->>>>>>> main
 		/*
 		 * We want the presets and settings declared in theme.json
 		 * to override the ones declared via theme supports.
@@ -243,12 +221,9 @@ class WP_Theme_JSON_Resolver {
 				$default_gradients = true;
 			}
 			$theme_support_data['settings']['color']['defaultGradients'] = $default_gradients;
-<<<<<<< HEAD
-=======
 
 			// Classic themes without a theme.json don't support global duotone.
 			$theme_support_data['settings']['color']['defaultDuotone'] = false;
->>>>>>> main
 		}
 		$with_theme_supports = new WP_Theme_JSON( $theme_support_data );
 		$with_theme_supports->merge( static::$theme );
@@ -258,22 +233,14 @@ class WP_Theme_JSON_Resolver {
 
 	/**
 	 * Returns the custom post type that contains the user's origin config
-<<<<<<< HEAD
-	 * for the current theme or a void array if none are found.
-=======
 	 * for the active theme or a void array if none are found.
->>>>>>> main
 	 *
 	 * This can also create and return a new draft custom post type.
 	 *
 	 * @since 5.9.0
 	 *
 	 * @param WP_Theme $theme              The theme object. If empty, it
-<<<<<<< HEAD
-	 *                                     defaults to the current theme.
-=======
 	 *                                     defaults to the active theme.
->>>>>>> main
 	 * @param bool     $create_post        Optional. Whether a new custom post
 	 *                                     type should be created if none are
 	 *                                     found. Default false.
@@ -387,14 +354,6 @@ class WP_Theme_JSON_Resolver {
 	 * default, theme, and custom. The custom's has higher priority
 	 * than the theme's, and the theme's higher than default's.
 	 *
-<<<<<<< HEAD
-	 * Unlike the getters {@link get_core_data},
-	 * {@link get_theme_data}, and {@link get_user_data},
-	 * this method returns data after it has been merged
-	 * with the previous origins. This means that if the same piece of data
-	 * is declared in different origins (user, theme, and core),
-	 * the last origin overrides the previous.
-=======
 	 * Unlike the getters
 	 * {@link https://developer.wordpress.org/reference/classes/wp_theme_json_resolver/get_core_data/ get_core_data},
 	 * {@link https://developer.wordpress.org/reference/classes/wp_theme_json_resolver/get_theme_data/ get_theme_data},
@@ -402,7 +361,6 @@ class WP_Theme_JSON_Resolver {
 	 * this method returns data after it has been merged with the previous origins.
 	 * This means that if the same piece of data is declared in different origins
 	 * (user, theme, and core), the last origin overrides the previous.
->>>>>>> main
 	 *
 	 * For example, if the user has set a background color
 	 * for the paragraph block, and the theme has done it as well,
@@ -455,11 +413,7 @@ class WP_Theme_JSON_Resolver {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Whether the current theme has a theme.json file.
-=======
 	 * Determines whether the active theme has a theme.json file.
->>>>>>> main
 	 *
 	 * @since 5.8.0
 	 * @since 5.9.0 Added a check in the parent theme.
@@ -512,8 +466,6 @@ class WP_Theme_JSON_Resolver {
 		static::$i18n_schema              = null;
 	}
 
-<<<<<<< HEAD
-=======
 	/**
 	 * Returns the style variations defined by the theme.
 	 *
@@ -543,5 +495,4 @@ class WP_Theme_JSON_Resolver {
 		return $variations;
 	}
 
->>>>>>> main
 }

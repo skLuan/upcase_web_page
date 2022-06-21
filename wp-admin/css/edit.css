@@ -97,15 +97,12 @@ input#link_url {
 	color: #646970;
 }
 
-<<<<<<< HEAD
-=======
 #sample-permalink {
 	display: inline-block;
 	max-width: 100%;
 	word-wrap: break-word;
 }
 
->>>>>>> main
 #edit-slug-box .cancel {
 	margin-right: 10px;
 	padding: 0;
@@ -1972,14 +1969,6 @@ table.links-table {
 		padding: 20px 10px;
 	}
 
-<<<<<<< HEAD
-	.misc-pub-section > a {
-		float: right;
-		font-size: 16px;
-	}
-
-=======
->>>>>>> main
 	#delete-action,
 	#publishing-action {
 		line-height: 3.61538461;

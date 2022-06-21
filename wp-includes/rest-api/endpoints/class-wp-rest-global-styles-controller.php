@@ -38,8 +38,6 @@ class WP_REST_Global_Styles_Controller extends WP_REST_Controller {
 	 * @return void
 	 */
 	public function register_routes() {
-<<<<<<< HEAD
-=======
 		register_rest_route(
 			$this->namespace,
 			'/' . $this->rest_base . '/themes/(?P<stylesheet>[\/\s%\w\.\(\)\[\]\@_\-]+)/variations',
@@ -58,7 +56,6 @@ class WP_REST_Global_Styles_Controller extends WP_REST_Controller {
 			)
 		);
 
->>>>>>> main
 		// List themes global styles.
 		register_rest_route(
 			$this->namespace,
@@ -584,15 +581,8 @@ class WP_REST_Global_Styles_Controller extends WP_REST_Controller {
 		}
 
 		if ( rest_is_field_included( 'styles', $fields ) ) {
-<<<<<<< HEAD
-			$raw_data = $theme->get_raw_data();
-			if ( isset( $raw_data['styles'] ) ) {
-				$data['styles'] = $raw_data['styles'];
-			}
-=======
 			$raw_data       = $theme->get_raw_data();
 			$data['styles'] = isset( $raw_data['styles'] ) ? $raw_data['styles'] : array();
->>>>>>> main
 		}
 
 		$context = ! empty( $request['context'] ) ? $request['context'] : 'view';
@@ -611,8 +601,6 @@ class WP_REST_Global_Styles_Controller extends WP_REST_Controller {
 
 		return $response;
 	}
-<<<<<<< HEAD
-=======
 
 	/**
 	 * Checks if a given request has access to read a single theme global styles config.
@@ -662,5 +650,4 @@ class WP_REST_Global_Styles_Controller extends WP_REST_Controller {
 
 		return $response;
 	}
->>>>>>> main
 }

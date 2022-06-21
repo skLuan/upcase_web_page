@@ -7,23 +7,12 @@
  */
 
 /**
-<<<<<<< HEAD
- * Class representing a current block editor context.
- *
- * The expectation is that block editor can have a different set
- * of requirements on every screen where it is used. This class
- * allows to define supporting settings that can be used with filters.
-=======
  * Contains information about a block editor being rendered.
->>>>>>> main
  *
  * @since 5.8.0
  */
 final class WP_Block_Editor_Context {
 	/**
-<<<<<<< HEAD
-	 * Post being edited. Optional.
-=======
 	 * String that identifies the block editor being rendered. Can be one of:
 	 *
 	 * - `'core/edit-post'`         - The post editor at `/wp-admin/edit.php`.
@@ -41,7 +30,6 @@ final class WP_Block_Editor_Context {
 
 	/**
 	 * The post being edited by the block editor. Optional.
->>>>>>> main
 	 *
 	 * @since 5.8.0
 	 *
@@ -59,12 +47,9 @@ final class WP_Block_Editor_Context {
 	 * @param array $settings The list of optional settings to expose in a given context.
 	 */
 	public function __construct( array $settings = array() ) {
-<<<<<<< HEAD
-=======
 		if ( isset( $settings['name'] ) ) {
 			$this->name = $settings['name'];
 		}
->>>>>>> main
 		if ( isset( $settings['post'] ) ) {
 			$this->post = $settings['post'];
 		}

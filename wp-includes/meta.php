@@ -496,20 +496,11 @@ function delete_metadata( $meta_type, $object_id, $meta_key, $meta_value = '', $
 	}
 
 	if ( $delete_all ) {
-<<<<<<< HEAD
-		foreach ( (array) $object_ids as $o_id ) {
-			wp_cache_delete( $o_id, $meta_type . '_meta' );
-		}
-	} else {
-		wp_cache_delete( $object_id, $meta_type . '_meta' );
-	}
-=======
 		$data = (array) $object_ids;
 	} else {
 		$data = array( $object_id );
 	}
 	wp_cache_delete_multiple( $data, $meta_type . '_meta' );
->>>>>>> main
 
 	/**
 	 * Fires immediately after deleting metadata of a specific type.
@@ -1199,22 +1190,14 @@ function update_meta_cache( $meta_type, $object_ids ) {
 		}
 	}
 
-<<<<<<< HEAD
-=======
 	$data = array();
->>>>>>> main
 	foreach ( $non_cached_ids as $id ) {
 		if ( ! isset( $cache[ $id ] ) ) {
 			$cache[ $id ] = array();
 		}
-<<<<<<< HEAD
-		wp_cache_add( $id, $cache[ $id ], $cache_key );
-	}
-=======
 		$data[ $id ] = $cache[ $id ];
 	}
 	wp_cache_add_multiple( $data, $cache_key );
->>>>>>> main
 
 	return $cache;
 }

@@ -158,10 +158,7 @@ function wp_ajax_ajax_tag_search() {
 			'name__like' => $s,
 			'fields'     => 'names',
 			'hide_empty' => false,
-<<<<<<< HEAD
-=======
 			'number'     => isset( $_GET['number'] ) ? (int) $_GET['number'] : 0,
->>>>>>> main
 		)
 	);
 
@@ -1075,23 +1072,13 @@ function wp_ajax_add_tag() {
 	}
 
 	if ( ! $tag || is_wp_error( $tag ) ) {
-<<<<<<< HEAD
-		$message = __( 'An error has occurred. Please reload the page and try again.' );
-=======
 		$message    = __( 'An error has occurred. Please reload the page and try again.' );
 		$error_code = 'error';
->>>>>>> main
 
 		if ( is_wp_error( $tag ) && $tag->get_error_message() ) {
 			$message = $tag->get_error_message();
 		}
 
-<<<<<<< HEAD
-		$x->add(
-			array(
-				'what' => 'taxonomy',
-				'data' => new WP_Error( 'error', $message ),
-=======
 		if ( is_wp_error( $tag ) && $tag->get_error_code() ) {
 			$error_code = $tag->get_error_code();
 		}
@@ -1100,7 +1087,6 @@ function wp_ajax_add_tag() {
 			array(
 				'what' => 'taxonomy',
 				'data' => new WP_Error( $error_code, $message ),
->>>>>>> main
 			)
 		);
 		$x->send();
@@ -1135,15 +1121,11 @@ function wp_ajax_add_tag() {
 		array(
 			'what'         => 'taxonomy',
 			'data'         => $message,
-<<<<<<< HEAD
-			'supplemental' => compact( 'parents', 'noparents' ),
-=======
 			'supplemental' => array(
 				'parents'   => $parents,
 				'noparents' => $noparents,
 				'notice'    => $message,
 			),
->>>>>>> main
 		)
 	);
 
@@ -1309,11 +1291,7 @@ function wp_ajax_replyto_comment( $action ) {
 	if ( empty( $post->post_status ) ) {
 		wp_die( 1 );
 	} elseif ( in_array( $post->post_status, array( 'draft', 'pending', 'trash' ), true ) ) {
-<<<<<<< HEAD
-		wp_die( __( 'Error: You can&#8217;t reply to a comment on a draft post.' ) );
-=======
 		wp_die( __( 'You cannot reply to a comment on a draft post.' ) );
->>>>>>> main
 	}
 
 	$user = wp_get_current_user();
@@ -1343,11 +1321,7 @@ function wp_ajax_replyto_comment( $action ) {
 	}
 
 	if ( '' === $comment_content ) {
-<<<<<<< HEAD
-		wp_die( __( 'Error: Please type your comment text.' ) );
-=======
 		wp_die( __( 'Please type your comment text.' ) );
->>>>>>> main
 	}
 
 	$comment_parent = 0;
@@ -1449,11 +1423,7 @@ function wp_ajax_edit_comment() {
 	}
 
 	if ( '' === $_POST['content'] ) {
-<<<<<<< HEAD
-		wp_die( __( 'Error: Please type your comment text.' ) );
-=======
 		wp_die( __( 'Please type your comment text.' ) );
->>>>>>> main
 	}
 
 	if ( isset( $_POST['status'] ) ) {
@@ -3980,15 +3950,6 @@ function wp_ajax_crop_image() {
 			}
 
 			/** This filter is documented in wp-admin/includes/class-custom-image-header.php */
-<<<<<<< HEAD
-			$cropped = apply_filters( 'wp_create_file_in_uploads', $cropped, $attachment_id ); // For replication.
-			$object  = $wp_site_icon->create_attachment_object( $cropped, $attachment_id );
-			unset( $object['ID'] );
-
-			// Update the attachment.
-			add_filter( 'intermediate_image_sizes_advanced', array( $wp_site_icon, 'additional_sizes' ) );
-			$attachment_id = $wp_site_icon->insert_attachment( $object, $cropped );
-=======
 			$cropped    = apply_filters( 'wp_create_file_in_uploads', $cropped, $attachment_id ); // For replication.
 			$attachment = $wp_site_icon->create_attachment_object( $cropped, $attachment_id );
 			unset( $attachment['ID'] );
@@ -3996,7 +3957,6 @@ function wp_ajax_crop_image() {
 			// Update the attachment.
 			add_filter( 'intermediate_image_sizes_advanced', array( $wp_site_icon, 'additional_sizes' ) );
 			$attachment_id = $wp_site_icon->insert_attachment( $attachment, $cropped );
->>>>>>> main
 			remove_filter( 'intermediate_image_sizes_advanced', array( $wp_site_icon, 'additional_sizes' ) );
 
 			// Additional sizes in wp_prepare_attachment_for_js().
@@ -4020,23 +3980,13 @@ function wp_ajax_crop_image() {
 			/** This filter is documented in wp-admin/includes/class-custom-image-header.php */
 			$cropped = apply_filters( 'wp_create_file_in_uploads', $cropped, $attachment_id ); // For replication.
 
-<<<<<<< HEAD
-			$parent_url = wp_get_attachment_url( $attachment_id );
-			$url        = str_replace( wp_basename( $parent_url ), wp_basename( $cropped ), $parent_url );
-=======
 			$parent_url      = wp_get_attachment_url( $attachment_id );
 			$parent_basename = wp_basename( $parent_url );
 			$url             = str_replace( $parent_basename, wp_basename( $cropped ), $parent_url );
->>>>>>> main
 
 			$size       = wp_getimagesize( $cropped );
 			$image_type = ( $size ) ? $size['mime'] : 'image/jpeg';
 
-<<<<<<< HEAD
-			$object = array(
-				'post_title'     => wp_basename( $cropped ),
-				'post_content'   => $url,
-=======
 			// Get the original image's post to pre-populate the cropped image.
 			$original_attachment  = get_post( $attachment_id );
 			$sanitized_post_title = sanitize_file_name( $original_attachment->post_title );
@@ -4054,15 +4004,11 @@ function wp_ajax_crop_image() {
 			$attachment = array(
 				'post_title'     => $use_original_title ? $original_attachment->post_title : wp_basename( $cropped ),
 				'post_content'   => $use_original_description ? $original_attachment->post_content : $url,
->>>>>>> main
 				'post_mime_type' => $image_type,
 				'guid'           => $url,
 				'context'        => $context,
 			);
 
-<<<<<<< HEAD
-			$attachment_id = wp_insert_attachment( $object, $cropped );
-=======
 			// Copy the image caption attribute (post_excerpt field) from the original image.
 			if ( '' !== trim( $original_attachment->post_excerpt ) ) {
 				$attachment['post_excerpt'] = $original_attachment->post_excerpt;
@@ -4076,7 +4022,6 @@ function wp_ajax_crop_image() {
 			}
 
 			$attachment_id = wp_insert_attachment( $attachment, $cropped );
->>>>>>> main
 			$metadata      = wp_generate_attachment_metadata( $attachment_id, $cropped );
 
 			/**
@@ -4251,11 +4196,7 @@ function wp_ajax_install_theme() {
 		}
 	}
 
-<<<<<<< HEAD
-	$theme = wp_get_theme( $slug );
-=======
 	$theme                = wp_get_theme( $slug );
->>>>>>> main
 	$status['blockTheme'] = $theme->is_block_theme();
 
 	if ( ! is_multisite() && current_user_can( 'edit_theme_options' ) && current_user_can( 'customize' ) ) {

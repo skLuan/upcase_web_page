@@ -238,15 +238,6 @@ class WP_Importer {
 	}
 
 	/**
-<<<<<<< HEAD
-	 * Replace newlines, tabs, and multiple spaces with a single space
-	 *
-	 * @param string $string
-	 * @return string
-	 */
-	public function min_whitespace( $string ) {
-		return preg_replace( '|[\r\n\t ]+|', ' ', $string );
-=======
 	 * Replace newlines, tabs, and multiple spaces with a single space.
 	 *
 	 * @param string $text
@@ -254,7 +245,6 @@ class WP_Importer {
 	 */
 	public function min_whitespace( $text ) {
 		return preg_replace( '|[\r\n\t ]+|', ' ', $text );
->>>>>>> main
 	}
 
 	/**
