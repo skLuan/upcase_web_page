@@ -1,0 +1,8 @@
+*.png
+*.jpg
+*.log
+*.wpress
+upcase.com.co-20220323-222945-o47im1.wpress
+node_modules
+/wp-content/uploads/wc-logs
+wp-config.php
