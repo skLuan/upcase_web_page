@@ -24,6 +24,7 @@ function render_block_core_legacy_widget( $attributes ) {
 		return '';
 	}
 
+<<<<<<< HEAD
 	$id_base = $attributes['idBase'];
 	if ( method_exists( $wp_widget_factory, 'get_widget_key' ) && method_exists( $wp_widget_factory, 'get_widget_object' ) ) {
 		$widget_key    = $wp_widget_factory->get_widget_key( $id_base );
@@ -39,6 +40,11 @@ function render_block_core_legacy_widget( $attributes ) {
 		$widget_key    = gutenberg_get_widget_key( $id_base );
 		$widget_object = gutenberg_get_widget_object( $id_base );
 	}
+=======
+	$id_base       = $attributes['idBase'];
+	$widget_key    = $wp_widget_factory->get_widget_key( $id_base );
+	$widget_object = $wp_widget_factory->get_widget_object( $id_base );
+>>>>>>> main
 
 	if ( ! $widget_key || ! $widget_object ) {
 		return '';

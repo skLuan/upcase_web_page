@@ -47,7 +47,11 @@ class WP_Embed {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Process the [embed] shortcode.
+=======
+	 * Processes the [embed] shortcode.
+>>>>>>> main
 	 *
 	 * Since the [embed] shortcode needs to be run earlier than other shortcodes,
 	 * this function removes all existing shortcodes, registers the [embed] shortcode,
@@ -55,8 +59,13 @@ class WP_Embed {
 	 *
 	 * @global array $shortcode_tags
 	 *
+<<<<<<< HEAD
 	 * @param string $content Content to parse
 	 * @return string Content with shortcode parsed
+=======
+	 * @param string $content Content to parse.
+	 * @return string Content with shortcode parsed.
+>>>>>>> main
 	 */
 	public function run_shortcode( $content ) {
 		global $shortcode_tags;
@@ -376,7 +385,11 @@ class WP_Embed {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Delete all oEmbed caches. Unused by core as of 4.0.0.
+=======
+	 * Deletes all oEmbed caches. Unused by core as of 4.0.0.
+>>>>>>> main
 	 *
 	 * @param int $post_ID Post ID to delete the caches for.
 	 */
@@ -454,6 +467,7 @@ class WP_Embed {
 	/**
 	 * Callback function for WP_Embed::autoembed().
 	 *
+<<<<<<< HEAD
 	 * @param array $match A regex match array.
 	 * @return string The embed HTML on success, otherwise the original URL.
 	 */
@@ -464,6 +478,18 @@ class WP_Embed {
 		$this->linkifunknown = $oldval;
 
 		return $match[1] . $return . $match[3];
+=======
+	 * @param array $matches A regex match array.
+	 * @return string The embed HTML on success, otherwise the original URL.
+	 */
+	public function autoembed_callback( $matches ) {
+		$oldval              = $this->linkifunknown;
+		$this->linkifunknown = false;
+		$return              = $this->shortcode( array(), $matches[2] );
+		$this->linkifunknown = $oldval;
+
+		return $matches[1] . $return . $matches[3];
+>>>>>>> main
 	}
 
 	/**
@@ -491,7 +517,11 @@ class WP_Embed {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Find the oEmbed cache post ID for a given cache key.
+=======
+	 * Finds the oEmbed cache post ID for a given cache key.
+>>>>>>> main
 	 *
 	 * @since 4.9.0
 	 *

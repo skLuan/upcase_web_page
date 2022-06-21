@@ -91,6 +91,7 @@
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 .wp-block-page-list .components-placeholder {
   min-height: 0;
   padding: 0;
@@ -102,14 +103,24 @@
 
 .wp-block-page-list-modal {
   max-width: 400px;
+=======
+@media (min-width: 600px) {
+  .wp-block-page-list-modal {
+    max-width: 480px;
+  }
+>>>>>>> main
 }
 
 .wp-block-page-list-modal-buttons {
   display: flex;
   justify-content: flex-end;
+<<<<<<< HEAD
 }
 .wp-block-page-list-modal-buttons .components-button {
   margin-left: 12px;
+=======
+  gap: 12px;
+>>>>>>> main
 }
 
 .wp-block-page-list .open-on-click:focus-within > .wp-block-navigation__submenu-container {

@@ -35,7 +35,11 @@ class SMTP
      *
      * @var string
      */
+<<<<<<< HEAD
     const VERSION = '6.5.3';
+=======
+    const VERSION = '6.6.0';
+>>>>>>> main
 
     /**
      * SMTP line break constant.
@@ -187,6 +191,10 @@ class SMTP
         'SendGrid' => '/[\d]{3} Ok: queued as (.*)/',
         'CampaignMonitor' => '/[\d]{3} 2.0.0 OK:([a-zA-Z\d]{48})/',
         'Haraka' => '/[\d]{3} Message Queued \((.*)\)/',
+<<<<<<< HEAD
+=======
+        'Mailjet' => '/[\d]{3} OK queued as (.*)/',
+>>>>>>> main
     ];
 
     /**
@@ -482,7 +490,11 @@ class SMTP
      * @param string $username The user name
      * @param string $password The password
      * @param string $authtype The auth type (CRAM-MD5, PLAIN, LOGIN, XOAUTH2)
+<<<<<<< HEAD
      * @param OAuth  $OAuth    An optional OAuth instance for XOAUTH2 authentication
+=======
+     * @param OAuthTokenProvider $OAuth An optional OAuthTokenProvider instance for XOAUTH2 authentication
+>>>>>>> main
      *
      * @return bool True if successfully authenticated
      */

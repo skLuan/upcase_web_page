@@ -44,15 +44,27 @@ function wp_register_spacing_support( $block_type ) {
  * @return array Block spacing CSS classes and inline styles.
  */
 function wp_apply_spacing_support( $block_type, $block_attributes ) {
+<<<<<<< HEAD
 	if ( wp_skip_spacing_serialization( $block_type ) ) {
+=======
+	if ( wp_should_skip_block_supports_serialization( $block_type, 'spacing' ) ) {
+>>>>>>> main
 		return array();
 	}
 
 	$has_padding_support = block_has_support( $block_type, array( 'spacing', 'padding' ), false );
 	$has_margin_support  = block_has_support( $block_type, array( 'spacing', 'margin' ), false );
+<<<<<<< HEAD
 	$styles              = array();
 
 	if ( $has_padding_support ) {
+=======
+	$skip_padding        = wp_should_skip_block_supports_serialization( $block_type, 'spacing', 'padding' );
+	$skip_margin         = wp_should_skip_block_supports_serialization( $block_type, 'spacing', 'margin' );
+	$styles              = array();
+
+	if ( $has_padding_support && ! $skip_padding ) {
+>>>>>>> main
 		$padding_value = _wp_array_get( $block_attributes, array( 'style', 'spacing', 'padding' ), null );
 		if ( is_array( $padding_value ) ) {
 			foreach ( $padding_value as $key => $value ) {
@@ -63,7 +75,11 @@ function wp_apply_spacing_support( $block_type, $block_attributes ) {
 		}
 	}
 
+<<<<<<< HEAD
 	if ( $has_margin_support ) {
+=======
+	if ( $has_margin_support && ! $skip_margin ) {
+>>>>>>> main
 		$margin_value = _wp_array_get( $block_attributes, array( 'style', 'spacing', 'margin' ), null );
 		if ( is_array( $margin_value ) ) {
 			foreach ( $margin_value as $key => $value ) {
@@ -77,6 +93,7 @@ function wp_apply_spacing_support( $block_type, $block_attributes ) {
 	return empty( $styles ) ? array() : array( 'style' => implode( ' ', $styles ) );
 }
 
+<<<<<<< HEAD
 /**
  * Checks whether serialization of the current block's spacing properties should
  * occur.
@@ -95,6 +112,8 @@ function wp_skip_spacing_serialization( $block_type ) {
 		$spacing_support['__experimentalSkipSerialization'];
 }
 
+=======
+>>>>>>> main
 // Register the block support.
 WP_Block_Supports::get_instance()->register(
 	'spacing',

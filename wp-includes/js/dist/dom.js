@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["dom"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -91,10 +92,49 @@ this["wp"] = this["wp"] || {}; this["wp"]["dom"] =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+>>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "focus", function() { return /* binding */ build_module_focus; });
 __webpack_require__.d(__webpack_exports__, "computeCaretRect", function() { return /* reexport */ computeCaretRect; });
 __webpack_require__.d(__webpack_exports__, "documentHasTextSelection", function() { return /* reexport */ documentHasTextSelection; });
@@ -125,21 +165,73 @@ __webpack_require__.d(__webpack_exports__, "getPhrasingContentSchema", function(
 __webpack_require__.d(__webpack_exports__, "isPhrasingContent", function() { return /* reexport */ isPhrasingContent; });
 __webpack_require__.d(__webpack_exports__, "isTextContent", function() { return /* reexport */ isTextContent; });
 __webpack_require__.d(__webpack_exports__, "getFilesFromDataTransfer", function() { return /* reexport */ getFilesFromDataTransfer; });
+=======
+__webpack_require__.d(__webpack_exports__, {
+  "__unstableStripHTML": function() { return /* reexport */ stripHTML; },
+  "computeCaretRect": function() { return /* reexport */ computeCaretRect; },
+  "documentHasSelection": function() { return /* reexport */ documentHasSelection; },
+  "documentHasTextSelection": function() { return /* reexport */ documentHasTextSelection; },
+  "documentHasUncollapsedSelection": function() { return /* reexport */ documentHasUncollapsedSelection; },
+  "focus": function() { return /* binding */ build_module_focus; },
+  "getFilesFromDataTransfer": function() { return /* reexport */ getFilesFromDataTransfer; },
+  "getOffsetParent": function() { return /* reexport */ getOffsetParent; },
+  "getPhrasingContentSchema": function() { return /* reexport */ getPhrasingContentSchema; },
+  "getRectangleFromRange": function() { return /* reexport */ getRectangleFromRange; },
+  "getScrollContainer": function() { return /* reexport */ getScrollContainer; },
+  "insertAfter": function() { return /* reexport */ insertAfter; },
+  "isEmpty": function() { return /* reexport */ isEmpty; },
+  "isEntirelySelected": function() { return /* reexport */ isEntirelySelected; },
+  "isFormElement": function() { return /* reexport */ isFormElement; },
+  "isHorizontalEdge": function() { return /* reexport */ isHorizontalEdge; },
+  "isNumberInput": function() { return /* reexport */ isNumberInput; },
+  "isPhrasingContent": function() { return /* reexport */ isPhrasingContent; },
+  "isRTL": function() { return /* reexport */ isRTL; },
+  "isTextContent": function() { return /* reexport */ isTextContent; },
+  "isTextField": function() { return /* reexport */ isTextField; },
+  "isVerticalEdge": function() { return /* reexport */ isVerticalEdge; },
+  "placeCaretAtHorizontalEdge": function() { return /* reexport */ placeCaretAtHorizontalEdge; },
+  "placeCaretAtVerticalEdge": function() { return /* reexport */ placeCaretAtVerticalEdge; },
+  "remove": function() { return /* reexport */ remove; },
+  "removeInvalidHTML": function() { return /* reexport */ removeInvalidHTML; },
+  "replace": function() { return /* reexport */ replace; },
+  "replaceTag": function() { return /* reexport */ replaceTag; },
+  "safeHTML": function() { return /* reexport */ safeHTML; },
+  "unwrap": function() { return /* reexport */ unwrap; },
+  "wrap": function() { return /* reexport */ wrap; }
+});
+>>>>>>> main
 
 // NAMESPACE OBJECT: ./node_modules/@wordpress/dom/build-module/focusable.js
 var focusable_namespaceObject = {};
 __webpack_require__.r(focusable_namespaceObject);
+<<<<<<< HEAD
 __webpack_require__.d(focusable_namespaceObject, "find", function() { return find; });
+=======
+__webpack_require__.d(focusable_namespaceObject, {
+  "find": function() { return find; }
+});
+>>>>>>> main
 
 // NAMESPACE OBJECT: ./node_modules/@wordpress/dom/build-module/tabbable.js
 var tabbable_namespaceObject = {};
 __webpack_require__.r(tabbable_namespaceObject);
+<<<<<<< HEAD
 __webpack_require__.d(tabbable_namespaceObject, "isTabbableIndex", function() { return isTabbableIndex; });
 __webpack_require__.d(tabbable_namespaceObject, "find", function() { return tabbable_find; });
 __webpack_require__.d(tabbable_namespaceObject, "findPrevious", function() { return findPrevious; });
 __webpack_require__.d(tabbable_namespaceObject, "findNext", function() { return findNext; });
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/focusable.js
+=======
+__webpack_require__.d(tabbable_namespaceObject, {
+  "find": function() { return tabbable_find; },
+  "findNext": function() { return findNext; },
+  "findPrevious": function() { return findPrevious; },
+  "isTabbableIndex": function() { return isTabbableIndex; }
+});
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/focusable.js
+>>>>>>> main
 /**
  * References:
  *
@@ -256,10 +348,16 @@ function find(context) {
   });
 }
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external "lodash"
 var external_lodash_ = __webpack_require__("YLtl");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/tabbable.js
+=======
+;// CONCATENATED MODULE: external "lodash"
+var external_lodash_namespaceObject = window["lodash"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/tabbable.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -341,7 +439,11 @@ function createStatefulCollapseRadioGroup() {
 
     if (hasChosen) {
       const hadChosenElement = CHOSEN_RADIO_BY_NAME[name];
+<<<<<<< HEAD
       result = Object(external_lodash_["without"])(result, hadChosenElement);
+=======
+      result = (0,external_lodash_namespaceObject.without)(result, hadChosenElement);
+>>>>>>> main
     }
 
     CHOSEN_RADIO_BY_NAME[name] = element;
@@ -428,14 +530,31 @@ function tabbable_find(context) {
  *
  * @param {Element} element The focusable element before which to look. Defaults
  *                          to the active element.
+<<<<<<< HEAD
+=======
+ *
+ * @return {Element|undefined} Preceding tabbable element.
+>>>>>>> main
  */
 
 function findPrevious(element) {
   const focusables = find(element.ownerDocument.body);
+<<<<<<< HEAD
   const index = focusables.indexOf(element); // Remove all focusables after and including `element`.
 
   focusables.length = index;
   return Object(external_lodash_["last"])(filterTabbable(focusables));
+=======
+  const index = focusables.indexOf(element);
+
+  if (index === -1) {
+    return undefined;
+  } // Remove all focusables after and including `element`.
+
+
+  focusables.length = index;
+  return (0,external_lodash_namespaceObject.last)(filterTabbable(focusables));
+>>>>>>> main
 }
 /**
  * Given a focusable element, find the next tabbable element.
@@ -449,15 +568,26 @@ function findNext(element) {
   const index = focusables.indexOf(element); // Remove all focusables before and including `element`.
 
   const remaining = focusables.slice(index + 1);
+<<<<<<< HEAD
   return Object(external_lodash_["first"])(filterTabbable(remaining));
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/utils/assert-is-defined.js
+=======
+  return (0,external_lodash_namespaceObject.first)(filterTabbable(remaining));
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/utils/assert-is-defined.js
+>>>>>>> main
 function assertIsDefined(val, name) {
   if (false) {}
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-rectangle-from-range.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-rectangle-from-range.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -560,7 +690,11 @@ function getRectangleFromRange(range) {
   return rect;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/compute-caret-rect.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/compute-caret-rect.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -586,7 +720,11 @@ function computeCaretRect(win) {
   return getRectangleFromRange(range);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/document-has-text-selection.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/document-has-text-selection.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -611,7 +749,11 @@ function documentHasTextSelection(doc) {
   return !!range && !range.collapsed;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-html-input-element.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-html-input-element.js
+>>>>>>> main
 /* eslint-disable jsdoc/valid-types */
 
 /**
@@ -623,7 +765,11 @@ function isHTMLInputElement(node) {
   return !!node && node.nodeName === 'INPUT';
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-text-field.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-text-field.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -648,7 +794,11 @@ function isTextField(node) {
   node.contentEditable === 'true';
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-number-input.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-number-input.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -669,7 +819,11 @@ function isNumberInput(node) {
   return isHTMLInputElement(node) && node.type === 'number' && !!node.valueAsNumber;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/input-field-has-uncollapsed-selection.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/input-field-has-uncollapsed-selection.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -715,7 +869,11 @@ function inputFieldHasUncollapsedSelection(element) {
   }
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/document-has-uncollapsed-selection.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/document-has-uncollapsed-selection.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -735,7 +893,11 @@ function documentHasUncollapsedSelection(doc) {
   return documentHasTextSelection(doc) || !!doc.activeElement && inputFieldHasUncollapsedSelection(doc.activeElement);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/document-has-selection.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/document-has-selection.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -755,7 +917,11 @@ function documentHasSelection(doc) {
   return !!doc.activeElement && (isTextField(doc.activeElement) || isNumberInput(doc.activeElement) || documentHasTextSelection(doc));
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-computed-style.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-computed-style.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -773,7 +939,11 @@ function getComputedStyle(element) {
   return element.ownerDocument.defaultView.getComputedStyle(element);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-scroll-container.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-scroll-container.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -801,7 +971,11 @@ function getScrollContainer(node) {
     if (/(auto|scroll)/.test(overflowY)) {
       return node;
     }
+<<<<<<< HEAD
   } // Continue traversing
+=======
+  } // Continue traversing.
+>>>>>>> main
 
 
   return getScrollContainer(
@@ -809,7 +983,11 @@ function getScrollContainer(node) {
   node.parentNode);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-offset-parent.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-offset-parent.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -849,7 +1027,11 @@ function getOffsetParent(node) {
   /** @type {Element} */
   closestElement).position !== 'static') {
     return closestElement;
+<<<<<<< HEAD
   } // offsetParent is undocumented/draft
+=======
+  } // offsetParent is undocumented/draft.
+>>>>>>> main
 
 
   return (
@@ -858,7 +1040,11 @@ function getOffsetParent(node) {
   );
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-input-or-text-area.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-input-or-text-area.js
+>>>>>>> main
 /* eslint-disable jsdoc/valid-types */
 
 /**
@@ -870,7 +1056,11 @@ function isInputOrTextArea(element) {
   return element.tagName === 'INPUT' || element.tagName === 'TEXTAREA';
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-entirely-selected.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-entirely-selected.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -953,7 +1143,33 @@ function isDeepChild(query, container, propName) {
   return false;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-rtl.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-form-element.js
+/**
+ * Internal dependencies
+ */
+
+/**
+ *
+ * Detects if element is a form element.
+ *
+ * @param {Element} element The element to check.
+ *
+ * @return {boolean} True if form element and false otherwise.
+ */
+
+function isFormElement(element) {
+  const {
+    tagName
+  } = element;
+  const checkForInputTextarea = isInputOrTextArea(element);
+  return checkForInputTextarea || tagName === 'BUTTON' || tagName === 'SELECT';
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-rtl.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -970,7 +1186,11 @@ function isRTL(element) {
   return getComputedStyle(element).direction === 'rtl';
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-range-height.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/get-range-height.js
+>>>>>>> main
 /**
  * Gets the height of the range without ignoring zero width rectangles, which
  * some browsers ignore when creating a union.
@@ -1000,7 +1220,11 @@ function getRangeHeight(range) {
   return lowestBottom - highestTop;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-selection-forward.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-selection-forward.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1052,7 +1276,11 @@ function isSelectionForward(selection) {
   return true;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/caret-range-from-point.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/caret-range-from-point.js
+>>>>>>> main
 /**
  * Polyfill.
  * Get a collapsed range for a given point.
@@ -1091,7 +1319,11 @@ function caretRangeFromPoint(doc, x, y) {
  * @typedef {{ readonly offset: number; readonly offsetNode: Node; getClientRect(): DOMRect | null; }} CaretPosition
  */
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/hidden-caret-range-from-point.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/hidden-caret-range-from-point.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1128,7 +1360,11 @@ function hiddenCaretRangeFromPoint(doc, x, y, container) {
   return range;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-edge.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-edge.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1249,7 +1485,11 @@ function isEdge(container, isReverse) {
   return onlyVertical ? hasVerticalDiff : hasVerticalDiff && hasHorizontalDiff;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-horizontal-edge.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-horizontal-edge.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1267,7 +1507,11 @@ function isHorizontalEdge(container, isReverse) {
   return isEdge(container, isReverse);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-vertical-edge.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-vertical-edge.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1285,7 +1529,11 @@ function isVerticalEdge(container, isReverse) {
   return isEdge(container, isReverse, true);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/place-caret-at-edge.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/place-caret-at-edge.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1381,7 +1629,11 @@ function placeCaretAtEdge(container, isReverse, x) {
   selection.addRange(range);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/place-caret-at-horizontal-edge.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/place-caret-at-horizontal-edge.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1397,7 +1649,11 @@ function placeCaretAtHorizontalEdge(container, isReverse) {
   return placeCaretAtEdge(container, isReverse, undefined);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/place-caret-at-vertical-edge.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/place-caret-at-vertical-edge.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1414,7 +1670,11 @@ function placeCaretAtVerticalEdge(container, isReverse, rect) {
   return placeCaretAtEdge(container, isReverse, rect === null || rect === void 0 ? void 0 : rect.left);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/insert-after.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/insert-after.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1433,7 +1693,11 @@ function insertAfter(newNode, referenceNode) {
   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/remove.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/remove.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1450,7 +1714,11 @@ function remove(node) {
   node.parentNode.removeChild(node);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/replace.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/replace.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1471,7 +1739,11 @@ function replace(processedNode, newNode) {
   remove(processedNode);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/unwrap.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/unwrap.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1495,7 +1767,11 @@ function unwrap(node) {
   parent.removeChild(node);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/replace-tag.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/replace-tag.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1521,7 +1797,11 @@ function replaceTag(node, tagName) {
   return newNode;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/wrap.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/wrap.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1539,7 +1819,11 @@ function wrap(newNode, referenceNode) {
   newNode.appendChild(referenceNode);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/safe-html.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/safe-html.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1583,7 +1867,11 @@ function safeHTML(html) {
   return body.innerHTML;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/strip-html.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/strip-html.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1605,7 +1893,11 @@ function stripHTML(html) {
   return doc.body.textContent || '';
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-empty.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-empty.js
+>>>>>>> main
 /**
  * Recursively checks if an element is empty. An element is not empty if it
  * contains text or contains elements with attributes such as images.
@@ -1638,7 +1930,11 @@ function isEmpty(element) {
   }
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/phrasing-content.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/phrasing-content.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -1720,8 +2016,13 @@ const textContentSchema = {
 // Possible: strong > em > strong.
 // Impossible: strong > strong.
 
+<<<<<<< HEAD
 Object(external_lodash_["without"])(Object.keys(textContentSchema), '#text', 'br').forEach(tag => {
   textContentSchema[tag].children = Object(external_lodash_["omit"])(textContentSchema, tag);
+=======
+(0,external_lodash_namespaceObject.without)(Object.keys(textContentSchema), '#text', 'br').forEach(tag => {
+  textContentSchema[tag].children = (0,external_lodash_namespaceObject.omit)(textContentSchema, tag);
+>>>>>>> main
 });
 /**
  * Embedded content elements.
@@ -1776,7 +2077,11 @@ function getPhrasingContentSchema(context) {
     return phrasingContentSchema;
   }
 
+<<<<<<< HEAD
   return Object(external_lodash_["omit"])({ ...phrasingContentSchema,
+=======
+  return (0,external_lodash_namespaceObject.omit)({ ...phrasingContentSchema,
+>>>>>>> main
     // We shouldn't paste potentially sensitive information which is not
     // visible to the user when pasted, so strip the attributes.
     ins: {
@@ -1818,7 +2123,11 @@ function isTextContent(node) {
   return textContentSchema.hasOwnProperty(tag) || tag === 'span';
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-element.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/is-element.js
+>>>>>>> main
 /* eslint-disable jsdoc/valid-types */
 
 /**
@@ -1830,7 +2139,11 @@ function isElement(node) {
   return !!node && node.nodeType === node.ELEMENT_NODE;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/clean-node-list.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/clean-node-list.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -1903,7 +2216,11 @@ function cleanNodeList(nodeList, doc, schema, inline) {
               name
             } = _ref;
 
+<<<<<<< HEAD
             if (name !== 'class' && !Object(external_lodash_["includes"])(attributes, name)) {
+=======
+            if (name !== 'class' && !(0,external_lodash_namespaceObject.includes)(attributes, name)) {
+>>>>>>> main
               node.removeAttribute(name);
             }
           }); // Strip invalid classes.
@@ -1922,7 +2239,11 @@ function cleanNodeList(nodeList, doc, schema, inline) {
                 className) => item.test(className);
               }
 
+<<<<<<< HEAD
               return external_lodash_["noop"];
+=======
+              return external_lodash_namespaceObject.noop;
+>>>>>>> main
             });
             Array.from(node.classList).forEach(name => {
               if (!mattchers.some(isMatch => isMatch(name))) {
@@ -1982,7 +2303,11 @@ function cleanNodeList(nodeList, doc, schema, inline) {
   });
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/remove-invalid-html.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/remove-invalid-html.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2004,7 +2329,11 @@ function removeInvalidHTML(HTML, schema, inline) {
   return doc.body.innerHTML;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom/index.js
+>>>>>>> main
 
 
 
@@ -2031,7 +2360,12 @@ function removeInvalidHTML(HTML, schema, inline) {
 
 
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/data-transfer.js
+=======
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/data-transfer.js
+>>>>>>> main
 /**
  * Gets all files from a DataTransfer object.
  *
@@ -2058,7 +2392,11 @@ function getFilesFromDataTransfer(dataTransfer) {
   return files;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/index.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2077,6 +2415,7 @@ const build_module_focus = {
 
 
 
+<<<<<<< HEAD
 
 /***/ }),
 
@@ -2088,3 +2427,8 @@ const build_module_focus = {
 /***/ })
 
 /******/ });
+=======
+(window.wp = window.wp || {}).dom = __webpack_exports__;
+/******/ })()
+;
+>>>>>>> main

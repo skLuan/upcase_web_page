@@ -126,7 +126,11 @@ if ( ! empty( $redirect ) ) {
 }
 
 // This is so that the correct "Edit" menu item is selected.
+<<<<<<< HEAD
 if ( ! empty( $post->post_type ) && 'post' != $post->post_type ) {
+=======
+if ( ! empty( $post->post_type ) && 'post' !== $post->post_type ) {
+>>>>>>> main
 	$parent_file = 'edit.php?post_type=' . $post->post_type;
 } else {
 	$parent_file = 'edit.php';

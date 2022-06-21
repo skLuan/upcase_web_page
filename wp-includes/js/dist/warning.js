@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["warning"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -92,6 +93,40 @@ this["wp"] = this["wp"] || {}; this["wp"]["warning"] =
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return logged; });
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ warning; }
+});
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/warning/build-module/utils.js
+>>>>>>> main
 /**
  * Object map tracking messages which have been logged, for use in ensuring a
  * message is only logged once.
@@ -100,6 +135,7 @@ this["wp"] = this["wp"] || {}; this["wp"]["warning"] =
  */
 const logged = new Set();
 
+<<<<<<< HEAD
 
 /***/ }),
 
@@ -301,6 +337,9 @@ process.umask = function() { return 0; };
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return warning; });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("3iIG");
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/warning/build-module/index.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -334,7 +373,11 @@ function warning(message) {
   } // Skip if already logged.
 
 
+<<<<<<< HEAD
   if (_utils__WEBPACK_IMPORTED_MODULE_0__[/* logged */ "a"].has(message)) {
+=======
+  if (logged.has(message)) {
+>>>>>>> main
     return;
   } // eslint-disable-next-line no-console
 
@@ -345,6 +388,7 @@ function warning(message) {
 
   try {
     throw Error(message);
+<<<<<<< HEAD
   } catch (x) {// do nothing
   }
 
@@ -356,3 +400,14 @@ function warning(message) {
 /***/ })
 
 /******/ })["default"];
+=======
+  } catch (x) {// Do nothing.
+  }
+
+  logged.add(message);
+}
+
+(window.wp = window.wp || {}).warning = __webpack_exports__["default"];
+/******/ })()
+;
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["richText"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -147,6 +148,151 @@ this["wp"] = this["wp"] || {}; this["wp"]["richText"] =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "__UNSTABLE_LINE_SEPARATOR": function() { return /* reexport */ LINE_SEPARATOR; },
+  "__experimentalRichText": function() { return /* reexport */ __experimentalRichText; },
+  "__unstableCanIndentListItems": function() { return /* reexport */ canIndentListItems; },
+  "__unstableCanOutdentListItems": function() { return /* reexport */ canOutdentListItems; },
+  "__unstableChangeListType": function() { return /* reexport */ changeListType; },
+  "__unstableCreateElement": function() { return /* reexport */ createElement; },
+  "__unstableFormatEdit": function() { return /* reexport */ FormatEdit; },
+  "__unstableIndentListItems": function() { return /* reexport */ indentListItems; },
+  "__unstableInsertLineSeparator": function() { return /* reexport */ insertLineSeparator; },
+  "__unstableIsActiveListType": function() { return /* reexport */ isActiveListType; },
+  "__unstableIsEmptyLine": function() { return /* reexport */ isEmptyLine; },
+  "__unstableIsListRootSelected": function() { return /* reexport */ isListRootSelected; },
+  "__unstableOutdentListItems": function() { return /* reexport */ outdentListItems; },
+  "__unstableRemoveLineSeparator": function() { return /* reexport */ removeLineSeparator; },
+  "__unstableToDom": function() { return /* reexport */ toDom; },
+  "__unstableUseRichText": function() { return /* reexport */ useRichText; },
+  "applyFormat": function() { return /* reexport */ applyFormat; },
+  "concat": function() { return /* reexport */ concat; },
+  "create": function() { return /* reexport */ create; },
+  "getActiveFormat": function() { return /* reexport */ getActiveFormat; },
+  "getActiveObject": function() { return /* reexport */ getActiveObject; },
+  "getTextContent": function() { return /* reexport */ getTextContent; },
+  "insert": function() { return /* reexport */ insert; },
+  "insertObject": function() { return /* reexport */ insertObject; },
+  "isCollapsed": function() { return /* reexport */ isCollapsed; },
+  "isEmpty": function() { return /* reexport */ isEmpty; },
+  "join": function() { return /* reexport */ join; },
+  "registerFormatType": function() { return /* reexport */ registerFormatType; },
+  "remove": function() { return /* reexport */ remove; },
+  "removeFormat": function() { return /* reexport */ removeFormat; },
+  "replace": function() { return /* reexport */ replace_replace; },
+  "slice": function() { return /* reexport */ slice; },
+  "split": function() { return /* reexport */ split; },
+  "store": function() { return /* reexport */ store; },
+  "toHTMLString": function() { return /* reexport */ toHTMLString; },
+  "toggleFormat": function() { return /* reexport */ toggleFormat; },
+  "unregisterFormatType": function() { return /* reexport */ unregisterFormatType; },
+  "useAnchorRef": function() { return /* reexport */ useAnchorRef; }
+});
+
+// NAMESPACE OBJECT: ./node_modules/@wordpress/rich-text/build-module/store/selectors.js
+var selectors_namespaceObject = {};
+__webpack_require__.r(selectors_namespaceObject);
+__webpack_require__.d(selectors_namespaceObject, {
+  "getFormatType": function() { return getFormatType; },
+  "getFormatTypeForBareElement": function() { return getFormatTypeForBareElement; },
+  "getFormatTypeForClassName": function() { return getFormatTypeForClassName; },
+  "getFormatTypes": function() { return getFormatTypes; }
+});
+
+// NAMESPACE OBJECT: ./node_modules/@wordpress/rich-text/build-module/store/actions.js
+var actions_namespaceObject = {};
+__webpack_require__.r(actions_namespaceObject);
+__webpack_require__.d(actions_namespaceObject, {
+  "addFormatTypes": function() { return addFormatTypes; },
+  "removeFormatTypes": function() { return removeFormatTypes; }
+});
+
+;// CONCATENATED MODULE: external ["wp","data"]
+var external_wp_data_namespaceObject = window["wp"]["data"];
+;// CONCATENATED MODULE: external "lodash"
+var external_lodash_namespaceObject = window["lodash"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/store/reducer.js
+/**
+ * External dependencies
+ */
+
+/**
+ * WordPress dependencies
+ */
+
+
+/**
+ * Reducer managing the format types
+ *
+ * @param {Object} state  Current state.
+ * @param {Object} action Dispatched action.
+ *
+ * @return {Object} Updated state.
+ */
+
+function formatTypes() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case 'ADD_FORMAT_TYPES':
+      return { ...state,
+        ...(0,external_lodash_namespaceObject.keyBy)(action.formatTypes, 'name')
+      };
+
+    case 'REMOVE_FORMAT_TYPES':
+      return (0,external_lodash_namespaceObject.omit)(state, action.names);
+  }
+
+  return state;
+}
+/* harmony default export */ var reducer = ((0,external_wp_data_namespaceObject.combineReducers)({
+  formatTypes
+}));
+
+;// CONCATENATED MODULE: ./node_modules/rememo/es/rememo.js
+>>>>>>> main
 
 
 var LEAF_KEY, hasWeakMap;
@@ -244,7 +390,11 @@ function isShallowEqual( a, b, fromIndex ) {
  *
  * @return {Function} Memoized selector.
  */
+<<<<<<< HEAD
 /* harmony default export */ __webpack_exports__["a"] = (function( selector, getDependants ) {
+=======
+/* harmony default export */ function rememo(selector, getDependants ) {
+>>>>>>> main
 	var rootCache, getCache;
 
 	// Use object source as dependant if getter not provided
@@ -420,6 +570,7 @@ function isShallowEqual( a, b, fromIndex ) {
 	clear();
 
 	return callSelector;
+<<<<<<< HEAD
 });
 
 
@@ -535,6 +686,11 @@ function reducer_formatTypes() {
 var rememo = __webpack_require__("pPDe");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/store/selectors.js
+=======
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/store/selectors.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -548,7 +704,11 @@ var rememo = __webpack_require__("pPDe");
  * @return {Array} Format types.
  */
 
+<<<<<<< HEAD
 const getFormatTypes = Object(rememo["a" /* default */])(state => Object.values(state.formatTypes), state => [state.formatTypes]);
+=======
+const getFormatTypes = rememo(state => Object.values(state.formatTypes), state => [state.formatTypes]);
+>>>>>>> main
 /**
  * Returns a format type by name.
  *
@@ -572,7 +732,11 @@ function getFormatType(state, name) {
  */
 
 function getFormatTypeForBareElement(state, bareElementTagName) {
+<<<<<<< HEAD
   return Object(external_lodash_["find"])(getFormatTypes(state), _ref => {
+=======
+  return (0,external_lodash_namespaceObject.find)(getFormatTypes(state), _ref => {
+>>>>>>> main
     let {
       className,
       tagName
@@ -590,7 +754,11 @@ function getFormatTypeForBareElement(state, bareElementTagName) {
  */
 
 function getFormatTypeForClassName(state, elementClassName) {
+<<<<<<< HEAD
   return Object(external_lodash_["find"])(getFormatTypes(state), _ref2 => {
+=======
+  return (0,external_lodash_namespaceObject.find)(getFormatTypes(state), _ref2 => {
+>>>>>>> main
     let {
       className
     } = _ref2;
@@ -603,7 +771,11 @@ function getFormatTypeForClassName(state, elementClassName) {
   });
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/store/actions.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/store/actions.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -620,7 +792,11 @@ function getFormatTypeForClassName(state, elementClassName) {
 function addFormatTypes(formatTypes) {
   return {
     type: 'ADD_FORMAT_TYPES',
+<<<<<<< HEAD
     formatTypes: Object(external_lodash_["castArray"])(formatTypes)
+=======
+    formatTypes: (0,external_lodash_namespaceObject.castArray)(formatTypes)
+>>>>>>> main
   };
 }
 /**
@@ -634,11 +810,19 @@ function addFormatTypes(formatTypes) {
 function removeFormatTypes(names) {
   return {
     type: 'REMOVE_FORMAT_TYPES',
+<<<<<<< HEAD
     names: Object(external_lodash_["castArray"])(names)
   };
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/store/index.js
+=======
+    names: (0,external_lodash_namespaceObject.castArray)(names)
+  };
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/store/index.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -659,14 +843,24 @@ const STORE_NAME = 'core/rich-text';
  * @type {Object}
  */
 
+<<<<<<< HEAD
 const store = Object(external_wp_data_["createReduxStore"])(STORE_NAME, {
+=======
+const store = (0,external_wp_data_namespaceObject.createReduxStore)(STORE_NAME, {
+>>>>>>> main
   reducer: reducer,
   selectors: selectors_namespaceObject,
   actions: actions_namespaceObject
 });
+<<<<<<< HEAD
 Object(external_wp_data_["register"])(store);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-format-equal.js
+=======
+(0,external_wp_data_namespaceObject.register)(store);
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-format-equal.js
+>>>>>>> main
 /** @typedef {import('./create').RichTextFormat} RichTextFormat */
 
 /**
@@ -724,7 +918,11 @@ function isFormatEqual(format1, format2) {
   return true;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/normalise-formats.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/normalise-formats.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -762,7 +960,11 @@ function normaliseFormats(value) {
   };
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/apply-format.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/apply-format.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -805,7 +1007,11 @@ function applyFormat(value, format) {
   const newFormats = formats.slice(); // The selection is collapsed.
 
   if (startIndex === endIndex) {
+<<<<<<< HEAD
     const startFormat = Object(external_lodash_["find"])(newFormats[startIndex], {
+=======
+    const startFormat = (0,external_lodash_namespaceObject.find)(newFormats[startIndex], {
+>>>>>>> main
       type: format.type
     }); // If the caret is at a format of the same type, expand start and end to
     // the edges of the format. This is useful to apply new attributes.
@@ -858,13 +1064,21 @@ function applyFormat(value, format) {
     // Always revise active formats. This serves as a placeholder for new
     // inputs with the format so new input appears with the format applied,
     // and ensures a format of the same type uses the latest values.
+<<<<<<< HEAD
     activeFormats: [...Object(external_lodash_["reject"])(activeFormats, {
+=======
+    activeFormats: [...(0,external_lodash_namespaceObject.reject)(activeFormats, {
+>>>>>>> main
       type: format.type
     }), format]
   });
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/create-element.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/create-element.js
+>>>>>>> main
 /**
  * Parse the given HTML into a body element.
  *
@@ -894,7 +1108,11 @@ function createElement(_ref, html) {
   return createElement.body;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/special-characters.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/special-characters.js
+>>>>>>> main
 /**
  * Line separator character, used for multiline text.
  */
@@ -911,7 +1129,11 @@ const OBJECT_REPLACEMENT_CHARACTER = '\ufffc';
 
 const ZWNBSP = '\ufeff';
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/create.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/create.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -960,7 +1182,11 @@ function toFormat(_ref) {
   let formatType;
 
   if (attributes && attributes.class) {
+<<<<<<< HEAD
     formatType = Object(external_wp_data_["select"])(store).getFormatTypeForClassName(attributes.class);
+=======
+    formatType = (0,external_wp_data_namespaceObject.select)(store).getFormatTypeForClassName(attributes.class);
+>>>>>>> main
 
     if (formatType) {
       // Preserve any additional classes.
@@ -973,7 +1199,11 @@ function toFormat(_ref) {
   }
 
   if (!formatType) {
+<<<<<<< HEAD
     formatType = Object(external_wp_data_["select"])(store).getFormatTypeForBareElement(type);
+=======
+    formatType = (0,external_wp_data_namespaceObject.select)(store).getFormatTypeForBareElement(type);
+>>>>>>> main
   }
 
   if (!formatType) {
@@ -1230,7 +1460,11 @@ function collapseWhiteSpace(string) {
 
 
 function removeReservedCharacters(string) {
+<<<<<<< HEAD
   //with the global flag, note that we should create a new regex each time OR reset lastIndex state.
+=======
+  // with the global flag, note that we should create a new regex each time OR reset lastIndex state.
+>>>>>>> main
   return string.replace(new RegExp(`[${ZWNBSP}${OBJECT_REPLACEMENT_CHARACTER}]`, 'gu'), '');
 }
 /**
@@ -1511,7 +1745,11 @@ function getAttributes(_ref4) {
   return accumulator;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/concat.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/concat.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1552,7 +1790,11 @@ function concat() {
   return normaliseFormats(values.reduce(mergePair, create()));
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-active-formats.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-active-formats.js
+>>>>>>> main
 /** @typedef {import('./create').RichTextValue} RichTextValue */
 
 /** @typedef {import('./create').RichTextFormatList} RichTextFormatList */
@@ -1600,7 +1842,11 @@ function getActiveFormats(_ref) {
   return formats[start] || EMPTY_ACTIVE_FORMATS;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-active-format.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-active-format.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -1628,12 +1874,20 @@ function getActiveFormats(_ref) {
  */
 
 function getActiveFormat(value, formatType) {
+<<<<<<< HEAD
   return Object(external_lodash_["find"])(getActiveFormats(value), {
+=======
+  return (0,external_lodash_namespaceObject.find)(getActiveFormats(value), {
+>>>>>>> main
     type: formatType
   });
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-active-object.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-active-object.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1665,7 +1919,11 @@ function getActiveObject(_ref) {
   return replacements[start];
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-text-content.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-text-content.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1688,7 +1946,11 @@ function getTextContent(_ref) {
   return text.replace(new RegExp(OBJECT_REPLACEMENT_CHARACTER, 'g'), '').replace(new RegExp(LINE_SEPARATOR, 'g'), '\n');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-line-index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-line-index.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1722,7 +1984,11 @@ function getLineIndex(_ref) {
   }
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-list-root-selected.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-list-root-selected.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1748,7 +2014,11 @@ function isListRootSelected(value) {
   return !replacement || replacement.length < 1;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-active-list-type.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-active-list-type.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1782,7 +2052,11 @@ function isActiveListType(value, type, rootType) {
   return lastFormat.type === type;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-collapsed.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-collapsed.js
+>>>>>>> main
 /** @typedef {import('./create').RichTextValue} RichTextValue */
 
 /**
@@ -1809,7 +2083,11 @@ function isCollapsed(_ref) {
   return start === end;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-empty.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/is-empty.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1866,7 +2144,11 @@ function isEmptyLine(_ref2) {
   return text.slice(start - 1, end + 1) === `${LINE_SEPARATOR}${LINE_SEPARATOR}`;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/join.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/join.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -1908,7 +2190,11 @@ function join(values) {
   }));
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/register-format-type.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/register-format-type.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -1958,7 +2244,11 @@ function registerFormatType(name, settings) {
     return;
   }
 
+<<<<<<< HEAD
   if (Object(external_wp_data_["select"])(store).getFormatType(settings.name)) {
+=======
+  if ((0,external_wp_data_namespaceObject.select)(store).getFormatType(settings.name)) {
+>>>>>>> main
     window.console.error('Format "' + settings.name + '" is already registered.');
     return;
   }
@@ -1979,14 +2269,22 @@ function registerFormatType(name, settings) {
   }
 
   if (settings.className === null) {
+<<<<<<< HEAD
     const formatTypeForBareElement = Object(external_wp_data_["select"])(store).getFormatTypeForBareElement(settings.tagName);
+=======
+    const formatTypeForBareElement = (0,external_wp_data_namespaceObject.select)(store).getFormatTypeForBareElement(settings.tagName);
+>>>>>>> main
 
     if (formatTypeForBareElement) {
       window.console.error(`Format "${formatTypeForBareElement.name}" is already registered to handle bare tag name "${settings.tagName}".`);
       return;
     }
   } else {
+<<<<<<< HEAD
     const formatTypeForClassName = Object(external_wp_data_["select"])(store).getFormatTypeForClassName(settings.className);
+=======
+    const formatTypeForClassName = (0,external_wp_data_namespaceObject.select)(store).getFormatTypeForClassName(settings.className);
+>>>>>>> main
 
     if (formatTypeForClassName) {
       window.console.error(`Format "${formatTypeForClassName.name}" is already registered to handle class name "${settings.className}".`);
@@ -2009,11 +2307,19 @@ function registerFormatType(name, settings) {
     return;
   }
 
+<<<<<<< HEAD
   Object(external_wp_data_["dispatch"])(store).addFormatTypes(settings);
   return settings;
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/remove-format.js
+=======
+  (0,external_wp_data_namespaceObject.dispatch)(store).addFormatTypes(settings);
+  return settings;
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/remove-format.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -2049,19 +2355,31 @@ function removeFormat(value, formatType) {
   // format.
 
   if (startIndex === endIndex) {
+<<<<<<< HEAD
     const format = Object(external_lodash_["find"])(newFormats[startIndex], {
+=======
+    const format = (0,external_lodash_namespaceObject.find)(newFormats[startIndex], {
+>>>>>>> main
       type: formatType
     });
 
     if (format) {
+<<<<<<< HEAD
       while (Object(external_lodash_["find"])(newFormats[startIndex], format)) {
+=======
+      while ((0,external_lodash_namespaceObject.find)(newFormats[startIndex], format)) {
+>>>>>>> main
         filterFormats(newFormats, startIndex, formatType);
         startIndex--;
       }
 
       endIndex++;
 
+<<<<<<< HEAD
       while (Object(external_lodash_["find"])(newFormats[endIndex], format)) {
+=======
+      while ((0,external_lodash_namespaceObject.find)(newFormats[endIndex], format)) {
+>>>>>>> main
         filterFormats(newFormats, endIndex, formatType);
         endIndex++;
       }
@@ -2076,7 +2394,11 @@ function removeFormat(value, formatType) {
 
   return normaliseFormats({ ...value,
     formats: newFormats,
+<<<<<<< HEAD
     activeFormats: Object(external_lodash_["reject"])(activeFormats, {
+=======
+    activeFormats: (0,external_lodash_namespaceObject.reject)(activeFormats, {
+>>>>>>> main
       type: formatType
     })
   });
@@ -2097,7 +2419,11 @@ function filterFormats(formats, index, formatType) {
   }
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/insert.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/insert.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2144,7 +2470,11 @@ function insert(value, valueToInsert) {
   });
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/remove.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/remove.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2163,11 +2493,19 @@ function insert(value, valueToInsert) {
  * @return {RichTextValue} A new value with the content removed.
  */
 
+<<<<<<< HEAD
 function remove_remove(value, startIndex, endIndex) {
   return insert(value, create(), startIndex, endIndex);
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/replace.js
+=======
+function remove(value, startIndex, endIndex) {
+  return insert(value, create(), startIndex, endIndex);
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/replace.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2244,7 +2582,11 @@ function replace_replace(_ref, pattern, replacement) {
   });
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/insert-line-separator.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/insert-line-separator.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2284,7 +2626,11 @@ function insertLineSeparator(value) {
   return insert(value, valueToInsert, startIndex, endIndex);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/remove-line-separator.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/remove-line-separator.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2340,13 +2686,21 @@ function removeLineSeparator(value) {
       replacements: newReplacements
     };
   } else {
+<<<<<<< HEAD
     newValue = remove_remove(value, removeStart, removeEnd);
+=======
+    newValue = remove(value, removeStart, removeEnd);
+>>>>>>> main
   }
 
   return newValue;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/insert-object.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/insert-object.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2378,7 +2732,11 @@ function insertObject(value, formatToInsert, startIndex, endIndex) {
   return insert(value, valueToInsert, startIndex, endIndex);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/slice.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/slice.js
+>>>>>>> main
 /** @typedef {import('./create').RichTextValue} RichTextValue */
 
 /**
@@ -2413,7 +2771,11 @@ function slice(value) {
   };
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/split.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/split.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2503,7 +2865,11 @@ function splitAtSelection(_ref2) {
   replace_replace(before, /\u2028+$/, ''), replace_replace(after, /^\u2028+/, '')];
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-format-type.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-format-type.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -2524,10 +2890,17 @@ function splitAtSelection(_ref2) {
  */
 
 function get_format_type_getFormatType(name) {
+<<<<<<< HEAD
   return Object(external_wp_data_["select"])(store).getFormatType(name);
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/to-tree.js
+=======
+  return (0,external_wp_data_namespaceObject.select)(store).getFormatType(name);
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/to-tree.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2863,7 +3236,11 @@ function toTree(_ref2) {
   return tree;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/to-dom.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/to-dom.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -2921,7 +3298,11 @@ function getNodeByPath(node, path) {
   };
 }
 
+<<<<<<< HEAD
 function to_dom_append(element, child) {
+=======
+function append(element, child) {
+>>>>>>> main
   if (typeof child === 'string') {
     child = element.ownerDocument.createTextNode(child);
   }
@@ -2942,29 +3323,49 @@ function to_dom_append(element, child) {
   return element.appendChild(child);
 }
 
+<<<<<<< HEAD
 function to_dom_appendText(node, text) {
   node.appendData(text);
 }
 
 function to_dom_getLastChild(_ref) {
+=======
+function appendText(node, text) {
+  node.appendData(text);
+}
+
+function getLastChild(_ref) {
+>>>>>>> main
   let {
     lastChild
   } = _ref;
   return lastChild;
 }
 
+<<<<<<< HEAD
 function to_dom_getParent(_ref2) {
+=======
+function getParent(_ref2) {
+>>>>>>> main
   let {
     parentNode
   } = _ref2;
   return parentNode;
 }
 
+<<<<<<< HEAD
 function to_dom_isText(node) {
   return node.nodeType === node.TEXT_NODE;
 }
 
 function to_dom_getText(_ref3) {
+=======
+function isText(node) {
+  return node.nodeType === node.TEXT_NODE;
+}
+
+function getText(_ref3) {
+>>>>>>> main
   let {
     nodeValue
   } = _ref3;
@@ -3010,6 +3411,7 @@ function toDom(_ref4) {
     value,
     multilineTag,
     createEmpty,
+<<<<<<< HEAD
     append: to_dom_append,
     getLastChild: to_dom_getLastChild,
     getParent: to_dom_getParent,
@@ -3017,6 +3419,15 @@ function toDom(_ref4) {
     getText: to_dom_getText,
     remove: to_dom_remove,
     appendText: to_dom_appendText,
+=======
+    append,
+    getLastChild,
+    getParent,
+    isText,
+    getText,
+    remove: to_dom_remove,
+    appendText,
+>>>>>>> main
 
     onStartIndex(body, pointer) {
       startPath = createPathToNode(pointer, body, [pointer.nodeValue.length]);
@@ -3203,10 +3614,16 @@ function applySelection(_ref6, current) {
   }
 }
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","escapeHtml"]
 var external_wp_escapeHtml_ = __webpack_require__("Vx3V");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/to-html-string.js
+=======
+;// CONCATENATED MODULE: external ["wp","escapeHtml"]
+var external_wp_escapeHtml_namespaceObject = window["wp"]["escapeHtml"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/to-html-string.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -3241,7 +3658,11 @@ function toHTMLString(_ref) {
     value,
     multilineTag,
     preserveWhiteSpace,
+<<<<<<< HEAD
     createEmpty: to_html_string_createEmpty,
+=======
+    createEmpty,
+>>>>>>> main
     append: to_html_string_append,
     getLastChild: to_html_string_getLastChild,
     getParent: to_html_string_getParent,
@@ -3253,7 +3674,11 @@ function toHTMLString(_ref) {
   return createChildrenHTML(tree.children);
 }
 
+<<<<<<< HEAD
 function to_html_string_createEmpty() {
+=======
+function createEmpty() {
+>>>>>>> main
   return {};
 }
 
@@ -3322,11 +3747,19 @@ function createElementHTML(_ref6) {
   let attributeString = '';
 
   for (const key in attributes) {
+<<<<<<< HEAD
     if (!Object(external_wp_escapeHtml_["isValidAttributeName"])(key)) {
       continue;
     }
 
     attributeString += ` ${key}="${Object(external_wp_escapeHtml_["escapeAttribute"])(attributes[key])}"`;
+=======
+    if (!(0,external_wp_escapeHtml_namespaceObject.isValidAttributeName)(key)) {
+      continue;
+    }
+
+    attributeString += ` ${key}="${(0,external_wp_escapeHtml_namespaceObject.escapeAttribute)(attributes[key])}"`;
+>>>>>>> main
   }
 
   if (object) {
@@ -3343,6 +3776,7 @@ function createChildrenHTML() {
       return child.html;
     }
 
+<<<<<<< HEAD
     return child.text === undefined ? createElementHTML(child) : Object(external_wp_escapeHtml_["escapeEditableHTML"])(child.text);
   }).join('');
 }
@@ -3354,6 +3788,17 @@ var external_wp_a11y_ = __webpack_require__("gdqT");
 var external_wp_i18n_ = __webpack_require__("l3Sj");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/toggle-format.js
+=======
+    return child.text === undefined ? createElementHTML(child) : (0,external_wp_escapeHtml_namespaceObject.escapeEditableHTML)(child.text);
+  }).join('');
+}
+
+;// CONCATENATED MODULE: external ["wp","a11y"]
+var external_wp_a11y_namespaceObject = window["wp"]["a11y"];
+;// CONCATENATED MODULE: external ["wp","i18n"]
+var external_wp_i18n_namespaceObject = window["wp"]["i18n"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/toggle-format.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -3384,7 +3829,11 @@ function toggleFormat(value, format) {
     // For screen readers, will announce if formatting control is disabled.
     if (format.title) {
       // translators: %s: title of the formatting control
+<<<<<<< HEAD
       Object(external_wp_a11y_["speak"])(Object(external_wp_i18n_["sprintf"])(Object(external_wp_i18n_["__"])('%s removed.'), format.title), 'assertive');
+=======
+      (0,external_wp_a11y_namespaceObject.speak)((0,external_wp_i18n_namespaceObject.sprintf)((0,external_wp_i18n_namespaceObject.__)('%s removed.'), format.title), 'assertive');
+>>>>>>> main
     }
 
     return removeFormat(value, format.type);
@@ -3393,13 +3842,21 @@ function toggleFormat(value, format) {
 
   if (format.title) {
     // translators: %s: title of the formatting control
+<<<<<<< HEAD
     Object(external_wp_a11y_["speak"])(Object(external_wp_i18n_["sprintf"])(Object(external_wp_i18n_["__"])('%s applied.'), format.title), 'assertive');
+=======
+    (0,external_wp_a11y_namespaceObject.speak)((0,external_wp_i18n_namespaceObject.sprintf)((0,external_wp_i18n_namespaceObject.__)('%s applied.'), format.title), 'assertive');
+>>>>>>> main
   }
 
   return applyFormat(value, format);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/unregister-format-type.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/unregister-format-type.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -3422,18 +3879,30 @@ function toggleFormat(value, format) {
  */
 
 function unregisterFormatType(name) {
+<<<<<<< HEAD
   const oldFormat = Object(external_wp_data_["select"])(store).getFormatType(name);
+=======
+  const oldFormat = (0,external_wp_data_namespaceObject.select)(store).getFormatType(name);
+>>>>>>> main
 
   if (!oldFormat) {
     window.console.error(`Format ${name} is not registered.`);
     return;
   }
 
+<<<<<<< HEAD
   Object(external_wp_data_["dispatch"])(store).removeFormatTypes(name);
   return oldFormat;
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/can-indent-list-items.js
+=======
+  (0,external_wp_data_namespaceObject.dispatch)(store).removeFormatTypes(name);
+  return oldFormat;
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/can-indent-list-items.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -3466,7 +3935,11 @@ function canIndentListItems(value) {
   return formatsAtLineIndex.length <= formatsAtPreviousLineIndex.length;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/can-outdent-list-items.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/can-outdent-list-items.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -3490,7 +3963,11 @@ function canOutdentListItems(value) {
   return replacements[startingLineIndex] !== undefined;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/indent-list-items.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/indent-list-items.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -3581,7 +4058,11 @@ function indentListItems(value, rootFormat) {
   };
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-parent-line-index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-parent-line-index.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -3620,7 +4101,11 @@ function getParentLineIndex(_ref, lineIndex) {
   }
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-last-child-index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-last-child-index.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -3665,7 +4150,11 @@ function getLastChildIndex(_ref, lineIndex) {
   return childIndex;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/outdent-list-items.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/outdent-list-items.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -3724,7 +4213,11 @@ function outdentListItems(value) {
   };
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/change-list-type.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/change-list-type.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -3792,10 +4285,16 @@ function changeListType(value, newFormat) {
   };
 }
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","element"]
 var external_wp_element_ = __webpack_require__("GRId");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-anchor-ref.js
+=======
+;// CONCATENATED MODULE: external ["wp","element"]
+var external_wp_element_namespaceObject = window["wp"]["element"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-anchor-ref.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -3838,7 +4337,11 @@ function useAnchorRef(_ref) {
     name
   } = settings;
   const activeFormat = name ? getActiveFormat(value, name) : undefined;
+<<<<<<< HEAD
   return Object(external_wp_element_["useMemo"])(() => {
+=======
+  return (0,external_wp_element_namespaceObject.useMemo)(() => {
+>>>>>>> main
     if (!ref.current) return;
     const {
       ownerDocument: {
@@ -3869,10 +4372,16 @@ function useAnchorRef(_ref) {
   }, [activeFormat, value.start, value.end, tagName, className]);
 }
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","compose"]
 var external_wp_compose_ = __webpack_require__("K9lf");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-default-style.js
+=======
+;// CONCATENATED MODULE: external ["wp","compose"]
+var external_wp_compose_namespaceObject = window["wp"]["compose"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-default-style.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -3906,14 +4415,22 @@ const whiteSpace = 'pre-wrap';
 
 const minWidth = '1px';
 function useDefaultStyle() {
+<<<<<<< HEAD
   return Object(external_wp_element_["useCallback"])(element => {
+=======
+  return (0,external_wp_element_namespaceObject.useCallback)(element => {
+>>>>>>> main
     if (!element) return;
     element.style.whiteSpace = whiteSpace;
     element.style.minWidth = minWidth;
   }, []);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-boundary-style.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-boundary-style.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -3927,11 +4444,19 @@ function useBoundaryStyle(_ref) {
   let {
     record
   } = _ref;
+<<<<<<< HEAD
   const ref = Object(external_wp_element_["useRef"])();
   const {
     activeFormats = []
   } = record.current;
   Object(external_wp_element_["useEffect"])(() => {
+=======
+  const ref = (0,external_wp_element_namespaceObject.useRef)();
+  const {
+    activeFormats = []
+  } = record.current;
+  (0,external_wp_element_namespaceObject.useEffect)(() => {
+>>>>>>> main
     // There's no need to recalculate the boundary styles if no formats are
     // active, because no boundary styles will be visible.
     if (!activeFormats || !activeFormats.length) {
@@ -3972,7 +4497,11 @@ function useBoundaryStyle(_ref) {
   return ref;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-copy-handler.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-copy-handler.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -3987,9 +4516,15 @@ function useBoundaryStyle(_ref) {
 
 
 function useCopyHandler(props) {
+<<<<<<< HEAD
   const propsRef = Object(external_wp_element_["useRef"])(props);
   propsRef.current = props;
   return Object(external_wp_compose_["useRefEffect"])(element => {
+=======
+  const propsRef = (0,external_wp_element_namespaceObject.useRef)(props);
+  propsRef.current = props;
+  return (0,external_wp_compose_namespaceObject.useRefEffect)(element => {
+>>>>>>> main
     function onCopy(event) {
       const {
         record,
@@ -4022,10 +4557,16 @@ function useCopyHandler(props) {
   }, []);
 }
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","keycodes"]
 var external_wp_keycodes_ = __webpack_require__("RxS6");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-format-boundaries.js
+=======
+;// CONCATENATED MODULE: external ["wp","keycodes"]
+var external_wp_keycodes_namespaceObject = window["wp"]["keycodes"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-format-boundaries.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -4039,10 +4580,17 @@ var external_wp_keycodes_ = __webpack_require__("RxS6");
 
 const EMPTY_ACTIVE_FORMATS = [];
 function useFormatBoundaries(props) {
+<<<<<<< HEAD
   const [, forceRender] = Object(external_wp_element_["useReducer"])(() => ({}));
   const propsRef = Object(external_wp_element_["useRef"])(props);
   propsRef.current = props;
   return Object(external_wp_compose_["useRefEffect"])(element => {
+=======
+  const [, forceRender] = (0,external_wp_element_namespaceObject.useReducer)(() => ({}));
+  const propsRef = (0,external_wp_element_namespaceObject.useRef)(props);
+  propsRef.current = props;
+  return (0,external_wp_compose_namespaceObject.useRefEffect)(element => {
+>>>>>>> main
     function onKeyDown(event) {
       const {
         keyCode,
@@ -4053,7 +4601,11 @@ function useFormatBoundaries(props) {
       } = event;
 
       if ( // Only override left and right keys without modifiers pressed.
+<<<<<<< HEAD
       shiftKey || altKey || metaKey || ctrlKey || keyCode !== external_wp_keycodes_["LEFT"] && keyCode !== external_wp_keycodes_["RIGHT"]) {
+=======
+      shiftKey || altKey || metaKey || ctrlKey || keyCode !== external_wp_keycodes_namespaceObject.LEFT && keyCode !== external_wp_keycodes_namespaceObject.RIGHT) {
+>>>>>>> main
         return;
       }
 
@@ -4079,7 +4631,11 @@ function useFormatBoundaries(props) {
       const {
         direction
       } = defaultView.getComputedStyle(element);
+<<<<<<< HEAD
       const reverseKey = direction === 'rtl' ? external_wp_keycodes_["RIGHT"] : external_wp_keycodes_["LEFT"];
+=======
+      const reverseKey = direction === 'rtl' ? external_wp_keycodes_namespaceObject.RIGHT : external_wp_keycodes_namespaceObject.LEFT;
+>>>>>>> main
       const isReverse = event.keyCode === reverseKey; // If the selection is collapsed and at the very start, do nothing if
       // navigating backward.
       // If the selection is collapsed and at the very end, do nothing if
@@ -4138,13 +4694,21 @@ function useFormatBoundaries(props) {
   }, []);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-select-object.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-select-object.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
 
 function useSelectObject() {
+<<<<<<< HEAD
   return Object(external_wp_compose_["useRefEffect"])(element => {
+=======
+  return (0,external_wp_compose_namespaceObject.useRefEffect)(element => {
+>>>>>>> main
     function onClick(event) {
       const {
         target
@@ -4174,7 +4738,11 @@ function useSelectObject() {
   }, []);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-indent-list-item-on-space.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-indent-list-item-on-space.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -4189,9 +4757,15 @@ function useSelectObject() {
 
 
 function useIndentListItemOnSpace(props) {
+<<<<<<< HEAD
   const propsRef = Object(external_wp_element_["useRef"])(props);
   propsRef.current = props;
   return Object(external_wp_compose_["useRefEffect"])(element => {
+=======
+  const propsRef = (0,external_wp_element_namespaceObject.useRef)(props);
+  propsRef.current = props;
+  return (0,external_wp_compose_namespaceObject.useRefEffect)(element => {
+>>>>>>> main
     function onKeyDown(event) {
       const {
         keyCode,
@@ -4207,7 +4781,11 @@ function useIndentListItemOnSpace(props) {
       } = propsRef.current;
 
       if ( // Only override when no modifiers are pressed.
+<<<<<<< HEAD
       shiftKey || altKey || metaKey || ctrlKey || keyCode !== external_wp_keycodes_["SPACE"] || multilineTag !== 'li') {
+=======
+      shiftKey || altKey || metaKey || ctrlKey || keyCode !== external_wp_keycodes_namespaceObject.SPACE || multilineTag !== 'li') {
+>>>>>>> main
         return;
       }
 
@@ -4240,7 +4818,11 @@ function useIndentListItemOnSpace(props) {
   }, []);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/update-formats.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/update-formats.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -4299,7 +4881,11 @@ function updateFormats(_ref) {
   return value;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-input-and-selection.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-input-and-selection.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -4349,9 +4935,15 @@ function fixPlaceholderSelection(defaultView) {
 }
 
 function useInputAndSelection(props) {
+<<<<<<< HEAD
   const propsRef = Object(external_wp_element_["useRef"])(props);
   propsRef.current = props;
   return Object(external_wp_compose_["useRefEffect"])(element => {
+=======
+  const propsRef = (0,external_wp_element_namespaceObject.useRef)(props);
+  propsRef.current = props;
+  return (0,external_wp_compose_namespaceObject.useRefEffect)(element => {
+>>>>>>> main
     const {
       ownerDocument
     } = element;
@@ -4415,16 +5007,20 @@ function useInputAndSelection(props) {
 
 
     function handleSelectionChange(event) {
+<<<<<<< HEAD
       if (ownerDocument.activeElement !== element) {
         return;
       }
 
+=======
+>>>>>>> main
       const {
         record,
         applyRecord,
         createRecord,
         isSelected,
         onSelectionChange
+<<<<<<< HEAD
       } = propsRef.current;
 
       if (event.type !== 'selectionchange' && !isSelected) {
@@ -4436,6 +5032,59 @@ function useInputAndSelection(props) {
 
       if (element.contentEditable !== 'true') {
         return;
+=======
+      } = propsRef.current; // Check if the implementor disabled editing. `contentEditable`
+      // does disable input, but not text selection, so we must ignore
+      // selection changes.
+
+      if (element.contentEditable !== 'true') {
+        return;
+      } // If the selection changes where the active element is a parent of
+      // the rich text instance (writing flow), call `onSelectionChange`
+      // for the rich text instance that contains the start or end of the
+      // selection.
+
+
+      if (ownerDocument.activeElement !== element) {
+        if (!ownerDocument.activeElement.contains(element)) {
+          return;
+        }
+
+        const selection = defaultView.getSelection();
+        const {
+          anchorNode,
+          focusNode
+        } = selection;
+
+        if (element.contains(anchorNode) && element !== anchorNode && element.contains(focusNode) && element !== focusNode) {
+          const {
+            start,
+            end
+          } = createRecord();
+          record.current.activeFormats = use_input_and_selection_EMPTY_ACTIVE_FORMATS;
+          onSelectionChange(start, end);
+        } else if (element.contains(anchorNode) && element !== anchorNode) {
+          const {
+            start,
+            end: offset = start
+          } = createRecord();
+          record.current.activeFormats = use_input_and_selection_EMPTY_ACTIVE_FORMATS;
+          onSelectionChange(offset);
+        } else if (element.contains(focusNode) && element !== focusNode) {
+          const {
+            start,
+            end: offset = start
+          } = createRecord();
+          record.current.activeFormats = use_input_and_selection_EMPTY_ACTIVE_FORMATS;
+          onSelectionChange(undefined, offset);
+        }
+
+        return;
+      }
+
+      if (event.type !== 'selectionchange' && !isSelected) {
+        return;
+>>>>>>> main
       } // In case of a keyboard event, ignore selection changes during
       // composition.
 
@@ -4491,7 +5140,11 @@ function useInputAndSelection(props) {
 
     function onCompositionStart() {
       isComposing = true; // Do not update the selection when characters are being composed as
+<<<<<<< HEAD
       // this rerenders the component and might distroy internal browser
+=======
+      // this rerenders the component and might destroy internal browser
+>>>>>>> main
       // editing state.
 
       ownerDocument.removeEventListener('selectionchange', handleSelectionChange);
@@ -4514,7 +5167,16 @@ function useInputAndSelection(props) {
         isSelected,
         onSelectionChange,
         applyRecord
+<<<<<<< HEAD
       } = propsRef.current;
+=======
+      } = propsRef.current; // When the whole editor is editable, let writing flow handle
+      // selection.
+
+      if (element.parentElement.closest('[contenteditable="true"]')) {
+        return;
+      }
+>>>>>>> main
 
       if (!isSelected) {
         // We know for certain that on focus, the old selection is invalid.
@@ -4537,18 +5199,25 @@ function useInputAndSelection(props) {
 
 
       rafId = defaultView.requestAnimationFrame(handleSelectionChange);
+<<<<<<< HEAD
       ownerDocument.addEventListener('selectionchange', handleSelectionChange);
     }
 
     function onBlur() {
       ownerDocument.removeEventListener('selectionchange', handleSelectionChange);
+=======
+>>>>>>> main
     }
 
     element.addEventListener('input', onInput);
     element.addEventListener('compositionstart', onCompositionStart);
     element.addEventListener('compositionend', onCompositionEnd);
+<<<<<<< HEAD
     element.addEventListener('focus', onFocus);
     element.addEventListener('blur', onBlur); // Selection updates must be done at these events as they
+=======
+    element.addEventListener('focus', onFocus); // Selection updates must be done at these events as they
+>>>>>>> main
     // happen before the `selectionchange` event. In some cases,
     // the `selectionchange` event may not even fire, for
     // example when the window receives focus again on click.
@@ -4556,12 +5225,19 @@ function useInputAndSelection(props) {
     element.addEventListener('keyup', handleSelectionChange);
     element.addEventListener('mouseup', handleSelectionChange);
     element.addEventListener('touchend', handleSelectionChange);
+<<<<<<< HEAD
+=======
+    ownerDocument.addEventListener('selectionchange', handleSelectionChange);
+>>>>>>> main
     return () => {
       element.removeEventListener('input', onInput);
       element.removeEventListener('compositionstart', onCompositionStart);
       element.removeEventListener('compositionend', onCompositionEnd);
       element.removeEventListener('focus', onFocus);
+<<<<<<< HEAD
       element.removeEventListener('blur', onBlur);
+=======
+>>>>>>> main
       element.removeEventListener('keyup', handleSelectionChange);
       element.removeEventListener('mouseup', handleSelectionChange);
       element.removeEventListener('touchend', handleSelectionChange);
@@ -4571,7 +5247,11 @@ function useInputAndSelection(props) {
   }, []);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-delete.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-delete.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -4586,9 +5266,15 @@ function useInputAndSelection(props) {
 
 
 function useDelete(props) {
+<<<<<<< HEAD
   const propsRef = Object(external_wp_element_["useRef"])(props);
   propsRef.current = props;
   return Object(external_wp_compose_["useRefEffect"])(element => {
+=======
+  const propsRef = (0,external_wp_element_namespaceObject.useRef)(props);
+  propsRef.current = props;
+  return (0,external_wp_compose_namespaceObject.useRefEffect)(element => {
+>>>>>>> main
     function onKeyDown(event) {
       const {
         keyCode
@@ -4603,7 +5289,11 @@ function useDelete(props) {
         return;
       }
 
+<<<<<<< HEAD
       if (keyCode !== external_wp_keycodes_["DELETE"] && keyCode !== external_wp_keycodes_["BACKSPACE"]) {
+=======
+      if (keyCode !== external_wp_keycodes_namespaceObject.DELETE && keyCode !== external_wp_keycodes_namespaceObject.BACKSPACE) {
+>>>>>>> main
         return;
       }
 
@@ -4613,10 +5303,17 @@ function useDelete(props) {
         end,
         text
       } = currentValue;
+<<<<<<< HEAD
       const isReverse = keyCode === external_wp_keycodes_["BACKSPACE"]; // Always handle full content deletion ourselves.
 
       if (start === 0 && end !== 0 && end === text.length) {
         handleChange(remove_remove(currentValue));
+=======
+      const isReverse = keyCode === external_wp_keycodes_namespaceObject.BACKSPACE; // Always handle full content deletion ourselves.
+
+      if (start === 0 && end !== 0 && end === text.length) {
+        handleChange(remove(currentValue));
+>>>>>>> main
         event.preventDefault();
         return;
       }
@@ -4644,7 +5341,11 @@ function useDelete(props) {
   }, []);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-space.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/use-space.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -4661,7 +5362,11 @@ function useDelete(props) {
  */
 
 function useSpace() {
+<<<<<<< HEAD
   return Object(external_wp_compose_["useRefEffect"])(element => {
+=======
+  return (0,external_wp_compose_namespaceObject.useRefEffect)(element => {
+>>>>>>> main
     function onKeyDown(event) {
       // Don't insert a space if default behaviour is prevented.
       if (event.defaultPrevented) {
@@ -4676,7 +5381,11 @@ function useSpace() {
         key
       } = event; // Only consider the space key without modifiers pressed.
 
+<<<<<<< HEAD
       if (keyCode !== external_wp_keycodes_["SPACE"] || altKey || metaKey || ctrlKey) {
+=======
+      if (keyCode !== external_wp_keycodes_namespaceObject.SPACE || altKey || metaKey || ctrlKey) {
+>>>>>>> main
         return;
       } // Disregard character composition that involves the Space key.
       //
@@ -4716,7 +5425,11 @@ function useSpace() {
   }, []);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/index.js
+>>>>>>> main
 /**
  * WordPress dependencies
  */
@@ -4756,9 +5469,15 @@ function useRichText(_ref) {
     __unstableBeforeSerialize,
     __unstableAddInvisibleFormats
   } = _ref;
+<<<<<<< HEAD
   const registry = Object(external_wp_data_["useRegistry"])();
   const [, forceRender] = Object(external_wp_element_["useReducer"])(() => ({}));
   const ref = Object(external_wp_element_["useRef"])();
+=======
+  const registry = (0,external_wp_data_namespaceObject.useRegistry)();
+  const [, forceRender] = (0,external_wp_element_namespaceObject.useReducer)(() => ({}));
+  const ref = (0,external_wp_element_namespaceObject.useRef)();
+>>>>>>> main
 
   function createRecord() {
     const {
@@ -4794,9 +5513,15 @@ function useRichText(_ref) {
   } // Internal values are updated synchronously, unlike props and state.
 
 
+<<<<<<< HEAD
   const _value = Object(external_wp_element_["useRef"])(value);
 
   const record = Object(external_wp_element_["useRef"])();
+=======
+  const _value = (0,external_wp_element_namespaceObject.useRef)(value);
+
+  const record = (0,external_wp_element_namespaceObject.useRef)();
+>>>>>>> main
 
   function setRecordFromProps() {
     _value.current = value;
@@ -4820,7 +5545,11 @@ function useRichText(_ref) {
     record.current.end = selectionEnd;
   }
 
+<<<<<<< HEAD
   const hadSelectionUpdate = Object(external_wp_element_["useRef"])(false);
+=======
+  const hadSelectionUpdate = (0,external_wp_element_namespaceObject.useRef)(false);
+>>>>>>> main
 
   if (!record.current) {
     var _record$current, _record$current$forma, _record$current$forma2;
@@ -4916,6 +5645,7 @@ function useRichText(_ref) {
     applyRecord(record.current);
   }
 
+<<<<<<< HEAD
   const didMount = Object(external_wp_element_["useRef"])(false); // Value updates must happen synchonously to avoid overwriting newer values.
 
   Object(external_wp_element_["useLayoutEffect"])(() => {
@@ -4925,14 +5655,37 @@ function useRichText(_ref) {
   }, [value]); // Value updates must happen synchonously to avoid overwriting newer values.
 
   Object(external_wp_element_["useLayoutEffect"])(() => {
+=======
+  const didMount = (0,external_wp_element_namespaceObject.useRef)(false); // Value updates must happen synchonously to avoid overwriting newer values.
+
+  (0,external_wp_element_namespaceObject.useLayoutEffect)(() => {
+    if (didMount.current && value !== _value.current) {
+      applyFromProps();
+      forceRender();
+    }
+  }, [value]); // Value updates must happen synchonously to avoid overwriting newer values.
+
+  (0,external_wp_element_namespaceObject.useLayoutEffect)(() => {
+>>>>>>> main
     if (!hadSelectionUpdate.current) {
       return;
+    }
+
+<<<<<<< HEAD
+    applyFromProps();
+    hadSelectionUpdate.current = false;
+  }, [hadSelectionUpdate.current]);
+  const mergedRefs = Object(external_wp_compose_["useMergeRefs"])([ref, useDefaultStyle(), useBoundaryStyle({
+=======
+    if (ref.current.ownerDocument.activeElement !== ref.current) {
+      ref.current.focus();
     }
 
     applyFromProps();
     hadSelectionUpdate.current = false;
   }, [hadSelectionUpdate.current]);
-  const mergedRefs = Object(external_wp_compose_["useMergeRefs"])([ref, useDefaultStyle(), useBoundaryStyle({
+  const mergedRefs = (0,external_wp_compose_namespaceObject.useMergeRefs)([ref, useDefaultStyle(), useBoundaryStyle({
+>>>>>>> main
     record
   }), useCopyHandler({
     record,
@@ -4956,7 +5709,11 @@ function useRichText(_ref) {
     handleChange,
     isSelected,
     onSelectionChange
+<<<<<<< HEAD
   }), useSpace(), Object(external_wp_compose_["useRefEffect"])(() => {
+=======
+  }), useSpace(), (0,external_wp_compose_namespaceObject.useRefEffect)(() => {
+>>>>>>> main
     applyFromProps();
     didMount.current = true;
   }, [placeholder, ...__unstableDependencies])]);
@@ -4968,7 +5725,11 @@ function useRichText(_ref) {
 }
 function __experimentalRichText() {}
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/format-edit.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/component/format-edit.js
+>>>>>>> main
 
 
 /**
@@ -4998,7 +5759,11 @@ function FormatEdit(_ref) {
     const isActive = activeFormat !== undefined;
     const activeObject = getActiveObject(value);
     const isObjectActive = activeObject !== undefined && activeObject.type === name;
+<<<<<<< HEAD
     return Object(external_wp_element_["createElement"])(Edit, {
+=======
+    return (0,external_wp_element_namespaceObject.createElement)(Edit, {
+>>>>>>> main
       key: name,
       isActive: isActive,
       activeAttributes: isActive ? activeFormat.attributes || {} : {},
@@ -5012,7 +5777,11 @@ function FormatEdit(_ref) {
   });
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/index.js
+>>>>>>> main
 
 
 
@@ -5050,7 +5819,13 @@ function FormatEdit(_ref) {
 
 
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ });
+=======
+(window.wp = window.wp || {}).richText = __webpack_exports__;
+/******/ })()
+;
+>>>>>>> main

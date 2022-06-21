@@ -92,7 +92,11 @@ class Theme_Upgrader extends WP_Upgrader {
 		/* translators: %s: Theme name. */
 		$this->strings['parent_theme_not_found'] = sprintf( __( '<strong>The parent theme could not be found.</strong> You will need to install the parent theme, %s, before you can use this child theme.' ), '<strong>%s</strong>' );
 		/* translators: %s: Theme error. */
+<<<<<<< HEAD
 		$this->strings['current_theme_has_errors'] = __( 'The current theme has the following error: "%s".' );
+=======
+		$this->strings['current_theme_has_errors'] = __( 'The active theme has the following error: "%s".' );
+>>>>>>> main
 
 		if ( ! empty( $this->skin->overwrite ) ) {
 			if ( 'update-theme' === $this->skin->overwrite ) {
@@ -560,21 +564,49 @@ class Theme_Upgrader extends WP_Upgrader {
 				$this->strings['incompatible_archive'],
 				sprintf(
 					/* translators: %s: style.css */
+<<<<<<< HEAD
 					__( 'The %s stylesheet doesn&#8217;t contain a valid theme header.' ),
+=======
+					__( 'The %s stylesheet does not contain a valid theme header.' ),
+>>>>>>> main
 					'<code>style.css</code>'
 				)
 			);
 		}
 
+<<<<<<< HEAD
 		// If it's not a child theme, it must have at least an index.php to be legit.
 		if ( empty( $info['Template'] ) && ! file_exists( $working_directory . 'index.php' ) ) {
+=======
+		/*
+		 * Parent themes must contain an index file:
+		 * - classic themes require /index.php
+		 * - block themes require /templates/index.html or block-templates/index.html (deprecated 5.9.0).
+		 */
+		if (
+			empty( $info['Template'] ) &&
+			! file_exists( $working_directory . 'index.php' ) &&
+			! file_exists( $working_directory . 'templates/index.html' ) &&
+			! file_exists( $working_directory . 'block-templates/index.html' )
+		) {
+>>>>>>> main
 			return new WP_Error(
 				'incompatible_archive_theme_no_index',
 				$this->strings['incompatible_archive'],
 				sprintf(
+<<<<<<< HEAD
 					/* translators: %s: index.php */
 					__( 'The theme is missing the %s file.' ),
 					'<code>index.php</code>'
+=======
+					/* translators: 1: templates/index.html, 2: index.php, 3: Documentation URL, 4: Template, 5: style.css */
+					__( 'Template is missing. Standalone themes need to have a %1$s or %2$s template file. <a href="%3$s">Child themes</a> need to have a %4$s header in the %5$s stylesheet.' ),
+					'<code>templates/index.html</code>',
+					'<code>index.php</code>',
+					__( 'https://developer.wordpress.org/themes/advanced-topics/child-themes/' ),
+					'<code>Template</code>',
+					'<code>style.css</code>'
+>>>>>>> main
 				)
 			);
 		}
@@ -609,13 +641,18 @@ class Theme_Upgrader extends WP_Upgrader {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Turn on maintenance mode before attempting to upgrade the current theme.
+=======
+	 * Turn on maintenance mode before attempting to upgrade the active theme.
+>>>>>>> main
 	 *
 	 * Hooked to the {@see 'upgrader_pre_install'} filter by Theme_Upgrader::upgrade() and
 	 * Theme_Upgrader::bulk_upgrade().
 	 *
 	 * @since 2.8.0
 	 *
+<<<<<<< HEAD
 	 * @param bool|WP_Error $return Upgrade offer return.
 	 * @param array         $theme  Theme arguments.
 	 * @return bool|WP_Error The passed in $return param or WP_Error.
@@ -623,13 +660,28 @@ class Theme_Upgrader extends WP_Upgrader {
 	public function current_before( $return, $theme ) {
 		if ( is_wp_error( $return ) ) {
 			return $return;
+=======
+	 * @param bool|WP_Error $response The installation response before the installation has started.
+	 * @param array         $theme    Theme arguments.
+	 * @return bool|WP_Error The original `$response` parameter or WP_Error.
+	 */
+	public function current_before( $response, $theme ) {
+		if ( is_wp_error( $response ) ) {
+			return $response;
+>>>>>>> main
 		}
 
 		$theme = isset( $theme['theme'] ) ? $theme['theme'] : '';
 
+<<<<<<< HEAD
 		// Only run if current theme
 		if ( get_stylesheet() !== $theme ) {
 			return $return;
+=======
+		// Only run if active theme.
+		if ( get_stylesheet() !== $theme ) {
+			return $response;
+>>>>>>> main
 		}
 
 		// Change to maintenance mode. Bulk edit handles this separately.
@@ -637,17 +689,26 @@ class Theme_Upgrader extends WP_Upgrader {
 			$this->maintenance_mode( true );
 		}
 
+<<<<<<< HEAD
 		return $return;
 	}
 
 	/**
 	 * Turn off maintenance mode after upgrading the current theme.
+=======
+		return $response;
+	}
+
+	/**
+	 * Turn off maintenance mode after upgrading the active theme.
+>>>>>>> main
 	 *
 	 * Hooked to the {@see 'upgrader_post_install'} filter by Theme_Upgrader::upgrade()
 	 * and Theme_Upgrader::bulk_upgrade().
 	 *
 	 * @since 2.8.0
 	 *
+<<<<<<< HEAD
 	 * @param bool|WP_Error $return Upgrade offer return.
 	 * @param array         $theme  Theme arguments.
 	 * @return bool|WP_Error The passed in $return param or WP_Error.
@@ -655,13 +716,28 @@ class Theme_Upgrader extends WP_Upgrader {
 	public function current_after( $return, $theme ) {
 		if ( is_wp_error( $return ) ) {
 			return $return;
+=======
+	 * @param bool|WP_Error $response The installation response after the installation has finished.
+	 * @param array         $theme    Theme arguments.
+	 * @return bool|WP_Error The original `$response` parameter or WP_Error.
+	 */
+	public function current_after( $response, $theme ) {
+		if ( is_wp_error( $response ) ) {
+			return $response;
+>>>>>>> main
 		}
 
 		$theme = isset( $theme['theme'] ) ? $theme['theme'] : '';
 
+<<<<<<< HEAD
 		// Only run if current theme.
 		if ( get_stylesheet() !== $theme ) {
 			return $return;
+=======
+		// Only run if active theme.
+		if ( get_stylesheet() !== $theme ) {
+			return $response;
+>>>>>>> main
 		}
 
 		// Ensure stylesheet name hasn't changed after the upgrade:
@@ -675,7 +751,11 @@ class Theme_Upgrader extends WP_Upgrader {
 		if ( ! $this->bulk ) {
 			$this->maintenance_mode( false );
 		}
+<<<<<<< HEAD
 		return $return;
+=======
+		return $response;
+>>>>>>> main
 	}
 
 	/**

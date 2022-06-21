@@ -27,7 +27,11 @@ class WP_Sitemaps_Index {
 	/**
 	 * Maximum number of sitemaps to include in an index.
 	 *
+<<<<<<< HEAD
 	 * @sincee 5.5.0
+=======
+	 * @since 5.5.0
+>>>>>>> main
 	 *
 	 * @var int Maximum number of sitemaps.
 	 */

@@ -991,7 +991,11 @@ p.customize-section-description {
 
 .customize-section-description a.external-link:after {
 	font: 16px/11px dashicons;
+<<<<<<< HEAD
 	content: "\f310";
+=======
+	content: "\f504";
+>>>>>>> main
 	top: 3px;
 	position: relative;
 	padding-right: 3px;
@@ -1606,7 +1610,10 @@ p.customize-section-description {
 	font-family: Consolas, Monaco, monospace;
 	font-size: 12px;
 	padding: 6px 8px;
+<<<<<<< HEAD
 	-moz-tab-size: 2;
+=======
+>>>>>>> main
 	-o-tab-size: 2;
 	tab-size: 2;
 }

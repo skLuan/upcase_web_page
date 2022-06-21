@@ -63,6 +63,13 @@ function wp_crop_image( $src, $src_x, $src_y, $src_w, $src_h, $dst_w, $dst_h, $s
 		return $result;
 	}
 
+<<<<<<< HEAD
+=======
+	if ( ! empty( $result['path'] ) ) {
+		return $result['path'];
+	}
+
+>>>>>>> main
 	return $dst_file;
 }
 
@@ -210,6 +217,12 @@ function _wp_image_meta_replace_original( $saved_data, $original_file, $image_me
 	// Store the original image file name in image_meta.
 	$image_meta['original_image'] = wp_basename( $original_file );
 
+<<<<<<< HEAD
+=======
+	// Add image file size.
+	$image_meta['filesize'] = wp_filesize( $new_file );
+
+>>>>>>> main
 	return $image_meta;
 }
 
@@ -235,10 +248,18 @@ function wp_create_image_subsizes( $file, $attachment_id ) {
 
 	// Default image meta.
 	$image_meta = array(
+<<<<<<< HEAD
 		'width'  => $imagesize[0],
 		'height' => $imagesize[1],
 		'file'   => _wp_relative_upload_path( $file ),
 		'sizes'  => array(),
+=======
+		'width'    => $imagesize[0],
+		'height'   => $imagesize[1],
+		'file'     => _wp_relative_upload_path( $file ),
+		'filesize' => wp_filesize( $file ),
+		'sizes'    => array(),
+>>>>>>> main
 	);
 
 	// Fetch additional metadata from EXIF/IPTC.
@@ -629,6 +650,14 @@ function wp_generate_attachment_metadata( $attachment_id, $file ) {
 	// Remove the blob of binary data from the array.
 	unset( $metadata['image']['data'] );
 
+<<<<<<< HEAD
+=======
+	// Capture file size for cases where it has not been captured yet, such as PDFs.
+	if ( ! isset( $metadata['filesize'] ) && file_exists( $file ) ) {
+		$metadata['filesize'] = wp_filesize( $file );
+	}
+
+>>>>>>> main
 	/**
 	 * Filters the generated attachment meta data.
 	 *
@@ -763,6 +792,13 @@ function wp_read_image_metadata( $file ) {
 				$iptc = @iptcparse( $info['APP13'] );
 			}
 
+<<<<<<< HEAD
+=======
+			if ( ! is_array( $iptc ) ) {
+				$iptc = array();
+			}
+
+>>>>>>> main
 			// Headline, "A brief synopsis of the caption".
 			if ( ! empty( $iptc['2#105'][0] ) ) {
 				$meta['title'] = trim( $iptc['2#105'][0] );
@@ -832,6 +868,13 @@ function wp_read_image_metadata( $file ) {
 			$exif = @exif_read_data( $file );
 		}
 
+<<<<<<< HEAD
+=======
+		if ( ! is_array( $exif ) ) {
+			$exif = array();
+		}
+
+>>>>>>> main
 		if ( ! empty( $exif['ImageDescription'] ) ) {
 			mbstring_binary_safe_encoding();
 			$description_length = strlen( $exif['ImageDescription'] );

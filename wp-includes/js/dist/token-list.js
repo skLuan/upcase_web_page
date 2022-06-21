@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["tokenList"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -102,6 +103,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TokenList; });
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("YLtl");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ TokenList; }
+});
+
+;// CONCATENATED MODULE: external "lodash"
+var external_lodash_namespaceObject = window["lodash"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/token-list/build-module/index.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -187,7 +224,11 @@ class TokenList {
 
   set value(value) {
     value = String(value);
+<<<<<<< HEAD
     this._valueAsArray = Object(lodash__WEBPACK_IMPORTED_MODULE_0__["uniq"])(Object(lodash__WEBPACK_IMPORTED_MODULE_0__["compact"])(value.split(/\s+/g)));
+=======
+    this._valueAsArray = (0,external_lodash_namespaceObject.uniq)((0,external_lodash_namespaceObject.compact)(value.split(/\s+/g)));
+>>>>>>> main
     this._currentValue = this._valueAsArray.join(' ');
   }
   /**
@@ -285,7 +326,11 @@ class TokenList {
       items[_key2] = arguments[_key2];
     }
 
+<<<<<<< HEAD
     this.value = Object(lodash__WEBPACK_IMPORTED_MODULE_0__["without"])(this._valueAsArray, ...items).join(' ');
+=======
+    this.value = (0,external_lodash_namespaceObject.without)(this._valueAsArray, ...items).join(' ');
+>>>>>>> main
   }
   /**
    * If `force` is not given, "toggles" `token`, removing it if it’s present
@@ -355,7 +400,13 @@ class TokenList {
 
 }
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ })["default"];
+=======
+(window.wp = window.wp || {}).tokenList = __webpack_exports__["default"];
+/******/ })()
+;
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["wordcount"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -98,16 +99,64 @@ this["wp"] = this["wp"] || {}; this["wp"]["wordcount"] =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+>>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "count", function() { return /* binding */ count; });
 
 // EXTERNAL MODULE: external "lodash"
 var external_lodash_ = __webpack_require__("YLtl");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/defaultSettings.js
+=======
+__webpack_require__.d(__webpack_exports__, {
+  "count": function() { return /* binding */ count; }
+});
+
+;// CONCATENATED MODULE: external "lodash"
+var external_lodash_namespaceObject = window["lodash"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/defaultSettings.js
+>>>>>>> main
 /** @typedef {import('./index').WPWordCountStrategy} WPWordCountStrategy */
 
 /** @typedef {Partial<{type: WPWordCountStrategy, shortcodes: string[]}>} WPWordCountL10n */
@@ -151,7 +200,11 @@ const defaultSettings = {
   HTMLcommentRegExp: /<!--[\s\S]*?-->/g,
   spaceRegExp: /&nbsp;|&#160;/gi,
   HTMLEntityRegExp: /&\S+?;/g,
+<<<<<<< HEAD
   // \u2014 = em-dash
+=======
+  // \u2014 = em-dash.
+>>>>>>> main
   connectorRegExp: /--|\u2014/g,
   // Characters to be removed from input text.
   removeRegExp: new RegExp(['[', // Basic Latin (extract)
@@ -184,7 +237,11 @@ const defaultSettings = {
    * Supplemental Mathematical Operators
    * Miscellaneous Symbols and Arrows
    */
+<<<<<<< HEAD
   '\u2000-\u2BFF', // Supplemental Punctuation
+=======
+  '\u2000-\u2BFF', // Supplemental Punctuation.
+>>>>>>> main
   '\u2E00-\u2E7F', ']'].join(''), 'g'),
   // Remove UTF-16 surrogate points, see https://en.wikipedia.org/wiki/UTF-16#U.2BD800_to_U.2BDFFF
   astralRegExp: /[\uD800-\uDBFF][\uDC00-\uDFFF]/g,
@@ -208,7 +265,11 @@ const defaultSettings = {
   }
 };
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripTags.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripTags.js
+>>>>>>> main
 /**
  * Replaces items matched in the regex with new line
  *
@@ -221,7 +282,11 @@ function stripTags(settings, text) {
   return text.replace(settings.HTMLRegExp, '\n');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/transposeAstralsToCountableChar.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/transposeAstralsToCountableChar.js
+>>>>>>> main
 /**
  * Replaces items matched in the regex with character.
  *
@@ -234,7 +299,11 @@ function transposeAstralsToCountableChar(settings, text) {
   return text.replace(settings.astralRegExp, 'a');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripHTMLEntities.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripHTMLEntities.js
+>>>>>>> main
 /**
  * Removes items matched in the regex.
  *
@@ -247,7 +316,11 @@ function stripHTMLEntities(settings, text) {
   return text.replace(settings.HTMLEntityRegExp, '');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripConnectors.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripConnectors.js
+>>>>>>> main
 /**
  * Replaces items matched in the regex with spaces.
  *
@@ -260,7 +333,11 @@ function stripConnectors(settings, text) {
   return text.replace(settings.connectorRegExp, ' ');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripRemovables.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripRemovables.js
+>>>>>>> main
 /**
  * Removes items matched in the regex.
  *
@@ -273,7 +350,11 @@ function stripRemovables(settings, text) {
   return text.replace(settings.removeRegExp, '');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripHTMLComments.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripHTMLComments.js
+>>>>>>> main
 /**
  * Removes items matched in the regex.
  *
@@ -286,7 +367,11 @@ function stripHTMLComments(settings, text) {
   return text.replace(settings.HTMLcommentRegExp, '');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripShortcodes.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripShortcodes.js
+>>>>>>> main
 /**
  * Replaces items matched in the regex with a new line.
  *
@@ -303,7 +388,11 @@ function stripShortcodes(settings, text) {
   return text;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripSpaces.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/stripSpaces.js
+>>>>>>> main
 /**
  * Replaces items matched in the regex with spaces.
  *
@@ -316,7 +405,11 @@ function stripSpaces(settings, text) {
   return text.replace(settings.spaceRegExp, ' ');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/transposeHTMLEntitiesToCountableChars.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/transposeHTMLEntitiesToCountableChars.js
+>>>>>>> main
 /**
  * Replaces items matched in the regex with a single character.
  *
@@ -329,7 +422,11 @@ function transposeHTMLEntitiesToCountableChars(settings, text) {
   return text.replace(settings.HTMLEntityRegExp, 'a');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/index.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -371,7 +468,11 @@ function transposeHTMLEntitiesToCountableChars(settings, text) {
 function loadSettings(type, userSettings) {
   var _settings$l10n$shortc, _settings$l10n;
 
+<<<<<<< HEAD
   const settings = Object(external_lodash_["extend"])({}, defaultSettings, userSettings);
+=======
+  const settings = (0,external_lodash_namespaceObject.extend)({}, defaultSettings, userSettings);
+>>>>>>> main
   settings.shortcodes = (_settings$l10n$shortc = (_settings$l10n = settings.l10n) === null || _settings$l10n === void 0 ? void 0 : _settings$l10n.shortcodes) !== null && _settings$l10n$shortc !== void 0 ? _settings$l10n$shortc : [];
 
   if (settings.shortcodes && settings.shortcodes.length) {
@@ -400,7 +501,11 @@ function loadSettings(type, userSettings) {
 function countWords(text, regex, settings) {
   var _text$match$length, _text$match;
 
+<<<<<<< HEAD
   text = Object(external_lodash_["flow"])(stripTags.bind(null, settings), stripHTMLComments.bind(null, settings), stripShortcodes.bind(null, settings), stripSpaces.bind(null, settings), stripHTMLEntities.bind(null, settings), stripConnectors.bind(null, settings), stripRemovables.bind(null, settings))(text);
+=======
+  text = (0,external_lodash_namespaceObject.flow)(stripTags.bind(null, settings), stripHTMLComments.bind(null, settings), stripShortcodes.bind(null, settings), stripSpaces.bind(null, settings), stripHTMLEntities.bind(null, settings), stripConnectors.bind(null, settings), stripRemovables.bind(null, settings))(text);
+>>>>>>> main
   text = text + '\n';
   return (_text$match$length = (_text$match = text.match(regex)) === null || _text$match === void 0 ? void 0 : _text$match.length) !== null && _text$match$length !== void 0 ? _text$match$length : 0;
 }
@@ -418,7 +523,11 @@ function countWords(text, regex, settings) {
 function countCharacters(text, regex, settings) {
   var _text$match$length2, _text$match2;
 
+<<<<<<< HEAD
   text = Object(external_lodash_["flow"])(stripTags.bind(null, settings), stripHTMLComments.bind(null, settings), stripShortcodes.bind(null, settings), transposeAstralsToCountableChar.bind(null, settings), stripSpaces.bind(null, settings), transposeHTMLEntitiesToCountableChars.bind(null, settings))(text);
+=======
+  text = (0,external_lodash_namespaceObject.flow)(stripTags.bind(null, settings), stripHTMLComments.bind(null, settings), stripShortcodes.bind(null, settings), transposeAstralsToCountableChar.bind(null, settings), stripSpaces.bind(null, settings), transposeHTMLEntitiesToCountableChars.bind(null, settings))(text);
+>>>>>>> main
   text = text + '\n';
   return (_text$match$length2 = (_text$match2 = text.match(regex)) === null || _text$match2 === void 0 ? void 0 : _text$match2.length) !== null && _text$match$length2 !== void 0 ? _text$match$length2 : 0;
 }
@@ -461,7 +570,13 @@ function count(text, type, userSettings) {
   }
 }
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ });
+=======
+(window.wp = window.wp || {}).wordcount = __webpack_exports__;
+/******/ })()
+;
+>>>>>>> main

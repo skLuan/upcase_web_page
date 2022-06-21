@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["keycodes"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -105,10 +106,49 @@ this["wp"] = this["wp"] || {}; this["wp"]["keycodes"] =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+>>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "BACKSPACE", function() { return /* binding */ BACKSPACE; });
 __webpack_require__.d(__webpack_exports__, "TAB", function() { return /* binding */ TAB; });
 __webpack_require__.d(__webpack_exports__, "ENTER", function() { return /* binding */ ENTER; });
@@ -143,6 +183,42 @@ var external_lodash_ = __webpack_require__("YLtl");
 var external_wp_i18n_ = __webpack_require__("l3Sj");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/keycodes/build-module/platform.js
+=======
+__webpack_require__.d(__webpack_exports__, {
+  "ALT": function() { return /* binding */ ALT; },
+  "BACKSPACE": function() { return /* binding */ BACKSPACE; },
+  "COMMAND": function() { return /* binding */ COMMAND; },
+  "CTRL": function() { return /* binding */ CTRL; },
+  "DELETE": function() { return /* binding */ DELETE; },
+  "DOWN": function() { return /* binding */ DOWN; },
+  "END": function() { return /* binding */ END; },
+  "ENTER": function() { return /* binding */ ENTER; },
+  "ESCAPE": function() { return /* binding */ ESCAPE; },
+  "F10": function() { return /* binding */ F10; },
+  "HOME": function() { return /* binding */ HOME; },
+  "LEFT": function() { return /* binding */ LEFT; },
+  "PAGEDOWN": function() { return /* binding */ PAGEDOWN; },
+  "PAGEUP": function() { return /* binding */ PAGEUP; },
+  "RIGHT": function() { return /* binding */ RIGHT; },
+  "SHIFT": function() { return /* binding */ SHIFT; },
+  "SPACE": function() { return /* binding */ SPACE; },
+  "TAB": function() { return /* binding */ TAB; },
+  "UP": function() { return /* binding */ UP; },
+  "ZERO": function() { return /* binding */ ZERO; },
+  "displayShortcut": function() { return /* binding */ displayShortcut; },
+  "displayShortcutList": function() { return /* binding */ displayShortcutList; },
+  "isKeyboardEvent": function() { return /* binding */ isKeyboardEvent; },
+  "modifiers": function() { return /* binding */ modifiers; },
+  "rawShortcut": function() { return /* binding */ rawShortcut; },
+  "shortcutAriaLabel": function() { return /* binding */ shortcutAriaLabel; }
+});
+
+;// CONCATENATED MODULE: external "lodash"
+var external_lodash_namespaceObject = window["lodash"];
+;// CONCATENATED MODULE: external ["wp","i18n"]
+var external_wp_i18n_namespaceObject = window["wp"]["i18n"];
+;// CONCATENATED MODULE: ./node_modules/@wordpress/keycodes/build-module/platform.js
+>>>>>>> main
 /**
  * External dependencies
  */
@@ -169,10 +245,17 @@ function isAppleOS() {
   const {
     platform
   } = _window.navigator;
+<<<<<<< HEAD
   return platform.indexOf('Mac') !== -1 || Object(external_lodash_["includes"])(['iPad', 'iPhone'], platform);
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/keycodes/build-module/index.js
+=======
+  return platform.indexOf('Mac') !== -1 || (0,external_lodash_namespaceObject.includes)(['iPad', 'iPhone'], platform);
+}
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/keycodes/build-module/index.js
+>>>>>>> main
 /**
  * Note: The order of the modifier keys in many of the [foo]Shortcut()
  * functions in this file are intentional and should not be changed. They're
@@ -355,7 +438,11 @@ const modifiers = {
  *                                                 shortcuts.
  */
 
+<<<<<<< HEAD
 const rawShortcut = Object(external_lodash_["mapValues"])(modifiers, modifier => {
+=======
+const rawShortcut = (0,external_lodash_namespaceObject.mapValues)(modifiers, modifier => {
+>>>>>>> main
   return (
     /** @type {WPKeyHandler<string>} */
     function (character) {
@@ -379,7 +466,11 @@ const rawShortcut = Object(external_lodash_["mapValues"])(modifiers, modifier =>
  *                                                   shortcut sequences.
  */
 
+<<<<<<< HEAD
 const displayShortcutList = Object(external_lodash_["mapValues"])(modifiers, modifier => {
+=======
+const displayShortcutList = (0,external_lodash_namespaceObject.mapValues)(modifiers, modifier => {
+>>>>>>> main
   return (
     /** @type {WPKeyHandler<string[]>} */
     function (character) {
@@ -395,7 +486,11 @@ const displayShortcutList = Object(external_lodash_["mapValues"])(modifiers, mod
         [SHIFT]: isApple ? '⇧' : 'Shift'
       };
       const modifierKeys = modifier(_isApple).reduce((accumulator, key) => {
+<<<<<<< HEAD
         const replacementKey = Object(external_lodash_["get"])(replacementKeyMap, key, key); // If on the Mac, adhere to platform convention and don't show plus between keys.
+=======
+        const replacementKey = (0,external_lodash_namespaceObject.get)(replacementKeyMap, key, key); // If on the Mac, adhere to platform convention and don't show plus between keys.
+>>>>>>> main
 
         if (isApple) {
           return [...accumulator, replacementKey];
@@ -405,7 +500,11 @@ const displayShortcutList = Object(external_lodash_["mapValues"])(modifiers, mod
       },
       /** @type {string[]} */
       []);
+<<<<<<< HEAD
       const capitalizedCharacter = Object(external_lodash_["capitalize"])(character);
+=======
+      const capitalizedCharacter = (0,external_lodash_namespaceObject.capitalize)(character);
+>>>>>>> main
       return [...modifierKeys, capitalizedCharacter];
     }
   );
@@ -424,7 +523,11 @@ const displayShortcutList = Object(external_lodash_["mapValues"])(modifiers, mod
  *                                                 display shortcuts.
  */
 
+<<<<<<< HEAD
 const displayShortcut = Object(external_lodash_["mapValues"])(displayShortcutList, shortcutList => {
+=======
+const displayShortcut = (0,external_lodash_namespaceObject.mapValues)(displayShortcutList, shortcutList => {
+>>>>>>> main
   return (
     /** @type {WPKeyHandler<string>} */
     function (character) {
@@ -449,7 +552,11 @@ const displayShortcut = Object(external_lodash_["mapValues"])(displayShortcutLis
  *                                                 shortcut ARIA labels.
  */
 
+<<<<<<< HEAD
 const shortcutAriaLabel = Object(external_lodash_["mapValues"])(modifiers, modifier => {
+=======
+const shortcutAriaLabel = (0,external_lodash_namespaceObject.mapValues)(modifiers, modifier => {
+>>>>>>> main
   return (
     /** @type {WPKeyHandler<string>} */
     function (character) {
@@ -464,6 +571,7 @@ const shortcutAriaLabel = Object(external_lodash_["mapValues"])(modifiers, modif
         [ALT]: isApple ? 'Option' : 'Alt',
 
         /* translators: comma as in the character ',' */
+<<<<<<< HEAD
         ',': Object(external_wp_i18n_["__"])('Comma'),
 
         /* translators: period as in the character '.' */
@@ -473,6 +581,17 @@ const shortcutAriaLabel = Object(external_lodash_["mapValues"])(modifiers, modif
         '`': Object(external_wp_i18n_["__"])('Backtick')
       };
       return [...modifier(_isApple), character].map(key => Object(external_lodash_["capitalize"])(Object(external_lodash_["get"])(replacementKeyMap, key, key))).join(isApple ? ' ' : ' + ');
+=======
+        ',': (0,external_wp_i18n_namespaceObject.__)('Comma'),
+
+        /* translators: period as in the character '.' */
+        '.': (0,external_wp_i18n_namespaceObject.__)('Period'),
+
+        /* translators: backtick as in the character '`' */
+        '`': (0,external_wp_i18n_namespaceObject.__)('Backtick')
+      };
+      return [...modifier(_isApple), character].map(key => (0,external_lodash_namespaceObject.capitalize)((0,external_lodash_namespaceObject.get)(replacementKeyMap, key, key))).join(isApple ? ' ' : ' + ');
+>>>>>>> main
     }
   );
 });
@@ -509,7 +628,11 @@ function getEventModifiers(event) {
  */
 
 
+<<<<<<< HEAD
 const isKeyboardEvent = Object(external_lodash_["mapValues"])(modifiers, getModifiers => {
+=======
+const isKeyboardEvent = (0,external_lodash_namespaceObject.mapValues)(modifiers, getModifiers => {
+>>>>>>> main
   return (
     /** @type {WPEventKeyHandler} */
     function (event, character) {
@@ -518,14 +641,22 @@ const isKeyboardEvent = Object(external_lodash_["mapValues"])(modifiers, getModi
       const mods = getModifiers(_isApple);
       const eventMods = getEventModifiers(event);
 
+<<<<<<< HEAD
       if (Object(external_lodash_["xor"])(mods, eventMods).length) {
+=======
+      if ((0,external_lodash_namespaceObject.xor)(mods, eventMods).length) {
+>>>>>>> main
         return false;
       }
 
       let key = event.key.toLowerCase();
 
       if (!character) {
+<<<<<<< HEAD
         return Object(external_lodash_["includes"])(mods, key);
+=======
+        return (0,external_lodash_namespaceObject.includes)(mods, key);
+>>>>>>> main
       }
 
       if (event.altKey && character.length === 1) {
@@ -542,7 +673,13 @@ const isKeyboardEvent = Object(external_lodash_["mapValues"])(modifiers, getModi
   );
 });
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ });
+=======
+(window.wp = window.wp || {}).keycodes = __webpack_exports__;
+/******/ })()
+;
+>>>>>>> main

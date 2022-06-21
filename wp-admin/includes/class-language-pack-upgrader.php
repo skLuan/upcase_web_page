@@ -110,7 +110,11 @@ class Language_Pack_Upgrader extends WP_Upgrader {
 	 * @since 3.7.0
 	 */
 	public function upgrade_strings() {
+<<<<<<< HEAD
 		$this->strings['starting_upgrade'] = __( 'Some of your translations need updating. Sit tight for a few more seconds while we update them as well.' );
+=======
+		$this->strings['starting_upgrade'] = __( 'Some of your translations need updating. Sit tight for a few more seconds while they are updated as well.' );
+>>>>>>> main
 		$this->strings['up_to_date']       = __( 'Your translations are all up to date.' );
 		$this->strings['no_package']       = __( 'Update package not available.' );
 		/* translators: %s: Package URL. */

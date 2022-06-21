@@ -40,7 +40,11 @@ function render_block_core_post_terms( $attributes, $content, $block ) {
 		$block->context['postId'],
 		$attributes['term'],
 		"<div $wrapper_attributes>",
+<<<<<<< HEAD
 		'<span class="wp-block-post-terms__separator">' . $separator . '</span>',
+=======
+		'<span class="wp-block-post-terms__separator">' . esc_html( $separator ) . '</span>',
+>>>>>>> main
 		'</div>'
 	);
 }

@@ -7,6 +7,7 @@
     exports.noConflict = function () { global._ = current; return exports; };
   }()));
 }(this, (function () {
+<<<<<<< HEAD
   //     Underscore.js 1.13.1
   //     https://underscorejs.org
   //     (c) 2009-2021 Jeremy Ashkenas, Julian Gonggrijp, and DocumentCloud and Investigative Reporters & Editors
@@ -14,12 +15,26 @@
 
   // Current version.
   var VERSION = '1.13.1';
+=======
+  //     Underscore.js 1.13.3
+  //     https://underscorejs.org
+  //     (c) 2009-2022 Jeremy Ashkenas, Julian Gonggrijp, and DocumentCloud and Investigative Reporters & Editors
+  //     Underscore may be freely distributed under the MIT license.
+
+  // Current version.
+  var VERSION = '1.13.3';
+>>>>>>> main
 
   // Establish the root object, `window` (`self`) in the browser, `global`
   // on the server, or `this` in some virtual machines. We use `self`
   // instead of `window` for `WebWorker` support.
+<<<<<<< HEAD
   var root = typeof self == 'object' && self.self === self && self ||
             typeof global == 'object' && global.global === global && global ||
+=======
+  var root = (typeof self == 'object' && self.self === self && self) ||
+            (typeof global == 'object' && global.global === global && global) ||
+>>>>>>> main
             Function('return this')() ||
             {};
 
@@ -87,7 +102,11 @@
   // Is a given variable an object?
   function isObject(obj) {
     var type = typeof obj;
+<<<<<<< HEAD
     return type === 'function' || type === 'object' && !!obj;
+=======
+    return type === 'function' || (type === 'object' && !!obj);
+>>>>>>> main
   }
 
   // Is a given value equal to null?
@@ -249,7 +268,11 @@
     var hash = {};
     for (var l = keys.length, i = 0; i < l; ++i) hash[keys[i]] = true;
     return {
+<<<<<<< HEAD
       contains: function(key) { return hash[key]; },
+=======
+      contains: function(key) { return hash[key] === true; },
+>>>>>>> main
       push: function(key) {
         hash[key] = true;
         return keys.push(key);
@@ -264,7 +287,11 @@
     keys = emulatedSet(keys);
     var nonEnumIdx = nonEnumerableProps.length;
     var constructor = obj.constructor;
+<<<<<<< HEAD
     var proto = isFunction$1(constructor) && constructor.prototype || ObjProto;
+=======
+    var proto = (isFunction$1(constructor) && constructor.prototype) || ObjProto;
+>>>>>>> main
 
     // Constructor is a special case.
     var prop = 'constructor';
@@ -1467,7 +1494,11 @@
   function max(obj, iteratee, context) {
     var result = -Infinity, lastComputed = -Infinity,
         value, computed;
+<<<<<<< HEAD
     if (iteratee == null || typeof iteratee == 'number' && typeof obj[0] != 'object' && obj != null) {
+=======
+    if (iteratee == null || (typeof iteratee == 'number' && typeof obj[0] != 'object' && obj != null)) {
+>>>>>>> main
       obj = isArrayLike(obj) ? obj : values(obj);
       for (var i = 0, length = obj.length; i < length; i++) {
         value = obj[i];
@@ -1479,7 +1510,11 @@
       iteratee = cb(iteratee, context);
       each(obj, function(v, index, list) {
         computed = iteratee(v, index, list);
+<<<<<<< HEAD
         if (computed > lastComputed || computed === -Infinity && result === -Infinity) {
+=======
+        if (computed > lastComputed || (computed === -Infinity && result === -Infinity)) {
+>>>>>>> main
           result = v;
           lastComputed = computed;
         }
@@ -1492,7 +1527,11 @@
   function min(obj, iteratee, context) {
     var result = Infinity, lastComputed = Infinity,
         value, computed;
+<<<<<<< HEAD
     if (iteratee == null || typeof iteratee == 'number' && typeof obj[0] != 'object' && obj != null) {
+=======
+    if (iteratee == null || (typeof iteratee == 'number' && typeof obj[0] != 'object' && obj != null)) {
+>>>>>>> main
       obj = isArrayLike(obj) ? obj : values(obj);
       for (var i = 0, length = obj.length; i < length; i++) {
         value = obj[i];
@@ -1504,7 +1543,11 @@
       iteratee = cb(iteratee, context);
       each(obj, function(v, index, list) {
         computed = iteratee(v, index, list);
+<<<<<<< HEAD
         if (computed < lastComputed || computed === Infinity && result === Infinity) {
+=======
+        if (computed < lastComputed || (computed === Infinity && result === Infinity)) {
+>>>>>>> main
           result = v;
           lastComputed = computed;
         }
@@ -1513,6 +1556,22 @@
     return result;
   }
 
+<<<<<<< HEAD
+=======
+  // Safely create a real, live array from anything iterable.
+  var reStrSymbol = /[^\ud800-\udfff]|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff]/g;
+  function toArray(obj) {
+    if (!obj) return [];
+    if (isArray(obj)) return slice.call(obj);
+    if (isString(obj)) {
+      // Keep surrogate pair characters together.
+      return obj.match(reStrSymbol);
+    }
+    if (isArrayLike(obj)) return map(obj, identity);
+    return values(obj);
+  }
+
+>>>>>>> main
   // Sample **n** random values from a collection using the modern version of the
   // [Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
   // If **n** is not specified, returns a single random element.
@@ -1522,7 +1581,11 @@
       if (!isArrayLike(obj)) obj = values(obj);
       return obj[random(obj.length - 1)];
     }
+<<<<<<< HEAD
     var sample = isArrayLike(obj) ? clone(obj) : values(obj);
+=======
+    var sample = toArray(obj);
+>>>>>>> main
     var length = getLength(sample);
     n = Math.max(Math.min(n, length), 0);
     var last = length - 1;
@@ -1599,6 +1662,7 @@
     result[pass ? 0 : 1].push(value);
   }, true);
 
+<<<<<<< HEAD
   // Safely create a real, live array from anything iterable.
   var reStrSymbol = /[^\ud800-\udfff]|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff]/g;
   function toArray(obj) {
@@ -1612,6 +1676,8 @@
     return values(obj);
   }
 
+=======
+>>>>>>> main
   // Return the number of elements in a collection.
   function size(obj) {
     if (obj == null) return 0;
@@ -1772,7 +1838,11 @@
   // Complement of zip. Unzip accepts an array of arrays and groups
   // each array's elements on shared indices.
   function unzip(array) {
+<<<<<<< HEAD
     var length = array && max(array, getLength).length || 0;
+=======
+    var length = (array && max(array, getLength).length) || 0;
+>>>>>>> main
     var result = Array(length);
 
     for (var index = 0; index < length; index++) {

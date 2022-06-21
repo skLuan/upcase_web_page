@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["escapeHtml"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -91,10 +92,49 @@ this["wp"] = this["wp"] || {}; this["wp"]["escapeHtml"] =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+>>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "escapeAmpersand", function() { return /* binding */ escapeAmpersand; });
 __webpack_require__.d(__webpack_exports__, "escapeQuotationMark", function() { return /* binding */ escapeQuotationMark; });
 __webpack_require__.d(__webpack_exports__, "escapeLessThan", function() { return /* binding */ escapeLessThan; });
@@ -104,6 +144,19 @@ __webpack_require__.d(__webpack_exports__, "escapeEditableHTML", function() { re
 __webpack_require__.d(__webpack_exports__, "isValidAttributeName", function() { return /* binding */ isValidAttributeName; });
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/escape-html/build-module/escape-greater.js
+=======
+__webpack_require__.d(__webpack_exports__, {
+  "escapeAmpersand": function() { return /* binding */ escapeAmpersand; },
+  "escapeAttribute": function() { return /* binding */ escapeAttribute; },
+  "escapeEditableHTML": function() { return /* binding */ escapeEditableHTML; },
+  "escapeHTML": function() { return /* binding */ escapeHTML; },
+  "escapeLessThan": function() { return /* binding */ escapeLessThan; },
+  "escapeQuotationMark": function() { return /* binding */ escapeQuotationMark; },
+  "isValidAttributeName": function() { return /* binding */ isValidAttributeName; }
+});
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/escape-html/build-module/escape-greater.js
+>>>>>>> main
 /**
  * Returns a string with greater-than sign replaced.
  *
@@ -120,7 +173,11 @@ function __unstableEscapeGreaterThan(value) {
   return value.replace(/>/g, '&gt;');
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/escape-html/build-module/index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/escape-html/build-module/index.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -243,7 +300,13 @@ function isValidAttributeName(name) {
   return !REGEXP_INVALID_ATTRIBUTE_NAME.test(name);
 }
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ });
+=======
+(window.wp = window.wp || {}).escapeHtml = __webpack_exports__;
+/******/ })()
+;
+>>>>>>> main

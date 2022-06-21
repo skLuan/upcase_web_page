@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["isShallowEqual"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -91,15 +92,63 @@ this["wp"] = this["wp"] || {}; this["wp"]["isShallowEqual"] =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+>>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "isShallowEqualObjects", function() { return /* reexport */ isShallowEqualObjects; });
 __webpack_require__.d(__webpack_exports__, "isShallowEqualArrays", function() { return /* reexport */ isShallowEqualArrays; });
 __webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ isShallowEqual; });
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/is-shallow-equal/build-module/objects.js
+=======
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ isShallowEqual; },
+  "isShallowEqualArrays": function() { return /* reexport */ isShallowEqualArrays; },
+  "isShallowEqualObjects": function() { return /* reexport */ isShallowEqualObjects; }
+});
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/is-shallow-equal/build-module/objects.js
+>>>>>>> main
 /**
  * Returns true if the two objects are shallow equal, or false otherwise.
  *
@@ -141,7 +190,11 @@ function isShallowEqualObjects(a, b) {
   return true;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/is-shallow-equal/build-module/arrays.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/is-shallow-equal/build-module/arrays.js
+>>>>>>> main
 /**
  * Returns true if the two arrays are shallow equal, or false otherwise.
  *
@@ -168,7 +221,11 @@ function isShallowEqualArrays(a, b) {
   return true;
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/is-shallow-equal/build-module/index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/is-shallow-equal/build-module/index.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -202,7 +259,13 @@ function isShallowEqual(a, b) {
   return a === b;
 }
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ });
+=======
+(window.wp = window.wp || {}).isShallowEqual = __webpack_exports__;
+/******/ })()
+;
+>>>>>>> main

@@ -4,7 +4,11 @@
  *
  * This does not include the `spacing` block support even though that visually
  * appears under the "Dimensions" panel in the editor. It remains in its
+<<<<<<< HEAD
  * original `spacing.php` file for backwards compatibility.
+=======
+ * original `spacing.php` file for compatibility with core.
+>>>>>>> main
  *
  * @package WordPress
  * @since 5.9.0
@@ -51,7 +55,11 @@ function wp_register_dimensions_support( $block_type ) {
  * @return array Block dimensions CSS classes and inline styles.
  */
 function wp_apply_dimensions_support( $block_type, $block_attributes ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+<<<<<<< HEAD
 	if ( wp_skip_dimensions_serialization( $block_type ) ) {
+=======
+	if ( wp_should_skip_block_supports_serialization( $block_type, '__experimentalDimensions' ) ) {
+>>>>>>> main
 		return array();
 	}
 
@@ -63,6 +71,7 @@ function wp_apply_dimensions_support( $block_type, $block_attributes ) { // phpc
 	return empty( $styles ) ? array() : array( 'style' => implode( ' ', $styles ) );
 }
 
+<<<<<<< HEAD
 /**
  * Checks whether serialization of the current block's dimensions properties
  * should occur.
@@ -80,6 +89,8 @@ function wp_skip_dimensions_serialization( $block_type ) {
 		$dimensions_support['__experimentalSkipSerialization'];
 }
 
+=======
+>>>>>>> main
 // Register the block support.
 WP_Block_Supports::get_instance()->register(
 	'dimensions',

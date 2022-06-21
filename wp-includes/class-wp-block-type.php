@@ -59,6 +59,18 @@ class WP_Block_Type {
 	public $parent = null;
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Setting ancestor makes a block available only inside the specified
+	 * block types at any position of the ancestor's block subtree.
+	 *
+	 * @since 6.0.0
+	 * @var array|null
+	 */
+	public $ancestor = null;
+
+	/**
+>>>>>>> main
 	 * Block type icon.
 	 *
 	 * @since 5.5.0
@@ -79,7 +91,11 @@ class WP_Block_Type {
 	 * in search interfaces.
 	 *
 	 * @since 5.5.0
+<<<<<<< HEAD
 	 * @var array
+=======
+	 * @var string[]
+>>>>>>> main
 	 */
 	public $keywords = array();
 
@@ -196,6 +212,19 @@ class WP_Block_Type {
 	public $style = null;
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Attributes supported by every block.
+	 *
+	 * @since 6.0.0
+	 * @var array
+	 */
+	const GLOBAL_ATTRIBUTES = array(
+		'lock' => array( 'type' => 'object' ),
+	);
+
+	/**
+>>>>>>> main
 	 * Constructor.
 	 *
 	 * Will populate object properties from the provided arguments.
@@ -207,6 +236,10 @@ class WP_Block_Type {
 	 * @since 5.6.0 Added the `api_version` property.
 	 * @since 5.8.0 Added the `variations` property.
 	 * @since 5.9.0 Added the `view_script` property.
+<<<<<<< HEAD
+=======
+	 * @since 6.0.0 Added the `ancestor` property.
+>>>>>>> main
 	 *
 	 * @see register_block_type()
 	 *
@@ -221,9 +254,17 @@ class WP_Block_Type {
 	 *                                           search interfaces to arrange block types by category.
 	 *     @type array|null    $parent           Setting parent lets a block require that it is only
 	 *                                           available when nested within the specified blocks.
+<<<<<<< HEAD
 	 *     @type string|null   $icon             Block type icon.
 	 *     @type string        $description      A detailed block type description.
 	 *     @type array         $keywords         Additional keywords to produce block type as
+=======
+	 *     @type array|null    $ancestor         Setting ancestor makes a block available only inside the specified
+	 *                                           block types at any position of the ancestor's block subtree.
+	 *     @type string|null   $icon             Block type icon.
+	 *     @type string        $description      A detailed block type description.
+	 *     @type string[]      $keywords         Additional keywords to produce block type as
+>>>>>>> main
 	 *                                           result in search interfaces.
 	 *     @type string|null   $textdomain       The translation textdomain.
 	 *     @type array         $styles           Alternative block styles.
@@ -343,6 +384,21 @@ class WP_Block_Type {
 
 		$args['name'] = $this->name;
 
+<<<<<<< HEAD
+=======
+		// Setup attributes if needed.
+		if ( ! isset( $args['attributes'] ) || ! is_array( $args['attributes'] ) ) {
+			$args['attributes'] = array();
+		}
+
+		// Register core attributes.
+		foreach ( static::GLOBAL_ATTRIBUTES as $attr_key => $attr_schema ) {
+			if ( ! array_key_exists( $attr_key, $args['attributes'] ) ) {
+				$args['attributes'][ $attr_key ] = $attr_schema;
+			}
+		}
+
+>>>>>>> main
 		/**
 		 * Filters the arguments for registering a block type.
 		 *

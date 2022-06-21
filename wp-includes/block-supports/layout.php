@@ -35,6 +35,7 @@ function wp_register_layout_support( $block_type ) {
  * @since 5.9.0
  * @access private
  *
+<<<<<<< HEAD
  * @param string $selector              CSS selector.
  * @param array  $layout                Layout object. The one that is passed has already checked
  *                                      the existence of default block layout.
@@ -43,6 +44,18 @@ function wp_register_layout_support( $block_type ) {
  * @return string CSS style.
  */
 function wp_get_layout_style( $selector, $layout, $has_block_gap_support = false, $gap_value = null ) {
+=======
+ * @param string  $selector                      CSS selector.
+ * @param array   $layout                        Layout object. The one that is passed has already checked
+ *                                               the existence of default block layout.
+ * @param boolean $has_block_gap_support         Whether the theme has support for the block gap.
+ * @param string  $gap_value                     The block gap value to apply.
+ * @param boolean $should_skip_gap_serialization Whether to skip applying the user-defined value set in the editor.
+ * @param string  $fallback_gap_value            The custom fallback value for block gap.
+ * @return string CSS style.
+ */
+function wp_get_layout_style( $selector, $layout, $has_block_gap_support = false, $gap_value = null, $should_skip_gap_serialization = false, $fallback_gap_value = '0.5em' ) {
+>>>>>>> main
 	$layout_type = isset( $layout['type'] ) ? $layout['type'] : 'default';
 
 	$style = '';
@@ -54,6 +67,7 @@ function wp_get_layout_style( $selector, $layout, $has_block_gap_support = false
 		$wide_max_width_value = $wide_size ? $wide_size : $content_size;
 
 		// Make sure there is a single CSS rule, and all tags are stripped for security.
+<<<<<<< HEAD
 		// TODO: Use `safecss_filter_attr` instead - once https://core.trac.wordpress.org/ticket/46197 is patched.
 		$all_max_width_value  = wp_strip_all_tags( explode( ';', $all_max_width_value )[0] );
 		$wide_max_width_value = wp_strip_all_tags( explode( ';', $wide_max_width_value )[0] );
@@ -61,6 +75,13 @@ function wp_get_layout_style( $selector, $layout, $has_block_gap_support = false
 		$style = '';
 		if ( $content_size || $wide_size ) {
 			$style  = "$selector > * {";
+=======
+		$all_max_width_value  = safecss_filter_attr( explode( ';', $all_max_width_value )[0] );
+		$wide_max_width_value = safecss_filter_attr( explode( ';', $wide_max_width_value )[0] );
+
+		if ( $content_size || $wide_size ) {
+			$style  = "$selector > :where(:not(.alignleft):not(.alignright)) {";
+>>>>>>> main
 			$style .= 'max-width: ' . esc_html( $all_max_width_value ) . ';';
 			$style .= 'margin-left: auto !important;';
 			$style .= 'margin-right: auto !important;';
@@ -70,12 +91,25 @@ function wp_get_layout_style( $selector, $layout, $has_block_gap_support = false
 			$style .= "$selector .alignfull { max-width: none; }";
 		}
 
+<<<<<<< HEAD
 		$style .= "$selector .alignleft { float: left; margin-right: 2em; }";
 		$style .= "$selector .alignright { float: right; margin-left: 2em; }";
 		if ( $has_block_gap_support ) {
 			$gap_style = $gap_value ? $gap_value : 'var( --wp--style--block-gap )';
 			$style    .= "$selector > * { margin-top: 0; margin-bottom: 0; }";
 			$style    .= "$selector > * + * { margin-top: $gap_style;  margin-bottom: 0; }";
+=======
+		$style .= "$selector > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }";
+		$style .= "$selector > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }";
+		$style .= "$selector > .aligncenter { margin-left: auto !important; margin-right: auto !important; }";
+		if ( $has_block_gap_support ) {
+			if ( is_array( $gap_value ) ) {
+				$gap_value = isset( $gap_value['top'] ) ? $gap_value['top'] : null;
+			}
+			$gap_style = $gap_value && ! $should_skip_gap_serialization ? $gap_value : 'var( --wp--style--block-gap )';
+			$style    .= "$selector > * { margin-block-start: 0; margin-block-end: 0; }";
+			$style    .= "$selector > * + * { margin-block-start: $gap_style; margin-block-end: 0; }";
+>>>>>>> main
 		}
 	} elseif ( 'flex' === $layout_type ) {
 		$layout_orientation = isset( $layout['orientation'] ) ? $layout['orientation'] : 'horizontal';
@@ -98,6 +132,7 @@ function wp_get_layout_style( $selector, $layout, $has_block_gap_support = false
 		$style  = "$selector {";
 		$style .= 'display: flex;';
 		if ( $has_block_gap_support ) {
+<<<<<<< HEAD
 			$gap_style = $gap_value ? $gap_value : 'var( --wp--style--block-gap, 0.5em )';
 			$style    .= "gap: $gap_style;";
 		} else {
@@ -105,6 +140,20 @@ function wp_get_layout_style( $selector, $layout, $has_block_gap_support = false
 		}
 		$style .= "flex-wrap: $flex_wrap;";
 		$style .= 'align-items: center;';
+=======
+			if ( is_array( $gap_value ) ) {
+				$gap_row    = isset( $gap_value['top'] ) ? $gap_value['top'] : $fallback_gap_value;
+				$gap_column = isset( $gap_value['left'] ) ? $gap_value['left'] : $fallback_gap_value;
+				$gap_value  = $gap_row === $gap_column ? $gap_row : $gap_row . ' ' . $gap_column;
+			}
+			$gap_style = $gap_value && ! $should_skip_gap_serialization ? $gap_value : "var( --wp--style--block-gap, $fallback_gap_value )";
+			$style    .= "gap: $gap_style;";
+		} else {
+			$style .= "gap: $fallback_gap_value;";
+		}
+
+		$style .= "flex-wrap: $flex_wrap;";
+>>>>>>> main
 		if ( 'horizontal' === $layout_orientation ) {
 			$style .= 'align-items: center;';
 			/**
@@ -119,6 +168,11 @@ function wp_get_layout_style( $selector, $layout, $has_block_gap_support = false
 			$style .= 'flex-direction: column;';
 			if ( ! empty( $layout['justifyContent'] ) && array_key_exists( $layout['justifyContent'], $justify_content_options ) ) {
 				$style .= "align-items: {$justify_content_options[ $layout['justifyContent'] ]};";
+<<<<<<< HEAD
+=======
+			} else {
+				$style .= 'align-items: flex-start;';
+>>>>>>> main
 			}
 		}
 		$style .= '}';
@@ -164,8 +218,25 @@ function wp_render_layout_support_flag( $block_content, $block ) {
 	// Skip if gap value contains unsupported characters.
 	// Regex for CSS value borrowed from `safecss_filter_attr`, and used here
 	// because we only want to match against the value, not the CSS attribute.
+<<<<<<< HEAD
 	$gap_value = preg_match( '%[\\\(&=}]|/\*%', $gap_value ) ? null : $gap_value;
 	$style     = wp_get_layout_style( ".$class_name", $used_layout, $has_block_gap_support, $gap_value );
+=======
+	if ( is_array( $gap_value ) ) {
+		foreach ( $gap_value as $key => $value ) {
+			$gap_value[ $key ] = $value && preg_match( '%[\\\(&=}]|/\*%', $value ) ? null : $value;
+		}
+	} else {
+		$gap_value = $gap_value && preg_match( '%[\\\(&=}]|/\*%', $gap_value ) ? null : $gap_value;
+	}
+
+	$fallback_gap_value = _wp_array_get( $block_type->supports, array( 'spacing', 'blockGap', '__experimentalDefault' ), '0.5em' );
+
+	// If a block's block.json skips serialization for spacing or spacing.blockGap,
+	// don't apply the user-defined value to the styles.
+	$should_skip_gap_serialization = wp_should_skip_block_supports_serialization( $block_type, 'spacing', 'blockGap' );
+	$style                         = wp_get_layout_style( ".$class_name", $used_layout, $has_block_gap_support, $gap_value, $should_skip_gap_serialization, $fallback_gap_value );
+>>>>>>> main
 	// This assumes the hook only applies to blocks with a single wrapper.
 	// I think this is a reasonable limitation for that particular hook.
 	$content = preg_replace(
@@ -209,7 +280,10 @@ function wp_restore_group_inner_container( $block_content, $block ) {
 	);
 
 	if (
+<<<<<<< HEAD
 		'core/group' !== $block['blockName'] ||
+=======
+>>>>>>> main
 		WP_Theme_JSON_Resolver::theme_has_support() ||
 		1 === preg_match( $group_with_inner_container_regex, $block_content ) ||
 		( isset( $block['attrs']['layout']['type'] ) && 'default' !== $block['attrs']['layout']['type'] )
@@ -231,4 +305,69 @@ function wp_restore_group_inner_container( $block_content, $block ) {
 	return $updated_content;
 }
 
+<<<<<<< HEAD
 add_filter( 'render_block', 'wp_restore_group_inner_container', 10, 2 );
+=======
+add_filter( 'render_block_core/group', 'wp_restore_group_inner_container', 10, 2 );
+
+/**
+ * For themes without theme.json file, make sure
+ * to restore the outer div for the aligned image block
+ * to avoid breaking styles relying on that div.
+ *
+ * @since 6.0.0
+ * @access private
+ *
+ * @param string $block_content Rendered block content.
+ * @param  array  $block        Block object.
+ * @return string Filtered block content.
+ */
+function wp_restore_image_outer_container( $block_content, $block ) {
+	$image_with_align = "
+/# 1) everything up to the class attribute contents
+(
+	^\s*
+	<figure\b
+	[^>]*
+	\bclass=
+	[\"']
+)
+# 2) the class attribute contents
+(
+	[^\"']*
+	\bwp-block-image\b
+	[^\"']*
+	\b(?:alignleft|alignright|aligncenter)\b
+	[^\"']*
+)
+# 3) everything after the class attribute contents
+(
+	[\"']
+	[^>]*
+	>
+	.*
+	<\/figure>
+)/iUx";
+
+	if (
+		WP_Theme_JSON_Resolver::theme_has_support() ||
+		0 === preg_match( $image_with_align, $block_content, $matches )
+	) {
+		return $block_content;
+	}
+
+	$wrapper_classnames = array( 'wp-block-image' );
+
+	// If the block has a classNames attribute these classnames need to be removed from the content and added back
+	// to the new wrapper div also.
+	if ( ! empty( $block['attrs']['className'] ) ) {
+		$wrapper_classnames = array_merge( $wrapper_classnames, explode( ' ', $block['attrs']['className'] ) );
+	}
+	$content_classnames          = explode( ' ', $matches[2] );
+	$filtered_content_classnames = array_diff( $content_classnames, $wrapper_classnames );
+
+	return '<div class="' . implode( ' ', $wrapper_classnames ) . '">' . $matches[1] . implode( ' ', $filtered_content_classnames ) . $matches[3] . '</div>';
+}
+
+add_filter( 'render_block_core/image', 'wp_restore_image_outer_container', 10, 2 );
+>>>>>>> main

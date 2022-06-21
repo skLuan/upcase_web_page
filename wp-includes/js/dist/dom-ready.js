@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["domReady"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -93,6 +94,36 @@ this["wp"] = this["wp"] || {}; this["wp"]["domReady"] =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return domReady; });
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ domReady; }
+/* harmony export */ });
+>>>>>>> main
 /**
  * @typedef {() => void} Callback
  *
@@ -138,7 +169,13 @@ function domReady(callback) {
   document.addEventListener('DOMContentLoaded', callback);
 }
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ })["default"];
+=======
+(window.wp = window.wp || {}).domReady = __webpack_exports__["default"];
+/******/ })()
+;
+>>>>>>> main

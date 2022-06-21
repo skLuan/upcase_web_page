@@ -83,12 +83,20 @@
   color: rgba(255, 255, 255, 0.65);
 }
 
+<<<<<<< HEAD
 .wp-block-code > code {
   font-family: Menlo, Consolas, monaco, monospace;
   color: #1e1e1e;
   padding: 0.8em 1em;
   border: 1px solid #ddd;
   border-radius: 4px;
+=======
+.wp-block-code {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Menlo, Consolas, monaco, monospace;
+  padding: 0.8em 1em;
+>>>>>>> main
 }
 
 .wp-block-embed figcaption {
@@ -162,16 +170,33 @@
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 .wp-block-group:where(.has-background) {
   padding: 1.25em 2.375em;
 }
 
+=======
+:where(.wp-block-group.has-background) {
+  padding: 1.25em 2.375em;
+}
+
+.wp-block-separator.has-css-opacity {
+  opacity: 0.4;
+}
+
+>>>>>>> main
 .wp-block-separator {
   border: none;
   border-bottom: 2px solid currentColor;
   margin-right: auto;
   margin-left: auto;
+<<<<<<< HEAD
   opacity: 0.4;
+=======
+}
+.wp-block-separator.has-alpha-channel-opacity {
+  opacity: initial;
+>>>>>>> main
 }
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   width: 100px;

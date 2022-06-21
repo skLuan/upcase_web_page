@@ -131,6 +131,7 @@ final class WP_Customize_Nav_Menus {
 	 *
 	 * @since 4.3.0
 	 *
+<<<<<<< HEAD
 	 * @param string $type   Optional. Accepts any custom object type and has built-in support for
 	 *                         'post_type' and 'taxonomy'. Default is 'post_type'.
 	 * @param string $object Optional. Accepts any registered taxonomy or post type name. Default is 'page'.
@@ -142,6 +143,19 @@ final class WP_Customize_Nav_Menus {
 
 		if ( 'post_type' === $type ) {
 			$post_type = get_post_type_object( $object );
+=======
+	 * @param string $object_type Optional. Accepts any custom object type and has built-in support for
+	 *                            'post_type' and 'taxonomy'. Default is 'post_type'.
+	 * @param string $object_name Optional. Accepts any registered taxonomy or post type name. Default is 'page'.
+	 * @param int    $page        Optional. The page number used to generate the query offset. Default is '0'.
+	 * @return array|WP_Error An array of menu items on success, a WP_Error object on failure.
+	 */
+	public function load_available_items_query( $object_type = 'post_type', $object_name = 'page', $page = 0 ) {
+		$items = array();
+
+		if ( 'post_type' === $object_type ) {
+			$post_type = get_post_type_object( $object_name );
+>>>>>>> main
 			if ( ! $post_type ) {
 				return new WP_Error( 'nav_menus_invalid_post_type' );
 			}
@@ -152,7 +166,11 @@ final class WP_Customize_Nav_Menus {
 			 */
 			$important_pages   = array();
 			$suppress_page_ids = array();
+<<<<<<< HEAD
 			if ( 0 === $page && 'page' === $object ) {
+=======
+			if ( 0 === $page && 'page' === $object_name ) {
+>>>>>>> main
 				// Insert Front Page or custom "Home" link.
 				$front_page = 'page' === get_option( 'show_on_front' ) ? (int) get_option( 'page_on_front' ) : 0;
 				if ( ! empty( $front_page ) ) {
@@ -188,6 +206,7 @@ final class WP_Customize_Nav_Menus {
 						$suppress_page_ids[] = $privacy_policy_page->ID;
 					}
 				}
+<<<<<<< HEAD
 			} elseif ( 'post' !== $object && 0 === $page && $post_type->has_archive ) {
 				// Add a post type archive link.
 				$items[] = array(
@@ -197,6 +216,17 @@ final class WP_Customize_Nav_Menus {
 					'type_label' => __( 'Post Type Archive' ),
 					'object'     => $object,
 					'url'        => get_post_type_archive_link( $object ),
+=======
+			} elseif ( 'post' !== $object_name && 0 === $page && $post_type->has_archive ) {
+				// Add a post type archive link.
+				$items[] = array(
+					'id'         => $object_name . '-archive',
+					'title'      => $post_type->labels->archives,
+					'type'       => 'post_type_archive',
+					'type_label' => __( 'Post Type Archive' ),
+					'object'     => $object_name,
+					'url'        => get_post_type_archive_link( $object_name ),
+>>>>>>> main
 				);
 			}
 
@@ -216,7 +246,11 @@ final class WP_Customize_Nav_Menus {
 				'offset'      => 10 * $page,
 				'orderby'     => 'date',
 				'order'       => 'DESC',
+<<<<<<< HEAD
 				'post_type'   => $object,
+=======
+				'post_type'   => $object_name,
+>>>>>>> main
 			);
 
 			// Add suppression array to arguments for get_posts.
@@ -253,10 +287,17 @@ final class WP_Customize_Nav_Menus {
 					'url'        => get_permalink( (int) $post->ID ),
 				);
 			}
+<<<<<<< HEAD
 		} elseif ( 'taxonomy' === $type ) {
 			$terms = get_terms(
 				array(
 					'taxonomy'     => $object,
+=======
+		} elseif ( 'taxonomy' === $object_type ) {
+			$terms = get_terms(
+				array(
+					'taxonomy'     => $object_name,
+>>>>>>> main
 					'child_of'     => 0,
 					'exclude'      => '',
 					'hide_empty'   => false,
@@ -292,12 +333,21 @@ final class WP_Customize_Nav_Menus {
 		 *
 		 * @since 4.3.0
 		 *
+<<<<<<< HEAD
 		 * @param array  $items  The array of menu items.
 		 * @param string $type   The object type.
 		 * @param string $object The object name.
 		 * @param int    $page   The current page number.
 		 */
 		$items = apply_filters( 'customize_nav_menu_available_items', $items, $type, $object, $page );
+=======
+		 * @param array  $items       The array of menu items.
+		 * @param string $object_type The object type.
+		 * @param string $object_name The object name.
+		 * @param int    $page        The current page number.
+		 */
+		$items = apply_filters( 'customize_nav_menu_available_items', $items, $object_type, $object_name, $page );
+>>>>>>> main
 
 		return $items;
 	}
@@ -476,7 +526,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Enqueue scripts and styles for Customizer pane.
+=======
+	 * Enqueues scripts and styles for Customizer pane.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 */
@@ -598,7 +652,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Allow non-statically created settings to be constructed with custom WP_Customize_Setting subclass.
+=======
+	 * Allows non-statically created settings to be constructed with custom WP_Customize_Setting subclass.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 *
@@ -619,7 +677,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add the customizer settings and controls.
+=======
+	 * Adds the customizer settings and controls.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 */
@@ -863,7 +925,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the base10 intval.
+=======
+	 * Gets the base10 intval.
+>>>>>>> main
 	 *
 	 * This is used as a setting's sanitize_callback; we can't use just plain
 	 * intval because the second argument is not what intval() expects.
@@ -878,7 +944,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Return an array of all the available item types.
+=======
+	 * Returns an array of all the available item types.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 * @since 4.7.0  Each array item now includes a `$type_label` in addition to `$title`, `$type`, and `$object`.
@@ -929,7 +999,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add a new `auto-draft` post.
+=======
+	 * Adds a new `auto-draft` post.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -1056,7 +1130,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print the JavaScript templates used to render Menu Customizer components.
+=======
+	 * Prints the JavaScript templates used to render Menu Customizer components.
+>>>>>>> main
 	 *
 	 * Templates are imported into the JS use wp.template.
 	 *
@@ -1119,7 +1197,11 @@ final class WP_Customize_Nav_Menus {
 
 		<script type="text/html" id="tmpl-nav-menu-create-menu-section-title">
 			<p class="add-new-menu-notice">
+<<<<<<< HEAD
 				<?php _e( 'It doesn&#8217;t look like your site has any menus yet. Want to build one? Click the button to start.' ); ?>
+=======
+				<?php _e( 'It does not look like your site has any menus yet. Want to build one? Click the button to start.' ); ?>
+>>>>>>> main
 			</p>
 			<p class="add-new-menu-notice">
 				<?php _e( 'You&#8217;ll create a menu, assign it a location, and add menu items like links to pages and categories. If your theme has multiple menu areas, you might need to create more than one.' ); ?>
@@ -1134,7 +1216,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print the HTML template used to render the add-menu-item frame.
+=======
+	 * Prints the HTML template used to render the add-menu-item frame.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 */
@@ -1192,14 +1278,21 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print the markup for new menu items.
+=======
+	 * Prints the markup for new menu items.
+>>>>>>> main
 	 *
 	 * To be used in the template #available-menu-items.
 	 *
 	 * @since 4.7.0
 	 *
 	 * @param array $available_item_type Menu item data to output, including title, type, and label.
+<<<<<<< HEAD
 	 * @return void
+=======
+>>>>>>> main
 	 */
 	protected function print_post_type_container( $available_item_type ) {
 		$id = sprintf( 'available-menu-items-%s-%s', $available_item_type['type'], $available_item_type['object'] );
@@ -1237,11 +1330,17 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print the markup for available menu item custom links.
 	 *
 	 * @since 4.7.0
 	 *
 	 * @return void
+=======
+	 * Prints the markup for available menu item custom links.
+	 *
+	 * @since 4.7.0
+>>>>>>> main
 	 */
 	protected function print_custom_links_available_menu_item() {
 		?>
@@ -1317,7 +1416,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add hooks for the Customizer preview.
+=======
+	 * Adds hooks for the Customizer preview.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 */
@@ -1330,7 +1433,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Make the auto-draft status protected so that it can be queried.
+=======
+	 * Makes the auto-draft status protected so that it can be queried.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -1342,7 +1449,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Sanitize post IDs for posts created for nav menu items to be published.
+=======
+	 * Sanitizes post IDs for posts created for nav menu items to be published.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -1372,7 +1483,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Publish the auto-draft posts that were created for nav menu items.
+=======
+	 * Publishes the auto-draft posts that were created for nav menu items.
+>>>>>>> main
 	 *
 	 * The post IDs will have been sanitized by already by
 	 * `WP_Customize_Nav_Menu_Items::sanitize_nav_menus_created_posts()` to
@@ -1413,7 +1528,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Keep track of the arguments that are being passed to wp_nav_menu().
+=======
+	 * Keeps track of the arguments that are being passed to wp_nav_menu().
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 *
@@ -1517,7 +1636,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Enqueue scripts for the Customizer preview.
+=======
+	 * Enqueues scripts for the Customizer preview.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 */
@@ -1540,7 +1663,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Export any wp_nav_menu() calls during the rendering of any partials.
+=======
+	 * Exports any wp_nav_menu() calls during the rendering of any partials.
+>>>>>>> main
 	 *
 	 * @since 4.5.0
 	 *
@@ -1553,7 +1680,11 @@ final class WP_Customize_Nav_Menus {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Render a specific menu via wp_nav_menu() using the supplied arguments.
+=======
+	 * Renders a specific menu via wp_nav_menu() using the supplied arguments.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 *

@@ -8,7 +8,11 @@
  */
 
 /**
+<<<<<<< HEAD
  * Core class used to implement SimpliePie feed sanitization.
+=======
+ * Core class used to implement SimplePie feed sanitization.
+>>>>>>> main
  *
  * Extends the SimplePie_Sanitize class to use KSES, because
  * we cannot universally count on DOMDocument being available.

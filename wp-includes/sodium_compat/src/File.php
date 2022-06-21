@@ -1154,19 +1154,29 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
      */
     private static function sign_core32($filePath, $secretKey)
     {
+<<<<<<< HEAD
         /** @var int|bool $size */
+=======
+>>>>>>> main
         $size = filesize($filePath);
         if (!is_int($size)) {
             throw new SodiumException('Could not obtain the file size');
         }
+<<<<<<< HEAD
         /** @var int $size */
 
         /** @var resource|bool $fp */
+=======
+
+>>>>>>> main
         $fp = fopen($filePath, 'rb');
         if (!is_resource($fp)) {
             throw new SodiumException('Could not open input file for reading');
         }
+<<<<<<< HEAD
         /** @var resource $fp */
+=======
+>>>>>>> main
 
         /** @var string $az */
         $az = hash('sha512', self::substr($secretKey, 0, 32), true);
@@ -1179,6 +1189,7 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
         /** @var resource $hs */
         $hs = self::updateHashWithFile($hs, $fp, $size);
 
+<<<<<<< HEAD
         /** @var string $nonceHash */
         $nonceHash = hash_final($hs, true);
 
@@ -1189,6 +1200,11 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
         $nonce = ParagonIE_Sodium_Core32_Ed25519::sc_reduce($nonceHash) . self::substr($nonceHash, 32);
 
         /** @var string $sig */
+=======
+        $nonceHash = hash_final($hs, true);
+        $pk = self::substr($secretKey, 32, 32);
+        $nonce = ParagonIE_Sodium_Core32_Ed25519::sc_reduce($nonceHash) . self::substr($nonceHash, 32);
+>>>>>>> main
         $sig = ParagonIE_Sodium_Core32_Ed25519::ge_p3_tobytes(
             ParagonIE_Sodium_Core32_Ed25519::ge_scalarmult_base($nonce)
         );
@@ -1199,6 +1215,7 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
         /** @var resource $hs */
         $hs = self::updateHashWithFile($hs, $fp, $size);
 
+<<<<<<< HEAD
         /** @var string $hramHash */
         $hramHash = hash_final($hs, true);
 
@@ -1206,6 +1223,12 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
         $hram = ParagonIE_Sodium_Core32_Ed25519::sc_reduce($hramHash);
 
         /** @var string $sigAfter */
+=======
+        $hramHash = hash_final($hs, true);
+
+        $hram = ParagonIE_Sodium_Core32_Ed25519::sc_reduce($hramHash);
+
+>>>>>>> main
         $sigAfter = ParagonIE_Sodium_Core32_Ed25519::sc_muladd($hram, $az, $nonce);
 
         /** @var string $sig */
@@ -1243,6 +1266,10 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
         if (ParagonIE_Sodium_Core32_Ed25519::small_order($sig)) {
             throw new SodiumException('Signature is on too small of an order');
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         if ((self::chrToInt($sig[63]) & 224) !== 0) {
             throw new SodiumException('Invalid signature');
         }

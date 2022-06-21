@@ -9,7 +9,11 @@
  */
 
 /**
+<<<<<<< HEAD
  * Display the ID of the current item in the WordPress Loop.
+=======
+ * Displays the ID of the current item in the WordPress Loop.
+>>>>>>> main
  *
  * @since 0.71
  */
@@ -18,7 +22,11 @@ function the_ID() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionNam
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve the ID of the current item in the WordPress Loop.
+=======
+ * Retrieves the ID of the current item in the WordPress Loop.
+>>>>>>> main
  *
  * @since 2.1.0
  *
@@ -30,7 +38,11 @@ function get_the_ID() { // phpcs:ignore WordPress.NamingConventions.ValidFunctio
 }
 
 /**
+<<<<<<< HEAD
  * Display or retrieve the current post title with optional markup.
+=======
+ * Displays or retrieves the current post title with optional markup.
+>>>>>>> main
  *
  * @since 0.71
  *
@@ -56,7 +68,11 @@ function the_title( $before = '', $after = '', $echo = true ) {
 }
 
 /**
+<<<<<<< HEAD
  * Sanitize the current title when retrieving or displaying.
+=======
+ * Sanitizes the current title when retrieving or displaying.
+>>>>>>> main
  *
  * Works like the_title(), except the parameters can be in a string or
  * an array. See the function for what can be override in the $args parameter.
@@ -103,11 +119,19 @@ function the_title_attribute( $args = '' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve post title.
  *
  * If the post is protected and the visitor is not an admin, then "Protected"
  * will be displayed before the post title. If the post is private, then
  * "Private" will be located before the post title.
+=======
+ * Retrieves the post title.
+ *
+ * If the post is protected and the visitor is not an admin, then "Protected"
+ * will be inserted before the post title. If the post is private, then
+ * "Private" will be inserted before the post title.
+>>>>>>> main
  *
  * @since 0.71
  *
@@ -172,7 +196,11 @@ function get_the_title( $post = 0 ) {
 }
 
 /**
+<<<<<<< HEAD
  * Display the Post Global Unique Identifier (guid).
+=======
+ * Displays the Post Global Unique Identifier (guid).
+>>>>>>> main
  *
  * The guid will appear to be a link, but should not be used as a link to the
  * post. The reason you should not use it as a link, is because of moving the
@@ -204,7 +232,11 @@ function the_guid( $post = 0 ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve the Post Global Unique Identifier (guid).
+=======
+ * Retrieves the Post Global Unique Identifier (guid).
+>>>>>>> main
  *
  * The guid will appear to be a link, but should not be used as an link to the
  * post. The reason you should not use it as a link, is because of moving the
@@ -233,7 +265,11 @@ function get_the_guid( $post = 0 ) {
 }
 
 /**
+<<<<<<< HEAD
  * Display the post content.
+=======
+ * Displays the post content.
+>>>>>>> main
  *
  * @since 0.71
  *
@@ -256,7 +292,11 @@ function the_content( $more_link_text = null, $strip_teaser = false ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve the post content.
+=======
+ * Retrieves the post content.
+>>>>>>> main
  *
  * @since 0.71
  * @since 5.2.0 Added the `$post` parameter.
@@ -376,7 +416,11 @@ function get_the_content( $more_link_text = null, $strip_teaser = false, $post =
 }
 
 /**
+<<<<<<< HEAD
  * Display the post excerpt.
+=======
+ * Displays the post excerpt.
+>>>>>>> main
  *
  * @since 0.71
  */
@@ -839,7 +883,11 @@ function get_body_class( $class = '' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Whether post requires password and correct password has been provided.
+=======
+ * Determines whether the post requires password and whether a correct password has been provided.
+>>>>>>> main
  *
  * @since 2.7.0
  *
@@ -1063,7 +1111,11 @@ function _wp_link_page( $i ) {
 //
 
 /**
+<<<<<<< HEAD
  * Retrieve post custom meta data field.
+=======
+ * Retrieves post custom meta data field.
+>>>>>>> main
  *
  * @since 1.5.0
  *
@@ -1084,7 +1136,11 @@ function post_custom( $key = '' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Display a list of post custom fields.
+=======
+ * Displays a list of post custom fields.
+>>>>>>> main
  *
  * @since 1.2.0
  *
@@ -1133,7 +1189,11 @@ function the_meta() {
 //
 
 /**
+<<<<<<< HEAD
  * Retrieve or display a list of pages as a dropdown (select list).
+=======
+ * Retrieves or displays a list of pages as a dropdown (select list).
+>>>>>>> main
  *
  * @since 2.1.0
  * @since 4.2.0 The `$value_field` argument was added.
@@ -1224,7 +1284,11 @@ function wp_dropdown_pages( $args = '' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve or display a list of pages (or hierarchical post type items) in list (li) format.
+=======
+ * Retrieves or displays a list of pages (or hierarchical post type items) in list (li) format.
+>>>>>>> main
  *
  * @since 1.5.0
  * @since 4.7.0 Added the `item_spacing` argument.
@@ -1259,7 +1323,12 @@ function wp_dropdown_pages( $args = '' ) {
  *                                      will not be wrapped with unordered list `<ul>` tags. Default 'Pages'.
  *     @type string       $item_spacing Whether to preserve whitespace within the menu's HTML. Accepts 'preserve' or 'discard'.
  *                                      Default 'preserve'.
+<<<<<<< HEAD
  *     @type Walker       $walker       Walker instance to use for listing pages. Default empty (Walker_Page).
+=======
+ *     @type Walker       $walker       Walker instance to use for listing pages. Default empty which results in a
+ *                                      Walker_Page instance being used.
+>>>>>>> main
  * }
  * @return void|string Void if 'echo' argument is true, HTML list of pages if 'echo' is false.
  */
@@ -1381,7 +1450,12 @@ function wp_list_pages( $args = '' ) {
  *     @type string          $after        The HTML or text to append to the menu. Default is '</ul>'.
  *     @type string          $item_spacing Whether to preserve whitespace within the menu's HTML. Accepts 'preserve'
  *                                         or 'discard'. Default 'discard'.
+<<<<<<< HEAD
  *     @type Walker          $walker       Walker instance to use for listing pages. Default empty (Walker_Page).
+=======
+ *     @type Walker          $walker       Walker instance to use for listing pages. Default empty which results in a
+ *                                         Walker_Page instance being used.
+>>>>>>> main
  * }
  * @return void|string Void if 'echo' argument is true, HTML menu if 'echo' is false.
  */
@@ -1513,7 +1587,11 @@ function wp_page_menu( $args = array() ) {
 //
 
 /**
+<<<<<<< HEAD
  * Retrieve HTML list content for page list.
+=======
+ * Retrieves HTML list content for page list.
+>>>>>>> main
  *
  * @uses Walker_Page to create HTML list content.
  * @since 2.1.0
@@ -1521,21 +1599,34 @@ function wp_page_menu( $args = array() ) {
  * @param array $pages
  * @param int   $depth
  * @param int   $current_page
+<<<<<<< HEAD
  * @param array $r
  * @return string
  */
 function walk_page_tree( $pages, $depth, $current_page, $r ) {
 	if ( empty( $r['walker'] ) ) {
+=======
+ * @param array $args
+ * @return string
+ */
+function walk_page_tree( $pages, $depth, $current_page, $args ) {
+	if ( empty( $args['walker'] ) ) {
+>>>>>>> main
 		$walker = new Walker_Page;
 	} else {
 		/**
 		 * @var Walker $walker
 		 */
+<<<<<<< HEAD
 		$walker = $r['walker'];
+=======
+		$walker = $args['walker'];
+>>>>>>> main
 	}
 
 	foreach ( (array) $pages as $page ) {
 		if ( $page->post_parent ) {
+<<<<<<< HEAD
 			$r['pages_with_children'][ $page->post_parent ] = true;
 		}
 	}
@@ -1545,6 +1636,17 @@ function walk_page_tree( $pages, $depth, $current_page, $r ) {
 
 /**
  * Retrieve HTML dropdown (select) content for page list.
+=======
+			$args['pages_with_children'][ $page->post_parent ] = true;
+		}
+	}
+
+	return $walker->walk( $pages, $depth, $args, $current_page );
+}
+
+/**
+ * Retrieves HTML dropdown (select) content for page list.
+>>>>>>> main
  *
  * @since 2.1.0
  * @since 5.3.0 Formalized the existing `...$args` parameter by adding it
@@ -1574,7 +1676,11 @@ function walk_page_dropdown_tree( ...$args ) {
 //
 
 /**
+<<<<<<< HEAD
  * Display an attachment page link using an image or icon.
+=======
+ * Displays an attachment page link using an image or icon.
+>>>>>>> main
  *
  * @since 2.0.0
  *
@@ -1596,7 +1702,11 @@ function the_attachment_link( $id = 0, $fullsize = false, $deprecated = false, $
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve an attachment page link using an image or icon, if possible.
+=======
+ * Retrieves an attachment page link using an image or icon, if possible.
+>>>>>>> main
  *
  * @since 2.5.0
  * @since 4.4.0 The `$id` parameter can now accept either a post ID or `WP_Post` object.
@@ -1658,7 +1768,11 @@ function wp_get_attachment_link( $id = 0, $size = 'thumbnail', $permalink = fals
 }
 
 /**
+<<<<<<< HEAD
  * Wrap attachment in paragraph tag before content.
+=======
+ * Wraps attachment in paragraph tag before content.
+>>>>>>> main
  *
  * @since 2.0.0
  *
@@ -1711,7 +1825,11 @@ function prepend_attachment( $content ) {
 //
 
 /**
+<<<<<<< HEAD
  * Retrieve protected post password form content.
+=======
+ * Retrieves protected post password form content.
+>>>>>>> main
  *
  * @since 1.0.0
  *
@@ -1743,7 +1861,11 @@ function get_the_password_form( $post = 0 ) {
 }
 
 /**
+<<<<<<< HEAD
  * Determines whether currently in a page template.
+=======
+ * Determines whether the current post uses a page template.
+>>>>>>> main
  *
  * This template tag allows you to determine if you are in a page template.
  * You can optionally provide a template filename or array of template filenames
@@ -1787,7 +1909,11 @@ function is_page_template( $template = '' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Get the specific template filename for a given post.
+=======
+ * Gets the specific template filename for a given post.
+>>>>>>> main
  *
  * @since 3.4.0
  * @since 4.7.0 Now works with any post type, not just pages.
@@ -1813,7 +1939,11 @@ function get_page_template_slug( $post = null ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve formatted date timestamp of a revision (linked to that revisions's page).
+=======
+ * Retrieves formatted date timestamp of a revision (linked to that revisions's page).
+>>>>>>> main
  *
  * @since 2.6.0
  *
@@ -1854,7 +1984,11 @@ function wp_post_revision_title( $revision, $link = true ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve formatted date timestamp of a revision (linked to that revisions's page).
+=======
+ * Retrieves formatted date timestamp of a revision (linked to that revisions's page).
+>>>>>>> main
  *
  * @since 3.6.0
  *
@@ -1918,7 +2052,11 @@ function wp_post_revision_title_expanded( $revision, $link = true ) {
 }
 
 /**
+<<<<<<< HEAD
  * Display a list of a post's revisions.
+=======
+ * Displays a list of a post's revisions.
+>>>>>>> main
  *
  * Can output either a UL with edit links or a TABLE with diff interface, and
  * restore action links.

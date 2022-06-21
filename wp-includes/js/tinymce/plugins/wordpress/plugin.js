@@ -253,7 +253,11 @@ tinymce.PluginManager.add( 'wordpress', function( editor ) {
 
 	editor.addCommand( 'WP_Help', function() {
 		var access = tinymce.Env.mac ? __( 'Ctrl + Alt + letter:' ) : __( 'Shift + Alt + letter:' ),
+<<<<<<< HEAD
 			meta = tinymce.Env.mac ? __( 'Cmd + letter:' ) : __( 'Ctrl + letter:' ),
+=======
+			meta = tinymce.Env.mac ? __( '⌘ + letter:' ) : __( 'Ctrl + letter:' ),
+>>>>>>> main
 			table1 = [],
 			table2 = [],
 			row1 = {},

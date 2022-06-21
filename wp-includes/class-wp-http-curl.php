@@ -258,7 +258,11 @@ class WP_Http_Curl {
 		curl_exec( $handle );
 
 		$processed_headers   = WP_Http::processHeaders( $this->headers, $url );
+<<<<<<< HEAD
 		$theBody             = $this->body;
+=======
+		$body                = $this->body;
+>>>>>>> main
 		$bytes_written_total = $this->bytes_written_total;
 
 		$this->headers             = '';
@@ -268,9 +272,15 @@ class WP_Http_Curl {
 		$curl_error = curl_errno( $handle );
 
 		// If an error occurred, or, no response.
+<<<<<<< HEAD
 		if ( $curl_error || ( 0 == strlen( $theBody ) && empty( $processed_headers['headers'] ) ) ) {
 			if ( CURLE_WRITE_ERROR /* 23 */ == $curl_error ) {
 				if ( ! $this->max_body_length || $this->max_body_length != $bytes_written_total ) {
+=======
+		if ( $curl_error || ( 0 === strlen( $body ) && empty( $processed_headers['headers'] ) ) ) {
+			if ( CURLE_WRITE_ERROR /* 23 */ === $curl_error ) {
+				if ( ! $this->max_body_length || $this->max_body_length !== $bytes_written_total ) {
+>>>>>>> main
 					if ( $parsed_args['stream'] ) {
 						curl_close( $handle );
 						fclose( $this->stream_handle );
@@ -316,10 +326,17 @@ class WP_Http_Curl {
 		if ( true === $parsed_args['decompress']
 			&& true === WP_Http_Encoding::should_decode( $processed_headers['headers'] )
 		) {
+<<<<<<< HEAD
 			$theBody = WP_Http_Encoding::decompress( $theBody );
 		}
 
 		$response['body'] = $theBody;
+=======
+			$body = WP_Http_Encoding::decompress( $body );
+		}
+
+		$response['body'] = $body;
+>>>>>>> main
 
 		return $response;
 	}

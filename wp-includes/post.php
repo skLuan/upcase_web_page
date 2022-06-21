@@ -18,6 +18,11 @@
  * @since 2.9.0
  */
 function create_initial_post_types() {
+<<<<<<< HEAD
+=======
+	WP_Post_Type::reset_default_labels();
+
+>>>>>>> main
 	register_post_type(
 		'post',
 		array(
@@ -1707,13 +1712,37 @@ function register_post_type( $post_type, $args = array() ) {
 	 */
 	do_action( 'registered_post_type', $post_type, $post_type_object );
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Fires after a specific post type is registered.
+	 *
+	 * The dynamic portion of the filter name, `$post_type`, refers to the post type key.
+	 *
+	 * Possible hook names include:
+	 *
+	 *  - `registered_post_type_post`
+	 *  - `registered_post_type_page`
+	 *
+	 * @since 6.0.0
+	 *
+	 * @param string       $post_type        Post type.
+	 * @param WP_Post_Type $post_type_object Arguments used to register the post type.
+	 */
+	do_action( "registered_post_type_{$post_type}", $post_type, $post_type_object );
+
+>>>>>>> main
 	return $post_type_object;
 }
 
 /**
  * Unregisters a post type.
  *
+<<<<<<< HEAD
  * Can not be used to unregister built-in post types.
+=======
+ * Cannot be used to unregister built-in post types.
+>>>>>>> main
  *
  * @since 4.5.0
  *
@@ -1955,6 +1984,7 @@ function _post_type_meta_capabilities( $capabilities = null ) {
  * @return object Object with all the labels as member variables.
  */
 function get_post_type_labels( $post_type_object ) {
+<<<<<<< HEAD
 	$nohier_vs_hier_defaults = array(
 		'name'                     => array( _x( 'Posts', 'post type general name' ), _x( 'Pages', 'post type general name' ) ),
 		'singular_name'            => array( _x( 'Post', 'post type singular name' ), _x( 'Page', 'post type singular name' ) ),
@@ -1995,6 +2025,9 @@ function get_post_type_labels( $post_type_object ) {
 			_x( 'A link to a page.', 'navigation link block description' ),
 		),
 	);
+=======
+	$nohier_vs_hier_defaults = WP_Post_Type::get_default_labels();
+>>>>>>> main
 
 	$nohier_vs_hier_defaults['menu_name'] = $nohier_vs_hier_defaults['name'];
 
@@ -2292,7 +2325,11 @@ function is_post_type_viewable( $post_type ) {
 /**
  * Determine whether a post status is considered "viewable".
  *
+<<<<<<< HEAD
  * For built-in post statuses such as publish and private, the 'public' value will be evaluted.
+=======
+ * For built-in post statuses such as publish and private, the 'public' value will be evaluated.
+>>>>>>> main
  * For all others, the 'publicly_queryable' value will be used.
  *
  * @since 5.7.0
@@ -2476,7 +2513,11 @@ function add_post_meta( $post_id, $meta_key, $meta_value, $unique = false ) {
  * @return bool True on success, false on failure.
  */
 function delete_post_meta( $post_id, $meta_key, $meta_value = '' ) {
+<<<<<<< HEAD
 	// Make sure meta is added to the post, not a revision.
+=======
+	// Make sure meta is deleted from the post, not from a revision.
+>>>>>>> main
 	$the_post = wp_is_post_revision( $post_id );
 	if ( $the_post ) {
 		$post_id = $the_post;
@@ -2528,7 +2569,11 @@ function get_post_meta( $post_id, $key = '', $single = false ) {
  *                  is the same as the one that is already in the database.
  */
 function update_post_meta( $post_id, $meta_key, $meta_value, $prev_value = '' ) {
+<<<<<<< HEAD
 	// Make sure meta is added to the post, not a revision.
+=======
+	// Make sure meta is updated for the post, not for a revision.
+>>>>>>> main
 	$the_post = wp_is_post_revision( $post_id );
 	if ( $the_post ) {
 		$post_id = $the_post;
@@ -2591,7 +2636,13 @@ function unregister_post_meta( $post_type, $meta_key ) {
  * @since 1.2.0
  *
  * @param int $post_id Optional. Post ID. Default is the ID of the global `$post`.
+<<<<<<< HEAD
  * @return array Post meta for the given post.
+=======
+ * @return mixed An array of values.
+ *               False for an invalid `$post_id` (non-numeric, zero, or negative value).
+ *               An empty string if a valid but non-existing post ID is passed.
+>>>>>>> main
  */
 function get_post_custom( $post_id = 0 ) {
 	$post_id = absint( $post_id );
@@ -2913,7 +2964,11 @@ function stick_post( $post_id ) {
 	$updated  = false;
 
 	if ( ! is_array( $stickies ) ) {
+<<<<<<< HEAD
 		$stickies = array( $post_id );
+=======
+		$stickies = array();
+>>>>>>> main
 	} else {
 		$stickies = array_unique( array_map( 'intval', $stickies ) );
 	}
@@ -3386,9 +3441,15 @@ function wp_delete_post( $postid = 0, $force_delete = false ) {
 	 *
 	 * @since 4.4.0
 	 *
+<<<<<<< HEAD
 	 * @param bool|null $delete       Whether to go forward with deletion.
 	 * @param WP_Post   $post         Post object.
 	 * @param bool      $force_delete Whether to bypass the Trash.
+=======
+	 * @param WP_Post|false|null $delete       Whether to go forward with deletion. @TODO description
+	 * @param WP_Post            $post         Post object.
+	 * @param bool               $force_delete Whether to bypass the Trash.
+>>>>>>> main
 	 */
 	$check = apply_filters( 'pre_delete_post', null, $post, $force_delete );
 	if ( null !== $check ) {
@@ -4365,27 +4426,49 @@ function wp_insert_post( $postarr, $wp_error = false, $fire_after_hooks = true )
 		 * Filters attachment post data before it is updated in or added to the database.
 		 *
 		 * @since 3.9.0
+<<<<<<< HEAD
 		 * @since 5.4.1 `$unsanitized_postarr` argument added.
+=======
+		 * @since 5.4.1 The `$unsanitized_postarr` parameter was added.
+		 * @since 6.0.0 The `$update` parameter was added.
+>>>>>>> main
 		 *
 		 * @param array $data                An array of slashed, sanitized, and processed attachment post data.
 		 * @param array $postarr             An array of slashed and sanitized attachment post data, but not processed.
 		 * @param array $unsanitized_postarr An array of slashed yet *unsanitized* and unprocessed attachment post data
 		 *                                   as originally passed to wp_insert_post().
+<<<<<<< HEAD
 		 */
 		$data = apply_filters( 'wp_insert_attachment_data', $data, $postarr, $unsanitized_postarr );
+=======
+		 * @param bool  $update              Whether this is an existing attachment post being updated.
+		 */
+		$data = apply_filters( 'wp_insert_attachment_data', $data, $postarr, $unsanitized_postarr, $update );
+>>>>>>> main
 	} else {
 		/**
 		 * Filters slashed post data just before it is inserted into the database.
 		 *
 		 * @since 2.7.0
+<<<<<<< HEAD
 		 * @since 5.4.1 `$unsanitized_postarr` argument added.
+=======
+		 * @since 5.4.1 The `$unsanitized_postarr` parameter was added.
+		 * @since 6.0.0 The `$update` parameter was added.
+>>>>>>> main
 		 *
 		 * @param array $data                An array of slashed, sanitized, and processed post data.
 		 * @param array $postarr             An array of sanitized (and slashed) but otherwise unmodified post data.
 		 * @param array $unsanitized_postarr An array of slashed yet *unsanitized* and unprocessed post data as
 		 *                                   originally passed to wp_insert_post().
+<<<<<<< HEAD
 		 */
 		$data = apply_filters( 'wp_insert_post_data', $data, $postarr, $unsanitized_postarr );
+=======
+		 * @param bool  $update              Whether this is an existing post being updated.
+		 */
+		$data = apply_filters( 'wp_insert_post_data', $data, $postarr, $unsanitized_postarr, $update );
+>>>>>>> main
 	}
 
 	$data  = wp_unslash( $data );
@@ -6358,9 +6441,15 @@ function wp_delete_attachment( $post_id, $force_delete = false ) {
 	 *
 	 * @since 5.5.0
 	 *
+<<<<<<< HEAD
 	 * @param bool|null $delete       Whether to go forward with deletion.
 	 * @param WP_Post   $post         Post object.
 	 * @param bool      $force_delete Whether to bypass the Trash.
+=======
+	 * @param WP_Post|false|null $delete       Whether to go forward with deletion. @TODO description
+	 * @param WP_Post            $post         Post object.
+	 * @param bool               $force_delete Whether to bypass the Trash.
+>>>>>>> main
 	 */
 	$check = apply_filters( 'pre_delete_attachment', null, $post, $force_delete );
 	if ( null !== $check ) {
@@ -6532,6 +6621,10 @@ function wp_delete_attachment_files( $post_id, $meta, $backup_sizes, $file ) {
  *     @type array  $sizes      Keys are size slugs, each value is an array containing
  *                              'file', 'width', 'height', and 'mime-type'.
  *     @type array  $image_meta Image metadata.
+<<<<<<< HEAD
+=======
+ *     @type int    $filesize   File size of the attachment.
+>>>>>>> main
  * }
  */
 function wp_get_attachment_metadata( $attachment_id = 0, $unfiltered = false ) {
@@ -6607,7 +6700,11 @@ function wp_update_attachment_metadata( $attachment_id, $data ) {
  *
  * @since 2.1.0
  *
+<<<<<<< HEAD
  * @global string $pagenow
+=======
+ * @global string $pagenow The filename of the current screen.
+>>>>>>> main
  *
  * @param int $attachment_id Optional. Attachment post ID. Defaults to global $post.
  * @return string|false Attachment URL, otherwise false.
@@ -7365,9 +7462,20 @@ function update_post_cache( &$posts ) {
 		return;
 	}
 
+<<<<<<< HEAD
 	foreach ( $posts as $post ) {
 		wp_cache_add( $post->ID, $post, 'posts' );
 	}
+=======
+	$data = array();
+	foreach ( $posts as $post ) {
+		if ( empty( $post->filter ) || 'raw' !== $post->filter ) {
+			$post = sanitize_post( $post, 'raw' );
+		}
+		$data[ $post->ID ] = $post;
+	}
+	wp_cache_add_multiple( $data, 'posts' );
+>>>>>>> main
 }
 
 /**

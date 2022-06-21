@@ -103,7 +103,11 @@ class WP_Styles extends WP_Dependencies {
 	/**
 	 * Holds a string which contains the type attribute for style tag.
 	 *
+<<<<<<< HEAD
 	 * If the current theme does not declare HTML5 support for 'style',
+=======
+	 * If the active theme does not declare HTML5 support for 'style',
+>>>>>>> main
 	 * then it initializes as `type='text/css'`.
 	 *
 	 * @since 5.3.0
@@ -324,6 +328,7 @@ class WP_Styles extends WP_Dependencies {
 	 *
 	 * @since 3.3.0
 	 *
+<<<<<<< HEAD
 	 * @param string $handle The style's registered handle.
 	 * @param bool   $echo   Optional. Whether to echo the inline style
 	 *                       instead of just returning it. Default true.
@@ -331,6 +336,15 @@ class WP_Styles extends WP_Dependencies {
 	 *                     true otherwise.
 	 */
 	public function print_inline_style( $handle, $echo = true ) {
+=======
+	 * @param string $handle  The style's registered handle.
+	 * @param bool   $display Optional. Whether to print the inline style
+	 *                        instead of just returning it. Default true.
+	 * @return string|bool False if no data exists, inline styles if `$display` is true,
+	 *                     true otherwise.
+	 */
+	public function print_inline_style( $handle, $display = true ) {
+>>>>>>> main
 		$output = $this->get_data( $handle, 'after' );
 
 		if ( empty( $output ) ) {
@@ -339,7 +353,11 @@ class WP_Styles extends WP_Dependencies {
 
 		$output = implode( "\n", $output );
 
+<<<<<<< HEAD
 		if ( ! $echo ) {
+=======
+		if ( ! $display ) {
+>>>>>>> main
 			return $output;
 		}
 

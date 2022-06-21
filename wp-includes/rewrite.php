@@ -144,7 +144,11 @@ function add_rewrite_rule( $regex, $query, $after = 'bottom' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Add a new rewrite tag (like %postname%).
+=======
+ * Adds a new rewrite tag (like %postname%).
+>>>>>>> main
  *
  * The `$query` parameter is optional. If it is omitted you must ensure that you call
  * this on, or before, the {@see 'init'} hook. This is because `$query` defaults to
@@ -191,7 +195,11 @@ function remove_rewrite_tag( $tag ) {
 }
 
 /**
+<<<<<<< HEAD
  * Add permalink structure.
+=======
+ * Adds a permalink structure.
+>>>>>>> main
  *
  * @since 3.0.0
  *
@@ -237,7 +245,11 @@ function remove_permastruct( $name ) {
 }
 
 /**
+<<<<<<< HEAD
  * Add a new feed type like /atom1/.
+=======
+ * Adds a new feed type like /atom1/.
+>>>>>>> main
  *
  * @since 2.1.0
  *
@@ -265,7 +277,11 @@ function add_feed( $feedname, $function ) {
 }
 
 /**
+<<<<<<< HEAD
  * Remove rewrite rules and then recreate rewrite rules.
+=======
+ * Removes rewrite rules and then recreate rewrite rules.
+>>>>>>> main
  *
  * @since 3.0.0
  *
@@ -283,7 +299,11 @@ function flush_rewrite_rules( $hard = true ) {
 }
 
 /**
+<<<<<<< HEAD
  * Add an endpoint, like /trackback/.
+=======
+ * Adds an endpoint, like /trackback/.
+>>>>>>> main
  *
  * Adding an endpoint creates extra rewrite rules for each of the matching
  * places specified by the provided bitmask. For example:
@@ -357,7 +377,11 @@ function _wp_filter_taxonomy_base( $base ) {
 
 
 /**
+<<<<<<< HEAD
  * Resolve numeric slugs that collide with date permalinks.
+=======
+ * Resolves numeric slugs that collide with date permalinks.
+>>>>>>> main
  *
  * Permalinks of posts with numeric slugs can sometimes look to WP_Query::parse_query()
  * like a date archive, as when your permalink structure is `/%year%/%postname%/` and
@@ -473,7 +497,11 @@ function wp_resolve_numeric_slug_conflicts( $query_vars = array() ) {
 }
 
 /**
+<<<<<<< HEAD
  * Examine a URL and try to determine the post ID it represents.
+=======
+ * Examines a URL and try to determine the post ID it represents.
+>>>>>>> main
  *
  * Checks are supposedly from the hosted site blog.
  *

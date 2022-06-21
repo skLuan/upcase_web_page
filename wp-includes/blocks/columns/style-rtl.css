@@ -78,19 +78,30 @@
   display: flex;
   margin-bottom: 1.75em;
   box-sizing: border-box;
+<<<<<<< HEAD
   flex-wrap: wrap;
+=======
+  flex-wrap: wrap !important;
+  align-items: initial !important;
+>>>>>>> main
   /**
   * All Columns Alignment
   */
 }
 @media (min-width: 782px) {
   .wp-block-columns {
+<<<<<<< HEAD
     flex-wrap: nowrap;
   }
 }
 .wp-block-columns:where(.has-background) {
   padding: 1.25em 2.375em;
 }
+=======
+    flex-wrap: nowrap !important;
+  }
+}
+>>>>>>> main
 .wp-block-columns.are-vertically-aligned-top {
   align-items: flex-start;
 }
@@ -100,11 +111,16 @@
 .wp-block-columns.are-vertically-aligned-bottom {
   align-items: flex-end;
 }
+<<<<<<< HEAD
 @media (max-width: 599px) {
+=======
+@media (max-width: 781px) {
+>>>>>>> main
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
     flex-basis: 100% !important;
   }
 }
+<<<<<<< HEAD
 @media (min-width: 600px) and (max-width: 781px) {
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:only-child) {
     flex-basis: calc(50% - calc(var(--wp--style--block-gap, 2em) / 2)) !important;
@@ -114,6 +130,8 @@
     margin-right: var(--wp--style--block-gap, 2em);
   }
 }
+=======
+>>>>>>> main
 @media (min-width: 782px) {
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
     flex-basis: 0;
@@ -122,12 +140,18 @@
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column[style*=flex-basis] {
     flex-grow: 0;
   }
+<<<<<<< HEAD
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:first-child) {
     margin-right: var(--wp--style--block-gap, 2em);
   }
 }
 .wp-block-columns.is-not-stacked-on-mobile {
   flex-wrap: nowrap;
+=======
+}
+.wp-block-columns.is-not-stacked-on-mobile {
+  flex-wrap: nowrap !important;
+>>>>>>> main
 }
 .wp-block-columns.is-not-stacked-on-mobile > .wp-block-column {
   flex-basis: 0;
@@ -136,8 +160,14 @@
 .wp-block-columns.is-not-stacked-on-mobile > .wp-block-column[style*=flex-basis] {
   flex-grow: 0;
 }
+<<<<<<< HEAD
 .wp-block-columns.is-not-stacked-on-mobile > .wp-block-column:not(:first-child) {
   margin-right: var(--wp--style--block-gap, 2em);
+=======
+
+:where(.wp-block-columns.has-background) {
+  padding: 1.25em 2.375em;
+>>>>>>> main
 }
 
 .wp-block-column {

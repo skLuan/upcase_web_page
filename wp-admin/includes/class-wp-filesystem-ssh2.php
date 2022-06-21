@@ -26,7 +26,11 @@
  * Restart Apache!
  * Check phpinfo() streams to confirm that: ssh2.shell, ssh2.exec, ssh2.tunnel, ssh2.scp, ssh2.sftp  exist.
  *
+<<<<<<< HEAD
  * Note: As of WordPress 2.8, this utilises the PHP5+ function `stream_get_contents()`.
+=======
+ * Note: As of WordPress 2.8, this utilizes the PHP5+ function `stream_get_contents()`.
+>>>>>>> main
  *
  * @since 2.7.0
  *

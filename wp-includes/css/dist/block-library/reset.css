@@ -121,7 +121,11 @@ html :where(.editor-styles-wrapper) ol {
   margin: revert;
   padding: revert;
   list-style-type: revert;
+<<<<<<< HEAD
   box-sizing: revert;
+=======
+  box-sizing: border-box;
+>>>>>>> main
 }
 html :where(.editor-styles-wrapper) ul ul,
 html :where(.editor-styles-wrapper) ul ol,

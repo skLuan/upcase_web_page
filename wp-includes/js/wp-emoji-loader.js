@@ -115,6 +115,7 @@
 				return ! isIdentical;
 			case 'emoji':
 				/*
+<<<<<<< HEAD
 				 * Burning Love: Just a hunk, a hunk of burnin' love.
 				 *
 				 *  To test for Emoji 13.1 support, try to render a new emoji: Heart on Fire!
@@ -125,13 +126,33 @@
 				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
 				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
 				 * 0xD83D, 0xDD25 == Fire.
+=======
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+>>>>>>> main
 				 *
 				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
 				 * sequence come from older emoji standards.
 				 */
 				isIdentical = emojiSetsRenderIdentically(
+<<<<<<< HEAD
 					[0x2764, 0xfe0f, 0x200D, 0xD83D, 0xDD25],
 					[0x2764, 0xfe0f, 0x200B, 0xD83D, 0xDD25]
+=======
+					[0x1FAF1, 0x1F3FB, 0x200D, 0x1FAF2, 0x1F3FF],
+					[0x1FAF1, 0x1F3FB, 0x200B, 0x1FAF2, 0x1F3FF]
+>>>>>>> main
 				);
 
 				return ! isIdentical;

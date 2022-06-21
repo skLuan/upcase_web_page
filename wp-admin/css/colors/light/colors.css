@@ -706,11 +706,27 @@ div#wp-responsive-toggle a:before {
 
 /* Welcome Panel */
 .welcome-panel {
+<<<<<<< HEAD
   background-color: #04a4cc;
 }
 
 [class*=welcome-panel-icon] {
   background-color: #999;
+=======
+  background-color: #e1f4f9;
+}
+
+.welcome-panel-header-image .about-six {
+  fill: #04a4cc;
+}
+
+.welcome-panel-header-image .about-zero {
+  fill: #999;
+}
+
+[class*=welcome-panel-icon] {
+  background-color: #333;
+>>>>>>> main
 }
 
 /* Override the theme filter highlight color for this scheme */

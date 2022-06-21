@@ -76,6 +76,12 @@
  */
 .wp-block-code code {
   display: block;
+<<<<<<< HEAD
   white-space: pre-wrap;
   overflow-wrap: break-word;
+=======
+  font-family: inherit;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+>>>>>>> main
 }

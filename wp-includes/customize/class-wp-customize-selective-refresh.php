@@ -281,7 +281,11 @@ final class WP_Customize_Selective_Refresh {
 	 * @param int    $errno   Error number.
 	 * @param string $errstr  Error string.
 	 * @param string $errfile Error file.
+<<<<<<< HEAD
 	 * @param string $errline Error line.
+=======
+	 * @param int    $errline Error line.
+>>>>>>> main
 	 * @return true Always true.
 	 */
 	public function handle_error( $errno, $errstr, $errfile = null, $errline = null ) {

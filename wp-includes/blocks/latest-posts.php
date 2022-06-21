@@ -37,11 +37,20 @@ function render_block_core_latest_posts( $attributes ) {
 	global $post, $block_core_latest_posts_excerpt_length;
 
 	$args = array(
+<<<<<<< HEAD
 		'posts_per_page'   => $attributes['postsToShow'],
 		'post_status'      => 'publish',
 		'order'            => $attributes['order'],
 		'orderby'          => $attributes['orderBy'],
 		'suppress_filters' => false,
+=======
+		'posts_per_page'      => $attributes['postsToShow'],
+		'post_status'         => 'publish',
+		'order'               => $attributes['order'],
+		'orderby'             => $attributes['orderBy'],
+		'ignore_sticky_posts' => true,
+		'no_found_rows'       => true,
+>>>>>>> main
 	);
 
 	$block_core_latest_posts_excerpt_length = $attributes['excerptLength'];
@@ -54,12 +63,29 @@ function render_block_core_latest_posts( $attributes ) {
 		$args['author'] = $attributes['selectedAuthor'];
 	}
 
+<<<<<<< HEAD
 	$recent_posts = get_posts( $args );
+=======
+	$query        = new WP_Query;
+	$recent_posts = $query->query( $args );
+
+	if ( isset( $attributes['displayFeaturedImage'] ) && $attributes['displayFeaturedImage'] ) {
+		update_post_thumbnail_cache( $query );
+	}
+>>>>>>> main
 
 	$list_items_markup = '';
 
 	foreach ( $recent_posts as $post ) {
 		$post_link = esc_url( get_permalink( $post ) );
+<<<<<<< HEAD
+=======
+		$title     = get_the_title( $post );
+
+		if ( ! $title ) {
+			$title = __( '(no title)' );
+		}
+>>>>>>> main
 
 		$list_items_markup .= '<li>';
 
@@ -81,23 +107,38 @@ function render_block_core_latest_posts( $attributes ) {
 				$post,
 				$attributes['featuredImageSizeSlug'],
 				array(
+<<<<<<< HEAD
 					'style' => $image_style,
+=======
+					'style' => esc_attr( $image_style ),
+>>>>>>> main
 				)
 			);
 			if ( $attributes['addLinkToFeaturedImage'] ) {
 				$featured_image = sprintf(
+<<<<<<< HEAD
 					'<a href="%1$s">%2$s</a>',
 					$post_link,
+=======
+					'<a href="%1$s" aria-label="%2$s">%3$s</a>',
+					esc_url( $post_link ),
+					esc_attr( $title ),
+>>>>>>> main
 					$featured_image
 				);
 			}
 			$list_items_markup .= sprintf(
 				'<div class="%1$s">%2$s</div>',
+<<<<<<< HEAD
 				$image_classes,
+=======
+				esc_attr( $image_classes ),
+>>>>>>> main
 				$featured_image
 			);
 		}
 
+<<<<<<< HEAD
 		$title = get_the_title( $post );
 		if ( ! $title ) {
 			$title = __( '(no title)' );
@@ -105,6 +146,11 @@ function render_block_core_latest_posts( $attributes ) {
 		$list_items_markup .= sprintf(
 			'<a href="%1$s">%2$s</a>',
 			$post_link,
+=======
+		$list_items_markup .= sprintf(
+			'<a class="wp-block-latest-posts__post-title" href="%1$s">%2$s</a>',
+			esc_url( $post_link ),
+>>>>>>> main
 			$title
 		);
 
@@ -117,7 +163,11 @@ function render_block_core_latest_posts( $attributes ) {
 			if ( ! empty( $author_display_name ) ) {
 				$list_items_markup .= sprintf(
 					'<div class="wp-block-latest-posts__post-author">%1$s</div>',
+<<<<<<< HEAD
 					esc_html( $byline )
+=======
+					$byline
+>>>>>>> main
 				);
 			}
 		}
@@ -126,7 +176,11 @@ function render_block_core_latest_posts( $attributes ) {
 			$list_items_markup .= sprintf(
 				'<time datetime="%1$s" class="wp-block-latest-posts__post-date">%2$s</time>',
 				esc_attr( get_the_date( 'c', $post ) ),
+<<<<<<< HEAD
 				esc_html( get_the_date( '', $post ) )
+=======
+				get_the_date( '', $post )
+>>>>>>> main
 			);
 		}
 
@@ -148,7 +202,11 @@ function render_block_core_latest_posts( $attributes ) {
 		if ( isset( $attributes['displayPostContent'] ) && $attributes['displayPostContent']
 			&& isset( $attributes['displayPostContentRadio'] ) && 'full_post' === $attributes['displayPostContentRadio'] ) {
 
+<<<<<<< HEAD
 			$post_content = wp_kses_post( html_entity_decode( $post->post_content, ENT_QUOTES, get_option( 'blog_charset' ) ) );
+=======
+			$post_content = html_entity_decode( $post->post_content, ENT_QUOTES, get_option( 'blog_charset' ) );
+>>>>>>> main
 
 			if ( post_password_required( $post ) ) {
 				$post_content = __( 'This content is password protected.' );
@@ -156,7 +214,11 @@ function render_block_core_latest_posts( $attributes ) {
 
 			$list_items_markup .= sprintf(
 				'<div class="wp-block-latest-posts__post-full-content">%1$s</div>',
+<<<<<<< HEAD
 				$post_content
+=======
+				wp_kses_post( $post_content )
+>>>>>>> main
 			);
 		}
 

@@ -129,7 +129,11 @@ class WP_Themes_List_Table extends WP_List_Table {
 		// Fallthrough.
 		printf(
 			/* translators: %s: Network title. */
+<<<<<<< HEAD
 			__( 'Only the current theme is available to you. Contact the %s administrator for information about accessing additional themes.' ),
+=======
+			__( 'Only the active theme is available to you. Contact the %s administrator for information about accessing additional themes.' ),
+>>>>>>> main
 			get_site_option( 'site_name' )
 		);
 	}
@@ -247,12 +251,20 @@ class WP_Themes_List_Table extends WP_List_Table {
 
 			<span class="screenshot hide-if-customize">
 				<?php if ( $screenshot ) : ?>
+<<<<<<< HEAD
 					<img src="<?php echo esc_url( $screenshot ); ?>" alt="" />
+=======
+					<img src="<?php echo esc_url( $screenshot . '?ver=' . $theme->version ); ?>" alt="" />
+>>>>>>> main
 				<?php endif; ?>
 			</span>
 			<a href="<?php echo wp_customize_url( $stylesheet ); ?>" class="screenshot load-customize hide-if-no-customize">
 				<?php if ( $screenshot ) : ?>
+<<<<<<< HEAD
 					<img src="<?php echo esc_url( $screenshot ); ?>" alt="" />
+=======
+					<img src="<?php echo esc_url( $screenshot . '?ver=' . $theme->version ); ?>" alt="" />
+>>>>>>> main
 				<?php endif; ?>
 			</a>
 

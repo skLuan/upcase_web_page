@@ -51,7 +51,11 @@ $theme_field_defaults = array(
 );
 
 /**
+<<<<<<< HEAD
  * Retrieve list of WordPress theme features (aka theme tags).
+=======
+ * Retrieves the list of WordPress theme features (aka theme tags).
+>>>>>>> main
  *
  * @since 2.8.0
  *
@@ -82,7 +86,11 @@ function install_themes_feature_list() {
 }
 
 /**
+<<<<<<< HEAD
  * Display search form for searching themes.
+=======
+ * Displays search form for searching themes.
+>>>>>>> main
  *
  * @since 2.8.0
  *
@@ -129,7 +137,11 @@ function install_theme_search_form( $type_selector = true ) {
 }
 
 /**
+<<<<<<< HEAD
  * Display tags filter for themes.
+=======
+ * Displays tags filter for themes.
+>>>>>>> main
  *
  * @since 2.8.0
  */
@@ -209,7 +221,11 @@ function display_theme( $theme ) {
 }
 
 /**
+<<<<<<< HEAD
  * Display theme content based on theme list.
+=======
+ * Displays theme content based on theme list.
+>>>>>>> main
  *
  * @since 2.8.0
  *
@@ -227,7 +243,11 @@ function display_themes() {
 }
 
 /**
+<<<<<<< HEAD
  * Display theme information in dialog box form.
+=======
+ * Displays theme information in dialog box form.
+>>>>>>> main
  *
  * @since 2.8.0
  *

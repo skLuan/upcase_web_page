@@ -783,6 +783,7 @@ div#wp-responsive-toggle a:before {
 }
 
 /* Welcome Panel */
+<<<<<<< HEAD
 
 .welcome-panel {
 	background-color: $highlight-color;
@@ -794,4 +795,20 @@ div#wp-responsive-toggle a:before {
 	} @else {
 		background-color: $base-color;
 	}
+=======
+.welcome-panel {
+	background-color: mix($dashboard-accent-1, white, 12%);
+}
+
+.welcome-panel-header-image .about-six {
+	fill: $dashboard-accent-1;
+}
+
+.welcome-panel-header-image .about-zero {
+	fill: $dashboard-accent-2;
+}
+
+[class*="welcome-panel-icon"] {
+	background-color: $dashboard-icon-background;
+>>>>>>> main
 }

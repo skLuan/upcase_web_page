@@ -353,6 +353,7 @@ class WP_Network {
 		 */
 		$using_paths = true;
 		if ( wp_using_ext_object_cache() ) {
+<<<<<<< HEAD
 			$using_paths = wp_cache_get( 'networks_have_paths', 'site-options' );
 			if ( false === $using_paths ) {
 				$using_paths = get_networks(
@@ -364,6 +365,15 @@ class WP_Network {
 				);
 				wp_cache_add( 'networks_have_paths', $using_paths, 'site-options' );
 			}
+=======
+			$using_paths = get_networks(
+				array(
+					'number'       => 1,
+					'count'        => true,
+					'path__not_in' => '/',
+				)
+			);
+>>>>>>> main
 		}
 
 		$paths = array();

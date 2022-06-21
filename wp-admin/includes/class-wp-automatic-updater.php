@@ -23,7 +23,11 @@ class WP_Automatic_Updater {
 	protected $update_results = array();
 
 	/**
+<<<<<<< HEAD
 	 * Whether the entire automatic updater is disabled.
+=======
+	 * Determines whether the entire automatic updater is disabled.
+>>>>>>> main
 	 *
 	 * @since 3.7.0
 	 */
@@ -56,7 +60,11 @@ class WP_Automatic_Updater {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Check for version control checkouts.
+=======
+	 * Checks for version control checkouts.
+>>>>>>> main
 	 *
 	 * Checks for Subversion, Git, Mercurial, and Bazaar. It recursively looks up the
 	 * filesystem to the top of the drive, erring on the side of detecting a VCS
@@ -295,7 +303,11 @@ class WP_Automatic_Updater {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Update an item, if appropriate.
+=======
+	 * Updates an item, if appropriate.
+>>>>>>> main
 	 *
 	 * @since 3.7.0
 	 *
@@ -419,9 +431,16 @@ class WP_Automatic_Updater {
 				return false;
 			}
 
+<<<<<<< HEAD
 			// Core doesn't output this, so let's append it so we don't get confused.
 			if ( is_wp_error( $upgrade_result ) ) {
 				$skin->error( __( 'Installation failed.' ), $upgrade_result );
+=======
+			// Core doesn't output this, so let's append it, so we don't get confused.
+			if ( is_wp_error( $upgrade_result ) ) {
+				$upgrade_result->add( 'installation_failed', __( 'Installation failed.' ) );
+				$skin->error( $upgrade_result );
+>>>>>>> main
 			} else {
 				$skin->feedback( __( 'WordPress updated successfully.' ) );
 			}
@@ -777,7 +796,11 @@ class WP_Automatic_Updater {
 				// Don't show this message if there is a newer version available.
 				// Potential for confusion, and also not useful for them to know at this point.
 				if ( 'fail' === $type && ! $newer_version_available ) {
+<<<<<<< HEAD
 					$body .= __( 'We tried but were unable to update your site automatically.' ) . ' ';
+=======
+					$body .= __( 'An attempt was made, but your site could not be updated automatically.' ) . ' ';
+>>>>>>> main
 				}
 
 				$body .= __( 'Updating is easy and only takes a few moments:' );
@@ -843,7 +866,11 @@ class WP_Automatic_Updater {
 			$body .= "\n***\n\n";
 			/* translators: %s: WordPress version. */
 			$body .= sprintf( __( 'Your site was running version %s.' ), get_bloginfo( 'version' ) );
+<<<<<<< HEAD
 			$body .= ' ' . __( 'We have some data that describes the error your site encountered.' );
+=======
+			$body .= ' ' . __( 'Some data that describes the error your site encountered has been put together.' );
+>>>>>>> main
 			$body .= ' ' . __( 'Your hosting company, support forum volunteers, or a friendly developer may be able to use this information to help you:' );
 
 			// If we had a rollback and we're still critical, then the rollback failed too.
@@ -1235,9 +1262,21 @@ class WP_Automatic_Updater {
 		$body[] = __( 'https://wordpress.org/support/forums/' );
 		$body[] = "\n" . __( 'The WordPress Team' );
 
+<<<<<<< HEAD
 		$body    = implode( "\n", $body );
 		$to      = get_site_option( 'admin_email' );
 		$subject = sprintf( $subject, wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ) );
+=======
+		if ( '' !== get_option( 'blogname' ) ) {
+			$site_title = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+		} else {
+			$site_title = parse_url( home_url(), PHP_URL_HOST );
+		}
+
+		$body    = implode( "\n", $body );
+		$to      = get_site_option( 'admin_email' );
+		$subject = sprintf( $subject, $site_title );
+>>>>>>> main
 		$headers = '';
 
 		$email = compact( 'to', 'subject', 'body', 'headers' );
@@ -1346,7 +1385,15 @@ class WP_Automatic_Updater {
 			$body[] = '';
 		}
 
+<<<<<<< HEAD
 		$site_title = wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES );
+=======
+		if ( '' !== get_bloginfo( 'name' ) ) {
+			$site_title = wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES );
+		} else {
+			$site_title = parse_url( home_url(), PHP_URL_HOST );
+		}
+>>>>>>> main
 
 		if ( $failures ) {
 			$body[] = trim(

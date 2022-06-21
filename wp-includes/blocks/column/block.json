@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+=======
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+>>>>>>> main
 	"apiVersion": 2,
 	"name": "core/column",
 	"title": "Column",
@@ -27,13 +31,29 @@
 		"html": false,
 		"color": {
 			"gradients": true,
+<<<<<<< HEAD
 			"link": true
 		},
 		"spacing": {
+=======
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"blockGap": true,
+>>>>>>> main
 			"padding": true,
 			"__experimentalDefaultControls": {
 				"padding": true
 			}
+<<<<<<< HEAD
 		}
+=======
+		},
+		"__experimentalLayout": true
+>>>>>>> main
 	}
 }

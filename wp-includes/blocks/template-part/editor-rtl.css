@@ -74,6 +74,7 @@
 /**
  * Reset the WP Admin page styles for Gutenberg-like pages.
  */
+<<<<<<< HEAD
 .wp-block-template-part__placeholder-preview-dropdown-content .components-popover__content,
 .wp-block-template-part__preview-dropdown-content .components-popover__content {
   min-width: 320px;
@@ -135,4 +136,21 @@
 }
 .wp-block-template-part__placeholder-create-new__title-form .wp-block-template-part__placeholder-create-new__title-form-actions .components-flex-item {
   margin-right: 12px;
+=======
+@media (min-width: 600px) {
+  .block-editor-template-part__selection-modal {
+    width: calc(100% - 32px);
+    height: calc(100% - 120px);
+  }
+}
+@media (min-width: 782px) {
+  .block-editor-template-part__selection-modal {
+    width: 750px;
+  }
+}
+@media (min-width: 960px) {
+  .block-editor-template-part__selection-modal {
+    height: 70%;
+  }
+>>>>>>> main
 }

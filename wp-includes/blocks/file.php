@@ -8,8 +8,13 @@
 /**
  * When the `core/file` block is rendering, check if we need to enqueue the `'wp-block-file-view` script.
  *
+<<<<<<< HEAD
  * @param array $attributes The block attributes.
  * @param array $content    The block content.
+=======
+ * @param array  $attributes The block attributes.
+ * @param string $content    The block content.
+>>>>>>> main
  *
  * @return string Returns the block content.
  */

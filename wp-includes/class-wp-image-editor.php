@@ -109,7 +109,11 @@ abstract class WP_Image_Editor {
 	 * @param array $sizes {
 	 *     An array of image size arrays. Default sizes are 'small', 'medium', 'large'.
 	 *
+<<<<<<< HEAD
 	 *     @type array $size {
+=======
+	 *     @type array ...$0 {
+>>>>>>> main
 	 *         @type int  $width  Image width.
 	 *         @type int  $height Image height.
 	 *         @type bool $crop   Optional. Whether to crop the image. Default false.
@@ -485,7 +489,11 @@ abstract class WP_Image_Editor {
 		}
 
 		/**
+<<<<<<< HEAD
 		 * Filters the `$orientation` value to correct it before rotating or to prevemnt rotating the image.
+=======
+		 * Filters the `$orientation` value to correct it before rotating or to prevent rotating the image.
+>>>>>>> main
 		 *
 		 * @since 5.3.0
 		 *
@@ -549,11 +557,19 @@ abstract class WP_Image_Editor {
 	 * @since 3.5.0
 	 *
 	 * @param string   $filename
+<<<<<<< HEAD
 	 * @param callable $function
 	 * @param array    $arguments
 	 * @return bool
 	 */
 	protected function make_image( $filename, $function, $arguments ) {
+=======
+	 * @param callable $callback
+	 * @param array    $arguments
+	 * @return bool
+	 */
+	protected function make_image( $filename, $callback, $arguments ) {
+>>>>>>> main
 		$stream = wp_is_stream( $filename );
 		if ( $stream ) {
 			ob_start();
@@ -562,7 +578,11 @@ abstract class WP_Image_Editor {
 			wp_mkdir_p( dirname( $filename ) );
 		}
 
+<<<<<<< HEAD
 		$result = call_user_func_array( $function, $arguments );
+=======
+		$result = call_user_func_array( $callback, $arguments );
+>>>>>>> main
 
 		if ( $result && $stream ) {
 			$contents = ob_get_contents();

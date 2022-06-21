@@ -54,7 +54,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
+<<<<<<< HEAD
  * @return string|false Value of the `doing_cron` transient, 0|false otherwise.
+=======
+ * @return string|int|false Value of the `doing_cron` transient, 0|false otherwise.
+>>>>>>> main
  */
 function _get_cron_lock() {
 	global $wpdb;

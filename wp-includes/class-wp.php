@@ -40,7 +40,11 @@ class WP {
 	 * @since 2.0.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $query_vars;
+=======
+	public $query_vars = array();
+>>>>>>> main
 
 	/**
 	 * String parsed to set the query variables.
@@ -48,7 +52,11 @@ class WP {
 	 * @since 2.0.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $query_string;
+=======
+	public $query_string = '';
+>>>>>>> main
 
 	/**
 	 * The request path, e.g. 2015/05/06.
@@ -56,7 +64,11 @@ class WP {
 	 * @since 2.0.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $request;
+=======
+	public $request = '';
+>>>>>>> main
 
 	/**
 	 * Rewrite rule the request matched.
@@ -64,7 +76,11 @@ class WP {
 	 * @since 2.0.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $matched_rule;
+=======
+	public $matched_rule = '';
+>>>>>>> main
 
 	/**
 	 * Rewrite query the request matched.
@@ -72,7 +88,11 @@ class WP {
 	 * @since 2.0.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $matched_query;
+=======
+	public $matched_query = '';
+>>>>>>> main
 
 	/**
 	 * Whether already did the permalink.
@@ -125,10 +145,18 @@ class WP {
 	 * filters and actions that can be used to further manipulate the result.
 	 *
 	 * @since 2.0.0
+<<<<<<< HEAD
+=======
+	 * @since 6.0.0 A return value was added.
+>>>>>>> main
 	 *
 	 * @global WP_Rewrite $wp_rewrite WordPress rewrite component.
 	 *
 	 * @param array|string $extra_query_vars Set the extra query variables.
+<<<<<<< HEAD
+=======
+	 * @return bool Whether the request was parsed.
+>>>>>>> main
 	 */
 	public function parse_request( $extra_query_vars = '' ) {
 		global $wp_rewrite;
@@ -143,7 +171,11 @@ class WP {
 		 * @param array|string $extra_query_vars Extra passed query variables.
 		 */
 		if ( ! apply_filters( 'do_parse_request', true, $this, $extra_query_vars ) ) {
+<<<<<<< HEAD
 			return;
+=======
+			return false;
+>>>>>>> main
 		}
 
 		$this->query_vars     = array();
@@ -252,7 +284,11 @@ class WP {
 				}
 			}
 
+<<<<<<< HEAD
 			if ( isset( $this->matched_rule ) ) {
+=======
+			if ( ! empty( $this->matched_rule ) ) {
+>>>>>>> main
 				// Trim the query of everything up to the '?'.
 				$query = preg_replace( '!^.+\?!', '', $query );
 
@@ -394,6 +430,11 @@ class WP {
 		 * @param WP $wp Current WordPress environment instance (passed by reference).
 		 */
 		do_action_ref_array( 'parse_request', array( &$this ) );
+<<<<<<< HEAD
+=======
+
+		return true;
+>>>>>>> main
 	}
 
 	/**
@@ -409,6 +450,10 @@ class WP {
 		$headers       = array();
 		$status        = null;
 		$exit_required = false;
+<<<<<<< HEAD
+=======
+		$date_format   = 'D, d M Y H:i:s';
+>>>>>>> main
 
 		if ( is_user_logged_in() ) {
 			$headers = array_merge( $headers, wp_get_nocache_headers() );
@@ -416,7 +461,11 @@ class WP {
 			// Unmoderated comments are only visible for 10 minutes via the moderation hash.
 			$expires = 10 * MINUTE_IN_SECONDS;
 
+<<<<<<< HEAD
 			$headers['Expires']       = gmdate( 'D, d M Y H:i:s', time() + $expires );
+=======
+			$headers['Expires']       = gmdate( $date_format, time() + $expires );
+>>>>>>> main
 			$headers['Cache-Control'] = sprintf(
 				'max-age=%d, must-revalidate',
 				$expires
@@ -455,6 +504,7 @@ class WP {
 					)
 				)
 			) {
+<<<<<<< HEAD
 				$wp_last_modified = mysql2date( 'D, d M Y H:i:s', get_lastcommentmodified( 'GMT' ), false );
 			} else {
 				$wp_last_modified = mysql2date( 'D, d M Y H:i:s', get_lastpostmodified( 'GMT' ), false );
@@ -462,6 +512,21 @@ class WP {
 
 			if ( ! $wp_last_modified ) {
 				$wp_last_modified = gmdate( 'D, d M Y H:i:s' );
+=======
+				$wp_last_modified_post    = mysql2date( $date_format, get_lastpostmodified( 'GMT' ), false );
+				$wp_last_modified_comment = mysql2date( $date_format, get_lastcommentmodified( 'GMT' ), false );
+				if ( strtotime( $wp_last_modified_post ) > strtotime( $wp_last_modified_comment ) ) {
+					$wp_last_modified = $wp_last_modified_post;
+				} else {
+					$wp_last_modified = $wp_last_modified_comment;
+				}
+			} else {
+				$wp_last_modified = mysql2date( $date_format, get_lastpostmodified( 'GMT' ), false );
+			}
+
+			if ( ! $wp_last_modified ) {
+				$wp_last_modified = gmdate( $date_format );
+>>>>>>> main
 			}
 
 			$wp_last_modified .= ' GMT';
@@ -755,11 +820,24 @@ class WP {
 	 */
 	public function main( $query_args = '' ) {
 		$this->init();
+<<<<<<< HEAD
 		$this->parse_request( $query_args );
 		$this->send_headers();
 		$this->query_posts();
 		$this->handle_404();
 		$this->register_globals();
+=======
+
+		$parsed = $this->parse_request( $query_args );
+
+		$this->send_headers();
+
+		if ( $parsed ) {
+			$this->query_posts();
+			$this->handle_404();
+			$this->register_globals();
+		}
+>>>>>>> main
 
 		/**
 		 * Fires once the WordPress environment has been set up.

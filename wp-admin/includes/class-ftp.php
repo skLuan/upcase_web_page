@@ -334,7 +334,11 @@ class ftp_base {
 		} while($this->_code<200);
 		$this->_ready=true;
 		$syst=$this->systype();
+<<<<<<< HEAD
 		if(!$syst) $this->SendMSG("Can't detect remote OS");
+=======
+		if(!$syst) $this->SendMSG("Cannot detect remote OS");
+>>>>>>> main
 		else {
 			if(preg_match("/win|dos|novell/i", $syst[0])) $this->OS_remote=FTP_OS_Windows;
 			elseif(preg_match("/os/i", $syst[0])) $this->OS_remote=FTP_OS_Mac;
@@ -342,7 +346,11 @@ class ftp_base {
 			else $this->OS_remote=FTP_OS_Mac;
 			$this->SendMSG("Remote OS: ".$this->OS_FullName[$this->OS_remote]);
 		}
+<<<<<<< HEAD
 		if(!$this->features()) $this->SendMSG("Can't get features list. All supported - disabled");
+=======
+		if(!$this->features()) $this->SendMSG("Cannot get features list. All supported - disabled");
+>>>>>>> main
 		else $this->SendMSG("Supported features: ".implode(", ", array_keys($this->_features)));
 		return TRUE;
 	}
@@ -371,7 +379,11 @@ class ftp_base {
 		}
 		$this->SendMSG("Authentication succeeded");
 		if(empty($this->_features)) {
+<<<<<<< HEAD
 			if(!$this->features()) $this->SendMSG("Can't get features list. All supported - disabled");
+=======
+			if(!$this->features()) $this->SendMSG("Cannot get features list. All supported - disabled");
+>>>>>>> main
 			else $this->SendMSG("Supported features: ".implode(", ", array_keys($this->_features)));
 		}
 		return TRUE;
@@ -480,7 +492,11 @@ class ftp_base {
 			return FALSE;
 		}
 		if($this->_curtype!=FTP_BINARY) {
+<<<<<<< HEAD
 			$this->PushError("restore", "can't restore in ASCII mode");
+=======
+			$this->PushError("restore", "cannot restore in ASCII mode");
+>>>>>>> main
 			return FALSE;
 		}
 		if(!$this->_exec("REST ".$from, "resore")) return FALSE;
@@ -553,7 +569,11 @@ class ftp_base {
 		if (@file_exists($localfile)) $this->SendMSG("Warning : local file will be overwritten");
 		$fp = @fopen($localfile, "w");
 		if (!$fp) {
+<<<<<<< HEAD
 			$this->PushError("get","can't open local file", "Cannot create \"".$localfile."\"");
+=======
+			$this->PushError("get","cannot open local file", "Cannot create \"".$localfile."\"");
+>>>>>>> main
 			return FALSE;
 		}
 		if($this->_can_restore and $rest!=0) fseek($fp, $rest);
@@ -610,13 +630,21 @@ class ftp_base {
 	function put($localfile, $remotefile=NULL, $rest=0) {
 		if(is_null($remotefile)) $remotefile=$localfile;
 		if (!file_exists($localfile)) {
+<<<<<<< HEAD
 			$this->PushError("put","can't open local file", "No such file or directory \"".$localfile."\"");
+=======
+			$this->PushError("put","cannot open local file", "No such file or directory \"".$localfile."\"");
+>>>>>>> main
 			return FALSE;
 		}
 		$fp = @fopen($localfile, "r");
 
 		if (!$fp) {
+<<<<<<< HEAD
 			$this->PushError("put","can't open local file", "Cannot read file \"".$localfile."\"");
+=======
+			$this->PushError("put","cannot open local file", "Cannot read file \"".$localfile."\"");
+>>>>>>> main
 			return FALSE;
 		}
 		if($this->_can_restore and $rest!=0) fseek($fp, $rest);
@@ -649,7 +677,11 @@ class ftp_base {
 	function mput($local=".", $remote=NULL, $continious=false) {
 		$local=realpath($local);
 		if(!@file_exists($local)) {
+<<<<<<< HEAD
 			$this->PushError("mput","can't open local folder", "Cannot stat folder \"".$local."\"");
+=======
+			$this->PushError("mput","cannot open local folder", "Cannot stat folder \"".$local."\"");
+>>>>>>> main
 			return FALSE;
 		}
 		if(!is_dir($local)) return $this->put($local, $remote);
@@ -662,7 +694,11 @@ class ftp_base {
 			}
 			closedir($handle);
 		} else {
+<<<<<<< HEAD
 			$this->PushError("mput","can't open local folder", "Cannot read folder \"".$local."\"");
+=======
+			$this->PushError("mput","cannot open local folder", "Cannot read folder \"".$local."\"");
+>>>>>>> main
 			return FALSE;
 		}
 		if(empty($list)) return TRUE;
@@ -682,13 +718,21 @@ class ftp_base {
 	function mget($remote, $local=".", $continious=false) {
 		$list=$this->rawlist($remote, "-lA");
 		if($list===false) {
+<<<<<<< HEAD
 			$this->PushError("mget","can't read remote folder list", "Can't read remote folder \"".$remote."\" contents");
+=======
+			$this->PushError("mget","cannot read remote folder list", "Cannot read remote folder \"".$remote."\" contents");
+>>>>>>> main
 			return FALSE;
 		}
 		if(empty($list)) return true;
 		if(!@file_exists($local)) {
 			if(!@mkdir($local)) {
+<<<<<<< HEAD
 				$this->PushError("mget","can't create local folder", "Cannot create folder \"".$local."\"");
+=======
+				$this->PushError("mget","cannot create local folder", "Cannot create folder \"".$local."\"");
+>>>>>>> main
 				return FALSE;
 			}
 		}
@@ -700,13 +744,21 @@ class ftp_base {
 		foreach($list as $el) {
 			if($el["type"]=="d") {
 				if(!$this->mget($remote."/".$el["name"], $local."/".$el["name"], $continious)) {
+<<<<<<< HEAD
 					$this->PushError("mget", "can't copy folder", "Can't copy remote folder \"".$remote."/".$el["name"]."\" to local \"".$local."/".$el["name"]."\"");
+=======
+					$this->PushError("mget", "cannot copy folder", "Cannot copy remote folder \"".$remote."/".$el["name"]."\" to local \"".$local."/".$el["name"]."\"");
+>>>>>>> main
 					$ret=false;
 					if(!$continious) break;
 				}
 			} else {
 				if(!$this->get($remote."/".$el["name"], $local."/".$el["name"])) {
+<<<<<<< HEAD
 					$this->PushError("mget", "can't copy file", "Can't copy remote file \"".$remote."/".$el["name"]."\" to local \"".$local."/".$el["name"]."\"");
+=======
+					$this->PushError("mget", "cannot copy file", "Cannot copy remote file \"".$remote."/".$el["name"]."\" to local \"".$local."/".$el["name"]."\"");
+>>>>>>> main
 					$ret=false;
 					if(!$continious) break;
 				}
@@ -721,7 +773,11 @@ class ftp_base {
 	function mdel($remote, $continious=false) {
 		$list=$this->rawlist($remote, "-la");
 		if($list===false) {
+<<<<<<< HEAD
 			$this->PushError("mdel","can't read remote folder list", "Can't read remote folder \"".$remote."\" contents");
+=======
+			$this->PushError("mdel","cannot read remote folder list", "Cannot read remote folder \"".$remote."\" contents");
+>>>>>>> main
 			return false;
 		}
 
@@ -742,7 +798,11 @@ class ftp_base {
 				}
 			} else {
 				if (!$this->delete($remote."/".$el["name"])) {
+<<<<<<< HEAD
 					$this->PushError("mdel", "can't delete file", "Can't delete remote file \"".$remote."/".$el["name"]."\"");
+=======
+					$this->PushError("mdel", "cannot delete file", "Cannot delete remote file \"".$remote."/".$el["name"]."\"");
+>>>>>>> main
 					$ret=false;
 					if(!$continious) break;
 				}
@@ -750,7 +810,11 @@ class ftp_base {
 		}
 
 		if(!$this->rmdir($remote)) {
+<<<<<<< HEAD
 			$this->PushError("mdel", "can't delete folder", "Can't delete remote folder \"".$remote."/".$el["name"]."\"");
+=======
+			$this->PushError("mdel", "cannot delete folder", "Cannot delete remote folder \"".$remote."/".$el["name"]."\"");
+>>>>>>> main
 			$ret=false;
 		}
 		return $ret;
@@ -792,7 +856,11 @@ class ftp_base {
 		return false;
 	}
 
+<<<<<<< HEAD
 	function glob_pattern_match($pattern,$string) {
+=======
+	function glob_pattern_match($pattern,$subject) {
+>>>>>>> main
 		$out=null;
 		$chunks=explode(';',$pattern);
 		foreach($chunks as $pattern) {
@@ -807,26 +875,46 @@ class ftp_base {
 						str_replace('?','.{1,1}',$pattern))));
 			$out[]=$pattern;
 		}
+<<<<<<< HEAD
 		if(count($out)==1) return($this->glob_regexp("^$out[0]$",$string));
 		else {
 			foreach($out as $tester)
 				if($this->my_regexp("^$tester$",$string)) return true;
+=======
+		if(count($out)==1) return($this->glob_regexp("^$out[0]$",$subject));
+		else {
+			foreach($out as $tester)
+				// TODO: This should probably be glob_regexp(), but needs tests.
+				if($this->my_regexp("^$tester$",$subject)) return true;
+>>>>>>> main
 		}
 		return false;
 	}
 
+<<<<<<< HEAD
 	function glob_regexp($pattern,$probe) {
 		$sensitive=(PHP_OS!='WIN32');
 		return ($sensitive?
 			preg_match( '/' . preg_quote( $pattern, '/' ) . '/', $probe ) :
 			preg_match( '/' . preg_quote( $pattern, '/' ) . '/i', $probe )
+=======
+	function glob_regexp($pattern,$subject) {
+		$sensitive=(PHP_OS!='WIN32');
+		return ($sensitive?
+			preg_match( '/' . preg_quote( $pattern, '/' ) . '/', $subject ) :
+			preg_match( '/' . preg_quote( $pattern, '/' ) . '/i', $subject )
+>>>>>>> main
 		);
 	}
 
 	function dirlist($remote) {
 		$list=$this->rawlist($remote, "-la");
 		if($list===false) {
+<<<<<<< HEAD
 			$this->PushError("dirlist","can't read remote folder list", "Can't read remote folder \"".$remote."\" contents");
+=======
+			$this->PushError("dirlist","cannot read remote folder list", "Cannot read remote folder \"".$remote."\" contents");
+>>>>>>> main
 			return false;
 		}
 

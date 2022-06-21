@@ -74,12 +74,25 @@
 /**
  * Reset the WP Admin page styles for Gutenberg-like pages.
  */
+<<<<<<< HEAD
+=======
+.wp-block-separator.has-css-opacity {
+  opacity: 0.4;
+}
+
+>>>>>>> main
 .wp-block-separator {
   border: none;
   border-bottom: 2px solid currentColor;
   margin-right: auto;
   margin-left: auto;
+<<<<<<< HEAD
   opacity: 0.4;
+=======
+}
+.wp-block-separator.has-alpha-channel-opacity {
+  opacity: initial;
+>>>>>>> main
 }
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   width: 100px;

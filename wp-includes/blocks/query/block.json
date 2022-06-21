@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+=======
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+>>>>>>> main
 	"apiVersion": 2,
 	"name": "core/query",
 	"title": "Query Loop",
@@ -16,15 +20,23 @@
 				"pages": 0,
 				"offset": 0,
 				"postType": "post",
+<<<<<<< HEAD
 				"categoryIds": [],
 				"tagIds": [],
+=======
+>>>>>>> main
 				"order": "desc",
 				"orderBy": "date",
 				"author": "",
 				"search": "",
 				"exclude": [],
 				"sticky": "",
+<<<<<<< HEAD
 				"inherit": true
+=======
+				"inherit": true,
+				"taxQuery": null
+>>>>>>> main
 			}
 		},
 		"tagName": {
@@ -48,7 +60,15 @@
 		"html": false,
 		"color": {
 			"gradients": true,
+<<<<<<< HEAD
 			"link": true
+=======
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+>>>>>>> main
 		},
 		"__experimentalLayout": true
 	},

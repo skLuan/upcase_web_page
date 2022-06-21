@@ -23,6 +23,26 @@ if ( ! wp_is_block_theme() ) {
 	wp_die( __( 'The theme you are currently using is not compatible with Full Site Editing.' ) );
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Do a server-side redirection if missing `postType` and `postId`
+ * query args when visiting Site Editor.
+ */
+$home_template = _resolve_home_block_template();
+if ( $home_template && empty( $_GET['postType'] ) && empty( $_GET['postId'] ) ) {
+	if ( ! empty( $_GET['styles'] ) ) {
+		$home_template['styles'] = sanitize_key( $_GET['styles'] );
+	}
+	$redirect_url = add_query_arg(
+		$home_template,
+		admin_url( 'site-editor.php' )
+	);
+	wp_safe_redirect( $redirect_url );
+	exit;
+}
+
+>>>>>>> main
 // Used in the HTML title tag.
 $title       = __( 'Editor (beta)' );
 $parent_file = 'themes.php';
@@ -31,10 +51,13 @@ $parent_file = 'themes.php';
 $current_screen = get_current_screen();
 $current_screen->is_block_editor( true );
 
+<<<<<<< HEAD
 // Load block patterns from w.org.
 _load_remote_block_patterns();
 _load_remote_featured_patterns();
 
+=======
+>>>>>>> main
 // Default to is-fullscreen-mode to avoid jumps in the UI.
 add_filter(
 	'admin_body_class',
@@ -49,6 +72,7 @@ foreach ( get_default_block_template_types() as $slug => $template_type ) {
 	$indexed_template_types[] = $template_type;
 }
 
+<<<<<<< HEAD
 $block_editor_context = new WP_Block_Editor_Context();
 $custom_settings      = array(
 	'siteUrl'                              => site_url(),
@@ -59,6 +83,22 @@ $custom_settings      = array(
 	'__experimentalBlockPatterns'          => WP_Block_Patterns_Registry::get_instance()->get_all_registered(),
 	'__experimentalBlockPatternCategories' => WP_Block_Pattern_Categories_Registry::get_instance()->get_all_registered(),
 );
+=======
+$block_editor_context = new WP_Block_Editor_Context( array( 'name' => 'core/edit-site' ) );
+$custom_settings      = array(
+	'siteUrl'                  => site_url(),
+	'postsPerPage'             => get_option( 'posts_per_page' ),
+	'styles'                   => get_block_editor_theme_styles(),
+	'defaultTemplateTypes'     => $indexed_template_types,
+	'defaultTemplatePartAreas' => get_allowed_block_template_part_areas(),
+	'__unstableHomeTemplate'   => $home_template,
+);
+
+// Add additional back-compat patterns registered by `current_screen` et al.
+$custom_settings['__experimentalAdditionalBlockPatterns']          = WP_Block_Patterns_Registry::get_instance()->get_all_registered( true );
+$custom_settings['__experimentalAdditionalBlockPatternCategories'] = WP_Block_Pattern_Categories_Registry::get_instance()->get_all_registered( true );
+
+>>>>>>> main
 $editor_settings      = get_block_editor_settings( $custom_settings, $block_editor_context );
 
 if ( isset( $_GET['postType'] ) && ! isset( $_GET['postId'] ) ) {
@@ -72,6 +112,7 @@ $active_global_styles_id = WP_Theme_JSON_Resolver::get_user_global_styles_post_i
 $active_theme            = wp_get_theme()->get_stylesheet();
 $preload_paths           = array(
 	array( '/wp/v2/media', 'OPTIONS' ),
+<<<<<<< HEAD
 	'/wp/v2/types?context=edit',
 	'/wp/v2/types/wp_template?context=edit',
 	'/wp/v2/types/wp_template-part?context=edit',
@@ -83,6 +124,13 @@ $preload_paths           = array(
 	'/wp/v2/templates?context=edit&per_page=-1',
 	'/wp/v2/template-parts?context=edit&per_page=-1',
 	'/wp/v2/settings',
+=======
+	'/wp/v2/types?context=view',
+	'/wp/v2/types/wp_template?context=edit',
+	'/wp/v2/types/wp_template-part?context=edit',
+	'/wp/v2/templates?context=edit&per_page=-1',
+	'/wp/v2/template-parts?context=edit&per_page=-1',
+>>>>>>> main
 	'/wp/v2/themes?context=edit&status=active',
 	'/wp/v2/global-styles/' . $active_global_styles_id . '?context=edit',
 	'/wp/v2/global-styles/' . $active_global_styles_id,

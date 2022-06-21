@@ -117,7 +117,11 @@
 }
 @media (min-width: 782px) {
   .customize-widgets-header {
+<<<<<<< HEAD
     margin-bottom: 76px;
+=======
+    margin-bottom: 44px;
+>>>>>>> main
   }
 }
 .customize-widgets-header.is-fixed-toolbar-active {
@@ -232,6 +236,7 @@
   margin: 0 0.2rem 0 0;
 }
 
+<<<<<<< HEAD
 .customize-widgets-more-menu {
   margin-right: -4px;
 }
@@ -265,6 +270,8 @@
   z-index: 99998;
 }
 
+=======
+>>>>>>> main
 .block-editor-block-contextual-toolbar.is-fixed {
   top: 0;
   margin-right: -12px;

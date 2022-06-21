@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["priorityQueue"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -91,13 +92,59 @@ this["wp"] = this["wp"] || {}; this["wp"]["priorityQueue"] =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+>>>>>>> main
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "createQueue", function() { return /* binding */ createQueue; });
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/priority-queue/build-module/request-idle-callback.js
+=======
+__webpack_require__.d(__webpack_exports__, {
+  "createQueue": function() { return /* binding */ createQueue; }
+});
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/priority-queue/build-module/request-idle-callback.js
+>>>>>>> main
 /**
  * @typedef {( timeOrDeadline: IdleDeadline | number ) => void} Callback
  */
@@ -116,7 +163,11 @@ function createRequestIdleCallback() {
 }
 /* harmony default export */ var request_idle_callback = (createRequestIdleCallback());
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/priority-queue/build-module/index.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/priority-queue/build-module/index.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
@@ -290,7 +341,13 @@ const createQueue = () => {
   };
 };
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ });
+=======
+(window.wp = window.wp || {}).priorityQueue = __webpack_exports__;
+/******/ })()
+;
+>>>>>>> main

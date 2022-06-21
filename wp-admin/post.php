@@ -124,7 +124,11 @@ switch ( $action ) {
 		}
 
 		if ( ! $post ) {
+<<<<<<< HEAD
 			wp_die( __( 'You attempted to edit an item that doesn&#8217;t exist. Perhaps it was deleted?' ) );
+=======
+			wp_die( __( 'You attempted to edit an item that does not exist. Perhaps it was deleted?' ) );
+>>>>>>> main
 		}
 
 		if ( ! $post_type_object ) {
@@ -140,7 +144,11 @@ switch ( $action ) {
 		}
 
 		if ( 'trash' === $post->post_status ) {
+<<<<<<< HEAD
 			wp_die( __( 'You can&#8217;t edit this item because it is in the Trash. Please restore it and try again.' ) );
+=======
+			wp_die( __( 'You cannot edit this item because it is in the Trash. Please restore it and try again.' ) );
+>>>>>>> main
 		}
 
 		if ( ! empty( $_GET['get-post-lock'] ) ) {

@@ -19,7 +19,11 @@ require_once ABSPATH . 'wp-admin/includes/class-wp-internal-pointers.php';
 //
 
 /**
+<<<<<<< HEAD
  * Output an unordered list of checkbox input elements labeled with category names.
+=======
+ * Outputs an unordered list of checkbox input elements labeled with category names.
+>>>>>>> main
  *
  * @since 2.5.1
  *
@@ -52,7 +56,11 @@ function wp_category_checklist( $post_id = 0, $descendants_and_self = 0, $select
 }
 
 /**
+<<<<<<< HEAD
  * Output an unordered list of checkbox input elements labelled with term names.
+=======
+ * Outputs an unordered list of checkbox input elements labelled with term names.
+>>>>>>> main
  *
  * Taxonomy-independent version of wp_category_checklist().
  *
@@ -68,8 +76,13 @@ function wp_category_checklist( $post_id = 0, $descendants_and_self = 0, $select
  *     @type int[]  $selected_cats        Array of category IDs to mark as checked. Default false.
  *     @type int[]  $popular_cats         Array of category IDs to receive the "popular-category" class.
  *                                        Default false.
+<<<<<<< HEAD
  *     @type Walker $walker               Walker object to use to build the output.
  *                                        Default is a Walker_Category_Checklist instance.
+=======
+ *     @type Walker $walker               Walker object to use to build the output. Default empty which
+ *                                        results in a Walker_Category_Checklist instance being used.
+>>>>>>> main
  *     @type string $taxonomy             Taxonomy to generate the checklist for. Default 'category'.
  *     @type bool   $checked_ontop        Whether to move checked items out of the hierarchy and to
  *                                        the top of the list. Default true.
@@ -191,15 +204,24 @@ function wp_terms_checklist( $post_id = 0, $args = array() ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve a list of the most popular terms from the specified taxonomy.
  *
  * If the $echo argument is true then the elements for a list of checkbox
  * `<input>` elements labelled with the names of the selected terms is output.
  * If the $post_ID global isn't empty then the terms associated with that
+=======
+ * Retrieves a list of the most popular terms from the specified taxonomy.
+ *
+ * If the `$display` argument is true then the elements for a list of checkbox
+ * `<input>` elements labelled with the names of the selected terms is output.
+ * If the `$post_ID` global is not empty then the terms associated with that
+>>>>>>> main
  * post will be marked as checked.
  *
  * @since 2.5.0
  *
+<<<<<<< HEAD
  * @param string $taxonomy Taxonomy to retrieve terms from.
  * @param int    $default  Not used.
  * @param int    $number   Number of terms to retrieve. Defaults to 10.
@@ -207,6 +229,15 @@ function wp_terms_checklist( $post_id = 0, $args = array() ) {
  * @return int[] Array of popular term IDs.
  */
 function wp_popular_terms_checklist( $taxonomy, $default = 0, $number = 10, $echo = true ) {
+=======
+ * @param string $taxonomy     Taxonomy to retrieve terms from.
+ * @param int    $default_term Optional. Not used.
+ * @param int    $number       Optional. Number of terms to retrieve. Default 10.
+ * @param bool   $display      Optional. Whether to display the list as well. Default true.
+ * @return int[] Array of popular term IDs.
+ */
+function wp_popular_terms_checklist( $taxonomy, $default_term = 0, $number = 10, $display = true ) {
+>>>>>>> main
 	$post = get_post();
 
 	if ( $post && $post->ID ) {
@@ -231,9 +262,17 @@ function wp_popular_terms_checklist( $taxonomy, $default = 0, $number = 10, $ech
 
 	foreach ( (array) $terms as $term ) {
 		$popular_ids[] = $term->term_id;
+<<<<<<< HEAD
 		if ( ! $echo ) { // Hack for Ajax use.
 			continue;
 		}
+=======
+
+		if ( ! $display ) { // Hack for Ajax use.
+			continue;
+		}
+
+>>>>>>> main
 		$id      = "popular-$taxonomy-$term->term_id";
 		$checked = in_array( $term->term_id, $checked_terms, true ) ? 'checked="checked"' : '';
 		?>
@@ -344,7 +383,15 @@ function get_inline_data( $post ) {
 	foreach ( $taxonomy_names as $taxonomy_name ) {
 		$taxonomy = get_taxonomy( $taxonomy_name );
 
+<<<<<<< HEAD
 		if ( $taxonomy->hierarchical && $taxonomy->show_ui ) {
+=======
+		if ( ! $taxonomy->show_in_quick_edit ) {
+			continue;
+		}
+
+		if ( $taxonomy->hierarchical ) {
+>>>>>>> main
 
 			$terms = get_object_term_cache( $post->ID, $taxonomy_name );
 			if ( false === $terms ) {
@@ -355,7 +402,11 @@ function get_inline_data( $post ) {
 
 			echo '<div class="post_category" id="' . $taxonomy_name . '_' . $post->ID . '">' . implode( ',', $term_ids ) . '</div>';
 
+<<<<<<< HEAD
 		} elseif ( $taxonomy->show_ui ) {
+=======
+		} else {
+>>>>>>> main
 
 			$terms_to_edit = get_terms_to_edit( $post->ID, $taxonomy_name );
 			if ( ! is_string( $terms_to_edit ) ) {
@@ -527,7 +578,11 @@ function wp_comment_reply( $position = 1, $checkbox = false, $mode = 'single', $
 }
 
 /**
+<<<<<<< HEAD
  * Output 'undo move to Trash' text for comments
+=======
+ * Outputs 'undo move to Trash' text for comments.
+>>>>>>> main
  *
  * @since 2.9.0
  */
@@ -770,7 +825,11 @@ function meta_form( $post = null ) {
 }
 
 /**
+<<<<<<< HEAD
  * Print out HTML form date elements for editing post or comment publish date.
+=======
+ * Prints out HTML form date elements for editing post or comment publish date.
+>>>>>>> main
  *
  * @since 0.71
  * @since 4.4.0 Converted to use get_comment() instead of the global `$comment`.
@@ -865,33 +924,53 @@ function touch_time( $edit = 1, $for_post = 1, $tab_index = 0, $multi = 0 ) {
 }
 
 /**
+<<<<<<< HEAD
  * Print out option HTML elements for the page templates drop-down.
+=======
+ * Prints out option HTML elements for the page templates drop-down.
+>>>>>>> main
  *
  * @since 1.5.0
  * @since 4.7.0 Added the `$post_type` parameter.
  *
+<<<<<<< HEAD
  * @param string $default   Optional. The template file name. Default empty.
  * @param string $post_type Optional. Post type to get templates for. Default 'post'.
  */
 function page_template_dropdown( $default = '', $post_type = 'page' ) {
+=======
+ * @param string $default_template Optional. The template file name. Default empty.
+ * @param string $post_type        Optional. Post type to get templates for. Default 'post'.
+ */
+function page_template_dropdown( $default_template = '', $post_type = 'page' ) {
+>>>>>>> main
 	$templates = get_page_templates( null, $post_type );
 
 	ksort( $templates );
 
 	foreach ( array_keys( $templates ) as $template ) {
+<<<<<<< HEAD
 		$selected = selected( $default, $templates[ $template ], false );
+=======
+		$selected = selected( $default_template, $templates[ $template ], false );
+>>>>>>> main
 		echo "\n\t<option value='" . esc_attr( $templates[ $template ] ) . "' $selected>" . esc_html( $template ) . '</option>';
 	}
 }
 
 /**
+<<<<<<< HEAD
  * Print out option HTML elements for the page parents drop-down.
+=======
+ * Prints out option HTML elements for the page parents drop-down.
+>>>>>>> main
  *
  * @since 1.5.0
  * @since 4.4.0 `$post` argument was added.
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
+<<<<<<< HEAD
  * @param int         $default Optional. The default page ID to be pre-selected. Default 0.
  * @param int         $parent  Optional. The parent page ID. Default 0.
  * @param int         $level   Optional. Page depth level. Default 0.
@@ -899,6 +978,15 @@ function page_template_dropdown( $default = '', $post_type = 'page' ) {
  * @return void|false Void on success, false if the page has no children.
  */
 function parent_dropdown( $default = 0, $parent = 0, $level = 0, $post = null ) {
+=======
+ * @param int         $default_page Optional. The default page ID to be pre-selected. Default 0.
+ * @param int         $parent       Optional. The parent page ID. Default 0.
+ * @param int         $level        Optional. Page depth level. Default 0.
+ * @param int|WP_Post $post         Post ID or WP_Post object.
+ * @return void|false Void on success, false if the page has no children.
+ */
+function parent_dropdown( $default_page = 0, $parent = 0, $level = 0, $post = null ) {
+>>>>>>> main
 	global $wpdb;
 
 	$post  = get_post( $post );
@@ -912,10 +1000,17 @@ function parent_dropdown( $default = 0, $parent = 0, $level = 0, $post = null ) 
 			}
 
 			$pad      = str_repeat( '&nbsp;', $level * 3 );
+<<<<<<< HEAD
 			$selected = selected( $default, $item->ID, false );
 
 			echo "\n\t<option class='level-$level' value='$item->ID' $selected>$pad " . esc_html( $item->post_title ) . '</option>';
 			parent_dropdown( $default, $item->ID, $level + 1 );
+=======
+			$selected = selected( $default_page, $item->ID, false );
+
+			echo "\n\t<option class='level-$level' value='$item->ID' $selected>$pad " . esc_html( $item->post_title ) . '</option>';
+			parent_dropdown( $default_page, $item->ID, $level + 1 );
+>>>>>>> main
 		}
 	} else {
 		return false;
@@ -923,7 +1018,11 @@ function parent_dropdown( $default = 0, $parent = 0, $level = 0, $post = null ) 
 }
 
 /**
+<<<<<<< HEAD
  * Print out option HTML elements for role selectors.
+=======
+ * Prints out option HTML elements for role selectors.
+>>>>>>> main
  *
  * @since 2.1.0
  *
@@ -1119,13 +1218,22 @@ function add_meta_box( $id, $title, $callback, $screen = null, $context = 'advan
 
 
 /**
+<<<<<<< HEAD
  * Function that renders a "fake" meta box with an information message,
+=======
+ * Renders a "fake" meta box with an information message,
+>>>>>>> main
  * shown on the block editor, when an incompatible meta box is found.
  *
  * @since 5.0.0
  *
+<<<<<<< HEAD
  * @param mixed $object The data object being rendered on this screen.
  * @param array $box    {
+=======
+ * @param mixed $data_object The data object being rendered on this screen.
+ * @param array $box         {
+>>>>>>> main
  *     Custom formats meta box arguments.
  *
  *     @type string   $id           Meta box 'id' attribute.
@@ -1134,15 +1242,25 @@ function add_meta_box( $id, $title, $callback, $screen = null, $context = 'advan
  *     @type array    $args         Extra meta box arguments.
  * }
  */
+<<<<<<< HEAD
 function do_block_editor_incompatible_meta_box( $object, $box ) {
+=======
+function do_block_editor_incompatible_meta_box( $data_object, $box ) {
+>>>>>>> main
 	$plugin  = _get_plugin_from_callback( $box['old_callback'] );
 	$plugins = get_plugins();
 	echo '<p>';
 	if ( $plugin ) {
 		/* translators: %s: The name of the plugin that generated this meta box. */
+<<<<<<< HEAD
 		printf( __( "This meta box, from the %s plugin, isn't compatible with the block editor." ), "<strong>{$plugin['Name']}</strong>" );
 	} else {
 		_e( "This meta box isn't compatible with the block editor." );
+=======
+		printf( __( 'This meta box, from the %s plugin, is not compatible with the block editor.' ), "<strong>{$plugin['Name']}</strong>" );
+	} else {
+		_e( 'This meta box is not compatible with the block editor.' );
+>>>>>>> main
 	}
 	echo '</p>';
 
@@ -1170,13 +1288,21 @@ function do_block_editor_incompatible_meta_box( $object, $box ) {
 			printf( __( 'Please activate the <a href="%s">Classic Editor plugin</a> to use this meta box.' ), esc_url( $activate_url ) );
 			echo '</p>';
 		}
+<<<<<<< HEAD
 	} elseif ( $object instanceof WP_Post ) {
+=======
+	} elseif ( $data_object instanceof WP_Post ) {
+>>>>>>> main
 		$edit_url = add_query_arg(
 			array(
 				'classic-editor'         => '',
 				'classic-editor__forget' => '',
 			),
+<<<<<<< HEAD
 			get_edit_post_link( $object )
+=======
+			get_edit_post_link( $data_object )
+>>>>>>> main
 		);
 		echo '<p>';
 		/* translators: %s: A link to use the Classic Editor plugin. */
@@ -1240,6 +1366,7 @@ function _get_plugin_from_callback( $callback ) {
  *
  * @global array $wp_meta_boxes
  *
+<<<<<<< HEAD
  * @param string|WP_Screen $screen  The screen identifier. If you have used add_menu_page() or
  *                                  add_submenu_page() to create a new screen (and hence screen_id)
  *                                  make sure your menu slug conforms to the limits of sanitize_key()
@@ -1251,6 +1378,19 @@ function _get_plugin_from_callback( $callback ) {
  * @return int Number of meta_boxes.
  */
 function do_meta_boxes( $screen, $context, $object ) {
+=======
+ * @param string|WP_Screen $screen      The screen identifier. If you have used add_menu_page() or
+ *                                      add_submenu_page() to create a new screen (and hence screen_id)
+ *                                      make sure your menu slug conforms to the limits of sanitize_key()
+ *                                      otherwise the 'screen' menu may not correctly render on your page.
+ * @param string           $context     The screen context for which to display meta boxes.
+ * @param mixed            $data_object Gets passed to the meta box callback function as the first parameter.
+ *                                      Often this is the object that's the focus of the current screen,
+ *                                      for example a `WP_Post` or `WP_Comment` object.
+ * @return int Number of meta_boxes.
+ */
+function do_meta_boxes( $screen, $context, $data_object ) {
+>>>>>>> main
 	global $wp_meta_boxes;
 	static $already_sorted = false;
 
@@ -1384,7 +1524,11 @@ function do_meta_boxes( $screen, $context, $object ) {
 								<p>
 									<?php
 										/* translators: %s: The name of the plugin that generated this meta box. */
+<<<<<<< HEAD
 										printf( __( "This meta box, from the %s plugin, isn't compatible with the block editor." ), "<strong>{$plugin['Name']}</strong>" );
+=======
+										printf( __( 'This meta box, from the %s plugin, is not compatible with the block editor.' ), "<strong>{$plugin['Name']}</strong>" );
+>>>>>>> main
 									?>
 								</p>
 							</div>
@@ -1392,7 +1536,11 @@ function do_meta_boxes( $screen, $context, $object ) {
 						}
 					}
 
+<<<<<<< HEAD
 					call_user_func( $box['callback'], $object, $box );
+=======
+					call_user_func( $box['callback'], $data_object, $box );
+>>>>>>> main
 					echo "</div>\n";
 					echo "</div>\n";
 				}
@@ -1469,12 +1617,21 @@ function remove_meta_box( $id, $screen, $context ) {
  *
  * @uses global $wp_meta_boxes Used to retrieve registered meta boxes.
  *
+<<<<<<< HEAD
  * @param string|object $screen  The screen identifier.
  * @param string        $context The screen context for which to display accordion sections.
  * @param mixed         $object  Gets passed to the section callback function as the first parameter.
  * @return int Number of meta boxes as accordion sections.
  */
 function do_accordion_sections( $screen, $context, $object ) {
+=======
+ * @param string|object $screen      The screen identifier.
+ * @param string        $context     The screen context for which to display accordion sections.
+ * @param mixed         $data_object Gets passed to the section callback function as the first parameter.
+ * @return int Number of meta boxes as accordion sections.
+ */
+function do_accordion_sections( $screen, $context, $data_object ) {
+>>>>>>> main
 	global $wp_meta_boxes;
 
 	wp_enqueue_script( 'accordion' );
@@ -1519,7 +1676,11 @@ function do_accordion_sections( $screen, $context, $object ) {
 						</h3>
 						<div class="accordion-section-content <?php postbox_classes( $box['id'], $page ); ?>">
 							<div class="inside">
+<<<<<<< HEAD
 								<?php call_user_func( $box['callback'], $object, $box ); ?>
+=======
+								<?php call_user_func( $box['callback'], $data_object, $box ); ?>
+>>>>>>> main
 							</div><!-- .inside -->
 						</div><!-- .accordion-section-content -->
 					</li><!-- .accordion-section -->
@@ -1536,7 +1697,11 @@ function do_accordion_sections( $screen, $context, $object ) {
 }
 
 /**
+<<<<<<< HEAD
  * Add a new section to a settings page.
+=======
+ * Adds a new section to a settings page.
+>>>>>>> main
  *
  * Part of the Settings API. Use this to define new settings sections for an admin page.
  * Show settings sections in your admin page callback function with do_settings_sections().
@@ -1594,7 +1759,11 @@ function add_settings_section( $id, $title, $callback, $page ) {
 }
 
 /**
+<<<<<<< HEAD
  * Add a new field to a section of a settings page.
+=======
+ * Adds a new field to a section of a settings page.
+>>>>>>> main
  *
  * Part of the Settings API. Use this to define a settings field that will show
  * as part of a settings section inside a settings page. The fields are shown using
@@ -1704,7 +1873,11 @@ function do_settings_sections( $page ) {
 }
 
 /**
+<<<<<<< HEAD
  * Print out the settings fields for a particular settings section.
+=======
+ * Prints out the settings fields for a particular settings section.
+>>>>>>> main
  *
  * Part of the Settings API. Use this in a settings page to output
  * a specific section. Should normally be called by do_settings_sections()
@@ -1747,7 +1920,11 @@ function do_settings_fields( $page, $section ) {
 }
 
 /**
+<<<<<<< HEAD
  * Register a settings error to be displayed to the user.
+=======
+ * Registers a settings error to be displayed to the user.
+>>>>>>> main
  *
  * Part of the Settings API. Use this to show messages to users about settings validation
  * problems, missing settings or anything else.
@@ -1783,7 +1960,11 @@ function add_settings_error( $setting, $code, $message, $type = 'error' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Fetch settings errors registered by add_settings_error().
+=======
+ * Fetches settings errors registered by add_settings_error().
+>>>>>>> main
  *
  * Checks the $wp_settings_errors array for any errors declared during the current
  * pageload and returns them.
@@ -1854,7 +2035,11 @@ function get_settings_errors( $setting = '', $sanitize = false ) {
 }
 
 /**
+<<<<<<< HEAD
  * Display settings errors registered by add_settings_error().
+=======
+ * Displays settings errors registered by add_settings_error().
+>>>>>>> main
  *
  * Part of the Settings API. Outputs a div for each error retrieved by
  * get_settings_errors().
@@ -1974,7 +2159,11 @@ function the_post_password() {
 }
 
 /**
+<<<<<<< HEAD
  * Get the post title.
+=======
+ * Gets the post title.
+>>>>>>> main
  *
  * The post title is fetched and if it is blank then a default string is
  * returned.
@@ -2005,7 +2194,11 @@ function _admin_search_query() {
 }
 
 /**
+<<<<<<< HEAD
  * Generic Iframe header for use with Thickbox
+=======
+ * Generic Iframe header for use with Thickbox.
+>>>>>>> main
  *
  * @since 2.7.0
  *
@@ -2093,7 +2286,11 @@ document.body.className = c;
 }
 
 /**
+<<<<<<< HEAD
  * Generic Iframe footer for use with Thickbox
+=======
+ * Generic Iframe footer for use with Thickbox.
+>>>>>>> main
  *
  * @since 2.7.0
  */
@@ -2128,6 +2325,7 @@ function iframe_footer() {
 }
 
 /**
+<<<<<<< HEAD
  * Function to echo or return the post states as HTML.
  *
  * @since 2.7.0
@@ -2140,6 +2338,21 @@ function iframe_footer() {
  * @return string Post states string.
  */
 function _post_states( $post, $echo = true ) {
+=======
+ * Echoes or returns the post states as HTML.
+ *
+ * @since 2.7.0
+ * @since 5.3.0 Added the `$display` parameter and a return value.
+ *
+ * @see get_post_states()
+ *
+ * @param WP_Post $post    The post to retrieve states for.
+ * @param bool    $display Optional. Whether to display the post states as an HTML string.
+ *                         Default true.
+ * @return string Post states string.
+ */
+function _post_states( $post, $display = true ) {
+>>>>>>> main
 	$post_states        = get_post_states( $post );
 	$post_states_string = '';
 
@@ -2159,7 +2372,11 @@ function _post_states( $post, $echo = true ) {
 		}
 	}
 
+<<<<<<< HEAD
 	if ( $echo ) {
+=======
+	if ( $display ) {
+>>>>>>> main
 		echo $post_states_string;
 	}
 
@@ -2246,6 +2463,7 @@ function get_post_states( $post ) {
  * Outputs the attachment media states as HTML.
  *
  * @since 3.2.0
+<<<<<<< HEAD
  * @since 5.6.0 Added the `$echo` parameter and a return value.
  *
  * @param WP_Post $post The attachment post to retrieve states for.
@@ -2253,6 +2471,16 @@ function get_post_states( $post ) {
  * @return string Media states string.
  */
 function _media_states( $post, $echo = true ) {
+=======
+ * @since 5.6.0 Added the `$display` parameter and a return value.
+ *
+ * @param WP_Post $post    The attachment post to retrieve states for.
+ * @param bool    $display Optional. Whether to display the post states as an HTML string.
+ *                         Default true.
+ * @return string Media states string.
+ */
+function _media_states( $post, $display = true ) {
+>>>>>>> main
 	$media_states        = get_media_states( $post );
 	$media_states_string = '';
 
@@ -2272,7 +2500,11 @@ function _media_states( $post, $echo = true ) {
 		}
 	}
 
+<<<<<<< HEAD
 	if ( $echo ) {
+=======
+	if ( $display ) {
+>>>>>>> main
 		echo $media_states_string;
 	}
 
@@ -2361,7 +2593,11 @@ function get_media_states( $post ) {
 }
 
 /**
+<<<<<<< HEAD
  * Test support for compressing JavaScript from PHP
+=======
+ * Tests support for compressing JavaScript from PHP.
+>>>>>>> main
  *
  * Outputs JavaScript that tests if compression from PHP works as expected
  * and sets an option with the result. Has no effect when the current user
@@ -2451,7 +2687,11 @@ function submit_button( $text = null, $type = 'primary', $name = 'submit', $wrap
 }
 
 /**
+<<<<<<< HEAD
  * Returns a submit button, with provided text and appropriate class
+=======
+ * Returns a submit button, with provided text and appropriate class.
+>>>>>>> main
  *
  * @since 3.1.0
  *
@@ -2554,7 +2794,11 @@ function _wp_admin_html_begin() {
 }
 
 /**
+<<<<<<< HEAD
  * Convert a screen string to a screen object
+=======
+ * Converts a screen string to a screen object.
+>>>>>>> main
  *
  * @since 3.0.0
  *
@@ -2604,7 +2848,11 @@ function _local_storage_notice() {
 }
 
 /**
+<<<<<<< HEAD
  * Output a HTML element with a star rating for a given rating.
+=======
+ * Outputs a HTML element with a star rating for a given rating.
+>>>>>>> main
  *
  * Outputs a HTML element with the star rating exposed on a 0..5 scale in
  * half star increments (ie. 1, 1.5, 2 stars). Optionally, if specified, the

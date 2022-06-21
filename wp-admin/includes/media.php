@@ -7,7 +7,11 @@
  */
 
 /**
+<<<<<<< HEAD
  * Defines the default media upload tabs
+=======
+ * Defines the default media upload tabs.
+>>>>>>> main
  *
  * @since 2.5.0
  *
@@ -32,7 +36,11 @@ function media_upload_tabs() {
 }
 
 /**
+<<<<<<< HEAD
  * Adds the gallery tab back to the tabs array if post has image attachments
+=======
+ * Adds the gallery tab back to the tabs array if post has image attachments.
+>>>>>>> main
  *
  * @since 2.5.0
  *
@@ -361,12 +369,30 @@ function media_handle_upload( $file_id, $post_id, $post_data = array(), $overrid
 		if ( ! empty( $meta['track_number'] ) ) {
 			$track_number = explode( '/', $meta['track_number'] );
 
+<<<<<<< HEAD
 			if ( isset( $track_number[1] ) ) {
 				/* translators: Audio file track information. 1: Audio track number, 2: Total audio tracks. */
 				$content .= ' ' . sprintf( __( 'Track %1$s of %2$s.' ), number_format_i18n( $track_number[0] ), number_format_i18n( $track_number[1] ) );
 			} else {
 				/* translators: Audio file track information. %s: Audio track number. */
 				$content .= ' ' . sprintf( __( 'Track %s.' ), number_format_i18n( $track_number[0] ) );
+=======
+			if ( is_numeric( $track_number[0] ) ) {
+				if ( isset( $track_number[1] ) && is_numeric( $track_number[1] ) ) {
+					$content .= ' ' . sprintf(
+						/* translators: Audio file track information. 1: Audio track number, 2: Total audio tracks. */
+						__( 'Track %1$s of %2$s.' ),
+						number_format_i18n( $track_number[0] ),
+						number_format_i18n( $track_number[1] )
+					);
+				} else {
+					$content .= ' ' . sprintf(
+						/* translators: Audio file track information. %s: Audio track number. */
+						__( 'Track %s.' ),
+						number_format_i18n( $track_number[0] )
+					);
+				}
+>>>>>>> main
 			}
 		}
 
@@ -612,7 +638,11 @@ function wp_iframe( $content_func, ...$args ) {
 }
 
 /**
+<<<<<<< HEAD
  * Adds the media button to the editor
+=======
+ * Adds the media button to the editor.
+>>>>>>> main
  *
  * @since 2.5.0
  *
@@ -974,12 +1004,18 @@ function wp_media_upload_handler() {
  * Downloads an image from the specified URL, saves it as an attachment, and optionally attaches it to a post.
  *
  * @since 2.6.0
+<<<<<<< HEAD
  * @since 4.2.0 Introduced the `$return` parameter.
  * @since 4.8.0 Introduced the 'id' option for the `$return` parameter.
+=======
+ * @since 4.2.0 Introduced the `$return_type` parameter.
+ * @since 4.8.0 Introduced the 'id' option for the `$return_type` parameter.
+>>>>>>> main
  * @since 5.3.0 The `$post_id` parameter was made optional.
  * @since 5.4.0 The original URL of the attachment is stored in the `_source_url`
  *              post meta value.
  *
+<<<<<<< HEAD
  * @param string $file    The URL of the image to download.
  * @param int    $post_id Optional. The post ID the media is to be associated with.
  * @param string $desc    Optional. Description of the image.
@@ -989,6 +1025,17 @@ function wp_media_upload_handler() {
  *                             on success, WP_Error object otherwise.
  */
 function media_sideload_image( $file, $post_id = 0, $desc = null, $return = 'html' ) {
+=======
+ * @param string $file        The URL of the image to download.
+ * @param int    $post_id     Optional. The post ID the media is to be associated with.
+ * @param string $desc        Optional. Description of the image.
+ * @param string $return_type Optional. Accepts 'html' (image tag html) or 'src' (URL),
+ *                            or 'id' (attachment ID). Default 'html'.
+ * @return string|int|WP_Error Populated HTML img tag, attachment ID, or attachment source
+ *                             on success, WP_Error object otherwise.
+ */
+function media_sideload_image( $file, $post_id = 0, $desc = null, $return_type = 'html' ) {
+>>>>>>> main
 	if ( ! empty( $file ) ) {
 
 		$allowed_extensions = array( 'jpg', 'jpeg', 'jpe', 'png', 'gif', 'webp' );
@@ -1043,7 +1090,11 @@ function media_sideload_image( $file, $post_id = 0, $desc = null, $return = 'htm
 		add_post_meta( $id, '_source_url', $file );
 
 		// If attachment ID was requested, return it.
+<<<<<<< HEAD
 		if ( 'id' === $return ) {
+=======
+		if ( 'id' === $return_type ) {
+>>>>>>> main
 			return $id;
 		}
 
@@ -1052,7 +1103,11 @@ function media_sideload_image( $file, $post_id = 0, $desc = null, $return = 'htm
 
 	// Finally, check to make sure the file has been saved, then return the HTML.
 	if ( ! empty( $src ) ) {
+<<<<<<< HEAD
 		if ( 'src' === $return ) {
+=======
+		if ( 'src' === $return_type ) {
+>>>>>>> main
 			return $src;
 		}
 
@@ -1116,7 +1171,11 @@ function media_upload_library() {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve HTML for the image alignment radio buttons with the specified one checked.
+=======
+ * Retrieves HTML for the image alignment radio buttons with the specified one checked.
+>>>>>>> main
  *
  * @since 2.7.0
  *
@@ -1154,7 +1213,11 @@ function image_align_input_fields( $post, $checked = '' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve HTML for the size radio buttons with the specified one checked.
+=======
+ * Retrieves HTML for the size radio buttons with the specified one checked.
+>>>>>>> main
  *
  * @since 2.7.0
  *
@@ -1232,7 +1295,11 @@ function image_size_input_fields( $post, $check = '' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve HTML for the Link URL buttons with the default link type as specified.
+=======
+ * Retrieves HTML for the Link URL buttons with the default link type as specified.
+>>>>>>> main
  *
  * @since 2.7.0
  *
@@ -1266,7 +1333,11 @@ function image_link_input_fields( $post, $url_type = '' ) {
 }
 
 /**
+<<<<<<< HEAD
  * Output a textarea element for inputting an attachment caption.
+=======
+ * Outputs a textarea element for inputting an attachment caption.
+>>>>>>> main
  *
  * @since 3.4.0
  *
@@ -1322,6 +1393,7 @@ function media_post_single_attachment_fields_to_edit( $form_fields, $post ) {
 }
 
 /**
+<<<<<<< HEAD
  * Filters input from media_upload_form_handler() and assigns a default
  * post_title from the file name if none supplied.
  *
@@ -1347,6 +1419,8 @@ function image_attachment_fields_to_save( $post, $attachment ) {
 }
 
 /**
+=======
+>>>>>>> main
  * Retrieves the media element HTML to send to the editor.
  *
  * @since 2.5.0
@@ -1511,7 +1585,11 @@ function get_attachment_fields_to_edit( $post, $errors = null ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve HTML for media items of post gallery.
+=======
+ * Retrieves HTML for media items of post gallery.
+>>>>>>> main
  *
  * The HTML markup retrieved will be created for the progress of SWF Upload
  * component. Will also create link for showing and hiding the form to modify
@@ -1523,7 +1601,11 @@ function get_attachment_fields_to_edit( $post, $errors = null ) {
  *
  * @param int   $post_id Post ID.
  * @param array $errors  Errors for attachment, if any.
+<<<<<<< HEAD
  * @return string
+=======
+ * @return string HTML content for media items of post gallery.
+>>>>>>> main
  */
 function get_media_items( $post_id, $errors ) {
 	$attachments = array();
@@ -1568,7 +1650,11 @@ function get_media_items( $post_id, $errors ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve HTML form for modifying the image attachment.
+=======
+ * Retrieves HTML form for modifying the image attachment.
+>>>>>>> main
  *
  * @since 2.5.0
  *
@@ -2528,7 +2614,11 @@ function media_upload_type_url_form( $type = null, $errors = null, $id = null ) 
 }
 
 /**
+<<<<<<< HEAD
  * Adds gallery form to upload iframe
+=======
+ * Adds gallery form to upload iframe.
+>>>>>>> main
  *
  * @since 2.5.0
  *
@@ -2902,12 +2992,20 @@ function media_upload_library_form( $errors ) {
 }
 
 /**
+<<<<<<< HEAD
  * Creates the form for external url
+=======
+ * Creates the form for external url.
+>>>>>>> main
  *
  * @since 2.7.0
  *
  * @param string $default_view
+<<<<<<< HEAD
  * @return string the form html
+=======
+ * @return string HTML content of the form.
+>>>>>>> main
  */
 function wp_media_insert_url_form( $default_view = 'image' ) {
 	/** This filter is documented in wp-admin/includes/media.php */
@@ -3378,7 +3476,11 @@ function attachment_submitbox_metadata() {
 	if ( isset( $meta['filesize'] ) ) {
 		$file_size = $meta['filesize'];
 	} elseif ( file_exists( $file ) ) {
+<<<<<<< HEAD
 		$file_size = filesize( $file );
+=======
+		$file_size = wp_filesize( $file );
+>>>>>>> main
 	}
 
 	if ( ! empty( $file_size ) ) {
@@ -3491,12 +3593,21 @@ function attachment_submitbox_metadata() {
 }
 
 /**
+<<<<<<< HEAD
  * Parse ID3v2, ID3v1, and getID3 comments to extract usable data
  *
  * @since 3.6.0
  *
  * @param array $metadata An existing array with data
  * @param array $data Data supplied by ID3 tags
+=======
+ * Parses ID3v2, ID3v1, and getID3 comments to extract usable data.
+ *
+ * @since 3.6.0
+ *
+ * @param array $metadata An existing array with data.
+ * @param array $data Data supplied by ID3 tags.
+>>>>>>> main
  */
 function wp_add_id3_tag_data( &$metadata, $data ) {
 	foreach ( array( 'id3v2', 'id3v1' ) as $version ) {
@@ -3536,7 +3647,11 @@ function wp_add_id3_tag_data( &$metadata, $data ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve metadata from a video file's ID3 tags
+=======
+ * Retrieves metadata from a video file's ID3 tags.
+>>>>>>> main
  *
  * @since 3.6.0
  *
@@ -3650,7 +3765,11 @@ function wp_read_video_metadata( $file ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve metadata from an audio file's ID3 tags.
+=======
+ * Retrieves metadata from an audio file's ID3 tags.
+>>>>>>> main
  *
  * @since 3.6.0
  *
@@ -3717,7 +3836,11 @@ function wp_read_audio_metadata( $file ) {
 }
 
 /**
+<<<<<<< HEAD
  * Parse creation date from media metadata.
+=======
+ * Parses creation date from media metadata.
+>>>>>>> main
  *
  * The getID3 library doesn't have a standard method for getting creation dates,
  * so the location of this data can vary based on the MIME type.

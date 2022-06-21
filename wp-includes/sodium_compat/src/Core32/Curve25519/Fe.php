@@ -48,6 +48,12 @@ class ParagonIE_Sodium_Core32_Curve25519_Fe implements ArrayAccess
             }
         } else {
             for ($i = 0; $i < $count; ++$i) {
+<<<<<<< HEAD
+=======
+                if (!($array[$i] instanceof ParagonIE_Sodium_Core32_Int32)) {
+                    throw new TypeError('Expected ParagonIE_Sodium_Core32_Int32');
+                }
+>>>>>>> main
                 $array[$i]->overflow = 0;
                 $obj->offsetSet($i, $array[$i]);
             }

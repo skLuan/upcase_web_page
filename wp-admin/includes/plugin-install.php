@@ -235,7 +235,11 @@ function plugins_api( $action, $args = array() ) {
 }
 
 /**
+<<<<<<< HEAD
  * Retrieve popular WordPress plugin tags.
+=======
+ * Retrieves popular WordPress plugin tags.
+>>>>>>> main
  *
  * @since 2.7.0
  *
@@ -261,6 +265,7 @@ function install_popular_tags( $args = array() ) {
 }
 
 /**
+<<<<<<< HEAD
  * @since 2.7.0
  */
 function install_dashboard() {
@@ -276,6 +281,15 @@ function install_dashboard() {
 	</p>
 
 	<?php display_plugins_table(); ?>
+=======
+ * Displays the Featured tab of Add Plugins screen.
+ *
+ * @since 2.7.0
+ */
+function install_dashboard() {
+	display_plugins_table();
+	?>
+>>>>>>> main
 
 	<div class="plugins-popular-tags-wrapper">
 	<h2><?php _e( 'Popular tags' ); ?></h2>
@@ -342,7 +356,11 @@ function install_search_form( $deprecated = true ) {
 }
 
 /**
+<<<<<<< HEAD
  * Upload from zip
+=======
+ * Displays a form to upload plugins from zip files.
+>>>>>>> main
  *
  * @since 2.8.0
  */
@@ -361,7 +379,11 @@ function install_plugins_upload() {
 }
 
 /**
+<<<<<<< HEAD
  * Show a username form for the favorites page
+=======
+ * Shows a username form for the favorites page.
+>>>>>>> main
  *
  * @since 3.5.0
  */
@@ -383,7 +405,11 @@ function install_plugins_favorites_form() {
 }
 
 /**
+<<<<<<< HEAD
  * Display plugin content based on plugin list.
+=======
+ * Displays plugin content based on plugin list.
+>>>>>>> main
  *
  * @since 2.7.0
  *
@@ -393,6 +419,7 @@ function display_plugins_table() {
 	global $wp_list_table;
 
 	switch ( current_filter() ) {
+<<<<<<< HEAD
 		case 'install_plugins_favorites':
 			if ( empty( $_GET['user'] ) && ! get_user_option( 'wporg_favorites' ) ) {
 				return;
@@ -401,6 +428,8 @@ function display_plugins_table() {
 		case 'install_plugins_recommended':
 			echo '<p>' . __( 'These suggestions are based on the plugins you and other users have installed.' ) . '</p>';
 			break;
+=======
+>>>>>>> main
 		case 'install_plugins_beta':
 			printf(
 				/* translators: %s: URL to "Features as Plugins" page. */
@@ -408,8 +437,27 @@ function display_plugins_table() {
 				'https://make.wordpress.org/core/handbook/about/release-cycle/features-as-plugins/'
 			);
 			break;
+<<<<<<< HEAD
 	}
 
+=======
+		case 'install_plugins_featured':
+			printf(
+				/* translators: %s: https://wordpress.org/plugins/ */
+				'<p>' . __( 'Plugins extend and expand the functionality of WordPress. You may automatically install plugins from the <a href="%s">WordPress Plugin Directory</a> or upload a plugin in .zip format by clicking the button at the top of this page.' ) . '</p>',
+				__( 'https://wordpress.org/plugins/' )
+			);
+			break;
+		case 'install_plugins_recommended':
+			echo '<p>' . __( 'These suggestions are based on the plugins you and other users have installed.' ) . '</p>';
+			break;
+		case 'install_plugins_favorites':
+			if ( empty( $_GET['user'] ) && ! get_user_option( 'wporg_favorites' ) ) {
+				return;
+			}
+			break;
+	}
+>>>>>>> main
 	?>
 	<form id="plugin-filter" method="post">
 		<?php $wp_list_table->display(); ?>
@@ -418,7 +466,11 @@ function display_plugins_table() {
 }
 
 /**
+<<<<<<< HEAD
  * Determine the status we can perform on a plugin.
+=======
+ * Determines the status we can perform on a plugin.
+>>>>>>> main
  *
  * @since 3.0.0
  *
@@ -508,7 +560,11 @@ function install_plugin_install_status( $api, $loop = false ) {
 }
 
 /**
+<<<<<<< HEAD
  * Display plugin information in dialog box form.
+=======
+ * Displays plugin information in dialog box form.
+>>>>>>> main
  *
  * @since 2.7.0
  *

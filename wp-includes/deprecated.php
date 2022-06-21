@@ -76,17 +76,28 @@ function start_wp() {
  * @deprecated 0.71 Use get_the_category()
  * @see get_the_category()
  *
+<<<<<<< HEAD
  * @param bool $echo Optional. Whether to echo the output. Default true.
  * @return int Category ID.
  */
 function the_category_ID($echo = true) {
+=======
+ * @param bool $display Optional. Whether to display the output. Default true.
+ * @return int Category ID.
+ */
+function the_category_ID($display = true) {
+>>>>>>> main
 	_deprecated_function( __FUNCTION__, '0.71', 'get_the_category()' );
 
 	// Grab the first cat in the list.
 	$categories = get_the_category();
 	$cat = $categories[0]->term_id;
 
+<<<<<<< HEAD
 	if ( $echo )
+=======
+	if ( $display )
+>>>>>>> main
 		echo $cat;
 
 	return $cat;
@@ -795,17 +806,29 @@ function get_archives($type='', $limit='', $format='html', $before = '', $after 
  * @deprecated 2.1.0 Use get_author_posts_url()
  * @see get_author_posts_url()
  *
+<<<<<<< HEAD
  * @param bool $echo
+=======
+ * @param bool $display
+>>>>>>> main
  * @param int $author_id
  * @param string $author_nicename Optional.
  * @return string|null
  */
+<<<<<<< HEAD
 function get_author_link($echo, $author_id, $author_nicename = '') {
+=======
+function get_author_link($display, $author_id, $author_nicename = '') {
+>>>>>>> main
 	_deprecated_function( __FUNCTION__, '2.1.0', 'get_author_posts_url()' );
 
 	$link = get_author_posts_url($author_id, $author_nicename);
 
+<<<<<<< HEAD
 	if ( $echo )
+=======
+	if ( $display )
+>>>>>>> main
 		echo $link;
 	return $link;
 }
@@ -939,11 +962,19 @@ function wp_get_links($args = '') {
  * @param int    $limit            Optional. Limit to X entries. If not specified, all entries are shown.
  *                                 Default -1.
  * @param int    $show_updated     Optional. Whether to show last updated timestamp. Default 1.
+<<<<<<< HEAD
  * @param bool   $echo             Whether to echo the results, or return them instead.
  * @return null|string
  */
 function get_links($category = -1, $before = '', $after = '<br />', $between = ' ', $show_images = true, $orderby = 'name',
 			$show_description = true, $show_rating = false, $limit = -1, $show_updated = 1, $echo = true) {
+=======
+ * @param bool   $display          Whether to display the results, or return them instead.
+ * @return null|string
+ */
+function get_links($category = -1, $before = '', $after = '<br />', $between = ' ', $show_images = true, $orderby = 'name',
+			$show_description = true, $show_rating = false, $limit = -1, $show_updated = 1, $display = true) {
+>>>>>>> main
 	_deprecated_function( __FUNCTION__, '2.1.0', 'get_bookmarks()' );
 
 	$order = 'ASC';
@@ -1018,7 +1049,11 @@ function get_links($category = -1, $before = '', $after = '<br />', $between = '
 		$output .= "$after\n";
 	} // End while.
 
+<<<<<<< HEAD
 	if ( !$echo )
+=======
+	if ( !$display )
+>>>>>>> main
 		return $output;
 	echo $output;
 }
@@ -1149,16 +1184,28 @@ function comments_rss_link($link_text = 'Comments RSS') {
  * @deprecated 2.5.0 Use get_category_feed_link()
  * @see get_category_feed_link()
  *
+<<<<<<< HEAD
  * @param bool $echo
  * @param int $cat_ID
  * @return string
  */
 function get_category_rss_link($echo = false, $cat_ID = 1) {
+=======
+ * @param bool $display
+ * @param int $cat_ID
+ * @return string
+ */
+function get_category_rss_link($display = false, $cat_ID = 1) {
+>>>>>>> main
 	_deprecated_function( __FUNCTION__, '2.5.0', 'get_category_feed_link()' );
 
 	$link = get_category_feed_link($cat_ID, 'rss2');
 
+<<<<<<< HEAD
 	if ( $echo )
+=======
+	if ( $display )
+>>>>>>> main
 		echo $link;
 	return $link;
 }
@@ -1170,6 +1217,7 @@ function get_category_rss_link($echo = false, $cat_ID = 1) {
  * @deprecated 2.5.0 Use get_author_feed_link()
  * @see get_author_feed_link()
  *
+<<<<<<< HEAD
  * @param bool $echo
  * @param int $author_id
  * @return string
@@ -1179,6 +1227,17 @@ function get_author_rss_link($echo = false, $author_id = 1) {
 
 	$link = get_author_feed_link($author_id);
 	if ( $echo )
+=======
+ * @param bool $display
+ * @param int $author_id
+ * @return string
+ */
+function get_author_rss_link($display = false, $author_id = 1) {
+	_deprecated_function( __FUNCTION__, '2.5.0', 'get_author_feed_link()' );
+
+	$link = get_author_feed_link($author_id);
+	if ( $display )
+>>>>>>> main
 		echo $link;
 	return $link;
 }
@@ -2070,6 +2129,7 @@ function js_escape( $text ) {
  * @deprecated 2.8.0 Use esc_html()
  * @see esc_html()
  *
+<<<<<<< HEAD
  * @param string       $string        String to escape.
  * @param string       $quote_style   Unused.
  * @param false|string $charset       Unused.
@@ -2082,6 +2142,20 @@ function wp_specialchars( $string, $quote_style = ENT_NOQUOTES, $charset = false
 		return _wp_specialchars( $string, $quote_style, $charset, $double_encode );
 	} else {
 		return esc_html( $string );
+=======
+ * @param string       $text          Text to escape.
+ * @param string       $quote_style   Unused.
+ * @param false|string $charset       Unused.
+ * @param false        $double_encode Whether to double encode. Unused.
+ * @return string Escaped `$text`.
+ */
+function wp_specialchars( $text, $quote_style = ENT_NOQUOTES, $charset = false, $double_encode = false ) {
+	_deprecated_function( __FUNCTION__, '2.8.0', 'esc_html()' );
+	if ( func_num_args() > 1 ) { // Maintain back-compat for people passing additional arguments.
+		return _wp_specialchars( $text, $quote_style, $charset, $double_encode );
+	} else {
+		return esc_html( $text );
+>>>>>>> main
 	}
 }
 
@@ -2858,6 +2932,7 @@ function debug_fopen( $filename, $mode ) {
  *
  * @link https://www.php.net/manual/en/function.error-log.php
  *
+<<<<<<< HEAD
  * @param mixed  $fp     Unused.
  * @param string $string Message to log.
  */
@@ -2865,6 +2940,15 @@ function debug_fwrite( $fp, $string ) {
 	_deprecated_function( __FUNCTION__, '3.4.0', 'error_log()' );
 	if ( ! empty( $GLOBALS['debug'] ) )
 		error_log( $string );
+=======
+ * @param mixed  $fp      Unused.
+ * @param string $message Message to log.
+ */
+function debug_fwrite( $fp, $message ) {
+	_deprecated_function( __FUNCTION__, '3.4.0', 'error_log()' );
+	if ( ! empty( $GLOBALS['debug'] ) )
+		error_log( $message );
+>>>>>>> main
 }
 
 /**
@@ -3192,7 +3276,11 @@ function wp_load_image( $file ) {
 
 	if ( ! is_file( $file ) ) {
 		/* translators: %s: File name. */
+<<<<<<< HEAD
 		return sprintf( __( 'File &#8220;%s&#8221; doesn&#8217;t exist?' ), $file );
+=======
+		return sprintf( __( 'File &#8220;%s&#8221; does not exist?' ), $file );
+>>>>>>> main
 	}
 
 	if ( ! function_exists('imagecreatefromstring') )
@@ -3820,6 +3908,7 @@ function get_paged_template() {
  * @since 1.0.0
  * @deprecated 4.7.0 Officially dropped security support for Netscape 4.
  *
+<<<<<<< HEAD
  * @param string $string
  * @return string
  */
@@ -3827,6 +3916,15 @@ function wp_kses_js_entities( $string ) {
 	_deprecated_function( __FUNCTION__, '4.7.0' );
 
 	return preg_replace( '%&\s*\{[^}]*(\}\s*;?|$)%', '', $string );
+=======
+ * @param string $content
+ * @return string
+ */
+function wp_kses_js_entities( $content ) {
+	_deprecated_function( __FUNCTION__, '4.7.0' );
+
+	return preg_replace( '%&\s*\{[^}]*(\}\s*;?|$)%', '', $content );
+>>>>>>> main
 }
 
 /**
@@ -4125,11 +4223,18 @@ function addslashes_strings_only( $value ) {
 }
 
 /**
+<<<<<<< HEAD
  * Displays a noindex meta tag if required by the blog configuration.
  *
  * If a blog is marked as not being public then the noindex meta tag will be
  * output to tell web robots not to index the page content. Add this to the
  * {@see 'wp_head'} action.
+=======
+ * Displays a `noindex` meta tag if required by the blog configuration.
+ *
+ * If a blog is marked as not being public then the `noindex` meta tag will be
+ * output to tell web robots not to index the page content.
+>>>>>>> main
  *
  * Typical usage is as a {@see 'wp_head'} callback:
  *
@@ -4150,6 +4255,7 @@ function noindex() {
 }
 
 /**
+<<<<<<< HEAD
  * Display a noindex meta tag.
  *
  * Outputs a noindex meta tag that tells web robots not to index the page content.
@@ -4157,6 +4263,18 @@ function noindex() {
  *
  * @since 3.3.0
  * @since 5.3.0 Echo "noindex,nofollow" if search engine visibility is discouraged.
+=======
+ * Display a `noindex` meta tag.
+ *
+ * Outputs a `noindex` meta tag that tells web robots not to index the page content.
+ *
+ * Typical usage is as a {@see 'wp_head'} callback:
+ *
+ *     add_action( 'wp_head', 'wp_no_robots' );
+ *
+ * @since 3.3.0
+ * @since 5.3.0 Echo `noindex,nofollow` if search engine visibility is discouraged.
+>>>>>>> main
  * @deprecated 5.7.0 Use wp_robots_no_robots() instead on 'wp_robots' filter.
  */
 function wp_no_robots() {
@@ -4171,6 +4289,7 @@ function wp_no_robots() {
 }
 
 /**
+<<<<<<< HEAD
  * Display a noindex,noarchive meta tag and referrer origin-when-cross-origin meta tag.
  *
  * Outputs a noindex,noarchive meta tag that tells web robots not to index or cache the page content.
@@ -4178,10 +4297,26 @@ function wp_no_robots() {
  * url as a referrer to other sites when cross-origin assets are loaded.
  *
  * Typical usage is as a wp_head callback. add_action( 'wp_head', 'wp_sensitive_page_meta' );
+=======
+ * Display a `noindex,noarchive` meta tag and referrer `strict-origin-when-cross-origin` meta tag.
+ *
+ * Outputs a `noindex,noarchive` meta tag that tells web robots not to index or cache the page content.
+ * Outputs a referrer `strict-origin-when-cross-origin` meta tag that tells the browser not to send
+ * the full URL as a referrer to other sites when cross-origin assets are loaded.
+ *
+ * Typical usage is as a {@see 'wp_head'} callback:
+ *
+ *     add_action( 'wp_head', 'wp_sensitive_page_meta' );
+>>>>>>> main
  *
  * @since 5.0.1
  * @deprecated 5.7.0 Use wp_robots_sensitive_page() instead on 'wp_robots' filter
  *                   and wp_strict_cross_origin_referrer() on 'wp_head' action.
+<<<<<<< HEAD
+=======
+ *
+ * @see wp_robots_sensitive_page()
+>>>>>>> main
  */
 function wp_sensitive_page_meta() {
 	_deprecated_function( __FUNCTION__, '5.7.0', 'wp_robots_sensitive_page()' );
@@ -4196,9 +4331,16 @@ function wp_sensitive_page_meta() {
  * Render inner blocks from the `core/columns` block for generating an excerpt.
  *
  * @since 5.2.0
+<<<<<<< HEAD
  * @deprecated 5.8.0
  *
  * @access private
+=======
+ * @access private
+ * @deprecated 5.8.0 Use _excerpt_render_inner_blocks() introduced in 5.8.0.
+ *
+ * @see _excerpt_render_inner_blocks()
+>>>>>>> main
  *
  * @param array $columns        The parsed columns block.
  * @param array $allowed_blocks The list of allowed inner blocks.
@@ -4206,6 +4348,10 @@ function wp_sensitive_page_meta() {
  */
 function _excerpt_render_inner_columns_blocks( $columns, $allowed_blocks ) {
 	_deprecated_function( __FUNCTION__, '5.8.0', '_excerpt_render_inner_blocks()' );
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 	return _excerpt_render_inner_blocks( $columns, $allowed_blocks );
 }
 
@@ -4214,7 +4360,11 @@ function _excerpt_render_inner_columns_blocks( $columns, $allowed_blocks ) {
  * reference the rendered SVG.
  *
  * @since 5.9.0
+<<<<<<< HEAD
  * @deprecated 5.9.1 Use `wp_get_duotone_filter_property` introduced in 5.9.1.
+=======
+ * @deprecated 5.9.1 Use wp_get_duotone_filter_property() introduced in 5.9.1.
+>>>>>>> main
  *
  * @see wp_get_duotone_filter_property()
  *
@@ -4223,5 +4373,88 @@ function _excerpt_render_inner_columns_blocks( $columns, $allowed_blocks ) {
  */
 function wp_render_duotone_filter_preset( $preset ) {
 	_deprecated_function( __FUNCTION__, '5.9.1', 'wp_get_duotone_filter_property()' );
+<<<<<<< HEAD
 	return wp_get_duotone_filter_property( $preset );
 }
+=======
+
+	return wp_get_duotone_filter_property( $preset );
+}
+
+/**
+ * Checks whether serialization of the current block's border properties should occur.
+ *
+ * @since 5.8.0
+ * @access private
+ * @deprecated 6.0.0 Use wp_should_skip_block_supports_serialization() introduced in 6.0.0.
+ *
+ * @see wp_should_skip_block_supports_serialization()
+ *
+ * @param WP_Block_Type $block_type Block type.
+ * @return bool Whether serialization of the current block's border properties
+ *              should occur.
+ */
+function wp_skip_border_serialization( $block_type ) {
+	_deprecated_function( __FUNCTION__, '6.0.0', 'wp_should_skip_block_supports_serialization()' );
+
+	$border_support = _wp_array_get( $block_type->supports, array( '__experimentalBorder' ), false );
+
+	return is_array( $border_support ) &&
+		array_key_exists( '__experimentalSkipSerialization', $border_support ) &&
+		$border_support['__experimentalSkipSerialization'];
+}
+
+/**
+ * Checks whether serialization of the current block's dimensions properties should occur.
+ *
+ * @since 5.9.0
+ * @access private
+ * @deprecated 6.0.0 Use wp_should_skip_block_supports_serialization() introduced in 6.0.0.
+ *
+ * @see wp_should_skip_block_supports_serialization()
+ *
+ * @param WP_Block_type $block_type Block type.
+ * @return bool Whether to serialize spacing support styles & classes.
+ */
+function wp_skip_dimensions_serialization( $block_type ) {
+	_deprecated_function( __FUNCTION__, '6.0.0', 'wp_should_skip_block_supports_serialization()' );
+
+	$dimensions_support = _wp_array_get( $block_type->supports, array( '__experimentalDimensions' ), false );
+
+	return is_array( $dimensions_support ) &&
+		array_key_exists( '__experimentalSkipSerialization', $dimensions_support ) &&
+		$dimensions_support['__experimentalSkipSerialization'];
+}
+
+/**
+ * Checks whether serialization of the current block's spacing properties should occur.
+ *
+ * @since 5.9.0
+ * @access private
+ * @deprecated 6.0.0 Use wp_should_skip_block_supports_serialization() introduced in 6.0.0.
+ *
+ * @see wp_should_skip_block_supports_serialization()
+ *
+ * @param WP_Block_Type $block_type Block type.
+ * @return bool Whether to serialize spacing support styles & classes.
+ */
+function wp_skip_spacing_serialization( $block_type ) {
+	_deprecated_function( __FUNCTION__, '6.0.0', 'wp_should_skip_block_supports_serialization()' );
+
+	$spacing_support = _wp_array_get( $block_type->supports, array( 'spacing' ), false );
+
+	return is_array( $spacing_support ) &&
+		array_key_exists( '__experimentalSkipSerialization', $spacing_support ) &&
+		$spacing_support['__experimentalSkipSerialization'];
+}
+
+/**
+ * Inject the block editor assets that need to be loaded into the editor's iframe as an inline script.
+ *
+ * @since 5.8.0
+ * @deprecated 6.0.0
+ */
+function wp_add_iframed_editor_assets_html() {
+	_deprecated_function( __FUNCTION__, '6.0.0' );
+}
+>>>>>>> main

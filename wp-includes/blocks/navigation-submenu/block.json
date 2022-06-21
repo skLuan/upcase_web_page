@@ -1,11 +1,19 @@
 {
+<<<<<<< HEAD
+=======
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+>>>>>>> main
 	"apiVersion": 2,
 	"name": "core/navigation-submenu",
 	"title": "Submenu",
 	"category": "design",
+<<<<<<< HEAD
 	"parent": [
 		"core/navigation"
 	],
+=======
+	"parent": [ "core/navigation" ],
+>>>>>>> main
 	"description": "Add a submenu to your navigation.",
 	"textdomain": "default",
 	"attributes": {
@@ -53,6 +61,10 @@
 		"fontSize",
 		"customFontSize",
 		"showSubmenuIcon",
+<<<<<<< HEAD
+=======
+		"maxNestingLevel",
+>>>>>>> main
 		"openSubmenusOnClick",
 		"style"
 	],

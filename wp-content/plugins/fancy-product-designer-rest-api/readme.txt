@@ -1,7 +1,12 @@
 === Fancy Product Designer REST API ===
 Contributors: radykal
+<<<<<<< HEAD
 Requires at least: 4.6 
 Tested up to: 5.2
+=======
+Requires at least: 4.6 
+Tested up to: 5.2
+>>>>>>> main
 Tags: product designer, tool, online, shirt, rest, fancy product designer, customize products
 Stable tag: trunk
 License: GPLv2 or later
@@ -122,9 +127,15 @@ See [Documentation](https://support.fancyproductdesigner.com/support/solutions) 
 
 == Installation ==
 
+<<<<<<< HEAD
 1. Go to your admin area and select Plugins -> Add new from the menu.
 2. Search for „Fancy Product Designer REST API“.
 3. Click install.
+=======
+1. Go to your admin area and select Plugins -> Add new from the menu.
+2. Search for „Fancy Product Designer REST API“.
+3. Click install.
+>>>>>>> main
 4. Click activate.
 
 

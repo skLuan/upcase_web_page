@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /** @license React v17.0.1
+=======
+/** @license React v17.0.2
+>>>>>>> main
  * react.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -13,7 +17,11 @@
 }(this, (function (exports) { 'use strict';
 
   // TODO: this is special because it gets imported during build.
+<<<<<<< HEAD
   var ReactVersion = '17.0.1';
+=======
+  var ReactVersion = '17.0.2';
+>>>>>>> main
 
   // ATTENTION
   // When adding new symbols to this file,
@@ -2307,7 +2315,11 @@
   }
 
   var enableSchedulerDebugging = false;
+<<<<<<< HEAD
   var enableProfiling = true;
+=======
+  var enableProfiling = false;
+>>>>>>> main
 
   var requestHostCallback;
   var requestHostTimeout;
@@ -2580,13 +2592,17 @@
   }
 
   // TODO: Use symbols?
+<<<<<<< HEAD
   var NoPriority = 0;
+=======
+>>>>>>> main
   var ImmediatePriority = 1;
   var UserBlockingPriority = 2;
   var NormalPriority = 3;
   var LowPriority = 4;
   var IdlePriority = 5;
 
+<<<<<<< HEAD
   var runIdCounter = 0;
   var mainThreadIdCounter = 0;
   var profilingStateSize = 4;
@@ -2746,6 +2762,9 @@
         logEvent([SchedulerResumeEvent, ms * 1000, mainThreadIdCounter]);
       }
     }
+=======
+  function markTaskErrored(task, ms) {
+>>>>>>> main
   }
 
   /* eslint-disable no-var */
@@ -2786,11 +2805,14 @@
         pop(timerQueue);
         timer.sortIndex = timer.expirationTime;
         push(taskQueue, timer);
+<<<<<<< HEAD
 
         {
           markTaskStart(timer, currentTime);
           timer.isQueued = true;
         }
+=======
+>>>>>>> main
       } else {
         // Remaining timers are pending.
         return;
@@ -2819,9 +2841,12 @@
   }
 
   function flushWork(hasTimeRemaining, initialTime) {
+<<<<<<< HEAD
     {
       markSchedulerUnsuspended(initialTime);
     } // We'll need a host callback the next time work is scheduled.
+=======
+>>>>>>> main
 
 
     isHostCallbackScheduled = false;
@@ -2856,12 +2881,15 @@
       currentTask = null;
       currentPriorityLevel = previousPriorityLevel;
       isPerformingWork = false;
+<<<<<<< HEAD
 
       {
         var _currentTime = getCurrentTime();
 
         markSchedulerSuspended(_currentTime);
       }
+=======
+>>>>>>> main
     }
   }
 
@@ -2882,18 +2910,26 @@
         currentTask.callback = null;
         currentPriorityLevel = currentTask.priorityLevel;
         var didUserCallbackTimeout = currentTask.expirationTime <= currentTime;
+<<<<<<< HEAD
         markTaskRun(currentTask, currentTime);
+=======
+
+>>>>>>> main
         var continuationCallback = callback(didUserCallbackTimeout);
         currentTime = getCurrentTime();
 
         if (typeof continuationCallback === 'function') {
           currentTask.callback = continuationCallback;
+<<<<<<< HEAD
           markTaskYield(currentTask, currentTime);
         } else {
           {
             markTaskCompleted(currentTask, currentTime);
             currentTask.isQueued = false;
           }
+=======
+        } else {
+>>>>>>> main
 
           if (currentTask === peek(taskQueue)) {
             pop(taskQueue);
@@ -3038,10 +3074,13 @@
       sortIndex: -1
     };
 
+<<<<<<< HEAD
     {
       newTask.isQueued = false;
     }
 
+=======
+>>>>>>> main
     if (startTime > currentTime) {
       // This is a delayed task.
       newTask.sortIndex = startTime;
@@ -3062,11 +3101,14 @@
     } else {
       newTask.sortIndex = expirationTime;
       push(taskQueue, newTask);
+<<<<<<< HEAD
 
       {
         markTaskStart(newTask, currentTime);
         newTask.isQueued = true;
       } // Schedule a host callback, if needed. If we're already performing work,
+=======
+>>>>>>> main
       // wait until the next time we yield.
 
 
@@ -3095,6 +3137,7 @@
   }
 
   function unstable_cancelCallback(task) {
+<<<<<<< HEAD
     {
       if (task.isQueued) {
         var currentTime = getCurrentTime();
@@ -3102,6 +3145,8 @@
         task.isQueued = false;
       }
     } // Null out the callback to indicate the task has been canceled. (Can't
+=======
+>>>>>>> main
     // remove from the queue because you can't remove arbitrary nodes from an
     // array based heap, only the first one.)
 
@@ -3114,11 +3159,15 @@
   }
 
   var unstable_requestPaint = requestPaint;
+<<<<<<< HEAD
   var unstable_Profiling =  {
     startLoggingProfilingEvents: startLoggingProfilingEvents,
     stopLoggingProfilingEvents: stopLoggingProfilingEvents,
     sharedProfilingBuffer: sharedProfilingBuffer
   } ;
+=======
+  var unstable_Profiling =  null;
+>>>>>>> main
 
 
 

@@ -79,6 +79,10 @@
   padding: 3em 0;
   text-align: center;
   overflow-wrap: break-word;
+<<<<<<< HEAD
+=======
+  box-sizing: border-box;
+>>>>>>> main
 }
 .wp-block-pullquote p,
 .wp-block-pullquote blockquote,
@@ -111,10 +115,13 @@
   text-align: left;
 }
 
+<<<<<<< HEAD
 .wp-block-pullquote:not(.is-style-solid-color) {
   background: none;
 }
 
+=======
+>>>>>>> main
 .wp-block-pullquote.is-style-solid-color {
   border: none;
 }

@@ -11,7 +11,11 @@
  */
 ?>
 <div class="wp-embed">
+<<<<<<< HEAD
 	<p class="wp-embed-heading"><?php _e( 'Oops! That embed can&#8217;t be found.' ); ?></p>
+=======
+	<p class="wp-embed-heading"><?php _e( 'Oops! That embed cannot be found.' ); ?></p>
+>>>>>>> main
 
 	<div class="wp-embed-excerpt">
 		<p>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["wp"] = this["wp"] || {}; this["wp"]["blockSerializationDefaultParser"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -93,6 +94,48 @@ this["wp"] = this["wp"] || {}; this["wp"]["blockSerializationDefaultParser"] =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parse", function() { return parse; });
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "parse": function() { return /* binding */ parse; }
+/* harmony export */ });
+>>>>>>> main
 let document;
 let offset;
 let output;
@@ -259,13 +302,21 @@ const parse = doc => {
 function proceed() {
   const next = nextToken();
   const [tokenType, blockName, attrs, startOffset, tokenLength] = next;
+<<<<<<< HEAD
   const stackDepth = stack.length; // we may have some HTML soup before the next block
+=======
+  const stackDepth = stack.length; // We may have some HTML soup before the next block.
+>>>>>>> main
 
   const leadingHtmlStart = startOffset > offset ? offset : null;
 
   switch (tokenType) {
     case 'no-more-tokens':
+<<<<<<< HEAD
       // if not in a block then flush output
+=======
+      // If not in a block then flush output.
+>>>>>>> main
       if (0 === stackDepth) {
         addFreeform();
         return false;
@@ -274,15 +325,25 @@ function proceed() {
       // we have options
       //  - treat it all as freeform text
       //  - assume an implicit closer (easiest when not nesting)
+<<<<<<< HEAD
       // for the easy case we'll assume an implicit closer
+=======
+      // For the easy case we'll assume an implicit closer.
+>>>>>>> main
 
 
       if (1 === stackDepth) {
         addBlockFromStack();
         return false;
+<<<<<<< HEAD
       } // for the nested case where it's more difficult we'll
       // have to assume that multiple closers are missing
       // and so we'll collapse the whole stack piecewise
+=======
+      } // For the nested case where it's more difficult we'll
+      // have to assume that multiple closers are missing
+      // and so we'll collapse the whole stack piecewise.
+>>>>>>> main
 
 
       while (0 < stack.length) {
@@ -293,7 +354,11 @@ function proceed() {
 
     case 'void-block':
       // easy case is if we stumbled upon a void block
+<<<<<<< HEAD
       // in the top-level of the document
+=======
+      // in the top-level of the document.
+>>>>>>> main
       if (0 === stackDepth) {
         if (null !== leadingHtmlStart) {
           output.push(Freeform(document.substr(leadingHtmlStart, startOffset - leadingHtmlStart)));
@@ -302,7 +367,11 @@ function proceed() {
         output.push(Block(blockName, attrs, [], '', []));
         offset = startOffset + tokenLength;
         return true;
+<<<<<<< HEAD
       } // otherwise we found an inner block
+=======
+      } // Otherwise we found an inner block.
+>>>>>>> main
 
 
       addInnerBlock(Block(blockName, attrs, [], '', []), startOffset, tokenLength);
@@ -310,12 +379,17 @@ function proceed() {
       return true;
 
     case 'block-opener':
+<<<<<<< HEAD
       // track all newly-opened blocks on the stack
+=======
+      // Track all newly-opened blocks on the stack.
+>>>>>>> main
       stack.push(Frame(Block(blockName, attrs, [], '', []), startOffset, tokenLength, startOffset + tokenLength, leadingHtmlStart));
       offset = startOffset + tokenLength;
       return true;
 
     case 'block-closer':
+<<<<<<< HEAD
       // if we're missing an opener we're in trouble
       // This is an error
       if (0 === stackDepth) {
@@ -326,14 +400,31 @@ function proceed() {
         addFreeform();
         return false;
       } // if we're not nesting then this is easy - close the block
+=======
+      // If we're missing an opener we're in trouble
+      // This is an error.
+      if (0 === stackDepth) {
+        // We have options
+        //  - assume an implicit opener
+        //  - assume _this_ is the opener
+        // - give up and close out the document.
+        addFreeform();
+        return false;
+      } // If we're not nesting then this is easy - close the block.
+>>>>>>> main
 
 
       if (1 === stackDepth) {
         addBlockFromStack(startOffset);
         offset = startOffset + tokenLength;
         return true;
+<<<<<<< HEAD
       } // otherwise we're nested and we have to close out the current
       // block and add it as a innerBlock to the parent
+=======
+      } // Otherwise we're nested and we have to close out the current
+      // block and add it as a innerBlock to the parent.
+>>>>>>> main
 
 
       const stackTop = stack.pop();
@@ -346,7 +437,11 @@ function proceed() {
       return true;
 
     default:
+<<<<<<< HEAD
       // This is an error
+=======
+      // This is an error.
+>>>>>>> main
       addFreeform();
       return false;
   }
@@ -372,13 +467,21 @@ function parseJSON(input) {
 }
 
 function nextToken() {
+<<<<<<< HEAD
   // aye the magic
+=======
+  // Aye the magic
+>>>>>>> main
   // we're using a single RegExp to tokenize the block comment delimiters
   // we're also using a trick here because the only difference between a
   // block opener and a block closer is the leading `/` before `wp:` (and
   // a closer has no attributes). we can trap them both and process the
   // match back in JavaScript to see which one it was.
+<<<<<<< HEAD
   const matches = tokenizer.exec(document); // we have no more tokens
+=======
+  const matches = tokenizer.exec(document); // We have no more tokens.
+>>>>>>> main
 
   if (null === matches) {
     return ['no-more-tokens'];
@@ -386,7 +489,11 @@ function nextToken() {
 
   const startedAt = matches.index;
   const [match, closerMatch, namespaceMatch, nameMatch, attrsMatch
+<<<<<<< HEAD
   /* internal/unused */
+=======
+  /* Internal/unused. */
+>>>>>>> main
   ,, voidMatch] = matches;
   const length = match.length;
   const isCloser = !!closerMatch;
@@ -395,10 +502,17 @@ function nextToken() {
   const name = namespace + nameMatch;
   const hasAttrs = !!attrsMatch;
   const attrs = hasAttrs ? parseJSON(attrsMatch) : {}; // This state isn't allowed
+<<<<<<< HEAD
   // This is an error
 
   if (isCloser && (isVoid || hasAttrs)) {// we can ignore them since they don't hurt anything
     // we may warn against this at some point or reject it
+=======
+  // This is an error.
+
+  if (isCloser && (isVoid || hasAttrs)) {// We can ignore them since they don't hurt anything
+    // we may warn against this at some point or reject it.
+>>>>>>> main
   }
 
   if (isVoid) {
@@ -457,7 +571,13 @@ function addBlockFromStack(endOffset) {
   output.push(block);
 }
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ });
+=======
+(window.wp = window.wp || {}).blockSerializationDefaultParser = __webpack_exports__;
+/******/ })()
+;
+>>>>>>> main

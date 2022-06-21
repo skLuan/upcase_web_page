@@ -101,9 +101,12 @@ jQuery( function($) {
 	$('#submit').on( 'click', function(){
 		var form = $(this).parents('form');
 
+<<<<<<< HEAD
 		if ( ! validateForm( form ) )
 			return false;
 
+=======
+>>>>>>> main
 		if ( addingTerm ) {
 			// If we're adding a term, noop the button to avoid duplicate requests.
 			return false;
@@ -127,8 +130,19 @@ jQuery( function($) {
 
 			$('#ajax-response').empty();
 			res = wpAjax.parseAjaxResponse( r, 'ajax-response' );
+<<<<<<< HEAD
 			if ( ! res || res.errors )
 				return;
+=======
+
+			if ( res.errors && res.responses[0].errors[0].code === 'empty_term_name' ) {
+				validateForm( form );
+			}
+
+			if ( ! res || res.errors ) {
+				return;
+			}
+>>>>>>> main
 
 			parent = form.find( 'select#parent' ).val();
 
@@ -155,7 +169,11 @@ jQuery( function($) {
 				form.find( 'select#parent option:selected' ).after( '<option value="' + term.term_id + '">' + indent + term.name + '</option>' );
 			}
 
+<<<<<<< HEAD
 			$('input[type="text"]:visible, textarea:visible', form).val('');
+=======
+			$('input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]):visible, textarea:visible', form).val('');
+>>>>>>> main
 		});
 
 		return false;

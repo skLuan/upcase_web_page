@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /** @license React v17.0.1
+=======
+/** @license React v17.0.2
+>>>>>>> main
  * react-dom.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -11376,7 +11380,11 @@
   }
 
   // TODO: this is special because it gets imported during build.
+<<<<<<< HEAD
   var ReactVersion = '17.0.1';
+=======
+  var ReactVersion = '17.0.2';
+>>>>>>> main
 
   var NoMode = 0;
   var StrictMode = 1; // TODO: Remove BlockingMode and ConcurrentMode by reading from the root

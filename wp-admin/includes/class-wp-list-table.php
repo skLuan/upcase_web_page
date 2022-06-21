@@ -823,6 +823,7 @@ class WP_List_Table {
 	 *
 	 * @since 3.1.0
 	 *
+<<<<<<< HEAD
 	 * @param string $option
 	 * @param int    $default
 	 * @return int
@@ -831,6 +832,16 @@ class WP_List_Table {
 		$per_page = (int) get_user_option( $option );
 		if ( empty( $per_page ) || $per_page < 1 ) {
 			$per_page = $default;
+=======
+	 * @param string $option        User option name.
+	 * @param int    $default_value Optional. The number of items to display. Default 20.
+	 * @return int
+	 */
+	protected function get_items_per_page( $option, $default_value = 20 ) {
+		$per_page = (int) get_user_option( $option );
+		if ( empty( $per_page ) || $per_page < 1 ) {
+			$per_page = $default_value;
+>>>>>>> main
 		}
 
 		/**

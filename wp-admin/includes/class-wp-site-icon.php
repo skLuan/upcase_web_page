@@ -80,7 +80,11 @@ class WP_Site_Icon {
 	 *
 	 * @param string $cropped              Cropped image URL.
 	 * @param int    $parent_attachment_id Attachment ID of parent image.
+<<<<<<< HEAD
 	 * @return array Attachment object.
+=======
+	 * @return array An array with attachment object data.
+>>>>>>> main
 	 */
 	public function create_attachment_object( $cropped, $parent_attachment_id ) {
 		$parent     = get_post( $parent_attachment_id );
@@ -90,7 +94,11 @@ class WP_Site_Icon {
 		$size       = wp_getimagesize( $cropped );
 		$image_type = ( $size ) ? $size['mime'] : 'image/jpeg';
 
+<<<<<<< HEAD
 		$object = array(
+=======
+		$attachment = array(
+>>>>>>> main
 			'ID'             => $parent_attachment_id,
 			'post_title'     => wp_basename( $cropped ),
 			'post_content'   => $url,
@@ -99,7 +107,11 @@ class WP_Site_Icon {
 			'context'        => 'site-icon',
 		);
 
+<<<<<<< HEAD
 		return $object;
+=======
+		return $attachment;
+>>>>>>> main
 	}
 
 	/**
@@ -107,12 +119,21 @@ class WP_Site_Icon {
 	 *
 	 * @since 4.3.0
 	 *
+<<<<<<< HEAD
 	 * @param array  $object Attachment object.
 	 * @param string $file   File path of the attached image.
 	 * @return int           Attachment ID
 	 */
 	public function insert_attachment( $object, $file ) {
 		$attachment_id = wp_insert_attachment( $object, $file );
+=======
+	 * @param array  $attachment An array with attachment object data.
+	 * @param string $file       File path of the attached image.
+	 * @return int               Attachment ID.
+	 */
+	public function insert_attachment( $attachment, $file ) {
+		$attachment_id = wp_insert_attachment( $attachment, $file );
+>>>>>>> main
 		$metadata      = wp_generate_attachment_metadata( $attachment_id, $file );
 
 		/**

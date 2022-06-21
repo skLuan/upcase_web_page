@@ -137,6 +137,7 @@ figure.wp-block-image:not(.wp-block) {
   caption-side: bottom;
 }
 
+<<<<<<< HEAD
 *:not([data-align]) > .wp-block-image {
   display: grid;
   grid-template-columns: [image] minmax(0, max-content) [placeholder] auto;
@@ -153,6 +154,8 @@ figure.wp-block-image:not(.wp-block) {
   caption-side: bottom;
 }
 
+=======
+>>>>>>> main
 .wp-block[data-align=left] > .wp-block-image {
   margin-right: 1em;
   margin-left: 0;

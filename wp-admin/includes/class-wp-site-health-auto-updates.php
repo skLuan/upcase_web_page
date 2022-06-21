@@ -292,7 +292,11 @@ class WP_Site_Health_Auto_Updates {
 		}
 
 		return array(
+<<<<<<< HEAD
 			'description' => __( "Your installation of WordPress doesn't require FTP credentials to perform updates." ),
+=======
+			'description' => __( 'Your installation of WordPress does not require FTP credentials to perform updates.' ),
+>>>>>>> main
 			'severity'    => 'pass',
 		);
 	}

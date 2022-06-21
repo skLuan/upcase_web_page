@@ -77,4 +77,10 @@
 .wp-block-navigation .wp-block-navigation-item__label {
   word-break: normal;
   overflow-wrap: break-word;
+<<<<<<< HEAD
+=======
+}
+.wp-block-navigation .wp-block-navigation-item__description {
+  display: none;
+>>>>>>> main
 }

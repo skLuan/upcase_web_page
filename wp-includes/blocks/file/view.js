@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -94,6 +95,13 @@
 __webpack_require__.r(__webpack_exports__);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/block-library/build-module/file/utils.js
+=======
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
+
+;// CONCATENATED MODULE: ./node_modules/@wordpress/block-library/build-module/file/utils.js
+>>>>>>> main
 /**
  * Uses a combination of user agent matching and feature detection to determine whether
  * the current browser supports rendering PDFs inline.
@@ -157,14 +165,23 @@ const hidePdfEmbedsOnUnsupportedBrowsers = () => {
   }
 };
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/block-library/build-module/file/view.js
+=======
+;// CONCATENATED MODULE: ./node_modules/@wordpress/block-library/build-module/file/view.js
+>>>>>>> main
 /**
  * Internal dependencies
  */
 
 hidePdfEmbedsOnUnsupportedBrowsers();
 
+<<<<<<< HEAD
 
 /***/ })
 
 /******/ });
+=======
+/******/ })()
+;
+>>>>>>> main

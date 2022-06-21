@@ -1,8 +1,16 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
 	"name": "core/query-pagination-next",
 	"title": "Next Page",
 	"category": "design",
+=======
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "core/query-pagination-next",
+	"title": "Next Page",
+	"category": "theme",
+>>>>>>> main
 	"parent": [ "core/query-pagination" ],
 	"description": "Displays the next posts page link.",
 	"textdomain": "default",
@@ -17,7 +25,14 @@
 		"html": false,
 		"color": {
 			"gradients": true,
+<<<<<<< HEAD
 			"text": false
+=======
+			"text": false,
+			"__experimentalDefaultControls": {
+				"background": true
+			}
+>>>>>>> main
 		},
 		"typography": {
 			"fontSize": true,

@@ -13,46 +13,82 @@
 			"custom": true,
 			"customDuotone": true,
  			"customGradient": true,
+<<<<<<< HEAD
+=======
+ 			"defaultDuotone": true,
+>>>>>>> main
 			"defaultGradients": true,
 			"defaultPalette": true,
 			"duotone": [
 				{
+<<<<<<< HEAD
 					"name":  "Dark grayscale" ,
+=======
+					"name": "Dark grayscale",
+>>>>>>> main
 					"colors": [ "#000000", "#7f7f7f" ],
 					"slug": "dark-grayscale"
 				},
 				{
+<<<<<<< HEAD
 					"name":  "Grayscale" ,
+=======
+					"name": "Grayscale",
+>>>>>>> main
 					"colors": [ "#000000", "#ffffff" ],
 					"slug": "grayscale"
 				},
 				{
+<<<<<<< HEAD
 					"name":  "Purple and yellow" ,
+=======
+					"name": "Purple and yellow",
+>>>>>>> main
 					"colors": [ "#8c00b7", "#fcff41" ],
 					"slug": "purple-yellow"
 				},
 				{
+<<<<<<< HEAD
 					"name":  "Blue and red" ,
+=======
+					"name": "Blue and red",
+>>>>>>> main
 					"colors": [ "#000097", "#ff4747" ],
 					"slug": "blue-red"
 				},
 				{
+<<<<<<< HEAD
 					"name":  "Midnight" ,
+=======
+					"name": "Midnight",
+>>>>>>> main
 					"colors": [ "#000000", "#00a5ff" ],
 					"slug": "midnight"
 				},
 				{
+<<<<<<< HEAD
 					"name":  "Magenta and yellow" ,
+=======
+					"name": "Magenta and yellow",
+>>>>>>> main
 					"colors": [ "#c7005a", "#fff278" ],
 					"slug": "magenta-yellow"
 				},
 				{
+<<<<<<< HEAD
 					"name":  "Purple and green" ,
+=======
+					"name": "Purple and green",
+>>>>>>> main
 					"colors": [ "#a60072", "#67ff66" ],
 					"slug": "purple-green"
 				},
 				{
+<<<<<<< HEAD
 					"name":  "Blue and orange" ,
+=======
+					"name": "Blue and orange",
+>>>>>>> main
 					"colors": [ "#1900d8", "#ffa96b" ],
 					"slug": "blue-orange"
 				}

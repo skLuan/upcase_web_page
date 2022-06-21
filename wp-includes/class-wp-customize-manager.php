@@ -407,7 +407,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Return true if it's an Ajax request.
+=======
+	 * Returns true if it's an Ajax request.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 * @since 4.2.0 Added `$action` param.
@@ -476,7 +480,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Return the Ajax wp_die() handler if it's a customized request.
+=======
+	 * Returns the Ajax wp_die() handler if it's a customized request.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 * @deprecated 4.7.0
@@ -494,6 +502,7 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Start preview and customize theme.
 	 *
 	 * Check if customize query variable exist. Init filters to filter the current theme.
@@ -501,6 +510,15 @@ final class WP_Customize_Manager {
 	 * @since 3.4.0
 	 *
 	 * @global string $pagenow
+=======
+	 * Starts preview and customize theme.
+	 *
+	 * Check if customize query variable exist. Init filters to filter the active theme.
+	 *
+	 * @since 3.4.0
+	 *
+	 * @global string $pagenow The filename of the current screen.
+>>>>>>> main
 	 */
 	public function setup_theme() {
 		global $pagenow;
@@ -597,7 +615,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Establish the loaded changeset.
+=======
+	 * Establishes the loaded changeset.
+>>>>>>> main
 	 *
 	 * This method runs right at after_setup_theme and applies the 'customize_changeset_branching' filter to determine
 	 * whether concurrent changesets are allowed. Then if the Customizer is not initialized with a `changeset_uuid` param,
@@ -607,7 +629,11 @@ final class WP_Customize_Manager {
 	 *
 	 * @since 4.9.0
 	 *
+<<<<<<< HEAD
 	 * @global string $pagenow
+=======
+	 * @global string $pagenow The filename of the current screen.
+>>>>>>> main
 	 */
 	public function establish_loaded_changeset() {
 		global $pagenow;
@@ -697,9 +723,15 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Stop previewing the selected theme.
 	 *
 	 * Removes filters to change the current theme.
+=======
+	 * Stops previewing the selected theme.
+	 *
+	 * Removes filters to change the active theme.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 */
@@ -802,7 +834,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the changeset UUID.
+=======
+	 * Gets the changeset UUID.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -818,7 +854,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the theme being customized.
+=======
+	 * Gets the theme being customized.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -832,7 +872,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the registered settings.
+=======
+	 * Gets the registered settings.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -843,7 +887,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the registered controls.
+=======
+	 * Gets the registered controls.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -854,7 +902,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the registered containers.
+=======
+	 * Gets the registered containers.
+>>>>>>> main
 	 *
 	 * @since 4.0.0
 	 *
@@ -865,7 +917,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the registered sections.
+=======
+	 * Gets the registered sections.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -876,7 +932,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the registered panels.
+=======
+	 * Gets the registered panels.
+>>>>>>> main
 	 *
 	 * @since 4.0.0
 	 *
@@ -898,7 +958,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Register styles/scripts and initialize the preview of each setting
+=======
+	 * Registers styles/scripts and initialize the preview of each setting
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 */
@@ -966,7 +1030,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Find the changeset post ID for a given changeset UUID.
+=======
+	 * Finds the changeset post ID for a given changeset UUID.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -1004,7 +1072,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get changeset posts.
+=======
+	 * Gets changeset posts.
+>>>>>>> main
 	 *
 	 * @since 4.9.0
 	 *
@@ -1051,7 +1123,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Dismiss all of the current user's auto-drafts (other than the present one).
+=======
+	 * Dismisses all of the current user's auto-drafts (other than the present one).
+>>>>>>> main
 	 *
 	 * @since 4.9.0
 	 * @return int The number of auto-drafts that were dismissed.
@@ -1077,7 +1153,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the changeset post ID for the loaded changeset.
+=======
+	 * Gets the changeset post ID for the loaded changeset.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -1098,7 +1178,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the data stored in a changeset post.
+=======
+	 * Gets the data stored in a changeset post.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -1132,7 +1216,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get changeset data.
+=======
+	 * Gets changeset data.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 * @since 4.9.0 This will return the changeset's data with a user's autosave revision merged on top, if one exists and $autosaved is true.
@@ -1179,7 +1267,11 @@ final class WP_Customize_Manager {
 	protected $pending_starter_content_settings_ids = array();
 
 	/**
+<<<<<<< HEAD
 	 * Import theme starter content into the customized state.
+=======
+	 * Imports theme starter content into the customized state.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -1632,7 +1724,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Prepare starter content attachments.
+=======
+	 * Prepares starter content attachments.
+>>>>>>> main
 	 *
 	 * Ensure that the attachments are valid and that they have slugs and file name/path.
 	 *
@@ -1694,7 +1790,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Save starter content changeset.
+=======
+	 * Saves starter content changeset.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 */
@@ -1716,7 +1816,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get dirty pre-sanitized setting values in the current customized state.
+=======
+	 * Gets dirty pre-sanitized setting values in the current customized state.
+>>>>>>> main
 	 *
 	 * The returned array consists of a merge of three sources:
 	 * 1. If the theme is not currently active, then the base array is any stashed
@@ -1769,7 +1873,11 @@ final class WP_Customize_Manager {
 				}
 				if ( isset( $setting_params['type'] ) && 'theme_mod' === $setting_params['type'] ) {
 
+<<<<<<< HEAD
 					// Ensure that theme mods values are only used if they were saved under the current theme.
+=======
+					// Ensure that theme mods values are only used if they were saved under the active theme.
+>>>>>>> main
 					$namespace_pattern = '/^(?P<stylesheet>.+?)::(?P<setting_id>.+)$/';
 					if ( preg_match( $namespace_pattern, $setting_id, $matches ) && $this->get_stylesheet() === $matches['stylesheet'] ) {
 						$values[ $matches['setting_id'] ] = $setting_params['value'];
@@ -1806,13 +1914,19 @@ final class WP_Customize_Manager {
 	 * from the current changeset post and from the incoming post data.
 	 *
 	 * @since 3.4.0
+<<<<<<< HEAD
 	 * @since 4.1.1 Introduced the `$default` parameter.
 	 * @since 4.6.0 `$default` is now returned early when the setting post value is invalid.
+=======
+	 * @since 4.1.1 Introduced the `$default_value` parameter.
+	 * @since 4.6.0 `$default_value` is now returned early when the setting post value is invalid.
+>>>>>>> main
 	 *
 	 * @see WP_REST_Server::dispatch()
 	 * @see WP_REST_Request::sanitize_params()
 	 * @see WP_REST_Request::has_valid_params()
 	 *
+<<<<<<< HEAD
 	 * @param WP_Customize_Setting $setting A WP_Customize_Setting derived object.
 	 * @param mixed                $default Value returned $setting has no post value (added in 4.2.0)
 	 *                                      or the post value is invalid (added in 4.6.0).
@@ -1832,11 +1946,39 @@ final class WP_Customize_Manager {
 		if ( is_null( $value ) || is_wp_error( $value ) ) {
 			return $default;
 		}
+=======
+	 * @param WP_Customize_Setting $setting       A WP_Customize_Setting derived object.
+	 * @param mixed                $default_value Value returned if `$setting` has no post value (added in 4.2.0)
+	 *                                            or the post value is invalid (added in 4.6.0).
+	 * @return string|mixed Sanitized value or the `$default_value` provided.
+	 */
+	public function post_value( $setting, $default_value = null ) {
+		$post_values = $this->unsanitized_post_values();
+		if ( ! array_key_exists( $setting->id, $post_values ) ) {
+			return $default_value;
+		}
+
+		$value = $post_values[ $setting->id ];
+		$valid = $setting->validate( $value );
+		if ( is_wp_error( $valid ) ) {
+			return $default_value;
+		}
+
+		$value = $setting->sanitize( $value );
+		if ( is_null( $value ) || is_wp_error( $value ) ) {
+			return $default_value;
+		}
+
+>>>>>>> main
 		return $value;
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Override a setting's value in the current customized state.
+=======
+	 * Overrides a setting's value in the current customized state.
+>>>>>>> main
 	 *
 	 * The name "post_value" is a carry-over from when the customized state was
 	 * exclusively sourced from `$_POST['customized']`.
@@ -1851,7 +1993,11 @@ final class WP_Customize_Manager {
 		$this->_post_values[ $setting_id ] = $value;
 
 		/**
+<<<<<<< HEAD
 		 * Announce when a specific setting's unsanitized post value has been set.
+=======
+		 * Announces when a specific setting's unsanitized post value has been set.
+>>>>>>> main
 		 *
 		 * Fires when the WP_Customize_Manager::set_post_value() method is called.
 		 *
@@ -1865,7 +2011,11 @@ final class WP_Customize_Manager {
 		do_action( "customize_post_value_set_{$setting_id}", $value, $this );
 
 		/**
+<<<<<<< HEAD
 		 * Announce when any setting's unsanitized post value has been set.
+=======
+		 * Announces when any setting's unsanitized post value has been set.
+>>>>>>> main
 		 *
 		 * Fires when the WP_Customize_Manager::set_post_value() method is called.
 		 *
@@ -1882,7 +2032,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print JavaScript settings.
+=======
+	 * Prints JavaScript settings.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 */
@@ -1957,7 +2111,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add customize state query params to a given URL if preview is allowed.
+=======
+	 * Adds customize state query params to a given URL if preview is allowed.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -2001,7 +2159,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Prevent sending a 404 status when returning the response for the customize
+=======
+	 * Prevents sending a 404 status when returning the response for the customize
+>>>>>>> main
 	 * preview, since it causes the jQuery Ajax to fail. Send 200 instead.
 	 *
 	 * @since 4.0.0
@@ -2012,7 +2174,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print base element for preview frame.
+=======
+	 * Prints base element for preview frame.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 * @deprecated 4.7.0
@@ -2022,7 +2188,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print a workaround to handle HTML5 tags in IE < 9.
+=======
+	 * Prints a workaround to handle HTML5 tags in IE < 9.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 * @deprecated 4.7.0 Customizer no longer supports IE8, so all supported browsers recognize HTML5.
@@ -2032,7 +2202,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print CSS for loading indicators for the Customizer preview.
+=======
+	 * Prints CSS for loading indicators for the Customizer preview.
+>>>>>>> main
 	 *
 	 * @since 4.2.0
 	 */
@@ -2061,7 +2235,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Remove customize_messenger_channel query parameter from the preview window when it is not in an iframe.
+=======
+	 * Removes customize_messenger_channel query parameter from the preview window when it is not in an iframe.
+>>>>>>> main
 	 *
 	 * This ensures that the admin bar will be shown. It also ensures that link navigation will
 	 * work as expected since the parent frame is not being sent the URL to navigate to.
@@ -2098,7 +2276,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print JavaScript settings for preview frame.
+=======
+	 * Prints JavaScript settings for preview frame.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 */
@@ -2232,6 +2414,7 @@ final class WP_Customize_Manager {
 	 * @since 3.4.0
 	 * @deprecated 4.7.0
 	 *
+<<<<<<< HEAD
 	 * @param mixed $return Value passed through for {@see 'wp_die_handler'} filter.
 	 * @return mixed Value passed through for {@see 'wp_die_handler'} filter.
 	 */
@@ -2243,6 +2426,20 @@ final class WP_Customize_Manager {
 
 	/**
 	 * Is it a theme preview?
+=======
+	 * @param callable|null $callback Optional. Value passed through for {@see 'wp_die_handler'} filter.
+	 *                                Default null.
+	 * @return callable|null Value passed through for {@see 'wp_die_handler'} filter.
+	 */
+	public function remove_preview_signature( $callback = null ) {
+		_deprecated_function( __METHOD__, '4.7.0' );
+
+		return $callback;
+	}
+
+	/**
+	 * Determines whether it is a theme preview or not.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -2253,7 +2450,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieve the template name of the previewed theme.
+=======
+	 * Retrieves the template name of the previewed theme.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -2264,7 +2465,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieve the stylesheet name of the previewed theme.
+=======
+	 * Retrieves the stylesheet name of the previewed theme.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -2275,7 +2480,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieve the template root of the previewed theme.
+=======
+	 * Retrieves the template root of the previewed theme.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -2286,7 +2495,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieve the stylesheet root of the previewed theme.
+=======
+	 * Retrieves the stylesheet root of the previewed theme.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -2297,7 +2510,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Filters the current theme and return the name of the previewed theme.
+=======
+	 * Filters the active theme and return the name of the previewed theme.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -2408,7 +2625,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Handle customize_save WP Ajax request to save/update a changeset.
+=======
+	 * Handles customize_save WP Ajax request to save/update a changeset.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 * @since 4.7.0 The semantics of this method have changed to update a changeset, optionally to also change the status and other attributes.
@@ -2604,7 +2825,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Save the post for the loaded changeset.
+=======
+	 * Saves the post for the loaded changeset.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -2992,7 +3217,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Preserve the initial JSON post_content passed to save into the post.
+=======
+	 * Preserves the initial JSON post_content passed to save into the post.
+>>>>>>> main
 	 *
 	 * This is needed to prevent KSES and other {@see 'content_save_pre'} filters
 	 * from corrupting JSON data.
@@ -3037,7 +3266,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Trash or delete a changeset post.
+=======
+	 * Trashes or deletes a changeset post.
+>>>>>>> main
 	 *
 	 * The following re-formulates the logic from `wp_trash_post()` as done in
 	 * `wp_publish_post()`. The reason for bypassing `wp_trash_post()` is that it
@@ -3116,7 +3349,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Handle request to trash a changeset.
+=======
+	 * Handles request to trash a changeset.
+>>>>>>> main
 	 *
 	 * @since 4.9.0
 	 */
@@ -3201,7 +3438,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Re-map 'edit_post' meta cap for a customize_changeset post to be the same as 'customize' maps.
+=======
+	 * Re-maps 'edit_post' meta cap for a customize_changeset post to be the same as 'customize' maps.
+>>>>>>> main
 	 *
 	 * There is essentially a "meta meta" cap in play here, where 'edit_post' meta cap maps to
 	 * the 'customize' meta cap which then maps to 'edit_theme_options'. This is currently
@@ -3266,6 +3507,10 @@ final class WP_Customize_Manager {
 		if ( ! $changeset_post_id ) {
 			return;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 		$lock = get_post_meta( $changeset_post_id, '_edit_lock', true );
 		$lock = explode( ':', $lock );
 
@@ -3283,19 +3528,37 @@ final class WP_Customize_Manager {
 	 * Filters heartbeat settings for the Customizer.
 	 *
 	 * @since 4.9.0
+<<<<<<< HEAD
+=======
+	 *
+	 * @global string $pagenow The filename of the current screen.
+	 *
+>>>>>>> main
 	 * @param array $settings Current settings to filter.
 	 * @return array Heartbeat settings.
 	 */
 	public function add_customize_screen_to_heartbeat_settings( $settings ) {
 		global $pagenow;
+<<<<<<< HEAD
 		if ( 'customize.php' === $pagenow ) {
 			$settings['screenId'] = 'customize';
 		}
+=======
+
+		if ( 'customize.php' === $pagenow ) {
+			$settings['screenId'] = 'customize';
+		}
+
+>>>>>>> main
 		return $settings;
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get lock user data.
+=======
+	 * Gets lock user data.
+>>>>>>> main
 	 *
 	 * @since 4.9.0
 	 *
@@ -3306,10 +3569,20 @@ final class WP_Customize_Manager {
 		if ( ! $user_id ) {
 			return null;
 		}
+<<<<<<< HEAD
 		$lock_user = get_userdata( $user_id );
 		if ( ! $lock_user ) {
 			return null;
 		}
+=======
+
+		$lock_user = get_userdata( $user_id );
+
+		if ( ! $lock_user ) {
+			return null;
+		}
+
+>>>>>>> main
 		return array(
 			'id'     => $lock_user->ID,
 			'name'   => $lock_user->display_name,
@@ -3318,7 +3591,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Check locked changeset with heartbeat API.
+=======
+	 * Checks locked changeset with heartbeat API.
+>>>>>>> main
 	 *
 	 * @since 4.9.0
 	 *
@@ -3399,7 +3676,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Whether a changeset revision should be made.
+=======
+	 * Determines whether a changeset revision should be made.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 * @var bool
@@ -3427,9 +3708,15 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Publish changeset values.
 	 *
 	 * This will the values contained in a changeset, even changesets that do not
+=======
+	 * Publishes the values of a changeset.
+	 *
+	 * This will publish the values contained in a changeset, even changesets that do not
+>>>>>>> main
 	 * correspond to current manager instance. This is called by
 	 * `_wp_customize_publish_changeset()` when a customize_changeset post is
 	 * transitioned to the `publish` status. As such, this method should not be
@@ -3617,7 +3904,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Update stashed theme mod settings.
+=======
+	 * Updates stashed theme mod settings.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -3654,7 +3945,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Refresh nonces for the current preview.
+=======
+	 * Refreshes nonces for the current preview.
+>>>>>>> main
 	 *
 	 * @since 4.2.0
 	 */
@@ -3667,7 +3962,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Delete a given auto-draft changeset or the autosave revision for a given changeset or delete changeset lock.
+=======
+	 * Deletes a given auto-draft changeset or the autosave revision for a given changeset or delete changeset lock.
+>>>>>>> main
 	 *
 	 * @since 4.9.0
 	 */
@@ -3735,7 +4034,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add a customize setting.
+=======
+	 * Adds a customize setting.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 * @since 4.5.0 Return added WP_Customize_Setting instance.
@@ -3769,7 +4072,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Register any dynamically-created settings, such as those from $_POST['customized']
+=======
+	 * Registers any dynamically-created settings, such as those from $_POST['customized']
+>>>>>>> main
 	 * that have no corresponding setting created.
 	 *
 	 * This is a mechanism to "wake up" settings that have been dynamically created
@@ -3830,7 +4137,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieve a customize setting.
+=======
+	 * Retrieves a customize setting.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -3844,7 +4155,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Remove a customize setting.
+=======
+	 * Removes a customize setting.
+>>>>>>> main
 	 *
 	 * Note that removing the setting doesn't destroy the WP_Customize_Setting instance or remove its filters.
 	 *
@@ -3857,7 +4172,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add a customize panel.
+=======
+	 * Adds a customize panel.
+>>>>>>> main
 	 *
 	 * @since 4.0.0
 	 * @since 4.5.0 Return added WP_Customize_Panel instance.
@@ -3882,7 +4201,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieve a customize panel.
+=======
+	 * Retrieves a customize panel.
+>>>>>>> main
 	 *
 	 * @since 4.0.0
 	 *
@@ -3896,7 +4219,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Remove a customize panel.
+=======
+	 * Removes a customize panel.
+>>>>>>> main
 	 *
 	 * Note that removing the panel doesn't destroy the WP_Customize_Panel instance or remove its filters.
 	 *
@@ -3926,7 +4253,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Register a customize panel type.
+=======
+	 * Registers a customize panel type.
+>>>>>>> main
 	 *
 	 * Registered types are eligible to be rendered via JS and created dynamically.
 	 *
@@ -3941,7 +4272,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Render JS templates for all registered panel types.
+=======
+	 * Renders JS templates for all registered panel types.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 */
@@ -3953,7 +4288,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add a customize section.
+=======
+	 * Adds a customize section.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 * @since 4.5.0 Return added WP_Customize_Section instance.
@@ -3978,7 +4317,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieve a customize section.
+=======
+	 * Retrieves a customize section.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -3992,7 +4335,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Remove a customize section.
+=======
+	 * Removes a customize section.
+>>>>>>> main
 	 *
 	 * Note that removing the section doesn't destroy the WP_Customize_Section instance or remove its filters.
 	 *
@@ -4005,7 +4352,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Register a customize section type.
+=======
+	 * Registers a customize section type.
+>>>>>>> main
 	 *
 	 * Registered types are eligible to be rendered via JS and created dynamically.
 	 *
@@ -4020,7 +4371,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Render JS templates for all registered section types.
+=======
+	 * Renders JS templates for all registered section types.
+>>>>>>> main
 	 *
 	 * @since 4.3.0
 	 */
@@ -4032,7 +4387,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add a customize control.
+=======
+	 * Adds a customize control.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 * @since 4.5.0 Return added WP_Customize_Control instance.
@@ -4057,7 +4416,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieve a customize control.
+=======
+	 * Retrieves a customize control.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 *
@@ -4071,7 +4434,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Remove a customize control.
+=======
+	 * Removes a customize control.
+>>>>>>> main
 	 *
 	 * Note that removing the control doesn't destroy the WP_Customize_Control instance or remove its filters.
 	 *
@@ -4084,7 +4451,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Register a customize control type.
+=======
+	 * Registers a customize control type.
+>>>>>>> main
 	 *
 	 * Registered types are eligible to be rendered via JS and created dynamically.
 	 *
@@ -4098,7 +4469,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Render JS templates for all registered control types.
+=======
+	 * Renders JS templates for all registered control types.
+>>>>>>> main
 	 *
 	 * @since 4.1.0
 	 */
@@ -4388,7 +4763,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Prepare panels, sections, and controls.
+=======
+	 * Prepares panels, sections, and controls.
+>>>>>>> main
 	 *
 	 * For each, check if required related components exist,
 	 * whether the user has the necessary capabilities,
@@ -4500,7 +4879,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Enqueue scripts for customize controls.
+=======
+	 * Enqueues scripts for customize controls.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 */
@@ -4522,7 +4905,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Determine whether the user agent is iOS.
+=======
+	 * Determines whether the user agent is iOS.
+>>>>>>> main
 	 *
 	 * @since 4.4.0
 	 *
@@ -4533,7 +4920,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the template string for the Customizer pane document title.
+=======
+	 * Gets the template string for the Customizer pane document title.
+>>>>>>> main
 	 *
 	 * @since 4.4.0
 	 *
@@ -4552,7 +4943,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Set the initial URL to be previewed.
+=======
+	 * Sets the initial URL to be previewed.
+>>>>>>> main
 	 *
 	 * URL is validated.
 	 *
@@ -4566,7 +4961,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the initial URL to be previewed.
+=======
+	 * Gets the initial URL to be previewed.
+>>>>>>> main
 	 *
 	 * @since 4.4.0
 	 *
@@ -4596,7 +4995,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get URLs allowed to be previewed.
+=======
+	 * Gets URLs allowed to be previewed.
+>>>>>>> main
 	 *
 	 * If the front end and the admin are served from the same domain, load the
 	 * preview over ssl if the Customizer is being loaded over ssl. This avoids
@@ -4629,7 +5032,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get messenger channel.
+=======
+	 * Gets messenger channel.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *
@@ -4640,7 +5047,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Set URL to link the user to when closing the Customizer.
+=======
+	 * Sets URL to link the user to when closing the Customizer.
+>>>>>>> main
 	 *
 	 * URL is validated.
 	 *
@@ -4656,7 +5067,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get URL to link the user to when closing the Customizer.
+=======
+	 * Gets URL to link the user to when closing the Customizer.
+>>>>>>> main
 	 *
 	 * @since 4.4.0
 	 *
@@ -4699,7 +5114,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Set the autofocused constructs.
+=======
+	 * Sets the autofocused constructs.
+>>>>>>> main
 	 *
 	 * @since 4.4.0
 	 *
@@ -4716,7 +5135,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get the autofocused constructs.
+=======
+	 * Gets the autofocused constructs.
+>>>>>>> main
 	 *
 	 * @since 4.4.0
 	 *
@@ -4733,7 +5156,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get nonces for the Customizer.
+=======
+	 * Gets nonces for the Customizer.
+>>>>>>> main
 	 *
 	 * @since 4.5.0
 	 *
@@ -4764,7 +5191,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print JavaScript settings for parent window.
+=======
+	 * Prints JavaScript settings for parent window.
+>>>>>>> main
 	 *
 	 * @since 4.4.0
 	 */
@@ -5014,7 +5445,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Register some default controls.
+=======
+	 * Registers some default controls.
+>>>>>>> main
 	 *
 	 * @since 3.4.0
 	 */
@@ -5732,7 +6167,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Return whether there are published pages.
+=======
+	 * Returns whether there are published pages.
+>>>>>>> main
 	 *
 	 * Used as active callback for static front page section and controls.
 	 *
@@ -5750,11 +6189,19 @@ final class WP_Customize_Manager {
 				}
 			}
 		}
+<<<<<<< HEAD
 		return 0 !== count( get_pages() );
 	}
 
 	/**
 	 * Add settings from the POST data that were not added with code, e.g. dynamically-created settings for Widgets
+=======
+		return 0 !== count( get_pages( array( 'number' => 1 ) ) );
+	}
+
+	/**
+	 * Adds settings from the POST data that were not added with code, e.g. dynamically-created settings for Widgets
+>>>>>>> main
 	 *
 	 * @since 4.2.0
 	 *
@@ -5766,7 +6213,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Load themes into the theme browsing/installation UI.
+=======
+	 * Loads themes into the theme browsing/installation UI.
+>>>>>>> main
 	 *
 	 * @since 4.9.0
 	 */
@@ -6001,7 +6452,11 @@ final class WP_Customize_Manager {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Export header video settings to facilitate selective refresh.
+=======
+	 * Exports header video settings to facilitate selective refresh.
+>>>>>>> main
 	 *
 	 * @since 4.7.0
 	 *

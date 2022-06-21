@@ -1020,4 +1020,11 @@ body.menu-max-depth-11 { min-width: 1280px !important; }
 	#menu-locations-wrap .widefat {
 		width: 100%;
 	}
+<<<<<<< HEAD
+=======
+
+	.bulk-select-button {
+		padding: 5px 10px;
+	}
+>>>>>>> main
 }

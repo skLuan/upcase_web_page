@@ -1,14 +1,22 @@
 {
+<<<<<<< HEAD
+=======
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+>>>>>>> main
 	"apiVersion": 2,
 	"name": "core/navigation",
 	"title": "Navigation",
 	"category": "theme",
 	"description": "A collection of blocks that allow visitors to get around your site.",
+<<<<<<< HEAD
 	"keywords": [
 		"menu",
 		"navigation",
 		"links"
 	],
+=======
+	"keywords": [ "menu", "navigation", "links" ],
+>>>>>>> main
 	"textdomain": "default",
 	"attributes": {
 		"ref": {
@@ -44,6 +52,13 @@
 			"type": "string",
 			"default": "mobile"
 		},
+<<<<<<< HEAD
+=======
+		"hasIcon": {
+			"type": "boolean",
+			"default": true
+		},
+>>>>>>> main
 		"__unstableLocation": {
 			"type": "string"
 		},
@@ -58,9 +73,18 @@
 		},
 		"customOverlayTextColor": {
 			"type": "string"
+<<<<<<< HEAD
 		}
 	},
 	"usesContext": [ "navigationArea" ],
+=======
+		},
+		"maxNestingLevel": {
+			"type": "number",
+			"default": 5
+		}
+	},
+>>>>>>> main
 	"providesContext": {
 		"textColor": "textColor",
 		"customTextColor": "customTextColor",
@@ -75,6 +99,7 @@
 		"showSubmenuIcon": "showSubmenuIcon",
 		"openSubmenusOnClick": "openSubmenusOnClick",
 		"style": "style",
+<<<<<<< HEAD
 		"orientation": "orientation"
 	},
 	"supports": {
@@ -82,6 +107,13 @@
 			"wide",
 			"full"
 		],
+=======
+		"orientation": "orientation",
+		"maxNestingLevel": "maxNestingLevel"
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+>>>>>>> main
 		"anchor": true,
 		"html": false,
 		"inserter": true,
@@ -92,16 +124,33 @@
 			"__experimentalFontWeight": true,
 			"__experimentalTextTransform": true,
 			"__experimentalFontFamily": true,
+<<<<<<< HEAD
+=======
+			"__experimentalTextDecoration": true,
+			"__experimentalSkipSerialization": [ "textDecoration" ],
+>>>>>>> main
 			"__experimentalDefaultControls": {
 				"fontSize": true
 			}
 		},
 		"spacing": {
+<<<<<<< HEAD
 			"units": [ "px", "em", "rem", "vh", "vw" ]
+=======
+			"blockGap": true,
+			"units": [ "px", "em", "rem", "vh", "vw" ],
+			"__experimentalDefaultControls": {
+				"blockGap": true
+			}
+>>>>>>> main
 		},
 		"__experimentalLayout": {
 			"allowSwitching": false,
 			"allowInheriting": false,
+<<<<<<< HEAD
+=======
+			"allowVerticalAlignment": false,
+>>>>>>> main
 			"default": {
 				"type": "flex"
 			}

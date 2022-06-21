@@ -1,0 +1,131 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mlp-reset\n"
+"POT-Creation-Date: 2019-12-24 07:38-0300\n"
+"PO-Revision-Date: 2019-12-31 11:36+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Last-Translator: \n"
+"Language: nl_NL\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../mlp-reset.php:17
+msgid "Media Library Folders Reset"
+msgstr "Media Library Folders Reset"
+
+#: ../mlp-reset.php:18
+msgid "Display Attachment URLs"
+msgstr "Bijlage-Url's weergeven"
+
+#: ../mlp-reset.php:19
+msgid "Display Folder Data"
+msgstr "Mapgegevens weergeven"
+
+#: ../mlp-reset.php:20
+msgid "Check for Folders Without Parent IDs"
+msgstr "Controleren op mappen zonder bovenliggende Id's"
+
+#: ../mlp-reset.php:21
+msgid "Reset Database"
+msgstr "Database opnieuw instellen"
+
+#: ../mlp-reset.php:33
+msgid "WordPress Media Library Folders Reset Instructions"
+msgstr "WordPress Media Library Folders reset instructies"
+
+#: ../mlp-reset.php:34
+msgid ""
+"If you need to rescan your database, please deactivate the WordPress Media "
+"Library Folders plugin and then click WordPress Media Library Folders Reset-"
+">Reset Database to erase the folder data. Then deactivate WordPress Media "
+"Library Folders Reset and reactivate WordPress Media Library Folders which "
+"will perform a fresh scan of your database."
+msgstr ""
+"Als u uw database opnieuw moet scannen, deactiveer dan de plug-in WordPress "
+"Media Library folders en klik vervolgens op WordPress Media Library folders "
+"reset-> reset database om de folder data te wissen. Vervolgens deactiveren "
+"WordPress Media Library folders reset en reactiveren WordPress Media "
+"Library folders die daarna een nieuwe scan van uw database zal uitvoeren."
+
+#: ../mlp-reset.php:70
+msgid "Removing mgmlp_media_folder posts"
+msgstr "Mgmlp_media_folder berichten verwijderen"
+
+#: ../mlp-reset.php:74
+msgid "Done. You can now reactivate WordPress Media Library Folders."
+msgstr "Gedaan. U kunt nu WordPress Media Library folders opnieuw activeren."
+
+#: ../mlp-reset.php:98
+msgid "Attachment URLs"
+msgstr "Url's voor bijlagen"
+
+#: ../mlp-reset.php:100
+msgid "Number of attachments"
+msgstr "Aantal bijlagen"
+
+#: ../mlp-reset.php:106
+msgid "Attachment ID"
+msgstr "Bijlage-ID"
+
+#: ../mlp-reset.php:107
+msgid "Attachment URL"
+msgstr "URL van bijlage"
+
+#: ../mlp-reset.php:108 ../mlp-reset.php:163
+msgid "Folder ID"
+msgstr "Map-ID"
+
+#: ../mlp-reset.php:135
+msgid "Folder URLs"
+msgstr "Url's van mappen"
+
+#: ../mlp-reset.php:141
+msgid "Uploads folder: "
+msgstr "Map uploads:"
+
+#: ../mlp-reset.php:143
+msgid "Uploads URL: "
+msgstr "URL voor uploads:"
+
+#: ../mlp-reset.php:145
+msgid "Number of folders: "
+msgstr "Aantal mappen:"
+
+#: ../mlp-reset.php:164
+msgid "Folder Name"
+msgstr "Mapnaam "
+
+#: ../mlp-reset.php:165
+msgid "Folder URL"
+msgstr "URL van map"
+
+#: ../mlp-reset.php:166
+msgid "Parent ID"
+msgstr "ID bovenliggende map"
+
+#: ../mlp-reset.php:225
+msgid "Checking for files without folder IDs"
+msgstr "Controleren op bestanden zonder map-Id's"
+
+#: ../mlp-reset.php:240
+msgid "The following files with missing folder IDs were found"
+msgstr "De volgende bestanden met ontbrekende map-Id's zijn gevonden"
+
+#: ../mlp-reset.php:252
+msgid "Fixed"
+msgstr "Vast"
+
+#: ../mlp-reset.php:254
+msgid " Parent folder not found."
+msgstr "Bovenliggende map niet gevonden."
+
+#: ../mlp-reset.php:259
+msgid "No files with missing folder IDs were found."
+msgstr "Er zijn geen bestanden gevonden met ontbrekende map-Id's."
