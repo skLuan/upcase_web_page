@@ -89,7 +89,7 @@ function upcase_header_cart()
                 <?php the_widget('WC_Widget_Cart', 'title='); ?>
             </li>
         </ul>
-<?php
+    <?php
     }
 }
 add_action('upcase_product_search', 'upcase_header_cart', 10);
@@ -110,7 +110,8 @@ function woocommerce_template_loop_product_link_open()
     echo '<a href="' . esc_url($link) . '" class="w-28 woocommerce-LoopProduct-link woocommerce-loop-product__link">';
 }
 
-function upcaseButton() {
+function upcaseButton()
+{
     echo '<a href="" class="inline-block px-5 py-3 mx-auto mt-24 mb-16 text-base font-semibold rounded-lg text-blackTxt bg-yellow drop-shadow-md">Ver colecciones</a>';
 }
 add_action('storefront_homepage_after_recent_products', 'upcaseButton');
@@ -163,25 +164,42 @@ function storefront_recent_products($args)
 
         do_action('storefront_homepage_after_recent_products_title');
         echo '<div class="relative flex flex-col bg-white-true drop drop-shadow-md lg:px-28">';
-        echo '<img class="relative lg:static -top-[57px] -left-[10%] ml-[15%] py-8" src="' .get_stylesheet_directory_uri() . '/assets/images/upcase/newIcon.svg" width="100px" >';
+        echo '<img class="relative lg:static -top-[57px] -left-[10%] ml-[15%] py-8" src="' . get_stylesheet_directory_uri() . '/assets/images/upcase/newIcon.svg" width="100px" >';
         echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-        do_action( 'storefront_homepage_after_recent_products' );
+        do_action('storefront_homepage_after_recent_products');
         echo '</div>';
 
-        echo'</section>';
+        echo '</section>';
     }
 }
-/**
- * Show the product title in the product loop. By default this is an H2.
- */
-function woocommerce_template_loop_product_title()
+function upcase_before_content()
 {
-    echo '<h2 class="text-lg font-bold font-montserrat">' . get_the_title() . '</h2>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-}
-// function mytheme_add_woocommerce_support() {
-// 	add_theme_support( 'woocommerce' );
-// }
-// add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+    ?>
+    <div id="primary" class="flex w-full">
+        <main id="main" class="mx-auto mt-20 site-main col-full upcase" role="main">
+        <?php
+    }
+    function upcase_after_content()
+    {
+        ?>
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+<?php
+    }
+
+
+    /**
+     * Show the product title in the product loop. By default this is an H2.
+     */
+    function woocommerce_template_loop_product_title()
+    {
+        echo '<h2 class="text-lg font-bold font-montserrat">' . get_the_title() . '</h2>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+    }
+    // function mytheme_add_woocommerce_support() {
+    // 	add_theme_support( 'woocommerce' );
+    // }
+    // add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 
 

@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			<tbody>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					<tr>
-						<th class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></th>
+						<th class="label"><label class="mb-3 text-base font-normal text-blackTxt" for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></th>
 						<td class="value">
 							<?php
 								wc_dropdown_variation_attribute_options(
@@ -43,6 +43,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 										'options'   => $options,
 										'attribute' => $attribute_name,
 										'product'   => $product,
+										'class' => 'upcase bg-white border p-2 w-full border-purple-default border-solid rounded-md font-bold text-blackTxt text-lg font-montserrat',
 									)
 								);
 								echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
