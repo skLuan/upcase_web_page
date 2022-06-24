@@ -9,3 +9,4 @@ wp-config.php
 !db/
 db/*
 !db/data.sql
+sh
