@@ -61,15 +61,20 @@ if ( post_password_required() ) {
 		 */
 		remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
 		remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+		remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+		remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 40);
 		// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10);
 		
 		// add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10);
+		remove_action( 'woocommerce_after_single_product_summary', 'storefront_single_product_pagination', 30 );
 		add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 20);
+		
 		do_action( 'woocommerce_single_product_summary' );
 		?>
 	</div>
-
-	<?php
+	
+</div>
+<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 *
@@ -77,8 +82,10 @@ if ( post_password_required() ) {
 	 * @hooked woocommerce_upsell_display - 15
 	 * @hooked woocommerce_output_related_products - 20
 	 */
+	
+	
+	remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
-</div>
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+

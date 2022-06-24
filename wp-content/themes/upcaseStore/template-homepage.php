@@ -40,7 +40,7 @@ get_header(); ?>
 			</div>
 			<!------------------------- button -->
 			<div class="flex mt-14">
-				<a class="px-5 py-3 mx-auto mt-12 text-lg font-semibold rounded-lg lg:mt-0 drop-shadow-md bg-yellow text-blackTxt" href="">Personalizar funda</a>
+				<a class="px-5 py-3 mx-auto mt-12 text-lg font-semibold rounded-lg lg:mt-0 drop-shadow-md bg-yellow text-blackTxt" href="<?php echo home_url() ?>/tienda/funda/funda-personalizada/">Personalizar funda</a>
 			</div>
 			<!------------------------- Trabajo con marcas -->
 			<div class="flex flex-col justify-center py-32">
@@ -57,7 +57,7 @@ get_header(); ?>
 					<div class="flex flex-col items-end pr-12 ml-auto lg:pr-0 lg:items-center lg:flex-row">
 						<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/upcase/home/stiker4cm.png' ?>" alt="">
 						<span class="mt-8 w-[80%] flex flex-col lg:block lg:pl-9">
-							<a class="inline-block mx-auto mb-4 text-lg font-bold text-purple-default" href="">Para fundas</a>
+							<a class="inline-block mx-auto mb-4 text-lg font-bold text-purple-default" href="<?php echo home_url() ?>/tienda/categoria/stikers/para-celular/">Para fundas</a>
 							<p class="mb-0 text-base font-normal">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
 						</span>
 					</div>
@@ -65,8 +65,8 @@ get_header(); ?>
 					<div class="flex flex-col items-end pr-12 my-16 ml-auto lg:pr-0 lg:items-center lg:flex-row">
 						<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/upcase/home/stiker6cm.png' ?>" alt="">
 						<span class="mt-8 flex w-[80%] flex-col lg:pl-9 lg:block">
-							<a class="inline-block mx-auto mb-4 text-lg font-bold text-purple-default" href="">Exteriores</a>
-							<p class="mb-0 text-base font-normal">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+							<a class="inline-block mx-auto mb-4 text-lg font-bold text-purple-default" href="<?php echo home_url() ?>/tienda/categoria/stikers/exteriores/">Exteriores</a>
+							<p class="mb-0 text-base font-normal ">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
 						</span>
 					</div>
 				</div>

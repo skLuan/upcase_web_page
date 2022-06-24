@@ -172,6 +172,60 @@ function storefront_recent_products($args)
         echo '</section>';
     }
 }
+
+/**
+ * Add a custom product data tab
+ */
+add_filter('woocommerce_product_tabs', 'woo_new_product_tab');
+function woo_new_product_tab($tabs)
+{
+
+    // Adds the new tab
+
+    $tabs['envio'] = array(
+        'title'     => __('Envío', 'woocommerce'),
+        'priority'     => 10,
+        'callback'     => 'woo_new_product_tab_content'
+    );
+
+    return $tabs;
+}
+function woo_new_product_tab_content()
+{
+
+    // The new tab content
+
+    // echo '<h2>New Product Tab</h2>';
+    echo '<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>';
+}
+
+
+/**
+ * Rename product data tabs
+ */
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
+function woo_rename_tabs( $tabs ) {
+
+	$tabs['description']['title'] = __( 'Descripción' );		// Rename the description tab
+	$tabs['reviews']['title'] = __( 'Reseñas' );				// Rename the reviews tab
+	$tabs['additional_information']['title'] = __( 'Información adicional' );				// Rename the reviews tab
+
+	return $tabs;
+
+}
+
+/**
+ * Reorder product data tabs
+ */
+add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
+function woo_reorder_tabs( $tabs ) {
+
+	$tabs['reviews']['priority'] = 15;			// Reviews first
+	$tabs['description']['priority'] = 5;			// Description second
+
+	return $tabs;
+}
+
 function upcase_before_content()
 {
     ?>

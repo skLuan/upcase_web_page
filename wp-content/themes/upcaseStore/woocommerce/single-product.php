@@ -29,8 +29,8 @@ get_header(); ?>
 	 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
 	 * @hooked woocommerce_breadcrumb - 20
 	 */
-	remove_action('woocommerce_before_main_content', 'storefront_before_content',10);
-add_action('woocommerce_before_main_content', 'upcase_before_content',10);
+	remove_action('woocommerce_before_main_content', 'storefront_before_content', 10);
+	add_action('woocommerce_before_main_content', 'upcase_before_content', 10);
 	do_action('woocommerce_before_main_content');
 	?>
 
@@ -50,8 +50,12 @@ add_action('woocommerce_before_main_content', 'upcase_before_content',10);
 	 */
 	remove_action('woocommerce_after_main_content', 'storefront_after_content', 10);
 	add_action('woocommerce_after_main_content', 'upcase_after_content', 10);
+	add_action('woocommerce_after_main_content', 'woocommerce_output_related_products', 20);
+	// add_action('woocommerce_after_main_content', 'uc_recentProducts', 20);
+	
 	do_action('woocommerce_after_main_content');
 	?>
+
 
 <?php
 get_footer('shop');
