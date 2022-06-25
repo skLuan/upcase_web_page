@@ -215,6 +215,14 @@ function woo_rename_tabs( $tabs ) {
 }
 
 /**
+ * Show the product title in the product loop. By default this is an H2.
+ */
+function upcase_template_loop_product_title()
+{
+    echo '<h2 class="text-lg font-bold text-center">' . get_the_title() . '</h2>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+
+/**
  * Reorder product data tabs
  */
 add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
