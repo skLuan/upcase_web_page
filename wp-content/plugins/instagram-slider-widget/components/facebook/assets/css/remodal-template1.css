@@ -1,0 +1,247 @@
+.remodal > div {
+    float: left   !important;
+}
+
+.remodal {
+    font-size: 13px   !important;
+    font-family: Geneva, Arial, Helvetica, sans-serif   !important;
+}
+.remodal-media{
+    object-fit: contain !important;
+    vertical-align: middle !important;
+
+}
+.remodal-media-image{
+    object-fit: contain !important;
+    vertical-align: middle !important;
+    max-height: 90vh !important;
+}
+.wis-video-block{
+    cursor: pointer   !important;
+}
+
+.wis-remodal-info {
+    text-align: left   !important;
+}
+
+.wis-remodal-round {
+    border-radius: 30px   !important;
+}
+
+.wis-remodal-text {
+    margin-top: 20px   !important;
+    width: 100% !important;
+    text-align: left !important;
+}
+
+.wis-remodal-stats {
+    margin-top: 20px   !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.isw-popup-buttons{
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 10% !important;
+}
+
+.wis-remodal-showcase-message{
+    width: 45px !important;
+    height: 45px !important;
+}
+
+.wis-remodal-username {
+    margin-left: 2%   !important;
+}
+
+.wis-remodal-info {
+    margin-top: 5%   !important;
+    margin-right: 20px   !important;
+    margin-left: 20px   !important;
+}
+
+.wis-remodal-img {
+    text-align: center   !important;
+}
+
+.wis-href {
+    text-decoration: none   !important;
+    color: black   !important;
+}
+
+.wis-href:hover {
+    color: #ed1e24   !important;
+}
+
+.wis-play-icon-div {
+    text-align: center !important;
+    color: white !important;
+    position: absolute !important;
+}
+.wis-play-icon {
+    background-color: rgba(0,0,0,0.2) !important;
+    width: 100px !important;
+    height: 100px !important;
+    padding: 25px 0px 0px 10px !important;
+    border-radius: 50px !important;
+}
+
+.date-post {
+    font-size: 10px   !important;
+    color: rgba(0,0,0,0.72) !important;
+    letter-spacing: .2px !important;
+    text-transform: uppercase !important;
+    margin-top: 20px !important;
+}
+
+.wis-video{
+
+}
+
+
+.remodal-view-arrow-prev, .remodal-view-arrow-next{
+    /*display: none   !important;*/
+    position: absolute !important;
+    top: 50% !important;
+
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    -webkit-transform: translate(0, -50%) !important;
+    -ms-transform: translate(0, -50%) !important;
+    transform: translate(0, -50%) !important;
+
+    cursor: pointer !important;
+
+    border: none !important;
+    outline: none !important;
+    border-radius: 20px !important;
+    color: black !important;
+    z-index: 1 !important;
+
+    text-align: center !important;
+    padding-top: 14px !important;
+}
+
+.remodal-view-arrow-prev{
+    left: 10px !important;
+}
+
+.remodal-view-arrow-next{
+    right: 10px !important;
+}
+
+.wis-remodal-slick-container:hover .remodal-view-arrow-next, .wis-remodal-slick-container:hover .remodal-view-arrow-prev{
+    display: block !important;
+}
+
+.wis-remodal-stats{
+    display: inline-block !important;
+}
+
+.wis-inline{
+    display: inline-block !important;
+}
+
+.wis-remodal-share-buttons{
+    margin-top: -38px !important;
+    position: absolute !important;
+    padding: 5px !important;
+    border: 1px solid #aaaaaa !important;
+    border-radius: 4px !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5) !important;
+    background-color: rgba(255,255,255,0.9) !important;
+}
+
+.shr-btn{
+    color: black !important;
+    font-size: 20px   !important;
+    margin-left: 4px  !important;
+}
+
+.shr-btn-fcbk {
+    margin-left: 0   !important;
+}
+
+.wis-remodal-share {
+    cursor: pointer !important;
+}
+
+.shr-btn:hover{
+    color: #ed1e24   !important;
+}
+
+.remodal-container
+{
+    width: 100% !important;
+    display: flex !important;
+}
+.remodal-md-6
+{
+    position: relative !important;
+    min-height: 1px !important;
+    /*padding-right: 15px !important;*/
+    /*padding-left: 15px !important;*/
+}
+
+
+
+.white
+{
+    background-color: black !important;
+    color: white !important;
+}
+.red
+{
+    background-color: white !important;
+    color: black !important;
+}
+
+@media (min-width: 992px) {
+    .remodal-md-6 {
+        float: left !important;
+        width: 50% !important;
+    }
+
+    .remodal-md-3{
+        float: left !important;
+        width: 30% !important;
+    }
+
+    .remodal-md-9{
+        float: left !important;
+        width: 70% !important;
+    }
+
+    .wis-play-icon-div{
+        left: 38% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 2 !important;
+        pointer-events: none !important;
+    }
+}
+@media (max-width: 991px) {
+    .remodal-media{
+        /*transform: translate(-25%, 0%) !important;*/
+
+    }
+
+    .isw-popup-buttons{
+        margin-top: 2% !important;
+    }
+
+    .remodal-container
+    {
+        width: 100% !important;
+        display: block !important;
+    }
+    .wis-play-icon-div{
+        left: 50% !important;
+        top: 38% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 2 !important;
+        pointer-events: none !important;
+    }
+}

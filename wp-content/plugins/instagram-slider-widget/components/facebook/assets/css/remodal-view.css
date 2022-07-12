@@ -1,0 +1,27 @@
+.wfb-remodal-container{
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 30px;
+}
+
+.wfb-remodal-pic{
+    float: left !important;
+    padding-bottom: 30px;
+    display: inline-block !important;
+}
+
+.wfb-remodal-data{
+    margin-left: 20px !important;
+    text-align: left;
+    display: inline-block !important;
+    width: 30% !important;
+}
+
+@media only screen and (min-width: 641px){
+    .remodal{
+        max-width: 1200px !important;
+    }
+}
+
+
