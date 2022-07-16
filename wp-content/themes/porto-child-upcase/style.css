@@ -1,5 +1,5 @@
 /*
-Theme Name: Porto Child - Upcase
+Theme Name: Upcase template - porto child
 Theme URI: https://www.portotheme.com/wordpress/porto
 Author: P-THEMES
 Author URI: https://www.portotheme.com/
@@ -12,3 +12,7 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 */
 
 /*************** ADD YOUR CUSTOM CSS HERE  ***************/
+
+.widget ul li, .widget ul {
+    border: none !important;
+}
