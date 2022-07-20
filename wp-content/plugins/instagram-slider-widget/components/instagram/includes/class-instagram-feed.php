@@ -409,7 +409,7 @@ class WIS_Instagram_Feed extends WIS_Feed {
 					];
 
 					$url      = WFB_FACEBOOK_SELF_URL . $account['id'] . '/media';
-					$response = wp_remote_get( add_query_arg( $args, $url ) );
+					$response = wp_remote_get( esc_url(add_query_arg( $args, $url )) );
 					if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 						$media   = json_decode( wp_remote_retrieve_body( $response ), true );
 						$results = $media['data'];
@@ -448,8 +448,8 @@ class WIS_Instagram_Feed extends WIS_Feed {
 						'limit'        => 50,
 						'access_token' => $account['token'],
 					];
-					$url      = self::USERS_SELF_MEDIA_URL . $account['id'];
-					$response = wp_remote_get( add_query_arg( $args, $url ) );
+					$url      = WIG_USERS_SELF_MEDIA_URL . $account['id'];
+					$response = wp_remote_get( esc_url(add_query_arg( $args, $url )) );
 					if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 						$media   = json_decode( wp_remote_retrieve_body( $response ), true );
 						$results = $media['media']['data'];
@@ -473,7 +473,7 @@ class WIS_Instagram_Feed extends WIS_Feed {
 						'q'            => $search_string,
 					];
 					$url      = WFB_FACEBOOK_SELF_URL . 'ig_hashtag_search';
-					$response = wp_remote_get( add_query_arg( $args, $url ) );
+					$response = wp_remote_get( esc_url(add_query_arg( $args, $url )) );
 					if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 						$media    = json_decode( wp_remote_retrieve_body( $response ), true );
 						$args     = [
@@ -484,7 +484,7 @@ class WIS_Instagram_Feed extends WIS_Feed {
 							'limit'        => 50,
 						];
 						$url      = WFB_FACEBOOK_SELF_URL . $media['data'][0]['id'] . '/recent_media';
-						$response = wp_remote_get( add_query_arg( $args, $url ) );
+						$response = wp_remote_get( esc_url(add_query_arg( $args, $url )) );
 						if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 							$media            = json_decode( wp_remote_retrieve_body( $response ), true );
 							$media['hashtag'] = true;
@@ -867,7 +867,7 @@ class WIS_Instagram_Feed extends WIS_Feed {
 		];
 
 		$url      = WIG_USERS_SELF_URL;
-		$url      = add_query_arg( $args, $url );
+		$url      = esc_url(add_query_arg( $args, $url ));
 		$response = wp_remote_get( $url );
 		if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 			$user          = json_decode( wp_remote_retrieve_body( $response ), true );

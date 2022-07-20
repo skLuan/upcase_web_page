@@ -220,10 +220,10 @@ class WIS_ProfilesPage extends WIS_Page {
 				break;
 		}
 
-		$_SERVER['REQUEST_URI'] = remove_query_arg( 'action' );
-		$_SERVER['REQUEST_URI'] = remove_query_arg( 'account' );
-		$_SERVER['REQUEST_URI'] = remove_query_arg( 'social' );
-		$_SERVER['REQUEST_URI'] = remove_query_arg( 'business' );
+		$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'action' ));
+		$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'account' ));
+		$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'social' ));
+		$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'business' ));
 		wp_redirect( $_SERVER['REQUEST_URI'] );
 	}
 

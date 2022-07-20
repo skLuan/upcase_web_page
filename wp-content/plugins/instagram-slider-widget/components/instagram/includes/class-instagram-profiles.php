@@ -88,7 +88,7 @@ class WIS_Instagram_Profiles extends WIS_Profiles {
 				'limit'        => 200,
 			];
 			$url      = WFB_FACEBOOK_SELF_URL . "me/accounts";
-			$response = wp_remote_get( add_query_arg( $args, $url ) );
+			$response = wp_remote_get( esc_url(add_query_arg( $args, $url )) );
 			if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 				$pages = json_decode( wp_remote_retrieve_body( $response ), true );
 				//$username = $result['data'][0]['name'];
@@ -101,7 +101,7 @@ class WIS_Instagram_Profiles extends WIS_Profiles {
 							'access_token' => $token,
 						];
 						$url      = WFB_FACEBOOK_SELF_URL . $r['instagram_business_account']['id'];
-						$response = wp_remote_get( add_query_arg( $args, $url ) );
+						$response = wp_remote_get( esc_url(add_query_arg( $args, $url )) );
 						if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 							$result          = json_decode( wp_remote_retrieve_body( $response ), true );
 							$result['token'] = $token;
@@ -143,7 +143,7 @@ class WIS_Instagram_Profiles extends WIS_Profiles {
 			];
 
 			$url      = WIG_USERS_SELF_URL;
-			$url      = add_query_arg( $args, $url );
+			$url      = esc_url(add_query_arg( $args, $url ));
 			$response = wp_remote_get( $url );
 			if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 				$user = json_decode( wp_remote_retrieve_body( $response ), true );
@@ -187,7 +187,7 @@ class WIS_Instagram_Profiles extends WIS_Profiles {
 		];
 
 		$url      = WIG_USERS_SELF_MEDIA_URL . 'refresh_access_token';
-		$url      = add_query_arg( $args, $url );
+		$url      = esc_url(add_query_arg( $args, $url ));
 		$response = wp_remote_get( $url );
 		if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 			$new = json_decode( wp_remote_retrieve_body( $response ), true );
@@ -210,12 +210,12 @@ class WIS_Instagram_Profiles extends WIS_Profiles {
 				if ( isset( $_GET['token_error'] ) ) {
 					$token_error = wp_strip_all_tags( $_GET['token_error'] );
 					echo '<div class="notice notice-error"><p>' . $token_error . '</p></div>';
-					$_SERVER['REQUEST_URI'] = str_replace( '#_', '', remove_query_arg( 'token_error' ) );
+					$_SERVER['REQUEST_URI'] = str_replace( '#_', '', esc_url(remove_query_arg( 'token_error' )) );
 				} else {
 					if ( isset( $_GET['access_token'] ) ) {
 						$token                  = $_GET['access_token'];
 						$result                 = $this->update_account_profiles( $token, true );
-						$_SERVER['REQUEST_URI'] = remove_query_arg( 'access_token' );
+						$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'access_token' ));
 						?>
                         <div id="wis_accounts_modal" class="wis_accounts_modal">
                             <div class="wis_modal_header">
@@ -234,12 +234,12 @@ class WIS_Instagram_Profiles extends WIS_Profiles {
 				if ( isset( $_GET['token_error'] ) ) {
 					$token_error = wp_strip_all_tags( $_GET['token_error'] );
 					echo '<div class="notice notice-error"><p>' . $token_error . '</p></div>';
-					$_SERVER['REQUEST_URI'] = str_replace( '#_', '', remove_query_arg( 'token_error' ) );
+					$_SERVER['REQUEST_URI'] = str_replace( '#_', '', esc_url(remove_query_arg( 'token_error' )) );
 				} else {
 					if ( isset( $_GET['access_token'] ) ) {
 						$token                  = $_GET['access_token'];
 						$result                 = $this->update_account_profiles( $token );
-						$_SERVER['REQUEST_URI'] = str_replace( '#_', '', remove_query_arg( 'access_token' ) );
+						$_SERVER['REQUEST_URI'] = str_replace( '#_', '', esc_url(remove_query_arg( 'access_token' )) );
 					}
 				}
 			}

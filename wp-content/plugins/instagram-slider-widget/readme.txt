@@ -2,7 +2,7 @@
 Contributors: creativemotion
 Tags: instagram, instagram feed, instagram gallery, instagram photos, Instagram widget
 Requires at least: 5.0
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -87,6 +87,7 @@ If you don't use an account in the widget, go to the plugin settings and add an 
 == Translations ==
 <ul>
 <li>English (default), always included</li>
+<li>Russian</li>
 <li>Dutch — big thanks to @webepc, @psmits1567</li>
 <li>Swedish — big thanks to @elbogen, @webbmasterpianise</li>
 <li>Portuguese (Brazil) — big thanks to @eberton-moraes</li>
@@ -107,6 +108,11 @@ If you don't use an account in the widget, go to the plugin settings and add an 
 10. Highlight
 
 == Changelog ==
+
+= 2.0.4 =
+* Fix adding account
+* WP 6.0 compatibility
+* Minor fixes
 
 = 2.0.3 =
 * Fix Facebook shortcode

@@ -225,11 +225,11 @@ class WIS_FeedsPage extends WIS_Page {
 
 			if ( $feed_id ) {
 				$feeds->update_feed( $feed_id, $feed );
-				//$_SERVER['REQUEST_URI'] = remove_query_arg( 'action' );
-				//$_SERVER['REQUEST_URI'] = remove_query_arg( 'feed' );
+				//$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'action' ));
+				//$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'feed' ));
 			} else {
 				$feeds->add_feed( $feed );
-				$_SERVER['REQUEST_URI'] = remove_query_arg( 'action' );
+				$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'action' ));
 			}
 
 			//wp_redirect( $_SERVER['REQUEST_URI'] );
@@ -255,8 +255,8 @@ class WIS_FeedsPage extends WIS_Page {
 			$feeds->delete_feed( $feed_id );
 		}
 
-		$_SERVER['REQUEST_URI'] = remove_query_arg( 'action' );
-		$_SERVER['REQUEST_URI'] = remove_query_arg( 'feed' );
+		$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'action' ));
+		$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'feed' ));
 		wp_safe_redirect( $_SERVER['REQUEST_URI'] );
 	}
 

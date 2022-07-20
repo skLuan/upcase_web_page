@@ -77,7 +77,7 @@ class WIS_Facebook_Profiles extends WIS_Profiles {
 			$connected_profiles = [];
 
 			$url      = WFB_FACEBOOK_SELF_URL . "me/accounts";
-			$response = wp_remote_get( add_query_arg( $args, $url ) );
+			$response = wp_remote_get( esc_url_raw(add_query_arg( $args, $url )) );
 			if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
 				$pages = json_decode( wp_remote_retrieve_body( $response ), true );
 				foreach ( $pages['data'] as $profile ) {
@@ -106,12 +106,12 @@ class WIS_Facebook_Profiles extends WIS_Profiles {
 	public function content() {
 		if ( isset( $_GET['tab'] ) && 'facebook' === $_GET['tab'] ) {
 			if ( isset( $_GET['token_error'] ) ) {
-				$_SERVER['REQUEST_URI'] = str_replace( '#_', '', remove_query_arg( 'token_error' ) );
+				$_SERVER['REQUEST_URI'] = str_replace( '#_', '', esc_url(remove_query_arg( 'token_error' )) );
 			} else {
 				if ( isset( $_GET['access_token'] ) ) {
 					$token                  = $_GET['access_token'];
 					$choose_account_html    = $this->update_profiles( $token );
-					$_SERVER['REQUEST_URI'] = remove_query_arg( 'access_token' );
+					$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'access_token' ));
 					?>
                     <div id="wis_accounts_modal" class="wis_accounts_modal">
                         <div class="wis_modal_header">

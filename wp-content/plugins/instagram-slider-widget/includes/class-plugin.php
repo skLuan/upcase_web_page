@@ -13,11 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @copyright (c) 2019 Webraftic Ltd
  * @version       1.0
  */
-class WIS_Plugin extends \Wbcr_Factory453_Plugin {
+class WIS_Plugin extends \Wbcr_Factory458_Plugin {
 
 	/**
 	 * @see self::app()
-	 * @var \Wbcr_Factory453_Plugin
+	 * @var \Wbcr_Factory458_Plugin
 	 */
 	private static $app;
 
@@ -35,7 +35,7 @@ class WIS_Plugin extends \Wbcr_Factory453_Plugin {
 	 * Используется для получения настроек плагина, информации о плагине, для доступа к вспомогательным
 	 * классам.
 	 *
-	 * @return \Wbcr_Factory453_Plugin
+	 * @return \Wbcr_Factory458_Plugin
 	 */
 	public static function app() {
 		return self::$app;
