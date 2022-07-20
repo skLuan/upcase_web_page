@@ -5,9 +5,12 @@
 *.zip
 upcase.com.co-20220323-222945-o47im1.wpress
 node_modules
+
 /wp-content/uploads/wc-logs
+wp-admin/*
+wp-includes/*
 wp-config.php
-!db/
+
 db/*
 !db/data.sql
 sh
