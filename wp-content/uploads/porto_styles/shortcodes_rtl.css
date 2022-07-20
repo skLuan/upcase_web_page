@@ -976,7 +976,7 @@ html .testimonial-light .testimonial-arrow-down {
 }
 /* Preview Image Lazy Loader */
 .porto-preview-image {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .porto-preview-image .lazy {
   display: block;
@@ -1530,7 +1530,7 @@ html .vc_col-has-fill .porto-btn.porto-adjust-bottom-margin {
   right: 24%;
   top: 49%;
 }
-@media (min-width: 1170px) {
+@media (min-width: 1160px) {
   .porto-diamonds > li:nth-child(3) {
     margin-left: 0;
   }
@@ -1552,7 +1552,7 @@ html .vc_col-has-fill .porto-btn.porto-adjust-bottom-margin {
     margin: 93px -133px 0 0;
   }
 }
-@media (max-width: 1169px) {
+@media (max-width: 1159px) {
   .porto-diamonds {
     width: 748px;
     margin: 0 auto;
@@ -3308,7 +3308,7 @@ h3.porto-sicon-title small {
 /* Porto Map Section */
 .porto-map-section {
   padding-top: 164px;
-  margin: 15px -30px 0;
+  margin: 15px -20px 0;
   background: url(http://localhost/upcase.com.co/wp-content/themes/porto/images/map.png) center 0 no-repeat;
 }
 .porto-map-section .map-content {
@@ -3318,8 +3318,8 @@ h3.porto-sicon-title small {
   margin-top: 0;
 }
 #main.main-boxed .porto-map-section .map-content {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .porto-map-section .map-content article.post .post-date .day, .porto-map-section .map-content .post-item .post-date .day {
   background-color: #fff;

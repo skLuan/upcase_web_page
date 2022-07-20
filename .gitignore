@@ -11,6 +11,8 @@ wp-admin/*
 wp-includes/*
 wp-config.php
 
+*copy*
+
 db/*
 !db/data.sql
 sh

@@ -54,11 +54,11 @@ global $porto_settings, $porto_layout;
 	<div class="header-main">
 		<div class="container">
 			<div class="header-left">
-				<?php // show mobile toggle ?>
+				<?php // show mobile toggle 
+				?>
 				<a class="mobile-toggle" href="#" aria-label="Mobile Menu"><i class="fas fa-bars"></i></a>
 				<?php
-				$accountMenu = porto_account_menu("account_menu");
-				apply_filters("porto_woocommerce_account_box_items",$accountMenu);
+				echo porto_account_menu("uc_account_menu")
 				?>
 				<?php
 				echo porto_wishlist("wishlist_menu");
@@ -111,24 +111,30 @@ global $porto_settings, $porto_layout;
 					<?php
 					// show main menu
 					echo porto_filter_output($main_menu);
+					// echo do_shortcode('[yith_wcan_filters slug="default-preset"]');
 					?>
 				</div>
-				<?php if ($porto_settings['show-sticky-searchform'] || $porto_settings['show-sticky-minicart'] || (isset($porto_settings['show-sticky-contact-info']) && $porto_settings['show-sticky-contact-info'])) : ?>
-					<div class="menu-right">
-						<?php
-						// show search form						if($porto_settings['show-sticky-searchform'])
+				<div class="menu-right">
+					<?php if ($porto_settings['show-sticky-searchform'] || $porto_settings['show-sticky-minicart'] || (isset($porto_settings['show-sticky-contact-info']) && $porto_settings['show-sticky-contact-info'])) {
+
 						echo porto_search_form();
 
 						if (isset($porto_settings['show-sticky-contact-info']) && $porto_settings['show-sticky-contact-info'] && $contact_info) {
 							echo '<div class="header-contact">' . do_shortcode($contact_info) . '</div>';
 						}
-
 						// show mini cart						if($porto_settings['show-sticky-minicart'])
-						echo porto_minicart();
-						?>
-					</div>
-				<?php endif; ?>
+						// echo porto_minicart();
+					}
+					?>
+				</div>
+				<div class="" style="position: absolute; right: 0;">
+					<ul class="flex-row justify-center p-0 m-0 d-flex align-center" style="list-style: none;">
+						<li class="m-1 "><a href=""><i class="fab fa-whatsapp"></i></a></li>
+						<li class="m-1 "><a href=""><i class="fab fa-facebook-f"></i></a></li>
+						<li class="m-1 "><a href="https://www.instagram.com/upcase.com.co/"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	<?php endif; ?>
+	<?php endif ?>
 </header>
