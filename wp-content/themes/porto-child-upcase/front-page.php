@@ -68,10 +68,23 @@ $featured_images = porto_get_featured_images();
 						'link_after'  => '</span>',
 					)
 				);
+				// --------------------- Bloque de categorias --------------------------
+				// $categorias = get_categories(array(
+				// 	'taxonomy' => 'product_cat',
+				// 	'order_by' => 'parent',
+				// 	'hide_empty' => false,
+				// ));
+				// foreach ($categorias as $categoria) {
+				// 	echo '<p>' . var_dump($categoria ->name)  . ' ==> ' . var_dump($categoria->term_id) .'</p> \n';
+				// }
 				?>
+			<?php // echo do_shortcode('[jr_instagram id="1"]'); ?>
 			</div>
-			<!-- ---------------------------------------------  ---------------------------------------------------  -->
-
+			<!-- --------------------------------------------- Aqui termina el contenido ---------------------------  -->
+			<h5 class="text-center" style="opacity: 0.55;">Trabajamos con referencias</h5>
+			<picture class="d-flex">
+				<img class="mx-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/marcas.png" alt="">
+			</picture>
 		</article>
 		<?php
 		$share           = porto_get_meta_value('page_share');

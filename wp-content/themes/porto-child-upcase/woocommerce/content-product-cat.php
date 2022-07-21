@@ -108,14 +108,13 @@ if (isset($porto_woocommerce_loop['product_categories_show_sub_cats']) && $porto
 	?>
 	<?php if ($whole_link) : ?>
 		<a href="<?php echo get_term_link($category->slug, 'product_cat'); ?>" aria-label="category">
-		<?php endif; 
-		// --------------------------------
+		<?php endif;
+	// --------------------------------
 		?>
 		<div class="thumb-info-wrap">
+			<!-- // ---------------------------------------- Info Title ----------------------------------->
 			<div class="thumb-info-title">
 				<?php
-		// ---------------------------------------- Info Title
-
 				if (isset($porto_woocommerce_loop['product_categories_show_sub_cats']) && $porto_woocommerce_loop['product_categories_show_sub_cats']) {
 					$list_args = array(
 						'show_count' => false,
@@ -132,7 +131,8 @@ if (isset($porto_woocommerce_loop['product_categories_show_sub_cats']) && $porto
 				<?php if (!$whole_link) : ?>
 					<a href="<?php echo get_term_link($category->slug, 'product_cat'); ?>" aria-label="category">
 					<?php endif; ?>
-					<h3 class="sub-title thumb-info-inner"><?php echo esc_html($category->name); ?></h3>
+					<h3 class="sub-title uc_cat_loop_title"><?php echo esc_html($category->name); ?></h3>
+					<div class="mx-auto" style="width: 18px; height: 3px; background: #5B00BF;"></div>
 					<?php if (!$whole_link) : ?>
 					</a>
 				<?php endif; ?>
@@ -153,6 +153,7 @@ if (isset($porto_woocommerce_loop['product_categories_show_sub_cats']) && $porto
 					<span class="btn"><?php esc_html_e('View All Products', 'porto'); ?><i class="fas fa-long-arrow-alt-right ms-2"></i></span>
 				<?php endif; ?>
 			</div>
+			<!-- // ---------------------------------------- Info Title ----------------------------------->
 		</div>
 		<div class="thumb-info <?php echo !$view_type ? '' : ' align-center'; ?>">
 			<?php if (!$whole_link) : ?>
@@ -178,6 +179,7 @@ if (isset($porto_woocommerce_loop['product_categories_show_sub_cats']) && $porto
 			<?php endif; ?>
 			<?php if ('category-pos-outside' != $view_type) : ?>
 				<div class="thumb-info-wrap">
+					<p class="mt-6 uc_cat_loop_info">Compra desde:</p>
 				</div>
 			<?php endif; ?>
 		</div>
