@@ -31,3 +31,44 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
     letter-spacing: -0.02em;
     text-align: right;
 }
+@media screen and (max-width: 992px) {
+        .uc_account_menu {
+        display: none !important;
+    }
+    .my-wishlist {
+        display: none !important;
+    }
+    .mobile-toggle {
+        background-color: #F8FAFC !important;
+        font-size: 20px !important;
+    }
+    .mobile-toggle i {
+        color: #5B00BF !important;
+    }
+    #side-nav-panel {
+        color: #303030 !important;
+    }
+    #side-nav-panel .accordion-menu li.menu-item > a{
+        color: #303030 !important;
+        font-size: 22px !important;
+        font-weight: 600 !important;
+        text-transform: capitalize !important;
+        padding: 15px 0 !important;
+
+    }
+    #side-nav-panel .side-nav-panel-close {
+        color: #303030 !important;
+        font-size:20px !important;
+        margin: 25vh 10px 0 0 !important;
+        position: relative !important;
+        top: unset !important;
+        right: unset !important;
+        text-align: right !important;
+    }
+     #side-nav-panel .menu-wrap .mobile-menu .menu-item .sub-menu li.menu-item > a {
+    font-size: 18px !important;
+    opacity: 0.8 !important;
+        padding: 5px 0 !important;
+
+    }
+}

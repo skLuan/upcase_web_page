@@ -78,13 +78,21 @@ $featured_images = porto_get_featured_images();
 				// 	echo '<p>' . var_dump($categoria ->name)  . ' ==> ' . var_dump($categoria->term_id) .'</p> \n';
 				// }
 				?>
-			<?php // echo do_shortcode('[jr_instagram id="1"]'); ?>
+				<?php // echo do_shortcode('[jr_instagram id="1"]'); 
+				?>
 			</div>
 			<!-- --------------------------------------------- Aqui termina el contenido ---------------------------  -->
-			<h5 class="text-center" style="opacity: 0.55;">Trabajamos con referencias</h5>
+			<h5 class="mt-5 text-center" style="opacity: 0.55;">Trabajamos con referencias</h5>
 			<picture class="d-flex">
 				<img class="mx-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/marcas.png" alt="">
 			</picture>
+			<section>
+				<h4 class="mt-5 text-center"> Siguenos en Instagram</h4>
+				<div class="mx-auto" style="width: 18px; height: 3px; background: #5B00BF;"></div>
+				<?php
+				echo do_shortcode('[jr_instagram id="1"]'); ?>
+				?>
+			</section>
 		</article>
 		<?php
 		$share           = porto_get_meta_value('page_share');
