@@ -1,0 +1,532 @@
+.wisw-logo-title
+{
+	display: inline-block;
+	background: transparent url('../img/logo.png') no-repeat center center;
+	background-size: contain;
+	height: 50px;
+	width: 50px;
+	vertical-align: middle;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+.wisw-container
+{
+	margin: 10px 0 0 0;
+}
+
+.wisw-social
+{
+	margin-bottom: 30px;
+}
+
+.wisw-social-content
+{
+	margin: 0 20px;
+}
+
+.wis-btn-instagram-account, .wis-btn-instagram-account-disabled
+{
+	padding: 0 24px 0 120px;
+	height: 44px;
+	line-height: 44px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.8) !important;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+	font-weight: 600;
+	display: inline-block;
+	background: #4267B2 url(../img/instagram_bg.png) no-repeat 16px 13.5px !important;
+	background-size: auto 20px !important;
+}
+
+.wis-btn-facebook-account
+{
+	padding: 0 30px 0 60px;
+	height: 44px;
+	line-height: 44px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.8) !important;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+	font-weight: 600;
+	display: inline-block;
+	background: #1879f2 url(../img/fb-icon-button.png) no-repeat 15px center !important;
+	background-size: auto 25px !important;
+	/*background: #1879f2 url(../img/fb-icon-button.png) no-repeat 15px 10px !important;*/
+	/*background-size: auto 25px !important;*/
+}
+
+.wis-btn-youtube-account
+{
+	padding: 0 24px 0 50px;
+	height: 44px;
+	line-height: 44px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.8) !important;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+	font-weight: 600;
+	display: inline-block;
+	background: #ff9797 url(../img/youtube-icon.png) no-repeat 16px 14px !important;
+	background-size: auto 20px !important;
+}
+
+.wis-not-working
+{
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+#wis-add-token
+{
+	margin-top: 10px;
+	background-color: white;
+	padding: 20px;
+	border: 1px solid #ccd0d4;
+	border-radius: 5px;
+}
+
+#wis-add-token p
+{
+	padding-top: 5px;
+}
+
+.btn-instagram-account-disabled
+{
+	opacity: 0.5;
+}
+
+.instagram-account-pro
+{
+	padding: 5px;
+}
+
+.wis-spinner
+{
+	background: url(../img/spinner.gif) no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	visibility: hidden;
+	float: right;
+	vertical-align: middle;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	width: 20px;
+	height: 20px;
+	margin: 4px 10px 0;
+}
+
+.wis-table > tbody > tr > td
+{
+	background-color: white;
+}
+
+.wis-table > thead > tr > th
+{
+	font-weight: bold;
+	background-color: #e8e8e8;
+}
+
+.wis-text-token
+{
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.00) !important;
+}
+
+.wis-help-text
+{
+	display: inline-block;
+	font-size: 14px;
+	margin: 10px 0 0 10px;
+}
+
+.wis-help-text p
+{
+	font-size: 16px;
+}
+
+i.wis-shortcode-icon
+{
+	background: url(../img/wis_icon.png) center no-repeat;
+}
+
+/* MODAL popup*/
+.wis_accounts_modal
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	max-width: 100%;
+	height: 400px;
+	max-height: 100%;
+	z-index: 1010;
+	display: block;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: white;
+	border: 1px solid #32323280;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+	box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+}
+
+.wis_feeds_modal
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	max-width: 100%;
+	height: 400px;
+	max-height: 100%;
+	z-index: 1010;
+	display: block;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: white;
+	border: 1px solid #32323280;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+	box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+}
+
+.wis_ytaccounts_modal
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	max-width: 100%;
+	height: 400px;
+	max-height: 100%;
+	z-index: 1010;
+	display: block;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: white;
+	border: 1px solid #32323280;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+	box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+}
+
+#wis_add_account_modal
+{
+	height: 230px !important;
+}
+
+.wis_closed
+{
+	display: none !important;
+}
+
+.wis_modal_content
+{
+	position: initial;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+	padding: 15px 20px 15px 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: center;
+}
+
+.wis_modal_header
+{
+	position: initial;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: 20px;
+	padding: 15px 20px 25px 20px;
+	overflow: hidden;
+	text-align: left;
+	font-weight: bold;
+	font-size: 14px;
+
+}
+
+.wis_modal_overlay
+{
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wis-overlay-spinner
+{
+	background: url(../img/spinner.svg) no-repeat;
+	background-size: 100px 100px;
+	vertical-align: middle;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	visibility: hidden;
+	z-index: 1001;
+}
+
+.is-active
+{
+	visibility: visible !important;
+}
+
+.wis-row
+{
+	width: 95%;
+	min-width: 1120px;
+	display: flex;
+}
+
+.wis-col-1
+{
+	float: left;
+	width: 12%;
+}
+
+.wis-col-2
+{
+	float: left;
+	width: 14%;
+}
+
+.wis-col-full
+{
+	float: left;
+	width: 100%;
+}
+
+.wis-row-style
+{
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.wis-col1-style
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.wis-col-full-style
+{
+	height: 50px;
+	font-weight: bold;
+	font-size: 14px;
+	padding-left: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.wis-col1-style img
+{
+	border: 1px solid #dadada;
+	border-radius: 10px;
+	vertical-align: middle;
+}
+
+.wis-col2-style
+{
+	font-weight: bold;
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+.wis-col2-style p
+{
+	vertical-align: middle;
+}
+
+.wis-page-title
+{
+	text-align: center;
+	padding: 10px 0;
+}
+
+.wis-page-title h1
+{
+	vertical-align: middle;
+	color: #000000;
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+.wis-div-added
+{
+	display: inline-block;
+	background-color: #d3dec1;
+	border: 1px solid green;
+	border-radius: 5px;
+	text-align: center;
+	word-break: break-word;
+	width: 100px;
+	font-size: 12px;
+	line-height: 1.1;
+	padding: 5px 0;
+	margin: 5px 0 0 0;
+}
+
+.wis-widgets-container
+{
+	padding: 20px 0 0 0;
+	/*margin-right: 20px;*/
+}
+
+.wis-col-16
+{
+	float: left;
+	width: 16.66666666%;
+}
+
+.wis-demo-widgets
+{
+	width: auto;
+	padding: 15px;
+	margin: 0 20px 20px 0;
+	background: #fafafa;
+	color: #23282d;
+	border: 1px solid #ccd0d4;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.wis-demo-widgets .wis-demo-widefat
+{
+	color: black;
+	font-family: monospace;
+	text-align: center;
+}
+
+.wis-demo-shortcode
+{
+	margin: 10px 0 10px 0;
+	text-align: center;
+}
+
+.wis-demo-shortcode p
+{
+	margin: 0 !important;
+	padding: 0 10px 10px 10px !important;
+}
+
+.wis-demo-shortcode input
+{
+	padding: 0 !important;
+	width: 95%;
+	font-size: 12px;
+}
+
+.wis-demo-shortcode span.wis_demo_pro:after
+{
+	display: inline-block;
+	position: relative;
+	content: 'PRO';
+	background: #ff5722;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 10px;
+	line-height: 1;
+	font-style: normal;
+	padding: 4px 6px;
+	margin-left: 4px;
+	vertical-align: top;
+	top: 0;
+	left: 0;
+	right: auto;
+	z-index: 11;
+	cursor: pointer;
+}
+
+.wis-social-group
+{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 15px 0 10px 0;
+}
+
+.wis-profile-empty
+{
+}
+
+.wis-profile-shortcode
+{
+	text-align: right;
+	width: 200px;
+}
+
+.wis-profile-id
+{
+	width: 125px;
+}
+
+.wis-profile-picture
+{
+	width: 40px;
+}
+
+.wis-profile-name
+{
+	width: 200px;
+}
+
+.wis-profile-actions
+{
+	width: 200px;
+}
+
+.wis-profile-nofeed
+{
+	width: 100%;
+	text-align: left;
+}
+
+.wis-text-token
+{
+	width: 90%;
+}
+
+@media only screen and (max-width: 670px)
+{
+	.wis-profile-id
+	{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 490px)
+{
+	.wis-profile-token
+	{
+		display: none;
+	}
+}
+
+#wyt_feed_link
+{
+	width: 100%;
+}
+
+/* Feeds page */
+.wisw-container-row
+{
+	margin: 15px 0;
+}

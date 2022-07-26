@@ -1,0 +1,1033 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Social Slider Feed\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-21 11:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.2.4"
+
+#: components/instagram/html_templates/form-feed.php:243
+#: components/youtube/html_templates/form-feed.php:166
+#: components/youtube/html_templates/widget_settings.php:151
+msgid ""
+"* use this field only if the above option is set to <strong>Custom "
+"Link</strong>"
+msgstr ""
+
+#: admin/views/page-license.php:134 admin/views/page-showcase-license.php:134
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\" rel=\"noopener\">Lean more</a> about the "
+"premium version and get the license key to activate it now!"
+msgstr ""
+
+#: components/facebook/includes/class-facebook-widget.php:56
+msgid "A widget that displays a Facebook posts "
+msgstr ""
+
+#: components/instagram/includes/class-instagram-widget.php:46
+msgid "A widget that displays a slider with instagram images "
+msgstr ""
+
+#: admin/pages/about.php:67
+msgid "About"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:35
+#: components/facebook/html_templates/form-feed.php:47
+#: components/instagram/html_templates/form-feed.php:40
+#: components/instagram/html_templates/form-feed.php:67
+#: components/instagram/html_templates/form-feed.php:79
+#: components/youtube/html_templates/form-feed.php:35
+#: components/youtube/html_templates/form-feed.php:47
+msgid "Account"
+msgstr ""
+
+#: components/instagram/includes/class-instagram-feed.php:780
+msgid ""
+"Account not found or for this account there are restrictions on Instagram by "
+"age"
+msgstr ""
+
+#: components/facebook/html_templates/accounts.php:36
+#: components/facebook/html_templates/feeds.php:21
+#: components/instagram/html_templates/accounts.php:39
+#: components/instagram/html_templates/accounts.php:87
+#: components/instagram/html_templates/feeds.php:21
+#: components/youtube/html_templates/accounts.php:57
+#: components/youtube/html_templates/feeds.php:21
+msgid "Action"
+msgstr ""
+
+#: admin/views/page-license.php:11 admin/views/page-showcase-license.php:11
+#, php-format
+msgid "Activate %s"
+msgstr ""
+
+#: admin/views/page-license.php:84 admin/views/page-showcase-license.php:84
+msgid "active sites"
+msgstr ""
+
+#: components/facebook/html_templates/accounts.php:15
+#: components/facebook/html_templates/accounts.php:20
+#: components/instagram/html_templates/accounts.php:18
+#: components/instagram/html_templates/accounts.php:22
+msgid "Add Account"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:48
+#: components/instagram/html_templates/form-feed.php:80
+#: components/instagram/html_templates/form-feed.php:102
+#: components/youtube/html_templates/form-feed.php:48
+msgid "Add account in settings"
+msgstr ""
+
+#: components/youtube/html_templates/accounts.php:31
+#: components/youtube/html_templates/accounts.php:108
+msgid "Add channel"
+msgstr ""
+
+#: components/facebook/html_templates/feeds.php:12
+#: components/facebook/html_templates/form-feed.php:17
+#: components/instagram/html_templates/feeds.php:12
+#: components/instagram/html_templates/form-feed.php:19
+#: components/youtube/html_templates/feeds.php:12
+#: components/youtube/html_templates/form-feed.php:19
+msgid "Add feed"
+msgstr ""
+
+#: components/youtube/html_templates/widget_settings.php:36
+msgid "Add feed in settings"
+msgstr ""
+
+#: admin/views/page-widgets.php:57
+msgid "Add instagram account in plugin settings"
+msgstr ""
+
+#: components/youtube/html_templates/accounts.php:92
+msgid "Add Youtube channel"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:300
+msgid "Allow words"
+msgstr ""
+
+#: components/facebook/includes/Api/facebook-api.php:64
+msgid "API ERROR: Failed to parse data."
+msgstr ""
+
+#: admin/pages/profiles.php:124 admin/pages/profiles.php:130
+#: admin/pages/profiles.php:136
+msgid "Are you sure want to delete this account?"
+msgstr ""
+
+#: admin/pages/feeds.php:85
+msgid "Are you sure want to delete this feed?"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:268
+msgid "Available in PRO version."
+msgstr ""
+
+#: admin/views/page-about.php:173
+msgid "BENEFITS"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:129
+msgid "Block Users"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:291
+#: components/youtube/html_templates/form-feed.php:179
+#: components/youtube/html_templates/widget_settings.php:154
+msgid "Block words"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:46
+#: components/instagram/html_templates/form-feed.php:91
+msgid "Business account"
+msgstr ""
+
+#: components/instagram/html_templates/accounts.php:79
+msgid "Business Accounts"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:477
+msgid "Buttons Color"
+msgstr ""
+
+#: components/instagram/includes/class-instagram-feed.php:553
+msgid ""
+"Can't receive images by hashtag. Please connect a business account and try "
+"again."
+msgstr ""
+
+#: admin/views/page-license.php:138 admin/views/page-showcase-license.php:138
+#, php-format
+msgid ""
+"Can’t find your key? Go to <a href=\"%s\" target=\"_blank\" rel=\"noopener\">"
+"this page</a> and login using the e-mail address associated with your "
+"purchase."
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:543
+msgid "Caption"
+msgstr ""
+
+#: components/youtube/html_templates/accounts.php:99
+msgid ""
+"Channel link. Example: https://www.youtube.com/channel/UC0WP5P-"
+"ufpRfjbNrmOWwLBQ"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:56
+#: components/instagram/html_templates/form-feed.php:137
+#: components/youtube/html_templates/form-feed.php:56
+msgid "Check for new images every:"
+msgstr ""
+
+#: components/youtube/html_templates/widget_settings.php:57
+msgid "Check for new posts every:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:486
+msgid "Columns count"
+msgstr ""
+
+#: components/youtube/html_templates/accounts.php:50
+msgid "Connected channels"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:97
+#: components/instagram/html_templates/form-feed.php:177
+#: components/youtube/html_templates/form-feed.php:97
+#: components/youtube/html_templates/widget_settings.php:42
+msgid "Count of images to show:"
+msgstr ""
+
+#. Author of the plugin
+msgid "creativemotion"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:241
+#: components/youtube/html_templates/form-feed.php:164
+#: components/youtube/html_templates/widget_settings.php:147
+msgid "Custom link:"
+msgstr ""
+
+#: components/youtube/includes/class-youtube-feed.php:64
+msgid "Custom URL"
+msgstr ""
+
+#: components/youtube/html_templates/form-feed.php:132
+#: components/youtube/html_templates/widget_settings.php:105
+msgid "Date"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:129
+#: components/instagram/html_templates/form-feed.php:210
+#: components/youtube/html_templates/form-feed.php:141
+#: components/youtube/html_templates/widget_settings.php:116
+msgid "Date - Ascending"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:130
+#: components/instagram/html_templates/form-feed.php:211
+#: components/youtube/html_templates/form-feed.php:142
+#: components/youtube/html_templates/widget_settings.php:117
+msgid "Date - Descending"
+msgstr ""
+
+#: admin/views/page-license.php:105 admin/views/page-showcase-license.php:105
+msgid "day(s)"
+msgstr ""
+
+#: components/facebook/html_templates/accounts.php:63
+#: components/instagram/html_templates/accounts.php:59
+#: components/instagram/html_templates/accounts.php:115
+#: components/youtube/html_templates/accounts.php:76
+msgid "Delete"
+msgstr ""
+
+#: admin/views/page-license.php:31 admin/views/page-showcase-license.php:31
+msgid "Delete Key"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:83
+#: components/instagram/html_templates/form-feed.php:164
+#: components/youtube/html_templates/form-feed.php:83
+msgid "Desktop"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:90
+#: components/instagram/html_templates/form-feed.php:171
+#: components/youtube/html_templates/form-feed.php:90
+msgid "Desktop settings"
+msgstr ""
+
+#: admin/views/page-license.php:72 admin/views/page-showcase-license.php:72
+msgid "domain"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:506
+msgid "Dotted"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:15
+#: components/instagram/html_templates/form-feed.php:17
+#: components/youtube/html_templates/form-feed.php:17
+msgid "Edit feed"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:278
+msgid "Enable author's ad"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:380
+msgid "Enable control buttons"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:285
+msgid "Enable instagram icons"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:305
+msgid ""
+"Enter comma-separated words. If one of them occurs in the image description, "
+"the image will be displayed"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:295
+#: components/youtube/html_templates/form-feed.php:183
+#: components/youtube/html_templates/widget_settings.php:159
+msgid ""
+"Enter comma-separated words. If one of them occurs in the image description, "
+"the image will not be displayed"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:132
+msgid "Enter words separated by commas whose images you don't want to show"
+msgstr ""
+
+#: admin/views/page-license.php:94 admin/views/page-showcase-license.php:94
+msgid "EXPIRED!"
+msgstr ""
+
+#: admin/pages/profiles.php:183
+msgid "Facebook"
+msgstr ""
+
+#: components/facebook/html_templates/widget_settings.php:17
+#: components/facebook/includes/class-facebook-feed.php:71
+#: components/facebook/includes/class-facebook-widget.php:63
+msgid "Facebook feed"
+msgstr ""
+
+#: admin/pages/feeds.php:131
+msgid "Facebook feeds"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:521
+msgid "Fade"
+msgstr ""
+
+#: admin/views/page-about.php:140
+msgid "FEATURES"
+msgstr ""
+
+#: admin/views/page-about.php:254
+msgid "FEEDBACK AND SUPPORT"
+msgstr ""
+
+#: admin/pages/feeds.php:65 admin/pages/feeds.php:66
+msgid "Feeds"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:58
+#: components/instagram/html_templates/form-feed.php:117
+msgid "Hashtag"
+msgstr ""
+
+#: admin/views/page-license.php:120 admin/views/page-showcase-license.php:120
+msgid "Have a key to activate the plugin? Paste it here:"
+msgstr ""
+
+#: admin/views/page-license.php:118 admin/views/page-showcase-license.php:118
+msgid "Have a key to activate the premium version? Paste it here:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:545
+msgid ""
+"Hold ctrl and click the fields you want to show/hide on your slider. Leave "
+"all unselected to hide them all. Default all selected."
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:60
+#: components/instagram/html_templates/form-feed.php:141
+#: components/youtube/html_templates/form-feed.php:60
+#: components/youtube/html_templates/widget_settings.php:62
+msgid "hours"
+msgstr ""
+
+#: components/youtube/html_templates/accounts.php:103
+msgid "How to get channel link"
+msgstr ""
+
+#: admin/pages/manual.php:41
+msgid "How to get Youtube API key"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://cm-wp.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://cm-wp.com/instagram-slider-widget"
+msgstr ""
+
+#: components/facebook/html_templates/accounts.php:33
+#: components/instagram/html_templates/accounts.php:36
+#: components/instagram/html_templates/accounts.php:84
+#: components/youtube/html_templates/accounts.php:55
+msgid "ID"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:125
+msgid ""
+"If you have problems displaying by hashtag, please connect your business "
+"account and select display by hashtag again"
+msgstr ""
+
+#: components/facebook/html_templates/accounts.php:32
+#: components/instagram/html_templates/accounts.php:35
+#: components/instagram/html_templates/accounts.php:83
+#: components/youtube/html_templates/accounts.php:54
+msgid "Image"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:365
+msgid "Image width:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:395
+msgid "Images size: "
+msgstr ""
+
+#: admin/pages/profiles.php:178
+msgid "Instagram"
+msgstr ""
+
+#: components/instagram/html_templates/widget_settings.php:17
+#: components/instagram/includes/class-instagram-widget.php:53
+msgid "Instagram feed"
+msgstr ""
+
+#: admin/pages/feeds.php:126
+msgid "Instagram feeds"
+msgstr ""
+
+#: admin/views/page-addon_licenses.php:60
+msgid "Install"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:388
+msgid "Keep 1x1 Instagram ratio"
+msgstr ""
+
+#: admin/pages/license.php:90
+msgid "License"
+msgstr ""
+
+#: admin/ajax/check-license.php:40
+msgid ""
+"License key is empty or license key too long (license key is 32 characters "
+"long)"
+msgstr ""
+
+#: admin/ajax/check-license.php:28
+msgid "Licensing action not passed or this action is prohibited!"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:138
+#: components/instagram/html_templates/form-feed.php:219
+#: components/youtube/html_templates/form-feed.php:150
+#: components/youtube/html_templates/widget_settings.php:125
+msgid "Link to"
+msgstr ""
+
+#: admin/pages/log.php:89
+msgid "Logs"
+msgstr ""
+
+#: admin/pages/profiles.php:184
+msgid "Manage Facebook accounts"
+msgstr ""
+
+#: admin/pages/feeds.php:132
+msgid "Manage Facebook feeds"
+msgstr ""
+
+#: admin/pages/profiles.php:179
+msgid "Manage Instagram accounts"
+msgstr ""
+
+#: admin/pages/feeds.php:127
+msgid "Manage Instagram feeds"
+msgstr ""
+
+#: admin/pages/profiles.php:189
+msgid "Manage Youtube accounts"
+msgstr ""
+
+#: admin/pages/feeds.php:137
+msgid "Manage Youtube feeds"
+msgstr ""
+
+#: components/youtube/html_templates/form-feed.php:214
+msgid "max is 10"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:346
+#: components/youtube/html_templates/widget_settings.php:97
+msgid "max is 10 ( only for thumbnails template )"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:107
+#: components/instagram/html_templates/form-feed.php:187
+#: components/youtube/html_templates/form-feed.php:107
+#: components/youtube/html_templates/widget_settings.php:49
+msgid "Maximum 20 images in free version."
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:84
+#: components/instagram/html_templates/form-feed.php:165
+#: components/youtube/html_templates/form-feed.php:84
+msgid "Mobile"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:216
+#: components/instagram/html_templates/form-feed.php:555
+#: components/youtube/html_templates/form-feed.php:225
+msgid "Mobile settings available only in premium version"
+msgstr ""
+
+#: components/facebook/html_templates/accounts.php:16
+#: components/instagram/html_templates/accounts.php:19
+#: components/youtube/html_templates/accounts.php:40
+#, php-format
+msgid "More accounts in <a href='%s'>PRO version</a>"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:108
+#: components/instagram/html_templates/form-feed.php:188
+#: components/instagram/html_templates/form-feed.php:269
+#: components/youtube/html_templates/form-feed.php:108
+#: components/youtube/html_templates/widget_settings.php:50
+#, php-format
+msgid "More in <a href='%s'>PRO version</a>"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:426
+#: components/instagram/html_templates/form-feed.php:532
+msgid "ms"
+msgstr ""
+
+#: components/facebook/html_templates/accounts.php:34
+#: components/facebook/html_templates/feeds.php:19
+#: components/instagram/html_templates/feeds.php:19
+#: components/youtube/html_templates/accounts.php:56
+#: components/youtube/html_templates/feeds.php:19
+msgid "Name"
+msgstr ""
+
+#: components/facebook/html_templates/feeds.php:55
+#: components/instagram/html_templates/feeds.php:55
+#: components/youtube/html_templates/feeds.php:55
+msgid "No feeds"
+msgstr ""
+
+#: components/instagram/includes/class-instagram-feed.php:493
+#: components/youtube/includes/class-youtube-feed.php:224
+msgid "No images found"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:510
+msgid "No Navigation"
+msgstr ""
+
+#: components/facebook/includes/class-facebook-feed.php:217
+msgid "No posts found"
+msgstr ""
+
+#: components/youtube/includes/class-youtube-feed.php:65
+msgid "None"
+msgstr ""
+
+#: components/instagram/includes/class-instagram-feed.php:329
+#: components/youtube/includes/class-youtube-feed.php:168
+msgid "Nothing to search for"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:342
+#: components/youtube/html_templates/form-feed.php:210
+#: components/youtube/html_templates/widget_settings.php:92
+msgid "Number of Columns:"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:117
+#: components/instagram/html_templates/form-feed.php:198
+#: components/youtube/html_templates/form-feed.php:117
+msgid "Number of words in caption:"
+msgstr ""
+
+#: admin/views/page-license.php:82 admin/views/page-showcase-license.php:82
+msgid "of"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:443
+msgid "Offset"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:127
+#: components/instagram/html_templates/form-feed.php:208
+#: components/youtube/html_templates/form-feed.php:139
+#: components/youtube/html_templates/widget_settings.php:113
+msgid "Order by"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:455
+msgid "Pattern"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:102
+#: components/facebook/html_templates/form-feed.php:122
+#: components/instagram/html_templates/form-feed.php:182
+#: components/instagram/html_templates/form-feed.php:203
+#: components/instagram/html_templates/form-feed.php:413
+#: components/youtube/html_templates/form-feed.php:102
+#: components/youtube/html_templates/form-feed.php:122
+msgid "pcs"
+msgstr ""
+
+#: components/instagram/html_templates/accounts.php:31
+msgid "Personal Accounts"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:468
+msgid "Phone"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:408
+msgid "Pictures per slide:"
+msgstr ""
+
+#: admin/views/page-license.php:76 admin/views/page-showcase-license.php:76
+msgid "plan"
+msgstr ""
+
+#: admin/views/page-license.php:95 admin/views/page-showcase-license.php:95
+msgid "please update the key"
+msgstr ""
+
+#: admin/pages/log.php:77
+msgid "Plugin logs"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:131
+#: components/instagram/html_templates/form-feed.php:212
+#: components/youtube/html_templates/form-feed.php:143
+#: components/youtube/html_templates/widget_settings.php:118
+msgid "Popularity - Ascending"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:132
+#: components/instagram/html_templates/form-feed.php:213
+#: components/youtube/html_templates/form-feed.php:144
+#: components/youtube/html_templates/widget_settings.php:119
+msgid "Popularity - Descending"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:198
+msgid "Post width:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:501
+msgid "Prev & Next"
+msgstr ""
+
+#: admin/views/page-about.php:196
+msgid "PRO VERSION"
+msgstr ""
+
+#: admin/pages/profiles.php:79
+msgid "Profiles"
+msgstr ""
+
+#: admin/views/page-license.php:54 admin/views/page-showcase-license.php:54
+msgid ""
+"Public License is a GPLv2 compatible license allowing you to change and use "
+"this version of the plugin for free. Please keep in mind this license covers "
+"only free edition of the plugin. Premium versions are distributed with other "
+"type of a license."
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:191
+#: components/facebook/html_templates/form-feed.php:203
+#: components/instagram/html_templates/form-feed.php:358
+#: components/instagram/html_templates/form-feed.php:370
+#: components/instagram/html_templates/form-feed.php:400
+msgid "px"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:133
+#: components/instagram/html_templates/form-feed.php:214
+#: components/youtube/html_templates/form-feed.php:145
+#: components/youtube/html_templates/widget_settings.php:120
+msgid "Random"
+msgstr ""
+
+#: components/youtube/html_templates/form-feed.php:133
+#: components/youtube/html_templates/widget_settings.php:106
+msgid "Rating"
+msgstr ""
+
+#: admin/views/page-addon_licenses.php:57
+msgid "Read more"
+msgstr ""
+
+#: admin/views/page-widgets.php:14
+msgid "Recommended widget templates"
+msgstr ""
+
+#: components/youtube/html_templates/form-feed.php:131
+#: components/youtube/html_templates/widget_settings.php:104
+msgid "Relevance"
+msgstr ""
+
+#: admin/views/page-license.php:107 admin/views/page-showcase-license.php:107
+msgid "remained"
+msgstr ""
+
+#: components/youtube/html_templates/form-feed.php:128
+#: components/youtube/html_templates/widget_settings.php:101
+msgid "Request videos by:"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:222
+#: components/instagram/html_templates/form-feed.php:562
+#: components/youtube/html_templates/accounts.php:22
+#: components/youtube/html_templates/accounts.php:39
+#: components/youtube/html_templates/form-feed.php:231
+msgid "Save"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:35
+msgid "Search Instagram for"
+msgstr ""
+
+#: admin/views/page-addon_licenses.php:53
+msgid "Settings"
+msgstr ""
+
+#: components/facebook/html_templates/feeds.php:20
+#: components/instagram/html_templates/feeds.php:20
+#: components/youtube/html_templates/feeds.php:20
+msgid "Shortcode"
+msgstr ""
+
+#: admin/views/page-widgets.php:34
+msgid "Shortcode for this widget"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:69
+#: components/instagram/html_templates/form-feed.php:150
+#: components/youtube/html_templates/form-feed.php:69
+msgid "Shortcode of this feed:"
+msgstr ""
+
+#: components/youtube/html_templates/widget_settings.php:166
+msgid "Shortcode of this Widget:"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:157
+#: components/instagram/html_templates/form-feed.php:252
+#: components/youtube/html_templates/form-feed.php:174
+msgid "Show feed header"
+msgstr ""
+
+#: components/youtube/html_templates/widget_settings.php:66
+msgid "Show feed header:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:262
+msgid "Show Stories"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Shows Instagram, Facebook and YouTube responsive feeds in widgets, posts, "
+"pages, or anywhere else using shortcodes"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:517
+msgid "Slide"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:527
+msgid "Slide Speed:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:514
+msgid "Slider Animation:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:498
+msgid "Slider Navigation Controls:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:537
+msgid "Slider Text Description:"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:421
+msgid "Sliding speed:"
+msgstr ""
+
+#: admin/pages/profiles.php:78
+msgid "Social profiles"
+msgstr ""
+
+#: components/instagram/includes/class-instagram-feed.php:132
+msgid "Social Slider"
+msgstr ""
+
+#: components/facebook/includes/class-facebook-widget.php:53
+msgid "Social Slider - Facebook"
+msgstr ""
+
+#: components/instagram/includes/class-instagram-widget.php:43
+msgid "Social Slider - Instagram"
+msgstr ""
+
+#. Name of the plugin
+#: instagram-slider-widget.php:29
+msgid "Social Slider Feed"
+msgstr ""
+
+#: admin/pages/feeds.php:63 admin/pages/feeds.php:64 admin/pages/widgets.php:96
+#: admin/pages/widgets.php:97
+msgid "Social Slider Feeds"
+msgstr ""
+
+#: components/facebook/includes/Api/facebook-api.php:56
+msgid "Something went wrong"
+msgstr ""
+
+#: components/facebook/includes/Api/facebook-api.php:70
+msgid "Something went wrong. API error"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:435
+msgid "Space between pictures"
+msgstr ""
+
+#: admin/views/page-license.php:126 admin/views/page-showcase-license.php:126
+msgid "Submit Key"
+msgstr ""
+
+#: components/youtube/html_templates/feed_header_template.php:29
+msgid "subscribe"
+msgstr ""
+
+#: components/youtube/html_templates/feed_header_template.php:8
+msgid "subscribers"
+msgstr ""
+
+#: admin/ajax/check-license.php:56
+msgid "Subscription success cancelled"
+msgstr ""
+
+#: components/instagram/html_templates/accounts.php:120
+msgid "Successfully connected"
+msgstr ""
+
+#: admin/views/page-license.php:35 admin/views/page-showcase-license.php:35
+msgid "Synchronization"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:164
+#: components/instagram/html_templates/form-feed.php:311
+#: components/youtube/html_templates/form-feed.php:189
+#: components/youtube/html_templates/widget_settings.php:77
+msgid "Template"
+msgstr ""
+
+#: admin/ajax/check-license.php:52
+msgid "The license has been updated"
+msgstr ""
+
+#: admin/ajax/check-license.php:48
+msgid "The license is deactivated"
+msgstr ""
+
+#: components/instagram/includes/class-instagram-feed.php:405
+#: components/instagram/includes/class-instagram-feed.php:433
+#: components/youtube/includes/class-youtube-feed.php:214
+msgid "There are no publications in this account yet"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:542
+msgid "Time"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:26
+#: components/facebook/html_templates/widget_settings.php:11
+#: components/instagram/html_templates/form-feed.php:28
+#: components/instagram/html_templates/widget_settings.php:11
+#: components/youtube/html_templates/form-feed.php:28
+#: components/youtube/html_templates/widget_settings.php:16
+msgid "Title:"
+msgstr ""
+
+#: components/facebook/html_templates/accounts.php:35
+#: components/instagram/html_templates/accounts.php:38
+#: components/instagram/html_templates/accounts.php:86
+msgid "Token"
+msgstr ""
+
+#: components/youtube/html_templates/form-feed.php:135
+#: components/youtube/html_templates/widget_settings.php:108
+msgid "Unspecified"
+msgstr ""
+
+#: admin/views/page-license.php:22 admin/views/page-showcase-license.php:22
+msgid "Upgrade to Premium"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:155
+msgid ""
+"Use this shortcode in any page or post to display images with this "
+"configuration!"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:74
+#: components/youtube/html_templates/form-feed.php:74
+#: components/youtube/html_templates/widget_settings.php:170
+msgid ""
+"Use this shortcode in any page or post to display images with this widget "
+"configuration!"
+msgstr ""
+
+#: components/instagram/html_templates/accounts.php:37
+#: components/instagram/html_templates/accounts.php:85
+msgid "User"
+msgstr ""
+
+#: components/youtube/html_templates/feed_header_template.php:8
+msgid "user has hidden the number of followers"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:52
+#: components/instagram/html_templates/form-feed.php:108
+#: components/instagram/html_templates/form-feed.php:541
+msgid "Username"
+msgstr ""
+
+#: admin/views/page-license.php:89 admin/views/page-showcase-license.php:89
+msgid "version"
+msgstr ""
+
+#: components/facebook/html_templates/form-feed.php:186
+#: components/instagram/html_templates/form-feed.php:353
+msgid "Vertical space between item elements:"
+msgstr ""
+
+#: components/youtube/html_templates/form-feed.php:134
+#: components/youtube/html_templates/widget_settings.php:107
+msgid "View count"
+msgstr ""
+
+#: components/youtube/html_templates/default.php:27
+msgid "views"
+msgstr ""
+
+#: admin/views/page-about.php:265
+msgid "WHY DO YOU NEED IT?"
+msgstr ""
+
+#: admin/pages/widgets.php:98 admin/pages/widgets.php:99
+msgid "Widgets"
+msgstr ""
+
+#: components/instagram/html_templates/form-feed.php:266
+msgid "Works only with business account."
+msgstr ""
+
+#: admin/pages/widgets.php:177
+#, php-format
+msgid ""
+"You don't have any Social Slider Feeds. Go to the Wordpress <a href='%1s'>"
+"Widgets</a> page and add it."
+msgstr ""
+
+#: admin/pages/feeds.php:87
+msgid ""
+"You haven't finished adding the feed. Are you sure you want to close the "
+"window?"
+msgstr ""
+
+#: admin/views/page-license.php:58 admin/views/page-showcase-license.php:58
+msgid ""
+"You use a paid subscription for the plugin updates. In case you don’t want "
+"to receive paid updates, please, click <a data-action=\"unsubscribe\" "
+"class=\"wis-control-btn\" href=\"#\">cancel subscription</a>"
+msgstr ""
+
+#: admin/views/page-license.php:25 admin/views/page-showcase-license.php:25
+#, php-format
+msgid "Your current license for %1$s:"
+msgstr ""
+
+#: admin/ajax/check-license.php:43
+msgid "Your license has been successfully activated"
+msgstr ""
+
+#: admin/views/page-license.php:64 admin/views/page-showcase-license.php:64
+msgid ""
+"Your license has expired, please extend the license to get updates and "
+"support."
+msgstr ""
+
+#: admin/pages/profiles.php:188
+msgid "Youtube"
+msgstr ""
+
+#: components/youtube/html_templates/accounts.php:18
+msgid "Youtube api key."
+msgstr ""
+
+#: components/youtube/html_templates/widget_settings.php:26
+#: components/youtube/includes/class-youtube-feed.php:69
+#: components/youtube/includes/class-youtube-widget.php:67
+msgid "Youtube feed"
+msgstr ""
+
+#: admin/pages/feeds.php:136
+msgid "Youtube feeds"
+msgstr ""
+
+#: components/youtube/includes/class-youtube-feed.php:63
+msgid "Youtube link"
+msgstr ""
+
+msgid "Mobile settings"
+msgstr ""
