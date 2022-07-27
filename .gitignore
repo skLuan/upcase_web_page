@@ -2,11 +2,16 @@
 *.jpg
 *.log
 *.wpress
+*.zip
 upcase.com.co-20220323-222945-o47im1.wpress
 node_modules
+
 /wp-content/uploads/wc-logs
+/wp-content/logs/*
 wp-config.php
-!db/
+
+*copy*
+
 db/*
 !db/data.sql
 sh
