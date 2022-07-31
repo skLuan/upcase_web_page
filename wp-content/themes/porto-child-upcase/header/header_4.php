@@ -67,7 +67,7 @@ global $porto_settings, $porto_layout;
 			<div class="header-center">
 				<?php echo porto_logo(); ?>
 			</div>
-			<div class="header-right">
+			<div class="header-right d-none d-lg-flex">
 				<div>
 					<?php
 					// show search form

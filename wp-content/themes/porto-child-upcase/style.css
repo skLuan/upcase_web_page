@@ -13,6 +13,13 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 
 /*************** ADD YOUR CUSTOM CSS HERE  ***************/
 
+:root {
+    --purple-primary: #5B00BF;
+    --yellow-primary: #FFE500;
+    --purple-black: #303030 ;
+}
+
+
 .widget ul li, .widget ul {
     border: none !important;
 }
@@ -25,13 +32,17 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 .uc_cat_loop_info {
     font-size: 14px !important;
     font-weight: 700 !important;
-    color: #303030;
+    color: var(--purple-black) !important;;
     opacity: 0.55;
     margin: 5px 0 0 5px;
     letter-spacing: -0.02em;
     text-align: right;
 }
 @media screen and (max-width: 992px) {
+    .header-center {
+        margin: 20px !important;
+
+    }
         .uc_account_menu {
         display: none !important;
     }
@@ -43,13 +54,13 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
         font-size: 20px !important;
     }
     .mobile-toggle i {
-        color: #5B00BF !important;
+        color: var(--purple-primary) !important;
     }
     #side-nav-panel {
-        color: #303030 !important;
+        color: var(--purple-black) !important;
     }
     #side-nav-panel .accordion-menu li.menu-item > a{
-        color: #303030 !important;
+        color: var(--purple-black) !important;
         font-size: 22px !important;
         font-weight: 600 !important;
         text-transform: capitalize !important;
@@ -57,7 +68,7 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 
     }
     #side-nav-panel .side-nav-panel-close {
-        color: #303030 !important;
+        color: var(--purple-black) !important;
         font-size:20px !important;
         margin: 25vh 10px 0 0 !important;
         position: relative !important;
@@ -70,5 +81,33 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
     opacity: 0.8 !important;
         padding: 5px 0 !important;
 
+    }
+
+    .uc-sticky-navbar {
+        /* background-color: #F8FAFC !important; */
+        background-color: var(--purple-primary) !important;
+        padding: 0 0 15px 0 !important;
+    }
+    .uc-sticky-navbar .sticky-icon a {
+        /* Morado */
+        /* color: var(--purple-primary) !important; */
+        /* Blanco */
+        /* color: #F8FAFC !important; */
+        /* Amarillo */
+        color: var(--yellow-primary) !important;
+
+    }
+    .uc-sticky-navbar .sticky-icon a .label {
+        /* color: var(--purple-primary) !important; */
+        /* Blanco */
+        /* color: #F8FAFC !important; */
+        /* Amarillo */
+        
+        color: var(--yellow-primary) !important;
+    }
+    .uc-sticky-navbar .sticky-icon {
+        /* border-color: #5B00BF33 !important; */
+        /* Blanco */
+        border-color: white !important;
     }
 }
