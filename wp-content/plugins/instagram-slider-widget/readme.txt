@@ -109,6 +109,10 @@ If you don't use an account in the widget, go to the plugin settings and add an 
 
 == Changelog ==
 
+= 2.0.5 =
+* Fix adding account (personal/business)
+* Fix show feed
+
 = 2.0.4 =
 * Fix adding account
 * WP 6.0 compatibility

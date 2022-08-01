@@ -11,6 +11,7 @@ $social = $args['social'];
 $count_accounts = ! empty( $accounts ) ? count( $accounts ) : 0;
 ?>
 <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+	<?php wp_nonce_field('wis_yt_token','csrf_check'); ?>
     <div class="wis-youtube-form-row">
         <div class="wyt-add-form">
             <input type="text" name="wyt_api_key" id="wyt_api_key" class="" style="width: 550px;"
@@ -95,6 +96,7 @@ if ( ! empty( $accounts ) ) :
     </div>
     <div class="wis_modal_content">
         <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+	        <?php wp_nonce_field('wis_yt_link','csrf_check'); ?>
             <div class="wis-youtube-form-row">
                 <div class="wyt-add-form" style="width: 100%;">
                     <input type="text" name="wyt_feed_link" id="wyt_feed_link" class=""

@@ -20,6 +20,7 @@ $search_for = $instance['search_for'] ?? '';
 		} ?>
     </h2>
     <form action="" method="post" name="wis-feed-add-form" id="wis-feed-add-form">
+	    <?php wp_nonce_field('wis_edit_feed','csrf_check'); ?>
         <div class="jr-container">
             <div class="isw-common-settings">
                 <div class="wis-flex-content">

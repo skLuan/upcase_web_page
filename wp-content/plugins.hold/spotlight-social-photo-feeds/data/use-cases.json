@@ -1,0 +1,49 @@
+[
+  {
+    "id": "accounts",
+    "name": "My Instagram posts",
+    "desc": "Show my photos and videos",
+    "tier": 0,
+    "img": "https://spotlightwp.com/wp-content/uploads/2022/04/Feed_2x.png"
+  },
+  {
+    "id": "tagged",
+    "name": "My tagged posts",
+    "desc": "Show posts that I'm tagged in",
+    "tier": 20,
+    "img": "https://spotlightwp.com/wp-content/uploads/2022/04/Tagged-Feed_2x.png",
+    "link": "https://spotlightwp.com/tagged-post-feeds/"
+  },
+  {
+    "id": "hashtags",
+    "name": "Hashtag feed",
+    "desc": "Show posts from public hashtags",
+    "tier": 20,
+    "img": "https://spotlightwp.com/wp-content/uploads/2022/04/Hashtag-Feed_2x.png",
+    "link": "https://spotlightwp.com/instagram-hashtag-feeds/"
+  },
+  {
+    "id": "shoppable",
+    "name": "Shoppable feed",
+    "desc": "Increase my sales and conversions",
+    "tier": 20,
+    "img": "https://spotlightwp.com/wp-content/uploads/2022/04/Shoppable-Feed_2x.png",
+    "link": "https://spotlightwp.com/shoppable-instagram-feed-wordpress/"
+  },
+  {
+    "id": "linkInBio",
+    "name": "Link in Bio",
+    "desc": "Drive traffic to my website",
+    "tier": 20,
+    "img": "https://spotlightwp.com/wp-content/uploads/2022/04/Link-in-Bio_2x.png",
+    "link": "https://spotlightwp.com/link-in-bio/"
+  },
+  {
+    "id": "combined",
+    "name": "Combined feed",
+    "desc": "Combine various feed sources",
+    "tier": 20,
+    "img": "https://spotlightwp.com/wp-content/uploads/2022/04/Combined-Feed_2x.png",
+    "link": "https://spotlightwp.com/combined-instagram-feeds/"
+  }
+]

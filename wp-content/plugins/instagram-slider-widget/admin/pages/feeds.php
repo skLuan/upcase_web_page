@@ -93,6 +93,10 @@ class WIS_FeedsPage extends WIS_Page {
 	 * @inerhitDoc
 	 */
 	public function showPageContent() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( 'Access denied' );
+		}
+
 		if ( isset( $_GET['action'] ) && isset( $_GET['social'] ) ) {
 			$social = sanitize_text_field( $_GET['social'] );
 
@@ -221,6 +225,8 @@ class WIS_FeedsPage extends WIS_Page {
 		if ( isset( $_POST['wis-feed-save-action'] ) ) {
 			unset( $_POST['wis-feed-save-action'] );
 
+			check_admin_referer( 'wis_edit_feed', 'csrf_check' );
+
 			$feed = $this->getSocialClass( $social, $_POST );
 
 			if ( $feed_id ) {
@@ -229,7 +235,7 @@ class WIS_FeedsPage extends WIS_Page {
 				//$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'feed' ));
 			} else {
 				$feeds->add_feed( $feed );
-				$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'action' ));
+				$_SERVER['REQUEST_URI'] = esc_url( remove_query_arg( 'action' ) );
 			}
 
 			//wp_redirect( $_SERVER['REQUEST_URI'] );
@@ -251,12 +257,14 @@ class WIS_FeedsPage extends WIS_Page {
 	public function delete_action( $social, $feed_id = 0 ) {
 		$feeds = new WIS_Feeds( $social );
 
+		check_admin_referer( 'wis_edit_feed', 'csrf_check' );
+
 		if ( $feed_id ) {
 			$feeds->delete_feed( $feed_id );
 		}
 
-		$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'action' ));
-		$_SERVER['REQUEST_URI'] = esc_url(remove_query_arg( 'feed' ));
+		$_SERVER['REQUEST_URI'] = esc_url( remove_query_arg( 'action' ) );
+		$_SERVER['REQUEST_URI'] = esc_url( remove_query_arg( 'feed' ) );
 		wp_safe_redirect( $_SERVER['REQUEST_URI'] );
 	}
 

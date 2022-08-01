@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH Framework\n"
 "Report-Msgid-Bugs-To: YITH <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2022-07-06 06:26:03+00:00\n"
+"POT-Creation-Date: 2022-07-18 06:07:56+00:00\n"
 "PO-Revision-Date: 2022-04-05 17:22:32+0000\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -115,61 +115,61 @@ msgstr "Вы уверены?"
 msgid "Reset to default"
 msgstr "Сброс до заводских настроек"
 
-#: includes/class-yit-plugin-panel.php:1059
+#: includes/class-yit-plugin-panel.php:1072
 msgid ""
 "The element you have entered already exists. Please, enter another name."
 msgstr "Введенный вами элемент уже существует. Пожалуйста, введите другое имя."
 
-#: includes/class-yit-plugin-panel.php:1060
+#: includes/class-yit-plugin-panel.php:1073
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: includes/class-yit-plugin-panel.php:1061
+#: includes/class-yit-plugin-panel.php:1074
 msgid "Settings reset"
 msgstr "Сбросить настройки"
 
-#: includes/class-yit-plugin-panel.php:1062
+#: includes/class-yit-plugin-panel.php:1075
 msgid "Element deleted correctly."
 msgstr "Элемент удален правильно."
 
-#: includes/class-yit-plugin-panel.php:1063
-#: includes/class-yit-plugin-panel.php:1064
+#: includes/class-yit-plugin-panel.php:1076
+#: includes/class-yit-plugin-panel.php:1077
 msgid "Element updated correctly."
 msgstr "Элемент обновлен правильно."
 
-#: includes/class-yit-plugin-panel.php:1065
+#: includes/class-yit-plugin-panel.php:1078
 msgid "Database imported correctly."
 msgstr "База данных импортирована правильно."
 
-#: includes/class-yit-plugin-panel.php:1066
+#: includes/class-yit-plugin-panel.php:1079
 msgid "An error has occurred during import. Please try again."
 msgstr "Во время импорта произошла ошибка. Пожалуйста, попробуйте еще раз."
 
-#: includes/class-yit-plugin-panel.php:1067
+#: includes/class-yit-plugin-panel.php:1080
 msgid "The added file is not valid."
 msgstr "Добавленный файл недействителен."
 
-#: includes/class-yit-plugin-panel.php:1068
+#: includes/class-yit-plugin-panel.php:1081
 msgid "Sorry, import is disabled."
 msgstr "Извините, импорт отключен."
 
-#: includes/class-yit-plugin-panel.php:1069
+#: includes/class-yit-plugin-panel.php:1082
 msgid "Sorting successful."
 msgstr "Сортировка выполнена успешно."
 
-#: includes/class-yit-plugin-panel.php:1558
+#: includes/class-yit-plugin-panel.php:1571
 msgid "We need your support"
 msgstr "Нам нужна ваша поддержка"
 
-#: includes/class-yit-plugin-panel.php:1559
+#: includes/class-yit-plugin-panel.php:1572
 msgid "to keep updating and improving the plugin. Please,"
 msgstr "чтобы продолжать обновлять и улучшать плагин. Пожалуйста,"
 
-#: includes/class-yit-plugin-panel.php:1561
+#: includes/class-yit-plugin-panel.php:1574
 msgid "help us by leaving a good review"
 msgstr "помогите нам, оставив хороший отзыв"
 
-#: includes/class-yit-plugin-panel.php:1562
+#: includes/class-yit-plugin-panel.php:1575
 msgid ":) Thanks!"
 msgstr ":) Благодарим!"
 
@@ -671,18 +671,6 @@ msgid "Data: %1$.2fMB | Index: %2$.2fMB | Free: %3$.2fMB | Engine: %4$s"
 msgstr ""
 "Данные: %1$.2fMB | Индекс: %2$.2fMB | Свободно: %3$.2fMB | Движок: %4$s"
 
-#. translators: 1. Plugin(s) name(s).
-#: yit-deactive-plugin.php:119
-msgid ""
-"%s was deactivated as you're running an higher tier version of the same "
-"plugin."
-msgid_plural ""
-"%s were deactivated as you're running higher tier versions of the same "
-"plugins."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
 #. translators: %s is the title of the post object.
 #: yit-functions.php:1938
 msgid "Are you sure you want to move \"%s\" to trash?"
@@ -697,9 +685,21 @@ msgstr "Вы уверены, что хотите удалить \"%s\"?"
 msgid "Further actions"
 msgstr "Дальнейшие действия"
 
-#: yit-plugin.php:213
+#: yit-plugin.php:232
 msgid "License"
 msgstr "Лицензия"
+
+#. translators: 1. Plugin(s) name(s).
+#: yit-plugin.php:271
+msgid ""
+"%s was deactivated as you're running an higher tier version of the same "
+"plugin."
+msgid_plural ""
+"%s were deactivated as you're running higher tier versions of the same "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #. Author of the plugin/theme
 msgid "YITH"
@@ -738,12 +738,18 @@ msgid "Yes, delete"
 msgstr "Да, удалить"
 
 #. translators: 1. Plugin name.
-#: includes/class-yit-plugin-panel.php:805
+#: includes/class-yit-plugin-panel.php:803
 msgctxt "Help tab default title"
 msgid "Thank you for purchasing %s!"
 msgstr "Благодарим вас за покупку %s!"
 
-#: includes/class-yit-plugin-panel.php:806
+#: includes/class-yit-plugin-panel.php:803
+#, fuzzy
+msgctxt "Help tab default title"
+msgid "Thank you for using %s!"
+msgstr "Благодарим вас за покупку %s!"
+
+#: includes/class-yit-plugin-panel.php:815
 msgctxt "Help tab default description"
 msgid ""
 "We want to help you enjoy a wonderful experience with all of our products."
@@ -751,12 +757,12 @@ msgstr ""
 "Мы хотим помочь вам получить удовольствие от использования всех наших "
 "продуктов."
 
-#: includes/class-yit-plugin-panel.php:853
+#: includes/class-yit-plugin-panel.php:866
 msgctxt "Premium tab name"
 msgid "Get premium"
 msgstr "Получите премиум"
 
-#: includes/class-yit-plugin-panel.php:865
+#: includes/class-yit-plugin-panel.php:878
 msgctxt "Help tab name"
 msgid "Help"
 msgstr "Помощь"
@@ -875,7 +881,7 @@ msgid "NO"
 msgstr "НЕТ"
 
 #. translators: 1. Url to EN playlist.
-#: templates/panel/help-tab.php:87
+#: templates/panel/help-tab.php:89
 msgctxt "Help tab view all video link"
 msgid ""
 "Check the full <a href=\"%s\" target=\"_blank\">Playlist on Youtube</a> to "
@@ -884,57 +890,57 @@ msgstr ""
 "Посмотрите полный <a href=\"%s\" target=\"_blank\">плейлист на Youtube</a>, "
 "чтобы узнать больше >"
 
-#: templates/panel/help-tab.php:94
+#: templates/panel/help-tab.php:96
 msgctxt "Help tab Watch Videotutorials link"
 msgid "Videos are also available in:"
 msgstr "Видеоматериалы также доступны в:"
 
-#: templates/panel/help-tab.php:124
+#: templates/panel/help-tab.php:126
 msgctxt "Help tab Read Documentation link"
 msgid "Read the documentation"
 msgstr "Прочтите документацию"
 
-#: templates/panel/help-tab.php:127
+#: templates/panel/help-tab.php:129
 msgctxt "Help tab Read Documentation link"
 msgid "to learn how the plugin works from the basics."
 msgstr ""
 
-#: templates/panel/help-tab.php:137
+#: templates/panel/help-tab.php:139
 msgctxt "Help tab Watch video tutorials link"
 msgid "Watch our video tutorials"
 msgstr "Посмотрите наши видеоуроки"
 
-#: templates/panel/help-tab.php:140
+#: templates/panel/help-tab.php:142
 msgctxt "Help tab Watch video tutorials link"
 msgid "to see some helpful use cases."
 msgstr ""
 
-#: templates/panel/help-tab.php:150
+#: templates/panel/help-tab.php:152
 msgctxt "Help tab view FAQs link"
 msgid "Check the FAQs"
 msgstr "Проверьте ответы на часто задаваемые вопросы"
 
-#: templates/panel/help-tab.php:153
+#: templates/panel/help-tab.php:155
 msgctxt "Help tab view FAQs link"
 msgid "to find answers to your doubts."
 msgstr "найти ответы на свои сомнения."
 
-#: templates/panel/help-tab.php:169
+#: templates/panel/help-tab.php:170
 msgctxt "Help tab FAQ title"
 msgid "Last FAQs in our Help Center"
 msgstr "Последние часто задаваемые вопросы в нашем Справочном Центре"
 
-#: templates/panel/help-tab.php:183
+#: templates/panel/help-tab.php:184
 msgctxt "Help tab FAQ link"
 msgid "View all FAQs >"
 msgstr "Просмотреть все часто задаваемые вопросы >"
 
-#: templates/panel/help-tab.php:192
+#: templates/panel/help-tab.php:193
 msgctxt "Help tab submit ticket title"
 msgid "Need help?"
 msgstr "Нужна помощь?"
 
-#: templates/panel/help-tab.php:195
+#: templates/panel/help-tab.php:196
 msgctxt "Help tab submit ticket description"
 msgid ""
 "If you are experiencing any technical issues, ask for help from our "
@@ -945,10 +951,44 @@ msgstr ""
 "разработчикам. Отправьте заявку через нашу службу поддержки, и мы поможем "
 "вам как можно скорее."
 
-#: templates/panel/help-tab.php:203
+#: templates/panel/help-tab.php:204
 msgctxt "Help tab submit ticket button"
 msgid "Submit a ticket"
 msgstr "Отправить обращение"
+
+#: templates/panel/help-tab.php:216 templates/panel/help-tab.php:218
+#: templates/panel/help-tab.php:223
+#, fuzzy
+msgctxt "Help tab documentation"
+msgid "Read the plugin documentation"
+msgstr "Прочтите документацию"
+
+#: templates/panel/help-tab.php:220
+msgctxt "Help tab documentation"
+msgid "to learn from basics how it works"
+msgstr ""
+
+#: templates/panel/help-tab.php:231 templates/panel/help-tab.php:233
+#, fuzzy
+msgctxt "Help tab support"
+msgid "Need some help?"
+msgstr "Нужна помощь?"
+
+#: templates/panel/help-tab.php:235
+msgctxt "Help tab support"
+msgid "From DIY to full-service help"
+msgstr ""
+
+#: templates/panel/help-tab.php:238
+msgctxt "Help tab support"
+msgid "Call or chat 24/7 for support or let our expert to make your site"
+msgstr ""
+
+#: templates/panel/help-tab.php:241
+#, fuzzy
+msgctxt "Help tab support"
+msgid "Yes, I need help"
+msgstr "Нужна помощь?"
 
 #: templates/panel/premium-tab.php:30
 msgctxt "Premium Tab"
@@ -1056,7 +1096,7 @@ msgctxt "Plugin Row Meta"
 msgid "Premium version"
 msgstr "Премиум версия"
 
-#: yit-plugin.php:209
+#: yit-plugin.php:228
 msgctxt "Action links"
 msgid "Settings"
 msgstr "Настройки"

@@ -22,8 +22,13 @@ class Host {
 	 * @return bool
 	 */
 	public function is_woa_site() {
-		$at_options = get_option( 'at_options', array() );
-		return $this->is_atomic_platform() && ( ! empty( $at_options ) || Constants::is_true( 'WPCOMSH__PLUGIN_FILE' ) );
+		$ret = Cache::get( 'is_woa_site' );
+		if ( null === $ret ) {
+			$at_options = get_option( 'at_options', array() );
+			$ret        = $this->is_atomic_platform() && ( ! empty( $at_options ) || Constants::is_true( 'WPCOMSH__PLUGIN_FILE' ) );
+			Cache::set( 'is_woa_site', $ret );
+		}
+		return $ret;
 	}
 
 	/**
@@ -53,5 +58,21 @@ class Host {
 	 */
 	public function is_vip_site() {
 		return Constants::is_defined( 'WPCOM_IS_VIP_ENV' ) && true === Constants::get_constant( 'WPCOM_IS_VIP_ENV' );
+	}
+
+	/**
+	 * Add all wordpress.com environments to the safe redirect allowed list.
+	 *
+	 * To be used with a filter of allowed domains for a redirect.
+	 *
+	 * @param array $domains Allowed WP.com Environments.
+	 */
+	public static function allow_wpcom_environments( $domains ) {
+		$domains[] = 'wordpress.com';
+		$domains[] = 'jetpack.wordpress.com';
+		$domains[] = 'wpcalypso.wordpress.com';
+		$domains[] = 'horizon.wordpress.com';
+		$domains[] = 'calypso.localhost';
+		return $domains;
 	}
 }

@@ -65,11 +65,18 @@ class WIS_Youtube_Profiles extends WIS_Profiles {
 	 * @return string
 	 */
 	public function content() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( 'Access denied' );
+		}
+
 		if ( isset( $_POST['wyt_api_key'] ) && $_POST['wyt_api_key'] != null ) {
+			check_admin_referer( 'wis_yt_token', 'csrf_check' );
+
 			$this->update_youtube_api_key( $_POST['wyt_api_key'] );
 		}
 
 		if ( isset( $_POST['wyt_feed_link'] ) && $_POST['wyt_feed_link'] != null ) {
+			check_admin_referer( 'wis_yt_link', 'csrf_check' );
 
 			$link              = $_POST['wyt_feed_link'];
 			$start_with_string = 'youtube.com/channel/';

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH Framework\n"
 "Report-Msgid-Bugs-To: YITH <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2022-07-06 06:26:03+00:00\n"
+"POT-Creation-Date: 2022-07-18 06:07:56+00:00\n"
 "PO-Revision-Date: 2022-06-29 13:12:18+0000\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
@@ -110,61 +110,61 @@ msgstr "你確定嗎?"
 msgid "Reset to default"
 msgstr "重置為預設值"
 
-#: includes/class-yit-plugin-panel.php:1059
+#: includes/class-yit-plugin-panel.php:1072
 msgid ""
 "The element you have entered already exists. Please, enter another name."
 msgstr "你輸入的這個元素已經存在，請輸入另一個名稱"
 
-#: includes/class-yit-plugin-panel.php:1060
+#: includes/class-yit-plugin-panel.php:1073
 msgid "Settings saved"
 msgstr "設定已經儲存"
 
-#: includes/class-yit-plugin-panel.php:1061
+#: includes/class-yit-plugin-panel.php:1074
 msgid "Settings reset"
 msgstr "重置設定"
 
-#: includes/class-yit-plugin-panel.php:1062
+#: includes/class-yit-plugin-panel.php:1075
 msgid "Element deleted correctly."
 msgstr "元素已被確實刪除"
 
-#: includes/class-yit-plugin-panel.php:1063
-#: includes/class-yit-plugin-panel.php:1064
+#: includes/class-yit-plugin-panel.php:1076
+#: includes/class-yit-plugin-panel.php:1077
 msgid "Element updated correctly."
 msgstr "元素已正確更新。"
 
-#: includes/class-yit-plugin-panel.php:1065
+#: includes/class-yit-plugin-panel.php:1078
 msgid "Database imported correctly."
 msgstr "資料庫已被正確匯入"
 
-#: includes/class-yit-plugin-panel.php:1066
+#: includes/class-yit-plugin-panel.php:1079
 msgid "An error has occurred during import. Please try again."
 msgstr "匯入過程中發生一個錯誤，請再試一次"
 
-#: includes/class-yit-plugin-panel.php:1067
+#: includes/class-yit-plugin-panel.php:1080
 msgid "The added file is not valid."
 msgstr "添加的檔案無效"
 
-#: includes/class-yit-plugin-panel.php:1068
+#: includes/class-yit-plugin-panel.php:1081
 msgid "Sorry, import is disabled."
 msgstr "抱歉，匯入功能被關閉"
 
-#: includes/class-yit-plugin-panel.php:1069
+#: includes/class-yit-plugin-panel.php:1082
 msgid "Sorting successful."
 msgstr "已順利排序"
 
-#: includes/class-yit-plugin-panel.php:1558
+#: includes/class-yit-plugin-panel.php:1571
 msgid "We need your support"
 msgstr "我們需要你的支援"
 
-#: includes/class-yit-plugin-panel.php:1559
+#: includes/class-yit-plugin-panel.php:1572
 msgid "to keep updating and improving the plugin. Please,"
 msgstr "請不斷保持更新與改進外掛"
 
-#: includes/class-yit-plugin-panel.php:1561
+#: includes/class-yit-plugin-panel.php:1574
 msgid "help us by leaving a good review"
 msgstr "留下好的評論幫助我們更進步"
 
-#: includes/class-yit-plugin-panel.php:1562
+#: includes/class-yit-plugin-panel.php:1575
 msgid ":) Thanks!"
 msgstr ":) 謝謝!"
 
@@ -653,16 +653,6 @@ msgstr "資料庫可用大小"
 msgid "Data: %1$.2fMB | Index: %2$.2fMB | Free: %3$.2fMB | Engine: %4$s"
 msgstr "資料數據: %1$.2fMB | 索引: %2$.2fMB | 可用: %3$.2fMB | 引擎: %4$s"
 
-#. translators: 1. Plugin(s) name(s).
-#: yit-deactive-plugin.php:119
-msgid ""
-"%s was deactivated as you're running an higher tier version of the same "
-"plugin."
-msgid_plural ""
-"%s were deactivated as you're running higher tier versions of the same "
-"plugins."
-msgstr[0] ""
-
 #. translators: %s is the title of the post object.
 #: yit-functions.php:1938
 msgid "Are you sure you want to move \"%s\" to trash?"
@@ -677,9 +667,19 @@ msgstr "您確定要刪除 \"%s\" 嗎?"
 msgid "Further actions"
 msgstr "進一步動作"
 
-#: yit-plugin.php:213
+#: yit-plugin.php:232
 msgid "License"
 msgstr "授權"
+
+#. translators: 1. Plugin(s) name(s).
+#: yit-plugin.php:271
+msgid ""
+"%s was deactivated as you're running an higher tier version of the same "
+"plugin."
+msgid_plural ""
+"%s were deactivated as you're running higher tier versions of the same "
+"plugins."
+msgstr[0] ""
 
 #. Author of the plugin/theme
 msgid "YITH"
@@ -718,23 +718,29 @@ msgid "Yes, delete"
 msgstr "是的，刪除"
 
 #. translators: 1. Plugin name.
-#: includes/class-yit-plugin-panel.php:805
+#: includes/class-yit-plugin-panel.php:803
 msgctxt "Help tab default title"
 msgid "Thank you for purchasing %s!"
 msgstr "感謝您購買 %s !"
 
-#: includes/class-yit-plugin-panel.php:806
+#: includes/class-yit-plugin-panel.php:803
+#, fuzzy
+msgctxt "Help tab default title"
+msgid "Thank you for using %s!"
+msgstr "感謝您購買 %s !"
+
+#: includes/class-yit-plugin-panel.php:815
 msgctxt "Help tab default description"
 msgid ""
 "We want to help you enjoy a wonderful experience with all of our products."
 msgstr "我們希望幫助您享受我們所有產品的美妙體驗。"
 
-#: includes/class-yit-plugin-panel.php:853
+#: includes/class-yit-plugin-panel.php:866
 msgctxt "Premium tab name"
 msgid "Get premium"
 msgstr "取得高級版"
 
-#: includes/class-yit-plugin-panel.php:865
+#: includes/class-yit-plugin-panel.php:878
 msgctxt "Help tab name"
 msgid "Help"
 msgstr "幫助"
@@ -849,7 +855,7 @@ msgid "NO"
 msgstr "不"
 
 #. translators: 1. Url to EN playlist.
-#: templates/panel/help-tab.php:87
+#: templates/panel/help-tab.php:89
 msgctxt "Help tab view all video link"
 msgid ""
 "Check the full <a href=\"%s\" target=\"_blank\">Playlist on Youtube</a> to "
@@ -857,57 +863,57 @@ msgid ""
 msgstr ""
 "查看全部的 <a href=\"%s\" target=\"_blank\">Youtube</a> 播放清單去學習更多 >"
 
-#: templates/panel/help-tab.php:94
+#: templates/panel/help-tab.php:96
 msgctxt "Help tab Watch Videotutorials link"
 msgid "Videos are also available in:"
 msgstr "影片也可用於:"
 
-#: templates/panel/help-tab.php:124
+#: templates/panel/help-tab.php:126
 msgctxt "Help tab Read Documentation link"
 msgid "Read the documentation"
 msgstr "閱讀說明文件"
 
-#: templates/panel/help-tab.php:127
+#: templates/panel/help-tab.php:129
 msgctxt "Help tab Read Documentation link"
 msgid "to learn how the plugin works from the basics."
 msgstr "了解外掛的基礎工作原理"
 
-#: templates/panel/help-tab.php:137
+#: templates/panel/help-tab.php:139
 msgctxt "Help tab Watch video tutorials link"
 msgid "Watch our video tutorials"
 msgstr "查看我們的教學影片"
 
-#: templates/panel/help-tab.php:140
+#: templates/panel/help-tab.php:142
 msgctxt "Help tab Watch video tutorials link"
 msgid "to see some helpful use cases."
 msgstr "查看一些有用的案例"
 
-#: templates/panel/help-tab.php:150
+#: templates/panel/help-tab.php:152
 msgctxt "Help tab view FAQs link"
 msgid "Check the FAQs"
 msgstr "檢查問與答"
 
-#: templates/panel/help-tab.php:153
+#: templates/panel/help-tab.php:155
 msgctxt "Help tab view FAQs link"
 msgid "to find answers to your doubts."
 msgstr "找到你的問題答案"
 
-#: templates/panel/help-tab.php:169
+#: templates/panel/help-tab.php:170
 msgctxt "Help tab FAQ title"
 msgid "Last FAQs in our Help Center"
 msgstr "在我們的幫助中心的最新問答"
 
-#: templates/panel/help-tab.php:183
+#: templates/panel/help-tab.php:184
 msgctxt "Help tab FAQ link"
 msgid "View all FAQs >"
 msgstr "查看所有的問與答 >"
 
-#: templates/panel/help-tab.php:192
+#: templates/panel/help-tab.php:193
 msgctxt "Help tab submit ticket title"
 msgid "Need help?"
 msgstr "需要幫忙?"
 
-#: templates/panel/help-tab.php:195
+#: templates/panel/help-tab.php:196
 msgctxt "Help tab submit ticket description"
 msgid ""
 "If you are experiencing any technical issues, ask for help from our "
@@ -917,10 +923,44 @@ msgstr ""
 "如果您遇到任何技術問題，請向我們的開發人員尋求幫助。 通過我們的支援後台提交工"
 "作單，我們將盡快為您提供幫助。"
 
-#: templates/panel/help-tab.php:203
+#: templates/panel/help-tab.php:204
 msgctxt "Help tab submit ticket button"
 msgid "Submit a ticket"
 msgstr "提交一張工作單"
+
+#: templates/panel/help-tab.php:216 templates/panel/help-tab.php:218
+#: templates/panel/help-tab.php:223
+#, fuzzy
+msgctxt "Help tab documentation"
+msgid "Read the plugin documentation"
+msgstr "閱讀說明文件"
+
+#: templates/panel/help-tab.php:220
+msgctxt "Help tab documentation"
+msgid "to learn from basics how it works"
+msgstr ""
+
+#: templates/panel/help-tab.php:231 templates/panel/help-tab.php:233
+#, fuzzy
+msgctxt "Help tab support"
+msgid "Need some help?"
+msgstr "需要幫忙?"
+
+#: templates/panel/help-tab.php:235
+msgctxt "Help tab support"
+msgid "From DIY to full-service help"
+msgstr ""
+
+#: templates/panel/help-tab.php:238
+msgctxt "Help tab support"
+msgid "Call or chat 24/7 for support or let our expert to make your site"
+msgstr ""
+
+#: templates/panel/help-tab.php:241
+#, fuzzy
+msgctxt "Help tab support"
+msgid "Yes, I need help"
+msgstr "需要幫忙?"
 
 #: templates/panel/premium-tab.php:30
 msgctxt "Premium Tab"
@@ -1028,7 +1068,7 @@ msgctxt "Plugin Row Meta"
 msgid "Premium version"
 msgstr "高級版本"
 
-#: yit-plugin.php:209
+#: yit-plugin.php:228
 msgctxt "Action links"
 msgid "Settings"
 msgstr "設定"

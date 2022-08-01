@@ -190,6 +190,16 @@ class Mailchimp_Woocommerce_Newsletter_Blocks_Integration implements Integration
 								},
 							),
 						),
+                        'gdprFields' => array(
+                            'description' => __( 'GDPR marketing opt-in.', 'mailchimp-newsletter' ),
+                            'type'        => 'object',
+                            'context'     => array(),
+                            'arg_options' => array(
+                                'validate_callback' => function( $value ) {
+                                    return true;
+                                },
+                            ),
+                        ),
 					);
 				},
 			)
@@ -231,10 +241,15 @@ class Mailchimp_Woocommerce_Newsletter_Blocks_Integration implements Integration
     {
         $meta_key = 'mailchimp_woocommerce_is_subscribed';
         $optin = $request['extensions']['mailchimp-newsletter']['optin'];
-        //$email = $request['billing_address']['email'];
+        $gdpr_fields = isset($request['extensions']['mailchimp-newsletter']['gdprFields']) ?
+            (array) $request['extensions']['mailchimp-newsletter']['gdprFields'] : null;
 
         // update the order meta for the subscription status to support legacy functions
         update_post_meta($order->get_id(), $meta_key, $optin);
+        // let's set the GDPR fields here just in case we need to pull them again.
+        if (!empty($gdpr_fields)) {
+            update_post_meta($order->get_id(), "mailchimp_woocommerce_gdpr_fields", $gdpr_fields);
+        }
 
         // if the user id exists
         if (($user_id = $order->get_user_id())) {
@@ -244,7 +259,6 @@ class Mailchimp_Woocommerce_Newsletter_Blocks_Integration implements Integration
             if ((bool) $optin) {
                 // probably need to add the GDPR fields and language in to this submission next.
                 $language = null;
-                $gdpr_fields = null;
                 mailchimp_handle_or_queue(
                     new MailChimp_WooCommerce_User_Submit(
                         $user_id,
@@ -257,10 +271,25 @@ class Mailchimp_Woocommerce_Newsletter_Blocks_Integration implements Integration
             }
         }
 
-        // maybe add the filter to only submit orders from subscribers?
-        $service = MailChimp_Service::instance();
-        $tracking = $service->onNewOrder($order->get_id());
-        $service->onOrderSave($order->get_id(), $tracking, true);
+        $tracking = MailChimp_Service::instance()->onNewOrder($order->get_id());
+        // queue up the single order to be processed.
+        $campaign_id = isset($tracking) && isset($tracking['campaign_id']) ? $tracking['campaign_id'] : null;
+        $landing_site = isset($tracking) && isset($tracking['landing_site']) ? $tracking['landing_site'] : null;
+        $language = substr( get_locale(), 0, 2 );
+
+        // update the post meta with campaign tracking details for future sync
+        if (!empty($campaign_id)) {
+            update_post_meta($order->get_id(), 'mailchimp_woocommerce_campaign_id', $campaign_id);
+        }
+        if (!empty($landing_site)) {
+            update_post_meta($order->get_id(), 'mailchimp_woocommerce_landing_site', $landing_site);
+        }
+
+        $handler = new MailChimp_WooCommerce_Single_Order($order->get_id(), null, $campaign_id, $landing_site, $language, $gdpr_fields);
+        $handler->is_update = false;
+        $handler->is_admin_save = is_admin();
+
+        mailchimp_handle_or_queue($handler, 15);
     }
 
     /**
@@ -285,7 +314,8 @@ class Mailchimp_Woocommerce_Newsletter_Blocks_Integration implements Integration
         if (!($list_id = mailchimp_get_list_id())) {
             return array();
         }
-        return mailchimp_get_api()->getCachedGDPRFields($list_id);
+        $fields = mailchimp_get_api()->getCachedGDPRFields($list_id);
+        return is_array($fields) ? $fields : array();
     }
 
 	/**

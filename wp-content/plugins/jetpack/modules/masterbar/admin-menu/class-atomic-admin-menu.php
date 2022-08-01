@@ -27,6 +27,7 @@ class Atomic_Admin_Menu extends Admin_Menu {
 		add_action( 'admin_enqueue_scripts', array( $this, 'dequeue_scripts' ), 20 );
 		add_action( 'wp_ajax_sidebar_state', array( $this, 'ajax_sidebar_state' ) );
 		add_action( 'wp_ajax_jitm_dismiss', array( $this, 'wp_ajax_jitm_dismiss' ) );
+		add_action( 'wp_ajax_upsell_nudge_jitm', array( $this, 'wp_ajax_upsell_nudge_jitm' ) );
 
 		if ( ! $this->is_api_request ) {
 			add_filter( 'submenu_file', array( $this, 'override_the_theme_installer' ), 10, 2 );
@@ -72,11 +73,6 @@ class Atomic_Admin_Menu extends Admin_Menu {
 		if ( ! $this->is_api_request ) {
 			$this->add_browse_sites_link();
 			$this->add_site_card_menu();
-			$nudge = $this->get_upsell_nudge();
-			if ( $nudge ) {
-				parent::add_upsell_nudge( $nudge );
-			}
-
 			$this->add_new_site_link();
 		}
 
@@ -117,10 +113,15 @@ class Atomic_Admin_Menu extends Admin_Menu {
 	public function add_plugins_menu() {
 		global $submenu;
 
-		// Hide Add new plugin and plugin file editor menu.
-		if ( ! $this->has_atomic_supported_plan() ) {
-			parent::add_plugins_menu();
+		// Calypso plugins screens link.
+		$plugins_slug = 'https://wordpress.com/plugins/' . $this->domain;
 
+		// Link to the Marketplace on sites that can't manage plugins.
+		if (
+			function_exists( 'wpcom_site_has_feature' ) &&
+			! wpcom_site_has_feature( \WPCOM_Features::MANAGE_PLUGINS )
+		) {
+			add_menu_page( __( 'Plugins', 'jetpack' ), __( 'Plugins', 'jetpack' ), 'manage_options', $plugins_slug, null, 'dashicons-admin-plugins', '65' );
 			return;
 		}
 
@@ -138,7 +139,7 @@ class Atomic_Admin_Menu extends Admin_Menu {
 			}
 		}
 
-		$submenus_to_update = array( 'plugin-install.php' => 'https://wordpress.com/plugins/' . $this->domain );
+		$submenus_to_update = array( 'plugin-install.php' => $plugins_slug );
 
 		$this->update_submenus( 'plugins.php', $submenus_to_update );
 	}
@@ -350,9 +351,13 @@ class Atomic_Admin_Menu extends Admin_Menu {
 				2
 			);
 		}
+
 		add_submenu_page( 'options-general.php', esc_attr__( 'Hosting Configuration', 'jetpack' ), __( 'Hosting Configuration', 'jetpack' ), 'manage_options', 'https://wordpress.com/hosting-config/' . $this->domain, null, 11 );
 
-		if ( $this->has_atomic_supported_plan() ) {
+		if (
+			function_exists( 'wpcom_site_has_feature' ) &&
+			wpcom_site_has_feature( \WPCOM_Features::ATOMIC )
+		) {
 			add_submenu_page( 'options-general.php', esc_attr__( 'Jetpack', 'jetpack' ), __( 'Jetpack', 'jetpack' ), 'manage_options', 'https://wordpress.com/settings/jetpack/' . $this->domain, null, 12 );
 		}
 
@@ -390,7 +395,7 @@ class Atomic_Admin_Menu extends Admin_Menu {
 	 * Saves the sidebar state ( expanded / collapsed ) via an ajax request.
 	 */
 	public function ajax_sidebar_state() {
-		$expanded = filter_var( $_REQUEST['expanded'], FILTER_VALIDATE_BOOLEAN ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$expanded = isset( $_REQUEST['expanded'] ) ? filter_var( wp_unslash( $_REQUEST['expanded'] ), FILTER_VALIDATE_BOOLEAN ) : false; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		Client::wpcom_json_api_request_as_user(
 			'/me/preferences',
 			'2',
@@ -410,7 +415,9 @@ class Atomic_Admin_Menu extends Admin_Menu {
 	public function wp_ajax_jitm_dismiss() {
 		check_ajax_referer( 'jitm_dismiss' );
 		$jitm = \Automattic\Jetpack\JITMS\JITM::get_instance();
-		$jitm->dismiss( $_REQUEST['id'], $_REQUEST['feature_class'] );
+		if ( isset( $_REQUEST['id'] ) && isset( $_REQUEST['feature_class'] ) ) {
+			$jitm->dismiss( sanitize_text_field( wp_unslash( $_REQUEST['id'] ) ), sanitize_text_field( wp_unslash( $_REQUEST['feature_class'] ) ) );
+		}
 		wp_die();
 	}
 
@@ -423,17 +430,5 @@ class Atomic_Admin_Menu extends Admin_Menu {
 	 */
 	public function hide_search_menu_for_calypso() {
 		$this->hide_submenu_page( 'jetpack', 'https://wordpress.com/jetpack-search/' . $this->domain );
-	}
-
-	/**
-	 * Check if site has Atomic supported plan. `Atomic_Plan_Manager` lives in wpcomsh
-	 */
-	protected function has_atomic_supported_plan() {
-		// Fallback to default behavior if Atomic_Plan_Manager doesn't exists.
-		if ( ! class_exists( 'Atomic_Plan_Manager' ) ) {
-			return true;
-		}
-
-		return \Atomic_Plan_Manager::has_atomic_supported_plan();
 	}
 }

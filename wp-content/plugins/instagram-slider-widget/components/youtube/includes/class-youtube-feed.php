@@ -78,7 +78,7 @@ class WIS_Youtube_Feed extends WIS_Feed {
 			'images_number'    => 20,
 			'title_words'      => 50,
 			'columns'          => 2,
-			'show_feed_header' => 1,
+			'show_feed_header' => 0,
 
 			'm_images_number'    => 20,
 			'm_title_words'      => 50,

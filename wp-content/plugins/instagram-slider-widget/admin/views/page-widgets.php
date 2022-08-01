@@ -48,7 +48,7 @@
 				<?php
 				$account = $this->get_current_account();
 				if ( ! isset( $demo_id ) && ! empty( $account ) ) { ?>
-                    <a class="button button-primary" href="<?php echo add_query_arg( [ 'do' => 'add_demo' ] ); ?>">Add
+                    <a class="button button-primary" href="<?php echo esc_url_raw(add_query_arg( [ 'do' => 'add_demo' ] )); ?>">Add
                         demo
                         widgets</a>
 				<?php } else if ( ! isset( $demo_id ) && empty( $account ) ) { ?>

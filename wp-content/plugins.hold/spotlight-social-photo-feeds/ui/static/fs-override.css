@@ -1,0 +1,85 @@
+:root {
+  /* Generic colors */
+  --sli-rouge: #d82442;
+  --sli-dark: #191e23;
+  --sli-wp-blue: #007cba;
+  --sli-wp-grey: #f1f1f1;
+  --sli-wp-light-grey: #f9f9f9;
+  --sli-line-color: #d3d8dc;
+}
+
+/* FS notices */
+.fs-notice.fs-slug-spotlight-social-photo-feeds {
+  color: #000;
+}
+
+/* The plugin name underneath FS notices */
+.fs-notice.fs-slug-spotlight-social-photo-feeds .fs-plugin-title {
+  background: var(--sli-rouge);
+}
+
+/* Hide notification pills in the admin menu (they wrap into their own line) */
+#adminmenu li > a.toplevel_page_spotlight-instagram .wp-menu-name span.update-plugins {
+  display: none;
+}
+
+#wpbody #fs_connect {
+  margin: 10% auto;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#wpbody #fs_connect .fs-visual {
+  margin-top: 10px;
+}
+
+#wpbody #fs_connect .fs-visual,
+#wpbody #fs_connect .fs-actions {
+  background: transparent;
+}
+
+#wpbody #fs_connect .fs-visual .fs-plugin-icon,
+#wpbody #fs_connect .fs-visual .fs-connect-logo,
+#wpbody #fs_connect .fs-visual .fs-site-icon {
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#wpbody #fs_connect .fs-visual .fs-plugin-icon,
+#wpbody #fs_connect .fs-visual .fs-connect-logo,
+#wpbody #fs_connect .fs-visual .fs-site-icon,
+#wpbody #fs_connect .fs-visual .dashicons-wordpress {
+  border-radius: 999999px;
+}
+
+#wpbody #fs_connect .fs-content .fs-license-key-container {
+  margin-top: 20px;
+}
+
+#wpbody #fs_connect .fs-actions {
+  margin-bottom: 10px;
+}
+
+#wpbody #fs_connect .fs-permissions {
+  padding-top: 20px;
+}
+
+#wpbody #fs_connect .fs-permissions,
+#wpbody #fs_connect .fs-freemium-licensing {
+  background: var(--sli-wp-grey);
+}
+
+#wpbody #fs_connect .fs-freemium-licensing {
+  color: inherit;
+}
+
+#wpbody #fs_connect .fs-freemium-licensing a {
+  color: var(--sli-wp-blue);
+}
+
+#wpbody #fs_connect .fs-terms {
+  padding-bottom: 15px;
+}
