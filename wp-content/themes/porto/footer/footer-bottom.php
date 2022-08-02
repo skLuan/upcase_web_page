@@ -34,7 +34,7 @@ if ( ( ! empty( $porto_settings['footer-logo'] ) && $porto_settings['footer-logo
 					<?php if ( $porto_settings['footer-payments-link'] ) : ?>
 					<a href="<?php echo esc_url( $porto_settings['footer-payments-link'] ); ?>">
 					<?php endif; ?>
-						<img class="img-responsive footer-payment-img" src="<?php echo esc_url( str_replace( array( 'http:', 'https:' ), '', $porto_settings['footer-payments-image']['url'] ) ); ?>" alt="<?php echo esc_attr( $porto_settings['footer-payments-image-alt'] ); ?>" />
+					<img class="img-responsive footer-payment-img" src="<?php echo esc_url( str_replace( array( 'http:', 'https:' ), '', $porto_settings['footer-payments-image']['url'] ) ); ?>" alt="<?php echo esc_attr( $porto_settings['footer-payments-image-alt'] ); ?>" /> 
 					<?php if ( $porto_settings['footer-payments-link'] ) : ?>
 					</a>
 					<?php endif; ?>

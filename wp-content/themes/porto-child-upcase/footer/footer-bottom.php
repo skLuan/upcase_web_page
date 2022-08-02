@@ -7,7 +7,8 @@ if ( ( ! empty( $porto_settings['footer-logo'] ) && $porto_settings['footer-logo
 <div class="footer-bottom">
 	<div class="container">
 		<?php if ( ( $porto_settings['footer-logo'] && $porto_settings['footer-logo']['url'] ) || 'left' == $porto_settings['footer-copyright-pos'] || ( 'right' == $porto_settings['footer-copyright-pos'] && is_registered_sidebar( 'footer-bottom' ) && is_active_sidebar( 'footer-bottom' ) ) ) : ?>
-		<div class="footer-left">
+			
+			<div class="footer-left">
 			<?php
 			// show logo
 			if ( $porto_settings['footer-logo'] && $porto_settings['footer-logo']['url'] ) :
@@ -26,25 +27,34 @@ if ( ( ! empty( $porto_settings['footer-logo'] ) && $porto_settings['footer-logo
 			}
 			?>
 		</div>
+
 		<?php endif; ?>
 
 		<?php if ( ( $porto_settings['footer-payments'] && $porto_settings['footer-payments-image'] && $porto_settings['footer-payments-image']['url'] ) || 'center' == $porto_settings['footer-copyright-pos'] ) : ?>
+			
 			<div class="<?php echo 'center' == $porto_settings['footer-copyright-pos'] || 'right' == $porto_settings['footer-copyright-pos'] || ( 'left' == $porto_settings['footer-copyright-pos'] && is_registered_sidebar( 'footer-bottom' ) && is_active_sidebar( 'footer-bottom' ) ) ? 'footer-center' : 'footer-right'; ?>">
+				
+				
 				<?php if ( $porto_settings['footer-payments'] && $porto_settings['footer-payments-image'] && $porto_settings['footer-payments-image']['url'] ) : ?>
-					<?php if ( $porto_settings['footer-payments-link'] ) : ?>
+					<?php if ( $porto_settings['footer-payments-link'] ) : ?>						
 					<a href="<?php echo esc_url( $porto_settings['footer-payments-link'] ); ?>">
 					<?php endif; ?>
+					<ul>
 						<img class="img-responsive footer-payment-img" src="<?php echo esc_url( str_replace( array( 'http:', 'https:' ), '', $porto_settings['footer-payments-image']['url'] ) ); ?>" alt="<?php echo esc_attr( $porto_settings['footer-payments-image-alt'] ); ?>" />
-					<?php if ( $porto_settings['footer-payments-link'] ) : ?>
+					</ul>
+						<?php if ( $porto_settings['footer-payments-link'] ) : ?>
+					<ul>
 					</a>
+					</ul>
 					<?php endif; ?>
 				<?php endif; ?>
 				<?php
 				if ( 'center' == $porto_settings['footer-copyright-pos'] ) {
-					echo '<span class="footer-copyright">' . wp_kses_post( $porto_settings['footer-copyright'] ) . '</span>';
+					echo '<ul> <span class="footer-copyright">' . wp_kses_post( $porto_settings['footer-copyright'] ) . '</span> </ul>';
 					dynamic_sidebar( 'footer-bottom' );
 				}
 				?>
+				
 			</div>
 		<?php endif; ?>
 

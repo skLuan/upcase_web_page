@@ -15,7 +15,8 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 
 .widget ul li, .widget ul {
     border: none !important;
-}
+    width : 120%;
+   }
 
 .uc_cat_loop_title {
     font-size: 20px !important;
