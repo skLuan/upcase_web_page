@@ -16,7 +16,8 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 :root {
     --purple-primary: #5B00BF;
     --yellow-primary: #FFE500;
-    --purple-black: #303030 ;
+    --purple-black: #303030;
+    --white-primary: #F8FAFC;
 }
 
 
@@ -79,14 +80,14 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
      #side-nav-panel .menu-wrap .mobile-menu .menu-item .sub-menu li.menu-item > a {
     font-size: 18px !important;
     opacity: 0.8 !important;
-        padding: 5px 0 !important;
+        padding: 0 0 5px 0 !important;
 
     }
 
     .uc-sticky-navbar {
         /* background-color: #F8FAFC !important; */
         background-color: var(--purple-primary) !important;
-        padding: 0 0 15px 0 !important;
+        padding: 5px 0 !important;
     }
     .uc-sticky-navbar .sticky-icon a {
         /* Morado */
@@ -94,7 +95,7 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
         /* Blanco */
         /* color: #F8FAFC !important; */
         /* Amarillo */
-        color: var(--yellow-primary) !important;
+        color: var(--white-primary) !important;
 
     }
     .uc-sticky-navbar .sticky-icon a .label {
@@ -103,11 +104,11 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
         /* color: #F8FAFC !important; */
         /* Amarillo */
         
-        color: var(--yellow-primary) !important;
+        color: var(--white-primary) !important;
     }
     .uc-sticky-navbar .sticky-icon {
         /* border-color: #5B00BF33 !important; */
         /* Blanco */
-        border-color: white !important;
+        color: var(--white-primary) !important;
     }
 }
