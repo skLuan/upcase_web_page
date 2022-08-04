@@ -16,7 +16,7 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 :root {
     --purple-primary: #5B00BF;
     --yellow-primary: #FFE500;
-    --purple-black: #303030;
+    --purple-black: #303030 ;
     --white-primary: #F8FAFC;
 }
 
@@ -80,7 +80,7 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
      #side-nav-panel .menu-wrap .mobile-menu .menu-item .sub-menu li.menu-item > a {
     font-size: 18px !important;
     opacity: 0.8 !important;
-        padding: 0 0 5px 0 !important;
+        padding: 5px 0 !important;
 
     }
 
