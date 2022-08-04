@@ -14,10 +14,10 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 /*************** ADD YOUR CUSTOM CSS HERE  ***************/
 
 :root {
-  --purple-primary: #5b00bf;
-  --yellow-primary: #ffe500;
-  --purple-black: #303030;
-  --gray: #f8fafc;
+    --purple-primary: #5B00BF;
+    --yellow-primary: #FFE500;
+    --purple-black: #303030 ;
+    --white-primary: #F8FAFC;
 }
 
 .widget ul li,
@@ -90,35 +90,35 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
     opacity: 0.8 !important;
     padding: 5px 0 !important;
   }
+    .uc-sticky-navbar {
+        /* background-color: #F8FAFC !important; */
+        background-color: var(--purple-primary) !important;
+        padding: 5px 0 !important;
+    }
+    .uc-sticky-navbar .sticky-icon a {
+        /* Morado */
+        /* color: var(--purple-primary) !important; */
+        /* Blanco */
+        /* color: #F8FAFC !important; */
+        /* Amarillo */
+        color: var(--white-primary) !important;
 
-  .uc-sticky-navbar {
-    /* background-color: #F8FAFC !important; */
-    background-color: var(--purple-primary) !important;
-    padding: 0 0 15px 0 !important;
-  }
-  .uc-sticky-navbar .sticky-icon a {
-    /* Morado */
-    /* color: var(--purple-primary) !important; */
-    /* Blanco */
-    /* color: #F8FAFC !important; */
-    /* Amarillo */
-    color: var(--yellow-primary) !important;
-  }
-  .uc-sticky-navbar .sticky-icon a .label {
-    /* color: var(--purple-primary) !important; */
-    /* Blanco */
-    /* color: #F8FAFC !important; */
-    /* Amarillo */
-
-    color: var(--yellow-primary) !important;
-  }
-  .uc-sticky-navbar .sticky-icon {
-    /* border-color: #5B00BF33 !important; */
-    /* Blanco */
-    border-color: white !important;
-  }
-
-  .fpd-mainbar {
+    }
+    .uc-sticky-navbar .sticky-icon a .label {
+        /* color: var(--purple-primary) !important; */
+        /* Blanco */
+        /* color: #F8FAFC !important; */
+        /* Amarillo */
+        
+        color: var(--white-primary) !important;
+    }
+    .uc-sticky-navbar .sticky-icon {
+        /* border-color: #5B00BF33 !important; */
+        /* Blanco */
+        color: var(--white-primary) !important;
+    }
+      /* fancy product designer mobile  */
+    .fpd-mainbar {
     position: fixed !important;
     bottom: 0;
     z-index: 1100;
