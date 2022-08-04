@@ -14,100 +14,136 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 /*************** ADD YOUR CUSTOM CSS HERE  ***************/
 
 :root {
-    --purple-primary: #5B00BF;
-    --yellow-primary: #FFE500;
-    --purple-black: #303030 ;
+  --purple-primary: #5b00bf;
+  --yellow-primary: #ffe500;
+  --purple-black: #303030;
+  --gray: #f8fafc;
 }
 
-
-.widget ul li, .widget ul {
-    border: none !important;
+.widget ul li,
+.widget ul {
+  border: none !important;
 }
 
 .uc_cat_loop_title {
-    font-size: 20px !important;
-    font-weight: 700 !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
 }
 
 .uc_cat_loop_info {
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    color: var(--purple-black) !important;;
-    opacity: 0.55;
-    margin: 5px 0 0 5px;
-    letter-spacing: -0.02em;
-    text-align: right;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--purple-black) !important;
+  opacity: 0.55;
+  margin: 5px 0 0 5px;
+  letter-spacing: -0.02em;
+  text-align: right;
 }
+.uc-breadcrumbs-wrap .breadcrumb li {
+  font-weight: 700 !important;
+}
+/* ---------------------------------- Mobile */
 @media screen and (max-width: 992px) {
-    .header-center {
-        margin: 20px !important;
-
-    }
-        .uc_account_menu {
-        display: none !important;
-    }
-    .my-wishlist {
-        display: none !important;
-    }
-    .mobile-toggle {
-        background-color: #F8FAFC !important;
-        font-size: 20px !important;
-    }
-    .mobile-toggle i {
-        color: var(--purple-primary) !important;
-    }
-    #side-nav-panel {
-        color: var(--purple-black) !important;
-    }
-    #side-nav-panel .accordion-menu li.menu-item > a{
-        color: var(--purple-black) !important;
-        font-size: 22px !important;
-        font-weight: 600 !important;
-        text-transform: capitalize !important;
-        padding: 15px 0 !important;
-
-    }
-    #side-nav-panel .side-nav-panel-close {
-        color: var(--purple-black) !important;
-        font-size:20px !important;
-        margin: 25vh 10px 0 0 !important;
-        position: relative !important;
-        top: unset !important;
-        right: unset !important;
-        text-align: right !important;
-    }
-     #side-nav-panel .menu-wrap .mobile-menu .menu-item .sub-menu li.menu-item > a {
+  .header-center {
+    margin: 20px !important;
+  }
+  .uc_account_menu {
+    display: none !important;
+  }
+  .my-wishlist {
+    display: none !important;
+  }
+  .mobile-toggle {
+    background-color: #f8fafc !important;
+    font-size: 20px !important;
+  }
+  .mobile-toggle i {
+    color: var(--purple-primary) !important;
+  }
+  #side-nav-panel {
+    color: var(--purple-black) !important;
+  }
+  #side-nav-panel .accordion-menu li.menu-item > a {
+    color: var(--purple-black) !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    text-transform: capitalize !important;
+    padding: 15px 0 !important;
+  }
+  #side-nav-panel .side-nav-panel-close {
+    color: var(--purple-black) !important;
+    font-size: 20px !important;
+    margin: 25vh 10px 0 0 !important;
+    position: relative !important;
+    top: unset !important;
+    right: unset !important;
+    text-align: right !important;
+  }
+  #side-nav-panel
+    .menu-wrap
+    .mobile-menu
+    .menu-item
+    .sub-menu
+    li.menu-item
+    > a {
     font-size: 18px !important;
     opacity: 0.8 !important;
-        padding: 5px 0 !important;
+    padding: 5px 0 !important;
+  }
 
-    }
+  .uc-sticky-navbar {
+    /* background-color: #F8FAFC !important; */
+    background-color: var(--purple-primary) !important;
+    padding: 0 0 15px 0 !important;
+  }
+  .uc-sticky-navbar .sticky-icon a {
+    /* Morado */
+    /* color: var(--purple-primary) !important; */
+    /* Blanco */
+    /* color: #F8FAFC !important; */
+    /* Amarillo */
+    color: var(--yellow-primary) !important;
+  }
+  .uc-sticky-navbar .sticky-icon a .label {
+    /* color: var(--purple-primary) !important; */
+    /* Blanco */
+    /* color: #F8FAFC !important; */
+    /* Amarillo */
 
-    .uc-sticky-navbar {
-        /* background-color: #F8FAFC !important; */
-        background-color: var(--purple-primary) !important;
-        padding: 0 0 15px 0 !important;
-    }
-    .uc-sticky-navbar .sticky-icon a {
-        /* Morado */
-        /* color: var(--purple-primary) !important; */
-        /* Blanco */
-        /* color: #F8FAFC !important; */
-        /* Amarillo */
-        color: var(--yellow-primary) !important;
+    color: var(--yellow-primary) !important;
+  }
+  .uc-sticky-navbar .sticky-icon {
+    /* border-color: #5B00BF33 !important; */
+    /* Blanco */
+    border-color: white !important;
+  }
 
-    }
-    .uc-sticky-navbar .sticky-icon a .label {
-        /* color: var(--purple-primary) !important; */
-        /* Blanco */
-        /* color: #F8FAFC !important; */
-        /* Amarillo */
-        
-        color: var(--yellow-primary) !important;
-    }
-    .uc-sticky-navbar .sticky-icon {
-        /* border-color: #5B00BF33 !important; */
-        /* Blanco */
-        border-color: white !important;
-    }
+  .fpd-mainbar {
+    position: fixed !important;
+    bottom: 0;
+    z-index: 1100;
+    left: 0;
+  }
+  .fpd-close-dialog {
+    z-index: 1101;
+  }
+  .fpd-pos-bottom {
+    background: var(--gray) !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 25% !important;
+    z-index: 100;
+  }
+  .fpd-pos-bottom .fpd-action-btn {
+    /* background: white !important; */
+    box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1) !important;
+    border-radius: 1px !important;
+    margin-right: 10px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+  }
+  .fpd-main-wrapper {
+    height: 420px;
+    background: white !important;
+  }
 }
