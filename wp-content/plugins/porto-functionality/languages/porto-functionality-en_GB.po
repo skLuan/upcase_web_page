@@ -6265,12 +6265,12 @@ msgid "Display products in product archives"
 msgstr ""
 
 #: builders/elements/shop/gutenberg/blocks/sort.js:21
-msgid "Sort By:"
-msgstr ""
+msgid "Filtrar por:"
+msgstr "Filtrar por:"
 
 #: builders/elements/shop/gutenberg/blocks/sort.js:25
-msgid "Default sorting"
-msgstr ""
+msgid "Por defecto"
+msgstr "Por defecto"
 
 #: builders/elements/shop/gutenberg/blocks/sort.js:33
 msgid "Porto Shop Sort By"
