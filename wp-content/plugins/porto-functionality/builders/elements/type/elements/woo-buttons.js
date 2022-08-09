@@ -89,7 +89,7 @@ import {portoAddHelperClasses} from '../../../../shortcodes/assets/blocks/contro
                     <SelectControl
                         label={ __( 'Link Source', 'porto-functionality' ) }
                         value={ attributes.link_source }
-                        options={ [ { 'label': __( 'Select...', 'porto-functionality' ), 'value': '' }, { 'label': __( 'Add to cart', 'porto-functionality' ), 'value': 'cart' }, { 'label': __( 'Add to wishlist', 'porto-functionality' ), 'value': 'wishlist' }, { 'label': __( 'Compare', 'porto-functionality' ), 'value': 'compare' }, { 'label': __( 'Quick View', 'porto-functionality' ), 'value': 'quickview' }, { 'label': __( 'Image / Color Swatch', 'porto' ), 'value': 'swatch' } ] }
+                        options={ [ { 'label': __( 'Select...', 'porto-functionality' ), 'value': '' }, { 'label': __( 'Add to cart', 'porto-functionality' ), 'value': 'cart' }, { 'label': __( 'Agregar a favoritos', 'porto-functionality' ), 'value': 'wishlist' }, { 'label': __( 'Compare', 'porto-functionality' ), 'value': 'compare' }, { 'label': __( 'Quick View', 'porto-functionality' ), 'value': 'quickview' }, { 'label': __( 'Image / Color Swatch', 'porto' ), 'value': 'swatch' } ] }
                         onChange={ ( value ) => { setAttributes( { link_source: value } ); } }
                     />
                     { 'cart' == attributes.link_source && (

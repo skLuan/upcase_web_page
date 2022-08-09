@@ -18,11 +18,11 @@
                 </InspectorControls>
                 <div className={ 'woocommerce-ordering' + ( attributes.className ? ' ' + attributes.className : '' ) }>
                     <label>
-                        { __( 'Filtrar por:', 'porto-functionality' ) }
+                        { __( 'Sort By:', 'porto-functionality' ) }
                     </label>
                     <select className="orderby">
                         <option>
-                            { __( 'Por defecto', 'woocommerce' ) }
+                            { __( 'Default sorting', 'woocommerce' ) }
                         </option>
                     </select>
                 </div>

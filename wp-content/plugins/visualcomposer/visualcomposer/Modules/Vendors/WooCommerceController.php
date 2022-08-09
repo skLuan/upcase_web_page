@@ -345,7 +345,7 @@ class WooCommerceController extends Container implements Module
         $product = wc_get_product($sourceId);
         $availability = $product->get_availability();
 
-        return $availability['availability'];
+        return $availability['Disponibilidad'];
     }
 
     /**
