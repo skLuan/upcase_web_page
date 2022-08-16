@@ -15,8 +15,10 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 
 :root {
     --purple-primary: #5B00BF;
+    --purple-primary-t: #5B00BF4d;
     --yellow-primary: #FFE500;
     --purple-black: #303030 ;
+    --purple-black-t: #303030b3 ;
     --white-primary: #F8FAFC;
 }
 
@@ -39,8 +41,56 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
   letter-spacing: -0.02em;
   text-align: right;
 }
+
+.sticky-header .main-menu-wrap .menu-right {
+  display: flex !important;
+  align-items: center !important;
+} 
+/* ------------------------------ Breacrumb */
 .uc-breadcrumbs-wrap .breadcrumb li {
   font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+/* ------------------------------ Filtros de categorización */
+ .filter-content .yith-wcan-dropdown, .filter-content .filter-items {
+  font-size: 14px !important;
+ }
+ .matching-items .filter-item label {
+  display: unset !important;
+ }
+
+ .yith-wcan-filters .yith-wcan-filter .yith-wcan-dropdown.open, .dropdown-wrapper {
+  border-color: var(--purple-primary-t) !important;
+  box-shadow: 0 0 7px 0 var(--purple-primary-t) !important;
+  
+}
+.shop-loop-before {
+font-size: 14px !important;
+color: var(--purple-black) !important;
+}
+.shop-loop-before select {
+  color: var(--purple-black-t) !important;
+font-weight: 500 !important;
+  max-width: unset !important;
+  width: 185px !important;
+}
+/* ---------------------------------- Desktop */
+@media screen and (min-width: 992px) {
+  .shop-loop-before .porto-product-filters {
+    display: none;
+  }
+  .filters-container form .yith-wcan-filter {
+    margin: 0 10px !important;
+  }
+  .filters-container form .yith-wcan-filter h4 {
+    font-size: 16px !important;
+  }
+  .porto-product-filters{
+    width 70% !important;
+  }
+  #preset_215{
+    margin-bottom: 0 !important;
+  }
 }
 /* ---------------------------------- Mobile */
 @media screen and (max-width: 992px) {
@@ -117,7 +167,7 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
         /* Blanco */
         color: var(--white-primary) !important;
     }
-      /* fancy product designer mobile  */
+      /* -------------------------- fancy product designer mobile  */
     .fpd-mainbar {
     position: fixed !important;
     bottom: 0;

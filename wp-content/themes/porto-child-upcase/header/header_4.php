@@ -67,8 +67,7 @@ global $porto_settings, $porto_layout;
 			<div class="header-center">
 				<?php echo porto_logo(); ?>
 			</div>
-			<div class="header-right d-none d-lg-flex">
-				<div>
+			<div class="items-center header-right d-flex">
 					<?php
 					// show search form
 					echo porto_search_form();
@@ -81,7 +80,12 @@ global $porto_settings, $porto_layout;
 
 					echo porto_minicart();
 					?>
-				</div>
+					<ul class="flex-row justify-center p-0 mb-0 ml-3 d-flex align-center" style="list-style: none;">
+						<li class="m-1 "><a href=""><i class="fab fa-whatsapp"></i></a></li>
+						<li class="m-1 "><a href=""><i class="fab fa-facebook-f"></i></a></li>
+						<li class="m-1 "><a href="https://www.instagram.com/upcase.com.co/"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+
 
 				<?php
 				get_template_part('header/header_tooltip');
@@ -91,7 +95,6 @@ global $porto_settings, $porto_layout;
 		</div>
 		<?php get_template_part('header/mobile_menu'); ?>
 	</div>
-
 	<?php
 	// check main menu
 	$main_menu = porto_main_menu();
@@ -114,7 +117,7 @@ global $porto_settings, $porto_layout;
 					// echo do_shortcode('[yith_wcan_filters slug="default-preset"]');
 					?>
 				</div>
-				<div class="menu-right">
+				<div class="items-center menu-right">
 					<?php if ($porto_settings['show-sticky-searchform'] || $porto_settings['show-sticky-minicart'] || (isset($porto_settings['show-sticky-contact-info']) && $porto_settings['show-sticky-contact-info'])) {
 
 						echo porto_search_form();
@@ -122,13 +125,11 @@ global $porto_settings, $porto_layout;
 						if (isset($porto_settings['show-sticky-contact-info']) && $porto_settings['show-sticky-contact-info'] && $contact_info) {
 							echo '<div class="header-contact">' . do_shortcode($contact_info) . '</div>';
 						}
-						// show mini cart						if($porto_settings['show-sticky-minicart'])
-						// echo porto_minicart();
+						// show mini cart						
+						echo porto_minicart();
 					}
 					?>
-				</div>
-				<div class="" style="position: absolute; right: 0;">
-					<ul class="flex-row justify-center p-0 m-0 d-flex align-center" style="list-style: none;">
+					<ul class="flex-row justify-center p-0 mb-0 ml-3 d-flex align-center" style="list-style: none;">
 						<li class="m-1 "><a href=""><i class="fab fa-whatsapp"></i></a></li>
 						<li class="m-1 "><a href=""><i class="fab fa-facebook-f"></i></a></li>
 						<li class="m-1 "><a href="https://www.instagram.com/upcase.com.co/"><i class="fab fa-instagram"></i></a></li>
