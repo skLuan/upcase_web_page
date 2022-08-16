@@ -162,12 +162,6 @@ class WP_REST_Block_Editor_Settings_Controller extends WP_REST_Controller {
 					'context'     => array( 'mobile' ),
 				),
 
-				'__experimentalEnableListBlockV2'        => array(
-					'description' => __( 'Whether the V2 of the list block that uses inner blocks should be enabled.', 'gutenberg' ),
-					'type'        => 'boolean',
-					'context'     => array( 'mobile' ),
-				),
-
 				'alignWide'                              => array(
 					'description' => __( 'Enable/Disable Wide/Full Alignments.', 'gutenberg' ),
 					'type'        => 'boolean',
@@ -278,16 +272,6 @@ class WP_REST_Block_Editor_Settings_Controller extends WP_REST_Controller {
 
 				'gradients'                              => array(
 					'description' => __( 'Active theme gradients.', 'gutenberg' ),
-					'type'        => 'array',
-					'context'     => array( 'post-editor', 'site-editor', 'widgets-editor' ),
-				),
-				'spacingSizes'                           => array(
-					'description' => __( 'Active theme spacing sizes.', 'gutenberg' ),
-					'type'        => 'array',
-					'context'     => array( 'post-editor', 'site-editor', 'widgets-editor' ),
-				),
-				'spacingScale'                           => array(
-					'description' => __( 'Active theme spacing scale.', 'gutenberg' ),
 					'type'        => 'array',
 					'context'     => array( 'post-editor', 'site-editor', 'widgets-editor' ),
 				),

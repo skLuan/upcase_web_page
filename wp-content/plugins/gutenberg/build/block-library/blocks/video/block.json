@@ -76,12 +76,7 @@
 	},
 	"supports": {
 		"anchor": true,
-		"align": true,
-		"__experimentalStyle": {
-			"spacing": {
-				"margin": "0 0 1em 0"
-			}
-		}
+		"align": true
 	},
 	"editorStyle": "wp-block-video-editor",
 	"style": "wp-block-video"

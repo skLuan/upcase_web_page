@@ -1467,12 +1467,12 @@ if ( ! function_exists( 'woocommerce_catalog_ordering' ) ) {
 		$catalog_orderby_options = apply_filters(
 			'woocommerce_catalog_orderby',
 			array(
-				'menu_order' => __( 'Por defecto', 'woocommerce' ),
-				'popularity' => __( 'Popularidad', 'woocommerce' ),
-				'rating'     => __( 'Calificación media', 'woocommerce' ),
-				'date'       => __( 'Más reciente', 'woocommerce' ),
-				'price'      => __( 'Precio: Orden ascendente', 'woocommerce' ),
-				'price-desc' => __( 'Precio: Orden descendente', 'woocommerce' ),
+				'menu_order' => __( 'Default sorting', 'woocommerce' ),
+				'popularity' => __( 'Sort by popularity', 'woocommerce' ),
+				'rating'     => __( 'Sort by average rating', 'woocommerce' ),
+				'date'       => __( 'Sort by latest', 'woocommerce' ),
+				'price'      => __( 'Sort by price: low to high', 'woocommerce' ),
+				'price-desc' => __( 'Sort by price: high to low', 'woocommerce' ),
 			)
 		);
 
@@ -2203,7 +2203,7 @@ if ( ! function_exists( 'woocommerce_widget_shopping_cart_proceed_to_checkout' )
 	 * Output the proceed to checkout button.
 	 */
 	function woocommerce_widget_shopping_cart_proceed_to_checkout() {
-		echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="button checkout wc-forward">' . esc_html__( 'Pagar', 'woocommerce' ) . '</a>';
+		echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="button checkout wc-forward">' . esc_html__( 'Checkout', 'woocommerce' ) . '</a>';
 	}
 }
 

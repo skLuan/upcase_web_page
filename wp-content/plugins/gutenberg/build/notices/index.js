@@ -1,36 +1,36 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
@@ -39,30 +39,32 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "store": () => (/* reexport */ store)
+  "store": function() { return /* reexport */ store; }
 });
 
 // NAMESPACE OBJECT: ./packages/notices/build-module/store/actions.js
 var actions_namespaceObject = {};
 __webpack_require__.r(actions_namespaceObject);
 __webpack_require__.d(actions_namespaceObject, {
-  "createErrorNotice": () => (createErrorNotice),
-  "createInfoNotice": () => (createInfoNotice),
-  "createNotice": () => (createNotice),
-  "createSuccessNotice": () => (createSuccessNotice),
-  "createWarningNotice": () => (createWarningNotice),
-  "removeNotice": () => (removeNotice)
+  "createErrorNotice": function() { return createErrorNotice; },
+  "createInfoNotice": function() { return createInfoNotice; },
+  "createNotice": function() { return createNotice; },
+  "createSuccessNotice": function() { return createSuccessNotice; },
+  "createWarningNotice": function() { return createWarningNotice; },
+  "removeNotice": function() { return removeNotice; }
 });
 
 // NAMESPACE OBJECT: ./packages/notices/build-module/store/selectors.js
 var selectors_namespaceObject = {};
 __webpack_require__.r(selectors_namespaceObject);
 __webpack_require__.d(selectors_namespaceObject, {
-  "getNotices": () => (getNotices)
+  "getNotices": function() { return getNotices; }
 });
 
 ;// CONCATENATED MODULE: external ["wp","data"]
-const external_wp_data_namespaceObject = window["wp"]["data"];
+var external_wp_data_namespaceObject = window["wp"]["data"];
+;// CONCATENATED MODULE: external "lodash"
+var external_lodash_namespaceObject = window["lodash"];
 ;// CONCATENATED MODULE: ./packages/notices/build-module/store/utils/on-sub-key.js
 /**
  * Higher-order reducer creator which creates a combined reducer object, keyed
@@ -95,12 +97,17 @@ const onSubKey = actionProperty => reducer => function () {
     [key]: nextKeyState
   };
 };
-/* harmony default export */ const on_sub_key = (onSubKey);
+/* harmony default export */ var on_sub_key = (onSubKey);
 
 ;// CONCATENATED MODULE: ./packages/notices/build-module/store/reducer.js
 /**
+ * External dependencies
+ */
+
+/**
  * Internal dependencies
  */
+
 
 /**
  * Reducer returning the next notices state. The notices state is an object
@@ -119,25 +126,19 @@ const notices = on_sub_key('context')(function () {
   switch (action.type) {
     case 'CREATE_NOTICE':
       // Avoid duplicates on ID.
-      return [...state.filter(_ref => {
-        let {
-          id
-        } = _ref;
-        return id !== action.notice.id;
+      return [...(0,external_lodash_namespaceObject.reject)(state, {
+        id: action.notice.id
       }), action.notice];
 
     case 'REMOVE_NOTICE':
-      return state.filter(_ref2 => {
-        let {
-          id
-        } = _ref2;
-        return id !== action.id;
+      return (0,external_lodash_namespaceObject.reject)(state, {
+        id: action.id
       });
   }
 
   return state;
 });
-/* harmony default export */ const reducer = (notices);
+/* harmony default export */ var reducer = (notices);
 
 ;// CONCATENATED MODULE: ./packages/notices/build-module/store/constants.js
 /**
@@ -158,8 +159,13 @@ const DEFAULT_STATUS = 'info';
 
 ;// CONCATENATED MODULE: ./packages/notices/build-module/store/actions.js
 /**
+ * External dependencies
+ */
+
+/**
  * Internal dependencies
  */
+
 
 /**
  * @typedef {Object} WPNoticeAction Object describing a user action option associated with a notice.
@@ -172,7 +178,6 @@ const DEFAULT_STATUS = 'info';
  *
  */
 
-let uniqueId = 0;
 /**
  * Returns an action object used in signalling that a notice is to be created.
  *
@@ -194,33 +199,12 @@ let uniqueId = 0;
  *                                                             readers.
  * @param {Array<WPNoticeAction>} [options.actions]            User actions to be
  *                                                             presented with notice.
- * @param {string}                [options.icon]               An icon displayed with the notice.
- *                                                             Only used when type is set to `snackbar`.
+ * @param {Object}                [options.icon]               An icon displayed with the notice.
  * @param {boolean}               [options.explicitDismiss]    Whether the notice includes
- *                                                             an explicit dismiss button and
+ *                                                             an explict dismiss button and
  *                                                             can't be dismissed by clicking
- *                                                             the body of the notice. Only applies
- *                                                             when type is set to `snackbar`.
+ *                                                             the body of the notice.
  * @param {Function}              [options.onDismiss]          Called when the notice is dismissed.
- *
- * @example
- * ```js
- * import { __ } from '@wordpress/i18n';
- * import { useDispatch } from '@wordpress/data';
- * import { store as noticesStore } from '@wordpress/notices';
- * import { Button } from '@wordpress/components';
- *
- * const ExampleComponent = () => {
- *     const { createNotice } = useDispatch( noticesStore );
- *     return (
- *         <Button
- *             onClick={ () => createNotice( 'success', __( 'Notice message' ) ) }
- *         >
- *             { __( 'Generate a success notice!' ) }
- *         </Button>
- *     );
- * };
- * ```
  *
  * @return {Object} Action object.
  */
@@ -233,7 +217,7 @@ function createNotice() {
     speak = true,
     isDismissible = true,
     context = DEFAULT_CONTEXT,
-    id = `${context}${++uniqueId}`,
+    id = (0,external_lodash_namespaceObject.uniqueId)(context),
     actions = [],
     type = 'default',
     __unstableHTML,
@@ -272,30 +256,6 @@ function createNotice() {
  * @param {string} content   Notice message.
  * @param {Object} [options] Optional notice options.
  *
- * @example
- * ```js
- * import { __ } from '@wordpress/i18n';
- * import { useDispatch } from '@wordpress/data';
- * import { store as noticesStore } from '@wordpress/notices';
- * import { Button } from '@wordpress/components';
- *
- * const ExampleComponent = () => {
- *     const { createSuccessNotice } = useDispatch( noticesStore );
- *     return (
- *         <Button
- *             onClick={ () =>
- *                 createSuccessNotice( __( 'Success!' ), {
- *                     type: 'snackbar',
- *                     icon: '🔥',
- *                 } )
- *             }
- *         >
- *             { __( 'Generate a snackbar success notice!' ) }
- *        </Button>
- *     );
- * };
- * ```
- *
  * @return {Object} Action object.
  */
 
@@ -310,29 +270,6 @@ function createSuccessNotice(content, options) {
  *
  * @param {string} content   Notice message.
  * @param {Object} [options] Optional notice options.
- *
- * @example
- * ```js
- * import { __ } from '@wordpress/i18n';
- * import { useDispatch } from '@wordpress/data';
- * import { store as noticesStore } from '@wordpress/notices';
- * import { Button } from '@wordpress/components';
- *
- * const ExampleComponent = () => {
- *     const { createInfoNotice } = useDispatch( noticesStore );
- *     return (
- *         <Button
- *             onClick={ () =>
- *                createInfoNotice( __( 'Something happened!' ), {
- *                   isDismissible: false,
- *                } )
- *             }
- *         >
- *         { __( 'Generate a notice that cannot be dismissed.' ) }
- *       </Button>
- *       );
- * };
- *```
  *
  * @return {Object} Action object.
  */
@@ -349,32 +286,6 @@ function createInfoNotice(content, options) {
  * @param {string} content   Notice message.
  * @param {Object} [options] Optional notice options.
  *
- * @example
- * ```js
- * import { __ } from '@wordpress/i18n';
- * import { useDispatch } from '@wordpress/data';
- * import { store as noticesStore } from '@wordpress/notices';
- * import { Button } from '@wordpress/components';
- *
- * const ExampleComponent = () => {
- *     const { createErrorNotice } = useDispatch( noticesStore );
- *     return (
- *         <Button
- *             onClick={ () =>
- *                 createErrorNotice( __( 'An error occurred!' ), {
- *                     type: 'snackbar',
- *                     explicitDismiss: true,
- *                 } )
- *             }
- *         >
- *             { __(
- *                 'Generate an snackbar error notice with explicit dismiss button.'
- *             ) }
- *         </Button>
- *     );
- * };
- * ```
- *
  * @return {Object} Action object.
  */
 
@@ -390,33 +301,6 @@ function createErrorNotice(content, options) {
  * @param {string} content   Notice message.
  * @param {Object} [options] Optional notice options.
  *
- * @example
- * ```js
- * import { __ } from '@wordpress/i18n';
- * import { useDispatch } from '@wordpress/data';
- * import { store as noticesStore } from '@wordpress/notices';
- * import { Button } from '@wordpress/components';
- *
- * const ExampleComponent = () => {
- *     const { createWarningNotice, createInfoNotice } = useDispatch( noticesStore );
- *     return (
- *         <Button
- *             onClick={ () =>
- *                 createWarningNotice( __( 'Warning!' ), {
- *                     onDismiss: () => {
- *                         createInfoNotice(
- *                             __( 'The warning has been dismissed!' )
- *                         );
- *                     },
- *                 } )
- *             }
- *         >
- *             { __( 'Generates a warning notice with onDismiss callback' ) }
- *         </Button>
- *     );
- * };
- * ```
- *
  * @return {Object} Action object.
  */
 
@@ -429,38 +313,6 @@ function createWarningNotice(content, options) {
  * @param {string} id                 Notice unique identifier.
  * @param {string} [context='global'] Optional context (grouping) in which the notice is
  *                                    intended to appear. Defaults to default context.
- *
- * @example
- * ```js
- * import { __ } from '@wordpress/i18n';
- * import { useDispatch } from '@wordpress/data';
- * import { store as noticesStore } from '@wordpress/notices';
- * import { Button } from '@wordpress/components';
- *
- * const ExampleComponent = () => {
- *    const notices = useSelect( ( select ) => select( noticesStore ).getNotices() );
- *    const { createWarningNotice, removeNotice } = useDispatch( noticesStore );
- *
- *    return (
- *         <>
- *             <Button
- *                 onClick={ () =>
- *                     createWarningNotice( __( 'Warning!' ), {
- *                         isDismissible: false,
- *                     } )
- *                 }
- *             >
- *                 { __( 'Generate a notice' ) }
- *             </Button>
- *             { notices.length > 0 && (
- *                 <Button onClick={ () => removeNotice( notices[ 0 ].id ) }>
- *                     { __( 'Remove the notice' ) }
- *                 </Button>
- *             ) }
- *         </>
- *     );
- *};
- * ```
  *
  * @return {Object} Action object.
  */
@@ -524,24 +376,6 @@ const DEFAULT_NOTICES = [];
  *
  * @param {Object}  state   Notices state.
  * @param {?string} context Optional grouping context.
- *
- * @example
- *
- *```js
- * import { useSelect } from '@wordpress/data';
- * import { store as noticesStore } from '@wordpress/notices';
- *
- * const ExampleComponent = () => {
- *     const notices = useSelect( ( select ) => select( noticesStore ).getNotices() );
- *     return (
- *         <ul>
- *         { notices.map( ( notice ) => (
- *             <li key={ notice.ID }>{ notice.content }</li>
- *         ) ) }
- *        </ul>
- *    )
- * };
- *```
  *
  * @return {WPNotice[]} Array of notices.
  */

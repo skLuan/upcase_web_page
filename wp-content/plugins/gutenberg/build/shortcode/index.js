@@ -1,8 +1,8 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 9756:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Memize options object.
@@ -197,48 +197,57 @@ module.exports = memize;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* unused harmony exports next, replace, string, regexp, attrs, fromMatch */
-/* harmony import */ var memize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9756);
-/* harmony import */ var memize__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(memize__WEBPACK_IMPORTED_MODULE_0__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ build_module; }
+});
+
+// UNUSED EXPORTS: attrs, fromMatch, next, regexp, replace, string
+
+;// CONCATENATED MODULE: external "lodash"
+var external_lodash_namespaceObject = window["lodash"];
+// EXTERNAL MODULE: ./node_modules/memize/index.js
+var memize = __webpack_require__(9756);
+var memize_default = /*#__PURE__*/__webpack_require__.n(memize);
+;// CONCATENATED MODULE: ./packages/shortcode/build-module/index.js
 /**
  * External dependencies
  */
+
 
 /**
  * Shortcode attributes object.
@@ -398,7 +407,7 @@ function regexp(tag) {
  * @return {WPShortcodeAttrs} Parsed shortcode attributes.
  */
 
-const attrs = memize__WEBPACK_IMPORTED_MODULE_0___default()(text => {
+const attrs = memize_default()(text => {
   const named = {};
   const numeric = []; // This regular expression is reused from `shortcode_parse_atts()` in
   // `wp-includes/shortcodes.php`.
@@ -484,18 +493,9 @@ function fromMatch(match) {
  * @return {WPShortcode} Shortcode instance.
  */
 
-const shortcode = Object.assign(function (options) {
-  const {
-    tag,
-    attrs: attributes,
-    type,
-    content
-  } = options || {};
-  Object.assign(this, {
-    tag,
-    type,
-    content
-  }); // Ensure we have a correctly formatted `attrs` object.
+const shortcode = (0,external_lodash_namespaceObject.extend)(function (options) {
+  (0,external_lodash_namespaceObject.extend)(this, (0,external_lodash_namespaceObject.pick)(options || {}, 'tag', 'attrs', 'type', 'content'));
+  const attributes = this.attrs; // Ensure we have a correctly formatted `attrs` object.
 
   this.attrs = {
     named: {},
@@ -504,17 +504,15 @@ const shortcode = Object.assign(function (options) {
 
   if (!attributes) {
     return;
-  }
+  } // Parse a string of attributes.
 
-  const attributeTypes = ['named', 'numeric']; // Parse a string of attributes.
 
-  if (typeof attributes === 'string') {
+  if ((0,external_lodash_namespaceObject.isString)(attributes)) {
     this.attrs = attrs(attributes); // Identify a correctly formatted `attrs` object.
-  } else if (attributes.length === attributeTypes.length && attributeTypes.every((t, key) => t === attributes[key])) {
+  } else if ((0,external_lodash_namespaceObject.isEqual)(Object.keys(attributes), ['named', 'numeric'])) {
     this.attrs = attributes; // Handle a flat object of attributes.
   } else {
-    Object.entries(attributes).forEach(_ref => {
-      let [key, value] = _ref;
+    (0,external_lodash_namespaceObject.forEach)(attributes, (value, key) => {
       this.set(key, value);
     });
   }
@@ -526,7 +524,7 @@ const shortcode = Object.assign(function (options) {
   attrs,
   fromMatch
 });
-Object.assign(shortcode.prototype, {
+(0,external_lodash_namespaceObject.extend)(shortcode.prototype, {
   /**
    * Get a shortcode attribute.
    *
@@ -538,7 +536,7 @@ Object.assign(shortcode.prototype, {
    * @return {string} Attribute value.
    */
   get(attr) {
-    return this.attrs[typeof attr === 'number' ? 'numeric' : 'named'][attr];
+    return this.attrs[(0,external_lodash_namespaceObject.isNumber)(attr) ? 'numeric' : 'named'][attr];
   },
 
   /**
@@ -553,7 +551,7 @@ Object.assign(shortcode.prototype, {
    * @return {WPShortcode} Shortcode instance.
    */
   set(attr, value) {
-    this.attrs[typeof attr === 'number' ? 'numeric' : 'named'][attr] = value;
+    this.attrs[(0,external_lodash_namespaceObject.isNumber)(attr) ? 'numeric' : 'named'][attr] = value;
     return this;
   },
 
@@ -564,15 +562,14 @@ Object.assign(shortcode.prototype, {
    */
   string() {
     let text = '[' + this.tag;
-    this.attrs.numeric.forEach(value => {
+    (0,external_lodash_namespaceObject.forEach)(this.attrs.numeric, value => {
       if (/\s/.test(value)) {
         text += ' "' + value + '"';
       } else {
         text += ' ' + value;
       }
     });
-    Object.entries(this.attrs.named).forEach(_ref2 => {
-      let [name, value] = _ref2;
+    (0,external_lodash_namespaceObject.forEach)(this.attrs.named, (value, name) => {
       text += ' ' + name + '="' + value + '"';
     }); // If the tag is marked as `single` or `self-closing`, close the tag and
     // ignore any additional content.
@@ -595,10 +592,9 @@ Object.assign(shortcode.prototype, {
   }
 
 });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (shortcode);
+/* harmony default export */ var build_module = (shortcode);
 
-})();
-
+}();
 (window.wp = window.wp || {}).shortcode = __webpack_exports__["default"];
 /******/ })()
 ;

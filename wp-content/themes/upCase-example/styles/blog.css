@@ -1,0 +1,134 @@
+.breadCrumbs-blog-fidelio, .breadCrumbs-blog-fidelio a {
+    color: white;
+  }
+  
+  .breadCrumbs-blog-fidelio a {
+    font-weight: 500;
+  }
+  
+  #ocean-search-form-1 {
+    padding: 15px;
+    border-radius: 7px 0 0 7px;
+  }
+  
+  .one-post p, .one-post h2, .one-post ol, .one-post ul .wp-block-latest-posts__list, .wp-block-latest-posts__list a {
+    font-family: "Lato";
+    color: #333;
+    
+  }
+  
+  
+  .wp-block-latest-posts__list a {
+      font-weight: 900;
+    font-size: 2em;
+    text-decoration: none;
+  }
+  .wp-block-latest-posts__list li{
+      margin-top: 15%;
+    }
+    .wp-block-latest-posts__list li:first-child {
+      margin-top: 0;
+    }
+  
+  .wp-block-latest-posts__list li:last-child {
+    margin-bottom: 15%;
+  }
+  
+   .wp-block-latest-posts__list .wp-block-latest-posts__post-date {
+    color: #0076B8;
+         font-weight: 700;
+  }
+
+  
+  #right-sidebar {
+  font-family: "Lato";
+  }
+
+  #right-sidebar ul {
+    list-style: none;
+  }
+  
+  #right-sidebar li a {
+    text-decoration: none;
+    color: #0F0A18;
+    font-size: 16px;
+    font-weight: 900;
+  }
+  
+  #right-sidebar li .post-date {
+    color: #00B3DA ;
+    font-size: 12px;
+    font-weight: 700;
+   
+  }
+  
+  #right-sidebar .widget-title {
+    margin-top: 15%;
+    font-size: 20px;
+    font-weight: 900;
+   
+  }
+  
+  #right-sidebar {
+     top: 70vh;
+    right: 10vw;
+    
+    position: absolute;
+    width: 20vw;
+    padding: 0;
+  }
+  
+  #right-sidebar #s {
+    background: white;
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 7px;
+    
+  }
+
+
+  #right-sidebar .searchform {
+      position: relative;
+  }
+  #right-sidebar #searchsubmit {
+        background-image: url('http://staging.ventas-por-internet.com/wp-content/uploads/sites/57/2022/01/i-search.png');
+        background-size: 1.3em;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #0076B8;
+        position: absolute;
+      width: 50px;
+      height: 100%;
+      right: 0;
+    border-radius: 0 7px 7px 0;
+  }
+  
+  @media screen and (max-height: 800px){
+    #right-sidebar {
+      top: 80vh;
+  }
+    
+  }
+  
+  @media screen and (max-width: 812px) {
+    #right-sidebar-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+    #right-sidebar {
+      position: static;
+      width: unset;
+    }
+  
+      #fo-post, #fo-blog {
+        position: absolute;
+  top: 110%;
+  width: 100%;
+    }
+    
+    #fo-blog {
+      top: 130%;
+    }
+  

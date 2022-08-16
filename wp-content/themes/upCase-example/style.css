@@ -1,0 +1,839 @@
+/*
+Template name: asambleas Virtuales
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Ubuntu:wght@400;500;700&display=swap");
+
+#top-bar-wrap,
+#site-header,
+.page-header,
+#footer-widgets {
+  display: none;
+}
+
+#main #content-wrap {
+  width: auto;
+  max-width: 100%;
+  padding: 0px;
+}
+
+#container-testimonios {
+  padding: 10px 0px 170px;
+}
+
+.card-group {
+  width: 200%;
+  /* overflow:scroll; */
+  padding: 15px;
+}
+
+#card-move-testimonios {
+}
+
+.card-move-global {
+  overflow: scroll;
+  min-height: 300px;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-move-clientes img {
+  height: 100px;
+  /* margin: 50px; */
+}
+
+@keyframes marquee {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes marqueeMobile {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1520px;
+  }
+}
+
+.animate {
+  width: 200%;
+  animation-name: marquee;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* animation-name: 20s linear 0s infinite marquee;  */
+  /* transform: translate() */
+}
+
+.animate:hover {
+  animation-play-state: paused;
+}
+
+#fo,
+.fot {
+  background: #0f0a18;
+  color: rgba(255, 255, 255, 0.5);
+}
+#container-testimonios .card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin: 10px;
+  min-width: 300px;
+}
+
+#container-testimonios .card-title {
+  font-size: 24px;
+  font-family: "Lato";
+  font-weight: bold;
+  color: #010101;
+}
+#container-testimonios .card-title span {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+#container-testimonios .card-text {
+  font-size: 16px;
+  font-family: "Lato";
+  color: #6f6d71;
+}
+
+#container-testimonios .card-sub-txt {
+  font-family: "Lato";
+  font-size: 12px;
+  color: #6f6d71;
+}
+
+#container-testimonios .card-title {
+  margin-bottom: 15px;
+}
+
+#deslizame-Ui {
+  left: 90%;
+  bottom: 35px;
+  font-size: 16px;
+  font-family: "Lato";
+  color: #6f6d71;
+}
+
+#footer-bottom {
+  background-color: #0f0a18;
+  height: 103px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#copyright {
+  color: #50c0ff;
+  font-size: 18px;
+  font-family: "PT Sans";
+}
+
+.content-area {
+  float: none;
+  width: 100%;
+  padding: 0px;
+  border: none;
+  margin: 0px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Mulish:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&family=PT+Sans&family=Roboto:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700;900&family=Ubuntu:wght@400;500;700&display=swap");
+
+#container-info-asambleas {
+  background-color: #0f0a18;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+#container-contactanos > div > div > div.col-sm-4.py-4 > div:nth-child(1) > p,
+#container-contactanos > div > div > div.col-sm-4.py-4 > div:nth-child(2) > p {
+  display: none;
+}
+#container-contactanos img {
+  width: 24px;
+  height: auto;
+}
+
+#container-contactanos {
+  background-color: #00335f;
+}
+
+#container-contactanos .card-title {
+  font-family: "Ubuntu";
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#wpforms-88 {
+  background-color: #fff;
+  padding: 50px 40px;
+  margin-top: 55px;
+  border-radius: 10px;
+}
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+div.wpforms-container-full
+  .wpforms-form
+  .wpforms-field-row.wpforms-field-medium {
+  max-width: 100%;
+}
+
+#wpforms-88-field_5,
+#wpforms-88-field_6,
+#wpforms-88-field_3,
+#wpforms-88-field_4,
+#wpforms-88-field_7,
+#wpforms-88-field_8,
+#wpforms-88-field_9,
+#wpforms-88-field_8-time {
+  background-color: #f2f2f2;
+  height: 68px;
+  border-radius: 10px;
+  padding: 20px 25px;
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #0f0a18;
+}
+#wpforms-88-field_5::placeholder,
+#wpforms-88-field_6::placeholder,
+#wpforms-88-field_3::placeholder,
+#wpforms-88-field_4::placeholder,
+#wpforms-88-field_7::placeholder,
+#wpforms-88-field_8::placeholder,
+#wpforms-88-field_9::placeholder,
+#wpforms-88-field_8-time::placeholder {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #0f0a18;
+  opacity: 0.5;
+}
+
+#wpforms-88-field_11-container {
+  display: flex;
+  justify-content: center;
+}
+
+#wpforms-88-field_11 > li > label {
+  margin-right: 5px;
+  font-family: "Roboto";
+  font-size: 18px;
+  color: #0076b8;
+}
+
+#wpforms-88-field_11-container > div {
+  margin-top: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wpforms-88-field_11-container > div > a {
+  font-family: "Roboto";
+  font-size: 18px;
+  color: #0076b8;
+  text-decoration: underline;
+}
+
+#wpforms-submit-88 {
+  max-width: 645px;
+  width: 100%;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #0076b8;
+  border-radius: 10px;
+  color: #ffffff;
+  margin: auto;
+  display: block;
+}
+
+.title-contactanos {
+  font-family: "Roboto";
+  color: #164a77;
+  font-size: 30px !important;
+  font-weight: bold;
+  margin-bottom: 30px !important;
+}
+
+.txt-contactanos {
+  font-family: "Roboto";
+  color: #2e2d26;
+  font-size: 20px !important;
+  opacity: 0.6;
+  font-weight: bold;
+}
+
+#container-contactanos .card-text {
+  font-family: "Roboto";
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+#container-contactanos .card {
+  border-radius: 15px;
+  border: 1px solid #ffffff;
+  padding: 35px 30px;
+  background-color: transparent;
+  width: 351px;
+}
+
+#nav-bar-mobile,
+#locacion-mobile,
+#container-servicios-mobile {
+  display: none;
+}
+
+#container-info-asambleas img {
+  float: right;
+}
+
+#marqueediv > div > div {
+  width: 100% !important;
+}
+
+#locacion-desktop > div.col-sm-3 > a,
+#locacion-desktop a {
+  color: #00b3da;
+  font-weight: bold;
+  font-family: "Roboto";
+  font-size: 16px;
+  margin: auto;
+}
+
+#locacion-desktop {
+  padding: 0;
+}
+
+#btn-navbar {
+  /* background-color: #0F0A18; */
+  border: none;
+}
+
+#nav-bar-desktop {
+  background-color: #0f0a18;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url(http://staging.ventas-por-internet.com/wp-content/uploads/sites/57/2021/12/menu.png);
+}
+
+.sub-container-locaciones {
+  display: flex;
+}
+
+.navbar-toggler-icon {
+  margin-top: -10px;
+}
+
+#logo-av {
+  max-width: 187px;
+  max-height: 116px;
+  width: 100%;
+  height: 100%;
+}
+
+.offcanvas-header {
+  color: #ffffff;
+}
+.offcanvas {
+  z-index: 1051 !important;
+  background-color: rgb(15, 10, 24, 0.98) !important;
+}
+.offcanvas-end {
+  width: unset !important;
+}
+.nav-link {
+  background-color: none;
+  color: #fff !important;
+  font-weight: bold;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.nav-link:hover {
+  background-color: #fff;
+  color: #00b3da !important;
+  font-weight: 500;
+}
+
+.nav-link-contactanos {
+  background-color: #00b3da;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Ubuntu";
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.nav-link-contactanos:hover {
+  background-color: #fff;
+  color: #00b3da !important;
+}
+
+#container-header {
+  background-image: url(https://staging.ventas-por-internet.com/wp-content/uploads/sites/57/2021/12/header-hero.png);
+  background-color: #f8f8f8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 6% 0;
+  height: 100%;
+}
+
+#container-header-blog {
+  background-image: url(http://staging.ventas-por-internet.com/wp-content/uploads/sites/57/2021/12/blog-Header.png);
+  background-color: #f8f8f8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0;
+  height: 100%;
+}
+
+#container-header h2,
+#container-header-blog h2 {
+  margin-top: calc(14%);
+  max-width: 860px;
+  width: 100%;
+  font-family: "roboto";
+  font-size: 45px;
+  font-weight: bold;
+  color: #ffffff;
+}
+#container-header p {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  max-width: 719px;
+  width: 100%;
+}
+#container-header p span {
+  color: #84d4ed;
+  font-weight: 600;
+}
+
+/* #container-header>div>div>div.col-sm-9>p:nth-child(4) {
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
+    color: #6EE8FF;
+    max-width: 631px;
+    width: 100%;
+} */
+
+#wpforms-168-field_12 {
+  max-width: 340px;
+  width: 100%;
+  max-height: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  padding: 0px 20px;
+  color: #fff;
+  font-family: "Roboto";
+}
+#wpforms-form-168 {
+  display: flex;
+  flex-direction: row;
+}
+#wpforms-168-field_12::placeholder {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.btn-lo-necesito {
+  max-width: 160px !important;
+  width: 100% !important;
+  height: 60px !important;
+  color: #fff !important;
+  font-family: "Roboto" !important;
+  font-weight: bold !important;
+  background-color: #0076b8 !important;
+  border-radius: 10px !important;
+  margin-left: 41px !important;
+  font-size: 18px !important;
+}
+
+#logo-av-seccion1 {
+  display: none;
+}
+
+#container-servicios,
+#container-servicios-mobile {
+  background-color: #f8f8f8;
+}
+
+#container-servicios h3 {
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: bold;
+  color: #0076b8;
+}
+
+#container-servicios h2,
+#container-nuestros-clientes h2 {
+  font-family: "Roboto";
+  font-size: 50px;
+  font-weight: bold;
+  color: #164a77;
+}
+
+#container-servicios-mobile h3 {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: bold;
+  color: #0076b8;
+}
+
+#container-servicios-mobile h2 {
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 700;
+  color: #164a77;
+}
+
+#container-servicios p {
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e2d26;
+  margin: auto;
+}
+
+#container-servicios .boxText {
+  display: flex;
+  max-width: 295px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 25px;
+  background-color: #ffffff;
+  border: 2px solid rgba(220, 216, 225, 0.5);
+  border-radius: 10px;
+}
+#container-servicios-mobile .boxText {
+  display: flex;
+  max-width: 295px;
+  width: 100%;
+  margin-left: 15px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid rgba(220, 216, 225, 0.5);
+  border-radius: 10px;
+}
+
+#container-servicios-mobile p {
+  text-align: left;
+  font-family: "Ubuntu";
+  font-size: 18px;
+  font-weight: bold;
+  margin: auto;
+  line-height: initial;
+}
+
+#btn-cotizar {
+  max-width: 284px;
+  width: 100%;
+  padding: 15px 0px;
+  color: #fff;
+  background-color: #0076b8;
+  margin: 10% auto;
+  display: block;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+#container-que-hacemos {
+  background-color: #00335f;
+}
+
+#container-que-hacemos h2 {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#img-que-hacemos {
+  max-width: 513px;
+}
+
+#container-que-hacemos p {
+  margin: auto;
+  max-width: 458px;
+  width: 100%;
+  font-weight: 400;
+  font-family: "Roboto";
+  font-size: 22px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+#container-como-ayudamos,
+#container-como-ayudamos-mobile {
+  background-color: #f8f8f8;
+}
+
+#container-como-ayudamos p,
+#container-como-ayudamos-mobile p {
+  max-width: 540px;
+  width: 100%;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#container-como-ayudamos h4,
+#container-como-ayudamos-mobile h4 {
+  max-width: 500px;
+  width: 100%;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 700;
+  color: #164a77;
+}
+
+#container-preguntas h3,
+#container-testimonios h3 {
+  max-width: 540px;
+  width: 100%;
+  font-family: "Roboto";
+  font-size: 38px;
+  font-weight: 700;
+  color: #164a77;
+}
+
+.ayuda-gen {
+  position: absolute;
+  left: 10%;
+  z-index: 3;
+  background-color: #ffff;
+  max-width: 730px;
+  width: 100%;
+  border-radius: 10px;
+}
+.ayuda-gen p {
+  opacity: 0.5;
+}
+
+#container-como-ayudamos img,
+#container-como-ayudamos-mobile img {
+  max-width: 540px;
+  margin: auto;
+  display: block;
+}
+
+#container-como-ayudamos-mobile {
+  display: none;
+}
+
+#container-cifras .container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
+#container-cifras-p1 {
+  font-family: "Roboto";
+  font-size: 51px;
+  font-weight: bold;
+  color: #063668;
+}
+
+#container-cifras-p2 {
+  font-family: "Ubuntu";
+  font-size: 22px;
+  font-weight: bold;
+  color: #222222;
+}
+
+#container-preguntas {
+  background-color: #f8f8f8;
+}
+
+#col1-preguntas,
+#col2-preguntas {
+  max-width: 521px;
+  width: 100%;
+  margin: auto;
+  background-color: #ebebeb;
+  border: 2px solid rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+}
+
+#col1-preguntas p,
+#col2-preguntas p {
+  margin: auto;
+  display: block;
+  max-width: 451px;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Roboto";
+}
+
+#col2-preguntas > p {
+  font-size: 24px;
+}
+
+#btn-preguntas {
+  max-width: 472px;
+  width: 100%;
+  height: 74px;
+  padding: 15px 0px;
+  color: #fff;
+  background-color: #0076b8;
+  margin: 76px auto 20px;
+  display: block;
+  border: none;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1400px) {
+  #container-como-ayudamos {
+    display: none;
+  }
+  #container-como-ayudamos-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 977px) {
+#wpforms-form-168 {
+  flex-direction: column;
+}
+  .btn-lo-necesito {
+    width: 140%;
+    margin-left: -16% !important;
+  }
+  #nav-bar-mobile {
+    display: unset;
+  }
+
+  .animate {
+    --mainWidth: 3040px;
+    width: var(--mainWidth);
+    animation-name: marqueeMobile;
+    animation-duration: 15s;
+  }
+  #img-que-hacemos {
+    max-width: 513px;
+    width: 100%;
+  }
+  #container-que-hacemos p {
+    font-size: 18px;
+  }
+
+  #wpforms-88-field_11-container > div > a,
+  #wpforms-88-field_11 > li > label {
+    font-size: 12px;
+  }
+  #wpforms-88-field_11-container > div {
+    margin-top: 0px;
+  }
+  #wpforms-88 {
+    padding: 20px;
+    margin-top: 0px;
+  }
+  #wpforms-88-field_5,
+  #wpforms-88-field_6,
+  #wpforms-88-field_3,
+  #wpforms-88-field_4,
+  #wpforms-88-field_7,
+  #wpforms-88-field_8,
+  #wpforms-88-field_9,
+  #wpforms-88-field_8-time {
+    padding: 10px;
+  }
+  div.wpforms-container-full .wpforms-form .wpforms-one-half,
+  div.wpforms-container-full .wpforms-form .wpforms-three-sixths,
+  div.wpforms-container-full .wpforms-form .wpforms-two-fourths {
+    width: 100%;
+    margin: 0px;
+  }
+  #container-contactanos .card {
+    width: auto;
+    height: auto;
+  }
+  #btn-preguntas {
+    font-size: 17px;
+  }
+  #container-info-asambleas img {
+    float: none;
+  }
+  #locacion-mobile,
+  #container-servicios-mobile {
+    display: block;
+  }
+  #nav-bar-desktop,
+  #locacion-desktop,
+  #container-servicios,
+  #logo-av {
+    display: none;
+  }
+  #container-header,
+  #container-header-blog {
+    height: auto;
+  }
+  #container-header h2,
+  #container-header-blog h2 {
+    max-width: 393px;
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    margin: 15px auto;
+  }
+  #container-header > div > div > div.col-sm-9 > p:nth-child(3) {
+    font-size: 14px;
+    max-width: 355px;
+    width: 100%;
+    text-align: center;
+    margin: 15px auto;
+  }
+  #container-header > div > div > div.col-sm-9 > p:nth-child(4) {
+    font-size: 14px;
+    max-width: 355px;
+    width: 100%;
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  #wpforms-168-field_12 {
+  }
+  #btn-lo-necesito {
+    margin: 15px auto 45px;
+    display: block;
+  }
+  #logo-av-seccion1 {
+    display: block;
+    max-width: 145px;
+    width: 100%;
+  }
+  #container-header,
+  #ccontainer-header-blog {
+    background-position: center center;
+  }
+}

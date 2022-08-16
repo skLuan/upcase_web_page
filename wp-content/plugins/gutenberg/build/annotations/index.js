@@ -1,36 +1,36 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
@@ -39,33 +39,33 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "store": () => (/* reexport */ store)
+  "store": function() { return /* reexport */ store; }
 });
 
 // NAMESPACE OBJECT: ./packages/annotations/build-module/store/selectors.js
 var selectors_namespaceObject = {};
 __webpack_require__.r(selectors_namespaceObject);
 __webpack_require__.d(selectors_namespaceObject, {
-  "__experimentalGetAllAnnotationsForBlock": () => (__experimentalGetAllAnnotationsForBlock),
-  "__experimentalGetAnnotations": () => (__experimentalGetAnnotations),
-  "__experimentalGetAnnotationsForBlock": () => (__experimentalGetAnnotationsForBlock),
-  "__experimentalGetAnnotationsForRichText": () => (__experimentalGetAnnotationsForRichText)
+  "__experimentalGetAllAnnotationsForBlock": function() { return __experimentalGetAllAnnotationsForBlock; },
+  "__experimentalGetAnnotations": function() { return __experimentalGetAnnotations; },
+  "__experimentalGetAnnotationsForBlock": function() { return __experimentalGetAnnotationsForBlock; },
+  "__experimentalGetAnnotationsForRichText": function() { return __experimentalGetAnnotationsForRichText; }
 });
 
 // NAMESPACE OBJECT: ./packages/annotations/build-module/store/actions.js
 var actions_namespaceObject = {};
 __webpack_require__.r(actions_namespaceObject);
 __webpack_require__.d(actions_namespaceObject, {
-  "__experimentalAddAnnotation": () => (__experimentalAddAnnotation),
-  "__experimentalRemoveAnnotation": () => (__experimentalRemoveAnnotation),
-  "__experimentalRemoveAnnotationsBySource": () => (__experimentalRemoveAnnotationsBySource),
-  "__experimentalUpdateAnnotationRange": () => (__experimentalUpdateAnnotationRange)
+  "__experimentalAddAnnotation": function() { return __experimentalAddAnnotation; },
+  "__experimentalRemoveAnnotation": function() { return __experimentalRemoveAnnotation; },
+  "__experimentalRemoveAnnotationsBySource": function() { return __experimentalRemoveAnnotationsBySource; },
+  "__experimentalUpdateAnnotationRange": function() { return __experimentalUpdateAnnotationRange; }
 });
 
 ;// CONCATENATED MODULE: external ["wp","richText"]
-const external_wp_richText_namespaceObject = window["wp"]["richText"];
+var external_wp_richText_namespaceObject = window["wp"]["richText"];
 ;// CONCATENATED MODULE: external ["wp","i18n"]
-const external_wp_i18n_namespaceObject = window["wp"]["i18n"];
+var external_wp_i18n_namespaceObject = window["wp"]["i18n"];
 ;// CONCATENATED MODULE: ./packages/annotations/build-module/store/constants.js
 /**
  * The identifier for the data store.
@@ -285,9 +285,9 @@ const {
 (0,external_wp_richText_namespaceObject.registerFormatType)(format_name, settings);
 
 ;// CONCATENATED MODULE: external ["wp","hooks"]
-const external_wp_hooks_namespaceObject = window["wp"]["hooks"];
+var external_wp_hooks_namespaceObject = window["wp"]["hooks"];
 ;// CONCATENATED MODULE: external ["wp","data"]
-const external_wp_data_namespaceObject = window["wp"]["data"];
+var external_wp_data_namespaceObject = window["wp"]["data"];
 ;// CONCATENATED MODULE: ./packages/annotations/build-module/block/index.js
 /**
  * WordPress dependencies
@@ -325,7 +325,13 @@ const addAnnotationClassName = OriginalComponent => {
 
 (0,external_wp_hooks_namespaceObject.addFilter)('editor.BlockListBlock', 'core/annotations', addAnnotationClassName);
 
+;// CONCATENATED MODULE: external "lodash"
+var external_lodash_namespaceObject = window["lodash"];
 ;// CONCATENATED MODULE: ./packages/annotations/build-module/store/reducer.js
+/**
+ * External dependencies
+ */
+
 /**
  * Filters an array based on the predicate, but keeps the reference the same if
  * the array hasn't changed.
@@ -335,26 +341,11 @@ const addAnnotationClassName = OriginalComponent => {
  *                              in the array.
  * @return {Array} Filtered array.
  */
+
 function filterWithReference(collection, predicate) {
   const filteredCollection = collection.filter(predicate);
   return collection.length === filteredCollection.length ? collection : filteredCollection;
 }
-/**
- * Creates a new object with the same keys, but with `callback()` called as
- * a transformer function on each of the values.
- *
- * @param {Object}   obj      The object to transform.
- * @param {Function} callback The function to transform each object value.
- * @return {Array} Transformed object.
- */
-
-
-const mapValues = (obj, callback) => Object.entries(obj).reduce((acc, _ref) => {
-  let [key, value] = _ref;
-  return { ...acc,
-    [key]: callback(value)
-  };
-}, {});
 /**
  * Verifies whether the given annotations is a valid annotation.
  *
@@ -364,7 +355,7 @@ const mapValues = (obj, callback) => Object.entries(obj).reduce((acc, _ref) => {
 
 
 function isValidAnnotationRange(annotation) {
-  return typeof annotation.start === 'number' && typeof annotation.end === 'number' && annotation.start <= annotation.end;
+  return (0,external_lodash_namespaceObject.isNumber)(annotation.start) && (0,external_lodash_namespaceObject.isNumber)(annotation.end) && annotation.start <= annotation.end;
 }
 /**
  * Reducer managing annotations.
@@ -404,14 +395,14 @@ function annotations() {
       };
 
     case 'ANNOTATION_REMOVE':
-      return mapValues(state, annotationsForBlock => {
+      return (0,external_lodash_namespaceObject.mapValues)(state, annotationsForBlock => {
         return filterWithReference(annotationsForBlock, annotation => {
           return annotation.id !== action.annotationId;
         });
       });
 
     case 'ANNOTATION_UPDATE_RANGE':
-      return mapValues(state, annotationsForBlock => {
+      return (0,external_lodash_namespaceObject.mapValues)(state, annotationsForBlock => {
         let hasChangedRange = false;
         const newAnnotations = annotationsForBlock.map(annotation => {
           if (annotation.id === action.annotationId) {
@@ -430,7 +421,7 @@ function annotations() {
       });
 
     case 'ANNOTATION_REMOVE_SOURCE':
-      return mapValues(state, annotationsForBlock => {
+      return (0,external_lodash_namespaceObject.mapValues)(state, annotationsForBlock => {
         return filterWithReference(annotationsForBlock, annotation => {
           return annotation.source !== action.source;
         });
@@ -439,7 +430,7 @@ function annotations() {
 
   return state;
 }
-/* harmony default export */ const reducer = (annotations);
+/* harmony default export */ var reducer = (annotations);
 
 ;// CONCATENATED MODULE: ./node_modules/rememo/es/rememo.js
 
@@ -744,6 +735,7 @@ function isShallowEqual(a, b, fromIndex) {
  * External dependencies
  */
 
+
 /**
  * Shared reference to an empty array for cases where it is important to avoid
  * returning a new array reference on every invocation, as in a connected or
@@ -820,7 +812,9 @@ const __experimentalGetAnnotationsForRichText = rememo((state, blockClientId, ri
  */
 
 function __experimentalGetAnnotations(state) {
-  return Object.values(state).flat();
+  return (0,external_lodash_namespaceObject.flatMap)(state, annotations => {
+    return annotations;
+  });
 }
 
 ;// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/rng.js
@@ -839,7 +833,7 @@ function rng() {
   return getRandomValues(rnds8);
 }
 ;// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/regex.js
-/* harmony default export */ const regex = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
+/* harmony default export */ var regex = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
 ;// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/validate.js
 
 
@@ -847,7 +841,7 @@ function validate(uuid) {
   return typeof uuid === 'string' && regex.test(uuid);
 }
 
-/* harmony default export */ const esm_browser_validate = (validate);
+/* harmony default export */ var esm_browser_validate = (validate);
 ;// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/stringify.js
 
 /**
@@ -878,7 +872,7 @@ function stringify(arr) {
   return uuid;
 }
 
-/* harmony default export */ const esm_browser_stringify = (stringify);
+/* harmony default export */ var esm_browser_stringify = (stringify);
 ;// CONCATENATED MODULE: ./node_modules/uuid/dist/esm-browser/v4.js
 
 
@@ -903,7 +897,7 @@ function v4(options, buf, offset) {
   return esm_browser_stringify(rnds);
 }
 
-/* harmony default export */ const esm_browser_v4 = (v4);
+/* harmony default export */ var esm_browser_v4 = (v4);
 ;// CONCATENATED MODULE: ./packages/annotations/build-module/store/actions.js
 /**
  * External dependencies

@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 var __webpack_exports__ = {};
 const closeSubmenus = element => {
   element.querySelectorAll('[aria-expanded="true"]').forEach(toggle => {
@@ -38,18 +38,13 @@ document.addEventListener('click', function (event) {
       closeSubmenus(block);
     }
   });
-}); // Close on focus outside or escape key.
+}); // Close on focus outside.
 
 document.addEventListener('keyup', function (event) {
   const submenuBlocks = document.querySelectorAll('.wp-block-navigation-submenu');
   submenuBlocks.forEach(block => {
     if (!block.contains(event.target)) {
       closeSubmenus(block);
-    } else if (event.key === 'Escape') {
-      const toggle = block.querySelector('[aria-expanded="true"]');
-      closeSubmenus(block); // Focus the submenu trigger so focus does not get trapped in the closed submenu.
-
-      toggle === null || toggle === void 0 ? void 0 : toggle.focus();
     }
   });
 });
