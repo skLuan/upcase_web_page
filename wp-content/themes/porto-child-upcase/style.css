@@ -76,14 +76,26 @@ font-weight: 500 !important;
 }
 /* ---------------------------------- Desktop */
 @media screen and (min-width: 992px) {
-  .shop-loop-before .porto-product-filters {
-    display: none;
+  .uc_filter aside, .uc_filter aside #preset_215 {
+    background: none !important;
+  }
+  .filters-container form {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
   }
   .filters-container form .yith-wcan-filter {
     margin: 0 10px !important;
+    padding: 10px 15px;
+    background: white;
+  }
+  .filters-container form .yith-wcan-filter .filter-content {
+    width: 11rem;
   }
   .filters-container form .yith-wcan-filter h4 {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 5px;
   }
   .porto-product-filters{
     width 70% !important;
