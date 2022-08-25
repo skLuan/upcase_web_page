@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $porto_shop_filter_layout;
 ?>
 <form class="woocommerce-ordering" method="get">
-	<label<?php echo 'default' == $porto_shop_filter_layout ? ' class="d-none d-lg-inline-block"' : ''; ?>><?php esc_html_e( 'Sort By', 'porto' ); ?>: </label>
+	<label<?php echo 'default' == $porto_shop_filter_layout ? ' class="d-none d-lg-inline-block"' : ''; ?>><?php esc_html_e( 'Filtrar por', 'porto' ); ?>: </label>
 	<select name="orderby" class="orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>

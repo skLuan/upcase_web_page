@@ -60,7 +60,7 @@ class Yith_Wishlist {
 	public static function is_not_esi() {
 		add_filter( 'yith_wcwl_add_to_wishlist_params', __CLASS__ . '::add_to_wishlist_params', 999, 2 );
 
-		add_filter( 'yith_wcwl_add_to_wishlisth_button_html', __CLASS__ . '::sub_add_to_wishlist', 999 );
+		add_filter( 'yith_wcwl_add_to_wishlisth_button_html', __CLASS__ . '::sub_', 999 );
 	}
 
 	/**
@@ -68,7 +68,7 @@ class Yith_Wishlist {
 	 *
 	 * @since  3.4.1
 	 */
-	public static function add_to_wishlist_params( $defaults, $atts ) {
+	public static function _params( $defaults, $atts ) {
 		self::$_post_id = ! empty( $atts[ 'product_id' ] ) ? $atts[ 'product_id' ] : $defaults[ 'product_id' ];
 
 		return $defaults;

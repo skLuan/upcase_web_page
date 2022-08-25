@@ -37209,7 +37209,7 @@ msgid "Qty"
 msgstr ""
 
 #: templates/loop/no-products-found.php:21
-msgid "No products were found matching your selection."
+msgid "Ningún producto coincide con tu búsqueda"
 msgstr ""
 
 #: templates/loop/orderby.php:24
@@ -43680,7 +43680,7 @@ msgstr ""
 
 #: packages/woocommerce-blocks/assets/js/blocks/products/edit.js:35
 #: packages/woocommerce-blocks/build/all-products.js:36
-msgid "Default sorting (menu order)"
+msgid "Por defecto (menu order)"
 msgstr ""
 
 #: packages/woocommerce-blocks/assets/js/blocks/products/edit.js:42

@@ -35,7 +35,7 @@ $average      = $product->get_average_rating();
 			<div class="review-link"><a href="<?php echo porto_is_ajax() ? esc_url( get_the_permalink() ) : ''; ?>#reviews" class="woocommerce-review-link" rel="nofollow"><?php printf( _n( '%s customer review', '%s customer reviews', (int) $review_count, 'woocommerce' ), '<span class="count">' . ( (int) $review_count ) . '</span>' ); ?></a>|<a href="<?php echo porto_is_ajax() ? esc_url( get_the_permalink() ) : ''; ?>#review_form" class="woocommerce-write-review-link" rel="nofollow"><?php esc_html_e( 'Add a review', 'woocommerce' ); ?></a></div>
 		<?php else : ?>
 			<div class="review-link noreview">
-				<a href="<?php echo porto_is_ajax() ? esc_url( get_the_permalink() ) : ''; ?>#review_form" class="woocommerce-write-review-link" rel="nofollow">( <?php esc_html_e( 'There are no reviews yet.', 'woocommerce' ); ?> )</a>
+				<a href="<?php echo porto_is_ajax() ? esc_url( get_the_permalink() ) : ''; ?>#review_form" class="woocommerce-write-review-link" rel="nofollow">( <?php esc_html_e( 'No hay reseñas disponibles', 'woocommerce' ); ?> )</a>
 			</div>
 		<?php endif; ?>
 		<?php //phpcs:enable ?>
