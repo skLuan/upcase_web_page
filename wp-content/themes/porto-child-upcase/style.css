@@ -22,6 +22,17 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
     --white-primary: #F8FAFC;
 }
 
+.header-top{
+  background: var(--purple-primary)
+}
+#header .header-right {
+  text-align: center;
+}
+
+#mini-cart .minicart-icon {
+  font-size: 23px;
+}
+
 .widget ul li,
 .widget ul {
   border: none !important;
@@ -51,6 +62,14 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
   font-weight: 700 !important;
   font-size: 1rem !important;
 }
+
+/* --------Footer */
+.list.list-icons li i {
+  color: var(--white-primary) !important;
+  opacity: 0.6;
+}
+
+
 /* ------------------------------ Filtros de categorización */
  .filter-content .yith-wcan-dropdown, .filter-content .filter-items {
   font-size: 14px !important;
@@ -76,6 +95,17 @@ font-weight: 500 !important;
 }
 /* ---------------------------------- Desktop */
 @media screen and (min-width: 992px) {
+  #menu-principalmenu > .menu-item {
+    padding: 10px 16px 10px 16px;
+  }
+  #menu-principalmenu > .menu-item > a {
+    padding: 0 !important;
+    /* transition: border 1s; */
+  }
+  #menu-principalmenu .menu-item a:hover, #menu-principalmenu .menu-item a:active {
+    border-bottom: 2px solid var(--purple-primary);
+    margin-bottom: -2px;
+  }
   .uc_filter aside, .uc_filter aside #preset_215 {
     background: none !important;
   }
@@ -127,7 +157,7 @@ font-weight: 500 !important;
   }
   #side-nav-panel .accordion-menu li.menu-item > a {
     color: var(--purple-black) !important;
-    font-size: 22px !important;
+    font-size: 18px !important;
     font-weight: 600 !important;
     text-transform: capitalize !important;
     padding: 15px 0 !important;
@@ -148,7 +178,7 @@ font-weight: 500 !important;
     .sub-menu
     li.menu-item
     > a {
-    font-size: 18px !important;
+    font-size: 16px !important;
     opacity: 0.8 !important;
     padding: 5px 0 !important;
   }

@@ -8,10 +8,9 @@ global $porto_settings, $porto_layout;
 			<div class="header-left">
 				<?php
 				// show search form
-				echo porto_search_form();
 
 				// show social links
-				echo porto_header_socials();
+				// echo porto_header_socials();
 
 				// show currency and view switcher
 				$currency_switcher = porto_currency_switcher();
@@ -38,15 +37,14 @@ global $porto_settings, $porto_layout;
 				<?php
 				// show welcome message and top navigation
 				$top_nav = porto_top_navigation();
-
+	
 				if ( $porto_settings['welcome-msg'] ) {
 					echo '<span class="welcome-msg">' . do_shortcode( $porto_settings['welcome-msg'] ) . '</span>';
 				}
-
+	
 				if ( $porto_settings['welcome-msg'] && $top_nav ) {
 					echo '<span class="gap">|</span>';
 				}
-
 				echo porto_filter_output( $top_nav );
 				?>
 			</div>
@@ -72,7 +70,6 @@ global $porto_settings, $porto_layout;
 				<?php echo porto_logo(); ?>
 			</div>
 			<div class="header-right">
-				<div>
 					<?php
 					// show menu custom content
 					if ( $porto_settings['menu-block'] ) {
@@ -84,10 +81,12 @@ global $porto_settings, $porto_layout;
 					if ( $contact_info ) {
 						echo '<div class="header-contact">' . do_shortcode( $contact_info ) . '</div>';
 					}
-
+					echo porto_account_menu('uc_account_menu mr-3');
+					
+					echo upcase_search_form();
+					echo porto_wishlist('uc_wishlist mx-3');
 					echo porto_minicart();
 					?>
-				</div>
 				<?php get_template_part( 'header/header_tooltip' ); ?>
 
 			</div>

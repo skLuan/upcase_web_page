@@ -17,6 +17,21 @@ function porto_child_css() {
 		wp_enqueue_style( 'styles-child-rtl' );
 	}
 }
+//Search form
+function upcase_search_form($el_class = '')
+{
+	global $porto_settings;
+
+	if (!$porto_settings['show-searchform']) {
+		return '';
+	}
+	$result  = '';
+	$result .= '<div class="searchform-popup' . (isset($porto_settings['search-layout']) && ('simple' == $porto_settings['search-layout'] || 'large' == $porto_settings['search-layout'] || 'reveal' == $porto_settings['search-layout'] || 'overlay' == $porto_settings['search-layout']) ? ' search-popup' : '') . ($el_class ? ' ' . esc_attr($el_class) : '') . '">';
+	$result .= '<a class="search-toggle" href="#"><i class="fas fa-search"></i></a>';
+	$result .= porto_search_form_content();
+	$result .= '</div>';
+	return apply_filters('porto_search_form', $result);
+}
 
 // horizontal filter
 function upcase_woocommerce_output_horizontal_filter()
