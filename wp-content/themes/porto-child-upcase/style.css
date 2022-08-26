@@ -14,10 +14,23 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 /*************** ADD YOUR CUSTOM CSS HERE  ***************/
 
 :root {
-  --purple-primary: #5b00bf;
-  --yellow-primary: #ffe500;
-  --purple-black: #303030;
-  --gray: #f8fafc;
+    --purple-primary: #5B00BF;
+    --purple-primary-t: #5B00BF4d;
+    --yellow-primary: #FFE500;
+    --purple-black: #303030 ;
+    --purple-black-t: #303030b3 ;
+    --white-primary: #F8FAFC;
+}
+
+.header-top{
+  background: var(--purple-primary)
+}
+#header .header-right {
+  text-align: center;
+}
+
+#mini-cart .minicart-icon {
+  font-size: 23px;
 }
 
 .widget ul li,
@@ -39,8 +52,87 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
   letter-spacing: -0.02em;
   text-align: right;
 }
+
+.sticky-header .main-menu-wrap .menu-right {
+  display: flex !important;
+  align-items: center !important;
+} 
+/* ------------------------------ Breacrumb */
 .uc-breadcrumbs-wrap .breadcrumb li {
   font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+
+/* --------Footer */
+.list.list-icons li i {
+  color: var(--white-primary) !important;
+  opacity: 0.6;
+}
+
+
+/* ------------------------------ Filtros de categorización */
+ .filter-content .yith-wcan-dropdown, .filter-content .filter-items {
+  font-size: 14px !important;
+ }
+ .matching-items .filter-item label {
+  display: unset !important;
+ }
+
+ .yith-wcan-filters .yith-wcan-filter .yith-wcan-dropdown.open, .dropdown-wrapper {
+  border-color: var(--purple-primary-t) !important;
+  box-shadow: 0 0 7px 0 var(--purple-primary-t) !important;
+  
+}
+.shop-loop-before {
+font-size: 14px !important;
+color: var(--purple-black) !important;
+}
+.shop-loop-before select {
+  color: var(--purple-black-t) !important;
+font-weight: 500 !important;
+  max-width: unset !important;
+  width: 185px !important;
+}
+/* ---------------------------------- Desktop */
+@media screen and (min-width: 992px) {
+  #menu-principalmenu > .menu-item {
+    padding: 10px 16px 10px 16px;
+  }
+  #menu-principalmenu > .menu-item > a {
+    padding: 0 !important;
+    /* transition: border 1s; */
+  }
+  #menu-principalmenu .menu-item a:hover, #menu-principalmenu .menu-item a:active {
+    border-bottom: 2px solid var(--purple-primary);
+    margin-bottom: -2px;
+  }
+  .uc_filter aside, .uc_filter aside #preset_215 {
+    background: none !important;
+  }
+  .filters-container form {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+  }
+  .filters-container form .yith-wcan-filter {
+    margin: 0 10px !important;
+    padding: 10px 15px;
+    background: white;
+  }
+  .filters-container form .yith-wcan-filter .filter-content {
+    width: 11rem;
+  }
+  .filters-container form .yith-wcan-filter h4 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 5px;
+  }
+  .porto-product-filters{
+    width 70% !important;
+  }
+  #preset_215{
+    margin-bottom: 0 !important;
+  }
 }
 /* ---------------------------------- Mobile */
 @media screen and (max-width: 992px) {
@@ -65,7 +157,7 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
   }
   #side-nav-panel .accordion-menu li.menu-item > a {
     color: var(--purple-black) !important;
-    font-size: 22px !important;
+    font-size: 18px !important;
     font-weight: 600 !important;
     text-transform: capitalize !important;
     padding: 15px 0 !important;
@@ -86,39 +178,39 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
     .sub-menu
     li.menu-item
     > a {
-    font-size: 18px !important;
+    font-size: 16px !important;
     opacity: 0.8 !important;
     padding: 5px 0 !important;
   }
+    .uc-sticky-navbar {
+        /* background-color: #F8FAFC !important; */
+        background-color: var(--purple-primary) !important;
+        padding: 5px 0 !important;
+    }
+    .uc-sticky-navbar .sticky-icon a {
+        /* Morado */
+        /* color: var(--purple-primary) !important; */
+        /* Blanco */
+        /* color: #F8FAFC !important; */
+        /* Amarillo */
+        color: var(--white-primary) !important;
 
-  .uc-sticky-navbar {
-    /* background-color: #F8FAFC !important; */
-    background-color: var(--purple-primary) !important;
-    padding: 0 0 15px 0 !important;
-  }
-  .uc-sticky-navbar .sticky-icon a {
-    /* Morado */
-    /* color: var(--purple-primary) !important; */
-    /* Blanco */
-    /* color: #F8FAFC !important; */
-    /* Amarillo */
-    color: var(--yellow-primary) !important;
-  }
-  .uc-sticky-navbar .sticky-icon a .label {
-    /* color: var(--purple-primary) !important; */
-    /* Blanco */
-    /* color: #F8FAFC !important; */
-    /* Amarillo */
-
-    color: var(--yellow-primary) !important;
-  }
-  .uc-sticky-navbar .sticky-icon {
-    /* border-color: #5B00BF33 !important; */
-    /* Blanco */
-    border-color: white !important;
-  }
-
-  .fpd-mainbar {
+    }
+    .uc-sticky-navbar .sticky-icon a .label {
+        /* color: var(--purple-primary) !important; */
+        /* Blanco */
+        /* color: #F8FAFC !important; */
+        /* Amarillo */
+        
+        color: var(--white-primary) !important;
+    }
+    .uc-sticky-navbar .sticky-icon {
+        /* border-color: #5B00BF33 !important; */
+        /* Blanco */
+        color: var(--white-primary) !important;
+    }
+      /* -------------------------- fancy product designer mobile  */
+    .fpd-mainbar {
     position: fixed !important;
     bottom: 0;
     z-index: 1100;

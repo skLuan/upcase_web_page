@@ -6265,11 +6265,11 @@ msgid "Display products in product archives"
 msgstr ""
 
 #: builders/elements/shop/gutenberg/blocks/sort.js:21
-msgid "Sort By:"
+msgid "Filtrar Por:"
 msgstr ""
 
 #: builders/elements/shop/gutenberg/blocks/sort.js:25
-msgid "Default sorting"
+msgid "Por defecto"
 msgstr ""
 
 #: builders/elements/shop/gutenberg/blocks/sort.js:33
@@ -7569,7 +7569,7 @@ msgid "Add to cart"
 msgstr ""
 
 #: builders/elements/type/elements/woo-buttons.js:92
-msgid "Add to wishlist"
+msgid "Agregar a favoritos"
 msgstr ""
 
 #: builders/elements/type/elements/woo-buttons.js:92
@@ -18031,7 +18031,7 @@ msgid "%1$d %2$s"
 msgstr ""
 
 #: shortcodes/templates/porto_posts_grid.php:686
-msgid "No products were found matching your selection."
+msgid "Ningún producto coincide con tu búsqueda"
 msgstr ""
 
 #: shortcodes/templates/porto_sidebar_menu.php:67

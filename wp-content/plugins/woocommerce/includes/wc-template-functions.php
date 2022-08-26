@@ -1467,12 +1467,12 @@ if ( ! function_exists( 'woocommerce_catalog_ordering' ) ) {
 		$catalog_orderby_options = apply_filters(
 			'woocommerce_catalog_orderby',
 			array(
-				'menu_order' => __( 'Default sorting', 'woocommerce' ),
-				'popularity' => __( 'Sort by popularity', 'woocommerce' ),
-				'rating'     => __( 'Sort by average rating', 'woocommerce' ),
-				'date'       => __( 'Sort by latest', 'woocommerce' ),
-				'price'      => __( 'Sort by price: low to high', 'woocommerce' ),
-				'price-desc' => __( 'Sort by price: high to low', 'woocommerce' ),
+				'menu_order' => __( 'Por defecto', 'woocommerce' ),
+				'popularity' => __( 'Populares', 'woocommerce' ),
+				'rating'     => __( 'Calificacion', 'woocommerce' ),
+				'date'       => __( 'Más recientes', 'woocommerce' ),
+				'price'      => __( 'Precio:Ascendente', 'woocommerce' ),
+				'price-desc' => __( 'Precio:Descendente', 'woocommerce' ),
 			)
 		);
 
@@ -1854,7 +1854,7 @@ if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
 		// Description tab - shows product content.
 		if ( $post->post_content ) {
 			$tabs['description'] = array(
-				'title'    => __( 'Description', 'woocommerce' ),
+				'title'    => __( 'Descripción', 'woocommerce' ),
 				'priority' => 10,
 				'callback' => 'woocommerce_product_description_tab',
 			);
@@ -1863,7 +1863,7 @@ if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
 		// Additional information tab - shows attributes.
 		if ( $product && ( $product->has_attributes() || apply_filters( 'wc_product_enable_dimensions_display', $product->has_weight() || $product->has_dimensions() ) ) ) {
 			$tabs['additional_information'] = array(
-				'title'    => __( 'Additional information', 'woocommerce' ),
+				'title'    => __( 'Información adicional', 'woocommerce' ),
 				'priority' => 20,
 				'callback' => 'woocommerce_product_additional_information_tab',
 			);
@@ -1873,7 +1873,7 @@ if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
 		if ( comments_open() ) {
 			$tabs['reviews'] = array(
 				/* translators: %s: reviews count */
-				'title'    => sprintf( __( 'Reviews (%d)', 'woocommerce' ), $product->get_review_count() ),
+				'title'    => sprintf( __( 'Reseñas (%d)', 'woocommerce' ), $product->get_review_count() ),
 				'priority' => 30,
 				'callback' => 'comments_template',
 			);
@@ -3078,7 +3078,7 @@ if ( ! function_exists( 'wc_dropdown_variation_attribute_options' ) ) {
 				'name'             => '',
 				'id'               => '',
 				'class'            => '',
-				'show_option_none' => __( 'Choose an option', 'woocommerce' ),
+				'show_option_none' => __( 'Escoge una opción', 'woocommerce' ),
 			)
 		);
 
