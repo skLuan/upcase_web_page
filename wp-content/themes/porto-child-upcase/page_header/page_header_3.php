@@ -31,7 +31,7 @@ if ( isset( $is_shortcode ) ) {
 			</div>
 			<?php if ( $breadcrumbs ) : ?>
 				<div class="breadcrumbs-wrap uc-breadcrumbs-wrap text-center<?php echo ! $sub_title ? '' : ' breadcrumbs-with-subtitle'; ?>">
-					<?php echo porto_breadcrumbs(); ?>
+					<?php echo uc_breadcrumbs(); ?>
 				</div>
 			<?php endif; ?>
 			<?php

@@ -96,7 +96,7 @@ font-weight: 500 !important;
 /* ---------------------------------- Desktop */
 @media screen and (min-width: 992px) {
   #menu-principalmenu > .menu-item {
-    padding: 10px 16px 10px 16px;
+    padding: 10px 13px;
   }
   #menu-principalmenu > .menu-item > a {
     padding: 0 !important;

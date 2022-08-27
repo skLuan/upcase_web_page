@@ -1,5 +1,5 @@
 <?php
-
+require_once(get_stylesheet_directory() . '/inc/functions/breadcrumbs.php');
 add_action( 'wp_enqueue_scripts', 'porto_child_css', 1001 );
 
 // Load CSS
@@ -66,6 +66,7 @@ function upcase_woocommerce_output_horizontal_filter()
 		unset($porto_shop_filter_layout);
 	}
 }
+
 function uc_add_actions() {
 	add_action('woocommerce_before_shop_loop', 'upcase_woocommerce_output_horizontal_filter', 25);
 }
