@@ -4,10 +4,10 @@
 function uc_breadcrumbs_links($output)
 {
     global $porto_settings;
-    $delimiter = '<i class="delimiter' . ($porto_settings['breadcrumbs-delimiter'] ? ' ' . esc_attr($porto_settings['breadcrumbs-delimiter']) : '') . '"></i>';
+    !is_singular() ? $delimiter = '<i class="delimiter' . ($porto_settings['breadcrumbs-delimiter'] ? ' ' . esc_attr($porto_settings['breadcrumbs-delimiter']) : '') . '"></i>' : $delimiter = '';
     $before    = '<li>';
     $after     = '</li>';
-    return $before . $output . 'atun' . $after;
+    return $before . $output . $delimiter . $after;
 }
 
 function uc_breadcrumbs_link($title, $link = '')
@@ -108,7 +108,9 @@ function uc_breadcrumbs_terms_link()
                 if (0 == $i++) {
                     $output .= porto_breadcrumbs_simple_link($term_object->name, get_term_link($term_object));
                 } else {
-                    $output .= ', ' . porto_breadcrumbs_simple_link($term_object->name, get_term_link($term_object));
+                    $classes = ($porto_settings['breadcrumbs-delimiter'] ? ' ' . esc_attr($porto_settings['breadcrumbs-delimiter']) : '');
+                    $delimiter = '<i class="uc-mid-delimeter delimiter' . $classes . '"></i>';
+                    $output .= $delimiter . porto_breadcrumbs_simple_link($term_object->name, get_term_link($term_object));
                 }
             }
             $output = uc_breadcrumbs_links($output);
@@ -119,7 +121,9 @@ function uc_breadcrumbs_terms_link()
         $output = porto_breadcrumbs_simple_link($terms[0]->name, get_term_link($terms[0]));
         array_shift($terms);
         foreach ($terms as $term) {
-            $output .= ', ' . porto_breadcrumbs_simple_link($term->name, get_term_link($term));
+            $delimiter = '<i class="delimiter' . ($porto_settings['breadcrumbs-delimiter'] ? ' ' . esc_attr($porto_settings['breadcrumbs-delimiter']) : '') . '"></i>';
+
+            $output .= $delimiter . porto_breadcrumbs_simple_link($term->name, get_term_link($term));
         }
         $output = uc_breadcrumbs_links($output);
     }

@@ -63,6 +63,12 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
   font-size: 1rem !important;
 }
 
+.uc-mid-delimeter {
+  float: unset !important;
+  display: inline-block !important;
+  margin-right: -1px !important;
+}
+
 /* --------Footer */
 .list.list-icons li i {
   color: var(--white-primary) !important;
