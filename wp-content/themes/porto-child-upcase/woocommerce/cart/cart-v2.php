@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $porto_woo_version = porto_get_woo_version_number();
 ?>
 <div class="cart-v2">
-	<div class="row mb-5 pb-2">
+	<div class="pb-2 mb-5 row">
 		<div class="col-lg-8">
 			<div class="align-left">
 				<div class="box-content">
@@ -18,10 +18,10 @@ $porto_woo_version = porto_get_woo_version_number();
 							<thead>
 								<tr>
 									<th class="product-thumbnail">&nbsp;</th>
-									<th class="product-name"><span><?php esc_html_e( 'Product', 'woocommerce' ); ?></span></th>
-									<th class="product-price"><span><?php esc_html_e( 'Price', 'woocommerce' ); ?></span></th>
-									<th class="product-quantity"><span><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></span></th>
-									<th class="product-subtotal text-center text-md-right"><span><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></span></th>
+									<th class="product-name"><span><?php esc_html_e( 'Producto', 'woocommerce' ); ?></span></th>
+									<th class="product-price"><span><?php esc_html_e( 'Precio', 'woocommerce' ); ?></span></th>
+									<th class="product-quantity"><span><?php esc_html_e( 'Cantidad', 'woocommerce' ); ?></span></th>
+									<th class="text-center product-subtotal text-md-right"><span><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></span></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -101,7 +101,7 @@ $porto_woo_version = porto_get_woo_version_number();
 												echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 												?>
 											</td>
-											<td class="product-subtotal text-center text-md-right" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
+											<td class="text-center product-subtotal text-md-right" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
 												<?php
 													echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 												?>
@@ -118,11 +118,11 @@ $porto_woo_version = porto_get_woo_version_number();
 											<div class="cart_totals_toggle">
 												<div id="panel-cart-discount" class="d-sm-flex justify-content-between">
 													<div class="coupon">
-														<input type="text" name="coupon_code" class="input-text" id="coupon_code" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" value="" />
-														<button type="submit" class="button wc-action-btn wc-action-sm" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
+														<input type="text" name="coupon_code" class="input-text" id="coupon_code" placeholder="<?php esc_attr_e( 'Código del cupon', 'woocommerce' ); ?>" value="" />
+														<button type="submit" class="button wc-action-btn wc-action-sm" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Aplicar cupón', 'woocommerce' ); ?></button>
 														<?php do_action( 'woocommerce_cart_coupon' ); ?>
 													</div>
-													<button type="submit" class="button wc-action-btn wc-action-sm" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+													<button type="submit" class="button wc-action-btn wc-action-sm" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Actualizar carrito', 'woocommerce' ); ?></button>
 												</div>
 											</div>
 

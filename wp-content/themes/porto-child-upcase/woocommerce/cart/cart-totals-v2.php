@@ -13,9 +13,9 @@ $porto_woo_version = porto_get_woo_version_number();
 <div class="cart_totals<?php echo WC()->customer->has_calculated_shipping() ? ' calculated_shipping' : ''; ?>">
 	<div class="cart_totals_toggle">
 		<div class="card card-default">
-			<h4 class="card-sub-title text-md text-uppercase m-b-md pb-1"><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h4>
+			<h4 class="pb-1 card-sub-title text-md text-uppercase m-b-md"><?php esc_html_e( 'Total', 'woocommerce' ); ?></h4>
 			<div id="panel-cart-total">
-				<div class="card-body p-0">
+				<div class="p-0 card-body">
 					<table class="responsive cart-total" cellspacing="0">
 						<tr class="cart-subtotal">
 							<th><h4 class="mb-0"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></h4></th>
@@ -69,14 +69,14 @@ $porto_woo_version = porto_get_woo_version_number();
 
 						<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 						<tr class="order-total">
-							<th><h4 class="text-md mb-0"><?php esc_html_e( 'Total', 'woocommerce' ); ?></h4></th>
+							<th><h4 class="mb-0 text-md"><?php esc_html_e( 'Total', 'woocommerce' ); ?></h4></th>
 							<td><?php wc_cart_totals_order_total_html(); ?></td>
 						</tr>
 						<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 					</table>
 
 					<div class="wc-proceed-to-checkout">
-						<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-v-dark w-100 m-t-lg py-3"><?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?><i class="vc_btn3-icon fas fa-arrow-right ps-3"></i></a>
+						<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="py-3 btn btn-v-dark w-100 m-t-lg"><?php esc_html_e( 'Seguir al checkout', 'woocommerce' ); ?><i class="vc_btn3-icon fas fa-arrow-right ps-3"></i></a>
 					</div>
 				</div>
 			</div>

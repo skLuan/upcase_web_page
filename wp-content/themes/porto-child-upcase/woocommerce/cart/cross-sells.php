@@ -13,7 +13,7 @@ if ( $cross_sells && $porto_settings['product-crosssell'] ) : ?>
 
 	<div class="cross-sells">
 		<?php
-			$heading = apply_filters( 'woocommerce_product_cross_sells_products_heading', __( 'You may be interested in&hellip;', 'woocommerce' ) );
+			$heading = apply_filters( 'woocommerce_product_cross_sells_products_heading', __( 'Podrias estár interezado en&hellip;', 'woocommerce' ) );
 
 		if ( $heading ) :
 			?>
