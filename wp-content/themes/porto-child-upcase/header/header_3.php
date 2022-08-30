@@ -1,55 +1,55 @@
 <?php
 global $porto_settings, $porto_layout;
 ?>
-<header id="header" class="header-3 logo-center<?php echo ! $porto_settings['logo-overlay'] || ! $porto_settings['logo-overlay']['url'] ? '' : ' logo-overlay-header'; ?>">
-	<?php if ( $porto_settings['show-header-top'] ) : ?>
-	<div class="header-top">
-		<div class="container">
-			<div class="header-left">
-				<?php
-				// show search form
+<header id="header" class="header-3 logo-center<?php echo !$porto_settings['logo-overlay'] || !$porto_settings['logo-overlay']['url'] ? '' : ' logo-overlay-header'; ?>">
+	<?php if ($porto_settings['show-header-top']) : ?>
+		<div class="header-top">
+			<div class="container">
+				<div class="header-left">
+					<?php
+					// show search form
 
-				// show social links
-				// echo porto_header_socials();
+					// show social links
+					// echo porto_header_socials();
 
-				// show currency and view switcher
-				$currency_switcher = porto_currency_switcher();
-				$view_switcher     = porto_view_switcher();
+					// show currency and view switcher
+					$currency_switcher = porto_currency_switcher();
+					$view_switcher     = porto_view_switcher();
 
-				if ( $currency_switcher || $view_switcher ) {
-					echo '<div class="switcher-wrap">';
-				}
+					if ($currency_switcher || $view_switcher) {
+						echo '<div class="switcher-wrap">';
+					}
 
-				echo porto_filter_output( $view_switcher );
+					echo porto_filter_output($view_switcher);
 
-				if ( $currency_switcher && $view_switcher ) {
-					echo '<span class="gap switcher-gap">|</span>';
-				}
+					if ($currency_switcher && $view_switcher) {
+						echo '<span class="gap switcher-gap">|</span>';
+					}
 
-				echo porto_filter_output( $currency_switcher );
+					echo porto_filter_output($currency_switcher);
 
-				if ( $currency_switcher || $view_switcher ) {
-					echo '</div>';
-				}
-				?>
-			</div>
-			<div class="header-right">
-				<?php
-				// show welcome message and top navigation
-				$top_nav = porto_top_navigation();
-	
-				if ( $porto_settings['welcome-msg'] ) {
-					echo '<span class="welcome-msg">' . do_shortcode( $porto_settings['welcome-msg'] ) . '</span>';
-				}
-	
-				if ( $porto_settings['welcome-msg'] && $top_nav ) {
-					echo '<span class="gap">|</span>';
-				}
-				echo porto_filter_output( $top_nav );
-				?>
+					if ($currency_switcher || $view_switcher) {
+						echo '</div>';
+					}
+					?>
+				</div>
+				<div class="header-right">
+					<?php
+					// show welcome message and top navigation
+					$top_nav = porto_top_navigation();
+
+					if ($porto_settings['welcome-msg']) {
+						echo '<span class="welcome-msg">' . do_shortcode($porto_settings['welcome-msg']) . '</span>';
+					}
+
+					if ($porto_settings['welcome-msg'] && $top_nav) {
+						echo '<span class="gap">|</span>';
+					}
+					echo porto_filter_output($top_nav);
+					?>
+				</div>
 			</div>
 		</div>
-	</div>
 	<?php endif; ?>
 
 	<div class="header-main">
@@ -70,27 +70,29 @@ global $porto_settings, $porto_layout;
 				<?php echo porto_logo(); ?>
 			</div>
 			<div class="header-right">
-					<?php
-					// show menu custom content
-					if ( $porto_settings['menu-block'] ) {
-						echo '<div class="menu-custom-block">' . wp_kses_post( $porto_settings['menu-block'] ) . '</div>';
-					}
-					// show contact info and mini cart
-					$contact_info = $porto_settings['header-contact-info'];
+				<?php
+				// show menu custom content
+				if ($porto_settings['menu-block']) {
+					echo '<div class="menu-custom-block">' . wp_kses_post($porto_settings['menu-block']) . '</div>';
+				}
+				// show contact info and mini cart
+				$contact_info = $porto_settings['header-contact-info'];
 
-					if ( $contact_info ) {
-						echo '<div class="header-contact">' . do_shortcode( $contact_info ) . '</div>';
-					}
-					echo porto_account_menu('uc_account_menu mr-3');
-					
-					echo upcase_search_form();
-					echo porto_wishlist('uc_wishlist mx-3');
-					echo porto_minicart();
-					?>
-				<?php get_template_part( 'header/header_tooltip' ); ?>
+				if ($contact_info) {
+					echo '<div class="header-contact">' . do_shortcode($contact_info) . '</div>';
+				}
+				echo porto_account_menu('uc_account_menu mr-3');
+
+				echo upcase_search_form();
+				echo porto_wishlist('uc_wishlist mx-3');
+				echo porto_minicart();
+				?>
+				<?php get_template_part('header/header_tooltip'); ?>
 
 			</div>
 		</div>
-		<?php get_template_part( 'header/mobile_menu' ); ?>
+		<?php get_template_part('header/mobile_menu'); ?>
+		<a href="https://wa.me/573153801321" class="mr-3 mr-lg-4 end-0 position-fixed" style="bottom: 8%;"> <img width="45px" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/icons/logos_whatsapp-icon.svg" alt=""></a>
+
 	</div>
 </header>
