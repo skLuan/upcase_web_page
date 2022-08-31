@@ -58,11 +58,24 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
   align-items: center !important;
 } 
 /* ------------------------------ Breacrumb */
-.uc-breadcrumbs-wrap .breadcrumb li {
+.uc-breadcrumbs-wrap .breadcrumb li, .woo-page-header .breadcrumb li a {
   font-weight: 700 !important;
   font-size: 1rem !important;
 }
-
+.woo-page-header {
+  border-top: 1px solid #f8fafc;
+  border-bottom: 2px solid #f8fafc;
+  padding: 12px 0 !important;
+  text-transform: uppercase;
+}
+.woo-page-header .breadcrumb li {
+  line-height: 34px;
+}
+.woo-page-header .breadcrumb li i {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  margin: 0 4px !important;
+}
 .uc-mid-delimeter {
   float: unset !important;
   display: inline-block !important;
@@ -99,6 +112,18 @@ font-weight: 500 !important;
   max-width: unset !important;
   width: 185px !important;
 }
+
+/* ------------------------------------------------- FPD ------------------------------------- */
+#fpd-start-customizing-button {
+  color:white;
+  background: var(--purple-primary);
+  font-weight: 500;
+  height: 100%;
+  text-transform: capitalize;
+  padding: 14px;
+  margin-bottom: 5px;
+}
+
 /* ---------------------------------- Desktop */
 @media screen and (min-width: 992px) {
   #menu-principalmenu > .menu-item {
@@ -136,9 +161,16 @@ font-weight: 500 !important;
   .porto-product-filters{
     width 70% !important;
   }
+
+  /* ----------------------- Breadcrumbs desk */
+
   #preset_215{
     margin-bottom: 0 !important;
   }
+/* ------------ FPD desktop */
+
+
+
 }
 /* ---------------------------------- Mobile */
 @media screen and (max-width: 992px) {

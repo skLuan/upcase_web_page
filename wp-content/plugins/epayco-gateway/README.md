@@ -1,10 +1,13 @@
-#ePayco plugin para WooCommerce
+# ePayco plugin para WooCommerce
 
-**Si usted tiene alguna pregunta o problema, no dude en ponerse en contacto con nuestro soporte técnico: desarrollo@payco.co.**
+**Si usted tiene alguna pregunta o problema, no dude en ponerse en contacto con nuestro soporte técnico: desarrollo@epayco.com.**
 
 ** Se recomienda emplear la última versión disponible. **
 
 ## Versiones
+* [epayco plugin WooCommerce v6.2.0](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/V6.2.0).
+* [epayco plugin WooCommerce v6.1.0](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/V6.1.0).
+* [epayco plugin WooCommerce v5.5.0](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/V5.5.0).
 * [epayco plugin WooCommerce v5.4.0](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/V5.4.0).
 * [epayco plugin WooCommerce v5.3.0](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/V5.3.0).
 * [epayco plugin WooCommerce v5.2.0](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/v5.2.0).
@@ -41,7 +44,7 @@
 
 ## Requisitos
 
-* Tener una cuenta activa en [ePayco](https://pagaycobra.com).
+* Tener una cuenta activa en [ePayco](https://epayco.com/).
 * Tener instalado WordPress y WooCommerce.
 * Acceso a las carpetas donde se encuetra instalado WordPress y WooCommerce.
 * Acceso al admin de WordPress.
@@ -70,5 +73,4 @@
 <img src="ImgTutorialWooCommerce/tuto-6.png" width="400px"/>
 <img src="ImgTutorialWooCommerce/tuto-7.png" width="400px"/>
 <img src="ImgTutorialWooCommerce/tuto-8.png" width="400px"/>
-
 

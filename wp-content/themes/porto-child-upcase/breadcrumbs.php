@@ -16,10 +16,10 @@ if ( ( is_front_page() && is_home() ) || is_front_page() ) {
 <?php
 if ( class_exists('Woocommerce') && ( is_cart() || is_checkout() ) && $woo_breadcrumb ) :
 	?>
-	<div class="woo-page-header page-header-8">
-		<ul class="breadcrumb text-center">
+	<div class="mb-5 woo-page-header page-header-8">
+		<ul class="text-center breadcrumb">
 			<li class="<?php echo is_cart() ? esc_attr( 'current' ) : ''; ?>">
-				<a href="<?php echo esc_url( wc_get_cart_url() ); ?>"><?php esc_html_e( 'Shopping Cart', 'porto' ); ?></a>
+				<a href="<?php echo esc_url( wc_get_cart_url() ); ?>"><?php esc_html_e( 'Carrito de compras', 'porto' ); ?></a>
 			</li>
 			<li class="<?php echo is_checkout() && ! is_order_received_page() ? esc_attr( 'current' ) : ''; ?>">
 				<i class="delimiter delimiter-2"></i>
@@ -27,7 +27,7 @@ if ( class_exists('Woocommerce') && ( is_cart() || is_checkout() ) && $woo_bread
 			</li>
 			<li class="<?php echo is_order_received_page() ? esc_attr( 'current' ) : esc_attr( 'disable' ); ?>">
 				<i class="delimiter delimiter-2"></i>
-				<a href="#" class="nolink"><?php esc_html_e( 'Order Complete', 'porto' ); ?></a>
+				<a href="#" class="nolink"><?php esc_html_e( 'Orden completa', 'porto' ); ?></a>
 			</li>
 		</ul>
 	</div>
