@@ -20,14 +20,14 @@ defined( 'ABSPATH' ) || exit;
 
 $porto_woo_version = porto_get_woo_version_number();
 ?>
-<div class="woocommerce-billing-fields clearfix">
+<div class="clearfix woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
 		<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
 
 	<?php else : ?>
 
-		<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
+		<h3><?php esc_html_e( 'Detalles de facturación', 'woocommerce' ); ?></h3>
 
 	<?php endif; ?>
 
@@ -36,13 +36,25 @@ $porto_woo_version = porto_get_woo_version_number();
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
 			$fields = $checkout->get_checkout_fields( 'billing' );
-
+			$i = 0;
+			unset($fields['billing_company']);
+			$translate = array('Nombre', 'Apellido', 'País/Region', 'Dirección', 'unidad, bloque, departamento etc.', 'Ciudad', 'Departamento', 'Código postal (Opcional)', 'Telefono', 'Email');
 		foreach ( $fields as $key => $field ) {
 			if ( version_compare( $porto_woo_version, '3.6', '<' ) && isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
 				$field['country'] = $checkout->get_value( $field['country_field'] );
 			}
-			woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+			if($i < count($translate) +1) {
+				$field['label'] = $translate[$i];
+				$i++;
+			}
+			// echo print_r($field);
+			// echo "\n";
+			// echo "\n";
+			// echo print_r($key);
+			// woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+			woocommerce_form_field( $key, $field );
 		}
+		// echo count($translate);
 		?>
 	</div>
 
@@ -50,7 +62,7 @@ $porto_woo_version = porto_get_woo_version_number();
 </div>
 
 <?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() ) : ?>
-	<div class="woocommerce-account-fields mt-3">
+	<div class="mt-3 woocommerce-account-fields">
 		<?php if ( ! $checkout->is_registration_required() ) : ?>
 
 			<p class="form-row form-row-wide create-account porto-checkbox">
