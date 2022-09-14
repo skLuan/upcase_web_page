@@ -91,7 +91,6 @@ $featured_images = porto_get_featured_images();
 				<div class="mx-auto" style="width: 18px; height: 3px; background: #5B00BF;"></div>
 				<?php
 				echo do_shortcode('[jr_instagram id="1"]'); ?>
-				?>
 			</section>
 		</article>
 		<?php
