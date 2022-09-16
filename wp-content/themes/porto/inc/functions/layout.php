@@ -2253,7 +2253,7 @@ function porto_minicart( $el_class = '' ) {
 				} else {
 					$_cart_qty = $woocommerce->cart ? $woocommerce->cart->cart_contents_count : 0;
 					/* translators: %s: Cart quantity */
-					$_cart_qty1 = sprintf( _n( '%d item', '%d items', $_cart_qty, 'porto' ), $_cart_qty );
+					$_cart_qty1 = sprintf( _n( '%d artículo', '%d artículo', $_cart_qty, 'porto' ), $_cart_qty );
 				}
 
 				printf( $format, $_cart_qty, $_cart_qty1 );
