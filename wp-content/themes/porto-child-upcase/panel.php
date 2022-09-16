@@ -46,6 +46,7 @@ if ('overlay' == $porto_settings['menu-type']) {
 			echo '<div class="menu-wrap">' . $menu . '</div>';
 		}
 		?>
+		
 		<ul class="uc_social_media">
 			<li><a href="<?php echo social_media_link('facebook') ?>"><i class="fab fa-facebook"></i></a></li>
 			<li><a href="<?php echo social_media_link('instagram') ?>"><i class="fab fa-instagram"></i></a></li>

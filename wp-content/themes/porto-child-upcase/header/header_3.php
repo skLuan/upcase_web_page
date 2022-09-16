@@ -6,6 +6,11 @@ global $porto_settings, $porto_layout;
 		<div class="header-top">
 			<div class="container">
 				<div class="header-left">
+					<ul class="uc_social_media d-none d-lg-flex">
+						<li><a href="<?php echo social_media_link('facebook') ?>"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="<?php echo social_media_link('instagram') ?>"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="<?php echo social_media_link('whatsapp') ?>"><i class="fab fa-whatsapp"></i></a></li>
+					</ul>
 					<?php
 					// show search form
 
@@ -33,7 +38,7 @@ global $porto_settings, $porto_layout;
 					}
 					?>
 				</div>
-				<div class="header-right">
+				<div class="header-center">
 					<?php
 					// show welcome message and top navigation
 					$top_nav = porto_top_navigation();
@@ -47,6 +52,9 @@ global $porto_settings, $porto_layout;
 					}
 					echo porto_filter_output($top_nav);
 					?>
+				</div>
+				<div class="header-right">
+					<div class=""></div>
 				</div>
 			</div>
 		</div>

@@ -130,6 +130,18 @@ font-weight: 500 !important;
   padding: 14px;
   margin-bottom: 5px;
 }
+/* --------------------------- */
+    .uc_social_media {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+    justify-content: center;
+  }
+  .uc_social_media li {
+    padding: 0 10px;
+    font-size: 18px;
+  }
 
 /* ---------------------------------- Desktop */
 @media screen and (min-width: 992px) {
@@ -144,6 +156,13 @@ font-weight: 500 !important;
   #menu-principalmenu .menu-item a:hover, #menu-principalmenu .menu-item a:active {
     border-bottom: 2px solid var(--purple-primary);
     margin-bottom: -2px;
+  }
+  .uc_social_media {
+    margin: 0 0;
+    justify-content: left;
+  }
+    .uc_social_media li a {
+      color: white;
   }
   .uc_filter aside, .uc_filter aside #preset_215 {
     background: none !important;
@@ -188,6 +207,10 @@ font-weight: 500 !important;
   .main-content {
   padding-top: 0;
 }
+  .welcome-msg {
+   display: flex !important;
+   justify-content: center; 
+  }
   .header-center {
     margin: 0 !important;
     width: 100%;
@@ -229,17 +252,6 @@ font-weight: 500 !important;
     opacity: 0.5;
   }
 
-  .uc_social_media {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding: 5px 0;
-    justify-content: center;
-  }
-  .uc_social_media li {
-    padding: 0 10px;
-    font-size: 18px;
-  }
   #side-nav-panel form.searchform {
     border: 1px solid #C2C2C2;
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
