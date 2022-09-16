@@ -59,9 +59,10 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 } 
 /* ------------------------------ Breacrumb */
 .uc-breadcrumbs-wrap .breadcrumb li, .woo-page-header .breadcrumb li a {
-  font-weight: 700 !important;
-  font-size: 1rem !important;
+  font-weight: 500 !important;
+  font-size: 0.842rem !important;
 }
+
 .woo-page-header {
   border-top: 1px solid #f8fafc;
   border-bottom: 2px solid #f8fafc;
@@ -88,6 +89,12 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
   opacity: 0.6;
 }
 
+.hint {
+  padding: 30px 20px;
+  margin: 20px auto ;
+  border: 1px solid #FFE500;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
 
 /* ------------------------------ Filtros de categorización */
  .filter-content .yith-wcan-dropdown, .filter-content .filter-items {
@@ -129,6 +136,7 @@ font-weight: 500 !important;
   #menu-principalmenu > .menu-item {
     padding: 10px 13px;
   }
+  
   #menu-principalmenu > .menu-item > a {
     padding: 0 !important;
     /* transition: border 1s; */
@@ -174,8 +182,18 @@ font-weight: 500 !important;
 }
 /* ---------------------------------- Mobile */
 @media screen and (max-width: 992px) {
+  .page-top {
+  padding: 0;
+}
+  .main-content {
+  padding-top: 0;
+}
   .header-center {
-    margin: 20px !important;
+    margin: 0 !important;
+    width: 100%;
+  }
+  .header-center .logo {
+    margin: 0 auto !important;
   }
   .uc_account_menu {
     display: none !important;
@@ -184,8 +202,8 @@ font-weight: 500 !important;
     display: none !important;
   }
   .mobile-toggle {
-    background-color: #f8fafc !important;
-    font-size: 20px !important;
+    margin: 0 !important;
+    font-size: 26px !important;
   }
   .mobile-toggle i {
     color: var(--purple-primary) !important;
@@ -195,7 +213,7 @@ font-weight: 500 !important;
   }
   #side-nav-panel .accordion-menu li.menu-item > a {
     color: var(--purple-black) !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     font-weight: 600 !important;
     text-transform: capitalize !important;
     padding: 15px 0 !important;
@@ -203,12 +221,32 @@ font-weight: 500 !important;
   #side-nav-panel .side-nav-panel-close {
     color: var(--purple-black) !important;
     font-size: 20px !important;
-    margin: 25vh 10px 0 0 !important;
+    margin: 16vh 10px 0 0 !important;
     position: relative !important;
     top: unset !important;
     right: unset !important;
     text-align: right !important;
+    opacity: 0.5;
   }
+
+  .uc_social_media {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+    justify-content: center;
+  }
+  .uc_social_media li {
+    padding: 0 10px;
+    font-size: 18px;
+  }
+  #side-nav-panel form.searchform {
+    border: 1px solid #C2C2C2;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    padding:  0;
+    margin: 0 10px;
+  }
+
   #side-nav-panel
     .menu-wrap
     .mobile-menu
@@ -219,6 +257,9 @@ font-weight: 500 !important;
     font-size: 16px !important;
     opacity: 0.8 !important;
     padding: 5px 0 !important;
+  }
+  #menu-principalmenu-1 .menu-item {
+    border-bottom-colot: var(--purple-black-t) !important;
   }
     .uc-sticky-navbar {
         /* background-color: #F8FAFC !important; */

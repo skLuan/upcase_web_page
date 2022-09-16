@@ -33,6 +33,13 @@ function upcase_search_form($el_class = '')
 	return apply_filters('porto_search_form', $result);
 }
 
+//Social media 
+function social_media_link($socialMedia = '') {
+$media = ['facebook' => 'https://www.facebook.com/upcase',
+		'instagram' => 'https://www.instagram.com/upcase.com.co/',
+		'whatsapp' => 'https://wa.me/573153801321',];
+return esc_url($media[$socialMedia]);
+}
 // horizontal filter
 function upcase_woocommerce_output_horizontal_filter()
 {

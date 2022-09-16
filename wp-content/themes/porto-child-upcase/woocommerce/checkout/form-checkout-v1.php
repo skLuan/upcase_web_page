@@ -23,6 +23,30 @@ $get_checkout_url = wc_get_checkout_url();
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="row" id="customer_details">
+			<div class="hint border-1 border-color-quaternary">
+				<?php
+				$date = date_create('l n');
+				$threeDays = new DateInterval("P3D");
+				date_add($date, $threeDays);
+				
+				$format = datefmt_create('es_CO',
+					\IntlDateFormatter::FULL,
+					\IntlDateFormatter::FULL,
+					pattern: 'eee, d MMM yy'
+	);
+				switch(date_format($date, 'N')){
+					case 6:
+						date_add($date, new DateInterval("P2D"));
+					break;
+					case 7:
+						date_add($date, new DateInterval("P1D"));
+					break;
+				}
+			$preString = "Comprando hoy  antes del medio día tu pedido puede tardar hasta el <b>";
+				// echo $preString . date_format($date, 'j D M y') . "</b> "
+				echo $preString . datefmt_format($format, $date) . "</b> "
+				?>	
+			</div>
 			<div class="col-lg-7">
 				<div class="align-left">
 					<div class="box-content">
