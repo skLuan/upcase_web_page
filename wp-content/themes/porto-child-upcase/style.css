@@ -57,6 +57,12 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
   display: flex !important;
   align-items: center !important;
 } 
+
+/* ------------------------------ Swiper ----------*/
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: unset !important;
+}
+
 /* ------------------------------ Breacrumb */
 .uc-breadcrumbs-wrap .breadcrumb li, .woo-page-header .breadcrumb li a {
   font-weight: 500 !important;
@@ -143,6 +149,10 @@ font-weight: 500 !important;
     font-size: 18px;
   }
 
+.main-content {
+padding-top: 0;
+}
+
 /* ---------------------------------- Desktop */
 @media screen and (min-width: 992px) {
   #menu-principalmenu > .menu-item {
@@ -197,15 +207,11 @@ font-weight: 500 !important;
 /* ------------ FPD desktop */
 
 
-
 }
 /* ---------------------------------- Mobile */
 @media screen and (max-width: 992px) {
   .page-top {
   padding: 0;
-}
-  .main-content {
-  padding-top: 0;
 }
   .welcome-msg {
    display: flex !important;
