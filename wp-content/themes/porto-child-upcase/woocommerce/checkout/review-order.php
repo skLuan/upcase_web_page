@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 <table class="shop_table review-order woocommerce-checkout-review-order-table mb-0">
 	<thead>
 		<tr>
-			<th colspan="2" class="product-name"><h4 class="mb-0"><?php esc_html_e( 'Product', 'woocommerce' ); ?></h4></th>
+			<th colspan="2" class="product-name"><h4 class="mb-0"><?php esc_html_e( 'Producto', 'woocommerce' ); ?></h4></th>
 		</tr>
 	</thead>
 	<tbody>

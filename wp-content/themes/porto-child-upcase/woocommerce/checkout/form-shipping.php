@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 		<div id="ship-to-different-address" class="porto-checkbox">
 			<input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox porto-control-input" <?php checked( apply_filters( 'woocommerce_ship_to_different_address_checked', 'shipping' === get_option( 'woocommerce_ship_to_destination' ) ? 1 : 0 ), 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
 			<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox porto-control-label ps-1 font-size-md" for="ship-to-different-address-checkbox">
-				<span><?php esc_html_e( 'Ship to a different address?', 'woocommerce' ); ?></span>
+				<span><?php esc_html_e( 'Enviar a una dirección distinta?', 'woocommerce' ); ?></span>
 			</label>
 		</div>
 
@@ -55,7 +55,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
 
-			<h3><?php esc_html_e( 'Additional information', 'woocommerce' ); ?></h3>
+			<h3><?php esc_html_e( 'Información adicional', 'woocommerce' ); ?></h3>
 
 		<?php endif; ?>
 

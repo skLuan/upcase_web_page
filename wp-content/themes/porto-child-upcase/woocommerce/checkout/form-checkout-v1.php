@@ -59,7 +59,7 @@ $get_checkout_url = wc_get_checkout_url();
 				<div class="align-left">
 					<div class="checkout-order-review align-left">
 						<div class="box-content featured-boxes">
-							<h3 id="order_review_heading" class="text-md text-uppercase"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+							<h3 id="order_review_heading" class="text-md text-uppercase"><?php esc_html_e( 'Tu orden', 'woocommerce' ); ?></h3>
 
 							<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
