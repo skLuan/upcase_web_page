@@ -670,33 +670,33 @@ class WC_Countries {
 	 * @return array
 	 */
 	public function get_default_address_fields() {
-		$address_2_label = __( 'Apartment, suite, unit, etc.', 'woocommerce' );
+		$address_2_label = __( 'Apartamento, edificio, unidad, etc.', 'woocommerce' );
 
 		// If necessary, append '(optional)' to the placeholder: we don't need to worry about the
 		// label, though, as woocommerce_form_field() takes care of that.
 		if ( 'optional' === get_option( 'woocommerce_checkout_address_2_field', 'optional' ) ) {
-			$address_2_placeholder = __( 'Apartment, suite, unit, etc. (optional)', 'woocommerce' );
+			$address_2_placeholder = __( 'Apartamento, edificio, unidad, etc. (opcional)', 'woocommerce' );
 		} else {
 			$address_2_placeholder = $address_2_label;
 		}
 
 		$fields = array(
 			'first_name' => array(
-				'label'        => __( 'First name', 'woocommerce' ),
+				'label'        => __( 'Nombre', 'woocommerce' ),
 				'required'     => true,
 				'class'        => array( 'form-row-first' ),
 				'autocomplete' => 'given-name',
 				'priority'     => 10,
 			),
 			'last_name'  => array(
-				'label'        => __( 'Last name', 'woocommerce' ),
+				'label'        => __( 'Apellido', 'woocommerce' ),
 				'required'     => true,
 				'class'        => array( 'form-row-last' ),
 				'autocomplete' => 'family-name',
 				'priority'     => 20,
 			),
 			'company'    => array(
-				'label'        => __( 'Company name', 'woocommerce' ),
+				'label'        => __( 'Empresa', 'woocommerce' ),
 				'class'        => array( 'form-row-wide' ),
 				'autocomplete' => 'organization',
 				'priority'     => 30,
@@ -704,16 +704,16 @@ class WC_Countries {
 			),
 			'country'    => array(
 				'type'         => 'country',
-				'label'        => __( 'Country / Region', 'woocommerce' ),
+				'label'        => __( 'País / Región', 'woocommerce' ),
 				'required'     => true,
 				'class'        => array( 'form-row-wide', 'address-field', 'update_totals_on_change' ),
 				'autocomplete' => 'country',
 				'priority'     => 40,
 			),
 			'address_1'  => array(
-				'label'        => __( 'Street address', 'woocommerce' ),
+				'label'        => __( 'Dirección', 'woocommerce' ),
 				/* translators: use local order of street name and house number. */
-				'placeholder'  => esc_attr__( 'House number and street name', 'woocommerce' ),
+				'placeholder'  => esc_attr__( 'Número de casa y nombre de la calle', 'woocommerce' ),
 				'required'     => true,
 				'class'        => array( 'form-row-wide', 'address-field' ),
 				'autocomplete' => 'address-line1',
@@ -729,7 +729,7 @@ class WC_Countries {
 				'required'     => 'required' === get_option( 'woocommerce_checkout_address_2_field', 'optional' ),
 			),
 			'city'       => array(
-				'label'        => __( 'Town / City', 'woocommerce' ),
+				'label'        => __( 'Pueblo / Ciudad', 'woocommerce' ),
 				'required'     => true,
 				'class'        => array( 'form-row-wide', 'address-field' ),
 				'autocomplete' => 'address-level2',
@@ -737,7 +737,7 @@ class WC_Countries {
 			),
 			'state'      => array(
 				'type'         => 'state',
-				'label'        => __( 'State / County', 'woocommerce' ),
+				'label'        => __( 'Departamento / Estado / Condado', 'woocommerce' ),
 				'required'     => true,
 				'class'        => array( 'form-row-wide', 'address-field' ),
 				'validate'     => array( 'state' ),
@@ -745,7 +745,7 @@ class WC_Countries {
 				'priority'     => 80,
 			),
 			'postcode'   => array(
-				'label'        => __( 'Postcode / ZIP', 'woocommerce' ),
+				'label'        => __( 'Código Postal', 'woocommerce' ),
 				'required'     => true,
 				'class'        => array( 'form-row-wide', 'address-field' ),
 				'validate'     => array( 'postcode' ),
@@ -959,7 +959,7 @@ class WC_Countries {
 							'required' => false,
 						),
 						'state' => array(
-							'label' => __( 'Department', 'woocommerce' ),
+							'label' => __( 'Departmento', 'woocommerce' ),
 						),
 					),
 					'CR' => array(

@@ -236,9 +236,9 @@ class WC_Checkout {
 				'order_comments' => array(
 					'type'        => 'textarea',
 					'class'       => array( 'notes' ),
-					'label'       => __( 'Order notes', 'woocommerce' ),
+					'label'       => __( 'Anotaciones y comentarios para la entrega', 'woocommerce' ),
 					'placeholder' => esc_attr__(
-						'Notes about your order, e.g. special notes for delivery.',
+						'Comentarios sobre tu orden, e.g. Indicaciones especiales de entrega, ubicación, etc.',
 						'woocommerce'
 					),
 				),
