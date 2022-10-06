@@ -1,22 +1,32 @@
 <?php
 require_once(get_stylesheet_directory() . '/inc/functions/breadcrumbs.php');
-add_action( 'wp_enqueue_scripts', 'porto_child_css', 1001 );
+// require_once(get_stylesheet_directory() . '/inc/functions/woocommerce.php');
+add_action('wp_enqueue_scripts', 'porto_child_css', 1001);
 
 // Load CSS
-function porto_child_css() {
+function porto_child_css()
+{
 	// porto child theme styles
 	wp_enqueue_style('font-awesome');
-	wp_deregister_style( 'styles-child' );
-	wp_register_style( 'styles-child', esc_url( get_stylesheet_directory_uri() ) . '/style.css' );
-	wp_enqueue_style( 'styles-child' );
+	wp_deregister_style('styles-child');
+	wp_register_style('styles-child', esc_url(get_stylesheet_directory_uri()) . '/style.css');
+	wp_enqueue_style('styles-child');
 
 
-	if ( is_rtl() ) {
-		wp_deregister_style( 'styles-child-rtl' );
-		wp_register_style( 'styles-child-rtl', esc_url( get_stylesheet_directory_uri() ) . '/style_rtl.css' );
-		wp_enqueue_style( 'styles-child-rtl' );
+	if (is_rtl()) {
+		wp_deregister_style('styles-child-rtl');
+		wp_register_style('styles-child-rtl', esc_url(get_stylesheet_directory_uri()) . '/style_rtl.css');
+		wp_enqueue_style('styles-child-rtl');
 	}
 }
+
+function loadScripts()
+{
+	wp_enqueue_script('mainUpcase', get_stylesheet_directory_uri() . '/assets/js/mainUpcase.js', [], 1.0, true);
+	// wp_register_script('mainUpcase', get_stylesheet_directory_uri( ).'/assets/js/mainUpcase.js', [], 1.0, true);
+}
+add_action('init', 'loadScripts', 100);
+
 //Search form
 function upcase_search_form($el_class = '')
 {
@@ -34,14 +44,17 @@ function upcase_search_form($el_class = '')
 }
 
 //Social media 
-function social_media_link($socialMedia = '') {
-$media = ['facebook' => 'https://www.facebook.com/upcase',
+function social_media_link($socialMedia = '')
+{
+	$media = [
+		'facebook' => 'https://www.facebook.com/upcase',
 		'instagram' => 'https://www.instagram.com/upcase.com.co/',
-		'whatsapp' => 'https://wa.me/573153801321',];
-return esc_url($media[$socialMedia]);
+		'whatsapp' => 'https://wa.me/573153801321',
+	];
+	return esc_url($media[$socialMedia]);
 }
 // horizontal filter
-function upcase_woocommerce_output_horizontal_filter()
+function upcase_child_woocommerce_output_horizontal_filter()
 {
 	global $porto_shop_filter_layout, $porto_settings;
 	if (!isset($porto_shop_filter_layout)) {
@@ -73,13 +86,53 @@ function upcase_woocommerce_output_horizontal_filter()
 		unset($porto_shop_filter_layout);
 	}
 }
+function uc_filter() {
+	$thisId = get_current_blog_id();
+	// $pageSlug = get_blog_details();
+	$pageSlug = get_post_type(get_the_ID());
+	$terms = get_term_children(17, 'product_cat');
+	echo do_shortcode('[searchandfilter id="general"]');
+	
+?>
+	<!-- <div class="flex-row filter_container d-flex">
+		<div class="container_cat">
+			<label for="cat">Categoria</label>
+			<section class="px-3 py-1 bg-white" id="cat">
+				<?php foreach ($terms as $term) :
+					
+					?>
+				
+					<?php endforeach; ?>
+			</section>
+		</div>
+		<div class="">
+			<label for="marca">Marca</label>
+			<section class="px-3 py-1 bg-white" id="marca">
+				<option value="">example</option>
+			</section>
+		</div>
+		<div class="">
+			<label for="modelo">Modelo</label>
+			<section class="px-3 py-1 bg-white" id="modelo">
+				<option value="">example</option>
+			</section>
+		</div>
+	</div> -->
 
-function uc_add_actions() {
-	add_action('woocommerce_before_shop_loop', 'upcase_woocommerce_output_horizontal_filter', 25);
+
+<?php
 }
 
-function uc_remove_actions() {
+function uc_add_actions()
+{
+	add_action('woocommerce_before_shop_loop', 'upcase_child_woocommerce_output_horizontal_filter', 25);
+	// add_action('woocommerce_before_shop_loop', 'uc_filter', 25);
+}
+
+function uc_remove_actions()
+{
 	remove_action('woocommerce_before_shop_loop', 'porto_woocommerce_output_horizontal_filter', 25);
 }
 add_action('wp', 'uc_remove_actions', 11);
 add_action('wp_loaded', 'uc_add_actions', 10);
+?>

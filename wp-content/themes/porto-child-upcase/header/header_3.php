@@ -100,7 +100,7 @@ global $porto_settings, $porto_layout;
 			</div>
 		</div>
 		<?php get_template_part('header/mobile_menu'); ?>
-		<a href="https://wa.me/573153801321" class="mr-3 mr-lg-4 end-0 position-fixed" style="bottom: 8%;"> <img width="45px" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/icons/logos_whatsapp-icon.svg" alt=""></a>
+		<a target="_blank" href="https://wa.me/573153801321" class="mr-3 mr-lg-4 end-0 position-fixed" style="bottom: 8%;"> <img width="45px" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/icons/logos_whatsapp-icon.svg" alt=""></a>
 
 	</div>
 </header>

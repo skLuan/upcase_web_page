@@ -62,13 +62,22 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
 .swiper-pagination-bullets.swiper-pagination-horizontal{
   bottom: unset !important;
 }
+/* ------------------------------------- */
 
+.product-summary-wrap{
+  margin-top: 40px;
+}
+.uc_btn {
+  font-size:14px !important;
+}
 /* ------------------------------ Breacrumb */
 .uc-breadcrumbs-wrap .breadcrumb li, .woo-page-header .breadcrumb li a {
   font-weight: 500 !important;
   font-size: 0.842rem !important;
 }
-
+.product-image {
+  border: unset !important;
+}
 .woo-page-header {
   border-top: 1px solid #f8fafc;
   border-bottom: 2px solid #f8fafc;
@@ -102,6 +111,22 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
+/* ---------------- uc_filter */
+  .filter_container {
+    margin: 20px auto 20px 20px !important;
+    width: 50%;
+    justify-content: space-evenly;
+  }
+  .filter_container div {
+    /* width: 50%; */
+    margin: 0 20px
+  }
+  .filter_container div section {
+    /* width: 50%; */
+  }
+.woocommerce-ordering {
+  margin-right: 20px !important;
+}
 /* ------------------------------ Filtros de categorización */
  .filter-content .yith-wcan-dropdown, .filter-content .filter-items {
   font-size: 14px !important;
@@ -109,11 +134,17 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
  .matching-items .filter-item label {
   display: unset !important;
  }
+.yith-wcan-filters .yith-wcan-filter .yith-wcan-dropdown .dropdown-wrapper .matching-items li {
+  font-weight: initial;
+}
 
  .yith-wcan-filters .yith-wcan-filter .yith-wcan-dropdown.open, .dropdown-wrapper {
-  border-color: var(--purple-primary-t) !important;
-  box-shadow: 0 0 7px 0 var(--purple-primary-t) !important;
-  
+      border: 1px solid #C2C2C2 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1) !important;
+}
+.yith-wcan-filters .yith-wcan-filter .filter-items .filter-item.active > a, .yith-wcan-filters .yith-wcan-filter .filter-items .filter-item.active > label > a {
+  font-weight: 700;
+  color: var(--purple-black);
 }
 .shop-loop-before {
 font-size: 14px !important;
