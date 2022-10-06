@@ -16,7 +16,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
 	<?php if ( 'v1' == $cart_ver ) : ?>
 
-	<p class="m-t-xs m-b-none"><?php printf( '<a href="#" class="shipping-calculator-button">%s</a>', esc_html( ! empty( $button_text ) ? $button_text : __( 'Calculate shipping', 'woocommerce' ) ) ); ?></p>
+	<p class="m-t-xs m-b-none"><?php printf( '<a href="#" class="shipping-calculator-button">%s</a>', esc_html( ! empty( $button_text ) ? $button_text : __( 'Calcular envío', 'woocommerce' ) ) ); ?></p>
 
 	<?php endif; ?>
 
@@ -80,7 +80,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 			</p>
 		<?php endif; ?>
 
-		<p><button type="submit" name="calc_shipping" value="1" class="button wc-action-btn mb-3"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button></p>
+		<p><button type="submit" name="calc_shipping" value="1" class="mb-3 uc_btn button wc-action-btn"><?php esc_html_e( 'Actualizar dirección', 'woocommerce' ); ?></button></p>
 
 		<?php wp_nonce_field( 'woocommerce-shipping-calculator', 'woocommerce-shipping-calculator-nonce' ); ?>
 	</section>

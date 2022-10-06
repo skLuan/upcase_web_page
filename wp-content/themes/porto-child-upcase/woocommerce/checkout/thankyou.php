@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="woocommerce-order woocommerce-thankyou col-lg-8 mx-auto px-0">
+<div class="px-0 mx-auto woocommerce-order woocommerce-thankyou col-lg-8">
 
 	<?php
 	if ( $order ) :
@@ -39,19 +39,19 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php else : ?>
 
-			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received line-height-md text-center text-v-dark"><i class="fas fa-check me-2"></i><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<p class="text-center woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received line-height-md text-v-dark"><i class="fas fa-check me-2"></i><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( '¡Gracias! tu orden ha sido recibida.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 
-			<div class="d-flex flex-wrap order-info m-b-xl m-t-xs pt-3 w-100">
+			<div class="flex-wrap pt-3 d-flex order-info m-b-xl m-t-xs w-100">
 				<div class="woocommerce-order-overview__order order order-item">
-					<?php esc_html_e( 'Order Number', 'woocommerce' ); ?>
+					<?php esc_html_e( 'Número de orden', 'woocommerce' ); ?>
 					<mark class="font-weight-bold order-number"><?php echo esc_html( $order->get_order_number() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></mark>
 				</div>
 				<div class="woocommerce-order-overview__status status order-item">
-					<?php esc_html_e( 'Status', 'woocommerce' ); ?>
+					<?php esc_html_e( 'Estado', 'woocommerce' ); ?>
 					<mark class="font-weight-bold order-status text-primary text-uppercase"><?php echo wc_get_order_status_name( $order->get_status() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></mark>
 				</div>
 				<div class="woocommerce-order-overview__date date order-item">
-					<?php esc_html_e( 'Date', 'woocommerce' ); ?>
+					<?php esc_html_e( 'Fecha', 'woocommerce' ); ?>
 					<mark class="font-weight-bold order-date"><?php echo wc_format_datetime( $order->get_date_created() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></mark>
 				</div>
 				<div class="woocommerce-order-overview__total total order-item">
@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 
 				<?php if ( $order->get_payment_method_title() ) : ?>
 					<div class="woocommerce-order-overview__payment-method method order-item">
-						<?php esc_html_e( 'Payment method:', 'woocommerce' ); ?>
+						<?php esc_html_e( 'Método de pago:', 'woocommerce' ); ?>
 						<mark class="font-weight-bold order-status"><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></mark>
 					</div>
 				<?php endif; ?>
@@ -74,7 +74,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php else : ?>
 
-		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__('¡Gracias! tu orden ha sido recibida.', 'woocommerce' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 
 	<?php endif; ?>
 

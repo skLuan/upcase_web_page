@@ -44,7 +44,7 @@ if ( $products->have_posts() ) :
 
 	<div class="upsells products">
 
-		<h2 class="slider-title"><span class="inline-title"><?php esc_html_e( 'You may also like&hellip;', 'woocommerce' ); ?></span><span class="line"></span></h2>
+		<h2 class="slider-title"><span class="inline-title"><?php esc_html_e( 'Tambien te podría gustar&hellip;', 'woocommerce' ); ?></span><span class="line"></span></h2>
 
 		<div class="slider-wrapper">
 

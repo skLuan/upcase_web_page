@@ -18,13 +18,13 @@ $has_items = ( ! WC()->cart->is_empty() );
 <?php
 if ( empty( $porto_settings['minicart-content'] ) ) {
 	$items = sizeof( WC()->cart->get_cart() );
-	echo '<div class="total-count text-v-dark clearfix">';
+	echo '<div class="clearfix total-count text-v-dark">';
 		/* translators: %s: Items count */
 		echo '<span>' . sprintf( esc_html( _n( '%d ITEM', '%d ITEMS', $items, 'porto' ) ), $items ) . '</span>';
-		echo '<a class="text-v-dark pull-right text-uppercase" href="' . esc_url( wc_get_cart_url() ) . '">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
+		echo '<a class="text-v-dark pull-right text-uppercase" href="' . esc_url( wc_get_cart_url() ) . '">' . esc_html__( 'Ver carrito', 'woocommerce' ) . '</a>';
 	echo '</div>';
 } else {
-	echo '<h3>' . esc_html__( 'Shopping Cart', 'porto' ) . '</h3>';
+	echo '<h3>' . esc_html__( 'Carrito de compras', 'porto' ) . '</h3>';
 }
 ?>
 
@@ -70,7 +70,7 @@ if ( empty( $porto_settings['minicart-content'] ) ) {
 							sprintf(
 								'<a href="%s" class="remove remove-product" aria-label="%s" data-product_id="%s" data-cart_id="%s" data-product_sku="%s"></a>',
 								esc_url( function_exists( 'wc_get_cart_remove_url' ) ? wc_get_cart_remove_url( $cart_item_key ) : WC()->cart->get_remove_url( $cart_item_key ) ),
-								esc_attr__( 'Remove this item', 'woocommerce' ),
+								esc_attr__( 'Remover este item', 'woocommerce' ),
 								esc_attr( $product_id ),
 								esc_attr( $cart_item_key ),
 								esc_attr( $_product->get_sku() )
@@ -91,9 +91,7 @@ if ( empty( $porto_settings['minicart-content'] ) ) {
 	<?php else : ?>
 
 		<li class="woocommerce-mini-cart__empty-message empty">
-			<?php
-				esc_html_e( 'No products in the cart.', 'woocommerce' );
-			?>
+			<?= esc_html_e( 'No hay productos en el carrito', 'woocommerce' ) ?>
 		</li>
 
 	<?php endif; ?>

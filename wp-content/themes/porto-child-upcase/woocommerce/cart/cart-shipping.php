@@ -27,8 +27,8 @@ $formatted_destination    = str_replace( '<br/>', ', ', $formatted_destination )
 ?>
 <?php if ( 'v2' == porto_cart_version() && is_cart() ) : ?>
 	<?php if ( $available_methods ) : ?>
-		<h4 class="m-b-sm"><?php esc_html_e( 'Shipping', 'woocommerce' ); ?></h4>
-		<ul id="shipping_method" class="woocommerce-shipping-methods mb-2">
+		<h4 class="m-b-sm"><?php esc_html_e( 'Envio', 'woocommerce' ); ?></h4>
+		<ul id="shipping_method" class="mb-2 woocommerce-shipping-methods">
 			<?php foreach ( $available_methods as $method ) : ?>
 				<li>
 					<div class="porto-radio <?php echo 1 < count( $available_methods ) ? '' : esc_attr('porto-control-disable') ?>">
@@ -51,7 +51,7 @@ $formatted_destination    = str_replace( '<br/>', ', ', $formatted_destination )
 				if ( $formatted_destination ) {
 					// Translators: $s shipping destination.
 					printf( esc_html__( 'Envío a %s.', 'woocommerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' );
-					$calculator_text = esc_html__( 'Change address', 'woocommerce' );
+					$calculator_text = esc_html__( 'Cambiar dirección', 'woocommerce' );
 				} else {
 					echo wp_kses_post( apply_filters( 'woocommerce_shipping_estimate_html', __( 'Las opciones de envío se actualizarán durante antes de realizar el pago', 'woocommerce' ) ) );
 				}
@@ -75,12 +75,14 @@ $formatted_destination    = str_replace( '<br/>', ', ', $formatted_destination )
 	<?php endif; ?>
 
 	<?php if ( $show_shipping_calculator ) : ?>
-		<?php woocommerce_shipping_calculator( $calculator_text ); ?>
+		<?php
+			$calculator_text = 'Actualizar la dirección';
+			woocommerce_shipping_calculator( $calculator_text ); ?>
 	<?php endif; ?>
 <?php else : ?>
 	<tr class="woocommerce-shipping-totals shipping">
 		<td colspan="2" class="text-start" data-title="<?php echo esc_attr( $package_name ); ?>">
-			<h4 class="m-b-sm" ><?php echo wp_kses_post( $package_name ); ?></h4>
+			<h4 class="m-b-sm" ><?= 'Envío' // wp_kses_post( $package_name ); ?></h4>
 			<?php if ( $available_methods ) : ?>
 				<ul id="shipping_method" class="woocommerce-shipping-methods">
 					<?php foreach ( $available_methods as $method ) : ?>

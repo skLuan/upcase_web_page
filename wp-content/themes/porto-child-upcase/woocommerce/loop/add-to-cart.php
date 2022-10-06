@@ -106,7 +106,7 @@ $porto_woo_version = porto_get_woo_version_number();
 			echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
 		}
 		if ( $quickview && ( ! isset( $woocommerce_loop['addlinks_pos'] ) || 'onimage2' !== $woocommerce_loop['addlinks_pos'] ) ) {
-			$label = ( ( isset( $porto_settings['product-quickview-label'] ) && $porto_settings['product-quickview-label'] ) ? $porto_settings['product-quickview-label'] : __( 'Quick View', 'porto' ) );
+			$label = ( ( isset( $porto_settings['product-quickview-label'] ) && $porto_settings['product-quickview-label'] ) ? $porto_settings['product-quickview-label'] : __( 'Vista rápida', 'porto' ) );
 			echo '<div class="quickview" data-id="' . absint( $product->get_id() ) . '" title="' . esc_attr( $label ) . '">' . esc_html( $label ) . '</div>';
 		}
 		if ( $compare ) {
@@ -116,7 +116,7 @@ $porto_woo_version = porto_get_woo_version_number();
 	</div>
 	<?php
 	if ( isset( $woocommerce_loop['addlinks_pos'] ) && 'onimage2' == $woocommerce_loop['addlinks_pos'] ) {
-		$label = ( ( isset( $porto_settings['product-quickview-label'] ) && $porto_settings['product-quickview-label'] ) ? $porto_settings['product-quickview-label'] : __( 'Quick View', 'porto' ) );
+		$label = ( ( isset( $porto_settings['product-quickview-label'] ) && $porto_settings['product-quickview-label'] ) ? $porto_settings['product-quickview-label'] : __( 'Vista rápida', 'porto' ) );
 		echo '<div class="quickview" data-id="' . absint( $product->get_id() ) . '" title="' . esc_attr( $label ) . '">' . esc_html( $label ) . '</div>';
 	}
 	?>

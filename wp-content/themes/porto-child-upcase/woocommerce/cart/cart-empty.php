@@ -23,13 +23,13 @@ defined( 'ABSPATH' ) || exit;
 
 
 if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
-	<div class="cart-empty-page text-center">
+	<div class="text-center cart-empty-page">
 		<?php do_action( 'woocommerce_cart_is_empty' ); ?>
 		<i class="cart-empty porto-icon-bag-2"></i>
-		<p class="px-3 py-2 cart-empty"><?php esc_html_e( 'No products added to the cart', 'porto' ); ?></p>
+		<p class="px-3 py-2 cart-empty"><?php esc_html_e( 'No has añadido ningun producto :(', 'porto' ); ?></p>
 		<p class="return-to-shop">
 			<a class="button wc-backward btn-v-dark btn-go-shop" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-				<?php esc_html_e( 'Return to shop', 'woocommerce' ); ?>
+				<?php esc_html_e( 'Regresar a la tienda', 'woocommerce' ); ?>
 			</a>
 		</p>
 	</div>

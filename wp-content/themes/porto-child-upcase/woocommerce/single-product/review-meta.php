@@ -14,7 +14,7 @@ if ( '0' === $comment->comment_approved ) { ?>
 
 	<p class="meta">
 		<em class="woocommerce-review__awaiting-approval">
-			<?php esc_html_e( 'Your review is awaiting approval', 'woocommerce' ); ?>
+			<?php esc_html_e( 'Tu reseña esta en proceso de ser aprovada.', 'woocommerce' ); ?>
 		</em>
 	</p>
 

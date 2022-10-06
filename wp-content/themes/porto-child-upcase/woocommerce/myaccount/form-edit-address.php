@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$page_title = ( 'billing' === $load_address ) ? esc_html__( 'Billing address', 'woocommerce' ) : esc_html__( 'Shipping address', 'woocommerce' );
+$page_title = ( 'billing' === $load_address ) ? esc_html__( 'Dirección de facturación', 'woocommerce' ) : esc_html__( 'Dirección de envío', 'woocommerce' );
 
 if ( version_compare( porto_get_woo_version_number(), '2.5.1', '<' ) ) {
 	global $current_user;
@@ -49,7 +49,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 			</div>
 			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 			<p class="clearfix">
-				<button type="submit" class="button btn-lg btn-v-dark btn-go-shop mt-3 pt-right" name="save_address" value="<?php esc_attr_e( 'Save address', 'woocommerce' ); ?>"><?php esc_html_e( 'Save address', 'woocommerce' ); ?></button>
+				<button type="submit" class="mt-3 button btn-lg btn-v-dark btn-go-shop pt-right" name="save_address" value="<?php esc_attr_e( 'Save address', 'woocommerce' ); ?>"><?php esc_html_e( 'Save address', 'woocommerce' ); ?></button>
 				<?php wp_nonce_field( 'woocommerce-edit_address', 'woocommerce-edit-address-nonce' ); ?>
 				<input type="hidden" name="action" value="edit_address" />
 			</p>

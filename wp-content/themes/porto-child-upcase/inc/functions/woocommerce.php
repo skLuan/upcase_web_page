@@ -76,7 +76,8 @@ add_action( 'woocommerce_single_product_summary', 'porto_woocommerce_sale_produc
 add_action( 'woocommerce_before_shop_loop_item_title', 'porto_woocommerce_sale_product_period', 20 );
 
 add_action( 'porto_woocommerce_loop_links_on_image', 'woocommerce_template_loop_add_to_cart' );
-add_action( 'woocommerce_after_add_to_cart_button', 'porto_view_cart_after_add', defined( 'WC_STRIPE_PLUGIN_NAME' ) ? 8 : 35 );
+remove_action( 'woocommerce_after_add_to_cart_button', 'porto_view_cart_after_add', defined( 'WC_STRIPE_PLUGIN_NAME' ) ? 8 : 35 );
+add_action( 'woocommerce_after_add_to_cart_button', 'uc_view_cart_after_add', defined( 'WC_STRIPE_PLUGIN_NAME' ) ? 8 : 35 );
 
 add_action( 'woocommerce_checkout_before_terms_and_conditions', 'porto_woocommerce_add_js_composer_shortcodes', 2 );
 function porto_woocommerce_add_js_composer_shortcodes() {
@@ -190,7 +191,7 @@ function porto_woocommerce_open_after_clearfix_div() {
 	if ( wc_get_loop_prop( 'is_shortcode' ) ) {
 		$class_suffix .= ' is-shortcode';
 	}
-	echo '<div class="shop-loop-after clearfix' . $class_suffix . '">';
+	echo '<div class="clearfix shop-loop-after' . $class_suffix . '">';
 }
 
 function porto_woocommerce_close_before_clearfix_div() {
@@ -381,7 +382,7 @@ function porto_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $porto_settings;
 	if ( 'minicart-inline' == $minicart_type || 'minicart-text' == $minicart_type ) {
 		$_cart_total = '<span class="cart-price">' . WC()->cart->get_cart_subtotal() . '</span>';
-		$cart_text   = empty( $porto_settings['minicart-text'] ) ? __( 'Cart', 'porto' ) : $porto_settings['minicart-text'];
+		$cart_text   = empty( $porto_settings['minicart-text'] ) ? __( 'Carrito', 'porto' ) : $porto_settings['minicart-text'];
 
 		$fragments['#mini-cart .cart-subtotal'] = '<span class="cart-subtotal">' . esc_html( $cart_text ) . ' ' . $_cart_total . '</span>';
 
@@ -527,7 +528,7 @@ if ( wp_doing_ajax() ) {
 		<h3><?php esc_html_e( 'Wishlist', 'porto' ); ?></h3>
 
 		<?php if ( empty( $wishlist_items ) ) : ?>
-		<p class="empty-msg"><?php esc_html_e( 'No products in wishlist.', 'porto' ); ?></p>
+		<p class="empty-msg"><?php esc_html_e( 'No hay productos en la lista de deseados', 'porto' ); ?></p>
 	<?php else : ?>
 		<ul class="product_list_widget">
 		<?php
@@ -572,7 +573,7 @@ if ( wp_doing_ajax() ) {
 		}
 		?>
 		</ul>
-		<a href="<?php echo esc_url( YITH_WCWL()->get_wishlist_url() ); ?>" class="btn btn-dark btn-modern btn-block btn-sm"><?php esc_html_e( 'Go To Wishlist', 'porto' ); ?></a>
+		<a href="<?php echo esc_url( YITH_WCWL()->get_wishlist_url() ); ?>" class="btn btn-dark btn-modern btn-block btn-sm"><?php esc_html_e( 'Ir a la lista de deseados', 'porto' ); ?></a>
 		<?php
 		endif;
 		// phpcs:enable
@@ -609,7 +610,7 @@ function porto_get_rating_html( $product, $rating = null ) {
 		$rating = $product->get_average_rating();
 	}
 	$rating_html  = '<div class="star-rating" title="' . esc_attr( $rating ) . '">';
-	$rating_html .= '<span style="width:' . ( ( floatval( $rating ) / 5 ) * 100 ) . '%"><strong class="rating">' . esc_html( $rating ) . '</strong> ' . __( 'out of 5', 'porto' ) . '</span>';
+	$rating_html .= '<span style="width:' . ( ( floatval( $rating ) / 5 ) * 100 ) . '%"><strong class="rating">' . esc_html( $rating ) . '</strong> ' . __( 'de 5', 'porto' ) . '</span>';
 	$rating_html .= '</div>';
 	return $rating_html;
 }
@@ -1011,7 +1012,7 @@ function porto_woocommerce_add_stock_html() {
 	global $product;
 	if ( $product->is_type( 'simple' ) ) {
 		$availability      = $product->get_availability();
-		$availability_html = empty( $availability['availability'] ) ? '' : '<span class="product-stock ' . esc_attr( $availability['class'] ) . '">' . esc_html__( 'Availability', 'porto' ) . ': <span class="stock">' . esc_html( $availability['availability'] ) . '</span></span>';
+		$availability_html = empty( $availability['availability'] ) ? '' : '<span class="product-stock ' . esc_attr( $availability['class'] ) . '">' . esc_html__( 'Disponibilidad', 'porto' ) . ': <span class="stock">' . esc_html( $availability['availability'] ) . '</span></span>';
 
 		echo apply_filters( 'porto_woocommerce_stock_html', $availability_html, $availability['availability'], $product );
 	}
@@ -1285,11 +1286,11 @@ function porto_wooc_extra_register_start_fields() {
 	if ( isset( $porto_settings['reg-form-info'] ) && 'full' == $porto_settings['reg-form-info'] ) :
 		?>
 		<p class="form-row form-row-first">
-			<label for="reg_billing_first_name"><?php esc_html_e( 'First Name', 'porto' ); ?><span class="required">*</span></label>
+			<label for="reg_billing_first_name"><?php esc_html_e( 'Nombre', 'porto' ); ?><span class="required">*</span></label>
 			<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php echo ! empty( $_POST['billing_first_name'] ) ? esc_attr( $_POST['billing_first_name'] ) : ''; ?>" />
 		</p>
 		<p class="form-row form-row-last">
-			<label for="reg_billing_last_name"><?php esc_html_e( 'Last Name', 'porto' ); ?><span class="required">*</span></label>
+			<label for="reg_billing_last_name"><?php esc_html_e( 'Apellido', 'porto' ); ?><span class="required">*</span></label>
 			<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php echo ! empty( $_POST['billing_last_name'] ) ? esc_attr( $_POST['billing_last_name'] ) : ''; ?>" />
 		</p>
 		<div class="clear"></div>
@@ -1310,10 +1311,10 @@ function porto_wooc_validate_extra_register_fields( $username, $email, $validati
 	global $porto_settings;
 	if ( isset( $porto_settings['reg-form-info'] ) && 'full' == $porto_settings['reg-form-info'] ) {
 		if ( isset( $_POST['billing_first_name'] ) && empty( $_POST['billing_first_name'] ) ) {
-			$validation_errors->add( 'billing_first_name_error', __( '<strong>Error</strong>: First name is required!', 'porto' ) );
+			$validation_errors->add( 'billing_first_name_error', __( '<strong>Error</strong>: Nombre es requerido!', 'porto' ) );
 		}
 		if ( isset( $_POST['billing_last_name'] ) && empty( $_POST['billing_last_name'] ) ) {
-			$validation_errors->add( 'billing_last_name_error', __( '<strong>Error</strong>: Last name is required!.', 'porto' ) );
+			$validation_errors->add( 'billing_last_name_error', __( '<strong>Error</strong>: Apellido es requerido!.', 'porto' ) );
 		}
 	}
 }
@@ -1668,7 +1669,7 @@ function porto_woocommerce_dropdown_variation_attribute_options_html( $select_ht
 			'name'             => '',
 			'id'               => '',
 			'class'            => '',
-			'show_option_none' => __( 'Choose an option', 'woocommerce' ),
+			'show_option_none' => __( 'Escoge una opción', 'woocommerce' ),
 		)
 	);
 	$options   = $args['options'];
@@ -1897,7 +1898,7 @@ if ( defined( 'YITH_WCWL' ) ) {
 	add_filter( 'yith_wcwl_localize_script', 'porto_wcwl_remove_notice' );
 
 	function porto_yith_wcwl_before_wishlist_view() {
-		echo '<div class="align-left mt-3"><div class="box-content">';
+		echo '<div class="mt-3 align-left"><div class="box-content">';
 	}
 
 	function porto_yith_wcwl_after_wishlist_view() {
@@ -2483,10 +2484,10 @@ if ( ! function_exists( 'porto_woocommerce_product_sticky_addcart' ) ) :
 				echo '<div class="star-rating" title="' . esc_attr( $average ) . '">';
 					echo '<span style="width:' . ( ( $average / 5 ) * 100 ) . '%"></span>';
 				echo '</div>';
-				echo '<div class="availability"><span>' . ( 'out-of-stock' == $availability['class'] ? esc_html__( 'Out of stock', 'porto' ) : esc_html__( 'In stock', 'porto' ) ) . '</span></div>';
+				echo '<div class="availability"><span>' . ( 'out-of-stock' == $availability['class'] ? esc_html__( 'Sin inventario', 'porto' ) : esc_html__( 'Disponible', 'porto' ) ) . '</span></div>';
 			echo '</div>';
 			echo '<div class="add-to-cart">';
-				echo '<button type="submit" class="single_add_to_cart_button button">' . esc_html__( 'Add to cart', 'woocommerce' ) . '</button>';
+				echo '<button type="submit" class="single_add_to_cart_button button">' . esc_html__( 'Añadir al carrito', 'woocommerce' ) . '</button>';
 			echo '</div>';
 		echo '</div></div>';
 
@@ -2505,7 +2506,7 @@ if ( ! function_exists( 'porto_woocommerce_add_to_cart_notification_html' ) ) :
 				<div class="msg-box">
 					<div class="msg"><?php esc_html_e( "You've just added this product to the cart", 'porto' ); ?>:<p class="product-name text-color-primary"></p></div>
 				</div>
-				<button class="button btn-primay viewcart" data-link=""><?php esc_html_e( 'View Cart', 'porto' ); ?></button>
+				<button class="button btn-primay viewcart" data-link=""><?php esc_html_e( 'Ver carrito', 'porto' ); ?></button>
 				<button class="button btn-primay continue_shopping"><?php esc_html_e( 'Continue', 'porto' ); ?></button>
 			</div>
 		<?php else : ?>
@@ -2516,7 +2517,7 @@ if ( ! function_exists( 'porto_woocommerce_add_to_cart_notification_html' ) ) :
 						<?php printf( esc_html__( '%s ha sido agregado a tu carrito', 'porto' ), '<div class="product-name"></div>' ); ?>
 					</div>
 				</div>
-				<button class="btn btn-modern btn-sm btn-gray viewcart btn-sm" data-link=""><?php esc_html_e( 'Ver carrito', 'porto' ); ?></button>
+				<button class="btn btn-modern btn-sm btn-gray viewcart" data-link=""><?php esc_html_e( 'Ver carrito', 'porto' ); ?></button>
 				<a class="btn btn-modern btn-sm btn-dark continue_shopping" href="<?php echo esc_url( function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_url() : wc_get_page_permalink( 'checkout' ) ); ?>"><?php esc_html_e( 'Pagar', 'porto' ); ?></a>
 				<button class="mfp-close text-color-dark"></button>
 			</div>
@@ -2630,9 +2631,9 @@ function porto_add_to_cart_message_html( $message, $products, $show_qty ) {
 /**
  * Add 'View Cart' button after add to cart
  **/
-function porto_view_cart_after_add() {
+function uc_view_cart_after_add() {
 	printf(
-		'<a href="%1$s" tabindex="1" class="wc-action-btn view-cart-btn button wc-forward">%2$s</a>',
+		'<a href="%1$s" tabindex="1" class="uc wc-action-btn view-cart-btn button wc-forward">%2$s</a>',
 		esc_url( wc_get_cart_url() ),
 		esc_html__( 'Ver carrito', 'woocommerce' )
 	);

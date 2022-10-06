@@ -18,7 +18,7 @@ if ( $rating && ( ( function_exists( 'wc_review_ratings_enabled' ) && wc_review_
 		<span style="width:<?php echo (float) $rating / 5 * 100; ?>%">
 			<?php
 			/* translators: %s: Rating value */
-			printf( esc_html__( '%s out of 5', 'woocommerce' ), '<strong>' . $rating . '</strong>' );
+			printf( esc_html__( '%s de 5', 'woocommerce' ), '<strong>' . $rating . '</strong>' );
 			?>
 		</span>
 	</div>

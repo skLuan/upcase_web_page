@@ -23,7 +23,7 @@ global $product, $porto_settings;
 
 	<?php
 	if ( in_array( 'cats', $porto_settings['product-metas'] ) ) :
-		echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' );
+		echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( 'Categoria:', 'Categorias:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' );
 	endif;
 	?>
 

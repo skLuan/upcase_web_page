@@ -14,7 +14,7 @@ if ( ! porto_is_ajax() ) : ?>
 <?php endif; ?>
 		<div class="cart_totals<?php echo WC()->customer->has_calculated_shipping() ? ' calculated_shipping' : ''; ?>">
 			<?php do_action( 'woocommerce_before_cart_totals' ); ?>
-			<h2><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
+			<h2><?php esc_html_e( 'Total Carrito', 'woocommerce' ); ?></h2>
 			<table class="shop_table responsive cart-total" cellspacing="0">
 				<tr class="cart-subtotal">
 					<th><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
@@ -35,7 +35,7 @@ if ( ! porto_is_ajax() ) : ?>
 					<?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
 				<?php elseif ( WC()->cart->needs_shipping() ) : ?>
 					<tr class="shipping">
-						<th><?php esc_html_e( 'Shipping', 'woocommerce' ); ?></th>
+						<th><?php esc_html_e( 'Envío', 'woocommerce' ); ?></th>
 						<td><?php woocommerce_shipping_calculator(); ?></td>
 					</tr>
 				<?php endif; ?>
@@ -53,7 +53,7 @@ if ( ! porto_is_ajax() ) : ?>
 
 					if ( WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping() ) {
 						/* translators: %s location. */
-						$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'woocommerce' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
+						$estimated_text = sprintf( ' <small>' . esc_html__( '(estimado para %s)', 'woocommerce' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
 					}
 					if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) :
 						?>

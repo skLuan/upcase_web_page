@@ -260,7 +260,7 @@ if ( $has_quantity_type ) {
 							<?php if ( $move_to_another_wishlist && $available_multi_wishlist && count( $users_wishlists ) > 1 ) : ?>
 								<?php if ( 'select' === $move_to_another_wishlist_type ) : ?>
 									<select class="change-wishlist selectBox">
-										<option value=""><?php esc_html_e( 'Move', 'yith-woocommerce-wishlist' ); ?></option>
+										<option value=""><?php esc_html_e( 'Mover', 'yith-woocommerce-wishlist' ); ?></option>
 										<?php
 										foreach ( $users_wishlists as $wl ) :
 											/**
@@ -291,7 +291,7 @@ if ( $has_quantity_type ) {
 
 							<!-- Remove from wishlist -->
 							<?php if ( $repeat_remove_button ) : ?>
-								<a href="<?php echo esc_url( $item->get_remove_url() ); ?>" class="remove_from_wishlist button" title="<?php echo esc_html( apply_filters( 'yith_wcwl_remove_product_wishlist_message_title', __( 'Remove this product', 'yith-woocommerce-wishlist' ) ) ); ?>"><?php esc_html_e( 'Remove', 'yith-woocommerce-wishlist' ); ?></a>
+								<a href="<?php echo esc_url( $item->get_remove_url() ); ?>" class="remove_from_wishlist button" title="<?php echo esc_html( apply_filters( 'yith_wcwl_remove_product_wishlist_message_title', __( 'Remove this product', 'yith-woocommerce-wishlist' ) ) ); ?>"><?php esc_html_e( 'Remover', 'yith-woocommerce-wishlist' ); ?></a>
 							<?php endif; ?>
 
 							<?php do_action( 'yith_wcwl_table_after_product_cart', $item, $wishlist ); ?>
@@ -310,13 +310,13 @@ if ( $has_quantity_type ) {
 		endforeach;
 	else :
 		?>
-		<tr class="border-0 py-0">
+		<tr class="py-0 border-0">
 			<td colspan="<?php echo esc_attr( $column_count ); ?>" class="px-3 py-2 text-center"><i class="far fa-heart wishlist-empty"></i></td>
 		</tr>
-		<tr class="border-0 py-0">
+		<tr class="py-0 border-0">
 			<td colspan="<?php echo esc_attr( $column_count ); ?>" class="px-3 py-2 wishlist-empty"><?php echo apply_filters( 'yith_wcwl_no_product_to_remove_message', __( 'No products added to the wishlist', 'yith-woocommerce-wishlist' ) ); ?></td>
 		</tr>
-		<tr class="border-0 py-0">
+		<tr class="py-0 border-0">
 			<td colspan="<?php echo esc_attr( $column_count ); ?>" class="px-3 text-center">
 				<a class="woocommerce-Button button btn-v-dark btn-go-shop" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 					<?php esc_html_e( 'Go shopping', 'woocommerce' ); ?>

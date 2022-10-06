@@ -150,7 +150,7 @@ if (isset($porto_woocommerce_loop['product_categories_show_sub_cats']) && $porto
 				endif;
 				?>
 				<?php if (isset($porto_woocommerce_loop['product_categories_show_featured']) && $porto_woocommerce_loop['product_categories_show_featured']) : ?>
-					<span class="btn"><?php esc_html_e('View All Products', 'porto'); ?><i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+					<span class="btn"><?php esc_html_e('Ver todos los productos', 'porto'); ?><i class="fas fa-long-arrow-alt-right ms-2"></i></span>
 				<?php endif; ?>
 			</div>
 			<!-- // ---------------------------------------- Info Title ----------------------------------->

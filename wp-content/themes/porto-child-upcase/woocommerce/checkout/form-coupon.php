@@ -24,7 +24,7 @@ if ( !( version_compare($porto_woo_version, '2.5', '<') ? WC()->cart->coupons_en
 		<?php if ( 'v2' == $checkout_ver ) { ?>
 			<div class="card-header arrow">
 				<h2 class="m-0 card-title">
-					<a class="accordion-toggle collapsed" data-bs-toggle="collapse" href="#panel-cart-discount" ><?php esc_html_e( 'DISCOUNT CODE', 'porto' ); ?></a>
+					<a class="accordion-toggle collapsed" data-bs-toggle="collapse" href="#panel-cart-discount" ><?php esc_html_e( 'CÓDIGO DE DESCUENTO', 'porto' ); ?></a>
 				</h2>
 			</div>
 		<?php } else { ?>
