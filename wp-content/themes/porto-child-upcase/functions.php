@@ -20,6 +20,15 @@ function porto_child_css()
 	}
 }
 
+//translation
+function uc_translate() {
+	// load_theme_textdomain('uc_porto', get_stylesheet_directory() . '/languages');
+	load_plugin_textdomain('woocommerce');
+	// load_child_theme_textdomain('porto', get_stylesheet_directory() . '/languages');
+}
+add_action('plugins_loaded', 'uc_translate');
+
+
 function loadScripts()
 {
 	wp_enqueue_script('mainUpcase', get_stylesheet_directory_uri() . '/assets/js/mainUpcase.js', [], 1.0, true);
@@ -132,7 +141,55 @@ function uc_add_actions()
 function uc_remove_actions()
 {
 	remove_action('woocommerce_before_shop_loop', 'porto_woocommerce_output_horizontal_filter', 25);
+	remove_action('woocommerce_single_product_summary', 'porto_woocommerce_product_sticky_addcart', 5);
+
 }
 add_action('wp', 'uc_remove_actions', 11);
 add_action('wp_loaded', 'uc_add_actions', 10);
+
+if (!function_exists('uc_woocommerce_product_sticky_addcart')) :
+	/**
+	 *
+	 */
+	function uc_woocommerce_product_sticky_addcart($el_class = '')
+	{
+		global $porto_settings;
+		if (!porto_is_product() || !isset($porto_settings['product-sticky-addcart']) || !$porto_settings['product-sticky-addcart']) {
+			return;
+		}
+		if (defined('PORTO_STICKY_ADDCART_RENDERED')) {
+			return;
+		}
+
+		global $product;
+		$attachment_id = method_exists($product, 'get_image_id') ? $product->get_image_id() : get_post_thumbnail_id();
+		$availability  = $product->get_availability();
+		$average       = $product->get_average_rating();
+
+		echo '<div class="sticky-product hide pos-' . esc_attr($porto_settings['product-sticky-addcart']) . ($el_class ? ' ' . esc_attr($el_class) : '') . '"><div class="container">';
+		echo '<div class="sticky-image">';
+		echo wp_get_attachment_image($attachment_id, 'thumbnail');
+		echo '</div>';
+		echo '<div class="sticky-detail">';
+		echo '<div class="product-name-area">';
+		echo '<h2 class="product-name">' . get_the_title() . '</h2>';
+		echo woocommerce_template_single_price();
+		echo '</div>';
+		echo '<div class="star-rating" title="' . esc_attr($average) . '">';
+		echo '<span style="width:' . (($average / 5) * 100) . '%"></span>';
+		echo '</div>';
+		echo '<div class="availability"><span>' . ('out-of-stock' == $availability['class'] ? esc_html__('Sin inventario', 'porto') : esc_html__('Disponible', 'porto')) . '</span></div>';
+		echo '</div>';
+		echo '<div class="add-to-cart">';
+		echo '<button type="submit" class="single_add_to_cart_button button">' . esc_html__('Añadir al carrito', 'woocommerce') . '</button>';
+		echo '</div>';
+		echo '</div></div>';
+
+		define('PORTO_STICKY_ADDCART_RENDERED', true);
+	}
+endif;
+
+// add to cart sticky
+add_action('woocommerce_single_product_summary', 'uc_woocommerce_product_sticky_addcart', 5);
+
 ?>

@@ -44,13 +44,13 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
 				if ( is_array( $states ) && empty( $states ) ) {
 					?>
-						<input type="hidden" name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php esc_attr_e( 'State / County', 'woocommerce' ); ?>" />
+						<input type="hidden" name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php esc_attr_e( 'Departamento / País', 'woocommerce' ); ?>" />
 																																<?php
 				} elseif ( is_array( $states ) ) {
 					?>
 						<span>
-							<select name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php esc_attr_e( 'State / County', 'woocommerce' ); ?>">
-								<option value=""><?php esc_html_e( 'Select an option&hellip;', 'woocommerce' ); ?></option>
+							<select name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php esc_attr_e( 'Departamento / País', 'woocommerce' ); ?>">
+								<option value=""><?php esc_html_e( 'Selecciona una opción&hellip;', 'woocommerce' ); ?></option>
 							<?php
 							foreach ( $states as $ckey => $cvalue ) {
 								echo '<option value="' . esc_attr( $ckey ) . '" ' . selected( $current_r, $ckey, false ) . '>' . esc_html( $cvalue ) . '</option>';
@@ -61,7 +61,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 						<?php
 				} else {
 					?>
-						<input type="text" class="input-text" value="<?php echo esc_attr( $current_r ); ?>" placeholder="<?php esc_attr_e( 'State / County', 'woocommerce' ); ?>" name="calc_shipping_state" id="calc_shipping_state" />
+						<input type="text" class="input-text" value="<?php echo esc_attr( $current_r ); ?>" placeholder="<?php esc_attr_e('Departamento / País', 'woocommerce' ); ?>" name="calc_shipping_state" id="calc_shipping_state" />
 						<?php
 				}
 				?>
