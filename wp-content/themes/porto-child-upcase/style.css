@@ -21,7 +21,17 @@ Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, 
     --purple-black-t: #303030b3 ;
     --white-primary: #F8FAFC;
 }
-
+.hidden{
+  display: none !important;
+}
+.inactive{
+  font-weight: 400;
+  color: var(--purple-black-t);
+}
+.active{
+  font-weight: 700;
+  color: var(--purple-primary);
+}
 .header-top{
   background: var(--purple-primary)
 }

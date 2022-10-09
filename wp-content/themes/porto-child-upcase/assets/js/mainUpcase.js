@@ -80,6 +80,41 @@ var scripts = function () {
   } catch (error) {
     
   }
+ // ------------ Signup form button interaction
+  try {
+    var buttonSignUp = document.querySelector("#btn-signup");
+    var buttonlogin = document.querySelector("#btn-login");
+    var signupForm = document.querySelector(
+      "#sigup-form-container"
+    ).firstElementChild;
+    var loginForm = document.querySelector("#login-form");
+
+    buttonSignUp.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("entrando");
+      signupForm.classList.remove("hidden");
+      loginForm.classList.add("hidden");
+
+      buttonlogin.classList.remove("active");
+      buttonlogin.classList.add("inactive");
+      buttonSignUp.classList.add("active");
+    });
+
+    buttonlogin.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("entrando");
+      signupForm.classList.add("hidden");
+      loginForm.classList.remove("hidden");
+
+      buttonlogin.classList.remove("inactive");
+      buttonlogin.classList.add("active");
+      buttonSignUp.classList.remove("active");
+      buttonlogin.classList.add("inactive");
+    });
+  } catch (error) {
+    
+  }
+
 };
 
 

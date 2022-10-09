@@ -59,6 +59,7 @@ if ('overlay' == $porto_settings['menu-type']) {
 
 		// show social links
 		// echo porto_header_socials();
+		//echo signup_user('d','example@gmail.com','');
 		?>
 	<?php else : ?>
 		<div class="skeleton-body porto-ajax-loading"><i class="porto-loading-icon"></i></div>
